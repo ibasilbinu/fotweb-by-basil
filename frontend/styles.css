@@ -7,3 +7,24 @@
 
 /* Streamlit component: retain an independent scrollable workspace. */
 html,body{height:100%;overflow:hidden}.app{height:100vh}.main-wrap{height:100vh;overflow-y:auto;overscroll-behavior:contain}.topbar{position:sticky;top:0;background:var(--bg);z-index:20}
+
+/* Mobile-only dismissal surface: tap outside the open navigation to close it. */
+.sidebar-backdrop { display:none; }
+@media (max-width:680px) {
+  .sidebar-backdrop {
+    display:block;
+    position:fixed;
+    inset:0;
+    z-index:29;
+    background:rgba(0,0,0,.58);
+    opacity:0;
+    visibility:hidden;
+    pointer-events:none;
+    transition:opacity .2s ease, visibility .2s ease;
+  }
+  #sidebar.open + .sidebar-backdrop {
+    opacity:1;
+    visibility:visible;
+    pointer-events:auto;
+  }
+}
