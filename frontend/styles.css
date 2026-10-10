@@ -28,3 +28,19 @@ html,body{height:100%;overflow:hidden}.app{height:100vh}.main-wrap{height:100vh;
     pointer-events:auto;
   }
 }
+
+
+/* Universal in-app navigation back: available on every FotWeb page. */
+.page-back{display:inline-flex;align-items:center;justify-content:center;gap:7px;
+  flex:none;border:1px solid #465d49;border-radius:8px;background:#19251e;
+  color:var(--accent);padding:9px 12px;font-size:12px;line-height:1.2;
+  font-weight:650;white-space:nowrap;cursor:pointer}
+.page-back:hover:not(:disabled){background:#27392b;border-color:var(--accent)}
+.page-back:disabled{opacity:.35;cursor:default}
+.page-back span{font-size:18px;line-height:10px}
+@media(max-width:440px){
+  .page-back{padding:8px 9px;font-size:11px;gap:4px}
+  .topbar{gap:9px}
+  .breadcrumb{min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+}
+@media print{.page-back{display:none!important}}
