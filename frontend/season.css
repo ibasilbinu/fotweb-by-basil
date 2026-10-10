@@ -174,11 +174,15 @@
   .overview-touchline-fields{grid-template-columns:1fr 1fr}
   .overview-touchline-fields label:last-child{grid-column:1/-1}
   .stats.overview-stats{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .stats.overview-stats .stat:last-child{grid-column:1/-1}
 }
 @media(max-width:450px){
   .overview-touchline{padding:16px 13px}
   .overview-touchline-head{align-items:flex-start;flex-wrap:wrap}
   .overview-touchline-fields{grid-template-columns:1fr;gap:12px}
   .overview-touchline-fields label:last-child{grid-column:auto}
+}
+
+/* Keep the six season-overview metric tiles balanced at every width. */
+@media(max-width:380px){
+  .stats.overview-stats{grid-template-columns:1fr}
 }
