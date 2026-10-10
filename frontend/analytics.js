@@ -120,12 +120,25 @@ function caTrendChart(summaries,metric) {
       const x=X(row.number),y=Y(row.value);
       d+=(drawing?' L ':' M ')+x.toFixed(2)+' '+y.toFixed(2);
       drawing=true;
-      const tooltip=item.s.team.name+' · Match '+row.number+' · '+
-        formatDate(row.match.date)+' · vs '+caOpp(row.match,item.s.team.name)+
-        ' · '+title+': '+caNumber(row.value,metric==='points'?0:1);
-      dots+='<circle class="ca-trend-series-dot" cx="'+x+'" cy="'+y+
-        '" r="5.5" fill="'+item.color+'" stroke="#14211a" stroke-width="1.5">'+
-        '<title>'+esc(tooltip)+'</title></circle>';
+      const value=caNumber(row.value,metric==='points'?0:1);
+      const opponent=caOpp(row.match,item.s.team.name);
+      const playedOn=formatDate(row.match.date);
+      const score=row.match.homeGoals+'–'+row.match.awayGoals;
+      const also=present.filter(other=>other.s.team.id!==item.s.team.id&&
+        other.records.some(otherRow=>otherRow.number===row.number&&otherRow.value===row.value))
+        .map(other=>other.s.team.name).join(', ');
+      const description=item.s.team.name+' · Match '+row.number+' · '+playedOn+
+        ' · vs '+opponent+' · '+title+': '+value+
+        (also?' · Also at this point: '+also:'');
+      dots+='<circle class="ca-trend-series-dot" data-ca-trend-point tabindex="0" role="button"'+
+        ' aria-label="'+esc(description)+'"'+
+        ' data-club="'+esc(item.s.team.name)+'"'+
+        ' data-opponent="'+esc(opponent)+'" data-date="'+esc(playedOn)+'"'+
+        ' data-game="'+row.number+'" data-score="'+esc(score)+'"'+
+        ' data-metric="'+esc(title)+'" data-value="'+esc(value)+'"'+
+        ' data-also="'+esc(also)+'"'+
+        ' cx="'+x+'" cy="'+y+'" r="5.5" fill="'+item.color+
+        '" stroke="#14211a" stroke-width="1.5" />';
     }
     paths+='<g class="ca-trend-series" data-club="'+esc(item.s.team.id)+'">'+
       '<path d="'+d+'" class="ca-trend-series-line" stroke="'+item.color+'"/>'+
@@ -144,15 +157,21 @@ function caTrendChart(summaries,metric) {
     present.length+' / '+series.length+' clubs with verified '+esc(title.toLowerCase())+
     ' data</span></div>'+
     '<div class="ca-trend-plot"><svg viewBox="0 0 '+W+' '+H+
-    '" role="img" aria-label="'+esc('All-club performance trends for '+title+
+    '" role="group" aria-label="'+esc('All-club performance trends for '+title+
     ' by each club’s match number. '+present.length+' clubs have values.')+'">'+
     grid+paths+'<text x="'+(L+plotW/2)+'" y="'+(H-7)+
-    '" text-anchor="middle" class="ca-axis-title">League matches played by each club</text></svg></div>'+
+    '" text-anchor="middle" class="ca-axis-title">League matches played by each club</text></svg>'+
+    '<div class="ca-trend-tooltip" role="status" aria-live="polite" hidden>'+
+    '<strong data-ca-trend-club></strong>'+
+    '<span data-ca-trend-metric></span>'+
+    '<span data-ca-trend-fixture></span>'+
+    '<small data-ca-trend-date></small>'+
+    '<small data-ca-trend-overlap hidden></small></div></div>'+
     '<div class="ca-trend-legend" aria-label="Club series legend">'+legend+'</div>'+
     '<p class="ca-footnote">All '+series.length+
     ' clubs are listed; a coloured line or point appears only where '+esc(title.toLowerCase())+
     ' data is recorded. The horizontal axis uses each club’s match number, not a shared match date. '+
-    'The latest 10 match numbers are shown. Hover a point for the fixture and value. '+
+    'The latest 10 match numbers are shown. Hover, focus or tap a dot to see the club, opponent, date and exact metric value. Overlapping points identify the clubs they represent. '+
     'Clubs with no published statistic are not plotted; genuine zero values are retained.</p>';
 }
 function caRanking(summaries,key,descending,title,footnote){
