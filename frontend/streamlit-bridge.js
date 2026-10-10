@@ -10,6 +10,7 @@
   };
   window.addEventListener('message', event => {
     if (event.source !== window.parent || event.data?.type !== 'streamlit:render') return;
+    window.updatePostMatchData?.(event.data.args?.post_match_data);
     resize();
   });
   window.addEventListener('resize', resize);

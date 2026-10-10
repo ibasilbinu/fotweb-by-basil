@@ -1,5 +1,14 @@
 # FotWeb by Basil ⚽
 
+## ISL 2026–27 updates
+
+The **ISL 2026–27** page displays sourced completed-match results, published
+statistics, match reports and a table computed from recorded FT matches.
+An hourly ChatGPT automation checks for new final results and writes verified
+records to this repository. See [POST_MATCH_UPDATES.md](POST_MATCH_UPDATES.md)
+for its rules and data contract. No live-score API or API key is needed.
+Advanced dashboards still use separately labelled sample or imported data.
+
 A football analytics workspace designed for public deployment on **Streamlit Community Cloud**. It runs from this repository and does not depend on ChatGPT hosting, sign-in, APIs or keys.
 
 ## What is included

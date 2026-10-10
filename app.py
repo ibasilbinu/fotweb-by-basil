@@ -5,6 +5,8 @@ from pathlib import Path
 import streamlit as st
 import streamlit.components.v1 as components
 
+from postmatch import load_results
+
 
 ROOT = Path(__file__).resolve().parent
 
@@ -33,4 +35,10 @@ st.markdown(
 fotweb_workspace = components.declare_component(
     "fotweb_workspace", path=str(ROOT / "frontend")
 )
-fotweb_workspace(key="fotweb-workspace", default=None)
+try:
+    post_match_data = load_results(ROOT / "data" / "isl-results.json")
+except (ValueError, KeyError, TypeError, OSError):
+    st.warning("Post-match results are temporarily unavailable. Please try again later.")
+    post_match_data = None
+
+fotweb_workspace(post_match_data=post_match_data, key="fotweb-workspace", default=None)
