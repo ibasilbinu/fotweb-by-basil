@@ -51,6 +51,89 @@ function fwEfficiency(match) {
   return content ? '<div class="fw-efficiency">' + content + '</div>' :
     fwMissing('Shot-efficiency and xG comparisons require verified shot totals or published xG.');
 }
+
+/* Free derived analytics computed only from sourced match aggregates.
+   No Opta or player-tracking data, inferred event coordinates, or xG estimation. */
+function fwShootingProfile(match) {
+  const sides=[['home',match.home],['away',match.away]];
+  const rows=sides.map(([side,team])=>{
+    const stats=match.stats?.[side]||{};
+    const total=stats.shots, on=stats.shotsOnTarget;
+    if(!Number.isFinite(total)||!Number.isFinite(on)||total<0||on<0||on>total)return '';
+    const share=total>0?on/total*100:0;
+    const other=total-on;
+    const accuracy=total>0?share.toFixed(1)+'%':'—';
+    return '<div class="fw-analytic-shots-team" data-team="'+side+'">'+
+      '<div class="fw-analytic-shot-heading"><strong>'+esc(team)+'</strong>'+
+      '<span>'+esc(total)+' shots · '+esc(accuracy)+' on target</span></div>'+
+      '<div class="fw-analytic-shot-meter" role="img" aria-label="'+
+      esc(team+': '+on+' shots on target and '+other+' other attempts')+'">'+
+      '<span class="fw-analytic-shot-on" style="width:'+share.toFixed(2)+'%"></span>'+
+      '<span class="fw-analytic-shot-other" style="width:'+(100-share).toFixed(2)+'%"></span></div>'+
+      '<div class="fw-analytic-shot-labels"><span>On target: <strong>'+esc(on)+
+      '</strong></span><span>Other attempts: <strong>'+esc(other)+'</strong></span></div>'+
+      '</div>';
+  }).filter(Boolean);
+  if(!rows.length)return '';
+  const h=match.stats?.home?.shots,a=match.stats?.away?.shots;
+  const share=Number.isFinite(h)&&Number.isFinite(a)&&h>=0&&a>=0&&h+a>0?
+    '<p class="fw-analytic-context">Share of match shots: '+
+    esc(match.home)+' '+(h/(h+a)*100).toFixed(1)+'% · '+
+    esc(match.away)+' '+(a/(h+a)*100).toFixed(1)+'%.</p>':'';
+  return '<section class="fw-analytic-block"><div class="fw-analytic-heading"><h4>Shot breakdown</h4>'+
+    '<span>Verified shot totals</span></div>'+
+    '<div class="fw-analytic-shots">'+rows.join('')+'</div>'+share+
+    '<p class="fw-analytic-method">“Other attempts” includes all shots not recorded as on target, including blocked attempts. This is not a shot-location map.</p></section>';
+}
+function fwMatchPerformanceProfile(match) {
+  const sides=[['home',match.home],['away',match.away]];
+  const fmt=value=>Number.isFinite(value)?String(value):null;
+  const renderSide=([side,team])=>{
+    const s=match.stats?.[side]||{};
+    const shotRate=Number.isFinite(s.shots)&&Number.isFinite(s.passes)&&s.passes>0?
+      (100*s.shots/s.passes).toFixed(1):null;
+    const cells=[
+      ['Possession',Number.isFinite(s.possession)?s.possession+'%':null],
+      ['Passes',fmt(s.passes)],
+      ['Pass accuracy',Number.isFinite(s.passAccuracy)?s.passAccuracy+'%':null],
+      ['Shots / 100 passes',shotRate],
+      ['Tackles',fmt(s.tackles)],
+      ['Interceptions',fmt(s.interceptions)],
+      ['Clearances',fmt(s.clearances)]
+    ].filter(([,v])=>v!==null);
+    if(!cells.length)return '';
+    return '<div class="fw-analytic-team-profile"><h5>'+esc(team)+'</h5>'+
+      '<div class="fw-analytic-team-metrics">'+cells.map(([name,value])=>
+        '<div><small>'+esc(name)+'</small><strong>'+esc(value)+'</strong></div>').join('')+
+      '</div></div>';
+  };
+  const items=sides.map(renderSide).filter(Boolean);
+  return items.length?'<section class="fw-analytic-block"><div class="fw-analytic-heading">'+
+    '<h4>Passing & defensive profile</h4><span>Team totals</span></div>'+
+    '<div class="fw-analytic-profile-grid">'+items.join('')+'</div>'+
+    '<p class="fw-analytic-method">Shots per 100 passes is a simple ratio of reported shots and passes—not a measure of pressing, tactical quality or expected goals. Missing statistics are omitted.</p></section>':'';
+}
+function fwRecordedPlayerLeaders(match) {
+  const players=Array.isArray(match.players)?match.players:[];
+  const defs=[['shots','Shots'],['passes','Passes'],['tackles','Tackles'],['saves','Saves']];
+  const blocks=defs.map(([key,label])=>{
+    const ranked=players.filter(p=>Number.isFinite(p[key])&&p[key]>0&&
+      (p.side==='home'||p.side==='away')).sort((a,b)=>b[key]-a[key]||
+      String(a.name).localeCompare(String(b.name))).slice(0,3);
+    if(!ranked.length)return '';
+    return '<div class="fw-analytic-leader-group"><h5>'+esc(label)+'</h5>'+
+      '<ol>'+ranked.map((p,i)=>
+        '<li><span class="fw-analytic-leader-rank">'+(i+1)+'</span>'+
+        '<span class="fw-analytic-leader-player"><strong>'+esc(p.name)+'</strong>'+
+        '<small>'+esc(p.side==='home'?match.home:match.away)+'</small></span>'+
+        '<span class="fw-analytic-leader-value">'+esc(p[key])+'</span></li>').join('')+
+      '</ol></div>';
+  }).filter(Boolean);
+  return blocks.length?'<section class="fw-analytic-block"><div class="fw-analytic-heading">'+
+    '<h4>Recorded player leaders</h4><span>Top 3 by metric</span></div>'+
+    '<div class="fw-analytic-leader-grid">'+blocks.join('')+'</div>'+
+    '<p class="fw-analytic-method">Ranked among players with a published value in this report only. Missing player data is excluded; these are not necessarily complete match rankings.</p></section>':'';
+}
 function fwShotMap(match) {
   const shots=Array.isArray(match.shotMap) ? match.shotMap : [];
   if(!shots.length) return fwMissing('Shot locations are not available. A verified, licensed event-data source is required for a shot map.');
@@ -313,7 +396,7 @@ function fwMatchReport(match) {
     fwReportPanel('04 · Player stats',fwPlayerStats(match),id+'-players','INDIVIDUALS')+
     fwReportPanel('05 · Match timeline',fwTimeline(match),id+'-timeline','KEY EVENTS')+
     fwReportPanel('06 · Tactical analytics',fwTactics(match),id+'-tactics','EVIDENCE-BASED')+
-    fwReportPanel('07 · Advanced analytics',fwEfficiency(match)+fwShotMap(match),id+'-advanced','DATA VISUALIZATION')+
+    fwReportPanel('07 · Advanced analytics',fwEfficiency(match)+fwShootingProfile(match)+fwMatchPerformanceProfile(match)+fwRecordedPlayerLeaders(match)+fwShotMap(match),id+'-advanced','DATA VISUALIZATION')+
     fwReportPanel('08 · FotWeb Tactical Verdict',fwVerdict(match),id+'-verdict','ANALYST VIEW')+
     '<footer class="fw-report-sources"><strong>Verified sources</strong><div>'+sourceLinks+
     (match.fotmobUrl?' <span class="fw-link-separator">·</span> '+sourceLink(match.fotmobUrl,'View on FotMob (external)'):'')+
