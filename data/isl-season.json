@@ -3,7 +3,7 @@
   "season": "2026-27",
   "competition": "Indian Super League",
   "scheduleScope": "Published Phase 1",
-  "verifiedAt": "2026-10-10T16:51:24Z",
+  "verifiedAt": "2026-10-11T00:09:11+05:30",
   "sourceUrl": "https://www.indiansuperleague.com/schedule-fixtures",
   "standingsSourceUrl": "https://www.indiansuperleague.com/standings",
   "teams": [
@@ -143,11 +143,11 @@
       "homeId": "2354",
       "awayId": "498",
       "kickoff": "2026-10-11T17:00+05:30",
-      "venue": null,
+      "venue": "Shree Shiv Chhatrapati Sports Complex, Balewadi, Pune",
       "status": "NS",
       "phase": "league",
       "label": "Match 3",
-      "sourceUrl": "https://www.indiansuperleague.com/schedule-fixtures",
+      "sourceUrl": "https://www.indiansuperleague.com/news/all-indian-inter-kashi-face-star-studded-kerala-blasters",
       "broadcast": {
         "url": "https://www.youtube.com/live/wsysXETXWxA",
         "title": "LIVE: Inter Kashi FC vs Kerala Blasters FC | MG ISL 2026-27 | Gameweek 1 | ENG",
@@ -155,7 +155,8 @@
         "language": "English",
         "status": "scheduled",
         "verifiedAt": "2026-10-10T11:01:21+05:30"
-      }
+      },
+      "sourceNote": "2026–27 home ground confirmed by the official ISL on 10 October 2026."
     },
     {
       "id": "194637",
@@ -214,11 +215,12 @@
       "homeId": "2354",
       "awayId": "1499",
       "kickoff": "2026-10-17T17:00+05:30",
-      "venue": null,
+      "venue": "Shree Shiv Chhatrapati Sports Complex, Balewadi, Pune",
       "status": "NS",
       "phase": "league",
       "label": "Match 8",
-      "sourceUrl": "https://www.indiansuperleague.com/schedule-fixtures"
+      "sourceUrl": "https://www.indiansuperleague.com/news/all-indian-inter-kashi-face-star-studded-kerala-blasters",
+      "sourceNote": "2026–27 home ground confirmed by the official ISL on 10 October 2026."
     },
     {
       "id": "194642",
@@ -269,11 +271,12 @@
       "homeId": "2354",
       "awayId": "1102",
       "kickoff": "2026-10-23T17:00+05:30",
-      "venue": null,
+      "venue": "Shree Shiv Chhatrapati Sports Complex, Balewadi, Pune",
       "status": "NS",
       "phase": "league",
       "label": "Match 13",
-      "sourceUrl": "https://www.indiansuperleague.com/schedule-fixtures"
+      "sourceUrl": "https://www.indiansuperleague.com/news/all-indian-inter-kashi-face-star-studded-kerala-blasters",
+      "sourceNote": "2026–27 home ground confirmed by the official ISL on 10 October 2026."
     },
     {
       "id": "194647",
@@ -379,11 +382,12 @@
       "homeId": "2354",
       "awayId": "496",
       "kickoff": "2026-11-01T19:30+05:30",
-      "venue": null,
+      "venue": "Shree Shiv Chhatrapati Sports Complex, Balewadi, Pune",
       "status": "NS",
       "phase": "league",
       "label": "Match 23",
-      "sourceUrl": "https://www.indiansuperleague.com/schedule-fixtures"
+      "sourceUrl": "https://www.indiansuperleague.com/news/all-indian-inter-kashi-face-star-studded-kerala-blasters",
+      "sourceNote": "2026–27 home ground confirmed by the official ISL on 10 October 2026."
     },
     {
       "id": "194657",
@@ -423,11 +427,12 @@
       "homeId": "2354",
       "awayId": "3234",
       "kickoff": "2026-11-07T17:00+05:30",
-      "venue": null,
+      "venue": "Shree Shiv Chhatrapati Sports Complex, Balewadi, Pune",
       "status": "NS",
       "phase": "league",
       "label": "Match 27",
-      "sourceUrl": "https://www.indiansuperleague.com/schedule-fixtures"
+      "sourceUrl": "https://www.indiansuperleague.com/news/all-indian-inter-kashi-face-star-studded-kerala-blasters",
+      "sourceNote": "2026–27 home ground confirmed by the official ISL on 10 October 2026."
     },
     {
       "id": "194661",
@@ -524,11 +529,12 @@
       "homeId": "2354",
       "awayId": "1101",
       "kickoff": "2026-11-27T19:30+05:30",
-      "venue": null,
+      "venue": "Shree Shiv Chhatrapati Sports Complex, Balewadi, Pune",
       "status": "NS",
       "phase": "league",
       "label": "Match 35",
-      "sourceUrl": "https://www.indiansuperleague.com/schedule-fixtures"
+      "sourceUrl": "https://www.indiansuperleague.com/news/all-indian-inter-kashi-face-star-studded-kerala-blasters",
+      "sourceNote": "2026–27 home ground confirmed by the official ISL on 10 October 2026."
     },
     {
       "id": "194669",
@@ -612,11 +618,12 @@
       "homeId": "2354",
       "awayId": "1874",
       "kickoff": "2026-12-05T19:30+05:30",
-      "venue": null,
+      "venue": "Shree Shiv Chhatrapati Sports Complex, Balewadi, Pune",
       "status": "NS",
       "phase": "league",
       "label": "Match 43",
-      "sourceUrl": "https://www.indiansuperleague.com/schedule-fixtures"
+      "sourceUrl": "https://www.indiansuperleague.com/news/all-indian-inter-kashi-face-star-studded-kerala-blasters",
+      "sourceNote": "2026–27 home ground confirmed by the official ISL on 10 October 2026."
     },
     {
       "id": "194677",
@@ -689,11 +696,12 @@
       "homeId": "2354",
       "awayId": "504",
       "kickoff": "2026-12-12T19:30+05:30",
-      "venue": null,
+      "venue": "Shree Shiv Chhatrapati Sports Complex, Balewadi, Pune",
       "status": "NS",
       "phase": "league",
       "label": "Match 50",
-      "sourceUrl": "https://www.indiansuperleague.com/schedule-fixtures"
+      "sourceUrl": "https://www.indiansuperleague.com/news/all-indian-inter-kashi-face-star-studded-kerala-blasters",
+      "sourceNote": "2026–27 home ground confirmed by the official ISL on 10 October 2026."
     },
     {
       "id": "194684",
