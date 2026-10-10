@@ -111,7 +111,7 @@ fixtures do not show stream buttons.
 
 Every verified completed match receives an eight-section report in this order:
 1. Match overview
-2. Lineup (verified XI list; positioned pitch only from official ISL Ground View)
+2. Lineup (starting XI list with shirt numbers, recorded roles, and sourced formation if available)
 3. Match statistics
 4. Player stats (individual verified metrics, separately from the lineup)
 5. Match timeline
@@ -120,10 +120,12 @@ Every verified completed match receives an eight-section report in this order:
 8. FotWeb Tactical Verdict
 
 Missing fields must appear as unavailable; do not fabricate information merely
-to populate the layout. In the lineup pitch, use only verified player roles,
-formations and names. Do not invent precise on-pitch positions based on squad
-list order. A verified starting XI and individual player statistics are
-separate sections; one may be available when the other is not.
+to populate the layout. **FotWeb uses a list-only lineup model for all matches.**
+Show the confirmed starting XI, shirt numbers and individually sourced broad roles
+where available, plus official formation if verified. Do not create or retrieve
+Ground View positioning or infer individual pitch coordinates.
+Starting XIs and individual player statistics are separate sections;
+one may be available when the other is not.
 
 The hourly update should also seek and add permitted, verifiable optional fields
 when official ISL/AIFF/club sources explicitly publish them. Check each new
@@ -154,32 +156,17 @@ Optional record fields:
   If only a team-level red-card total is known, do not invent a player,
   dismissal type, or minute. The result can still be published without a
   personalized card event.
-- `lineups.home` / `lineups.away`: use only the **official Indian Super
-  League match centre** to verify the starting XI and formation for the
-  exact fixture. Do not use FotMob, Google Sports, unofficial diagrams,
-  predicted XIs, squad lists, or players' broad roles to infer positions.
-  The optional `formation` must be verified from that match's official ISL
-  Lineups/Ground View; each `starters` entry has `name` and optional
-  numeric shirt `number`. Never silently overwrite confirmed match data
-  when ISL pages temporarily show inconsistent or incomplete information.
-- A FotWeb **positioned pitch view** is permitted **only when the official
-  ISL Ground View for that same match actually supplies the starting
-  formation, exactly 11 confirmed starters, and individually verifiable
-  positions for all eleven**. Set the side's `positionSourceUrl` to the
-  matching official `https://www.indiansuperleague.com/matchcentre/<id>`
-  (or without `www`) and include a `pitchPosition` object on each starter:
-  `{"x":50,"y":89,"label":"GK"}`, normalized with `x` from left
-  (0) to right (100) and `y` from attacking end (0) to own-goal end
-  (100). These are starting lineup-diagram positions, not tracking data.
-  The official page must match the result's `matchUrl`; do not use
-  positions from another fixture. No partial pitch coordinates.
-- If the official ISL Ground View is unavailable, unreadable, or missing
-  any required formation/player/position detail, omit `pitchPosition`
-  and `positionSourceUrl` and display the **full starting XI as a list**.
-  Display a formation only when confirmed by the official ISL match centre.
-  Preserve previously verified starting-XI records until reliable
-  corrections are available, and do not fake formation shape or positions.
-  Never scrape/copy a proprietary FotMob/Google Sports lineup diagram.
+- `lineups.home` / `lineups.away`: use only the **official Indian
+  Super League match centre** to verify the starting XI and any published
+  formation for the exact fixture. Each `starters` entry has `name` and
+  optional numeric shirt `number`. Do not use predicted XIs or squad lists,
+  and do not silently overwrite previously confirmed data when official
+  pages temporarily provide incomplete or inconsistent information.
+  The lineup presentation is **always a list**, not a pitch diagram.
+  Never collect, populate, or update `pitchPosition` or `positionSourceUrl`.
+  Display the formation only when reliably confirmed; otherwise label it
+  unavailable. Show the full recorded XI with source-backed player roles
+  where available and a link to the official match centre.
 - `players`: array with `name`, `side`, and optional `position`, `goals`,
   `assists`, `shots`, `passes`, `tackles`, `saves`, `rating`.
   Do not synthesize player ratings or use an unauthorized third-party rating.
