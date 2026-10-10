@@ -157,32 +157,11 @@
  .ca-trend-legend-item{font-size:10px}
 }
 
-
-/* Your Touchline belongs to Season overview, not the global sidebar. */
-.overview-touchline{padding:20px 22px 16px;margin:0 0 19px;background:#141e19;border:1px solid #364b3a;border-radius:12px}
-.overview-touchline-head{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:16px}
-.overview-touchline-head .eyebrow{color:var(--accent);font-size:11px;letter-spacing:1.6px}
-.overview-touchline-head>span:last-child{font-size:10px;color:#9eb2a5}
-.overview-touchline-fields{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
-.overview-touchline-fields label{display:flex;flex-direction:column;gap:8px;min-width:0;font-size:11px;color:#afc1b3}
-.overview-touchline-fields select{margin:0;width:100%;min-width:0;padding:12px 36px 12px 13px;background-color:#1c2b22;border-color:#405547;border-radius:8px;color:#edf4ed}
-.overview-touchline-fields select:disabled{opacity:.75;cursor:default}
-.overview-touchline-fields select:not(:disabled){border-color:#6a8868;cursor:pointer}
-.overview-touchline-caption{margin:12px 0 0;color:#8fa79a;font-size:10px;line-height:1.55}
+/* Six Season Overview statistics tiles: original cards and verified goals/cards. */
 .stats.overview-stats{grid-template-columns:repeat(3,minmax(0,1fr))}
 @media(max-width:760px){
-  .overview-touchline-fields{grid-template-columns:1fr 1fr}
-  .overview-touchline-fields label:last-child{grid-column:1/-1}
   .stats.overview-stats{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
-@media(max-width:450px){
-  .overview-touchline{padding:16px 13px}
-  .overview-touchline-head{align-items:flex-start;flex-wrap:wrap}
-  .overview-touchline-fields{grid-template-columns:1fr;gap:12px}
-  .overview-touchline-fields label:last-child{grid-column:auto}
-}
-
-/* Keep the six season-overview metric tiles balanced at every width. */
 @media(max-width:380px){
   .stats.overview-stats{grid-template-columns:1fr}
 }
