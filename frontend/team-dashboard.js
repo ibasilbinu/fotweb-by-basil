@@ -165,7 +165,8 @@ function tdPlayerLeaders(matches,team){
     .sort((a,b)=>b.value-a.value||a.name.localeCompare(b.name)).slice(0,5);
   const ga=rows.filter(p=>(p.goalKnown&&p.goals>0)||(p.assistKnown&&p.assists>0))
     .map(p=>({name:p.name,value:p.goals+p.assists,
-      detail:(p.goalKnown?p.goals:'—')+' goals · '+(p.assistKnown?p.assists:'—')+' assists'}))
+      detail:(p.goalKnown?p.goals+' '+(p.goals===1?'goal':'goals'):'— goals')+
+        ' · '+(p.assistKnown?p.assists+' '+(p.assists===1?'assist':'assists'):'— assists')}))
     .sort((a,b)=>b.value-a.value||a.name.localeCompare(b.name)).slice(0,5);
   const cardList=bucket=>[...cards[bucket].values()]
     .sort((a,b)=>b.value-a.value||a.name.localeCompare(b.name)).slice(0,5);
@@ -187,7 +188,12 @@ function tdPlayerBoard(title,rows,empty,note){
 }
 function tdPlayersPanel(matches,team){
   const p=tdPlayerLeaders(matches,team);
-  const empty=matches.length?'No verified player-level records yet.':'Awaiting completed league matches.';
+  const empty=matches.length?'No verified player-level contributions published yet.':'Awaiting completed league matches.';
+  const cardEmpty=(colour,cover,total)=>{
+    if(!matches.length)return 'Awaiting completed league matches.';
+    if(cover===matches.length&&total===0)return 'No '+colour+' cards recorded in verified matches.';
+    return 'No named '+colour+' cards available yet.';
+  };
   const missingYellow=p.yellowAggregate>p.yellowNamed?
     'Named cards: '+p.yellowNamed+' of '+p.yellowAggregate+' recorded.':'Only verified named card events.';
   const missingRed=p.redAggregate>p.redNamed?
@@ -198,8 +204,8 @@ function tdPlayersPanel(matches,team){
     tdPlayerBoard('Top scorers',p.goals,empty,'Goals credited to players only; own goals excluded.')+
     tdPlayerBoard('Top assists',p.assists,empty,'Only officially recorded assists.')+
     tdPlayerBoard('Goals + assists',p.ga,empty,'Minimum recorded goal contributions; blank fields are unavailable.')+
-    tdPlayerBoard('Yellow cards',p.yellow,empty,missingYellow)+
-    tdPlayerBoard('Red cards',p.red,empty,missingRed)+
+    tdPlayerBoard('Yellow cards',p.yellow,cardEmpty('yellow',p.yellowCover,p.yellowAggregate),missingYellow)+
+    tdPlayerBoard('Red cards',p.red,cardEmpty('red',p.redCover,p.redAggregate),missingRed)+
     '</div><p class="td-explainer">Rankings are limited to verified league match records for this club. '+
     'A missing player statistic is not automatically zero; unnamed disciplinary events may make player totals incomplete.</p></section>';
 }
