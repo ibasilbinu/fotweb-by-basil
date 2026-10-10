@@ -245,3 +245,15 @@
  .td-venue-card{padding:16px}
  .td-venue-card>strong{font-size:31px}
 }
+
+
+/* Season Overview · league-wide player leaders share Team Dashboard cards. */
+.td-season-leaders{margin-top:5px;margin-bottom:24px}
+.td-season-leaders .td-panel-title h2{font-size:19px;letter-spacing:-.35px}
+.td-season-leaders .td-leader-card{background:linear-gradient(155deg,#1b2a20,#142017)}
+.td-season-leaders .td-leader-club{color:var(--accent);font-weight:550;font-size:10px;line-height:1.4}
+.td-season-leaders .td-leader-index{font-variant-numeric:tabular-nums}
+@media(max-width:610px){
+ .td-season-leaders{margin-top:4px;margin-bottom:18px}
+ .td-season-leaders .td-panel-title h2{font-size:17px}
+}
