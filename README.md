@@ -21,12 +21,10 @@ Live site: https://fotweb.streamlit.app/
   Completed broadcasts appear as Watch replay; unannounced streams have no button.
 - Points totals calculated from verified league-stage FT results.
 - Club dashboards with their schedule, results and any sourced match statistics.
-- Team Dashboard adds separate points earned at home and away, a vertical
-  goal-situation chart (open play, set piece, direct free kick, penalty and
-  own goal), and top-five player lists for scorers, assists, recorded G+A,
-  yellow cards and red cards. Counts are calculated only from verified
-  league-stage results, explicitly categorized goals and named player
-  records. Unclassified goal origins remain unavailable, never inferred.
+- Team Dashboard adds separate points earned at home and away, plus top-five
+  player lists for scorers, assists, recorded goals + assists, yellow cards and
+  red cards. Counts come only from verified league-stage results, named card
+  events and available player-level statistics. Missing values remain unavailable.
 - Club Analytics: all-club trend overlays (points, shots and goals), attack/defence rankings,
   two-club statistical comparisons and a league possession-vs-shots scatter plot.
   Computes only from verified completed league results; displays game counts,
