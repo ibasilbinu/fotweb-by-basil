@@ -201,33 +201,27 @@ function fwMatchDayGroups(fixtures) {
   ).join('');
 }
 function buildDetailedReportsPage() {
-  const intro=header('Match reports.','Select a fixture to explore its result, statistics, player performances and tactical analysis.');
+  const intro=header('Match reports.','Choose a completed fixture to open its statistics, player performances and tactical analysis.');
   const selected=state.report && resultsData.matches.find(m=>String(m.id)===String(state.report));
-  if(selected){
-    const label=selected.home+' vs '+selected.away;
-    return intro+'<div class="fw-report-backline"><button type="button" class="fw-report-back" data-report-back="true">'+
+  if(selected) {
+    return intro+
+      '<div class="fw-report-backline"><button type="button" class="fw-report-back" data-report-back="true">'+
       '<span aria-hidden="true">←</span> All match reports</button>'+
-      '<span class="fw-report-context">'+esc(label)+'</span></div>'+fwMatchReport(selected)+
-      '<div class="fw-report-end"><button type="button" class="fw-report-back" data-report-back="true">← Back to fixtures</button></div>';
+      '<span class="fw-report-context">'+esc(selected.home+' vs '+selected.away)+'</span></div>'+
+      fwMatchReport(selected)+
+      '<div class="fw-report-end"><button type="button" class="fw-report-back" data-report-back="true">← Back to match reports</button></div>';
   }
-  const relevant=allFixtures().filter(f=>state.team==='all'||f.homeId===state.team||f.awayId===state.team);
-  const completed=relevant.filter(f=>!!f.result).sort((a,b)=>(b.result?.date||istDate(b.kickoff)).localeCompare(a.result?.date||istDate(a.kickoff))||b.kickoff.localeCompare(a.kickoff));
-  const pending=relevant.filter(f=>!f.result).sort((a,b)=>a.kickoff.localeCompare(b.kickoff));
-  const all=state.reportScope==='all';
-  const controls='<div class="fw-match-browser-toolbar"><div class="fw-report-switch" role="group" aria-label="Match report list filter">'+
-    '<button type="button" data-report-scope="completed" aria-pressed="'+(!all)+'" class="'+(!all?'active':'')+
-    '">Completed <span>'+completed.length+'</span></button>'+
-    '<button type="button" data-report-scope="all" aria-pressed="'+all+'" class="'+(all?'active':'')+
-    '">All fixtures <span>'+relevant.length+'</span></button></div>'+
-    '<p>Each verified result opens a separate report. Use the club selector to filter.</p></div>';
-  const completeSection=completed.length?
-    '<div class="fw-match-browser-title"><h2>Completed matches</h2><span>Latest first</span></div>'+
-    fwMatchDayGroups(completed):
+  const matches=allFixtures().filter(f=>f.result &&
+    (state.team==='all'||f.homeId===state.team||f.awayId===state.team))
+    .sort((a,b)=>(b.result?.date||istDate(b.kickoff)).localeCompare(a.result?.date||istDate(a.kickoff))||
+      b.kickoff.localeCompare(a.kickoff));
+  const body=matches.length?
+    '<div class="fw-match-browser-title"><h2>Completed matches</h2><span>'+matches.length+
+    ' '+(matches.length===1?'report':'reports')+' · Latest first</span></div>'+
+    fwMatchDayGroups(matches):
     '<div class="fw-match-empty"><strong>No verified completed matches in this selection yet.</strong>'+
-    '<p>Match reports are automatically attached when official final results are verified.</p></div>';
-  const futureSection=all?
-    '<div class="fw-match-browser-title"><h2>Awaiting reports</h2><span>'+pending.length+' fixtures</span></div>'+
-    (pending.length?fwMatchDayGroups(pending):'<p class="fw-report-missing">No other fixtures are published in this selection.</p>'):'';
-  return intro+controls+completeSection+futureSection+
-    '<p class="fw-report-footnote fw-match-browser-note">Automatic checks run hourly. Individual report sections depend on published and verified information; some metrics may remain unavailable.</p>';
+    '<p>Reports appear automatically after each final score has been verified. '+
+    'Select All clubs in the sidebar to view every completed match.</p></div>';
+  return intro+body+
+    '<p class="fw-report-footnote fw-match-browser-note">New match reports are checked hourly. Advanced statistics and tactical findings appear only when verified sources provide the relevant evidence.</p>';
 }
