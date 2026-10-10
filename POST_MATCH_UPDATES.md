@@ -103,21 +103,6 @@ matched to the verified lineups and player lists only when unambiguous;
 unnamed sanctions remain unavailable. A full team-level card count does
 not justify an invented individual card recipient.
 
-For the vertical goal-origin chart, classify a scoring event **only with an
-explicit reliable source**. Scoring `events[].type` values of
-`penalty_goal` and `own_goal` directly identify the category. Other goals
-can carry an optional `goalType` of `open_play`, `set_piece` or
-`free_kick`, confirmed by official match commentary/report or equally
-trustworthy event data. "Set piece" refers to other dead-ball moves,
-including corners; `free_kick` denotes directly scored free kicks, and
-penalties are tracked separately to avoid double counting.
-Never assume that a `goal` event without a `goalType` was open play.
-The chart lists unclassified goals separately and shows dashes, not zeroes,
-for unavailable category totals. `postmatch.py` validates goal types.
-Preserve sources and do not guess player stats or goal origins when a report
-is silent. Do not convert official own goals into goals credited to the
-defending team's player.
-
 ## Official English YouTube streams
 
 Check `https://www.youtube.com/@IndianSuperLeague/streams` for scheduled match
