@@ -3,7 +3,7 @@
   "season": "2026-27",
   "competition": "Indian Super League",
   "scheduleScope": "Published Phase 1",
-  "verifiedAt": "2026-10-10T13:45:18Z",
+  "verifiedAt": "2026-10-10T16:51:24Z",
   "sourceUrl": "https://www.indiansuperleague.com/schedule-fixtures",
   "standingsSourceUrl": "https://www.indiansuperleague.com/standings",
   "teams": [
@@ -134,8 +134,8 @@
         "title": "LIVE: FC Goa vs Chennaiyin FC | MG ISL 2026-27 | Gameweek 1| English",
         "channelUrl": "https://www.youtube.com/@IndianSuperLeague",
         "language": "English",
-        "status": "live",
-        "verifiedAt": "2026-10-10T13:45:18Z"
+        "status": "ended",
+        "verifiedAt": "2026-10-10T16:51:24Z"
       }
     },
     {
