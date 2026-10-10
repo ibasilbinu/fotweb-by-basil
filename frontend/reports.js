@@ -100,7 +100,7 @@ function fwTimeline(match) {
   const events=Array.isArray(match.events)?match.events:[];
   if(!events.length) return fwMissing('No individually verified goal, card or substitution events have been recorded yet.');
   const types={goal:'Goal',penalty_goal:'Penalty goal',own_goal:'Own goal',penalty_missed:'Penalty missed',
-    yellow_card:'Yellow card',red_card:'Red card',substitution:'Substitution',var:'VAR',other:'Match event'};
+    yellow_card:'Yellow card',red_card:'Red card',second_yellow_red:'Second yellow · red card',substitution:'Substitution',var:'VAR',other:'Match event'};
   return '<ol class="fw-timeline">' + events.slice().sort((a,b)=>a.minute-b.minute || (a.addedMinute||0)-(b.addedMinute||0)).map(e=>{
     let detail=[e.player,e.assist?'Assist: '+e.assist:null,e.playerOut?'Off: '+e.playerOut:null,
       e.playerIn?'On: '+e.playerIn:null,e.detail].filter(Boolean).join(' · ');
@@ -154,6 +154,42 @@ function fwGoalScorers(match) {
   return '<div class="fw-goals-under-score"><span class="fw-goals-heading">GOAL SCORERS</span>'+
     '<div class="fw-goals-columns">'+column('home')+column('away')+'</div>'+pending+'</div>';
 }
+/* Red-card summary directly below the scoreboard. Second-yellow dismissals
+   use layered CSS cards; never infer discipline from the final score. */
+function fwRedCards(match) {
+  const events=Array.isArray(match.events)?match.events:[];
+  const redEvents=events.filter(e=>['red_card','second_yellow_red'].includes(e.type)&&
+    (e.side==='home'||e.side==='away'))
+    .sort((a,b)=>(a.minute??0)-(b.minute??0)||(a.addedMinute??0)-(b.addedMinute??0));
+  if(!redEvents.length) return '';
+  const isSecondYellow=e=>{
+    if(e.type==='second_yellow_red') return true;
+    if(!e.player||e.minute==null) return false;
+    /* Only establish two yellows from two individually verified events. */
+    const name=e.player.trim().toLocaleLowerCase();
+    return events.filter(y=>y.type==='yellow_card'&&y.side===e.side&&
+      typeof y.player==='string'&&y.player.trim().toLocaleLowerCase()===name&&
+      (y.minute<e.minute||(y.minute===e.minute&&(y.addedMinute||0)<=(e.addedMinute||0)))).length>=2;
+  };
+  const cardIcon=twoYellows=>'<span class="fw-dismissal-cards '+(twoYellows?'fw-dismissal-double':'fw-dismissal-straight')+
+    '" aria-hidden="true">'+(twoYellows?'<i class="fw-dismissal-yellow"></i>':'')+
+    '<i class="fw-dismissal-red"></i></span>';
+  const item=e=>{
+    const twoYellows=isSecondYellow(e);
+    const typeLabel=twoYellows?'Second yellow, red card':'Red card';
+    const minute=e.minute==null?'':' · '+esc(e.minute)+(e.addedMinute?'+'+esc(e.addedMinute):'')+'′';
+    return '<li aria-label="'+esc((e.player||'Player not verified')+', '+typeLabel+
+      (e.minute==null?'':' at '+e.minute+(e.addedMinute?'+'+e.addedMinute:'')+' minutes'))+'">'+
+      cardIcon(twoYellows)+'<span class="fw-dismissal-info"><strong>'+
+      esc(e.player||'Player not verified')+'</strong><span class="fw-dismissal-minute">'+minute+
+      '</span></span></li>';
+  };
+  const side=which=>'<div class="fw-reds-team fw-reds-'+which+'"><ul>'+
+    redEvents.filter(e=>e.side===which).map(item).join('')+'</ul></div>';
+  return '<section class="fw-reds-under-score" aria-label="Match red cards">'+
+    '<span class="fw-reds-heading">RED CARDS</span>'+
+    '<div class="fw-reds-columns">'+side('home')+side('away')+'</div></section>';
+}
 function fwMatchReport(match) {
   const homeTeam=seasonData.teams.find(t=>t.name===canonical(match.home));
   const awayTeam=seasonData.teams.find(t=>t.name===canonical(match.away));
@@ -167,7 +203,7 @@ function fwMatchReport(match) {
     '<p>'+esc(formatDate(match.date))+' · '+esc(match.venue||'Venue unconfirmed')+
     ' · '+esc(match.status)+'</p><div class="fw-match-score"><div>'+shield(homeTeam)+'<strong>'+esc(match.home)+
     '</strong></div><span>'+esc(match.homeGoals)+' <small>—</small> '+esc(match.awayGoals)+
-    '</span><div>'+shield(awayTeam)+'<strong>'+esc(match.away)+'</strong></div></div>'+fwGoalScorers(match)+'</header>';
+    '</span><div>'+shield(awayTeam)+'<strong>'+esc(match.away)+'</strong></div></div>'+fwGoalScorers(match)+fwRedCards(match)+'</header>';
   const overview='<p class="fw-report-summary">'+esc(match.report ||
     'The final score is verified. A sourced match narrative has not yet been published.')+'</p>' +
     '<p class="fw-report-footnote">Verified '+esc(formatDate(match.verifiedAt))+' · '+
