@@ -172,7 +172,11 @@ function fwLineupPitch(match) {
     '<div class="fw-lineup-tabs" role="tablist" aria-label="Choose a team">'+
     tab('home')+tab('away')+'</div>'+panels+'</section>';
 }
-function fwPlayers(match) {
+function fwLineup(match) {
+  return fwLineupPitch(match) ||
+    fwMissing('Verified starting lineups have not been published for this match.');
+}
+function fwPlayerStats(match) {
   const players=Array.isArray(match.players)?match.players:[];
   const metrics=[['goals','Goals'],['assists','Assists'],['shots','Shots'],['passes','Passes'],
     ['tackles','Tackles'],['saves','Saves'],['rating','Rating']];
@@ -183,10 +187,8 @@ function fwPlayers(match) {
       esc(p.side==='home'?match.home:match.away) + (p.position?' · '+p.position:'') +
       '</small></div><div class="fw-player-numbers">' + (nums||'Verified appearance') + '</div></div>';
   }).join('');
-  const pitch=fwLineupPitch(match);
-  return (pitch||'')+(cards?'<div class="fw-player-stats-label">VERIFIED PLAYER PERFORMANCES</div>'+
-    '<div class="fw-player-list">'+cards+'</div>':'')||
-    fwMissing('Verified player metrics and starting lineups have not been published for this match.');
+  return cards ? '<div class="fw-player-list">'+cards+'</div>' :
+    fwMissing('Verified individual player statistics have not been published for this match.');
 }
 function fwTimeline(match) {
   const events=Array.isArray(match.events)?match.events:[];
@@ -287,8 +289,9 @@ function fwMatchReport(match) {
   const awayTeam=seasonData.teams.find(t=>t.name===canonical(match.away));
   const shield=t=>t?crest(t,'small'):'';
   const id='report-'+match.id;
-  const labels=[['overview','Overview'],['statistics','Statistics'],['advanced','Advanced analytics'],
-    ['tactics','Tactical analysis'],['players','Players & lineups'],['timeline','Match timeline'],['verdict','Tactical verdict']];
+  const labels=[['overview','Overview'],['lineup','Lineup'],['statistics','Statistics'],
+    ['players','Player stats'],['timeline','Match timeline'],['tactics','Tactical analytics'],
+    ['advanced','Advanced analytics'],['verdict','Tactical verdict']];
   const nav='<nav class="fw-report-nav" aria-label="Match report sections">' +
     labels.map(([key,label])=>'<button type="button" data-report-section="'+esc(id+'-'+key)+'">'+esc(label)+'</button>').join('')+'</nav>';
   const headerBox='<header class="fw-match-hero"><span class="eyebrow">VERIFIED POST-MATCH REPORT</span>' +
@@ -304,17 +307,18 @@ function fwMatchReport(match) {
   const sourceLinks=match.sources.map(s=>sourceLink(s.url,s.label)).join(' <span class="fw-link-separator">·</span> ');
   return '<article id="'+esc(id)+'" class="fw-report">'+headerBox+nav+
     fwReportPanel('01 · Match overview',overview,id+'-overview','MATCH CONTEXT')+
-    fwReportPanel('02 · Match statistics',fwStatRows(match),id+'-statistics','VERIFIED METRICS')+
-    fwReportPanel('03 · Advanced analytics',fwEfficiency(match)+fwShotMap(match),id+'-advanced','DATA VISUALIZATION')+
-    fwReportPanel('04 · Tactical analysis',fwTactics(match),id+'-tactics','EVIDENCE-BASED')+
-    fwReportPanel('05 · Player performance & lineups',fwPlayers(match),id+'-players','INDIVIDUALS')+
-    fwReportPanel('06 · Match timeline',fwTimeline(match),id+'-timeline','KEY EVENTS')+
-    fwReportPanel('07 · FotWeb Tactical Verdict',fwVerdict(match),id+'-verdict','ANALYST VIEW')+
+    fwReportPanel('02 · Lineup',fwLineup(match),id+'-lineup','STARTING XI')+
+    fwReportPanel('03 · Match statistics',fwStatRows(match),id+'-statistics','VERIFIED METRICS')+
+    fwReportPanel('04 · Player stats',fwPlayerStats(match),id+'-players','INDIVIDUALS')+
+    fwReportPanel('05 · Match timeline',fwTimeline(match),id+'-timeline','KEY EVENTS')+
+    fwReportPanel('06 · Tactical analytics',fwTactics(match),id+'-tactics','EVIDENCE-BASED')+
+    fwReportPanel('07 · Advanced analytics',fwEfficiency(match)+fwShotMap(match),id+'-advanced','DATA VISUALIZATION')+
+    fwReportPanel('08 · FotWeb Tactical Verdict',fwVerdict(match),id+'-verdict','ANALYST VIEW')+
     '<footer class="fw-report-sources"><strong>Verified sources</strong><div>'+sourceLinks+
     (match.fotmobUrl?' <span class="fw-link-separator">·</span> '+sourceLink(match.fotmobUrl,'View on FotMob (external)'):'')+
     '</div><p>FotMob data is not scraped or copied. Only approved sources and published, verifiable facts enter this report.</p></footer></article>';
 }
-/* Compact fixtures first; full seven-part analysis opens only on request. */
+/* Compact fixtures first; the full eight-section report opens on request. */
 function fwMatchFixtureRow(f) {
   const h=club(f.homeId), a=club(f.awayId), r=f.result;
   const completed=!!r;
