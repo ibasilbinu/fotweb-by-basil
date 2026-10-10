@@ -71,7 +71,7 @@ def validate_results(data):
         if "events" in match:
             events = match["events"]
             require(isinstance(events, list) and len(events) <= 300, "Invalid match events")
-            allowed_events = {"goal", "penalty_goal", "own_goal", "penalty_missed", "yellow_card", "red_card", "substitution", "var", "other"}
+            allowed_events = {"goal", "penalty_goal", "own_goal", "penalty_missed", "yellow_card", "red_card", "second_yellow_red", "substitution", "var", "other"}
             for event in events:
                 require(isinstance(event, dict) and event.get("side") in ("home", "away") and event.get("type") in allowed_events, "Invalid event")
                 require(type(event.get("minute")) is int and 0 <= event["minute"] <= 200, "Invalid event minute")
