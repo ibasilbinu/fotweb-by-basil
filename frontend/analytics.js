@@ -171,9 +171,18 @@ function caClubComparison(a,b){
     '<p class="ca-footnote">Values are match averages or published percentages. Each metric uses only games with that statistic available. The longer bar means a larger number, not necessarily better performance.</p>';
 }
 function caScatter(summaries){
-  const points=summaries.map(s=>({s,x:s.avg('possession'),y:s.avg('shots')}))
-    .filter(p=>p.x!==null&&p.y!==null);
-  if(!points.length)return '<div class="ca-empty">Awaiting clubs with both verified possession and shots statistics.</div>';
+  /* Use paired matches only: the x/y averages must describe the same games. */
+  const points=summaries.map(s=>{
+    const pairs=s.history.map(m=>{
+      const own=caIsHome(m,s.team.name)?m.stats?.home:m.stats?.away;
+      return own&&Number.isFinite(own.possession)&&Number.isFinite(own.shots)&&
+        own.possession>=0&&own.shots>=0?own:null;
+    }).filter(Boolean);
+    if(!pairs.length)return null;
+    return {s,n:pairs.length,x:{value:pairs.reduce((a,r)=>a+r.possession,0)/pairs.length},
+      y:{value:pairs.reduce((a,r)=>a+r.shots,0)/pairs.length}};
+  }).filter(Boolean);
+  if(!points.length)return '<div class="ca-empty">Awaiting clubs with both verified possession and shots statistics from the same matches.</div>';
   const values=points.map(p=>p.x.value);
   const lo=Math.min(...values),hi=Math.max(...values);
   const range=Math.max(18,hi-lo+15);
@@ -194,7 +203,7 @@ function caScatter(summaries){
   const dots=points.map((p,i)=>{
     const color=caColors[seasonData.teams.findIndex(t=>t.id===p.s.team.id)%caColors.length];
     const x=X(p.x.value),y=Y(p.y.value);
-    const n=Math.min(p.x.n,p.y.n);
+    const n=p.n;
     return '<circle cx="'+x+'" cy="'+y+'" r="8" stroke="'+color+'" fill="'+color+
       '" fill-opacity=".72" stroke-width="2.2"><title>'+esc(p.s.team.name+
       ' · '+caNumber(p.x.value)+'% possession · '+caNumber(p.y.value)+' shots/match'+
@@ -209,7 +218,7 @@ function caScatter(summaries){
     esc('Possession versus shots per match for '+points.length+' clubs')+'">'+grid+dots+
     '<text x="'+(L+plotW/2)+'" y="'+(H-5)+'" text-anchor="middle" class="ca-axis-title">Average possession (%)</text>'+
     '<text transform="translate(17 '+(T+plotH/2)+') rotate(-90)" text-anchor="middle" class="ca-axis-title">Shots per match</text>'+
-    '</svg></div>'+legend+'<p class="ca-footnote">Each dot represents a club with both published shot and possession data. Hover over a dot for its values. This chart shows an association, not proof that possession causes shots.</p>';
+    '</svg></div>'+legend+'<p class="ca-footnote">Each dot uses matches where both possession and shots were published together. Hover for figures and the matched sample size. Correlation does not prove that possession causes shots.</p>';
 }
 function analyticsPage(){
   const summaries=caAllSummaries();
