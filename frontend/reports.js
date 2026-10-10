@@ -123,13 +123,23 @@ function fwLineupPitchPanel(match,side) {
     Number.isFinite(p.pitchPosition.y) && p.pitchPosition.x>=0 && p.pitchPosition.x<=100 &&
     p.pitchPosition.y>=0 && p.pitchPosition.y<=100) &&
     !!fwOfficialISLGroundViewSource(match,info);
+  /* Show only roles already recorded for the same player and team.
+     Broad roles are annotations to the XI list, never pitch coordinates. */
+  const verifiedPlayers=Array.isArray(match.players)?match.players:[];
   const fullXI=starters.slice().sort((a,b)=>{
     const aNo=Number.isInteger(a.number)?a.number:Infinity;
     const bNo=Number.isInteger(b.number)?b.number:Infinity;
     return aNo-bNo||String(a.name||'').localeCompare(String(b.name||''));
-  }).map(p=>'<li class="fw-xi-player"><span class="fw-xi-shirt-number">'+
-    (p.number==null?'—':esc(p.number))+'</span><span class="fw-xi-player-name">'+
-    esc(p.name)+'</span></li>').join('');
+  }).map(p=>{
+    const record=verifiedPlayers.find(item=>item.side===side &&
+      String(item.name||'').trim().toLowerCase()===String(p.name||'').trim().toLowerCase());
+    const role=String(p.position||record?.position||'').trim();
+    return '<li class="fw-xi-player"><span class="fw-xi-shirt-number">'+
+      (p.number==null?'—':esc(p.number))+'</span><span class="fw-xi-player-details">'+
+      '<span class="fw-xi-player-name">'+esc(p.name)+'</span>'+
+      (role?'<small class="fw-xi-player-role">'+esc(role)+'</small>':'')+
+      '</span></li>';
+  }).join('');
   const verifiedList='<div class="fw-xi-list" aria-label="'+esc(teamName)+' starting players">'+
     '<h5>Starting XI <span>'+esc(starters.length)+' players</span></h5>'+
     '<ol>'+fullXI+'</ol></div>';
@@ -143,11 +153,11 @@ function fwLineupPitchPanel(match,side) {
       '%;top:'+p.pitchPosition.y+'%">'+fwLineupPlayerChip(p)+
       (p.pitchPosition.label?'<span class="fw-pitch-exact-role">'+esc(p.pitchPosition.label)+'</span>':'')+
       '</div>').join('')+'</div></div>':'';
-  const formation=info?.formation?'<span class="fw-pitch-formation">Formation: '+
-    esc(info.formation)+'</span>':'<span class="fw-lineup-no-formation">Formation unavailable</span>';
+  const formation=info?.formation?'<span class="fw-pitch-formation" title="Previously recorded formation; checked against official ISL when updates are available">Recorded formation: '+
+    esc(info.formation)+'</span>':'<span class="fw-lineup-no-formation">Official formation not yet confirmed</span>';
   const note=diagramComplete?
-    'Formation and starting XI displayed from the official ISL Ground View; these are pre-match positions, not tracking data.':
-    'Player-by-player pitch positions are not verified. Showing the confirmed starting XI as a list.';
+    'Starting formation positions reproduced from the official ISL Ground View (not match tracking data).':
+    'Exact player placements are not yet verified from the official ISL Ground View. The recorded starting XI is shown as a list; official lineup updates are checked hourly.';
   const officialMatchLink=(()=>{
     const url=safeUrl(match.matchUrl);
     if(!url)return '';
