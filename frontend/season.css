@@ -208,8 +208,7 @@
 .ca-trend-tooltip small{font-size:10px;line-height:1.4;color:#aec6b4}
 
 
-/* Team Dashboard — separate home/away league points, goal-origin chart,
-   and source-grounded player leaderboards. */
+/* Team Dashboard — separate home/away league points and sourced player leaderboards. */
 .td-panel{background:#121a17;border:1px solid #304237;border-radius:12px;
   padding:21px;margin:0 0 21px;min-width:0}
 .td-panel-title{display:flex;align-items:baseline;justify-content:space-between;
@@ -222,18 +221,7 @@
 .td-venue-card>span{font-size:12px;color:#c3d3c4;font-weight:650}
 .td-venue-card>strong{font-size:37px;line-height:1.1;color:var(--accent);font-weight:750}
 .td-venue-card>small{font-size:11px;color:#a8b9a9;line-height:1.5}
-.td-goal-plot{width:100%;overflow-x:auto}
-.td-goal-plot svg{display:block;width:100%;height:auto;min-width:460px}
-.td-goal-grid{stroke:#34463b;stroke-width:1;stroke-dasharray:4 5}
-.td-goal-axis{font-size:11px;fill:#b1c3b4}
-.td-goal-stem{stroke:#a9d66d;stroke-width:6;stroke-linecap:round}
-.td-goal-dot{fill:#b5e07b;stroke:#1c2c1e;stroke-width:2.5;cursor:help}
-.td-goal-dot:hover,.td-goal-dot:focus-visible{fill:#d4fb93;stroke:#fff;stroke-width:3.3;outline:none}
-.td-goal-number{font-size:15px;font-weight:700;fill:#e8f4e9}
-.td-goal-label{font-size:11px;font-weight:650;fill:#bdcfbf}
 .td-explainer{font-size:11px;color:#9cb2a2;line-height:1.7;margin:13px 0 0}
-.td-status{font-size:12px;color:#d2e1d2;background:#1b2920;border-left:3px solid #809f78;
-  padding:12px 14px;line-height:1.6;margin:10px 0 0}
 .td-leader-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
 .td-leader-card{background:#18251d;border:1px solid #3a5040;border-radius:10px;
   padding:17px 15px;min-width:0}
@@ -256,5 +244,4 @@
  .td-venue-points,.td-leader-grid{grid-template-columns:1fr}
  .td-venue-card{padding:16px}
  .td-venue-card>strong{font-size:31px}
- .td-goal-plot{overflow-x:auto}
 }
