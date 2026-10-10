@@ -88,8 +88,18 @@ def validate_results(data):
                     short_text(info["formation"], "formation", 30)
                 if "positionSourceUrl" in info:
                     source = urlparse(info["positionSourceUrl"])
-                    require(source.scheme == "https" and bool(source.hostname) and not source.username and not source.password,
-                            "Invalid lineup position source URL")
+                    match_centre = urlparse(match.get("matchUrl", ""))
+                    trusted_hosts = {"indiansuperleague.com", "www.indiansuperleague.com"}
+                    require(source.scheme == "https" and source.hostname in trusted_hosts
+                            and not source.username and not source.password,
+                            "Pitch positions require an official ISL Ground View URL")
+                    require(match_centre.scheme == "https" and match_centre.hostname in trusted_hosts
+                            and source.path.rstrip("/") == match_centre.path.rstrip("/")
+                            and source.path.rstrip("/").startswith("/matchcentre/")
+                            and source.path.rstrip("/").split("/")[-1].isdigit(),
+                            "Pitch diagram must match this match's official ISL centre")
+                    require(isinstance(info.get("formation"), str) and bool(info["formation"].strip()),
+                            "An official ISL formation is required for positioned lineups")
                 if "starters" in info:
                     require(isinstance(info["starters"], list) and len(info["starters"]) <= 11, "Invalid starting XI")
                     positioned = 0
@@ -113,7 +123,7 @@ def validate_results(data):
                         require(len(info["starters"]) == 11 and positioned == 11,
                                 "A sourced pitch diagram must position all 11 starters")
                         require("positionSourceUrl" in info,
-                                "Pitch positions require an official or trusted lineup diagram source URL")
+                                "Pitch positions require the same match's official ISL Ground View URL")
         if "players" in match:
             require(isinstance(match["players"], list) and len(match["players"]) <= 100, "Invalid players")
             for player in match["players"]:
