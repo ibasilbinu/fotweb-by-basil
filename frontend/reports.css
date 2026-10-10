@@ -295,3 +295,7 @@ button.fw-match-list-item:focus-visible,.fw-report-switch button:focus-visible,.
  .fw-xi-shirt-number{flex-basis:30px;height:30px}
  .fw-xi-roster-toggle summary{margin:0 9px}
 }
+
+/* Source-backed broad player roles, never invented tactical pitch positions. */
+.fw-xi-player-details{display:flex;flex-direction:column;gap:3px;min-width:0}
+.fw-xi-player-role{font-size:10px;color:#a9c2b0;line-height:1.35}
