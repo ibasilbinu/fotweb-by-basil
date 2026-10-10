@@ -75,8 +75,9 @@ published fixtures, corrected dates/times/venues, postponements and cancellation
 10 October 2026 confirms **Shree Shiv Chhatrapati Sports Complex, Balewadi,
 Pune** as Inter Kashi's home ground for the season:
 https://www.indiansuperleague.com/news/all-indian-inter-kashi-face-star-studded-kerala-blasters
-The eight Phase 1 home fixtures (`homeId=2354`) have that sourced venue and
-`sourceNote`. Do not restore `Venue TBC` from an older schedule snapshot; change
+The eight Phase 1 home fixtures (`homeId=2354`) have that sourced venue,
+with the official announcement retained as their `sourceUrl`. Do not add a
+visible `sourceNote` for this confirmation. Do not restore `Venue TBC` from an older schedule snapshot; change
 the venue only if a newer official match-specific source confirms a relocation.
 Keep Inter Kashi's away-match venues unchanged.
 
