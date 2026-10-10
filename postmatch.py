@@ -80,6 +80,20 @@ def validate_results(data):
                 for key in ("player", "playerIn", "playerOut", "assist", "detail"):
                     if key in event:
                         short_text(event[key], key, 250)
+                if "goalType" in event:
+                    require(event["type"] in ("goal", "penalty_goal", "own_goal"),
+                            "Goal type only applies to scoring events")
+                    require(event["goalType"] in ("open_play", "set_piece", "free_kick", "penalty", "own_goal"),
+                            "Invalid sourced goal classification")
+                    if event["type"] == "penalty_goal":
+                        require(event["goalType"] == "penalty",
+                                "Penalty goal classification must match event type")
+                    if event["type"] == "own_goal":
+                        require(event["goalType"] == "own_goal",
+                                "Own goal classification must match event type")
+                    if event["type"] == "goal":
+                        require(event["goalType"] not in ("penalty", "own_goal"),
+                                "Use penalty_goal or own_goal event types for those scores")
         if "lineups" in match:
             require(isinstance(match["lineups"], dict), "Invalid lineups")
             for side, info in match["lineups"].items():
