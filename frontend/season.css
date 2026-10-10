@@ -206,3 +206,55 @@
 .ca-trend-tooltip strong{font-size:13px;color:var(--accent);line-height:1.45}
 .ca-trend-tooltip span{font-size:11px;line-height:1.4;color:#edf6ed}
 .ca-trend-tooltip small{font-size:10px;line-height:1.4;color:#aec6b4}
+
+
+/* Team Dashboard — separate home/away league points, goal-origin chart,
+   and source-grounded player leaderboards. */
+.td-panel{background:#121a17;border:1px solid #304237;border-radius:12px;
+  padding:21px;margin:0 0 21px;min-width:0}
+.td-panel-title{display:flex;align-items:baseline;justify-content:space-between;
+  flex-wrap:wrap;gap:10px;padding-bottom:16px}
+.td-panel-title h2{font-size:17px;color:#e8f1e9;margin:0;letter-spacing:-.2px}
+.td-panel-title small{font-size:10px;color:#a7baaa;line-height:1.5}
+.td-venue-points{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.td-venue-card{background:linear-gradient(120deg,#202f23,#16211b);border:1px solid #38523c;
+  border-radius:10px;padding:19px 21px;display:flex;flex-direction:column;gap:9px;min-width:0}
+.td-venue-card>span{font-size:12px;color:#c3d3c4;font-weight:650}
+.td-venue-card>strong{font-size:37px;line-height:1.1;color:var(--accent);font-weight:750}
+.td-venue-card>small{font-size:11px;color:#a8b9a9;line-height:1.5}
+.td-goal-plot{width:100%;overflow-x:auto}
+.td-goal-plot svg{display:block;width:100%;height:auto;min-width:460px}
+.td-goal-grid{stroke:#34463b;stroke-width:1;stroke-dasharray:4 5}
+.td-goal-axis{font-size:11px;fill:#b1c3b4}
+.td-goal-stem{stroke:#a9d66d;stroke-width:6;stroke-linecap:round}
+.td-goal-dot{fill:#b5e07b;stroke:#1c2c1e;stroke-width:2.5;cursor:help}
+.td-goal-dot:hover,.td-goal-dot:focus-visible{fill:#d4fb93;stroke:#fff;stroke-width:3.3;outline:none}
+.td-goal-number{font-size:15px;font-weight:700;fill:#e8f4e9}
+.td-goal-label{font-size:11px;font-weight:650;fill:#bdcfbf}
+.td-explainer{font-size:11px;color:#9cb2a2;line-height:1.7;margin:13px 0 0}
+.td-status{font-size:12px;color:#d2e1d2;background:#1b2920;border-left:3px solid #809f78;
+  padding:12px 14px;line-height:1.6;margin:10px 0 0}
+.td-leader-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.td-leader-card{background:#18251d;border:1px solid #3a5040;border-radius:10px;
+  padding:17px 15px;min-width:0}
+.td-leader-card h3{font-size:13px;color:#e9f4e8;font-weight:700;margin:0 0 14px}
+.td-leader-list{padding:0;margin:0;list-style:none;display:grid;gap:7px}
+.td-leader-list li{display:flex;align-items:center;gap:9px;border-bottom:1px solid #334636;
+  padding:7px 0 11px;min-width:0}
+.td-leader-list li:last-child{border-bottom:none}
+.td-leader-index{font-size:10px;color:#819b87;flex:0 0 15px}
+.td-leader-person{flex:1;min-width:0;display:flex;flex-direction:column;gap:3px}
+.td-leader-person strong{font-size:11px;color:#e7f0e6;line-height:1.35;overflow-wrap:anywhere}
+.td-leader-person small{font-size:9px;color:#98b19c;line-height:1.45}
+.td-leader-score{font-weight:750;font-size:20px;color:var(--accent);font-variant-numeric:tabular-nums}
+.td-leader-empty{font-size:11px;color:#a3b9a7;line-height:1.6;margin:0;min-height:40px}
+.td-leader-note{font-size:9px;color:#8fa995;line-height:1.6;margin:14px 0 0}
+@media(max-width:1000px){.td-leader-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:610px){
+ .td-panel{padding:15px;margin-bottom:14px}
+ .td-panel-title{display:block}.td-panel-title small{display:block;margin-top:7px}
+ .td-venue-points,.td-leader-grid{grid-template-columns:1fr}
+ .td-venue-card{padding:16px}
+ .td-venue-card>strong{font-size:31px}
+ .td-goal-plot{overflow-x:auto}
+}
