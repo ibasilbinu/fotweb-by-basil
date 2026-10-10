@@ -250,3 +250,25 @@ button.fw-match-list-item:focus-visible,.fw-report-switch button:focus-visible,.
   .fw-pitch-player-name{font-size:8px}
   .fw-pitch-bands{padding-left:5px;padding-right:5px}
 }
+
+
+/* Individually sourced lineup-diagram positions (not in-match tracking data).
+   Normalized 0–100 x/y coordinates are rendered only with a source URL. */
+.fw-lineup-exact .fw-pitch-exact-players{position:relative;z-index:1;width:100%;min-height:535px;height:535px}
+.fw-pitch-exact-slot{position:absolute;transform:translate(-50%,-50%);width:17%;max-width:116px;text-align:center}
+.fw-pitch-exact-slot .fw-pitch-player{gap:4px}
+.fw-pitch-exact-slot .fw-pitch-shirt{width:42px;height:39px}
+.fw-pitch-exact-role{font-size:9px;line-height:1.2;color:#c4e0c8;font-weight:750;letter-spacing:.4px}
+.fw-lineup-pos-source{padding:0 17px 7px;font-size:10px}
+.fw-lineup-pos-source .text-button{color:var(--accent)}
+@media(max-width:680px){
+ .fw-lineup-exact .fw-pitch-exact-players{min-height:475px;height:475px}
+ .fw-pitch-exact-slot{width:21%}
+ .fw-pitch-exact-slot .fw-pitch-shirt{width:35px;height:33px}
+ .fw-pitch-exact-role{font-size:8px}
+ .fw-lineup-pos-source{padding:0 11px 6px}
+}
+@media(max-width:390px){
+ .fw-pitch-exact-slot .fw-pitch-shirt{width:30px;height:31px}
+ .fw-pitch-exact-slot{width:22%}
+}
