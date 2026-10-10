@@ -272,3 +272,26 @@ button.fw-match-list-item:focus-visible,.fw-report-switch button:focus-visible,.
  .fw-pitch-exact-slot .fw-pitch-shirt{width:30px;height:31px}
  .fw-pitch-exact-slot{width:22%}
 }
+
+
+/* Verified starting-XI list for matches without individually sourced pitch positions. */
+.fw-xi-list{margin:14px 15px 15px;padding:0;border:1px solid #34473b;border-radius:10px;background:#16221c;overflow:hidden}
+.fw-xi-list h5{margin:0;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:13px 16px;background:#1c3023;color:#e8f3ea;font-size:12px;font-weight:700}
+.fw-xi-list h5 span{color:#a6bba9;font-size:10px;font-weight:500}
+.fw-xi-list ol{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+.fw-xi-player{display:flex;align-items:center;gap:12px;padding:13px 15px;min-width:0;border-top:1px solid #2c3e34;color:#e2ede5;font-size:11px;line-height:1.5}
+.fw-xi-player:nth-child(odd){border-right:1px solid #2c3e34}
+.fw-xi-shirt-number{flex:0 0 32px;height:32px;display:grid;place-items:center;border:1px solid #476647;background:#243d2b;color:var(--accent);border-radius:7px;font-size:12px;font-weight:750;font-variant-numeric:tabular-nums}
+.fw-xi-player-name{overflow-wrap:anywhere}
+.fw-lineup-no-formation{color:#aebcb3;font-size:11px}
+.fw-xi-roster-toggle{margin-top:12px}
+.fw-xi-roster-toggle summary{cursor:pointer;margin:0 15px;padding:11px 13px;border:1px solid #385041;border-radius:8px;color:var(--accent);font-size:11px;font-weight:650}
+.fw-xi-roster-toggle .fw-xi-list{margin-top:8px}
+@media(max-width:680px){
+ .fw-xi-list{margin:12px 9px}
+ .fw-xi-list h5{padding:12px 13px}
+ .fw-xi-list ol{grid-template-columns:1fr}
+ .fw-xi-player{padding:11px 12px;border-right:0!important}
+ .fw-xi-shirt-number{flex-basis:30px;height:30px}
+ .fw-xi-roster-toggle summary{margin:0 9px}
+}
