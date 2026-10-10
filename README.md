@@ -9,6 +9,7 @@ Live site: https://fotweb.streamlit.app/
 ## Current content
 
 - Official participating club list and official club crests.
+- Creator’s Corner: an About Basil page with contact and profile icons.
 - All 78 published Phase 1 fixtures, 10 October 2026–17 January 2027.
 - Fixtures filtered by club, month, match status or search.
 - Kickoff times in IST, published venues, and explicit Venue TBC labels.
