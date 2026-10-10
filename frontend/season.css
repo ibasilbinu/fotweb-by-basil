@@ -100,3 +100,6 @@
  .ca-scatter-plot{padding:12px 5px 0}
  .ca-scatter-legend{padding:4px 13px}
 }
+
+.ca-team-entry{display:flex;justify-content:flex-start;align-items:center;margin:0 0 17px}
+.ca-team-entry .outline-button{border-color:#476549;background:#1b2b20;color:var(--accent)}
