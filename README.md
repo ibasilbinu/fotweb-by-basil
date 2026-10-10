@@ -14,7 +14,7 @@ Live site: https://fotweb.streamlit.app/
 - Kickoff times in IST, published venues, and explicit Venue TBC labels.
 - CSV fixture export and calendar downloads.
 - Bottom-centred Watch live links to announced official ISL English YouTube streams.
-  Completed broadcasts appear as Watch replay; unavailable links are labelled.
+  Completed broadcasts appear as Watch replay; unannounced streams have no button.
 - Points totals calculated from verified league-stage FT results.
 - Club dashboards with their schedule, results and any sourced match statistics.
 - Match reports with source links. Missing statistics stay unavailable.

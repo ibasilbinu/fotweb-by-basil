@@ -103,6 +103,6 @@ official replacement. Broadcast updates may change only `data/isl-season.json`,
 validated by `season.py`; all other automation restrictions still apply.
 
 Fixture cards show Watch live at the bottom centre once a matching English
-stream is announced. Verified completed matches show Watch replay. Unknown
-streams remain labelled English stream not announced. Postponed and cancelled
+stream is announced. Verified completed matches show Watch replay. Unannounced
+streams have no watch button or placeholder. Postponed and cancelled
 fixtures do not show stream buttons.
