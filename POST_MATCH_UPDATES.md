@@ -93,6 +93,14 @@ conflicting source entries until an official correction is verified.
 
 ## Team Dashboard statistics and coverage
 
+Season Overview also shows league-wide top-five player rankings across all
+13 participating clubs, calculated from the same verified player goals,
+assists and named card events as Team Dashboard. The rankings list each
+player's club, combine recorded contributions by verified player name,
+and show an empty state for unverified data. Do not infer zero-valued
+player statistics from missing match reports or fill the leaderboard from
+unverified transfer/roster sources.
+
 The dashboard uses the existing completed, **league-stage FT** records in
 `data/isl-results.json`. Home/away points award 3 for wins and 1 for draws.
 Published individual player `goals` and `assists` fields produce top-five
