@@ -103,3 +103,32 @@
 
 .ca-team-entry{display:flex;justify-content:flex-start;align-items:center;margin:0 0 17px}
 .ca-team-entry .outline-button{border-color:#476549;background:#1b2b20;color:var(--accent)}
+
+
+/* Fixtures are the single entry point for pre-match details and full reports. */
+.fw-fixture-clickable{cursor:pointer;transition:border-color .16s ease,background .16s ease}
+.fw-fixture-clickable:hover{border-color:#638b68;background:#18201b}
+.fw-fixture-clickable:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.fw-fixture-clickable .fixture-team{cursor:inherit}
+.fw-fixture-clickable .fixture-team:hover{color:inherit}
+.fw-fixture-clickable .fixture-actions{justify-content:flex-start;flex-wrap:wrap}
+.fw-fixture-clickable .fixture-actions>*:last-child{margin-left:auto}
+.fw-fixture-clickable .fw-fixture-detail-button{color:var(--accent);font-weight:700}
+.fw-fixture-preview .fw-match-hero{padding-top:31px;padding-bottom:35px}
+.fw-fixture-preview-body{padding:24px}
+.fw-fixture-preview-body>h2{font-size:18px;margin:0 0 10px;color:#e5f1e8}
+.fw-fixture-preview-body>.fw-report-summary{color:#b8c9bb;font-size:12px;line-height:1.7;margin:0 0 18px}
+.fw-fixture-preview-meta{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-bottom:26px}
+.fw-fixture-preview-meta>div{background:#1c2d23;border:1px solid #364d3a;border-radius:8px;padding:13px;min-width:0}
+.fw-fixture-preview-meta small{display:block;font-size:10px;color:#99ad9d;margin-bottom:7px}
+.fw-fixture-preview-meta strong{font-size:11px;color:#e3f0e5;overflow-wrap:anywhere}
+.fw-fixture-preview-lineup-heading{font-size:17px;margin:0 0 15px;color:#eaf2e9}
+.fw-fixture-preview-links{display:flex;flex-wrap:wrap;gap:12px;padding:4px 0 16px}
+.fw-fixture-preview-body .fixture-watch{margin-top:7px}
+@media(max-width:600px){
+ .fw-fixture-preview-body{padding:15px}
+ .fw-fixture-preview-meta{grid-template-columns:1fr;gap:8px}
+ .fw-fixture-preview .fw-match-score{gap:9px}
+ .fw-fixture-clickable .fixture-actions{gap:10px}
+ .fw-fixture-clickable .fixture-actions>*:last-child{margin-left:0}
+}
