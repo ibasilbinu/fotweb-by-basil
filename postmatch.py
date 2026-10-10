@@ -86,44 +86,17 @@ def validate_results(data):
                 require(side in ("home", "away") and isinstance(info, dict), "Invalid lineup side")
                 if "formation" in info:
                     short_text(info["formation"], "formation", 30)
-                if "positionSourceUrl" in info:
-                    source = urlparse(info["positionSourceUrl"])
-                    match_centre = urlparse(match.get("matchUrl", ""))
-                    trusted_hosts = {"indiansuperleague.com", "www.indiansuperleague.com"}
-                    require(source.scheme == "https" and source.hostname in trusted_hosts
-                            and not source.username and not source.password,
-                            "Pitch positions require an official ISL Ground View URL")
-                    require(match_centre.scheme == "https" and match_centre.hostname in trusted_hosts
-                            and source.path.rstrip("/") == match_centre.path.rstrip("/")
-                            and source.path.rstrip("/").startswith("/matchcentre/")
-                            and source.path.rstrip("/").split("/")[-1].isdigit(),
-                            "Pitch diagram must match this match's official ISL centre")
-                    require(isinstance(info.get("formation"), str) and bool(info["formation"].strip()),
-                            "An official ISL formation is required for positioned lineups")
+                require("positionSourceUrl" not in info,
+                        "FotWeb uses lineup lists only; Ground View positioning sources are not supported")
                 if "starters" in info:
                     require(isinstance(info["starters"], list) and len(info["starters"]) <= 11, "Invalid starting XI")
-                    positioned = 0
                     for player in info["starters"]:
                         require(isinstance(player, dict), "Invalid starter")
                         short_text(player.get("name"), "starter name", 120)
                         if "number" in player:
                             require(type(player["number"]) is int and 0 <= player["number"] <= 99, "Invalid shirt number")
-                        if "pitchPosition" in player:
-                            position = player["pitchPosition"]
-                            require(isinstance(position, dict), "Invalid pitch position")
-                            require(set(position).issubset({"x", "y", "label"}), "Unsupported pitch position key")
-                            for axis in ("x", "y"):
-                                value = position.get(axis)
-                                require(type(value) in (int, float) and math.isfinite(value) and 0 <= value <= 100,
-                                        "Invalid pitch position coordinate")
-                            if "label" in position:
-                                short_text(position["label"], "position label", 15)
-                            positioned += 1
-                    if positioned:
-                        require(len(info["starters"]) == 11 and positioned == 11,
-                                "A sourced pitch diagram must position all 11 starters")
-                        require("positionSourceUrl" in info,
-                                "Pitch positions require the same match's official ISL Ground View URL")
+                        require("pitchPosition" not in player,
+                                "FotWeb uses lineup lists only; pitch coordinates are not supported")
         if "players" in match:
             require(isinstance(match["players"], list) and len(match["players"]) <= 100, "Invalid players")
             for player in match["players"]:
