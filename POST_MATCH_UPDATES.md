@@ -111,7 +111,7 @@ fixtures do not show stream buttons.
 
 Every verified completed match receives an eight-section report in this order:
 1. Match overview
-2. Lineup (verified starting XIs and schematic formation pitch)
+2. Lineup (verified XI list; exact pitch view only with individually sourced coordinates)
 3. Match statistics
 4. Player stats (individual verified metrics, separately from the lineup)
 5. Match timeline
@@ -169,8 +169,9 @@ Optional record fields:
   formation numbers, jersey numbers, or broad positions such as "Defender".
   Do not partially fill a pitch: all 11 coordinates and a source URL are
   required. Omit `pitchPosition` entirely when a readable, verifiable official
-  graphic/source is unavailable; FotWeb shows a clearly labelled role-grouped
-  schematic instead. Never copy or scrape FotMob's proprietary formation maps.
+  graphic/source is unavailable; FotWeb displays the verified starting XI
+  as a simple list of full names and jersey numbers, with the sourced formation
+  when present. Never draw approximate pitch positions. Never copy or scrape FotMob's proprietary formation maps.
   Where sources disagree, preserve existing verified starters/formation and
   flag the mismatch rather than silently guessing or overwriting.
 - `players`: array with `name`, `side`, and optional `position`, `goals`,
