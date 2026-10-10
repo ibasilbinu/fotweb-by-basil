@@ -27,7 +27,7 @@
 .ca-trend-key{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;padding:13px 21px 0;font-size:12px}
 .ca-trend-key strong{color:#e4efe5}
 .ca-trend-key span{font-size:11px;color:#a9bbae}
-.ca-trend-plot{padding:5px 12px 0;overflow:hidden}
+.ca-trend-plot{padding:5px 12px 0;overflow:visible;position:relative}
 .ca-trend-plot svg,.ca-scatter-plot svg{display:block;width:100%;height:auto;overflow:visible}
 .ca-gridline{stroke:#3b4b42;stroke-width:1;stroke-dasharray:3 5}
 .ca-axis{fill:#b0c3b2;font-size:11px}
@@ -186,3 +186,23 @@
 .ca-scatter-tooltip strong{font-size:13px;color:var(--accent);line-height:1.45}
 .ca-scatter-tooltip span{font-size:11px;line-height:1.4;color:#edf6ed}
 .ca-scatter-tooltip small{font-size:10px;line-height:1.4;color:#aec6b4}
+
+
+/* The same readable identification tooltip on all-club trend chart points. */
+.ca-trend-plot svg .ca-trend-series-dot{cursor:pointer;outline:none;transition:stroke-width .14s ease}
+.ca-trend-series-dot:hover,.ca-trend-series-dot:focus-visible{
+  stroke-width:4;filter:drop-shadow(0 0 3px rgba(255,255,255,.45))
+}
+.ca-trend-series-dot:focus-visible{stroke:#fff}
+.ca-trend-tooltip{
+  position:absolute;z-index:9;min-width:180px;max-width:min(260px,calc(100% - 16px));
+  padding:13px 15px;border:1px solid #67846e;border-radius:10px;
+  background:#1d2c22;color:#edf6ed;box-shadow:0 12px 26px rgba(0,0,0,.5);
+  transform:translate(-50%,-100%);pointer-events:none;
+  display:flex;flex-direction:column;gap:6px;text-align:left;
+}
+.ca-trend-tooltip[hidden],.ca-trend-tooltip [hidden]{display:none!important}
+.ca-trend-tooltip.below{transform:translate(-50%,0)}
+.ca-trend-tooltip strong{font-size:13px;color:var(--accent);line-height:1.45}
+.ca-trend-tooltip span{font-size:11px;line-height:1.4;color:#edf6ed}
+.ca-trend-tooltip small{font-size:10px;line-height:1.4;color:#aec6b4}
