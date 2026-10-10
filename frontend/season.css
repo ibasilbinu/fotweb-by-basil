@@ -169,7 +169,7 @@
 
 /* Interactive club identification for shots-per-match scatter plot dots. */
 .ca-scatter-plot{position:relative}
-.ca-scatter-point{cursor:pointer;outline:none;transition:fill-opacity .14s ease,stroke-width .14s ease}
+.ca-scatter-plot svg .ca-scatter-point{cursor:pointer;outline:none;transition:fill-opacity .14s ease,stroke-width .14s ease}
 .ca-scatter-point:hover,.ca-scatter-point:focus-visible{
   fill-opacity:1;stroke-width:4
 }
