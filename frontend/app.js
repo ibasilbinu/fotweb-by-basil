@@ -304,7 +304,7 @@ function bindPage(){
   bindTrendTooltips();
   const teamClubFilter=$('#tdClubFilter');
   if(teamClubFilter)teamClubFilter.onchange=e=>navigate('team',{team:e.target.value});
-  $('[data-analytics-club]').forEach(el=>el.onclick=()=>{
+  $$('[data-analytics-club]').forEach(el=>el.onclick=()=>{
     navigate('analytics',{analyticsTeam:el.dataset.analyticsClub,
       analyticsCompareA:el.dataset.analyticsClub,analyticsCompareB:''});
   });
