@@ -27,7 +27,18 @@ st.markdown(
     <style>
       .stApp { background: #0b0e11; }
       .block-container { padding: 1rem 0 0 !important; max-width: 100% !important; }
-      [data-testid="stHeader"] { background: transparent; }
+      /* FotWeb has its own header inside the component. Hide Streamlit's
+         entire host header and toolbar, including its three-dot menu. */
+      [data-testid="stHeader"],
+      [data-testid="stToolbar"],
+      .stAppHeader,
+      .stAppToolbar,
+      .stToolbar {
+        display: none !important;
+        height: 0 !important;
+        min-height: 0 !important;
+        visibility: hidden !important;
+      }
       /* Suppress Community Cloud's Fork/GitHub and deploy controls,
          including any reserved spacing; retain the three-dot MainMenu. */
       [data-testid="stToolbarActions"],
