@@ -10,5 +10,5 @@ font = "sans serif"
 gatherUsageStats = false
 
 [client]
-# Keep the three-dot menu without developer-only controls.
-toolbarMode = "viewer"
+# Suppress the built-in options menu and developer controls.
+toolbarMode = "minimal"
