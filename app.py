@@ -28,6 +28,8 @@ st.markdown(
       .stApp { background: #0b0e11; }
       .block-container { padding: 1rem 0 0 !important; max-width: 100% !important; }
       [data-testid="stHeader"] { background: transparent; }
+      [data-testid="stMainMenuItem-print"],
+      [data-testid="stMainMenuItem-recordScreencast"] { display: none !important; }
       [data-testid="stMainBlockContainer"] { padding-top: 1rem !important; }
       iframe[title*="fotweb_workspace"] { display: block; border: 0; }
     </style>
