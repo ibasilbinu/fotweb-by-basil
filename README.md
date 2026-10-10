@@ -17,6 +17,11 @@ Live site: https://fotweb.streamlit.app/
   Completed broadcasts appear as Watch replay; unannounced streams have no button.
 - Points totals calculated from verified league-stage FT results.
 - Club dashboards with their schedule, results and any sourced match statistics.
+- Club Analytics: interactive team match-by-match trends, attack/defence rankings,
+  two-club statistical comparisons and a league possession-vs-shots scatter plot.
+  Computes only from verified completed league results; displays game counts,
+  metric-specific availability and early-season caveats. No paid data feed.
+
 - Match reports with source links. Missing statistics stay unavailable.
 
 The initial schedule snapshot comes from the official ISL schedule. It is not a
