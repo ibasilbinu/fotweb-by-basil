@@ -79,3 +79,30 @@ No frontend code, assets, permissions or secrets should change in this task.
 
 Do not invent fixture corrections where dates disagree: retain and label
 conflicting source entries until an official correction is verified.
+
+## Official English YouTube streams
+
+Check `https://www.youtube.com/@IndianSuperLeague/streams` for scheduled match
+streams as well as ongoing broadcasts. Add only videos published by the official
+Indian Super League channel, matched to the fixture's clubs, competition, season
+and IST scheduled date. Require an explicit English or ENG commentary label in
+the video title or official description. Do not add Hindi, Vertical, highlights,
+press conferences, third-party streams or generic channel links.
+
+An optional fixture `broadcast` object in `data/isl-season.json` contains:
+`url` (canonical `https://www.youtube.com/live/VIDEO_ID`), `title` (actual published
+title), `channelUrl` (`https://www.youtube.com/@IndianSuperLeague`), `language`
+(`English`), `status` (`scheduled`, `live`, `ended`), and `verifiedAt` (timestamp
+with timezone). Confirm scheduled status and date from YouTube's public watch
+metadata where available. YouTube oEmbed can verify the title and publisher.
+Only change a broadcast timestamp when its metadata changes. Preserve working
+links during source failures; never guess video IDs or infer live status just
+from kickoff time. Retain completed English streams as replays. Remove or replace
+links only with evidence of removal, a wrong fixture, language mismatch or an
+official replacement. Broadcast updates may change only `data/isl-season.json`,
+validated by `season.py`; all other automation restrictions still apply.
+
+Fixture cards show Watch live at the bottom centre once a matching English
+stream is announced. Verified completed matches show Watch replay. Unknown
+streams remain labelled English stream not announced. Postponed and cancelled
+fixtures do not show stream buttons.

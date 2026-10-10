@@ -13,12 +13,14 @@ Live site: https://fotweb.streamlit.app/
 - Fixtures filtered by club, month, match status or search.
 - Kickoff times in IST, published venues, and explicit Venue TBC labels.
 - CSV fixture export and calendar downloads.
+- Bottom-centred Watch live links to announced official ISL English YouTube streams.
+  Completed broadcasts appear as Watch replay; unavailable links are labelled.
 - Points totals calculated from verified league-stage FT results.
 - Club dashboards with their schedule, results and any sourced match statistics.
 - Match reports with source links. Missing statistics stay unavailable.
 
 The initial schedule snapshot comes from the official ISL schedule. It is not a
-live-score feed. The hourly ChatGPT task verifies results and writes updates to
+live-score feed. The hourly ChatGPT task verifies results, schedule changes and official English stream links, then writes updates to
 this repository; source publication and checks can be delayed. Refresh the page
 for the latest committed data. No API key is required.
 

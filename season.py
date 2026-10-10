@@ -1,6 +1,7 @@
 """Validate the published ISL schedule and participating clubs."""
 
 import json
+import re
 from datetime import datetime
 from urllib.parse import urlparse
 
@@ -43,6 +44,16 @@ def validate_season(data):
         require(f.get("phase") in ("league", "playoff", "unknown"), "Invalid stage")
         require(f.get("venue") is None or (isinstance(f["venue"], str) and len(f["venue"]) <= 300), "Invalid venue")
         https(f["sourceUrl"])
+        broadcast = f.get("broadcast")
+        if broadcast is not None:
+            require(isinstance(broadcast, dict), "Invalid broadcast")
+            require(broadcast.get("language") == "English", "Only English commentary is allowed")
+            require(broadcast.get("channelUrl") == "https://www.youtube.com/@IndianSuperLeague", "Invalid official channel")
+            require(isinstance(broadcast.get("url"), str) and re.fullmatch(r"https://www\.youtube\.com/live/[A-Za-z0-9_-]{11}", broadcast["url"]), "Invalid YouTube live URL")
+            title = broadcast.get("title")
+            require(isinstance(title, str) and 0 < len(title) <= 300 and re.search(r"\b(?:English|ENG)\b", title, re.I), "Broadcast must specify English")
+            require(broadcast.get("status") in ("scheduled", "live", "ended"), "Invalid broadcast status")
+            require(datetime.fromisoformat(broadcast["verifiedAt"].replace("Z", "+00:00")).tzinfo is not None, "Broadcast timestamp needs timezone")
     return data
 
 
