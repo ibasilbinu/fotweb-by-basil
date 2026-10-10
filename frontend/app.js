@@ -45,8 +45,8 @@ function fixtureCard(f,compact=false) {
     '</span><span>'+esc(f.label||'ISL match')+'</span></div>'+
     (f.sourceNote?'<p class="chart-desc">'+esc(f.sourceNote)+'</p>':'')+
     '<div class="fixture-actions">'+sourceLink(r?.sources?.[0]?.url||f.sourceUrl,'Source')+
-    '<button type="button" class="text-button fw-fixture-detail-button" data-fixture-detail="'+
-    esc(f.id)+'">'+(r?'Open match report':'Match details & lineups')+' ↗</button>'+
+    (r?'<button type="button" class="text-button fw-fixture-detail-button" data-fixture-detail="'+
+    esc(f.id)+'">Open match report ↗</button>':'')+
     (!r&&f.status==='NS'&&!f.timeUnknown&&!f.needsConfirmation?
       '<button type="button" class="text-button" data-calendar="'+esc(f.id)+
       '">Add to calendar ↓</button>':'')+'</div>'+fixtureWatch(f)+'</article>';
