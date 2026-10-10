@@ -132,3 +132,27 @@
  .fw-fixture-clickable .fixture-actions{gap:10px}
  .fw-fixture-clickable .fixture-actions>*:last-child{margin-left:0}
 }
+
+
+/* All-club overlay in Team performance trends. Every club gets a legend entry,
+   but lines and points require recorded statistics. */
+.ca-trend-controls{grid-template-columns:minmax(220px,360px)}
+.ca-trend-series-line{fill:none;stroke-width:3;stroke-linejoin:round;stroke-linecap:round}
+.ca-trend-series-dot{cursor:help}
+.ca-trend-series:hover .ca-trend-series-line{stroke-width:5}
+.ca-trend-series:hover .ca-trend-series-dot{stroke-width:3}
+.ca-trend-legend{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px 14px;margin:5px 19px 13px;padding:15px;border:1px solid #34483a;border-radius:10px;background:#17241b}
+.ca-trend-legend-item{display:flex;align-items:center;gap:9px;min-width:0;font-size:11px}
+.ca-trend-legend-swatch{height:10px;width:10px;flex:0 0 10px;border-radius:50%;box-shadow:0 0 0 2px rgba(255,255,255,.035)}
+.ca-trend-legend-name{color:#e5efe7;min-width:0;overflow-wrap:anywhere;flex:1;font-weight:600;line-height:1.35}
+.ca-trend-legend-item small{color:#a3b6a6;font-size:9px;line-height:1.25;text-align:right;white-space:nowrap}
+.ca-trend-legend-item.is-unavailable{opacity:.55}
+@media(max-width:900px){
+ .ca-trend-legend{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:560px){
+ .ca-trend-legend{grid-template-columns:1fr;margin:8px 11px;padding:12px}
+ .ca-trend-controls{grid-template-columns:1fr}
+ .ca-trend-series-dot{stroke-width:2}
+ .ca-trend-legend-item{font-size:10px}
+}
