@@ -67,58 +67,93 @@ function caNotice(count,what){
     count===0?'No verified league matches are available for '+what+' yet.':
     'Sample: '+count+' verified league matches. Trends may change as more games are recorded.')+'</p>';
 }
-function caTrendChart(s,metric){
-  const games=s.history.slice(-10);
+/* Every club shares one axis: its own league match number.
+   Missing event totals are gaps; real zeroes (including zero points) remain visible. */
+function caTrendChart(summaries,metric) {
   const title=caMetricChoices.find(([k])=>k===metric)?.[1]||'Shots taken';
-  if(!games.length)return '<div class="ca-empty">No verified league matches for this club yet.</div>';
-  const offset=s.history.length-games.length;
-  const entries=games.map((m,i)=>{
-    const val=metric==='points'?
-      s.history.slice(0,offset+i+1).reduce((total,match)=>
-        total+caMatchValue(match,s.team.name,'points'),0):
-      caMatchValue(m,s.team.name,metric);
-    return {m,label:caOpp(m,s.team.name),value:val};
+  const maxPlayed=Math.max(0,...summaries.map(s=>s.history.length));
+  if(!maxPlayed)return '<div class="ca-empty">No verified league matches have been played yet. Each club will appear here once its results are confirmed.</div>';
+  const firstGame=Math.max(1,maxPlayed-9);
+  const gamesShown=maxPlayed-firstGame+1;
+  const series=summaries.map((s,index)=>{
+    let points=0;
+    const records=s.history.map((match,i)=>{
+      const value=metric==='points'?
+        (points+=caMatchValue(match,s.team.name,'points')):
+        caMatchValue(match,s.team.name,metric);
+      return {number:i+1,match,value};
+    }).filter(row=>row.number>=firstGame);
+    return {s,color:caColors[index%caColors.length],records,
+      known:records.filter(row=>row.value!==null)};
   });
-  const known=entries.filter(e=>e.value!=null);
-  if(!known.length)return '<div class="ca-empty">No sourced '+esc(title.toLowerCase())+' totals yet. Missing values are not zeros.</div>';
-  const max=Math.max(2,...known.map(e=>e.value));
-  const top=Math.ceil(max*1.20);
-  const W=760,H=278,left=47,right=18,topMargin=22,bottom=54,plotW=W-left-right,plotH=H-topMargin-bottom;
-  const xpos=i=>left+(entries.length===1?plotW/2:i*plotW/(entries.length-1));
-  const ypos=v=>topMargin+plotH-(v/top)*plotH;
-  let grid='',marks='';
-  for(let i=0;i<=4;i++){
-    const val=top*i/4,y=ypos(val);
-    grid+='<line x1="'+left+'" x2="'+(W-right)+'" y1="'+y+'" y2="'+y+'" class="ca-gridline"/>'+
-      '<text x="'+(left-10)+'" y="'+(y+4)+'" text-anchor="end" class="ca-axis">'+caNumber(val,top<10?1:0)+'</text>';
+  const present=series.filter(item=>item.known.length);
+  if(!present.length) {
+    return '<div class="ca-empty">No verified '+esc(title.toLowerCase())+
+      ' values are available for these clubs yet. Missing statistics are not shown as zero.</div>';
   }
-  let path='',open=false;
-  entries.forEach((e,i)=>{
-    if(e.value==null){open=false;return;}
-    const x=xpos(i),y=ypos(e.value);
-    path+=(open?' L ':' M ')+x.toFixed(2)+' '+y.toFixed(2);open=true;
-    marks+='<circle cx="'+x+'" cy="'+y+'" r="5" class="ca-trend-dot"><title>'+
-      esc(formatDate(e.m.date)+' · '+s.team.name+' vs '+e.label+' · '+title+': '+e.value)+'</title></circle>';
-  });
-  let axis='';
-  entries.forEach((e,i)=>{
-    if(entries.length>7&&i!==0&&i!==entries.length-1&&i%2!==0)return;
-    axis+='<text x="'+xpos(i)+'" y="'+(H-29)+'" text-anchor="middle" class="ca-axis ca-axis-date">'+
-      esc(e.m.date.slice(5))+'</text>';
-  });
-  const recent=entries.length>=5&&entries.slice(-5).every(e=>e.value!==null)?
-    '<strong>Last 5 average: '+caNumber(entries.slice(-5).reduce((a,e)=>a+e.value,0)/5)+'</strong>':'';
-  const rows='<div class="ca-trend-rows">'+entries.map(e=>'<div><span>'+esc(formatDate(e.m.date))+
-    ' · vs '+esc(e.label)+'</span><strong>'+(e.value==null?'—':esc(e.value))+'</strong></div>').join('')+'</div>';
-  return '<div class="ca-trend-key"><strong>'+esc(title)+'</strong>'+
-    '<span>Last '+entries.length+' verified match'+(entries.length===1?'':'es')+'</span></div>'+
-    '<div class="ca-trend-plot"><svg viewBox="0 0 '+W+' '+H+'" role="img" aria-label="'+
-    esc('Match-by-match '+title+' for '+s.team.name+'. '+known.length+' verified data points')+'">'+
-    grid+'<path d="'+path+'" class="ca-trend-path"/>'+marks+axis+'</svg></div>'+
-    rows+(recent?'<div class="ca-trend-rolling">'+recent+'</div>':'')+
-    (entries.length<2?caNotice(entries.length,s.team.name):'')+
-    '<p class="ca-footnote">Missing match statistics break the line rather than appearing as zero. '+
-    'Five-match averages are shown only after five consecutive available values.</p>';
+  const W=820,H=334,L=48,R=24,T=27,B=65;
+  const plotW=W-L-R,plotH=H-T-B;
+  const values=present.flatMap(item=>item.known.map(row=>row.value));
+  const max=Math.max(1,...values);
+  const upper=Math.max(2,Math.ceil(max*1.15));
+  const X=number=>L+(gamesShown===1?plotW/2:(number-firstGame)/(gamesShown-1)*plotW);
+  const Y=value=>T+plotH-(value/upper)*plotH;
+  let grid='';
+  for(let i=0;i<=4;i++){
+    const v=upper*i/4,y=Y(v);
+    grid+='<line x1="'+L+'" y1="'+y+'" x2="'+(W-R)+'" y2="'+y+
+      '" class="ca-gridline"/><text x="'+(L-10)+'" y="'+(y+4)+
+      '" text-anchor="end" class="ca-axis">'+esc(caNumber(v,upper<10?1:0))+'</text>';
+  }
+  for(let game=firstGame;game<=maxPlayed;game++){
+    const labelAll=gamesShown<=10;
+    if(labelAll||game===maxPlayed)
+      grid+='<text x="'+X(game)+'" y="'+(H-37)+
+        '" text-anchor="middle" class="ca-axis">'+game+'</text>';
+  }
+  let paths='';
+  for(const item of present) {
+    /* Each club's missing values break its line; two clubs can overlap legitimately. */
+    let d='',drawing=false,dots='';
+    for(const row of item.records){
+      if(row.value===null){drawing=false;continue;}
+      const x=X(row.number),y=Y(row.value);
+      d+=(drawing?' L ':' M ')+x.toFixed(2)+' '+y.toFixed(2);
+      drawing=true;
+      const tooltip=item.s.team.name+' · Match '+row.number+' · '+
+        formatDate(row.match.date)+' · vs '+caOpp(row.match,item.s.team.name)+
+        ' · '+title+': '+caNumber(row.value,metric==='points'?0:1);
+      dots+='<circle class="ca-trend-series-dot" cx="'+x+'" cy="'+y+
+        '" r="5.5" fill="'+item.color+'" stroke="#14211a" stroke-width="1.5">'+
+        '<title>'+esc(tooltip)+'</title></circle>';
+    }
+    paths+='<g class="ca-trend-series" data-club="'+esc(item.s.team.id)+'">'+
+      '<path d="'+d+'" class="ca-trend-series-line" stroke="'+item.color+'"/>'+
+      dots+'</g>';
+  }
+  const legend=series.map(item=>{
+    const latest=item.known.length?item.known[item.known.length-1]:null;
+    return '<div class="ca-trend-legend-item'+(latest?'':' is-unavailable')+'">'+
+      '<span class="ca-trend-legend-swatch" style="background:'+
+      (latest?item.color:'#57665d')+'"></span><span class="ca-trend-legend-name">'+
+      esc(item.s.team.name)+'</span><small>'+
+      (latest?'Match '+latest.number+': '+esc(caNumber(latest.value,metric==='points'?0:1)):
+        (item.s.games?'Not published':'No matches yet'))+'</small></div>';
+  }).join('');
+  return '<div class="ca-trend-key"><strong>'+esc(title)+'</strong><span>'+
+    present.length+' / '+series.length+' clubs with verified '+esc(title.toLowerCase())+
+    ' data</span></div>'+
+    '<div class="ca-trend-plot"><svg viewBox="0 0 '+W+' '+H+
+    '" role="img" aria-label="'+esc('All-club performance trends for '+title+
+    ' by each club’s match number. '+present.length+' clubs have values.')+'">'+
+    grid+paths+'<text x="'+(L+plotW/2)+'" y="'+(H-7)+
+    '" text-anchor="middle" class="ca-axis-title">League matches played by each club</text></svg></div>'+
+    '<div class="ca-trend-legend" aria-label="Club series legend">'+legend+'</div>'+
+    '<p class="ca-footnote">All '+series.length+
+    ' clubs are listed; a coloured line or point appears only where '+esc(title.toLowerCase())+
+    ' data is recorded. The horizontal axis uses each club’s match number, not a shared match date. '+
+    'The latest 10 match numbers are shown. Hover a point for the fixture and value. '+
+    'Clubs with no published statistic are not plotted; genuine zero values are retained.</p>';
 }
 function caRanking(summaries,key,descending,title,footnote){
   const rows=summaries.map(s=>({s,metric:s.avg(key)})).filter(v=>v.metric!==null)
@@ -223,7 +258,6 @@ function caScatter(summaries){
 function analyticsPage(){
   const summaries=caAllSummaries();
   const played=summaries.filter(s=>s.games>0);
-  const first=caSelectedTeam(summaries,state.analyticsTeam);
   const compA=caSelectedTeam(summaries,state.analyticsCompareA);
   const compB=caSelectedTeam(summaries,state.analyticsCompareB,compA?.team.id);
   const metric=caMetricChoices.some(m=>m[0]===state.analyticsMetric)?state.analyticsMetric:'shots';
@@ -234,11 +268,10 @@ function analyticsPage(){
     '<div><small>Coverage</small><strong>'+esc(resultsData.updatedAt?formatDate(resultsData.updatedAt):'Awaiting updates')+'</strong></div></div>'+
     '<p class="ca-opening-note">Early-season data can be misleading. Clubs with no completed games are not ranked; missing statistics are never counted as zero. Every chart is calculated from FotWeb’s sourced match reports.</p>';
   const trend='<section class="ca-panel ca-wide"><div class="ca-panel-head"><h3>Team performance trends</h3>'+
-    '<span>Match by match</span></div><div class="ca-filters"><label>Club<select id="caTrendClub">'+
-    caOptions(summaries,first?.team.id)+'</select></label><label>Metric<select id="caTrendMetric">'+
+    '<span>All clubs · one chart</span></div><div class="ca-filters ca-trend-controls"><label>Metric<select id="caTrendMetric">'+
     caMetricChoices.map(([key,label])=>'<option value="'+key+'"'+(key===metric?' selected':'')+'>'+
     esc(label)+'</option>').join('')+'</select></label></div>'+
-    (first?caTrendChart(first,metric):'<div class="ca-empty">No participating clubs.</div>')+'</section>';
+    caTrendChart(summaries,metric)+'</section>';
   const rankings='<div class="ca-rankings">'+
     caRanking(summaries,'shots',true,'Attacking output · shots','More shots do not necessarily mean better attacking quality.')+
     caRanking(summaries,'shotsAgainst',false,'Defensive output · shots allowed','Fewer shots allowed does not necessarily mean stronger defending.')+'</div>';
@@ -249,7 +282,7 @@ function analyticsPage(){
     caClubComparison(compA,compB)+'</section>';
   const league='<section class="ca-panel ca-wide"><div class="ca-panel-head"><h3>ISL performance explorer</h3>'+
     '<span>Possession versus shots</span></div>'+caScatter(summaries)+'</section>';
-  const method='<div class="ca-method">METHOD · Results and match statistics come from FotWeb’s source-linked ISL reports. Averages use games with the relevant recorded metric, not the entire fixture list. Rankings are provisional for small samples. No shot coordinates, tracking, xG estimates or inferred player positions are generated. <a href="#reports" data-page="reports">View source-linked match reports ↗</a></div>';
+  const method='<div class="ca-method">METHOD · Results and match statistics come from FotWeb’s source-linked ISL reports. Averages use games with the relevant recorded metric, not the entire fixture list. Rankings are provisional for small samples. No shot coordinates, tracking, xG estimates or inferred player positions are generated. <a href="#fixtures" data-page="fixtures">View source-linked match details ↗</a></div>';
   return snapshot+trend+'<h2 class="section-title">League-wide attack & defence</h2>'+
     rankings+'<h2 class="section-title">Compare clubs</h2>'+comparison+
     '<h2 class="section-title">Explore relationships</h2>'+league+method;
