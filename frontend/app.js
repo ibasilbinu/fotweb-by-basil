@@ -227,8 +227,60 @@ function bindScatterTooltips(){
     };
   });
 }
+/* Identify each club and verified fixture behind a trend chart dot.
+   One tooltip handles mouse hover, keyboard focus and phone taps. */
+function bindTrendTooltips(){
+  $$('.ca-trend-plot').forEach(plot=>{
+    const tooltip=plot.querySelector('.ca-trend-tooltip');
+    if(!tooltip)return;
+    const club=tooltip.querySelector('[data-ca-trend-club]');
+    const metric=tooltip.querySelector('[data-ca-trend-metric]');
+    const fixture=tooltip.querySelector('[data-ca-trend-fixture]');
+    const date=tooltip.querySelector('[data-ca-trend-date]');
+    const overlap=tooltip.querySelector('[data-ca-trend-overlap]');
+    const show=dot=>{
+      club.textContent=dot.dataset.club||'Unknown club';
+      metric.textContent=(dot.dataset.metric||'Statistic')+': '+
+        (dot.dataset.value||'Unavailable');
+      fixture.textContent='Match '+(dot.dataset.game||'?')+' · vs '+
+        (dot.dataset.opponent||'Unknown opponent');
+      date.textContent=(dot.dataset.date||'Date unavailable')+
+        (dot.dataset.score?' · Final score '+dot.dataset.score:'');
+      const also=dot.dataset.also||'';
+      overlap.textContent=also?'Also at this point: '+also:'';
+      overlap.hidden=!also;
+      tooltip.hidden=false;
+      const area=plot.getBoundingClientRect();
+      const point=dot.getBoundingClientRect();
+      const center=point.left+point.width/2-area.left;
+      const width=Math.min(260,Math.max(0,area.width-16));
+      const min=width/2+8,max=area.width-min;
+      tooltip.style.left=(max>=min?Math.min(max,Math.max(min,center)):area.width/2)+'px';
+      const above=point.top-area.top-14;
+      const below=above<122;
+      tooltip.classList.toggle('below',below);
+      tooltip.style.top=(below?point.bottom-area.top+12:above)+'px';
+    };
+    const hide=()=>{tooltip.hidden=true;};
+    plot.querySelectorAll('[data-ca-trend-point]').forEach(dot=>{
+      dot.onpointerenter=()=>show(dot);
+      dot.onpointerleave=()=>{if(document.activeElement!==dot)hide();};
+      dot.onfocus=()=>show(dot);
+      dot.onblur=hide;
+      dot.onclick=e=>{e.stopPropagation();show(dot);};
+      dot.onkeydown=e=>{
+        if(e.key==='Enter'||e.key===' '){e.preventDefault();show(dot);}
+        if(e.key==='Escape'){e.preventDefault();hide();}
+      };
+    });
+    plot.onclick=e=>{
+      if(!e.target.closest('[data-ca-trend-point]'))hide();
+    };
+  });
+}
 function bindPage(){
   bindScatterTooltips();
+  bindTrendTooltips();
   $$('[data-analytics-club]').forEach(el=>el.onclick=()=>{
     navigate('analytics',{analyticsTeam:el.dataset.analyticsClub,
       analyticsCompareA:el.dataset.analyticsClub,analyticsCompareB:''});
