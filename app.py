@@ -28,8 +28,9 @@ st.markdown(
       .stApp { background: #0b0e11; }
       .block-container { padding: 1rem 0 0 !important; max-width: 100% !important; }
       [data-testid="stHeader"] { background: transparent; }
-      [data-testid="stToolbarActions"] > [data-testid="stToolbarActionButton"]:nth-child(3),
-      [data-testid="stToolbarActions"] > [data-testid="stToolbarActionButton"]:nth-child(4) { display: none !important; }
+      /* Hide Community Cloud's external actions (Fork and GitHub),
+         but preserve Streamlit's separate three-dot options menu. */
+      [data-testid="stToolbarActions"] { display: none !important; }
       [data-testid="stMainMenuItem-print"],
       [data-testid="stMainMenuItem-recordScreencast"] { display: none !important; }
       [data-testid="stMainBlockContainer"] { padding-top: 1rem !important; }
