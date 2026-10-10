@@ -107,6 +107,7 @@ function tdPlayerBoard(title,rows,empty,note){
     (rows.length?'<ol class="td-leader-list">'+rows.map((r,i)=>
       '<li><span class="td-leader-index">'+(i+1)+'</span>'+
       '<span class="td-leader-person"><strong>'+esc(r.name)+'</strong>'+
+      (r.club?'<small class="td-leader-club">'+esc(r.club)+'</small>':'')+
       (r.detail?'<small>'+esc(r.detail)+'</small>':'')+'</span>'+
       '<span class="td-leader-score">'+r.value+'</span></li>').join('')+'</ol>':
       '<p class="td-leader-empty">'+esc(empty)+'</p>')+
@@ -134,4 +135,111 @@ function tdPlayersPanel(matches,team){
     tdPlayerBoard('Red cards',p.red,cardEmpty('red',p.redCover,p.redAggregate),missingRed)+
     '</div><p class="td-explainer">Rankings are limited to verified league match records for this club. '+
     'A missing player statistic is not automatically zero; unnamed disciplinary events may make player totals incomplete.</p></section>';
+}
+
+
+/* Season Overview player leaders combine all participating clubs. Match
+   records remain the single source of truth: no extra API or assumed zeros.
+   Player identities with the same full verified name are merged if they
+   appear for more than one club during the season. */
+function tdSeasonLeaders(){
+  const matches=(resultsData.matches||[]).filter(tdIsLeagueMatch);
+  const buckets={goals:new Map(),assists:new Map(),ga:new Map(),
+    yellow:new Map(),red:new Map()};
+  const categoryNames=['goals','assists','ga','yellow','red'];
+  for(const t of seasonData.teams){
+    const summary=tdPlayerLeaders(tdLeagueResults(t.name),t.name);
+    for(const category of categoryNames){
+      for(const row of summary[category]){
+        const key=tdName(row.name);
+        if(!key)continue;
+        const map=buckets[category],previous=map.get(key);
+        if(previous){
+          previous.value+=row.value;
+          if(!previous.clubs.includes(t.name))previous.clubs.push(t.name);
+          /* A transfer can combine partial G+A contributions: retain the
+             published per-club detail, not a guessed split. */
+          if(row.detail)previous.parts.push(t.name+': '+row.detail);
+        }else{
+          map.set(key,{name:row.name,value:row.value,clubs:[t.name],
+            parts:row.detail?[t.name+': '+row.detail]:[]});
+        }
+      }
+    }
+  }
+  const rankings={};
+  for(const category of categoryNames){
+    rankings[category]=[...buckets[category].values()]
+      .sort((a,b)=>b.value-a.value||a.name.localeCompare(b.name))
+      .slice(0,5).map(row=>({
+        name:row.name,value:row.value,
+        club:row.clubs.join(' · '),
+        detail:category==='ga'?
+          (row.parts.length===1?row.parts[0].slice(row.parts[0].indexOf(': ')+2):
+            row.parts.join(' · ')):undefined
+      }));
+  }
+  const cardCoverage={yellow:{recorded:0,named:0,knownSides:0},
+    red:{recorded:0,named:0,knownSides:0}};
+  for(const m of matches){
+    for(const side of ['home','away']){
+      for(const [category,key] of [['yellow','yellowCards'],['red','redCards']]){
+        const n=m.stats?.[side]?.[key];
+        if(Number.isInteger(n)&&n>=0){
+          cardCoverage[category].knownSides++;
+          cardCoverage[category].recorded+=n;
+        }
+      }
+      for(const event of m.events||[]){
+        if(event.side!==side||!event.player)continue;
+        if(event.type==='yellow_card')cardCoverage.yellow.named++;
+        if(event.type==='red_card'||event.type==='second_yellow_red')
+          cardCoverage.red.named++;
+      }
+    }
+  }
+  return {matches:matches.length,rankings,cardCoverage};
+}
+function tdSeasonPlayersPanel(){
+  const result=tdSeasonLeaders();
+  const empty=result.matches?
+    'No verified player contributions available yet.':
+    'Awaiting completed league matches.';
+  const disciplinary=(category,label)=>{
+    const record=result.cardCoverage[category];
+    if(!result.matches)return 'Awaiting completed league matches.';
+    if(!result.rankings[category].length){
+      if(record.knownSides===2*result.matches&&record.recorded===0)
+        return 'No '+label+' cards recorded in verified league matches.';
+      return 'No verified named '+label+' card recipients yet.';
+    }
+    return empty;
+  };
+  const cardNote=category=>{
+    const record=result.cardCoverage[category];
+    if(!result.matches)return '';
+    const out='Named card events: '+record.named;
+    if(record.knownSides===2*result.matches)
+      return out+' of '+record.recorded+' team cards recorded across '+
+        result.matches+' verified '+(result.matches===1?'match':'matches')+'.';
+    return out+'. Team-level card coverage is incomplete.';
+  };
+  return '<section class="td-panel td-season-leaders"><div class="td-panel-title">'+
+    '<h2>Season player leaders</h2>'+
+    '<small>ISL 2026–27 · All '+seasonData.teams.length+' clubs · '+
+    result.matches+' verified league '+(result.matches===1?'match':'matches')+
+    ' · Top 5 per category</small></div>'+
+    '<div class="td-leader-grid">'+
+    tdPlayerBoard('Top scorers',result.rankings.goals,empty,
+      'Own goals are excluded. Only verified player goals are counted.')+
+    tdPlayerBoard('Top assists',result.rankings.assists,empty,
+      'Published assists only; unavailable values are not zero.')+
+    tdPlayerBoard('Goals + assists',result.rankings.ga,empty,
+      'Recorded goal contributions only; incomplete player records may undercount.')+
+    tdPlayerBoard('Yellow cards',result.rankings.yellow,
+      disciplinary('yellow','yellow'),cardNote('yellow'))+
+    tdPlayerBoard('Red cards',result.rankings.red,
+      disciplinary('red','red'),cardNote('red'))+
+    '</div><p class="td-explainer">Rankings use published player statistics and named card events from verified ISL league matches. '+
+    'Each player’s club is shown below their name. Missing player data is never inferred, and the lists update when new verified match records are added.</p></section>';
 }
