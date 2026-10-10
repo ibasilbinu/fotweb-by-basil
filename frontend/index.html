@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#0b0e11"><meta name="description" content="FotWeb by Basil — an Indian football analysis workspace. Explore team performance, player profiles and tactical insights."><title>FotWeb by Basil · Football, in focus.</title><link rel="stylesheet" href="styles.css"></head>
+<body>
+<div class="app">
+<aside id="sidebar">
+<a class="brand" href="#overview" aria-label="FotWeb home"><span class="brand-icon">F<span>↗</span></span><div>FotWeb<small>BY BASIL</small></div></a>
+<div class="workspace-label"><span class="status-dot"></span> FOOTBALL INTELLIGENCE</div>
+<div class="nav-label">WORKSPACE</div>
+<nav id="navigation" aria-label="Main navigation"></nav>
+<div class="sidebar-filters">
+<div class="nav-label">YOUR TOUCHLINE</div>
+<label>Competition<select id="league"><option>Indian Super League</option></select></label>
+<label>Season<select id="season"></select></label>
+<label>Team<select id="team"></select></label>
+<details class="palette"><summary>Pitch palette <span>⊙</span></summary><label>Team accent<input type="color" id="accent" value="#d4f76b"></label><label>Pitch background<input type="color" id="pitchColor" value="#142921"></label></details>
+</div>
+<div class="sidebar-bottom"><button id="dataButton" class="plain-button">↥ &nbsp; Manage data</button><div class="author">Made for the beautiful game.<br><strong>Created by Basil</strong></div></div>
+</aside>
+<div class="main-wrap">
+<header class="topbar"><button id="menu" class="icon-button" aria-label="Toggle navigation">☰</button><div class="breadcrumb">Workspace <span>/</span> <strong id="crumb">Season overview</strong></div><div class="topbar-right"><span class="data-badge" id="dataBadge">◌ &nbsp; SAMPLE DATA</span><button class="outline-button" id="export">↗ <span>Export report</span></button></div></header>
+<main id="main" tabindex="-1"></main>
+<footer><span>FotWeb <b>by Basil</b></span><span>Read the game. Find the edge.</span><button class="text-button" id="methodology">Data & methodology ↗</button></footer>
+</div>
+</div>
+<dialog id="dataDialog"><div class="dialog-header"><div><span class="eyebrow">YOUR DATA, YOUR ANALYSIS</span><h2>Bring the game to FotWeb.</h2></div><button class="icon-button" id="closeDialog" aria-label="Close data manager">×</button></div><p id="dataDescription"></p><div class="notice"><strong>No live feed is connected.</strong> The bundled dataset is synthetic: results, events and player statistics are illustrative, not official ISL records. Your uploads stay in this browser and can be removed at any time.</div><h3>Use your own dataset</h3><p>Download the example JSON, keep its structure, and replace the teams, matches and players with your data. Match shots use a 105 × 68 metre pitch; shot size is the supplied expected goals (xG).</p><div class="dialog-actions"><button id="downloadData" class="outline-button">↓ Download example JSON</button><label class="primary-button file-label">↥ Import JSON<input type="file" id="importData" accept="application/json,.json"></label><button id="resetData" class="outline-button">Restore sample data</button></div><p id="importMessage" role="status"></p><details><summary>Metrics explained</summary><p><b>xG:</b> expected goals values supplied with each shot. FotWeb sums these; it does not estimate xG. <b>Per 90:</b> stat ÷ minutes × 90. <b>Shot conversion:</b> goals ÷ shots. <b>Similarity:</b> cosine similarity of per-90 shooting, creation, passing and defensive metrics. Radar values are scaled to the largest value in the loaded player pool and are not league percentiles. Standings use 3 points for a win, then goal difference and goals scored as tie-breakers.</p></details></dialog>
+<div id="toast" role="status"></div>
+<script src="streamlit-bridge.js"></script><script src="data.js"></script><script src="app.js"></script>
+</body></html>
