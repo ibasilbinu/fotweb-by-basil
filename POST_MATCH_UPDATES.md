@@ -4,6 +4,7 @@ The ChatGPT task **FotWeb post-match updates** checks hourly for completed ISL
 2026–27 matches, verifies public reports, and commits meaningful changes to
 `data/isl-results.json` on `main`. Streamlit picks up repository changes.
 This is a ChatGPT task, not a GitHub Actions workflow or a live-score API.
+It also checks the official fixture schedule for published changes.
 Checks and publication can be delayed. Refresh the site for new results.
 Manage or pause the task in ChatGPT Tasks.
 
@@ -26,8 +27,9 @@ Manage or pause the task in ChatGPT Tasks.
 - Commit only additions, new statistics or corrections. Do not change timestamps
   or make a commit when nothing changed. Failure or conflicting sources must
   never erase valid data. Report concrete blockers.
-- Advanced dashboards remain clearly labelled sample/imported data. The verified
-  results collection does not supply missing shot locations or player statistics.
+- No demonstration records are used. Team dashboards, reports and league points
+  derive from the verified results collection. Missing player statistics and
+  spatial event data remain unavailable.
 
 ## Data contract
 
@@ -53,6 +55,27 @@ Stat keys: `possession` (0–100), `shots`, `shotsOnTarget`, `corners`, `fouls`,
 `postmatch.py` validates the full contract, including scores, dates and links.
 
 Before committing run `python3 postmatch.py data/isl-results.json`. Read the
-latest branch head and base tree; change only the results file. Publish a
+latest branch head and base tree; change only the relevant data files. Publish a
 fast-forward commit with an expected-head guard, never a force-push. If the
 branch changes concurrently, reread and merge before retrying.
+
+## Schedule snapshot updates
+
+Read `data/isl-season.json` and `season.py` before changing fixtures. The source
+URL is the official ISL schedule. Its published match objects include official
+`game_id`, club IDs and names, `start_date` with timezone, and venue. Preserve
+existing club IDs, profile links and crest URLs. Match result IDs should use the
+official fixture IDs from this snapshot; club names should use its canonical
+`teams[].name` values. Preserve completed results independently of schedule changes.
+
+Meaningful official schedule changes can update `data/isl-season.json`: new
+published fixtures, corrected dates/times/venues, postponements and cancellations.
+Never fabricate the unpublished phase. Validate with `season.py`. Retain the
+full known schedule if a source response is empty or incomplete. Change
+`verifiedAt` only when this snapshot changes; do not commit check timestamps.
+Use status `NS`, `PST`, `CANC` for uncompleted fixtures. Results are joined by
+fixture ID, or canonical clubs and IST date if no official ID is available.
+No frontend code, assets, permissions or secrets should change in this task.
+
+Do not invent fixture corrections where dates disagree: retain and label
+conflicting source entries until an official correction is verified.

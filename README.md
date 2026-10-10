@@ -1,118 +1,59 @@
 # FotWeb by Basil ⚽
 
-## ISL 2026–27 updates
+A public Streamlit workspace for Indian Super League **2026–27**. It displays
+published fixtures, participating clubs, verified results and post-match analysis.
+There are no demonstration results or fictional player records.
 
-The **ISL 2026–27** page displays sourced completed-match results, published
-statistics, match reports and a table computed from recorded FT matches.
-An hourly ChatGPT automation checks for new final results and writes verified
-records to this repository. See [POST_MATCH_UPDATES.md](POST_MATCH_UPDATES.md)
-for its rules and data contract. No live-score API or API key is needed.
-Advanced dashboards still use separately labelled sample or imported data.
+Live site: https://fotweb.streamlit.app/
 
-A football analytics workspace designed for public deployment on **Streamlit Community Cloud**. It runs from this repository and does not depend on ChatGPT hosting, sign-in, APIs or keys.
+## Current content
 
-## What is included
+- Official participating club list and official club crests.
+- All 78 published Phase 1 fixtures, 10 October 2026–17 January 2027.
+- Fixtures filtered by club, month, match status or search.
+- Kickoff times in IST, published venues, and explicit Venue TBC labels.
+- CSV fixture export and calendar downloads.
+- Points totals calculated from verified league-stage FT results.
+- Club dashboards with their schedule, results and any sourced match statistics.
+- Match reports with source links. Missing statistics stay unavailable.
 
-- Season overview and calculated league standings.
-- Team dashboards, match filters, shot maps and shot heatmaps.
-- Player profiles, squad search and position filters.
-- Custom scatter plots with per-90 metrics and minimum-minutes filters.
-- Player comparisons and statistical similarity shortlists.
-- Tactical board with formations, draggable players and movement arrows.
-- Chart SVG, player CSV and analysis report exports.
-- Validated JSON imports and a downloadable example dataset.
+The initial schedule snapshot comes from the official ISL schedule. It is not a
+live-score feed. The hourly ChatGPT task verifies results and writes updates to
+this repository; source publication and checks can be delayed. Refresh the page
+for the latest committed data. No API key is required.
 
-**Important:** the included dataset is synthetic. Scores, player names and events are illustrative, not official ISL statistics. No live football feed is connected.
+## Run locally
 
-## Run on Windows
-
-Open a terminal inside this folder:
-
-```powershell
-py -m venv .venv
-.venv\Scripts\python.exe -m pip install -r requirements.txt
-.venv\Scripts\python.exe -m streamlit run app.py
-```
-
-Open the local address printed in the terminal.
-
-## Run on macOS or Linux
+Python 3.12 recommended:
 
 ```bash
-python3 -m venv .venv
-.venv/bin/python -m pip install -r requirements.txt
-.venv/bin/python -m streamlit run app.py
+python -m pip install -r requirements.txt
+python -m streamlit run app.py
 ```
 
-## Create a public GitHub repository
+## Deploy on Streamlit Community Cloud
 
-1. Sign in to GitHub and select **New repository**.
-2. Name the repository `fotweb-by-basil`.
-3. Set visibility to **Public**. Initialize it with a README if using GitHub's file upload interface.
-4. Upload the **contents** of this folder, including the `frontend` and `.streamlit` folders. `app.py` and `requirements.txt` must appear at the root of the repository.
+Use repository `ibasilbinu/fotweb-by-basil`, branch `main`, entrypoint `app.py`.
+The public site is https://fotweb.streamlit.app/.
 
-Alternatively, from a terminal in this folder (Git must be installed), replace `YOUR_USERNAME` with your actual GitHub username:
+## Data and validation
+
+- `data/isl-season.json`: sourced clubs and published schedule.
+- `data/isl-results.json`: only verified completed-match records.
+- `season.py` and `postmatch.py`: validation contracts.
+- [POST_MATCH_UPDATES.md](POST_MATCH_UPDATES.md): scheduled update rules.
 
 ```bash
-git init -b main
-git add .
-git commit -m "Create FotWeb by Basil Streamlit app"
-git remote add origin https://github.com/YOUR_USERNAME/fotweb-by-basil.git
-git push -u origin main
+python season.py data/isl-season.json
+python postmatch.py data/isl-results.json
 ```
 
-For this terminal route, create the GitHub repository empty, without an automatically generated README.
+Points: 3 per win, 1 per draw. Display order uses points, goal difference, goals
+scored and club name. Official head-to-head tie-breakers, deductions and rulings
+can change the official order. Playoffs do not contribute to league points.
+Player-level analysis and spatial charts require actual published data; the app
+never fills gaps with fabricated statistics. Club crests remain their owners'
+marks. FotWeb is an independent fan analytics project.
 
-## Publish on Streamlit
-
-1. Sign in at https://share.streamlit.io/ and connect your GitHub account when required.
-2. Choose **Create app**, then the option to deploy an existing app from GitHub.
-3. Set the repository to your `fotweb-by-basil` repository and branch to `main`.
-4. Set the main file path to **`app.py`**.
-5. In advanced settings, choose **Python 3.12**.
-6. Request **`fotweb-by-basil`** as the app subdomain if available, then deploy. If taken, choose a different subdomain.
-7. Verify the app's sharing setting is **Public**. Test its actual deployed URL in an incognito browser.
-
-Streamlit assigns the final `.streamlit.app` address during deployment. A requested subdomain is not reserved by these files. GitHub and Streamlit sign-in must be completed in your own accounts; this archive alone does not create a repository or live deployment.
-
-Official instructions: https://docs.streamlit.io/deploy/streamlit-community-cloud/deploy-your-app/deploy
-
-## Use real data
-
-Open **Manage data** and download the example JSON. Keep its schema and replace the synthetic records with your own licensed or openly available data, then import the file. Imports and saved tactical notes stay in the current browser's local storage and are not shared with other visitors.
-
-To make a dataset the public default, replace the data generator in `frontend/data.js` with a declaration of `SAMPLE_DATA` containing the validated dataset, then commit the change. Do not commit personal uploads, secrets, provider API keys or data you cannot redistribute.
-
-Import is supported up to 15 MB, with 2–50 teams, up to 20 seasons, 2,500 players per season, 2,000 matches and 100,000 total shots. Browser storage capacity may impose a lower limit.
-
-## Metric definitions
-
-- **Standings:** 3 points for a win, 1 for a draw; ties sorted by goal difference and goals scored. This generic ordering may differ from competition-specific tie-break rules.
-- **Per 90:** total ÷ minutes × 90; returns zero for zero recorded minutes.
-- **xG:** sum of supplied shot xG values. FotWeb does not fit or estimate an xG model.
-- **Radar:** per-90 metrics scaled to loaded-pool maxima, not percentile ranks.
-- **Similarity:** cosine similarity of five maximum-scaled per-90 metrics, restricted to the same position. It describes statistical profiles, not equal quality or suitability.
-- **Pitch:** 105 × 68 metres, with shot coordinates normalized toward the right goal.
-
-## Project structure
-
-| File | Purpose |
-| --- | --- |
-| `app.py` | Streamlit entrypoint and local component registration |
-| `requirements.txt` | Tested Streamlit dependency |
-| `.streamlit/config.toml` | Streamlit theme |
-| `frontend/index.html` | Workspace layout |
-| `frontend/styles.css` | Responsive interface styling |
-| `frontend/data.js` | Synthetic example dataset |
-| `frontend/app.js` | Analytics, interactions, imports and exports |
-| `frontend/streamlit-bridge.js` | Streamlit component handshake and frame sizing |
-
-The UI is a locally served Streamlit custom component, preserving the original FotWeb HTML/CSS/JavaScript workspace. Python starts the Streamlit app; analytics currently run in the browser. No Node installation or frontend build is needed.
-
-## Verification
-
-JavaScript syntax and calculation checks cover all seven workspace views, league standings, score/event consistency, player totals, per-90 output, similarity, import validation, empty filters and saved-data restoration. Streamlit startup is checked with its AppTest runner. Browser layout, component handshake and pointer interactions require a final browser check after deployment.
-
-## Credits
-
-Created by Basil. The workspace concept was inspired by TACTIX by Jeremy; FotWeb uses its own interface and illustrative data. No reference-site source code or dataset is included.
+The component is served from this repository by Streamlit, with no dependency
+on ChatGPT hosting. The separate scheduled updater runs through ChatGPT Tasks.

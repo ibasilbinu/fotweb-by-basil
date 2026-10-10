@@ -6,6 +6,9 @@ import streamlit as st
 import streamlit.components.v1 as components
 
 from postmatch import load_results
+from season import load_season
+from datetime import datetime
+from zoneinfo import ZoneInfo
 
 
 ROOT = Path(__file__).resolve().parent
@@ -41,4 +44,16 @@ except (ValueError, KeyError, TypeError, OSError):
     st.warning("Post-match results are temporarily unavailable. Please try again later.")
     post_match_data = None
 
-fotweb_workspace(post_match_data=post_match_data, key="fotweb-workspace", default=None)
+try:
+    season_data = load_season(ROOT / "data" / "isl-season.json")
+except (ValueError, KeyError, TypeError, OSError):
+    st.error("The ISL schedule is temporarily unavailable. Please try again later.")
+    st.stop()
+
+fotweb_workspace(
+    season_data=season_data,
+    post_match_data=post_match_data,
+    today=datetime.now(ZoneInfo("Asia/Kolkata")).date().isoformat(),
+    key="fotweb-workspace",
+    default=None,
+)
