@@ -1,12 +1,5 @@
 /* Team Dashboard: league-stage sourced aggregates only.
-   Missing classifications and player details are never manufactured. */
-const tdGoalKinds=[
-  ['open_play','Open play'],
-  ['set_piece','Set piece'],
-  ['free_kick','Free kick'],
-  ['penalty','Penalty'],
-  ['own_goal','Own goal']
-];
+   Missing player details are never manufactured. */
 const tdIsLeagueMatch=m=>m.phase==='league'&&m.status==='FT';
 function tdClubSide(match,team){
   if(canonical(match.home)===team)return 'home';
@@ -41,73 +34,6 @@ function tdVenuePanel(matches,team){
       '<small>'+p[side].games+' played · '+p[side].w+' W · '+p[side].d+
       ' D · '+p[side].l+' L</small></div>').join('')+
     '</div></section>';
-}
-function tdGoalOrigin(event){
-  if(event.type==='own_goal')return 'own_goal';
-  if(event.type==='penalty_goal')return 'penalty';
-  if(event.type!=='goal')return null;
-  return tdGoalKinds.some(([kind])=>kind===event.goalType)?event.goalType:null;
-}
-function tdGoalCounts(matches,team){
-  const counts=Object.fromEntries(tdGoalKinds.map(([key])=>[key,0]));
-  let total=0,classified=0;
-  for(const m of matches){
-    const side=tdClubSide(m,team);
-    if(!side)continue;
-    total+=side==='home'?m.homeGoals:m.awayGoals;
-    for(const e of (m.events||[])){
-      if(e.side!==side)continue;
-      const kind=tdGoalOrigin(e);
-      if(kind){counts[kind]++;classified++;}
-    }
-  }
-  return {counts,total,classified,unclassified:Math.max(0,total-classified),consistent:classified<=total};
-}
-function tdGoalChart(matches,team){
-  const data=tdGoalCounts(matches,team);
-  const hasGames=matches.length>0;
-  const complete=hasGames&&data.unclassified===0&&data.consistent;
-  const available=data.classified>0||complete;
-  const info=available?'':(hasGames?'Verified goal-type breakdowns are not available for this club yet.':'No verified completed league matches yet.');
-  const W=760,H=312,L=48,R=22,T=26,B=82,plotW=W-L-R,plotH=H-T-B;
-  const maximum=Math.max(1,...Object.values(data.counts));
-  const yMax=Math.max(2,maximum+1);
-  const Y=value=>T+plotH-(value/yMax)*plotH;
-  const X=i=>L+plotW*(i+0.5)/tdGoalKinds.length;
-  let grid='';
-  for(let n=0;n<=4;n++){
-    const tick=Math.round((yMax*n/4)*10)/10;
-    const y=Y(tick);
-    grid+='<line class="td-goal-grid" x1="'+L+'" x2="'+(W-R)+'" y1="'+y+'" y2="'+y+'"></line>'+
-      '<text class="td-goal-axis" x="'+(L-11)+'" y="'+(y+4)+'" text-anchor="end">'+tick+'</text>';
-  }
-  const lines=tdGoalKinds.map(([kind,label],i)=>{
-    const value=data.counts[kind];
-    const definite=complete||value>0;
-    const x=X(i),y=Y(value),base=Y(0);
-    const labelX=esc(label);
-    return '<g class="td-goal-column">'+
-      (definite?
-        '<line class="td-goal-stem" x1="'+x+'" y1="'+base+'" x2="'+x+'" y2="'+y+'"></line>'+
-        '<circle class="td-goal-dot" cx="'+x+'" cy="'+y+'" r="7" tabindex="0" role="img" aria-label="'+
-        labelX+': '+value+' verified goals"><title>'+labelX+': '+value+
-        ' verified goals'+(data.unclassified?' (partial classification)':'')+'</title></circle>':'')+
-      '<text class="td-goal-number" x="'+x+'" y="'+(definite?Math.max(T+1,y-14):base-13)+'" text-anchor="middle">'+
-      (definite?value:'—')+'</text>'+
-      '<text class="td-goal-label" x="'+x+'" y="'+(H-46)+'" text-anchor="middle">'+labelX+'</text></g>';
-  }).join('');
-  const note=data.consistent?
-    (complete?'All '+data.total+' recorded league goals have a verified classification.':
-      data.classified+' of '+data.total+' league goals have verified types; '+data.unclassified+
-      ' remain unclassified. Dashes mean unavailable, not zero.') :
-    'Event classification and verified final scores disagree; check the source before interpreting this chart.';
-  return '<section class="td-panel"><div class="td-panel-title"><h2>Goals by scoring situation</h2>'+
-    '<small>Vertical line graph · league-stage goals</small></div>'+
-    '<div class="td-goal-plot"><svg viewBox="0 0 '+W+' '+H+'" role="img" aria-label="'+
-    esc('Confirmed goal breakdown for '+team+'. '+note)+'">'+grid+lines+'</svg></div>'+
-    (info?'<p class="td-status">'+esc(info)+'</p>':'')+
-    '<p class="td-explainer">Open play, indirect set pieces, direct free kicks, penalties and own goals are separate categories; '+
-    'an unlabelled goal is never assumed to be open play. '+esc(note)+'</p></section>';
 }
 function tdName(value){
   return String(value||'').normalize('NFKD').replace(/[\u0300-\u036f]/g,'')
