@@ -239,21 +239,31 @@ function caScatter(summaries){
     const color=caColors[seasonData.teams.findIndex(t=>t.id===p.s.team.id)%caColors.length];
     const x=X(p.x.value),y=Y(p.y.value);
     const n=p.n;
-    return '<circle cx="'+x+'" cy="'+y+'" r="8" stroke="'+color+'" fill="'+color+
-      '" fill-opacity=".72" stroke-width="2.2"><title>'+esc(p.s.team.name+
-      ' · '+caNumber(p.x.value)+'% possession · '+caNumber(p.y.value)+' shots/match'+
-      ' · '+n+' matched recorded games')+'</title></circle>';
+    const shots=caNumber(p.y.value),possession=caNumber(p.x.value);
+    const description=p.s.team.name+': '+shots+' shots per match, '+
+      possession+'% average possession, across '+n+' verified '+(n===1?'match':'matches');
+    return '<circle class="ca-scatter-point" data-ca-scatter-point tabindex="0" role="button"'+
+      ' aria-label="'+esc(description)+'"'+
+      ' data-club="'+esc(p.s.team.name)+'" data-shots="'+esc(shots)+'"'+
+      ' data-possession="'+esc(possession)+'" data-matches="'+n+'"'+
+      ' cx="'+x+'" cy="'+y+'" r="8" stroke="'+color+'" fill="'+color+
+      '" fill-opacity=".72" stroke-width="2.2" />';
   }).join('');
   const legend='<div class="ca-scatter-legend">'+points.map(p=>{
     const color=caColors[seasonData.teams.findIndex(t=>t.id===p.s.team.id)%caColors.length];
     return '<div><i style="background:'+color+'"></i><span>'+esc(p.s.team.name)+'</span>'+
       '<small>'+caNumber(p.x.value)+'% · '+caNumber(p.y.value)+' shots</small></div>';
   }).join('')+'</div>';
-  return '<div class="ca-scatter-plot"><svg viewBox="0 0 '+W+' '+H+'" role="img" aria-label="'+
+  return '<div class="ca-scatter-plot"><svg viewBox="0 0 '+W+' '+H+'" role="group" aria-label="'+
     esc('Possession versus shots per match for '+points.length+' clubs')+'">'+grid+dots+
     '<text x="'+(L+plotW/2)+'" y="'+(H-5)+'" text-anchor="middle" class="ca-axis-title">Average possession (%)</text>'+
     '<text transform="translate(17 '+(T+plotH/2)+') rotate(-90)" text-anchor="middle" class="ca-axis-title">Shots per match</text>'+
-    '</svg></div>'+legend+'<p class="ca-footnote">Each dot uses matches where both possession and shots were published together. Hover for figures and the matched sample size. Correlation does not prove that possession causes shots.</p>';
+    '</svg><div class="ca-scatter-tooltip" role="status" aria-live="polite" hidden>'+
+    '<strong data-ca-tooltip-club></strong>'+
+    '<span data-ca-tooltip-shots></span>'+
+    '<span data-ca-tooltip-possession></span>'+
+    '<small data-ca-tooltip-sample></small></div></div>'+
+    legend+'<p class="ca-footnote">Each dot represents a club, using matches where possession and shots were both published. Hover, focus or tap a dot to see the club, shots per match, possession and sample size. Correlation does not prove that possession causes shots.</p>';
 }
 function analyticsPage(){
   const summaries=caAllSummaries();
