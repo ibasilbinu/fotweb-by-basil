@@ -260,7 +260,7 @@ function analyticsPage(){
   const played=summaries.filter(s=>s.games>0);
   const compA=caSelectedTeam(summaries,state.analyticsCompareA);
   const compB=caSelectedTeam(summaries,state.analyticsCompareB,compA?.team.id);
-  const metric=caMetricChoices.some(m=>m[0]===state.analyticsMetric)?state.analyticsMetric:'shots';
+  const metric=caMetricChoices.some(m=>m[0]===state.analyticsMetric)?state.analyticsMetric:'points';
   const snapshot=header('Club Analytics.','Explore trends, compare teams and investigate the numbers behind ISL 2026–27.','ISL · DATA EXPLORER')+
     '<div class="ca-summary">'+
     '<div><small>Verified league matches</small><strong>'+caLeagueMatches().length+'</strong></div>'+
