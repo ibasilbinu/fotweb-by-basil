@@ -44,9 +44,8 @@ function fixtureCard(f,compact=false) {
     '<div class="fixture-meta"><span>⌖ '+esc(r?.venue||f.venue||'Venue TBC')+
     '</span><span>'+esc(f.label||'ISL match')+'</span></div>'+
     (f.sourceNote?'<p class="chart-desc">'+esc(f.sourceNote)+'</p>':'')+
-    '<div class="fixture-actions">'+sourceLink(r?.sources?.[0]?.url||f.sourceUrl,'Source')+
-    (r?'<button type="button" class="text-button fw-fixture-detail-button" data-fixture-detail="'+
-    esc(f.id)+'">Open match report ↗</button>':'')+'</div>'+fixtureWatch(f)+'</article>';
+    (r?'<div class="fixture-actions"><button type="button" class="text-button fw-fixture-detail-button" data-fixture-detail="'+
+    esc(f.id)+'">Open match report ↗</button></div>':'')+fixtureWatch(f)+'</article>';
 }
 function tableMarkup(limit){const rows=tableRows(),active=rows.some(t=>t.mp>0);return `<div class="table-wrap"><table><thead><tr><th>#</th><th>CLUB</th><th>MP</th><th>W</th><th>D</th><th>L</th><th>GF</th><th>GA</th><th>GD</th><th>PTS</th></tr></thead><tbody>${rows.slice(0,limit||rows.length).map((t,i)=>`<tr class="click-row ${state.team===t.id?'selected':''}" data-team="${esc(t.id)}"><td>${active?i+1:'—'}</td><td class="team-cell">${crest(t,'small')}${esc(t.name)}</td><td>${t.mp}</td><td>${t.w}</td><td>${t.d}</td><td>${t.l}</td><td>${t.gf}</td><td>${t.ga}</td><td>${t.gf-t.ga}</td><td class="pts">${t.pts}</td></tr>`).join('')}</tbody></table></div>`;}
 /* Overview-only selection: it does not modify the team dashboard,
