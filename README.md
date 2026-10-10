@@ -20,6 +20,9 @@ Live site: https://fotweb.streamlit.app/
 - Bottom-centred Watch live links to announced official ISL English YouTube streams.
   Completed broadcasts appear as Watch replay; unannounced streams have no button.
 - Points totals calculated from verified league-stage FT results.
+- Season Overview shows league-wide top-five player leaderboards for scorers,
+  assists, recorded goal contributions, yellow cards and red cards. Players'
+  clubs and published-stat coverage are shown, with no invented totals.
 - Club dashboards with their schedule, results and any sourced match statistics.
 - Team Dashboard adds separate points earned at home and away, plus top-five
   player lists for scorers, assists, recorded goals + assists, yellow cards and
