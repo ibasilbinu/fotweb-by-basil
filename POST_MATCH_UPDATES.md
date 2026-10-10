@@ -161,6 +161,19 @@ Every verified completed match receives an eight-section report in this order:
    shot breakdown, pass/defensive profiles, recorded player leaders, optional sourced shot map)
 8. FotWeb Tactical Verdict
 
+## League-wide team performance trends
+
+The Club Analytics Team performance trends graph overlays all 13 ISL clubs
+with colour-coded series and a full legend. It defaults to cumulative league
+points but supports per-match shots taken, shots conceded, goals scored, and
+goals conceded. Each x-axis match number refers to that club's *own* nth
+verified league match; do not align teams by calendar date or pretend a club
+has played when it has not. Only the latest 10 match numbers appear when
+there is a longer season history. Unplayed clubs remain in the legend with
+no point/line. A missing published stat creates a gap, while a real zero
+(e.g. zero league points) stays a valid plotted value. No predicted values,
+fabricated matchweek outcomes or paid Opta data are used.
+
 ## Free derived match analytics
 
 The website automatically computes and displays the following from verified match
