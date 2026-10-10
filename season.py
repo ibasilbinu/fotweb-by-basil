@@ -44,6 +44,55 @@ def validate_season(data):
         require(f.get("phase") in ("league", "playoff", "unknown"), "Invalid stage")
         require(f.get("venue") is None or (isinstance(f["venue"], str) and len(f["venue"]) <= 300), "Invalid venue")
         https(f["sourceUrl"])
+        # Upcoming starting XIs are optional and must refer to the fixture's
+        # official ISL match centre, never predicted squads or Ground View.
+        lineup = f.get("lineups")
+        if lineup is not None:
+            require(isinstance(lineup, dict), "Invalid pre-match lineup")
+            require(set(lineup).issubset({"sourceUrl", "verifiedAt", "home", "away"}),
+                    "Unsupported lineup field")
+            lineup_url = lineup.get("sourceUrl")
+            https(lineup_url)
+            parsed = urlparse(lineup_url)
+            expected = f"/matchcentre/{f['id']}"
+            require(parsed.hostname in ("www.indiansuperleague.com", "indiansuperleague.com")
+                    and parsed.path.rstrip("/") == expected and not parsed.query
+                    and not parsed.fragment,
+                    "Pre-match lineup source must be the official ISL match centre for this fixture")
+            require(isinstance(lineup.get("verifiedAt"), str)
+                    and datetime.fromisoformat(lineup["verifiedAt"].replace("Z", "+00:00")).tzinfo is not None,
+                    "Lineup verification timestamp requires timezone")
+            require(any(side in lineup for side in ("home", "away")),
+                    "Pre-match lineup requires at least one team")
+            for side in ("home", "away"):
+                info = lineup.get(side)
+                if info is None:
+                    continue
+                require(isinstance(info, dict) and set(info).issubset({"formation", "starters"}),
+                        "Invalid pre-match lineup side")
+                if "formation" in info:
+                    require(isinstance(info["formation"], str) and 1 <= len(info["formation"]) <= 30,
+                            "Invalid confirmed formation")
+                if "starters" in info:
+                    starters = info["starters"]
+                    require(isinstance(starters, list) and len(starters) == 11,
+                            "Only confirmed full starting XIs are supported")
+                    seen_names = set()
+                    for p in starters:
+                        require(isinstance(p, dict) and set(p).issubset({"name", "number", "position"}),
+                                "Unsupported starter field")
+                        name = p.get("name")
+                        require(isinstance(name, str) and 0 < len(name.strip()) <= 120
+                                and name.casefold() not in seen_names, "Invalid or duplicate starter")
+                        seen_names.add(name.casefold())
+                        if "number" in p:
+                            require(type(p["number"]) is int and 0 <= p["number"] <= 99,
+                                    "Invalid starter shirt number")
+                        if "position" in p:
+                            require(isinstance(p["position"], str) and 1 <= len(p["position"]) <= 40,
+                                    "Invalid published player role")
+                require("formation" in info or "starters" in info,
+                        "Pre-match team lineup must contain a formation or starting XI")
         broadcast = f.get("broadcast")
         if broadcast is not None:
             require(isinstance(broadcast, dict), "Invalid broadcast")
