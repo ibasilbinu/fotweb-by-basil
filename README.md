@@ -28,6 +28,10 @@ Live site: https://fotweb.streamlit.app/
   player lists for scorers, assists, recorded goals + assists, yellow cards and
   red cards. Counts come only from verified league-stage results, named card
   events and available player-level statistics. Missing values remain unavailable.
+- Team Dashboard has local Competition, Season and Club selectors. The currently
+  published options are Indian Super League and 2026–27, plus all 13 clubs;
+  selecting a club refreshes its dashboard without filtering Season Overview
+  or Fixtures & Results. Other competitions/seasons are not invented.
 - Club Analytics: all-club trend overlays (points, shots and goals), attack/defence rankings,
   two-club statistical comparisons and a league possession-vs-shots scatter plot.
   Computes only from verified completed league results; displays game counts,
