@@ -129,6 +129,31 @@ function fwVerdict(match) {
     esc(v.summary) + '</p>' + fields.map(([label,value])=>'<div><strong>' + esc(label) +
     '</strong><p>' + esc(value) + '</p></div>').join('') + sourceLink(v.sourceUrl,'Evidence for analysis') + '</div>';
 }
+function fwGoalScorers(match) {
+  const goals=(Array.isArray(match.events)?match.events:[])
+    .filter(e=>['goal','penalty_goal','own_goal'].includes(e.type) &&
+      (e.side==='home'||e.side==='away'))
+    .sort((a,b)=>(a.minute??0)-(b.minute??0)||(a.addedMinute??0)-(b.addedMinute??0));
+  const finalGoals=(Number(match.homeGoals)||0)+(Number(match.awayGoals)||0);
+  if(finalGoals===0) return '<div class="fw-goals-under-score"><span class="fw-goals-heading">GOAL SCORERS</span>'+
+    '<p class="fw-goals-empty">No goals scored</p></div>';
+  const known=goals.filter(e=>e.player);
+  if(!known.length) return '<div class="fw-goals-under-score"><span class="fw-goals-heading">GOAL SCORERS</span>'+
+    '<p class="fw-goals-empty">Scorers pending verification</p></div>';
+  const sideGoals=side=>goals.filter(e=>e.side===side&&e.player);
+  const formatGoal=e=>{
+    const suffix=e.type==='own_goal'?' (OG)':e.type==='penalty_goal'?' (P)':'';
+    const minute=e.minute==null?'':(' · '+esc(e.minute)+(e.addedMinute?'+'+esc(e.addedMinute):'')+'′');
+    return '<li><span class="fw-goal-ball" aria-hidden="true">⚽</span><span>'+
+      esc(e.player)+esc(suffix)+'<span class="fw-goal-minute">'+minute+'</span></span></li>';
+  };
+  const column=side=>'<div class="fw-goals-team fw-goals-'+side+'"><ul>'+
+    sideGoals(side).map(formatGoal).join('')+'</ul></div>';
+  const pending=known.length<finalGoals?
+    '<p class="fw-goals-pending">Some scorer details are still awaiting verification.</p>':'';
+  return '<div class="fw-goals-under-score"><span class="fw-goals-heading">GOAL SCORERS</span>'+
+    '<div class="fw-goals-columns">'+column('home')+column('away')+'</div>'+pending+'</div>';
+}
 function fwMatchReport(match) {
   const homeTeam=seasonData.teams.find(t=>t.name===canonical(match.home));
   const awayTeam=seasonData.teams.find(t=>t.name===canonical(match.away));
@@ -142,7 +167,7 @@ function fwMatchReport(match) {
     '<p>'+esc(formatDate(match.date))+' · '+esc(match.venue||'Venue unconfirmed')+
     ' · '+esc(match.status)+'</p><div class="fw-match-score"><div>'+shield(homeTeam)+'<strong>'+esc(match.home)+
     '</strong></div><span>'+esc(match.homeGoals)+' <small>—</small> '+esc(match.awayGoals)+
-    '</span><div>'+shield(awayTeam)+'<strong>'+esc(match.away)+'</strong></div></div></header>';
+    '</span><div>'+shield(awayTeam)+'<strong>'+esc(match.away)+'</strong></div></div>'+fwGoalScorers(match)+'</header>';
   const overview='<p class="fw-report-summary">'+esc(match.report ||
     'The final score is verified. A sourced match narrative has not yet been published.')+'</p>' +
     '<p class="fw-report-footnote">Verified '+esc(formatDate(match.verifiedAt))+' · '+
