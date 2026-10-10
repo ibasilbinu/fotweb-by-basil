@@ -154,8 +154,25 @@ Optional record fields:
   If only a team-level red-card total is known, do not invent a player,
   dismissal type, or minute. The result can still be published without a
   personalized card event.
-- `lineups.home` / `lineups.away`: optional `formation`, `starters`
-  array of player objects with `name` and optional numeric `number`.
+- `lineups.home` / `lineups.away`: optional verified `formation`,
+  `starters` array of player objects with `name` and optional numeric
+  `number`. Use confirmed starting XI, **not predicted lineups or squad lists**.
+  When reliable official match-centre Ground View / club starting-XI diagrams
+  explicitly establish the position of **every one of the 11 players**, add
+  `positionSourceUrl` (the HTTPS URL of that exact source) on the relevant
+  lineup side and a `pitchPosition` object on every starter:
+  `{"x":50,"y":89,"label":"GK"}` with normalized diagram coordinates
+  `x` from left (0) to right (100) and `y` from attacking end (0) to
+  own-goal end (100). These represent **positions in the pre-match lineup
+  graphic**, not GPS/average/actual match tracking positions. Only transcribe
+  individually supported locations; no mapping inferred from name order,
+  formation numbers, jersey numbers, or broad positions such as "Defender".
+  Do not partially fill a pitch: all 11 coordinates and a source URL are
+  required. Omit `pitchPosition` entirely when a readable, verifiable official
+  graphic/source is unavailable; FotWeb shows a clearly labelled role-grouped
+  schematic instead. Never copy or scrape FotMob's proprietary formation maps.
+  Where sources disagree, preserve existing verified starters/formation and
+  flag the mismatch rather than silently guessing or overwriting.
 - `players`: array with `name`, `side`, and optional `position`, `goals`,
   `assists`, `shots`, `passes`, `tackles`, `saves`, `rating`.
   Do not synthesize player ratings or use an unauthorized third-party rating.
