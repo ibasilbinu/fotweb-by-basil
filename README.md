@@ -22,7 +22,11 @@ Live site: https://fotweb.streamlit.app/
   Computes only from verified completed league results; displays game counts,
   metric-specific availability and early-season caveats. No paid data feed.
 
-- Match reports with source links. Missing statistics stay unavailable.
+- Click any fixture in Fixtures & results to open a match-details page: confirmed
+  upcoming starting XIs when published, or the existing eight-section verified
+  report after full time. No separate Match Reports navigation tab.
+- Match reports retain their source links; unavailable statistics and pre-match
+  lineups remain explicitly unavailable rather than being predicted.
 
 The initial schedule snapshot comes from the official ISL schedule. It is not a
 live-score feed. Hourly checks verifies results, schedule changes and official English stream links, then writes updates to
