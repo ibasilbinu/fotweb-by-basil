@@ -74,26 +74,118 @@ function fwTactics(match) {
     '</strong><p>' + esc(t.text) + '</p>' + sourceLink(t.sourceUrl,'Evidence') + '</article>').join('');
   return display + (insights || fwMissing('No evidence-backed tactical findings have been published for this match yet. Formations alone do not establish a tactical conclusion.'));
 }
+/* Verified squad data presented on a schematic football pitch.
+   Exact left/right positions are never inferred from squad-list order. */
+function fwLineupRole(position) {
+  const p=String(position||'').trim().toLowerCase();
+  if(/^(goalkeeper|keeper|gk)$/.test(p)) return 'goalkeeper';
+  if(/^(defender|defence|defense|centre back|center back|left back|right back|fullback|wingback|cb|lb|rb|lwb|rwb)$/.test(p)) return 'defender';
+  if(/^(midfielder|midfield|central midfielder|defensive midfielder|attacking midfielder|cm|dm|am|cdm|cam)$/.test(p)) return 'midfielder';
+  if(/^(forward|striker|winger|centre forward|center forward|left winger|right winger|cf|st|lw|rw)$/.test(p)) return 'forward';
+  return 'unknown';
+}
+function fwLineupShortName(name) {
+  const full=String(name||'').trim();
+  return full.length<=14?full:full.split(/\s+/).slice(-1)[0];
+}
+function fwLineupPlayerChip(player) {
+  const number=player.number==null?'—':esc(player.number);
+  const name=String(player.name||'');
+  return '<div class="fw-pitch-player" title="'+esc(name)+'" aria-label="'+esc(name+
+    (player.number==null?'':' · number '+player.number))+'">'+
+    '<span class="fw-pitch-shirt" aria-hidden="true">'+number+'</span>'+
+    '<span class="fw-pitch-player-name">'+esc(fwLineupShortName(name))+'</span></div>';
+}
+function fwLineupPitchPanel(match,side) {
+  const teamName=side==='home'?match.home:match.away;
+  const info=match.lineups?.[side];
+  const starters=Array.isArray(info?.starters)?info.starters:[];
+  const players=Array.isArray(match.players)?match.players:[];
+  const groups={forward:[],midfielder:[],defender:[],goalkeeper:[],unknown:[]};
+  starters.forEach(starter=>{
+    const player=players.find(p=>p.side===side&&
+      String(p.name).trim().toLowerCase()===String(starter.name).trim().toLowerCase());
+    const role=fwLineupRole(starter.position||player?.position);
+    groups[role].push(starter);
+  });
+  const known=starters.length-groups.unknown.length;
+  const rows=known?
+    [['forward','FORWARDS'],['midfielder','MIDFIELD'],['defender','DEFENCE'],
+      ['goalkeeper','GOALKEEPER'],['unknown','POSITION UNAVAILABLE']]
+      .filter(([key])=>groups[key].length)
+      .map(([key,label])=>'<div class="fw-pitch-band fw-pitch-band-'+key+'">'+
+        '<span class="fw-pitch-band-label">'+label+'</span>'+
+        '<div class="fw-pitch-player-row" style="grid-template-columns:repeat('+groups[key].length+
+        ',minmax(0,1fr))">'+groups[key].map(fwLineupPlayerChip).join('')+'</div></div>')
+      .join(''):'<div class="fw-pitch-no-roles">Individual positions have not been verified.'+
+        '<span>See the complete starting XI below.</span></div>';
+  const formation=info?.formation?'<span class="fw-pitch-formation">Formation: '+esc(info.formation)+'</span>':'';
+  const note=known?'Schematic role groups only. Exact positions within the formation are not verified.':
+    'The starting XI is sourced, but individual positions are unavailable.';
+  const roster=starters.map(p=>'<li><span class="fw-lineup-number">'+
+    (p.number==null?'—':esc(p.number))+'</span><span>'+esc(p.name)+'</span></li>').join('');
+  return '<div class="fw-lineup-panel" id="fw-lineup-panel-'+esc(match.id)+'-'+side+'" '+
+    'data-lineup-panel="'+side+'" role="tabpanel" aria-labelledby="fw-lineup-tab-'+esc(match.id)+'-'+side+'"'+
+    (side==='away'?' hidden':'')+'>'+
+    '<div class="fw-lineup-pitch" data-side="'+side+'">'+
+      '<div class="fw-pitch-markings" aria-hidden="true"><span class="fw-pitch-centreline"></span>'+
+      '<span class="fw-pitch-circle"></span><span class="fw-pitch-box fw-pitch-box-top"></span>'+
+      '<span class="fw-pitch-box fw-pitch-box-bottom"></span></div>'+
+      '<div class="fw-pitch-bands">'+rows+'</div></div>'+
+    '<div class="fw-lineup-pitch-footer">'+formation+
+      '<span>'+esc(starters.length)+' verified starters</span></div>'+
+    '<p class="fw-lineup-disclaimer">'+esc(note)+'</p>'+
+    '<details class="fw-lineup-roster"><summary>View all '+esc(starters.length)+
+    ' starting players · '+esc(teamName)+'</summary><ol>'+roster+'</ol></details>'+
+    '</div>';
+}
+function fwLineupPitch(match) {
+  const home=match.lineups?.home,away=match.lineups?.away;
+  const hasHome=Array.isArray(home?.starters)&&home.starters.length;
+  const hasAway=Array.isArray(away?.starters)&&away.starters.length;
+  if(!hasHome&&!hasAway) return '';
+  const defaultSide=hasHome?'home':'away';
+  const tab=side=>{
+    const t=seasonData.teams.find(t=>t.name===canonical(side==='home'?match.home:match.away));
+    const info=match.lineups?.[side],available=side==='home'?hasHome:hasAway;
+    const name=side==='home'?match.home:match.away;
+    return '<button type="button" role="tab" id="fw-lineup-tab-'+esc(match.id)+'-'+side+
+      '" data-lineup-side="'+side+'" aria-controls="fw-lineup-panel-'+esc(match.id)+'-'+side+
+      '" aria-selected="'+(side===defaultSide)+'"'+(!available?' disabled':'')+
+      ' class="fw-lineup-tab'+(side===defaultSide?' active':'')+'">'+
+      (t?crest(t,'small'):'')+'<span><strong>'+esc(name)+'</strong><small>'+
+      esc(info?.formation||'Formation unavailable')+'</small></span></button>';
+  };
+  /* Pitch order follows the verified broad positional categories only.
+     The full names are always available in the expandable roster. */
+  let panels='';
+  if(hasHome) panels+=fwLineupPitchPanel(match,'home');
+  if(hasAway) panels+=fwLineupPitchPanel(match,'away').replace(
+    /(<div class="fw-lineup-panel"[^>]*data-lineup-panel="away"[^>]*)( hidden)/,
+    (_,open)=>open+(defaultSide==='away'?'':' hidden'));
+  if(!hasHome&&hasAway){
+    panels=panels.replace(/(data-lineup-panel="away"[^>]*)( hidden)/, '$1');
+  }
+  return '<section class="fw-lineup-shell" aria-label="Starting XI lineups">'+
+    '<div class="fw-lineup-title"><div><span class="eyebrow">STARTING XI</span>'+
+    '<h4>Team lineups</h4></div><span class="fw-lineup-title-tag">PITCH VIEW</span></div>'+
+    '<div class="fw-lineup-tabs" role="tablist" aria-label="Choose a team">'+
+    tab('home')+tab('away')+'</div>'+panels+'</section>';
+}
 function fwPlayers(match) {
   const players=Array.isArray(match.players)?match.players:[];
-  const lineup=match.lineups || {};
-  const metrics=[['goals','Goals'],['assists','Assists'],['shots','Shots'],['passes','Passes'],['tackles','Tackles'],['saves','Saves'],['rating','Rating']];
+  const metrics=[['goals','Goals'],['assists','Assists'],['shots','Shots'],['passes','Passes'],
+    ['tackles','Tackles'],['saves','Saves'],['rating','Rating']];
   const cards=players.map(p=>{
-    const nums=metrics.filter(([k])=>p[k] != null).map(([k,label])=>'<span>' + esc(label) + ' <strong>' +
-      esc(p[k]) + '</strong></span>').join('');
+    const nums=metrics.filter(([k])=>p[k] != null).map(([k,label])=>'<span>' + esc(label) +
+      ' <strong>' + esc(p[k]) + '</strong></span>').join('');
     return '<div class="fw-player"><div><strong>' + esc(p.name) + '</strong><small>' +
       esc(p.side==='home'?match.home:match.away) + (p.position?' · '+p.position:'') +
       '</small></div><div class="fw-player-numbers">' + (nums||'Verified appearance') + '</div></div>';
   }).join('');
-  const lineups=['home','away'].map(side=>{
-    const list=lineup[side]?.starters;
-    if (!Array.isArray(list)||!list.length) return '';
-    return '<div class="fw-lineup"><h4>' + esc(side==='home'?match.home:match.away) +
-      ' starting XI</h4><div>' + list.map(p=>'<span>' + (p.number==null?'':esc(p.number)+' · ') +
-      esc(p.name) + '</span>').join('') + '</div></div>';
-  }).join('');
-  return (cards?'<div class="fw-player-list">'+cards+'</div>':'') +
-    (lineups?'<div class="fw-lineups">'+lineups+'</div>':'') ||
+  const pitch=fwLineupPitch(match);
+  return (pitch||'')+(cards?'<div class="fw-player-stats-label">VERIFIED PLAYER PERFORMANCES</div>'+
+    '<div class="fw-player-list">'+cards+'</div>':'')||
     fwMissing('Verified player metrics and starting lineups have not been published for this match.');
 }
 function fwTimeline(match) {
