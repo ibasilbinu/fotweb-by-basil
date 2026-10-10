@@ -111,7 +111,7 @@ fixtures do not show stream buttons.
 
 Every verified completed match receives an eight-section report in this order:
 1. Match overview
-2. Lineup (verified XI list; exact pitch view only with individually sourced coordinates)
+2. Lineup (verified XI list; positioned pitch only from official ISL Ground View)
 3. Match statistics
 4. Player stats (individual verified metrics, separately from the lineup)
 5. Match timeline
@@ -154,26 +154,32 @@ Optional record fields:
   If only a team-level red-card total is known, do not invent a player,
   dismissal type, or minute. The result can still be published without a
   personalized card event.
-- `lineups.home` / `lineups.away`: optional verified `formation`,
-  `starters` array of player objects with `name` and optional numeric
-  `number`. Use confirmed starting XI, **not predicted lineups or squad lists**.
-  When reliable official match-centre Ground View / club starting-XI diagrams
-  explicitly establish the position of **every one of the 11 players**, add
-  `positionSourceUrl` (the HTTPS URL of that exact source) on the relevant
-  lineup side and a `pitchPosition` object on every starter:
-  `{"x":50,"y":89,"label":"GK"}` with normalized diagram coordinates
-  `x` from left (0) to right (100) and `y` from attacking end (0) to
-  own-goal end (100). These represent **positions in the pre-match lineup
-  graphic**, not GPS/average/actual match tracking positions. Only transcribe
-  individually supported locations; no mapping inferred from name order,
-  formation numbers, jersey numbers, or broad positions such as "Defender".
-  Do not partially fill a pitch: all 11 coordinates and a source URL are
-  required. Omit `pitchPosition` entirely when a readable, verifiable official
-  graphic/source is unavailable; FotWeb displays the verified starting XI
-  as a simple list of full names and jersey numbers, with the sourced formation
-  when present. Never draw approximate pitch positions. Never copy or scrape FotMob's proprietary formation maps.
-  Where sources disagree, preserve existing verified starters/formation and
-  flag the mismatch rather than silently guessing or overwriting.
+- `lineups.home` / `lineups.away`: use only the **official Indian Super
+  League match centre** to verify the starting XI and formation for the
+  exact fixture. Do not use FotMob, Google Sports, unofficial diagrams,
+  predicted XIs, squad lists, or players' broad roles to infer positions.
+  The optional `formation` must be verified from that match's official ISL
+  Lineups/Ground View; each `starters` entry has `name` and optional
+  numeric shirt `number`. Never silently overwrite confirmed match data
+  when ISL pages temporarily show inconsistent or incomplete information.
+- A FotWeb **positioned pitch view** is permitted **only when the official
+  ISL Ground View for that same match actually supplies the starting
+  formation, exactly 11 confirmed starters, and individually verifiable
+  positions for all eleven**. Set the side's `positionSourceUrl` to the
+  matching official `https://www.indiansuperleague.com/matchcentre/<id>`
+  (or without `www`) and include a `pitchPosition` object on each starter:
+  `{"x":50,"y":89,"label":"GK"}`, normalized with `x` from left
+  (0) to right (100) and `y` from attacking end (0) to own-goal end
+  (100). These are starting lineup-diagram positions, not tracking data.
+  The official page must match the result's `matchUrl`; do not use
+  positions from another fixture. No partial pitch coordinates.
+- If the official ISL Ground View is unavailable, unreadable, or missing
+  any required formation/player/position detail, omit `pitchPosition`
+  and `positionSourceUrl` and display the **full starting XI as a list**.
+  Display a formation only when confirmed by the official ISL match centre.
+  Preserve previously verified starting-XI records until reliable
+  corrections are available, and do not fake formation shape or positions.
+  Never scrape/copy a proprietary FotMob/Google Sports lineup diagram.
 - `players`: array with `name`, `side`, and optional `position`, `goals`,
   `assists`, `shots`, `passes`, `tackles`, `saves`, `rating`.
   Do not synthesize player ratings or use an unauthorized third-party rating.
