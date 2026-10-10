@@ -20,7 +20,7 @@ Live site: https://fotweb.streamlit.app/
 - Match reports with source links. Missing statistics stay unavailable.
 
 The initial schedule snapshot comes from the official ISL schedule. It is not a
-live-score feed. The hourly ChatGPT task verifies results, schedule changes and official English stream links, then writes updates to
+live-score feed. Hourly checks verifies results, schedule changes and official English stream links, then writes updates to
 this repository; source publication and checks can be delayed. Refresh the page
 for the latest committed data. No API key is required.
 
