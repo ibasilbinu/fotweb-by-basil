@@ -44,3 +44,19 @@ html,body{height:100%;overflow:hidden}.app{height:100vh}.main-wrap{height:100vh;
   .breadcrumb{min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 }
 @media print{.page-back{display:none!important}}
+
+
+/* Direct return to Season Overview, paired with the universal Back button. */
+.page-home{display:inline-flex;align-items:center;justify-content:center;gap:7px;
+  flex:none;border:1px solid #465d49;border-radius:8px;background:#19251e;
+  color:var(--accent);padding:9px 12px;font-size:12px;line-height:1.2;
+  font-weight:650;white-space:nowrap;cursor:pointer}
+.page-home svg{flex:none}
+.page-home:hover:not(:disabled){background:#27392b;border-color:var(--accent)}
+.page-home:disabled{opacity:.35;cursor:default}
+@media(max-width:570px){
+ .page-home{padding:9px;gap:0}
+ .page-home span{display:none}
+ .page-home svg{height:18px;width:18px}
+}
+@media print{.page-home{display:none!important}}
