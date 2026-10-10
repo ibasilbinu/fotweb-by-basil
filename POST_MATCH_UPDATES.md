@@ -116,8 +116,34 @@ Every verified completed match receives an eight-section report in this order:
 4. Player stats (individual verified metrics, separately from the lineup)
 5. Match timeline
 6. Tactical analytics (sourced interpretation only)
-7. Advanced analytics
+7. Advanced analytics (free calculations from verified team/player totals;
+   shot breakdown, pass/defensive profiles, recorded player leaders, optional sourced shot map)
 8. FotWeb Tactical Verdict
+
+## Free derived match analytics
+
+The website automatically computes and displays the following from verified match
+statistics already in `data/isl-results.json`, without any paid Opta feed:
+- Shot breakdown: attempts on target versus all other attempts
+  (`shots - shotsOnTarget`, **including blocked shots**, not simply off target);
+  published totals, shot-on-target percentage, and each club's share of total shots.
+- Passing/defensive profile: possession, total passes, published pass-accuracy
+  percentage, tackles, interceptions, clearances, and `100 * shots / passes`
+  when published totals support this simple descriptive ratio.
+- Recorded player leaders: top three published individual records for shots,
+  passes, tackles and saves. Player coverage may be incomplete, so this is
+  **not** an official complete ranking across all players.
+- Prior shot-accuracy, shot-conversion and published xG values remain available
+  where sourced; **never estimate xG** from aggregate shots.
+- True shot-location charts are rendered only if legally usable verified
+  shot-level coordinates appear in `shotMap`. Player heat maps, pass maps and
+  passing networks require separate event/tracking locations and cannot be
+  inferred from aggregates or the formation.
+
+These visualizations compute at page render time: no analytics fields need to be
+committed, no Opta credentials are needed, and each future verified match with
+the necessary totals receives them automatically. Ensure source facts stay
+auditable and never equate these ratios to causal tactical findings.
 
 Missing fields must appear as unavailable; do not fabricate information merely
 to populate the layout. **FotWeb uses a list-only lineup model for all matches.**
