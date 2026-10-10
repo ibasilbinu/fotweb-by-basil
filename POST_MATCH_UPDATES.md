@@ -107,6 +107,47 @@ stream is announced. Verified completed matches show Watch replay. Unannounced
 streams have no watch button or placeholder. Postponed and cancelled
 fixtures do not show stream buttons.
 
+## Fixture-based match details and upcoming XIs
+
+The sidebar does not have a separate Match Reports tab. Every match card in
+**Fixtures & results** opens a detail page. When an official completed result
+exists in `data/isl-results.json`, the page reuses FotWeb's eight-section
+match report. Otherwise it shows an upcoming/pre-match view with kickoff,
+venue, status, published official stream, source links and confirmed lineups
+when available. Missing XIs explicitly say unavailable; **never publish
+predicted lineups or squad lists as a starting XI**.
+
+The existing `data/isl-season.json` fixture may optionally contain a
+`lineups` object for confirmed pre-match formation and starters, e.g.:
+
+```json
+"lineups": {
+  "sourceUrl": "https://www.indiansuperleague.com/matchcentre/194636",
+  "verifiedAt": "2026-10-11T16:00:00+05:30",
+  "home": {
+    "formation": "4-3-3",
+    "starters": [{"name": "Verified player", "number": 10}]
+  }
+}
+```
+
+This is a schema illustration only, **not real ISL lineup data**. Real
+`starters` must have exactly **11 verified players** on a side; formations
+without starters are allowed if independently verified. Both sides may be
+added separately as published. The source URL must be the match-specific
+official ISL match centre, and the timestamp must contain a timezone.
+Only the official published confirmed XI may be used. Team broad position
+labels are optional when expressly verified; FotWeb shows a player list only.
+Do not collect or reuse Ground View coordinates.
+
+Each hourly check should inspect the next imminent and current day's
+uncompleted fixtures (and any other fixtures with newly published official
+team announcements) for **confirmed starting XIs and formations**. Add these
+to `data/isl-season.json` only when verified, preserving existing valid data
+if unavailable, and run `season.py` validation. Completed match reports
+continue using `data/isl-results.json`. The UI will switch from pre-match
+detail to completed report automatically when a result is committed.
+
 ## Detailed eight-section FotWeb reports
 
 Every verified completed match receives an eight-section report in this order:
