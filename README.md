@@ -12,7 +12,7 @@ Live site: https://fotweb.streamlit.app/
 - All 78 published Phase 1 fixtures, 10 October 2026–17 January 2027.
 - Fixtures filtered by club, month, match status or search.
 - Kickoff times in IST, published venues, and explicit Venue TBC labels.
-- CSV fixture export and calendar downloads.
+- Calendar downloads for confirmed fixtures.
 - Bottom-centred Watch live links to announced official ISL English YouTube streams.
   Completed broadcasts appear as Watch replay; unannounced streams have no button.
 - Points totals calculated from verified league-stage FT results.
