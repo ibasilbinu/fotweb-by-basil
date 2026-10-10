@@ -158,3 +158,29 @@ button.fw-match-list-item:focus-visible,.fw-report-switch button:focus-visible,.
   .fw-goals-team li{font-size:10px;gap:4px}
   .fw-goal-ball{font-size:10px}
 }
+
+
+/* Match dismissal icons: straight red, or a yellow card peeking left
+   from behind the red card when a second yellow causes the sending-off. */
+.fw-reds-under-score{max-width:720px;margin:18px auto 0;padding-top:15px;border-top:1px solid rgba(183,215,186,.16)}
+.fw-reds-heading{display:block;font-size:9px;font-weight:700;letter-spacing:1.7px;color:#a6b6a7;margin-bottom:13px}
+.fw-reds-columns{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:14px}
+.fw-reds-team{min-width:0}
+.fw-reds-team ul{list-style:none;padding:0;margin:0;display:grid;gap:10px}
+.fw-reds-team li{display:flex;align-items:center;gap:8px;min-width:0;font-size:11px;line-height:1.55;color:#e5ece6}
+.fw-reds-away li{justify-content:flex-end;text-align:right}
+.fw-dismissal-info{display:inline;min-width:0;overflow-wrap:anywhere}
+.fw-dismissal-info strong{font-weight:600}
+.fw-dismissal-minute{color:var(--accent);white-space:nowrap;font-weight:700}
+.fw-dismissal-cards{position:relative;display:inline-block;vertical-align:middle;width:25px;height:23px;flex:0 0 25px}
+.fw-dismissal-cards i{display:block;position:absolute;top:2px;width:13px;height:18px;border-radius:2px;box-shadow:0 1px 3px rgba(0,0,0,.45)}
+.fw-dismissal-red{left:6px;background:#ec4448;z-index:2;border:1px solid #ff7978;transform:rotate(2deg)}
+.fw-dismissal-yellow{left:1px;background:#f8d646;z-index:1;border:1px solid #ffe899;transform:rotate(-5deg)}
+.fw-dismissal-double .fw-dismissal-red{left:10px}
+@media(max-width:680px){
+  .fw-reds-under-score{margin-top:16px;padding-top:13px}
+  .fw-reds-heading{font-size:8px;margin-bottom:12px}
+  .fw-reds-columns{gap:11px}
+  .fw-reds-team li{gap:5px;font-size:10px}
+  .fw-dismissal-cards{width:24px;flex-basis:24px}
+}
