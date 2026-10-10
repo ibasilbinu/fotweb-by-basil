@@ -109,6 +109,17 @@ function fwLineupPitchPanel(match,side) {
     groups[role].push(starter);
   });
   const known=starters.length-groups.unknown.length;
+  const diagramComplete=starters.length===11 && starters.every(p=>
+    p.pitchPosition && typeof p.pitchPosition.x==='number' &&
+    typeof p.pitchPosition.y==='number' && Number.isFinite(p.pitchPosition.x) &&
+    Number.isFinite(p.pitchPosition.y) && p.pitchPosition.x>=0 && p.pitchPosition.x<=100 &&
+    p.pitchPosition.y>=0 && p.pitchPosition.y<=100) && !!info?.positionSourceUrl;
+  const exactLayout=diagramComplete?
+    '<div class="fw-pitch-exact-players">'+starters.map(p=>
+      '<div class="fw-pitch-exact-slot" style="left:'+p.pitchPosition.x+
+      '%;top:'+p.pitchPosition.y+'%">'+fwLineupPlayerChip(p)+
+      (p.pitchPosition.label?'<span class="fw-pitch-exact-role">'+esc(p.pitchPosition.label)+'</span>':'')+
+      '</div>').join('')+'</div>':'';
   const rows=known?
     [['forward','FORWARDS'],['midfielder','MIDFIELD'],['defender','DEFENCE'],
       ['goalkeeper','GOALKEEPER'],['unknown','POSITION UNAVAILABLE']]
@@ -120,21 +131,24 @@ function fwLineupPitchPanel(match,side) {
       .join(''):'<div class="fw-pitch-no-roles">Individual positions have not been verified.'+
         '<span>See the complete starting XI below.</span></div>';
   const formation=info?.formation?'<span class="fw-pitch-formation">Formation: '+esc(info.formation)+'</span>':'';
-  const note=known?'Schematic role groups only. Exact positions within the formation are not verified.':
+  const note=diagramComplete?'Starting positions reproduced schematically from the cited lineup diagram, not tracking data.':
+    known?'Grouped by verified player roles. Left/right positions have not been verified.':
     'The starting XI is sourced, but individual positions are unavailable.';
   const roster=starters.map(p=>'<li><span class="fw-lineup-number">'+
     (p.number==null?'—':esc(p.number))+'</span><span>'+esc(p.name)+'</span></li>').join('');
   return '<div class="fw-lineup-panel" id="fw-lineup-panel-'+esc(match.id)+'-'+side+'" '+
     'data-lineup-panel="'+side+'" role="tabpanel" aria-labelledby="fw-lineup-tab-'+esc(match.id)+'-'+side+'"'+
     (side==='away'?' hidden':'')+'>'+
-    '<div class="fw-lineup-pitch" data-side="'+side+'">'+
+    '<div class="fw-lineup-pitch'+(diagramComplete?' fw-lineup-exact':'')+'" data-side="'+side+'">'+
       '<div class="fw-pitch-markings" aria-hidden="true"><span class="fw-pitch-centreline"></span>'+
       '<span class="fw-pitch-circle"></span><span class="fw-pitch-box fw-pitch-box-top"></span>'+
       '<span class="fw-pitch-box fw-pitch-box-bottom"></span></div>'+
-      '<div class="fw-pitch-bands">'+rows+'</div></div>'+
+      (diagramComplete?exactLayout:'<div class="fw-pitch-bands">'+rows+'</div>')+'</div>'+
     '<div class="fw-lineup-pitch-footer">'+formation+
       '<span>'+esc(starters.length)+' verified starters</span></div>'+
     '<p class="fw-lineup-disclaimer">'+esc(note)+'</p>'+
+    (diagramComplete?'<p class="fw-lineup-pos-source">'+
+      sourceLink(info.positionSourceUrl,'Verified lineup diagram source')+'</p>':'')+
     '<details class="fw-lineup-roster"><summary>View all '+esc(starters.length)+
     ' starting players · '+esc(teamName)+'</summary><ol>'+roster+'</ol></details>'+
     '</div>';
