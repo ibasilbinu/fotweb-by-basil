@@ -10,6 +10,9 @@ Live site: https://fotweb.streamlit.app/
 
 - Official participating club list and official club crests.
 - Creator’s Corner: an About Basil page with contact and profile icons.
+- A universal top-bar Back button restores the previous in-app view, including
+  any selected club, fixture filters or opened match report. On direct entry
+  to a section without prior in-app history, it returns to Season overview.
 - All 78 published Phase 1 fixtures, 10 October 2026–17 January 2027.
 - Fixtures & results filtered using the All clubs / individual club dropdown,
   month and match status. This selection is local to Fixtures & results.
