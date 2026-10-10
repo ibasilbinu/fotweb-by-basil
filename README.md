@@ -11,7 +11,8 @@ Live site: https://fotweb.streamlit.app/
 - Official participating club list and official club crests.
 - Creator’s Corner: an About Basil page with contact and profile icons.
 - All 78 published Phase 1 fixtures, 10 October 2026–17 January 2027.
-- Fixtures filtered by club, month, match status or search.
+- Fixtures & results filtered using the All clubs / individual club dropdown,
+  month and match status. This selection is local to Fixtures & results.
 - Kickoff times in IST, published venues, and explicit Venue TBC labels.
 - Bottom-centred Watch live links to announced official ISL English YouTube streams.
   Completed broadcasts appear as Watch replay; unannounced streams have no button.
