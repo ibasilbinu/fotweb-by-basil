@@ -134,6 +134,18 @@ function fwLineupPitchPanel(match,side) {
   const note=diagramComplete?'Starting positions reproduced schematically from the cited lineup diagram, not tracking data.':
     known?'Grouped by verified player roles. Left/right positions have not been verified.':
     'The starting XI is sourced, but individual positions are unavailable.';
+  /* Link to the official match centre for viewing the publisher's own
+     Ground View while FotWeb's independently verified map is unavailable. */
+  const officialMatchLink=(()=>{
+    const url=safeUrl(match.matchUrl);
+    if(!url)return '';
+    const parsed=new URL(url);
+    if(!['indiansuperleague.com','www.indiansuperleague.com'].includes(parsed.hostname)||
+      !/^\/matchcentre\/\d+\/?$/.test(parsed.pathname))return '';
+    return '<p class="fw-lineup-external">'+
+      sourceLink(url,'View official ISL lineup')+
+      '<span>On the match centre, choose Team Lineups → Ground View.</span></p>';
+  })();
   const roster=starters.map(p=>'<li><span class="fw-lineup-number">'+
     (p.number==null?'—':esc(p.number))+'</span><span>'+esc(p.name)+'</span></li>').join('');
   return '<div class="fw-lineup-panel" id="fw-lineup-panel-'+esc(match.id)+'-'+side+'" '+
@@ -149,6 +161,7 @@ function fwLineupPitchPanel(match,side) {
     '<p class="fw-lineup-disclaimer">'+esc(note)+'</p>'+
     (diagramComplete?'<p class="fw-lineup-pos-source">'+
       sourceLink(info.positionSourceUrl,'Verified lineup diagram source')+'</p>':'')+
+    officialMatchLink+
     '<details class="fw-lineup-roster"><summary>View all '+esc(starters.length)+
     ' starting players · '+esc(teamName)+'</summary><ol>'+roster+'</ol></details>'+
     '</div>';
