@@ -71,12 +71,13 @@ function caTrendChart(s,metric){
   const games=s.history.slice(-10);
   const title=caMetricChoices.find(([k])=>k===metric)?.[1]||'Shots taken';
   if(!games.length)return '<div class="ca-empty">No verified league matches for this club yet.</div>';
-  let running=0;
+  const offset=s.history.length-games.length;
   const entries=games.map((m,i)=>{
-    const val=caMatchValue(m,s.team.name,metric);
-    if(metric==='points')running=caTeamHistory(s.team.name).slice(0,-games.length+i+1)
-      .reduce((a,match)=>a+caMatchValue(match,s.team.name,'points'),0);
-    return {m,label:caOpp(m,s.team.name),value:metric==='points'?running:val};
+    const val=metric==='points'?
+      s.history.slice(0,offset+i+1).reduce((total,match)=>
+        total+caMatchValue(match,s.team.name,'points'),0):
+      caMatchValue(m,s.team.name,metric);
+    return {m,label:caOpp(m,s.team.name),value:val};
   });
   const known=entries.filter(e=>e.value!=null);
   if(!known.length)return '<div class="ca-empty">No sourced '+esc(title.toLowerCase())+' totals yet. Missing values are not zeros.</div>';
