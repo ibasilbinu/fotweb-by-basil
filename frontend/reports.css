@@ -184,3 +184,69 @@ button.fw-match-list-item:focus-visible,.fw-report-switch button:focus-visible,.
   .fw-reds-team li{gap:5px;font-size:10px}
   .fw-dismissal-cards{width:24px;flex-basis:24px}
 }
+
+
+/* FotWeb pitch-view starting XI: sourced roles, schematic placement. */
+.fw-lineup-shell{margin:0 0 28px;border:1px solid #33463a;border-radius:13px;background:#121b19;overflow:hidden}
+.fw-lineup-title{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:19px 20px 13px}
+.fw-lineup-title h4{margin:6px 0 0;font-size:18px;line-height:1.3;color:var(--text)}
+.fw-lineup-title-tag{font-size:9px;font-weight:750;color:var(--accent);letter-spacing:1.1px;white-space:nowrap}
+.fw-lineup-tabs{display:grid;grid-template-columns:1fr 1fr;gap:7px;padding:0 15px 15px}
+.fw-lineup-tab{display:flex;align-items:center;justify-content:center;gap:10px;padding:10px 8px;border:1px solid #36483d;border-radius:8px;background:#17231e;color:#acbeb2;min-width:0;text-align:left;cursor:pointer}
+.fw-lineup-tab.active,.fw-lineup-tab[aria-selected="true"]{border-color:var(--accent);background:#283821;color:#edf9e1}
+.fw-lineup-tab:disabled{opacity:.45;cursor:not-allowed}
+.fw-lineup-tab .crest,.fw-lineup-tab .club-initials{width:29px;height:30px;flex:0 0 auto;object-fit:contain}
+.fw-lineup-tab span:last-child{display:grid;gap:3px;min-width:0}
+.fw-lineup-tab strong{font-size:11px;line-height:1.3;overflow-wrap:anywhere}
+.fw-lineup-tab small{font-size:10px;color:#96a99b}
+.fw-lineup-panel[hidden]{display:none!important}
+.fw-lineup-pitch{position:relative;margin:0 15px;min-height:535px;border:2px solid #608967;border-radius:10px;overflow:hidden;background:repeating-linear-gradient(180deg,#164b32 0%,#164b32 14.2857%,#19543a 14.2857%,#19543a 28.5714%);isolation:isolate}
+.fw-pitch-markings{position:absolute;inset:9px;pointer-events:none;border:2px solid rgba(214,244,220,.32);border-radius:2px;z-index:0}
+.fw-pitch-centreline{position:absolute;top:50%;left:0;right:0;border-top:2px solid rgba(214,244,220,.35)}
+.fw-pitch-circle{position:absolute;top:50%;left:50%;width:110px;height:110px;border:2px solid rgba(214,244,220,.36);border-radius:50%;transform:translate(-50%,-50%)}
+.fw-pitch-box{position:absolute;left:29%;width:42%;height:14%;border:2px solid rgba(214,244,220,.36)}
+.fw-pitch-box-top{top:-2px;border-top:0}
+.fw-pitch-box-bottom{bottom:-2px;border-bottom:0}
+.fw-pitch-bands{position:relative;z-index:1;display:flex;flex-direction:column;justify-content:space-between;gap:10px;min-height:535px;padding:25px 10px 20px}
+.fw-pitch-band{display:grid;gap:5px;min-width:0}
+.fw-pitch-band-label{font-size:9px;font-weight:700;letter-spacing:1.4px;color:rgba(238,251,241,.62);text-align:center}
+.fw-pitch-player-row{display:grid;align-items:start;justify-items:center;gap:3px;min-width:0}
+.fw-pitch-player{display:flex;align-items:center;flex-direction:column;min-width:0;width:100%;gap:5px;text-align:center;color:#f0fcf3;line-height:1.25}
+.fw-pitch-shirt{display:grid;place-items:center;width:47px;height:43px;max-width:100%;background:var(--accent);clip-path:polygon(21% 0,36% 0,43% 11%,57% 11%,64% 0,79% 0,100% 22%,84% 42%,75% 34%,75% 100%,25% 100%,25% 34%,16% 42%,0 22%);color:#172015;font-size:13px;font-weight:800;text-shadow:0 1px rgba(255,255,255,.15)}
+.fw-lineup-pitch[data-side="away"] .fw-pitch-shirt{background:var(--orange);color:#321e14}
+.fw-pitch-player-name{display:block;max-width:100%;font-size:11px;line-height:1.3;font-weight:650;text-shadow:0 1px 2px #123323;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.fw-pitch-no-roles{position:relative;z-index:1;flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px;padding:35px 15px;color:#eff8ef;text-align:center;font-size:14px}
+.fw-pitch-no-roles span{color:#c3d1c6;font-size:11px}
+.fw-lineup-pitch-footer{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin:14px 17px 0;color:#b6c5b9;font-size:11px}
+.fw-pitch-formation{display:inline-flex;background:#233a2b;color:var(--accent);font-size:11px;font-weight:700;border:1px solid #3d6143;padding:6px 10px;border-radius:6px}
+.fw-lineup-disclaimer{font-size:10px;line-height:1.65;color:#a5b4aa;padding:10px 17px 0;margin:0}
+.fw-lineup-roster{margin:12px 15px 16px;border:1px solid #35443a;background:#17231c;border-radius:8px}
+.fw-lineup-roster summary{padding:13px 15px;color:var(--accent);font-size:11px;font-weight:650;cursor:pointer}
+.fw-lineup-roster ol{display:grid;grid-template-columns:1fr 1fr;gap:9px 12px;list-style:none;padding:0 15px 15px;margin:0}
+.fw-lineup-roster li{display:flex;gap:7px;align-items:start;min-width:0;color:#d5e1d7;font-size:11px;line-height:1.4}
+.fw-lineup-number{min-width:19px;color:var(--accent);font-weight:700;font-variant-numeric:tabular-nums}
+.fw-player-stats-label{margin:16px 0 13px;color:var(--accent);font-size:10px;letter-spacing:1.15px;font-weight:700}
+@media(max-width:680px){
+  .fw-lineup-title{padding:15px 13px 11px}
+  .fw-lineup-title h4{font-size:16px}
+  .fw-lineup-tabs{gap:5px;padding:0 9px 10px}
+  .fw-lineup-tab{gap:6px;padding:9px 6px}
+  .fw-lineup-tab strong{font-size:10px}
+  .fw-lineup-tab small{font-size:9px}
+  .fw-lineup-tab .crest,.fw-lineup-tab .club-initials{width:24px;height:25px}
+  .fw-lineup-pitch{margin:0 9px;min-height:475px}
+  .fw-pitch-bands{min-height:475px;padding:18px 7px 14px;gap:9px}
+  .fw-pitch-band-label{font-size:8px}
+  .fw-pitch-player-name{font-size:9px}
+  .fw-pitch-shirt{width:37px;height:36px;font-size:11px}
+  .fw-lineup-pitch-footer{margin:12px 11px 0;font-size:10px}
+  .fw-lineup-disclaimer{padding:10px 11px 0}
+  .fw-lineup-roster{margin:10px 9px 13px}
+  .fw-lineup-roster ol{grid-template-columns:1fr}
+  .fw-pitch-circle{width:70px;height:70px}
+}
+@media(max-width:390px){
+  .fw-pitch-shirt{width:32px;height:33px;font-size:10px}
+  .fw-pitch-player-name{font-size:8px}
+  .fw-pitch-bands{padding-left:5px;padding-right:5px}
+}
