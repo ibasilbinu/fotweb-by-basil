@@ -107,12 +107,23 @@ stream is announced. Verified completed matches show Watch replay. Unannounced
 streams have no watch button or placeholder. Postponed and cancelled
 fixtures do not show stream buttons.
 
-## Detailed seven-section FotWeb reports
+## Detailed eight-section FotWeb reports
 
-Every verified completed match receives a seven-section report layout: overview,
-statistics, advanced analytics, tactical analysis, player performance and lineups,
-timeline, and FotWeb Tactical Verdict. Empty fields must appear as unavailable;
-do not fabricate content merely to populate the layout.
+Every verified completed match receives an eight-section report in this order:
+1. Match overview
+2. Lineup (verified starting XIs and schematic formation pitch)
+3. Match statistics
+4. Player stats (individual verified metrics, separately from the lineup)
+5. Match timeline
+6. Tactical analytics (sourced interpretation only)
+7. Advanced analytics
+8. FotWeb Tactical Verdict
+
+Missing fields must appear as unavailable; do not fabricate information merely
+to populate the layout. In the lineup pitch, use only verified player roles,
+formations and names. Do not invent precise on-pitch positions based on squad
+list order. A verified starting XI and individual player statistics are
+separate sections; one may be available when the other is not.
 
 The hourly update should also seek and add permitted, verifiable optional fields
 when official ISL/AIFF/club sources explicitly publish them. Check each new
