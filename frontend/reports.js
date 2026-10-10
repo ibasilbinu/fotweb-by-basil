@@ -98,33 +98,11 @@ function fwLineupPlayerChip(player) {
 }
 /* Only an official ISL match-centre Ground View may authorize a positioned XI.
    Same-match source, published formation, and eleven verified locations required. */
-function fwOfficialISLGroundViewSource(match, info) {
-  const url=safeUrl(info?.positionSourceUrl);
-  const matchUrl=safeUrl(match.matchUrl);
-  if(!url||!matchUrl||!String(info?.formation||'').trim())return '';
-  try {
-    const source=new URL(url),record=new URL(matchUrl);
-    const host=h=>h==='indiansuperleague.com'||h==='www.indiansuperleague.com';
-    const path=p=>/^\/matchcentre\/\d+\/?$/.test(p);
-    const canonical=p=>p.replace(/\/+$/,'');
-    if(!host(source.hostname)||!host(record.hostname)||
-       !path(source.pathname)||!path(record.pathname)||
-       canonical(source.pathname)!==canonical(record.pathname))return '';
-    return url;
-  } catch {return '';}
-}
-function fwLineupPitchPanel(match,side) {
+/* FotWeb uses a confirmed Starting XI list, not a positional pitch diagram. */
+function fwLineupListPanel(match,side) {
   const teamName=side==='home'?match.home:match.away;
   const info=match.lineups?.[side];
   const starters=Array.isArray(info?.starters)?info.starters:[];
-  const diagramComplete=starters.length===11 && starters.every(p=>
-    p.pitchPosition && typeof p.pitchPosition.x==='number' &&
-    typeof p.pitchPosition.y==='number' && Number.isFinite(p.pitchPosition.x) &&
-    Number.isFinite(p.pitchPosition.y) && p.pitchPosition.x>=0 && p.pitchPosition.x<=100 &&
-    p.pitchPosition.y>=0 && p.pitchPosition.y<=100) &&
-    !!fwOfficialISLGroundViewSource(match,info);
-  /* Show only roles already recorded for the same player and team.
-     Broad roles are annotations to the XI list, never pitch coordinates. */
   const verifiedPlayers=Array.isArray(match.players)?match.players:[];
   const fullXI=starters.slice().sort((a,b)=>{
     const aNo=Number.isInteger(a.number)?a.number:Infinity;
@@ -140,53 +118,37 @@ function fwLineupPitchPanel(match,side) {
       (role?'<small class="fw-xi-player-role">'+esc(role)+'</small>':'')+
       '</span></li>';
   }).join('');
-  const verifiedList='<div class="fw-xi-list" aria-label="'+esc(teamName)+' starting players">'+
-    '<h5>Starting XI <span>'+esc(starters.length)+' players</span></h5>'+
-    '<ol>'+fullXI+'</ol></div>';
-  const exactLayout=diagramComplete?
-    '<div class="fw-lineup-pitch fw-lineup-exact" data-side="'+side+'">'+
-    '<div class="fw-pitch-markings" aria-hidden="true"><span class="fw-pitch-centreline"></span>'+
-    '<span class="fw-pitch-circle"></span><span class="fw-pitch-box fw-pitch-box-top"></span>'+
-    '<span class="fw-pitch-box fw-pitch-box-bottom"></span></div>'+
-    '<div class="fw-pitch-exact-players">'+starters.map(p=>
-      '<div class="fw-pitch-exact-slot" style="left:'+p.pitchPosition.x+
-      '%;top:'+p.pitchPosition.y+'%">'+fwLineupPlayerChip(p)+
-      (p.pitchPosition.label?'<span class="fw-pitch-exact-role">'+esc(p.pitchPosition.label)+'</span>':'')+
-      '</div>').join('')+'</div></div>':'';
-  const formation=info?.formation?'<span class="fw-pitch-formation" title="Previously recorded formation; checked against official ISL when updates are available">Recorded formation: '+
-    esc(info.formation)+'</span>':'<span class="fw-lineup-no-formation">Official formation not yet confirmed</span>';
-  const note=diagramComplete?
-    'Starting formation positions reproduced from the official ISL Ground View (not match tracking data).':
-    'Exact player placements are not yet verified from the official ISL Ground View. The recorded starting XI is shown as a list; official lineup updates are checked hourly.';
+  const formation=info?.formation?
+    '<span class="fw-pitch-formation" title="Previously recorded formation; reviewed against official ISL updates">Recorded formation: '+
+    esc(info.formation)+'</span>':
+    '<span class="fw-lineup-no-formation">Official formation not yet confirmed</span>';
   const officialMatchLink=(()=>{
     const url=safeUrl(match.matchUrl);
     if(!url)return '';
-    const parsed=new URL(url);
-    if(!['indiansuperleague.com','www.indiansuperleague.com'].includes(parsed.hostname)||
-      !/^\/matchcentre\/\d+\/?$/.test(parsed.pathname))return '';
-    return '<p class="fw-lineup-external">'+
-      sourceLink(url,'View official ISL lineup')+
-      '<span>On the match centre, choose Team Lineups → Ground View.</span></p>';
+    try {
+      const parsed=new URL(url);
+      if(!['indiansuperleague.com','www.indiansuperleague.com'].includes(parsed.hostname)||
+        !/^\/matchcentre\/\d+\/?$/.test(parsed.pathname))return '';
+      return '<p class="fw-lineup-external">'+
+        sourceLink(url,'View official ISL lineup')+'</p>';
+    } catch {return '';}
   })();
   return '<div class="fw-lineup-panel" id="fw-lineup-panel-'+esc(match.id)+'-'+side+'" '+
     'data-lineup-panel="'+side+'" role="tabpanel" aria-labelledby="fw-lineup-tab-'+
     esc(match.id)+'-'+side+'"'+(side==='away'?' hidden':'')+'>'+
-    (diagramComplete?exactLayout:'')+
     '<div class="fw-lineup-pitch-footer">'+formation+
-    '<span>'+esc(starters.length)+' verified starters</span></div>'+
-    (diagramComplete?
-      '<details class="fw-xi-roster-toggle"><summary>Show full starting XI list</summary>'+
-      verifiedList+'</details>':verifiedList)+
-    '<p class="fw-lineup-disclaimer">'+esc(note)+'</p>'+
-    (diagramComplete?'<p class="fw-lineup-pos-source">'+
-      sourceLink(fwOfficialISLGroundViewSource(match,info),'Official ISL Ground View')+'</p>':'')+
+      '<span>'+esc(starters.length)+' starting players</span></div>'+
+    '<div class="fw-xi-list" aria-label="'+esc(teamName)+' starting players">'+
+      '<h5>Starting XI <span>'+esc(starters.length)+' players</span></h5>'+
+      '<ol>'+fullXI+'</ol></div>'+
+    '<p class="fw-lineup-disclaimer">The starting XI and recorded formation are reviewed against the official ISL match centre as updates become available.</p>'+
     officialMatchLink+'</div>';
 }
-function fwLineupPitch(match) {
+function fwLineupList(match) {
   const home=match.lineups?.home,away=match.lineups?.away;
   const hasHome=Array.isArray(home?.starters)&&home.starters.length;
   const hasAway=Array.isArray(away?.starters)&&away.starters.length;
-  if(!hasHome&&!hasAway) return '';
+  if(!hasHome&&!hasAway)return '';
   const defaultSide=hasHome?'home':'away';
   const tab=side=>{
     const t=seasonData.teams.find(t=>t.name===canonical(side==='home'?match.home:match.away));
@@ -199,23 +161,20 @@ function fwLineupPitch(match) {
       (t?crest(t,'small'):'')+'<span><strong>'+esc(name)+'</strong><small>'+
       esc(info?.formation||'Formation unavailable')+'</small></span></button>';
   };
-  /* Team tabs switch between verified XIs; a pitch appears only with sourced coordinates. */
   let panels='';
-  if(hasHome) panels+=fwLineupPitchPanel(match,'home');
-  if(hasAway) panels+=fwLineupPitchPanel(match,'away').replace(
+  if(hasHome)panels+=fwLineupListPanel(match,'home');
+  if(hasAway)panels+=fwLineupListPanel(match,'away').replace(
     /(<div class="fw-lineup-panel"[^>]*data-lineup-panel="away"[^>]*)( hidden)/,
     (_,open)=>open+(defaultSide==='away'?'':' hidden'));
-  if(!hasHome&&hasAway){
-    panels=panels.replace(/(data-lineup-panel="away"[^>]*)( hidden)/, '$1');
-  }
+  if(!hasHome&&hasAway)panels=panels.replace(/(data-lineup-panel="away"[^>]*)( hidden)/,'$1');
   return '<section class="fw-lineup-shell" aria-label="Starting XI lineups">'+
     '<div class="fw-lineup-title"><div><span class="eyebrow">STARTING XI</span>'+
-    '<h4>Team lineups</h4></div><span class="fw-lineup-title-tag">VERIFIED XI</span></div>'+
+    '<h4>Team lineups</h4></div><span class="fw-lineup-title-tag">LINEUP LIST</span></div>'+
     '<div class="fw-lineup-tabs" role="tablist" aria-label="Choose a team">'+
-    tab('home')+tab('away')+'</div>'+panels+'</section>';
+      tab('home')+tab('away')+'</div>'+panels+'</section>';
 }
 function fwLineup(match) {
-  return fwLineupPitch(match) ||
+  return fwLineupList(match) ||
     fwMissing('Verified starting lineups have not been published for this match.');
 }
 function fwPlayerStats(match) {
