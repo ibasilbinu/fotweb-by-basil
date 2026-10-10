@@ -137,7 +137,7 @@ function fwMatchReport(match) {
   const labels=[['overview','Overview'],['statistics','Statistics'],['advanced','Advanced analytics'],
     ['tactics','Tactical analysis'],['players','Players & lineups'],['timeline','Match timeline'],['verdict','Tactical verdict']];
   const nav='<nav class="fw-report-nav" aria-label="Match report sections">' +
-    labels.map(([key,label])=>'<a href="#'+esc(id+'-'+key)+'">'+esc(label)+'</a>').join('')+'</nav>';
+    labels.map(([key,label])=>'<button type="button" data-report-section="'+esc(id+'-'+key)+'">'+esc(label)+'</button>').join('')+'</nav>';
   const headerBox='<header class="fw-match-hero"><span class="eyebrow">VERIFIED POST-MATCH REPORT</span>' +
     '<p>'+esc(formatDate(match.date))+' · '+esc(match.venue||'Venue unconfirmed')+
     ' · '+esc(match.status)+'</p><div class="fw-match-score"><div>'+shield(homeTeam)+'<strong>'+esc(match.home)+
@@ -161,17 +161,73 @@ function fwMatchReport(match) {
     (match.fotmobUrl?' <span class="fw-link-separator">·</span> '+sourceLink(match.fotmobUrl,'View on FotMob (external)'):'')+
     '</div><p>FotMob data is not scraped or copied. Only approved sources and published, verifiable facts enter this report.</p></footer></article>';
 }
+/* Compact fixtures first; full seven-part analysis opens only on request. */
+function fwMatchFixtureRow(f) {
+  const h=club(f.homeId), a=club(f.awayId), r=f.result;
+  const completed=!!r;
+  const status=completed?'FULL TIME':f.status==='PST'?'POSTPONED':
+    f.status==='CANC'?'CANCELLED':f.needsConfirmation?'DATE TO CONFIRM':
+    istDate(f.kickoff)<today?'AWAITING RESULT':'UPCOMING';
+  const when=(!f.timeUnknown ? formatTime(f.kickoff)+' IST' : 'Time unconfirmed');
+  const meta='<span class="fw-match-list-meta">'+esc(when)+' · '+esc(r?.venue||f.venue||'Venue TBC')+'</span>';
+  const content='<span class="fw-match-list-info"><span class="fw-match-list-status '+(completed?'is-final':'')+'">'+
+    esc(status)+'</span>'+meta+'</span>'+
+    '<span class="fw-match-list-main"><span class="fw-match-list-club">'+crest(h,'small')+
+    '<strong>'+esc(h.name)+'</strong></span><span class="fw-match-list-score">'+
+    (completed?esc(r.homeGoals)+' <em>–</em> '+esc(r.awayGoals):'<em>vs</em>')+
+    '</span><span class="fw-match-list-club fw-match-list-away">'+crest(a,'small')+
+    '<strong>'+esc(a.name)+'</strong></span></span>'+
+    '<span class="fw-match-list-footer">'+(completed?
+      '<span class="fw-match-list-link">View detailed match report <span aria-hidden="true">↗</span></span>':
+      '<span class="fw-match-list-unavailable">'+(f.status==='PST'||f.status==='CANC'?
+        'No match report scheduled':'Report available after a verified final result')+'</span>')+'</span>';
+  if(completed) return '<button type="button" class="fw-match-list-item is-complete" data-report="'+
+    esc(r.id)+'" aria-label="View match report: '+esc(h.name)+' '+esc(r.homeGoals)+
+    ' to '+esc(r.awayGoals)+' '+esc(a.name)+'">'+content+'</button>';
+  return '<div class="fw-match-list-item is-pending">'+content+'</div>';
+}
+function fwMatchDayGroups(fixtures) {
+  if(!fixtures.length) return '';
+  const groups=new Map();
+  fixtures.forEach(f=>{
+    const day=f.result?.date||istDate(f.kickoff);
+    if(!groups.has(day)) groups.set(day,[]);
+    groups.get(day).push(f);
+  });
+  return [...groups].map(([day, matches])=>
+    '<section class="fw-match-day"><div class="fw-match-day-heading"><h3>'+esc(formatDate(day))+
+    '</h3><span>'+matches.length+' '+(matches.length===1?'match':'matches')+'</span></div>'+
+    '<div class="fw-match-day-list">'+matches.map(fwMatchFixtureRow).join('')+'</div></section>'
+  ).join('');
+}
 function buildDetailedReportsPage() {
-  const matches=resultsData.matches.filter(m=>state.team==='all'||canonical(m.home)===club(state.team).name||
-    canonical(m.away)===club(state.team).name).sort((a,b)=>b.date.localeCompare(a.date));
-  const intro=header('Beyond the final score.','Evidence-led match reports, statistics, analysis and a tactical verdict.');
-  if(matches.length) return intro+matches.map(fwMatchReport).join('')+
-    '<p class="fw-report-footnote">Automatic checks run hourly; available details depend on the source and may arrive after the final score.</p>';
-  const sections=['Match overview','Match statistics','Advanced analytics & shot map',
-    'Tactical analysis','Player performance & lineups','Match timeline','FotWeb Tactical Verdict'];
-  return intro+'<div class="fw-report-waiting"><span class="eyebrow">MATCH REPORT ENGINE READY</span>'+
-    '<h2>Waiting for the first verified full-time result.</h2><p>Each completed ISL match will get its own sourced report. New records are checked hourly. Detailed numbers, shot locations and tactical findings appear only when their evidence is available.</p>'+
-    '<div class="fw-report-feature-grid">'+sections.map((s,i)=>'<div><span>0'+(i+1)+'</span><strong>'+esc(s)+
-    '</strong><small>'+esc(i===0?'Final result and factual summary':'Appears as verified information becomes available')+
-    '</small></div>').join('')+'</div></div>';
+  const intro=header('Match reports.','Select a fixture to explore its result, statistics, player performances and tactical analysis.');
+  const selected=state.report && resultsData.matches.find(m=>String(m.id)===String(state.report));
+  if(selected){
+    const label=selected.home+' vs '+selected.away;
+    return intro+'<div class="fw-report-backline"><button type="button" class="fw-report-back" data-report-back="true">'+
+      '<span aria-hidden="true">←</span> All match reports</button>'+
+      '<span class="fw-report-context">'+esc(label)+'</span></div>'+fwMatchReport(selected)+
+      '<div class="fw-report-end"><button type="button" class="fw-report-back" data-report-back="true">← Back to fixtures</button></div>';
+  }
+  const relevant=allFixtures().filter(f=>state.team==='all'||f.homeId===state.team||f.awayId===state.team);
+  const completed=relevant.filter(f=>!!f.result).sort((a,b)=>(b.result?.date||istDate(b.kickoff)).localeCompare(a.result?.date||istDate(a.kickoff))||b.kickoff.localeCompare(a.kickoff));
+  const pending=relevant.filter(f=>!f.result).sort((a,b)=>a.kickoff.localeCompare(b.kickoff));
+  const all=state.reportScope==='all';
+  const controls='<div class="fw-match-browser-toolbar"><div class="fw-report-switch" role="group" aria-label="Match report list filter">'+
+    '<button type="button" data-report-scope="completed" aria-pressed="'+(!all)+'" class="'+(!all?'active':'')+
+    '">Completed <span>'+completed.length+'</span></button>'+
+    '<button type="button" data-report-scope="all" aria-pressed="'+all+'" class="'+(all?'active':'')+
+    '">All fixtures <span>'+relevant.length+'</span></button></div>'+
+    '<p>Each verified result opens a separate report. Use the club selector to filter.</p></div>';
+  const completeSection=completed.length?
+    '<div class="fw-match-browser-title"><h2>Completed matches</h2><span>Latest first</span></div>'+
+    fwMatchDayGroups(completed):
+    '<div class="fw-match-empty"><strong>No verified completed matches in this selection yet.</strong>'+
+    '<p>Match reports are automatically attached when official final results are verified.</p></div>';
+  const futureSection=all?
+    '<div class="fw-match-browser-title"><h2>Awaiting reports</h2><span>'+pending.length+' fixtures</span></div>'+
+    (pending.length?fwMatchDayGroups(pending):'<p class="fw-report-missing">No other fixtures are published in this selection.</p>'):'';
+  return intro+controls+completeSection+futureSection+
+    '<p class="fw-report-footnote fw-match-browser-note">Automatic checks run hourly. Individual report sections depend on published and verified information; some metrics may remain unavailable.</p>';
 }
