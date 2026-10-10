@@ -70,6 +70,16 @@ official fixture IDs from this snapshot; club names should use its canonical
 
 Meaningful official schedule changes can update `data/isl-season.json`: new
 published fixtures, corrected dates/times/venues, postponements and cancellations.
+
+**Confirmed Inter Kashi home venue:** The official ISL match preview published
+10 October 2026 confirms **Shree Shiv Chhatrapati Sports Complex, Balewadi,
+Pune** as Inter Kashi's home ground for the season:
+https://www.indiansuperleague.com/news/all-indian-inter-kashi-face-star-studded-kerala-blasters
+The eight Phase 1 home fixtures (`homeId=2354`) have that sourced venue and
+`sourceNote`. Do not restore `Venue TBC` from an older schedule snapshot; change
+the venue only if a newer official match-specific source confirms a relocation.
+Keep Inter Kashi's away-match venues unchanged.
+
 Never fabricate the unpublished phase. Validate with `season.py`. Retain the
 full known schedule if a source response is empty or incomplete. Change
 `verifiedAt` only when this snapshot changes; do not commit check timestamps.
