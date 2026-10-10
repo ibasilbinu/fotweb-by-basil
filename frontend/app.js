@@ -181,7 +181,54 @@ function navigate(page,changes={}){
   render();
   $('.main-wrap').scrollTo({top:0,behavior:'smooth'});
 }
+/* The possession-vs-shots scatter displays a readable club tooltip.
+   Hover, touch/click and keyboard focus all work; labels use textContent. */
+function bindScatterTooltips(){
+  $$('.ca-scatter-plot').forEach(plot=>{
+    const tooltip=plot.querySelector('.ca-scatter-tooltip');
+    if(!tooltip)return;
+    const club=tooltip.querySelector('[data-ca-tooltip-club]');
+    const shots=tooltip.querySelector('[data-ca-tooltip-shots]');
+    const possession=tooltip.querySelector('[data-ca-tooltip-possession]');
+    const sample=tooltip.querySelector('[data-ca-tooltip-sample]');
+    const show=dot=>{
+      const n=Number(dot.dataset.matches)||0;
+      club.textContent=dot.dataset.club||'Unknown club';
+      shots.textContent='Shots per match: '+(dot.dataset.shots||'Unavailable');
+      possession.textContent='Average possession: '+(dot.dataset.possession||'Unavailable')+'%';
+      sample.textContent='Based on '+n+' verified '+(n===1?'match':'matches');
+      tooltip.hidden=false;
+      const box=plot.getBoundingClientRect();
+      const point=dot.getBoundingClientRect();
+      const center=point.left+point.width/2-box.left;
+      const width=Math.min(246,Math.max(0,box.width-16));
+      const min=width/2+8,max=box.width-min;
+      const x=max>=min?Math.min(max,Math.max(min,center)):box.width/2;
+      const above=point.top-box.top-14;
+      const below=above<100;
+      tooltip.classList.toggle('below',below);
+      tooltip.style.left=x+'px';
+      tooltip.style.top=(below?point.bottom-box.top+12:above)+'px';
+    };
+    const hide=()=>{tooltip.hidden=true;};
+    plot.querySelectorAll('[data-ca-scatter-point]').forEach(dot=>{
+      dot.onpointerenter=()=>show(dot);
+      dot.onpointerleave=()=>{if(document.activeElement!==dot)hide();};
+      dot.onfocus=()=>show(dot);
+      dot.onblur=hide;
+      dot.onclick=e=>{e.stopPropagation();show(dot);};
+      dot.onkeydown=e=>{
+        if(e.key==='Enter'||e.key===' '){e.preventDefault();show(dot);}
+        if(e.key==='Escape')hide();
+      };
+    });
+    plot.onclick=e=>{
+      if(!e.target.closest('[data-ca-scatter-point]'))hide();
+    };
+  });
+}
 function bindPage(){
+  bindScatterTooltips();
   $$('[data-analytics-club]').forEach(el=>el.onclick=()=>{
     navigate('analytics',{analyticsTeam:el.dataset.analyticsClub,
       analyticsCompareA:el.dataset.analyticsClub,analyticsCompareB:''});
