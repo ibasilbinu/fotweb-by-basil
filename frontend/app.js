@@ -46,10 +46,7 @@ function fixtureCard(f,compact=false) {
     (f.sourceNote?'<p class="chart-desc">'+esc(f.sourceNote)+'</p>':'')+
     '<div class="fixture-actions">'+sourceLink(r?.sources?.[0]?.url||f.sourceUrl,'Source')+
     (r?'<button type="button" class="text-button fw-fixture-detail-button" data-fixture-detail="'+
-    esc(f.id)+'">Open match report ↗</button>':'')+
-    (!r&&f.status==='NS'&&!f.timeUnknown&&!f.needsConfirmation?
-      '<button type="button" class="text-button" data-calendar="'+esc(f.id)+
-      '">Add to calendar ↓</button>':'')+'</div>'+fixtureWatch(f)+'</article>';
+    esc(f.id)+'">Open match report ↗</button>':'')+'</div>'+fixtureWatch(f)+'</article>';
 }
 function tableMarkup(limit){const rows=tableRows(),active=rows.some(t=>t.mp>0);return `<div class="table-wrap"><table><thead><tr><th>#</th><th>CLUB</th><th>MP</th><th>W</th><th>D</th><th>L</th><th>GF</th><th>GA</th><th>GD</th><th>PTS</th></tr></thead><tbody>${rows.slice(0,limit||rows.length).map((t,i)=>`<tr class="click-row ${state.team===t.id?'selected':''}" data-team="${esc(t.id)}"><td>${active?i+1:'—'}</td><td class="team-cell">${crest(t,'small')}${esc(t.name)}</td><td>${t.mp}</td><td>${t.w}</td><td>${t.d}</td><td>${t.l}</td><td>${t.gf}</td><td>${t.ga}</td><td>${t.gf-t.ga}</td><td class="pts">${t.pts}</td></tr>`).join('')}</tbody></table></div>`;}
 /* Overview-only selection: it does not modify the team dashboard,
@@ -316,9 +313,6 @@ $$('[data-report]').forEach(el=>el.onclick=()=>openFixtureDetail(el.dataset.repo
   $$('[data-lineup-panel]').forEach(panel=>{
     panel.hidden=panel.dataset.lineupPanel!==side;
   });
-});$$('[data-calendar]').forEach(el=>el.onclick=()=>exportCalendar(allFixtures().find(f=>f.id===el.dataset.calendar)));if($('#statusFilter'))$('#statusFilter').onchange=e=>{state.status=e.target.value;render();};if($('#monthFilter'))$('#monthFilter').onchange=e=>{state.month=e.target.value;render();};if($('#fixtureClubFilter'))$('#fixtureClubFilter').onchange=e=>{state.fixtureClub=e.target.value;render();};}
-function toast(text){$('#toast').textContent=text;$('#toast').style.display='block';clearTimeout(toast.timer);toast.timer=setTimeout(()=>$('#toast').style.display='none',3000);}
-function download(text,name,type){const url=URL.createObjectURL(new Blob([text],{type})),a=document.createElement('a');a.href=url;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}
-function exportCalendar(f){if(!f)return;const utc=d=>new Date(d).toISOString().replace(/[-:]/g,'').replace(/\.\d{3}Z/,'Z'),value=s=>String(s).replace(/\\/g,'\\\\').replace(/\n/g,'\\n').replace(/[,;]/g,c=>'\\'+c);const lines=['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//FotWeb by Basil//ISL 2026-27//EN','BEGIN:VEVENT','UID:isl-'+f.id+'@fotweb.streamlit.app','DTSTAMP:'+utc(Date.now()),'DTSTART:'+utc(f.kickoff),'SUMMARY:'+value(club(f.homeId).name+' vs '+club(f.awayId).name),'LOCATION:'+value(f.venue||'Venue TBC'),'DESCRIPTION:'+value('Published ISL fixture. Confirm changes at '+f.sourceUrl),'URL:'+f.sourceUrl,'END:VEVENT','END:VCALENDAR'];download(lines.join('\r\n')+'\r\n','isl-'+f.id+'.ics','text/calendar');toast('Calendar fixture downloaded');}
+});if($('#statusFilter'))$('#statusFilter').onchange=e=>{state.status=e.target.value;render();};if($('#monthFilter'))$('#monthFilter').onchange=e=>{state.month=e.target.value;render();};if($('#fixtureClubFilter'))$('#fixtureClubFilter').onchange=e=>{state.fixtureClub=e.target.value;render();};}
 window.receiveSeasonData=args=>{if(!args?.season_data)return;seasonData=args.season_data;resultsData=args.post_match_data||{matches:[],updatedAt:null};today=args.today||istDate(new Date().toISOString());render();};
 $('#pageBack').onclick=returnToPreviousPage;$('#pageHome').onclick=()=>navigate('overview');$('#menu').onclick=()=>$('#sidebar').classList.toggle('open');$('#sidebarBackdrop').onclick=()=>$('#sidebar').classList.remove('open');$('#methodology').onclick=()=>$('#dataDialog').showModal();$('#closeDialog').onclick=()=>$('#dataDialog').close();document.addEventListener('keydown',e=>{if(e.key==='Escape')$('#sidebar').classList.remove('open');});window.addEventListener('hashchange',()=>{const requested=location.hash.slice(1)||'overview';if(state.page!==requested||state.fixture)rememberNavigation();state.fixture='';state.page=requested;render();});
