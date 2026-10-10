@@ -128,9 +128,21 @@ Optional record fields:
   `interceptions`, `clearances`, `saves`, where published.
 - `events`: array of `{ "minute": 40, "side": "home", "type": "goal",
   "player": "Verified player name" }` objects. Supported types: goal,
-  penalty_goal, own_goal, penalty_missed, yellow_card, red_card, substitution,
-  var, other. Optional `addedMinute`, `playerIn`, `playerOut`, `assist`,
-  `detail`. Do not guess event timing.
+  penalty_goal, own_goal, penalty_missed, yellow_card, red_card,
+  second_yellow_red, substitution, var, other. Optional `addedMinute`,
+  `playerIn`, `playerOut`, `assist`, `detail`. Do not guess event timing.
+- For **future completed match reports**, include a verified sending-off as one
+  event with the player's name, side, and exact minute (plus `addedMinute`
+  when documented). Use `red_card` for a directly awarded red card and
+  `second_yellow_red` only when an official/reliable source confirms the
+  dismissal was for a **second yellow card**. Keep independently verified
+  `yellow_card` incidents as their own events, but do not additionally record
+  the same dismissal as another `red_card` (avoid duplicate sendings-off).
+  This lets the website show a single red symbol, or a yellow card peeking
+  out on the left behind a red card, below the match scoreline.
+  If only a team-level red-card total is known, do not invent a player,
+  dismissal type, or minute. The result can still be published without a
+  personalized card event.
 - `lineups.home` / `lineups.away`: optional `formation`, `starters`
   array of player objects with `name` and optional numeric `number`.
 - `players`: array with `name`, `side`, and optional `position`, `goals`,
