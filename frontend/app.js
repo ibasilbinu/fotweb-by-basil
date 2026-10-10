@@ -140,8 +140,8 @@ function bindPage(){
   analyticInputs.forEach(([selector,field])=>{
     const input=$(selector);
     if(input)input.onchange=e=>{state[field]=e.target.value;render();};
-  });$$('[data-page]').forEach(el=>el.onclick=e=>{e.preventDefault();navigate(el.dataset.page);});$('[data-team]').forEach(el=>el.onclick=()=>{state.team=el.dataset.team;navigate('team');});
-  $('[data-fixture-open]').forEach(el=>{
+  });$$('[data-page]').forEach(el=>el.onclick=e=>{e.preventDefault();navigate(el.dataset.page);});$$('[data-team]').forEach(el=>el.onclick=()=>{state.team=el.dataset.team;navigate('team');});
+  $$('[data-fixture-open]').forEach(el=>{
     el.onclick=e=>{
       if(e.target.closest('button,a,select,input,[data-team]'))return;
       openFixtureDetail(el.dataset.fixtureOpen);
@@ -152,9 +152,9 @@ function bindPage(){
       openFixtureDetail(el.dataset.fixtureOpen);
     };
   });
-  $('[data-fixture-detail]').forEach(el=>el.onclick=()=>openFixtureDetail(el.dataset.fixtureDetail));
-  $('[data-fixture-back]').forEach(el=>el.onclick=backToFixtures);
-$('[data-report]').forEach(el=>el.onclick=()=>openFixtureDetail(el.dataset.report));$$('[data-report-section]').forEach(el=>el.onclick=()=>document.getElementById(el.dataset.reportSection)?.scrollIntoView({behavior:'smooth',block:'start'}));$$('[data-lineup-side]').forEach(el=>el.onclick=()=>{
+  $$('[data-fixture-detail]').forEach(el=>el.onclick=()=>openFixtureDetail(el.dataset.fixtureDetail));
+  $$('[data-fixture-back]').forEach(el=>el.onclick=backToFixtures);
+$$('[data-report]').forEach(el=>el.onclick=()=>openFixtureDetail(el.dataset.report));$$('[data-report-section]').forEach(el=>el.onclick=()=>document.getElementById(el.dataset.reportSection)?.scrollIntoView({behavior:'smooth',block:'start'}));$$('[data-lineup-side]').forEach(el=>el.onclick=()=>{
   if(el.disabled)return;
   const side=el.dataset.lineupSide;
   $$('[data-lineup-side]').forEach(button=>{
