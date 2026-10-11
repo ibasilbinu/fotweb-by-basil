@@ -104,15 +104,28 @@ These links are separate from the fixture’s match-details interaction.
 
 ## Data sources and updates
 
-The website reads JSON snapshots committed to this repository. The configured
-ChatGPT task **FotWeb post-match updates** checks hourly for verified results,
-fixture changes, official English stream links and published squad/coach updates,
-following [POST_MATCH_UPDATES.md](POST_MATCH_UPDATES.md). It commits updates to
-`main`, which Streamlit picks up automatically.
+The website reads validated JSON snapshots committed to this repository.
+**GitHub Actions now imports official match data directly**, without relying on
+ChatGPT to publish each result:
 
-This is a **ChatGPT Tasks updater**, not a GitHub Actions workflow or a live-score
-feed. Checks, official publication and deployment can be delayed. Refresh the
-website to load the latest committed data. No API key is required to run the app.
+- Hourly checks are scheduled on the hour in IST (UTC minute 30).
+- Match checks run every ten minutes from 15:30 through 23:20 IST, with an
+  explicit 19:10 IST check for 17:00 kickoffs. GitHub may delay scheduled jobs.
+- Official match IDs, club IDs, season and date must match before importing
+  confirmed starting XIs, completed league results, published statistics,
+  individual player totals and named goal/card/substitution events.
+- Short factual reports are generated from verified scores. Unsupported xG,
+  spatial data and speculative tactical conclusions are not generated.
+- Hourly YouTube checks verify official channel identity, fixture, broadcast
+  start time and English-language evidence. Inaccessible sources preserve links
+  and are recorded as partial checks.
+- Commits use GitHub's repository token, validate all changed snapshots and
+  retry from fresh source when the branch changes. Streamlit loads main.
+
+Automatic fixture rescheduling and squad discovery are not implemented in this
+importer; existing snapshots and any separate ChatGPT checks remain in place.
+Run the hourly workflow manually from the repository's Actions tab for an
+immediate check. No personal access token or API key is required.
 
 **Sources & methodology** displays a single **Last updated: date, time IST** line
 from the most recently recorded source check. A completed check can update that
@@ -147,7 +160,7 @@ frontend. No frontend build step is required.
 | `data/isl-results.json` | Verified completed-match records, source links and available statistics. |
 | `data/isl-squads.json` | Official club squad and head-coach snapshots. |
 | `data/update-log.json` | Recorded source checks used by the Last updated display. |
-| `season.py`, `postmatch.py`, `squads.py`, `update_log.py` | Data-loading and validation contracts. |
+| `automated_update.py`, `stream_update.py` | Official match and English-stream importers used by Actions. |\n| `season.py`, `postmatch.py`, `squads.py`, `update_log.py` | Data-loading and validation contracts. |
 | `POST_MATCH_UPDATES.md` | Source-verification and scheduled-update rules. |
 | `requirements.txt` | Python dependencies. |
 
