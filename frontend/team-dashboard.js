@@ -347,3 +347,69 @@ function tdBindFormTooltips(){
     plot.onclick=e=>{if(!e.target.closest('[data-td-form-point]'))hide();};
   });
 }
+
+function tdSeasonFormPanel(){
+  const series=seasonData.teams.map((team,i)=>({team,color:caColors[i%caColors.length],
+    rows:tdFormRows(resultsData.matches||[],team.name)}));
+  const maxGames=Math.max(0,...series.map(s=>s.rows.length));
+  const W=820,H=290,L=50,R=28,T=30,B=54,plotW=W-L-R,plotH=H-T-B;
+  const x=number=>maxGames===1?L+plotW/2:L+(number-1)*plotW/(maxGames-1);
+  const y=points=>T+(3-points)*plotH/3;
+  let grid='',paths='';
+  if(maxGames){
+    for(let points=0;points<=3;points++)grid+='<line x1="'+L+'" y1="'+y(points)+'" x2="'+(W-R)+'" y2="'+y(points)+'" class="td-form-gridline"/>'+
+      '<text x="'+(L-15)+'" y="'+(y(points)+4)+'" text-anchor="end" class="td-form-axis">'+points+'</text>';
+    const step=Math.max(1,Math.ceil(maxGames/14));
+    for(let number=1;number<=maxGames;number++)if((number-1)%step===0||number===maxGames)
+      grid+='<text x="'+x(number)+'" y="'+(H-B+23)+'" text-anchor="middle" class="td-form-axis">M'+number+'</text>';
+    paths=series.map(s=>{
+      if(!s.rows.length)return '';
+      const line=s.rows.length>1?'<polyline points="'+s.rows.map(r=>x(r.index)+','+y(r.points)).join(' ')+'" class="td-form-line" style="stroke:'+s.color+'"/>':'';
+      const dots=s.rows.map(row=>{
+        const title=s.team.name+' · M'+row.index+' · '+row.result+' · '+row.points+' points';
+        const detail=row.date+' · '+row.venue;
+        const description=title+' · '+detail+' vs '+row.opponent+' · '+row.score;
+        return '<circle cx="'+x(row.index)+'" cy="'+y(row.points)+'" r="6" class="td-form-dot" style="fill:'+s.color+'" tabindex="0" role="button" data-td-form-point'+
+          ' data-form-title="'+esc(title)+'" data-form-opponent="'+esc(row.opponent)+'" data-form-date="'+esc(detail)+'" data-form-score="'+esc(row.score)+'" aria-label="'+esc(description)+'"><title>'+esc(description)+'</title></circle>';
+      }).join('');
+      return '<g data-season-form-series="'+esc(s.team.id)+'">'+line+dots+'</g>';
+    }).join('');
+  }
+  const legend='<div class="td-season-form-legend" aria-label="Focus a club’s form">'+
+    '<button type="button" data-season-form-club="all" aria-pressed="true">All clubs</button>'+
+    series.map(s=>'<button type="button" data-season-form-club="'+esc(s.team.id)+'" aria-pressed="false" '+(!s.rows.length?'disabled':'')+'>'+
+      '<span class="td-season-form-swatch" style="background:'+s.color+'"></span>'+esc(s.team.name)+
+      (!s.rows.length?' <small>No matches yet</small>':'')+'</button>').join('')+'</div>';
+  return '<section class="td-panel td-season-form"><div class="td-panel-title"><h2>Club form · All teams</h2>'+
+    '<small>Points per match · Win 3 · Draw 1 · Loss 0</small></div>'+
+    (maxGames?'<p class="td-form-caption">'+series.filter(s=>s.rows.length).length+' of '+series.length+' clubs have verified results. Select a club below to focus its line and inspect overlapping points.</p>'+
+      '<div class="td-form-chart"><div class="td-form-scroll"><svg viewBox="0 0 '+W+' '+H+'" role="group" aria-label="All clubs’ points earned per completed league match">'+
+      '<text x="'+L+'" y="15" class="td-form-axis">Points</text>'+grid+paths+
+      '<text x="'+(L+plotW/2)+'" y="'+(H-8)+'" text-anchor="middle" class="td-form-axis">Each club’s completed league match number</text></svg></div>'+
+      '<div class="td-form-tooltip" role="status" aria-live="polite" hidden><strong data-form-tip-title></strong><span data-form-tip-opponent></span><span data-form-tip-date></span><span data-form-tip-score></span></div></div>':
+      '<p class="report-note">Club form will appear as completed league results are verified.</p>')+
+    legend+'<p class="td-explainer">Each colour represents one club. M1 is that club’s first completed match, M2 its second, and so on. Points earned in each match are shown; clubs without completed matches are listed without a line. Hover, tap or focus a point for match details.</p></section>';
+}
+function tdBindSeasonFormLegend(){
+  $$('.td-season-form').forEach(panel=>{
+    const buttons=[...panel.querySelectorAll('[data-season-form-club]')];
+    const groups=[...panel.querySelectorAll('[data-season-form-series]')];
+    buttons.forEach(button=>button.onclick=()=>{
+      const selected=button.dataset.seasonFormClub;
+      const tip=panel.querySelector('.td-form-tooltip');if(tip)tip.hidden=true;
+      buttons.forEach(b=>b.setAttribute('aria-pressed',String(b===button)));
+      groups.forEach(group=>{
+        const dim=selected!=='all'&&group.dataset.seasonFormSeries!==selected;
+        group.classList.toggle('is-muted',dim);
+        group.querySelectorAll('[data-td-form-point]').forEach(dot=>{
+          dot.setAttribute('tabindex',dim?'-1':'0');
+          dot.setAttribute('aria-hidden',String(dim));
+        });
+      });
+      if(selected!=='all'){
+        const chosen=groups.find(g=>g.dataset.seasonFormSeries===selected);
+        if(chosen)chosen.parentNode.appendChild(chosen);
+      }
+    });
+  });
+}
