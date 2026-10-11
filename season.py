@@ -119,7 +119,15 @@ def validate_season(data):
             require(broadcast.get("channelUrl") == "https://www.youtube.com/@IndianSuperLeague", "Invalid official channel")
             require(isinstance(broadcast.get("url"), str) and re.fullmatch(r"https://www\.youtube\.com/live/[A-Za-z0-9_-]{11}", broadcast["url"]), "Invalid YouTube live URL")
             title = broadcast.get("title")
-            require(isinstance(title, str) and 0 < len(title) <= 300 and re.search(r"\b(?:English|ENG)\b", title, re.I), "Broadcast must specify English")
+            require(isinstance(title, str) and 0 < len(title) <= 300, "Invalid broadcast title")
+            # The official ISL channel often leaves its default English stream
+            # unlabelled, while alternate Hindi streams say Hindi in the title.
+            # Never accept an explicitly non-English or vertical feed.
+            require(not re.search(r"\b(?:Hindi|HIN|Malayalam|Tamil|Bangla|Bengali|Marathi|Vertical|Shorts)\b|हिंदी|हिन्दी", title, re.I),
+                    "Not an English-language broadcast")
+            if not re.search(r"\b(?:English|ENG)\b", title, re.I):
+                require(broadcast.get("languageEvidence") == "official-default-unlabelled",
+                        "Unlabelled English broadcast needs documented official-default provenance")
             require(broadcast.get("status") in ("scheduled", "live", "ended"), "Invalid broadcast status")
             require(datetime.fromisoformat(broadcast["verifiedAt"].replace("Z", "+00:00")).tzinfo is not None, "Broadcast timestamp needs timezone")
     return data
