@@ -24,6 +24,9 @@ Live site: https://fotweb.streamlit.app/
   assists, recorded goal contributions, yellow cards and red cards. Players'
   clubs and published-stat coverage are shown, with no invented totals.
 - Club dashboards with their schedule, results and any sourced match statistics.
+- Team Dashboard has a chronological form line graph showing points earned per
+  completed league match (win 3, draw 1, loss 0), with match details. It updates
+  from verified results, showing an empty state before the first match.
 - Team Dashboard shows official squad lists grouped by position, player portraits
   with silhouette fallbacks, shirt numbers when published and the head coach.
   Each club includes the source link and squad verification time.
