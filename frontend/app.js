@@ -2,7 +2,7 @@
 const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const pages=[['overview','Season overview','M3 18V7m6 11V3m6 15v-8m6 8H1'],['fixtures','Fixtures & results','M3 4h18v16H3zM3 9h18M7 2v4m10-4v4'],['standings','Points table','M3 6h18M3 12h18M3 18h18M8 3v18'],['clubs','Clubs this season','M3 3h7v7H3zM14 3h7v7h-7zM3 14h7v7H3zM14 14h7v7h-7z'],['team','Team dashboard','M3 3h18v18H3zM3 9h18M9 9v12'],['analytics','Club analytics','M3 18h18M3 12h18M3 6h18M7 15l4-5 3 2 4-7'],['creator',"Creator's Corner",'M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8M4 21v-2a8 8 0 0 1 16 0v2']];
-const state={page:location.hash.slice(1)||'overview',team:'all',teamSection:'summary',overviewSection:'summary',status:'all',month:'all',fixtureClub:'all',report:'',fixture:'',analyticsTeam:'',analyticsFormClubs:[],analyticsMetric:'points',analyticsCompareA:'',analyticsCompareB:''};
+const state={page:location.hash.slice(1)||'overview',team:'all',teamSection:'summary',overviewSection:'summary',reportSection:'overview',status:'all',month:'all',fixtureClub:'all',report:'',fixture:'',analyticsTeam:'',analyticsFormClubs:[],analyticsMetric:'points',analyticsCompareA:'',analyticsCompareB:''};
 let squadData={teams:[]};
 let seasonData=null,resultsData={schemaVersion:1,season:'2026-27',updatedAt:null,matches:[]},today='';
 let updateLog={schemaVersion:1,season:'2026-27',checks:[]};
@@ -126,6 +126,7 @@ function openFixtureDetail(id) {
   const f=allFixtures().find(item=>String(item.id)===String(id));
   if(!f)return;
   if(state.page!=='fixtures'||String(state.fixture)!==String(f.id))rememberNavigation();
+  if(String(state.fixture)!==String(f.id))state.reportSection='overview';
   state.fixture=String(f.id);
   state.page='fixtures';
   history.replaceState(null,'','#fixtures');
@@ -403,6 +404,12 @@ function bindPage(){
     rememberNavigation();state.teamSection=e.target.value;render();
     $('#tdSectionFilter')?.focus({preventScroll:true});
   };
+  const reportSectionFilter=$('#fwReportSectionFilter');
+  if(reportSectionFilter)reportSectionFilter.onchange=e=>{
+    if(!['overview','lineup','statistics','players','timeline','tactics','advanced','verdict'].includes(e.target.value))return;
+    rememberNavigation();state.reportSection=e.target.value;render();
+    $('#fwReportSectionFilter')?.focus({preventScroll:true});
+  };
   const teamClubFilter=$('#tdClubFilter');
   if(teamClubFilter)teamClubFilter.onchange=e=>navigate('team',{team:e.target.value});
   $$('[data-analytics-club]').forEach(el=>el.onclick=()=>{
@@ -429,7 +436,7 @@ function bindPage(){
     };
   });
   $$('[data-fixture-detail]').forEach(el=>el.onclick=()=>openFixtureDetail(el.dataset.fixtureDetail));
-$$('[data-report]').forEach(el=>el.onclick=()=>openFixtureDetail(el.dataset.report));$$('[data-report-section]').forEach(el=>el.onclick=()=>document.getElementById(el.dataset.reportSection)?.scrollIntoView({behavior:'smooth',block:'start'}));$$('[data-lineup-side]').forEach(el=>el.onclick=()=>{
+$$('[data-report]').forEach(el=>el.onclick=()=>openFixtureDetail(el.dataset.report));$$('[data-lineup-side]').forEach(el=>el.onclick=()=>{
   if(el.disabled)return;
   const side=el.dataset.lineupSide;
   $$('[data-lineup-side]').forEach(button=>{
