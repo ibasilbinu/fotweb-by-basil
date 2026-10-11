@@ -1,0 +1,41 @@
+name: FotWeb post-match source checks
+on:
+  schedule:
+    - cron: '0 15 * * *'
+    - cron: '30 17 * * *'
+  workflow_dispatch:
+    inputs:
+      check_kind:
+        description: "Post-match check"
+        type: choice
+        options:
+          - post-match-early
+          - post-match-late
+        default: post-match-early
+permissions:
+  contents: write
+concurrency:
+  group: fotweb-hourly-checks
+  cancel-in-progress: false
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Check post-match official sources
+        env:
+          CHECK_KIND: ${{ github.event_name == 'workflow_dispatch' && inputs.check_kind || 'post-match-early' }}
+        run: python hourly_check.py "$CHECK_KIND"
+      - name: Publish check log
+        run: |
+          git config user.name "fotweb-update-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/update-log.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Log post-match source check"
+            git pull --rebase
+            git push
+          fi
