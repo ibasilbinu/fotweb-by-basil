@@ -16,7 +16,7 @@ EVENT_STATS = {'shots':'shots','shots_on_target':'shotsOnTarget','corner_kicks':
 TOUCH_STATS = {'total_passes':'passes','pass_accuracy_percentage':'passAccuracy','tackles':'tackles','interceptions':'interceptions','clearance':'clearances','saves':'saves'}
 
 def extract_match(document):
-    for encoded in re.findall(r'=["\'](%7[Bb].*?)["\']', document):
+    for _, encoded in re.findall(r'''=(["'])(%7[Bb].*?)\1''', document):
         try:
             data = json.loads(unquote(html.unescape(encoded)))
         except (ValueError, TypeError):
@@ -98,15 +98,16 @@ def main():
     names = {t['id']:t['name'] for t in season['teams']}
     known = {m['id']:m for m in results['matches']}
     changed = 0
-    links, failures = [], []
+    links, failures, pending = [], [], []
     for f in season['fixtures']:
         delta = datetime.fromisoformat(f['kickoff']).astimezone(timezone.utc)-now
-        if not -timedelta(days=3) <= delta <= timedelta(hours=3): continue
+        if delta > timedelta(hours=3) or (delta < -timedelta(days=3) and f['id'] in known): continue
         url = 'https://www.indiansuperleague.com/matchcentre/'+f['id']
         try:
             with urlopen(Request(url,headers={'User-Agent':'Mozilla/5.0 FotWeb/1.0'}),timeout=30) as response:
                 document = response.read(4_000_000).decode('utf-8')
             match,xis = convert(extract_match(document),f,names,stamp)
+            if not match and delta < -timedelta(hours=2): pending.append(f['id'])
             links.append({'label':(names[f['homeId']]+' vs '+names[f['awayId']])[:80],'url':url})
             if match:
                 old = known.get(f['id'],{})
@@ -143,13 +144,14 @@ def main():
             failures.append('YouTube: '+str(exc)[:100])
     results['matches'] = list(known.values())
     if changed: results['updatedAt'] = stamp
-    summary = f"Official match import: {len(links)} checked, {changed} updates, {len(failures)} failures. Squad and schedule discovery not covered. Streams checked hourly only."
-    log['checks'] = [{'checkedAt':datetime.now(timezone.utc).isoformat(),'kind':kind,'outcome':'partial','summary':summary,'links':links[:8]}]+log['checks'][:335]
+    summary = f"Official match import: {len(links)} checked, {changed} updates, {len(failures)} failures, {len(pending)} awaiting FT (retried on subsequent runs). Squad and schedule discovery not covered. Streams checked hourly only."
+    log['checks'] = [{'checkedAt':datetime.now(timezone.utc).isoformat(),'kind':kind,'outcome':('error' if failures and not links else 'partial' if failures or pending else 'updated' if changed else 'no-change'),'summary':summary,'links':links[:8]}]+log['checks'][:335]
     validate_results(results); validate_season(season); validate_update_log(log)
     for name,value in [('isl-season',season),('isl-results',results),('update-log',log)]:
         (ROOT/('data/'+name+'.json')).write_text(json.dumps(value,indent=2,ensure_ascii=False)+'\n')
     print(summary)
     for failure in failures: print('WARNING:',failure)
+    for match_id in pending: print('PENDING FT:',match_id)
     if failures and not links: raise SystemExit(1)
 
 if __name__ == '__main__': main()
