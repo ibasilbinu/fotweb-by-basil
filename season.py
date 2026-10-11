@@ -93,6 +93,25 @@ def validate_season(data):
                                     "Invalid published player role")
                 require("formation" in info or "starters" in info,
                         "Pre-match team lineup must contain a formation or starting XI")
+        # A creator-submitted English stream may appear with its verification
+        # provenance clearly disclosed. Only independent YouTube metadata
+        # verification can promote it to the official broadcast record.
+        candidate = f.get("streamCandidate")
+        if candidate is not None:
+            require(isinstance(candidate, dict) and
+                    set(candidate) == {"url", "source", "language", "languageEvidence", "status", "recordedAt"},
+                    "Invalid viewer-supplied stream record")
+            require(candidate["source"] == "viewer-submitted" and
+                    candidate["language"] == "English" and
+                    candidate["languageEvidence"] == "viewer-confirmed",
+                    "Unverified stream must disclose provenance")
+            require(candidate["status"] == "scheduled", "Invalid pending stream status")
+            require(isinstance(candidate["url"], str) and
+                    re.fullmatch(r"https://www\.youtube\.com/live/[A-Za-z0-9_-]{11}", candidate["url"]),
+                    "Invalid viewer-supplied stream URL")
+            require(isinstance(candidate["recordedAt"], str) and
+                    datetime.fromisoformat(candidate["recordedAt"].replace("Z", "+00:00")).tzinfo is not None,
+                    "Pending stream timestamp requires timezone")
         broadcast = f.get("broadcast")
         if broadcast is not None:
             require(isinstance(broadcast, dict), "Invalid broadcast")
