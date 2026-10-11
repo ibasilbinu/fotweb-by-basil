@@ -22,7 +22,27 @@ function stat(label,value,sub,icon='↗'){return `<div class="stat"><span class=
 function card(title,body,tag=''){return `<section class="card"><div class="card-head"><h3><span class="dot"></span>${title}</h3>${tag?`<span class="tag">${tag}</span>`:''}</div><div class="card-body">${body}</div></section>`;}
 function empty(title,text){return card(esc(title),`<p class="report-note">${esc(text)}</p>`,'AWAITING DATA');}
 function officialStreamUrl(b){if(!b||b.language!=='English'||b.channelUrl!=='https://www.youtube.com/@IndianSuperLeague')return '';const u=safeUrl(b.url);if(!u)return '';const p=new URL(u);return p.hostname==='www.youtube.com'&&/^\/live\/[A-Za-z0-9_-]{11}$/.test(p.pathname)&&!p.search&&!p.hash?u:'';}
-function fixtureWatch(f){const u=officialStreamUrl(f.broadcast);if(f.status==='PST'||f.status==='CANC')return '';if(!u)return '';const ended=!!f.result||f.broadcast.status==='ended';return `<div class="fixture-watch"><a class="watch-live" href="${esc(u)}" target="_blank" rel="noopener noreferrer" aria-label="${ended?'Watch replay':'Watch live'}: ${esc(club(f.homeId).name)} vs ${esc(club(f.awayId).name)} — English commentary"><span aria-hidden="true">▶</span> ${ended?'Watch replay':'Watch live'} <span aria-hidden="true">↗</span></a><span class="stream-note">Official ISL YouTube · English${!ended&&f.broadcast.status==='scheduled'?' · Scheduled stream':''}</span></div>`;}
+function streamCandidateUrl(s){
+  if(!s||s.source!=='viewer-submitted'||s.status!=='scheduled')return '';
+  const u=safeUrl(s.url);
+  if(!u)return '';
+  const p=new URL(u);
+  return p.hostname==='www.youtube.com'&&/^\/live\/[A-Za-z0-9_-]{11}$/.test(p.pathname)&&!p.search&&!p.hash?u:'';
+}
+function fixtureWatch(f){
+  if(f.status==='PST'||f.status==='CANC')return '';
+  const verified=officialStreamUrl(f.broadcast);
+  const candidate=verified?'':streamCandidateUrl(f.streamCandidate);
+  const u=verified||candidate;
+  if(!u)return '';
+  const ended=!!f.result||f.broadcast?.status==='ended';
+  const label=verified?(ended?'Watch replay':'Watch live'):
+    (ended?'Open shared stream':'View scheduled stream');
+  const explanation=verified?
+    'Official ISL YouTube · English'+(!ended&&f.broadcast.status==='scheduled'?' · Scheduled stream':''):
+    'Viewer-shared match link · Commentary language not independently verified';
+  return `<div class="fixture-watch"><a class="watch-live" href="${esc(u)}" target="_blank" rel="noopener noreferrer" aria-label="${esc(label)}: ${esc(club(f.homeId).name)} vs ${esc(club(f.awayId).name)}${verified?' — English commentary':''}"><span aria-hidden="true">▶</span> ${esc(label)} <span aria-hidden="true">↗</span></a><span class="stream-note">${esc(explanation)}</span></div>`;
+}
 /* The entire fixture card opens match details, while source/watch/calendar
    links remain independently interactive and keep their existing behavior. */
 function fixtureCard(f,compact=false) {
@@ -124,7 +144,7 @@ function fwUpcomingFixtureDetails(f) {
     '<div class="fw-fixture-preview-links">'+
     sourceLink(official,'Official fixture source')+
     (safeCentre?sourceLink(info.sourceUrl||safeCentre,'Official ISL match centre'):'')+'</div>'+
-    (f.broadcast&&officialStreamUrl(f.broadcast)?fixtureWatch(f):'')+
+    fixtureWatch(f)+
     '</div></article>';
 }
 function fwFixtureDetails(f) {
