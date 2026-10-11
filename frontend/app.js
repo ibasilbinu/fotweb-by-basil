@@ -2,7 +2,7 @@
 const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const pages=[['overview','Season overview','M3 18V7m6 11V3m6 15v-8m6 8H1'],['fixtures','Fixtures & results','M3 4h18v16H3zM3 9h18M7 2v4m10-4v4'],['standings','Points table','M3 6h18M3 12h18M3 18h18M8 3v18'],['clubs','Clubs this season','M3 3h7v7H3zM14 3h7v7h-7zM3 14h7v7H3zM14 14h7v7h-7z'],['team','Team dashboard','M3 3h18v18H3zM3 9h18M9 9v12'],['analytics','Club analytics','M3 18h18M3 12h18M3 6h18M7 15l4-5 3 2 4-7'],['creator',"Creator's Corner",'M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8M4 21v-2a8 8 0 0 1 16 0v2']];
-const state={page:location.hash.slice(1)||'overview',team:'all',status:'all',month:'all',fixtureClub:'all',report:'',fixture:'',analyticsTeam:'',analyticsMetric:'points',analyticsCompareA:'',analyticsCompareB:''};
+const state={page:location.hash.slice(1)||'overview',team:'all',teamSection:'summary',overviewSection:'summary',status:'all',month:'all',fixtureClub:'all',report:'',fixture:'',analyticsTeam:'',analyticsMetric:'points',analyticsCompareA:'',analyticsCompareB:''};
 let squadData={teams:[]};
 let seasonData=null,resultsData={schemaVersion:1,season:'2026-27',updatedAt:null,matches:[]},today='';
 let updateLog={schemaVersion:1,season:'2026-27',checks:[]};
@@ -97,7 +97,32 @@ function overviewSeasonTotals(){
     stat('TOTAL RED CARDS THIS SEASON',red.value,coverage(red.covered),'▣')+
     stat('TOTAL YELLOW CARDS THIS SEASON',yellow.value,coverage(yellow.covered),'▧');
 }
-function overview(){const next=teamFixtures('all').filter(f=>!f.result&&f.status==='NS'&&istDate(f.kickoff)>=today);return header('Indian football.<br>In focus.','Fixtures, clubs and the story of the season. Built on published ISL records.')+`<section class="hero"><div class="hero-copy"><span class="eyebrow">FOTWEB BY BASIL</span><h2>A new season.<br>Every match matters.</h2><p>Follow the published schedule, explore all ${seasonData.teams.length} clubs and return for verified analysis after the final whistle.</p><button class="primary-button" data-page="fixtures">Explore the fixtures &nbsp; ↗</button></div><div class="season-hero-art" aria-hidden="true"><span>ISL</span><strong>26<span>—</span>27</strong><small>THE SEASON WORKSPACE</small></div></section><div class="stats overview-stats">${stat('CLUBS THIS SEASON',seasonData.teams.length,'Official participating club list','♧')}${stat('SCHEDULE ENTRIES',seasonData.fixtures.length,esc(seasonData.scheduleScope),'▦')}${stat('FIXTURE WINDOW','10 OCT – 17 JAN','2026 → 2027 · Published Phase 1','↗')}${overviewSeasonTotals()}</div>${tdSeasonFormPanel()}${tdSeasonPlayersPanel()}<div class="grid equal"><section class="card"><div class="card-head"><h3><span class="dot"></span>Next on the touchline</h3><span class="tag">IST</span></div><div class="card-body fixture-list">${next.slice(0,3).map(f=>fixtureCard(f,true)).join('')||'<p class="report-note">No upcoming fixtures. Check the official schedule for the next published phase.</p>'}</div><div class="card-bottom"><button class="text-button" data-page="fixtures">View all fixtures ↗</button></div></section><section class="card"><div class="card-head"><h3><span class="dot"></span>The season so far</h3><span class="tag">${resultsData.matches.length?'VERIFIED RESULTS':'BEFORE KICKOFF'}</span></div>${tableMarkup(6)}<div class="card-bottom"><span>${resultsData.matches.length?'Computed from verified league results':'No completed results recorded yet'}</span><button class="text-button" data-page="standings">All ${seasonData.teams.length} clubs ↗</button></div></section></div>${card('From the final whistle to the full picture',`<p class="report-note">Final scores, match summaries and any published statistics will appear as they are verified. Unavailable player metrics, xG and shot maps are left unavailable.</p><div class="spaced"><button class="outline-button" data-page="fixtures">Explore match details ↗</button> ${sourceLink(seasonData.sourceUrl,'Official fixture source')}</div>`,'POST-MATCH ANALYSIS')}`;}
+const overviewSections=[['summary','Season summary'],['form','Club form · All teams'],
+  ['players','Season player leaders'],['fixtures','Upcoming fixtures'],['points','Points table'],['analysis','Match analysis information']];
+function overviewSectionSelector(){
+  return '<div class="td-section-selector"><label for="overviewSectionFilter">Display section'+
+    '<select id="overviewSectionFilter" aria-controls="overviewSectionContent">'+
+    overviewSections.map(([id,label])=>'<option value="'+id+'" '+(state.overviewSection===id?'selected':'')+'>'+esc(label)+'</option>').join('')+
+    '</select></label><p>Choose one section to explore the season.</p></div>';
+}
+function overview(){
+  if(!overviewSections.some(([id])=>id===state.overviewSection))state.overviewSection='summary';
+  let content='';
+  switch(state.overviewSection){
+    case 'summary':content=`<section class="hero"><div class="hero-copy"><span class="eyebrow">FOTWEB BY BASIL</span><h2>A new season.<br>Every match matters.</h2><p>Follow the published schedule, explore all ${seasonData.teams.length} clubs and return for verified analysis after the final whistle.</p><button class="primary-button" data-page="fixtures">Explore the fixtures &nbsp; ↗</button></div><div class="season-hero-art" aria-hidden="true"><span>ISL</span><strong>26<span>—</span>27</strong><small>THE SEASON WORKSPACE</small></div></section><div class="stats overview-stats">${stat('CLUBS THIS SEASON',seasonData.teams.length,'Official participating club list','♧')}${stat('SCHEDULE ENTRIES',seasonData.fixtures.length,esc(seasonData.scheduleScope),'▦')}${stat('FIXTURE WINDOW','10 OCT – 17 JAN','2026 → 2027 · Published Phase 1','↗')}${overviewSeasonTotals()}</div>`;break;
+    case 'form':content=tdSeasonFormPanel();break;
+    case 'players':content=tdSeasonPlayersPanel();break;
+    case 'fixtures':{
+      const next=teamFixtures('all').filter(f=>!f.result&&f.status==='NS'&&istDate(f.kickoff)>=today);
+      content=`<section class="card"><div class="card-head"><h3><span class="dot"></span>Next on the touchline</h3><span class="tag">IST</span></div><div class="card-body fixture-list">${next.slice(0,3).map(f=>fixtureCard(f,true)).join('')||'<p class="report-note">No upcoming fixtures. Check the official schedule for the next published phase.</p>'}</div><div class="card-bottom"><button class="text-button" data-page="fixtures">View all fixtures ↗</button></div></section>`;break;
+    }
+    case 'points':content=card('The season so far',tableMarkup()+'<div class="spaced"><button class="text-button" data-page="standings">View points table ↗</button></div>',resultsData.matches.length?'VERIFIED RESULTS':'BEFORE KICKOFF');break;
+    case 'analysis':content=card('From the final whistle to the full picture',`<p class="report-note">Final scores, match summaries and any published statistics will appear as they are verified. Unavailable player metrics, xG and shot maps are left unavailable.</p><div class="spaced"><button class="outline-button" data-page="fixtures">Explore match details ↗</button> ${sourceLink(seasonData.sourceUrl,'Official fixture source')}</div>`,'POST-MATCH ANALYSIS');break;
+  }
+  const label=overviewSections.find(([id])=>id===state.overviewSection)[1];
+  return header('Indian football.<br>In focus.','Fixtures, clubs and the story of the season. Built on published ISL records.')+
+    overviewSectionSelector()+'<div id="overviewSectionContent" role="region" aria-label="'+esc(label)+'">'+content+'</div>';
+}
 /* Opening a fixture does not destroy active month, status or club filters. */
 function openFixtureDetail(id) {
   const f=allFixtures().find(item=>String(item.id)===String(id));
@@ -177,13 +202,48 @@ function teamDashboardSelectors(){
     '. Select any of the '+seasonData.teams.length+' clubs to explore its verified data.</p>'+
     '</section>';
 }
+const tdSections=[['summary','Summary'],['form','Team form'],['squad','Squad & coach'],
+  ['players','Top players'],['fixtures','Club fixtures & results'],
+  ['points','Points earned · Home vs away'],['statistics','Team statistics'],['info','Club information']];
+function teamSectionSelector(){
+  return '<div class="td-section-selector"><label for="tdSectionFilter">Display section'+
+    '<select id="tdSectionFilter" aria-controls="tdSectionContent">'+
+    tdSections.map(([id,label])=>'<option value="'+id+'" '+(state.teamSection===id?'selected':'')+'>'+esc(label)+'</option>').join('')+
+    '</select></label><p>Choose one section to explore this club.</p></div>';
+}
 function teamPage(){
   if(state.team==='all')return header('Team dashboard.','Choose a club to explore its ISL 2026–27 performance.')+
     teamDashboardSelectors()+
     '<div class="td-dashboard-empty"><strong>Choose a club to get started.</strong>'+
-    '<p>Use the Club dropdown above to view its points, leading players, published statistics and fixtures.</p></div>';
-const t=club(state.team),r=tableRows().find(x=>x.id===t.id),fs=teamFixtures(t.id),ss=resultsData.matches.filter(m=>canonical(m.home)===t.name||canonical(m.away)===t.name),league=tdLeagueResults(t.name);let totals={};for(const [key,label] of Object.entries(statLabels)){const values=ss.map(m=>m.stats?.[canonical(m.home)===t.name?'home':'away']?.[key]).filter(v=>v!=null);if(values.length)totals[label]=key==='possession'?(values.reduce((a,b)=>a+b,0)/values.length).toFixed(1)+'% average':values.reduce((a,b)=>a+b,0);}
-return header(esc(t.name),'The club’s published schedule and verified season results.',esc(t.short)+' · TEAM DASHBOARD')+teamDashboardSelectors()+`<div class="ca-team-entry"><button type="button" class="outline-button" data-analytics-club="${esc(t.id)}">Analyse & compare this club ↗</button></div><div class="stats">${stat('LEAGUE MATCHES',r.mp,'Verified completed league matches','▦')}${stat('POINTS',r.pts,`${r.w} wins · ${r.d} draws · ${r.l} losses`,'♜')}${stat('GOALS FOR',r.gf,'From verified league scores','↗')}${stat('GOALS AGAINST',r.ga,'From verified league scores','↘')}</div>${tdFormPanel(league,t.name)}${tdSquadPanel(t)}${tdVenuePanel(league,t.name)}${tdPlayersPanel(league,t.name)}<div class="grid equal">${card('Published team statistics',Object.keys(totals).length?`<div class="bar-chart">${Object.entries(totals).map(([k,v])=>`<div class="verified-stat"><span>${esc(k)}</span><strong>${esc(v)}</strong></div>`).join('')}</div><p class="chart-desc">Totals include only matches with a published value. Possession is the average of available match values.</p>`:'<p class="report-note">Team-performance statistics will appear after they are published and verified. No shot, passing or xG data is available here yet.</p>','AVAILABLE DATA')}${card('Club information',`<div class="club-profile">${crest(t,'large')}<div><h2>${esc(t.name)}</h2><p class="chart-desc">${fs.length} published Phase 1 fixtures.</p>${sourceLink(t.profileUrl,'Official club profile')}</div></div><p class="chart-desc">Player summaries are calculated from verified match events and available player statistics, with missing information clearly identified.</p>`,'2026–27')}</div><h2 class="section-title">Club fixtures & results</h2><div class="fixtures-grid">${fs.map(f=>fixtureCard(f)).join('')}</div>`;}
+    '<p>Use the Club dropdown above, then choose which dashboard section to display.</p></div>';
+  if(!tdSections.some(([id])=>id===state.teamSection))state.teamSection='summary';
+  const t=club(state.team),r=tableRows().find(x=>x.id===t.id),fs=teamFixtures(t.id),league=tdLeagueResults(t.name);
+  const info=()=>card('Club information',`<div class="club-profile">${crest(t,'large')}<div><h2>${esc(t.name)}</h2><p class="chart-desc">${fs.length} published Phase 1 fixtures.</p>${sourceLink(t.profileUrl,'Official club profile')}</div></div>`,'2026–27');
+  let content='';
+  switch(state.teamSection){
+    case 'summary':
+      content=`<div class="stats">${stat('LEAGUE MATCHES',r.mp,'Verified completed league matches','▦')}${stat('POINTS',r.pts,`${r.w} wins · ${r.d} draws · ${r.l} losses`,'♜')}${stat('GOALS FOR',r.gf,'From verified league scores','↗')}${stat('GOALS AGAINST',r.ga,'From verified league scores','↘')}</div>`+info();break;
+    case 'form':content=tdFormPanel(league,t.name);break;
+    case 'squad':content=tdSquadPanel(t);break;
+    case 'players':content=tdPlayersPanel(league,t.name);break;
+    case 'points':content=tdVenuePanel(league,t.name);break;
+    case 'info':content=info();break;
+    case 'fixtures':content='<h2 class="section-title">Club fixtures & results</h2><div class="fixtures-grid">'+fs.map(f=>fixtureCard(f)).join('')+'</div>';break;
+    case 'statistics':{
+      const matches=resultsData.matches.filter(m=>canonical(m.home)===t.name||canonical(m.away)===t.name),totals={};
+      for(const [key,label] of Object.entries(statLabels)){
+        const values=matches.map(m=>m.stats?.[canonical(m.home)===t.name?'home':'away']?.[key]).filter(v=>v!=null);
+        if(values.length)totals[label]=key==='possession'?(values.reduce((a,b)=>a+b,0)/values.length).toFixed(1)+'% average':values.reduce((a,b)=>a+b,0);
+      }
+      content=card('Published team statistics',Object.keys(totals).length?'<div class="bar-chart">'+Object.entries(totals).map(([k,v])=>'<div class="verified-stat"><span>'+esc(k)+'</span><strong>'+esc(v)+'</strong></div>').join('')+'</div><p class="chart-desc">Totals include only matches with a published value. Possession is the average of available match values.</p>':'<p class="report-note">Team-performance statistics will appear after they are published and verified. No shot, passing or xG data is available here yet.</p>','AVAILABLE DATA');break;
+    }
+  }
+  const label=tdSections.find(([id])=>id===state.teamSection)[1];
+  return header(esc(t.name),'Choose a section to explore the club’s published squad, schedule and verified results.',esc(t.short)+' · TEAM DASHBOARD')+
+    teamDashboardSelectors()+teamSectionSelector()+
+    '<div class="ca-team-entry"><button type="button" class="outline-button" data-analytics-club="'+esc(t.id)+'">Analyse & compare this club ↗</button></div>'+
+    '<div id="tdSectionContent" role="region" aria-label="'+esc(label)+'">'+content+'</div>';
+}
 function creatorPage(){return `<div class="page-head creator-page-head"><div><span class="eyebrow">CREATOR'S CORNER</span><h1>Behind the data.<br>Beyond the score.</h1><p>Meet the football fan behind FotWeb.</p></div><span class="season-tag">BY BASIL</span></div><div class="creator-layout"><article class="creator-story"><div class="creator-person"><div class="creator-monogram" aria-hidden="true">BB</div><div><span class="eyebrow">HELLO, I'M</span><h2>Basil Binu</h2><p>Aspiring Data Analyst</p></div></div><div class="creator-interests"><span>DATA ANALYSIS</span><span>FOOTBALL</span><span>ALWAYS LEARNING</span></div><p>I'm Basil Binu, an aspiring data analyst with a passion for making sense of numbers and a serious love for football. I enjoy looking beyond the final score and asking what the data can tell us about a match.</p><p>FotWeb brings these two interests together. I'm building a place where fans can follow Indian football, explore a club's season and understand matches through clear, sourced information.</p><p>My journey in analytics is still growing. This project is a way to keep learning, turn curiosity into practical work and share what I discover with other football fans.</p><blockquote>Football fuels the curiosity.<br>Data gives it direction.</blockquote></article><div class="creator-side"><section class="creator-online"><h2><span aria-hidden="true">↗</span> Find me online</h2><p>Connect with me on LinkedIn or GitHub, or send me an email.</p><div class="creator-links about-links">${$('#creatorLinks').innerHTML}</div></section><section class="creator-features"><h2><span aria-hidden="true">▦</span> What FotWeb does</h2><div class="creator-feature-list">${[['overview','Season overview','The published ISL season at a glance.'],['fixtures','Fixtures & results','Click fixtures for upcoming lineups, verified reports, match dates and streams.'],['standings','Points table','League points calculated from verified final scores.'],['team','Team dashboard','Explore a club’s fixtures, results and available statistics.'],['analytics','Club analytics','Team trends, attack and defence rankings, comparisons, and charts.']].map(([page,title,desc],i)=>`<a href="#${page}" data-page="${page}"><span class="feature-number">0${i+1}</span><div><strong>${title}</strong><p>${desc}</p></div><span aria-hidden="true">↗</span></a>`).join('')}</div><p class="creator-principle">Built with curiosity. Backed by sources.</p></section></div></div>`;}
 /* A check run is not the same as a change to official football data. */
 function latestUpdateLabel(){
@@ -335,6 +395,16 @@ function bindPage(){
   tdBindSeasonFormLegend();
   bindScatterTooltips();
   bindTrendTooltips();
+  const overviewFilter=$('#overviewSectionFilter');
+  if(overviewFilter)overviewFilter.onchange=e=>{
+    rememberNavigation();state.overviewSection=e.target.value;render();
+    $('#overviewSectionFilter')?.focus({preventScroll:true});
+  };
+  const sectionFilter=$('#tdSectionFilter');
+  if(sectionFilter)sectionFilter.onchange=e=>{
+    rememberNavigation();state.teamSection=e.target.value;render();
+    $('#tdSectionFilter')?.focus({preventScroll:true});
+  };
   const teamClubFilter=$('#tdClubFilter');
   if(teamClubFilter)teamClubFilter.onchange=e=>navigate('team',{team:e.target.value});
   $$('[data-analytics-club]').forEach(el=>el.onclick=()=>{

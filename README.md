@@ -20,6 +20,9 @@ Live site: https://fotweb.streamlit.app/
 - Bottom-centred Watch live links to announced official ISL English YouTube streams.
   Completed broadcasts appear as Watch replay; unannounced streams have no button.
 - Points totals calculated from verified league-stage FT results.
+- Season Overview also shows one selected section at a time: Season summary,
+  Club form, Season player leaders, Upcoming fixtures, Points table or Match
+  analysis information. Its selector is independent of Team Dashboard.
 - Season Overview combines all clubs’ per-match points into one form chart,
   with club colours, a selectable legend and hover/tap/focus match details.
 - Season Overview shows league-wide top-five player leaderboards for scorers,
@@ -29,6 +32,10 @@ Live site: https://fotweb.streamlit.app/
 - Team Dashboard has a chronological form line graph showing points earned per
   completed league match (win 3, draw 1, loss 0), with match details. It updates
   from verified results, showing an empty state before the first match.
+- Team Dashboard displays one selected section at a time: Summary, Team form,
+  Squad & coach, Top players, Club fixtures & results, Points earned, Team
+  statistics or Club information. The selection persists when switching clubs
+  and is restored by in-app Back navigation.
 - Team Dashboard shows official squad lists grouped by position, player portraits
   with silhouette fallbacks, shirt numbers when published and the head coach.
   Each club includes the source link and squad verification time.
