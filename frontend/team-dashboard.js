@@ -375,41 +375,54 @@ function tdSeasonFormPanel(){
       return '<g data-season-form-series="'+esc(s.team.id)+'">'+line+dots+'</g>';
     }).join('');
   }
-  const legend='<div class="td-season-form-legend" aria-label="Focus a club’s form">'+
+  const legend='<div class="td-season-form-legend" aria-label="Select clubs to compare form">'+
     '<button type="button" data-season-form-club="all" aria-pressed="true">All clubs</button>'+
     series.map(s=>'<button type="button" data-season-form-club="'+esc(s.team.id)+'" aria-pressed="false" '+(!s.rows.length?'disabled':'')+'>'+
       '<span class="td-season-form-swatch" style="background:'+s.color+'"></span>'+esc(s.team.name)+
       (!s.rows.length?' <small>No matches yet</small>':'')+'</button>').join('')+'</div>';
   return '<section class="td-panel td-season-form"><div class="td-panel-title"><h2>Club form · All teams</h2>'+
     '<small>Points per match · Win 3 · Draw 1 · Loss 0</small></div>'+
-    (maxGames?'<p class="td-form-caption">'+series.filter(s=>s.rows.length).length+' of '+series.length+' clubs have verified results. Select a club below to focus its line and inspect overlapping points.</p>'+
+    (maxGames?'<p class="td-form-caption">'+series.filter(s=>s.rows.length).length+' of '+series.length+' clubs have verified results. Select multiple clubs below to compare their form. Click a selected club again to remove it; All clubs resets the chart.</p>'+
       '<div class="td-form-chart"><div class="td-form-scroll"><svg viewBox="0 0 '+W+' '+H+'" role="group" aria-label="All clubs’ points earned per completed league match">'+
       '<text x="'+L+'" y="15" class="td-form-axis">Points</text>'+grid+paths+
       '<text x="'+(L+plotW/2)+'" y="'+(H-8)+'" text-anchor="middle" class="td-form-axis">Each club’s completed league match number</text></svg></div>'+
       '<div class="td-form-tooltip" role="status" aria-live="polite" hidden><strong data-form-tip-title></strong><span data-form-tip-opponent></span><span data-form-tip-date></span><span data-form-tip-score></span></div></div>':
       '<p class="report-note">Club form will appear as completed league results are verified.</p>')+
-    legend+'<p class="td-explainer">Each colour represents one club. M1 is that club’s first completed match, M2 its second, and so on. Points earned in each match are shown; clubs without completed matches are listed without a line. Hover, tap or focus a point for match details.</p></section>';
+    legend+'<p class="td-form-caption" data-form-selection role="status"></p><p class="td-explainer">Each colour represents one club. M1 is that club’s first completed match, M2 its second, and so on. Points earned in each match are shown; clubs without completed matches are listed without a line. Hover, tap or focus a point for match details.</p></section>';
 }
 function tdBindSeasonFormLegend(){
   $$('.td-season-form').forEach(panel=>{
     const buttons=[...panel.querySelectorAll('[data-season-form-club]')];
     const groups=[...panel.querySelectorAll('[data-season-form-series]')];
-    buttons.forEach(button=>button.onclick=()=>{
-      const selected=button.dataset.seasonFormClub;
+    const available=new Set(groups.map(g=>g.dataset.seasonFormSeries));
+    const selected=new Set((state.analyticsFormClubs||[]).filter(id=>available.has(id)));
+    const update=()=>{
       const tip=panel.querySelector('.td-form-tooltip');if(tip)tip.hidden=true;
-      buttons.forEach(b=>b.setAttribute('aria-pressed',String(b===button)));
+      buttons.forEach(button=>button.setAttribute('aria-pressed',String(
+        button.dataset.seasonFormClub==='all'?selected.size===0:selected.has(button.dataset.seasonFormClub))));
       groups.forEach(group=>{
-        const dim=selected!=='all'&&group.dataset.seasonFormSeries!==selected;
-        group.classList.toggle('is-muted',dim);
+        const hidden=selected.size>0&&!selected.has(group.dataset.seasonFormSeries);
+        group.classList.toggle('is-muted',hidden);
         group.querySelectorAll('[data-td-form-point]').forEach(dot=>{
-          dot.setAttribute('tabindex',dim?'-1':'0');
-          dot.setAttribute('aria-hidden',String(dim));
+          dot.setAttribute('tabindex',hidden?'-1':'0');
+          dot.setAttribute('aria-hidden',String(hidden));
         });
       });
-      if(selected!=='all'){
-        const chosen=groups.find(g=>g.dataset.seasonFormSeries===selected);
+      const status=panel.querySelector('[data-form-selection]');
+      if(status)status.textContent=selected.size?selected.size+' '+(selected.size===1?'club selected.':'clubs selected for comparison.'):'All clubs shown.';
+      state.analyticsFormClubs=[...selected];
+    };
+    buttons.forEach(button=>button.onclick=()=>{
+      const id=button.dataset.seasonFormClub;
+      if(id==='all')selected.clear();
+      else if(selected.has(id))selected.delete(id);
+      else selected.add(id);
+      update();
+      if(selected.has(id)){
+        const chosen=groups.find(g=>g.dataset.seasonFormSeries===id);
         if(chosen)chosen.parentNode.appendChild(chosen);
       }
     });
+    update();
   });
 }

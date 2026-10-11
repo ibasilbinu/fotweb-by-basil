@@ -24,7 +24,8 @@ Live site: https://fotweb.streamlit.app/
   Season player leaders, Upcoming fixtures or Points table. Its selector is
   independent of Team Dashboard.
 - Club Analytics combines all clubs’ per-match points into one form chart,
-  with club colours, a selectable legend and hover/tap/focus match details.
+  with club colours, a legend supporting multiple selected clubs, and
+  hover/tap/focus match details. Click All clubs to reset the comparison.
 - Season Overview shows league-wide top-five player leaderboards for scorers,
   assists, recorded goal contributions, yellow cards and red cards. Players'
   clubs and published-stat coverage are shown, with no invented totals.
