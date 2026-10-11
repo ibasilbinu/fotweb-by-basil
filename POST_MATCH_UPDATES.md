@@ -8,6 +8,19 @@ It also checks the official fixture schedule for published changes.
 Checks and publication can be delayed. Refresh the site for new results.
 Manage or pause the task in ChatGPT Tasks.
 
+## Primary official ISL sources (required each check)
+
+**The Indian Super League's official website is** `https://www.indiansuperleague.com/`.
+For ISL 2026–27, check these league-published sources before secondary reporting:
+
+- **Fixture dates, kickoff times, venues, and results:** `https://www.indiansuperleague.com/schedule-fixtures`; explicitly select/confirm season **2026–27**, not the site's default/older season. Cross-check fixture ID and clubs before changing FotWeb records.
+- **Official match centre:** use the actual match-specific URL supplied by the fixture listing, or a previously verified `https://www.indiansuperleague.com/matchcentre/MATCH_ID` matching FotWeb's known fixture ID. Check published FT status, starting XIs, match events and available statistics. Never infer data the match centre does not actually publish.
+- **League and player statistics:** `https://www.indiansuperleague.com/stats`; explicitly confirm season and whether figures are team-wide, player-wide or specific to a completed match. Do not turn aggregates into fabricated match-level data.
+- **Points table:** use the official site's standings page with **2026–27** selected for cross-checking and source attribution.
+- **Official streaming:** `https://www.youtube.com/@IndianSuperLeague/streams`, especially **Live → Upcoming**. This is a **different source** from ISL match statistics. Verify each stream's video ID, owner, game, date and English/ENG commentary label before adding its watch button.
+
+**Source freshness caution:** Public search-result snippets or cached copies of the site can show **2025–26** even while the current live fixture page has **2026–27**. Do not mistake a stale search index for a verified current official update. If a current page or YouTube Upcoming list cannot be accessed, disclose the verification blocker in the task alert, retain all previously verified data, and retry in the next check.
+
 ## Publication rules
 
 - Prefer match-specific official ISL/AIFF or official club reports. Otherwise
