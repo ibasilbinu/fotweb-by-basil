@@ -10,7 +10,16 @@ import sys
 from pathlib import Path
 from playwright.async_api import async_playwright
 
-MATCH_ID = sys.argv[1] if len(sys.argv) > 1 else "194636"
+MATCH_ID = sys.argv[1] if len(sys.argv) > 1 else "auto"
+if MATCH_ID == "auto":
+    from datetime import datetime, timedelta, timezone
+    season = json.loads(Path("data/isl-season.json").read_text())
+    now = datetime.now(timezone.utc)
+    upcoming = [f["id"] for f in season["fixtures"] if -timedelta(hours=5) <= datetime.fromisoformat(f["kickoff"]).astimezone(timezone.utc) - now <= timedelta(hours=4)]
+    if not upcoming:
+        print("No fixture near kickoff; skipping inspection")
+        sys.exit(0)
+    MATCH_ID = upcoming[0]
 if not re.fullmatch(r"[0-9]{4,10}", MATCH_ID):
     raise SystemExit("Invalid match ID")
 URL = "https://www.indiansuperleague.com/matchcentre/" + MATCH_ID
