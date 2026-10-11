@@ -291,3 +291,8 @@
   .td-dashboard-empty{padding:20px}
 }
 
+
+/* Official squad portraits and position groups. */
+.td-squad-coach{max-width:460px;margin:0 0 28px}.td-squad-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.td-squad-group{margin-top:28px}.td-squad-group h3{font-size:15px;margin:0 0 14px}.td-squad-group h3 span{color:var(--muted);font-size:12px;margin-left:7px}.td-squad-person{display:flex;align-items:center;gap:16px;padding:16px;border:1px solid var(--border,#293038);background:#11171c;border-radius:12px;min-width:0}.td-squad-person>div:last-child{min-width:0}.td-squad-person h4{font-size:15px;line-height:1.4;margin:5px 0 8px;overflow-wrap:anywhere}.td-squad-role{font-size:11px;color:var(--muted,#a7b0bc)}.td-squad-person a{font-size:11px}.td-squad-portrait{position:relative;flex-shrink:0;width:76px;height:90px;background:#202a31;border-radius:8px;overflow:hidden}.td-squad-portrait svg{position:absolute;width:100%;height:100%;fill:#64727c}.td-squad-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;background:#202a31}.td-squad-coach .td-squad-person{border-color:#526240}
+@media(max-width:1100px){.td-squad-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.td-squad-grid{grid-template-columns:1fr}.td-squad-person{padding:13px}.td-squad-coach{max-width:none}}

@@ -1,0 +1,2646 @@
+{
+  "schemaVersion": 1,
+  "season": "2026-27",
+  "teams": [
+    {
+      "teamId": "656",
+      "sourceUrl": "https://www.indiansuperleague.com/clubs/656-bengaluru-fc-profile/squad",
+      "verifiedAt": "2026-10-11T05:57:20.599578+00:00",
+      "players": [
+        {
+          "name": "Aheibam Suraj Singh",
+          "position": "Goalkeeper",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/228981.png?v=103.31",
+          "number": 44,
+          "profileUrl": "https://www.indiansuperleague.com/players/goalkeeper-228981-aheibam-suraj-singh-profile"
+        },
+        {
+          "name": "Gurpreet Singh Sandhu",
+          "position": "Goalkeeper",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/13370.png?v=103.31",
+          "number": 1,
+          "profileUrl": "https://www.indiansuperleague.com/players/goalkeeper-13370-gurpreet-singh-sandhu-profile"
+        },
+        {
+          "name": "Lalthuammawia Ralte",
+          "position": "Goalkeeper",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/19126.png?v=103.31",
+          "number": 28,
+          "profileUrl": "https://www.indiansuperleague.com/players/goalkeeper-19126-lalthuammawia-ralte-profile"
+        },
+        {
+          "name": "Sahil Poonia",
+          "position": "Goalkeeper",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/184684.png?v=103.31",
+          "number": 30,
+          "profileUrl": "https://www.indiansuperleague.com/players/goalkeeper-184684-sahil-poonia-profile"
+        },
+        {
+          "name": "Chinglensana Singh Konsham",
+          "position": "Defender",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/26611.png?v=103.31",
+          "number": 4,
+          "profileUrl": "https://www.indiansuperleague.com/players/defender-26611-chinglensana-singh-konsham-profile"
+        },
+        {
+          "name": "Haobam Ricky Meetei",
+          "position": "Defender",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/184685.png?v=103.31",
+          "number": 18,
+          "profileUrl": "https://www.indiansuperleague.com/players/defender-184685-haobam-ricky-meetei-profile"
+        },
+        {
+          "name": "Harsh Palande",
+          "position": "Defender",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/197057.png?v=103.31",
+          "number": 26,
+          "profileUrl": "https://www.indiansuperleague.com/players/defender-197057-harsh-palande-profile"
+        },
+        {
+          "name": "Menno Robert Maria Koch",
+          "position": "Defender",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/2397.png?v=103.31",
+          "number": 3,
+          "profileUrl": "https://www.indiansuperleague.com/players/defender-2397-menno-robert-maria-koch-profile"
+        },
+        {
+          "name": "Nikhil Chandrashekar Poojary",
+          "position": "Defender",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/32552.png?v=103.31",
+          "number": 27,
+          "profileUrl": "https://www.indiansuperleague.com/players/defender-32552-nikhil-chandrashekar-poojary-profile"
+        },
+        {
+          "name": "Roshan Singh Naorem",
+          "position": "Defender",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/36331.png?v=103.31",
+          "number": 32,
+          "profileUrl": "https://www.indiansuperleague.com/players/defender-36331-roshan-singh-naorem-profile"
+        },
+        {
+          "name": "Sandro Anibal Embalo",
+          "position": "Defender",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/233495.png?v=103.31",
+          "number": 6,
+          "profileUrl": "https://www.indiansuperleague.com/players/defender-233495-sandro-anibal-embalo-profile"
+        },
+        {
+          "name": "Suresh Singh Wangjam",
+          "position": "Defender",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/33990.png?v=103.31",
+          "number": 8,
+          "profileUrl": "https://www.indiansuperleague.com/players/defender-33990-suresh-singh-wangjam-profile"
+        },
+        {
+          "name": "Takhellambam Bungson Singh",
+          "position": "Defender",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/228984.png?v=103.31",
+          "number": 66,
+          "profileUrl": "https://www.indiansuperleague.com/players/defender-228984-takhellambam-bungson-singh-profile"
+        },
+        {
+          "name": "Chingambam Shivaldo Singh",
+          "position": "Midfielder",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/226390.png?v=103.31",
+          "number": 51,
+          "profileUrl": "https://www.indiansuperleague.com/players/midfielder-226390-chingambam-shivaldo-singh-profile"
+        },
+        {
+          "name": "Fanai Lalremtluanga",
+          "position": "Midfielder",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/175579.png?v=103.31",
+          "number": 23,
+          "profileUrl": "https://www.indiansuperleague.com/players/midfielder-175579-fanai-lalremtluanga-profile"
+        },
+        {
+          "name": "Manuel Ignacio Iriondo",
+          "position": "Midfielder",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/43391.png?v=103.31",
+          "number": 5,
+          "profileUrl": "https://www.indiansuperleague.com/players/midfielder-43391-manuel-ignacio-iriondo-profile"
+        },
+        {
+          "name": "MD Arbash",
+          "position": "Midfielder",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/233496.png?v=103.31",
+          "number": 48,
+          "profileUrl": "https://www.indiansuperleague.com/players/midfielder-233496-md-arbash-profile"
+        },
+        {
+          "name": "Muhammed Ashique Kuruniyan",
+          "position": "Midfielder",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/31876.png?v=103.31",
+          "number": 22,
+          "profileUrl": "https://www.indiansuperleague.com/players/midfielder-31876-muhammed-ashique-kuruniyan-profile"
+        },
+        {
+          "name": "Ningthoukhongjam Rishi Singh",
+          "position": "Midfielder",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/228983.png?v=103.31",
+          "number": 38,
+          "profileUrl": "https://www.indiansuperleague.com/players/midfielder-228983-ningthoukhongjam-rishi-singh-profile"
+        },
+        {
+          "name": "Soham Varshneya",
+          "position": "Midfielder",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/197056.png?v=103.31",
+          "number": 14,
+          "profileUrl": "https://www.indiansuperleague.com/players/midfielder-197056-soham-varshneya-profile"
+        },
+        {
+          "name": "Takhellambam Bobbish",
+          "position": "Midfielder",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/233513.png?v=103.31",
+          "number": 56,
+          "profileUrl": "https://www.indiansuperleague.com/players/midfielder-233513-takhellambam-bobbish-profile"
+        },
+        {
+          "name": "Vinith Venkatesh",
+          "position": "Midfielder",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/184692.png?v=103.31",
+          "number": 31,
+          "profileUrl": "https://www.indiansuperleague.com/players/midfielder-184692-vinith-venkatesh-profile"
+        },
+        {
+          "name": "Yaipharemba Chingakham",
+          "position": "Midfielder",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/233512.png?v=103.31",
+          "number": 72,
+          "profileUrl": "https://www.indiansuperleague.com/players/midfielder-233512-yaipharemba-chingakham-profile"
+        },
+        {
+          "name": "Borja Martinez Giner",
+          "position": "Forward",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/52532.png?v=103.31",
+          "number": 7,
+          "profileUrl": "https://www.indiansuperleague.com/players/forward-52532-borja-martinez-giner-profile"
+        },
+        {
+          "name": "Mihaillo Perovic",
+          "position": "Forward",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/54450.png?v=103.31",
+          "number": 9,
+          "profileUrl": "https://www.indiansuperleague.com/players/forward-54450-mihaillo-perovic-profile"
+        },
+        {
+          "name": "Monirul Molla",
+          "position": "Forward",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/184698.png?v=103.31",
+          "number": 17,
+          "profileUrl": "https://www.indiansuperleague.com/players/forward-184698-monirul-molla-profile"
+        },
+        {
+          "name": "Ryan Dale Williams",
+          "position": "Forward",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/199.png?v=103.31",
+          "number": 10,
+          "profileUrl": "https://www.indiansuperleague.com/players/forward-199-ryan-dale-williams-profile"
+        },
+        {
+          "name": "Serto Worneilen Kom",
+          "position": "Forward",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/198531.png?v=103.31",
+          "number": 29,
+          "profileUrl": "https://www.indiansuperleague.com/players/forward-198531-serto-worneilen-kom-profile"
+        },
+        {
+          "name": "Sunil Chhetri",
+          "position": "Forward",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/19150.png?v=103.31",
+          "number": 11,
+          "profileUrl": "https://www.indiansuperleague.com/players/forward-19150-sunil-chhetri-profile"
+        },
+        {
+          "name": "Taorem Kelvin Singh",
+          "position": "Forward",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/197058.png?v=103.31",
+          "number": 37,
+          "profileUrl": "https://www.indiansuperleague.com/players/forward-197058-taorem-kelvin-singh-profile"
+        }
+      ],
+      "coach": {
+        "name": "Jose Zoyo",
+        "position": "Head coach",
+        "photo": "https://www.indiansuperleague.com/static-assets/images/support-staff/229673.png?v=103.31",
+        "number": null
+      }
+    },
+    {
+      "teamId": "505",
+      "sourceUrl": "https://www.indiansuperleague.com/clubs/505-chennaiyin-fc-profile/squad",
+      "verifiedAt": "2026-10-11T05:57:20.840280+00:00",
+      "players": [
+        {
+          "name": "Malhar Mohol",
+          "position": "Goalkeeper",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/192614.png?v=103.31",
+          "number": 31,
+          "profileUrl": "https://www.indiansuperleague.com/players/goalkeeper-192614-malhar-mohol-profile"
+        },
+        {
+          "name": "Mohammad Nawaz",
+          "position": "Goalkeeper",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/55648.png?v=103.31",
+          "number": 13,
+          "profileUrl": "https://www.indiansuperleague.com/players/goalkeeper-55648-mohammad-nawaz-profile"
+        },
+        {
+          "name": "Samik Mitra",
+          "position": "Goalkeeper",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/63455.png?v=103.31",
+          "number": 1,
+          "profileUrl": "https://www.indiansuperleague.com/players/goalkeeper-63455-samik-mitra-profile"
+        },
+        {
+          "name": "Dippendu Biswas",
+          "position": "Defender",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/184606.png?v=103.31",
+          "number": 32,
+          "profileUrl": "https://www.indiansuperleague.com/players/defender-184606-dippendu-biswas-profile"
+        },
+        {
+          "name": "Emmanuel Imanishimwe",
+          "position": "Defender",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/61977.png?v=103.31",
+          "number": 2,
+          "profileUrl": "https://www.indiansuperleague.com/players/defender-61977-emmanuel-imanishimwe-profile"
+        },
+        {
+          "name": "Harmandeep Singh",
+          "position": "Defender",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/212652.png?v=103.31",
+          "number": 30,
+          "profileUrl": "https://www.indiansuperleague.com/players/defender-212652-harmandeep-singh-profile"
+        },
+        {
+          "name": "Laldinpuia Pachuau",
+          "position": "Defender",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/156103.png?v=103.31",
+          "number": 3,
+          "profileUrl": "https://www.indiansuperleague.com/players/defender-156103-laldinpuia-pachuau-profile"
+        },
+        {
+          "name": "Namgyal Bhutia",
+          "position": "Defender",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/38960.png?v=103.31",
+          "number": 27,
+          "profileUrl": "https://www.indiansuperleague.com/players/defender-38960-namgyal-bhutia-profile"
+        },
+        {
+          "name": "Nuno Miguel Pereira Reis",
+          "position": "Defender",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/26393.png?v=103.31",
+          "number": 4,
+          "profileUrl": "https://www.indiansuperleague.com/players/defender-26393-nuno-miguel-pereira-reis-profile"
+        },
+        {
+          "name": "Saheef Muhammed",
+          "position": "Defender",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/163114.png?v=103.31",
+          "number": 5,
+          "profileUrl": "https://www.indiansuperleague.com/players/defender-163114-saheef-muhammed-profile"
+        },
+        {
+          "name": "Vignesh Dakshinamurthy",
+          "position": "Defender",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/55670.png?v=103.31",
+          "number": 23,
+          "profileUrl": "https://www.indiansuperleague.com/players/defender-55670-vignesh-dakshinamurthy-profile"
+        },
+        {
+          "name": "Ayush Dev Chhetri",
+          "position": "Midfielder",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/69467.png?v=103.31",
+          "number": 14,
+          "profileUrl": "https://www.indiansuperleague.com/players/midfielder-69467-ayush-dev-chhetri-profile"
+        },
+        {
+          "name": "Bryce Brian Miranda",
+          "position": "Midfielder",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/160847.png?v=103.31",
+          "number": 11,
+          "profileUrl": "https://www.indiansuperleague.com/players/midfielder-160847-bryce-brian-miranda-profile"
+        },
+        {
+          "name": "Glan Peter Martins",
+          "position": "Midfielder",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/69476.png?v=103.31",
+          "number": 25,
+          "profileUrl": "https://www.indiansuperleague.com/players/midfielder-69476-glan-peter-martins-profile"
+        },
+        {
+          "name": "Klusner John Manuel Pereira",
+          "position": "Midfielder",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/175750.png?v=103.31",
+          "number": 47,
+          "profileUrl": "https://www.indiansuperleague.com/players/midfielder-175750-klusner-john-manuel-pereira-profile"
+        },
+        {
+          "name": "Lalriathpuia Chawngthu",
+          "position": "Midfielder",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/184832.png?v=103.31",
+          "number": 17,
+          "profileUrl": "https://www.indiansuperleague.com/players/midfielder-184832-lalriathpuia-chawngthu-profile"
+        },
+        {
+          "name": "Madih Talal",
+          "position": "Midfielder",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/31500.png?v=103.31",
+          "number": 10,
+          "profileUrl": "https://www.indiansuperleague.com/players/midfielder-31500-madih-talal-profile"
+        },
+        {
+          "name": "Maheson Singh Tongbram",
+          "position": "Midfielder",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/69526.png?v=103.31",
+          "number": 21,
+          "profileUrl": "https://www.indiansuperleague.com/players/midfielder-69526-maheson-singh-tongbram-profile"
+        },
+        {
+          "name": "Nikola Stojanovic",
+          "position": "Midfielder",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/176178.png?v=103.31",
+          "number": 8,
+          "profileUrl": "https://www.indiansuperleague.com/players/midfielder-176178-nikola-stojanovic-profile"
+        },
+        {
+          "name": "Nitishkumar Meitei Yengkhom",
+          "position": "Midfielder",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/233493.png?v=103.31",
+          "number": 43,
+          "profileUrl": "https://www.indiansuperleague.com/players/midfielder-233493-nitishkumar-meitei-yengkhom-profile"
+        },
+        {
+          "name": "S Prakadeswaran",
+          "position": "Midfielder",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/229021.png?v=103.31",
+          "number": 52,
+          "profileUrl": "https://www.indiansuperleague.com/players/midfielder-229021-s-prakadeswaran-profile"
+        },
+        {
+          "name": "Yumkhaibam Jiteshwor Singh",
+          "position": "Midfielder",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/69541.png?v=103.31",
+          "number": 37,
+          "profileUrl": "https://www.indiansuperleague.com/players/midfielder-69541-yumkhaibam-jiteshwor-singh-profile"
+        },
+        {
+          "name": "Brison Deuben Fernandes",
+          "position": "Forward",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/158177.png?v=103.31",
+          "number": 42,
+          "profileUrl": "https://www.indiansuperleague.com/players/forward-158177-brison-deuben-fernandes-profile"
+        },
+        {
+          "name": "Irfan Yadwad",
+          "position": "Forward",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/182722.png?v=103.31",
+          "number": 24,
+          "profileUrl": "https://www.indiansuperleague.com/players/forward-182722-irfan-yadwad-profile"
+        },
+        {
+          "name": "Ramon de Andrade Souza",
+          "position": "Forward",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/233494.png?v=103.31",
+          "number": 7,
+          "profileUrl": "https://www.indiansuperleague.com/players/forward-233494-ramon-de-andrade-souza-profile"
+        },
+        {
+          "name": "Shubham Rawat",
+          "position": "Forward",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/163104.png?v=103.31",
+          "number": 16,
+          "profileUrl": "https://www.indiansuperleague.com/players/forward-163104-shubham-rawat-profile"
+        },
+        {
+          "name": "Vivek S",
+          "position": "Forward",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/192616.png?v=103.31",
+          "number": 77,
+          "profileUrl": "https://www.indiansuperleague.com/players/forward-192616-vivek-s-profile"
+        }
+      ],
+      "coach": {
+        "name": "Clifford Miranda",
+        "position": "Head coach",
+        "photo": "https://www.indiansuperleague.com/static-assets/images/support-staff/10249.png?v=103.31",
+        "number": null
+      }
+    },
+    {
+      "teamId": "1101",
+      "sourceUrl": "https://www.indiansuperleague.com/clubs/1101-churchill-brothers-profile/squad",
+      "verifiedAt": "2026-10-11T05:57:20.817795+00:00",
+      "players": [
+        {
+          "name": "Anuj Kumar",
+          "position": "Goalkeeper",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/35066.png?v=103.31",
+          "number": 25,
+          "profileUrl": "https://www.indiansuperleague.com/players/goalkeeper-35066-anuj-kumar-profile"
+        },
+        {
+          "name": "Alexandre Primael Yeoule",
+          "position": "Defender",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/233515.png?v=103.31",
+          "number": 15,
+          "profileUrl": "https://www.indiansuperleague.com/players/defender-233515-alexandre-primael-yeoule-profile"
+        },
+        {
+          "name": "Gaurav Bora",
+          "position": "Defender",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/36317.png?v=103.31",
+          "number": 21,
+          "profileUrl": "https://www.indiansuperleague.com/players/defender-36317-gaurav-bora-profile"
+        },
+        {
+          "name": "Kingslee Fernandes",
+          "position": "Defender",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/68798.png?v=103.31",
+          "number": 8,
+          "profileUrl": "https://www.indiansuperleague.com/players/defender-68798-kingslee-fernandes-profile"
+        },
+        {
+          "name": "Lalbiakhlua R Lianzela",
+          "position": "Defender",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/188017.png?v=103.31",
+          "number": 49,
+          "profileUrl": "https://www.indiansuperleague.com/players/defender-188017-lalbiakhlua-r-lianzela-profile"
+        },
+        {
+          "name": "Lalremruata Ralte",
+          "position": "Defender",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/176164.png?v=103.31",
+          "number": 17,
+          "profileUrl": "https://www.indiansuperleague.com/players/defender-176164-lalremruata-ralte-profile"
+        },
+        {
+          "name": "Maibam Deny Singh",
+          "position": "Defender",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/175643.png?v=103.31",
+          "number": 20,
+          "profileUrl": "https://www.indiansuperleague.com/players/defender-175643-maibam-deny-singh-profile"
+        },
+        {
+          "name": "Parag Satish Shrivas",
+          "position": "Defender",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/61182.png?v=103.31",
+          "number": 24,
+          "profileUrl": "https://www.indiansuperleague.com/players/defender-61182-parag-satish-shrivas-profile"
+        },
+        {
+          "name": "Provat Lakra",
+          "position": "Defender",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/35283.png?v=103.31",
+          "number": 12,
+          "profileUrl": "https://www.indiansuperleague.com/players/defender-35283-provat-lakra-profile"
+        },
+        {
+          "name": "Anil Rama Gaonkar",
+          "position": "Midfielder",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/157118.png?v=103.31",
+          "number": 57,
+          "profileUrl": "https://www.indiansuperleague.com/players/midfielder-157118-anil-rama-gaonkar-profile"
+        },
+        {
+          "name": "Dramane Salou",
+          "position": "Midfielder",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/71607.png?v=103.31",
+          "number": 5,
+          "profileUrl": "https://www.indiansuperleague.com/players/midfielder-71607-dramane-salou-profile"
+        },
+        {
+          "name": "Gourav Chudu Kankonar",
+          "position": "Midfielder",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/163119.png?v=103.31",
+          "number": 18,
+          "profileUrl": "https://www.indiansuperleague.com/players/midfielder-163119-gourav-chudu-kankonar-profile"
+        },
+        {
+          "name": "Phijam Sanathoi Meetei",
+          "position": "Midfielder",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/207848.png?v=103.31",
+          "number": 26,
+          "profileUrl": "https://www.indiansuperleague.com/players/midfielder-207848-phijam-sanathoi-meetei-profile"
+        },
+        {
+          "name": "Richard Costa",
+          "position": "Midfielder",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/38359.png?v=103.31",
+          "number": 33,
+          "profileUrl": "https://www.indiansuperleague.com/players/midfielder-38359-richard-costa-profile"
+        },
+        {
+          "name": "Sebastian Gutierrez Atehortua",
+          "position": "Midfielder",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/44236.png?v=103.31",
+          "number": 10,
+          "profileUrl": "https://www.indiansuperleague.com/players/midfielder-44236-sebastian-gutierrez-atehortua-profile"
+        },
+        {
+          "name": "JOHN OKOLI",
+          "position": "Forward",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/233514.png?v=103.31",
+          "number": 19,
+          "profileUrl": "https://www.indiansuperleague.com/players/forward-233514-john-okoli-profile"
+        },
+        {
+          "name": "Stendly Teotonio Fernandes",
+          "position": "Forward",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/188027.png?v=103.31",
+          "number": 7,
+          "profileUrl": "https://www.indiansuperleague.com/players/forward-188027-stendly-teotonio-fernandes-profile"
+        },
+        {
+          "name": "Trijoy Savio Dias",
+          "position": "Forward",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/175724.png?v=103.31",
+          "number": 23,
+          "profileUrl": "https://www.indiansuperleague.com/players/forward-175724-trijoy-savio-dias-profile"
+        },
+        {
+          "name": "Vincy Barretto",
+          "position": "Forward",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/154801.png?v=103.31",
+          "number": 47,
+          "profileUrl": "https://www.indiansuperleague.com/players/forward-154801-vincy-barretto-profile"
+        },
+        {
+          "name": "Wayde Lekay",
+          "position": "Forward",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/198452.png?v=103.31",
+          "number": 9,
+          "profileUrl": "https://www.indiansuperleague.com/players/forward-198452-wayde-lekay-profile"
+        }
+      ],
+      "coach": {
+        "name": "Dimitris Dimitriou",
+        "position": "Head coach",
+        "photo": "https://www.indiansuperleague.com/static-assets/images/support-staff/233518.png?v=103.31",
+        "number": null
+      }
+    },
+    {
+      "teamId": "1102",
+      "sourceUrl": "https://www.indiansuperleague.com/clubs/1102-east-bengal-fc-profile/squad",
+      "verifiedAt": "2026-10-11T05:57:20.847114+00:00",
+      "players": [
+        {
+          "name": "Gourab Shaw",
+          "position": "Goalkeeper",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/195874.png?v=103.31",
+          "number": 95,
+          "profileUrl": "https://www.indiansuperleague.com/players/goalkeeper-195874-gourab-shaw-profile"
+        },
+        {
+          "name": "Phurba Tempa Lachenpa",
+          "position": "Goalkeeper",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/35200.png?v=103.31",
+          "number": 1,
+          "profileUrl": "https://www.indiansuperleague.com/players/goalkeeper-35200-phurba-tempa-lachenpa-profile"
+        },
+        {
+          "name": "Prabhsukhan Singh Gill",
+          "position": "Goalkeeper",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/33958.png?v=103.31",
+          "number": 13,
+          "profileUrl": "https://www.indiansuperleague.com/players/goalkeeper-33958-prabhsukhan-singh-gill-profile"
+        },
+        {
+          "name": "Anwar Ali",
+          "position": "Defender",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/33963.png?v=103.31",
+          "number": 4,
+          "profileUrl": "https://www.indiansuperleague.com/players/defender-33963-anwar-ali-profile"
+        },
+        {
+          "name": "Chaku Mandi",
+          "position": "Defender",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/196952.png?v=103.31",
+          "number": 85,
+          "profileUrl": "https://www.indiansuperleague.com/players/defender-196952-chaku-mandi-profile"
+        },
+        {
+          "name": "Hardik Bhatt",
+          "position": "Defender",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/162862.png?v=103.31",
+          "number": 3,
+          "profileUrl": "https://www.indiansuperleague.com/players/defender-162862-hardik-bhatt-profile"
+        },
+        {
+          "name": "Ignacio Monsalve Vicente",
+          "position": "Defender",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/47259.png?v=103.31",
+          "number": 24,
+          "profileUrl": "https://www.indiansuperleague.com/players/defender-47259-ignacio-monsalve-vicente-profile"
+        },
+        {
+          "name": "Jay Gupta",
+          "position": "Defender",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/184767.png?v=103.31",
+          "number": 27,
+          "profileUrl": "https://www.indiansuperleague.com/players/defender-184767-jay-gupta-profile"
+        },
+        {
+          "name": "Lalchungnunga",
+          "position": "Defender",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/163173.png?v=103.31",
+          "number": 5,
+          "profileUrl": "https://www.indiansuperleague.com/players/defender-163173-lalchungnunga-profile"
+        },
+        {
+          "name": "Martand Raina",
+          "position": "Defender",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/207686.png?v=103.31",
+          "number": 16,
+          "profileUrl": "https://www.indiansuperleague.com/players/defender-207686-martand-raina-profile"
+        },
+        {
+          "name": "Mohamad Rakip",
+          "position": "Defender",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/55646.png?v=103.31",
+          "number": 12,
+          "profileUrl": "https://www.indiansuperleague.com/players/defender-55646-mohamad-rakip-profile"
+        },
+        {
+          "name": "Narender Gahlot",
+          "position": "Defender",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/63444.png?v=103.31",
+          "number": 18,
+          "profileUrl": "https://www.indiansuperleague.com/players/defender-63444-narender-gahlot-profile"
+        },
+        {
+          "name": "Sandip Mandi",
+          "position": "Defender",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/61277.png?v=103.31",
+          "number": 34,
+          "profileUrl": "https://www.indiansuperleague.com/players/defender-61277-sandip-mandi-profile"
+        },
+        {
+          "name": "Bipin Singh Thounaojam",
+          "position": "Midfielder",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/31843.png?v=103.31",
+          "number": 29,
+          "profileUrl": "https://www.indiansuperleague.com/players/midfielder-31843-bipin-singh-thounaojam-profile"
+        },
+        {
+          "name": "Boris Singh Thangjam",
+          "position": "Midfielder",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/33962.png?v=103.31",
+          "number": 17,
+          "profileUrl": "https://www.indiansuperleague.com/players/midfielder-33962-boris-singh-thangjam-profile"
+        },
+        {
+          "name": "Christopher James Ikonomidis",
+          "position": "Midfielder",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/19607.png?v=103.31",
+          "number": 8,
+          "profileUrl": "https://www.indiansuperleague.com/players/midfielder-19607-christopher-james-ikonomidis-profile"
+        },
+        {
+          "name": "Daniel Ramirez Fernandez",
+          "position": "Midfielder",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/143792.png?v=103.31",
+          "number": 11,
+          "profileUrl": "https://www.indiansuperleague.com/players/midfielder-143792-daniel-ramirez-fernandez-profile"
+        },
+        {
+          "name": "Danish Farooq",
+          "position": "Midfielder",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/63700.png?v=103.31",
+          "number": 8,
+          "profileUrl": "https://www.indiansuperleague.com/players/midfielder-63700-danish-farooq-profile"
+        },
+        {
+          "name": "Diego Zivulic",
+          "position": "Midfielder",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/31655.png?v=103.31",
+          "number": 21,
+          "profileUrl": "https://www.indiansuperleague.com/players/midfielder-31655-diego-zivulic-profile"
+        },
+        {
+          "name": "Edmund Lalrindika",
+          "position": "Midfielder",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/36326.png?v=103.31",
+          "number": 10,
+          "profileUrl": "https://www.indiansuperleague.com/players/midfielder-36326-edmund-lalrindika-profile"
+        },
+        {
+          "name": "Guite Vanlalpeka",
+          "position": "Midfielder",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/183929.png?v=103.31",
+          "number": 30,
+          "profileUrl": "https://www.indiansuperleague.com/players/midfielder-183929-guite-vanlalpeka-profile"
+        },
+        {
+          "name": "Jeakson Singh Thounaojam",
+          "position": "Midfielder",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/34002.png?v=103.31",
+          "number": 25,
+          "profileUrl": "https://www.indiansuperleague.com/players/midfielder-34002-jeakson-singh-thounaojam-profile"
+        },
+        {
+          "name": "Lalramsanga",
+          "position": "Midfielder",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/176173.png?v=103.31",
+          "number": 31,
+          "profileUrl": "https://www.indiansuperleague.com/players/midfielder-176173-lalramsanga-profile"
+        },
+        {
+          "name": "Mohammed Asif Khan",
+          "position": "Midfielder",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/69065.png?v=103.31",
+          "number": 36,
+          "profileUrl": "https://www.indiansuperleague.com/players/midfielder-69065-mohammed-asif-khan-profile"
+        },
+        {
+          "name": "Mohammed Bassim Ahmed Rashid",
+          "position": "Midfielder",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/186743.png?v=103.31",
+          "number": 74,
+          "profileUrl": "https://www.indiansuperleague.com/players/midfielder-186743-mohammed-bassim-ahmed-rashid-profile"
+        },
+        {
+          "name": "Naorem Mahesh Singh",
+          "position": "Midfielder",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/63582.png?v=103.31",
+          "number": 15,
+          "profileUrl": "https://www.indiansuperleague.com/players/midfielder-63582-naorem-mahesh-singh-profile"
+        },
+        {
+          "name": "Raynier Raymond Fernandes",
+          "position": "Midfielder",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/35264.png?v=103.31",
+          "number": 20,
+          "profileUrl": "https://www.indiansuperleague.com/players/midfielder-35264-raynier-raymond-fernandes-profile"
+        },
+        {
+          "name": "Rohit Kumar",
+          "position": "Midfielder",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/31842.png?v=103.31",
+          "number": 6,
+          "profileUrl": "https://www.indiansuperleague.com/players/midfielder-31842-rohit-kumar-profile"
+        },
+        {
+          "name": "Souvik Alok Chakrabarti",
+          "position": "Midfielder",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/10659.png?v=103.31",
+          "number": 23,
+          "profileUrl": "https://www.indiansuperleague.com/players/midfielder-10659-souvik-alok-chakrabarti-profile"
+        },
+        {
+          "name": "Vishnu Puthiya Valappill",
+          "position": "Midfielder",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/187549.png?v=103.31",
+          "number": 7,
+          "profileUrl": "https://www.indiansuperleague.com/players/midfielder-187549-vishnu-puthiya-valappill-profile"
+        },
+        {
+          "name": "Ake Arnaud Loba",
+          "position": "Forward",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/152839.png?v=103.31",
+          "number": 32,
+          "profileUrl": "https://www.indiansuperleague.com/players/forward-152839-ake-arnaud-loba-profile"
+        },
+        {
+          "name": "David Lalhlansanga",
+          "position": "Forward",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/69463.png?v=103.31",
+          "number": 14,
+          "profileUrl": "https://www.indiansuperleague.com/players/forward-69463-david-lalhlansanga-profile"
+        },
+        {
+          "name": "Jesin TK Thonikkara",
+          "position": "Forward",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/189575.png?v=103.31",
+          "number": 22,
+          "profileUrl": "https://www.indiansuperleague.com/players/forward-189575-jesin-tk-thonikkara-profile"
+        },
+        {
+          "name": "Lukasz Zwolinski",
+          "position": "Forward",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/70823.png?v=103.31",
+          "number": 38,
+          "profileUrl": "https://www.indiansuperleague.com/players/forward-70823-lukasz-zwolinski-profile"
+        },
+        {
+          "name": "Nsungusi Effiong",
+          "position": "Forward",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/226831.png?v=103.31",
+          "number": 34,
+          "profileUrl": "https://www.indiansuperleague.com/players/forward-226831-nsungusi-effiong-profile"
+        },
+        {
+          "name": "Rohit Danu",
+          "position": "Forward",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/63452.png?v=103.31",
+          "number": 19,
+          "profileUrl": "https://www.indiansuperleague.com/players/forward-63452-rohit-danu-profile"
+        }
+      ],
+      "coach": {
+        "name": "Antonio Lopez Habas",
+        "position": "Head coach",
+        "photo": "https://www.indiansuperleague.com/static-assets/images/support-staff/15620.png?v=103.31",
+        "number": null
+      }
+    },
+    {
+      "teamId": "496",
+      "sourceUrl": "https://www.indiansuperleague.com/clubs/496-fc-goa-profile/squad",
+      "verifiedAt": "2026-10-11T05:57:21.645828+00:00",
+      "players": [
+        {
+          "name": "Bob Jackson Raj",
+          "position": "Goalkeeper",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/162980.png?v=103.31",
+          "number": 45,
+          "profileUrl": "https://www.indiansuperleague.com/players/goalkeeper-162980-bob-jackson-raj-profile"
+        },
+        {
+          "name": "Lara Sharma",
+          "position": "Goalkeeper",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/36764.png?v=103.31",
+          "number": 72,
+          "profileUrl": "https://www.indiansuperleague.com/players/goalkeeper-36764-lara-sharma-profile"
+        },
+        {
+          "name": "Lionel Daryl Rymmei",
+          "position": "Goalkeeper",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/225889.png?v=103.31",
+          "number": 33,
+          "profileUrl": "https://www.indiansuperleague.com/players/goalkeeper-225889-lionel-daryl-rymmei-profile"
+        },
+        {
+          "name": "Aakash Sangwan",
+          "position": "Defender",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/35248.png?v=103.31",
+          "number": 14,
+          "profileUrl": "https://www.indiansuperleague.com/players/defender-35248-aakash-sangwan-profile"
+        },
+        {
+          "name": "Jerry Lalrinzuala",
+          "position": "Defender",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/26713.png?v=103.31",
+          "number": 18,
+          "profileUrl": "https://www.indiansuperleague.com/players/defender-26713-jerry-lalrinzuala-profile"
+        },
+        {
+          "name": "Konsam Akash Singh",
+          "position": "Defender",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/233497.png?v=103.31",
+          "number": 48,
+          "profileUrl": "https://www.indiansuperleague.com/players/defender-233497-konsam-akash-singh-profile"
+        },
+        {
+          "name": "Nim Dorjee Tamang",
+          "position": "Defender",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/31845.png?v=103.31",
+          "number": 29,
+          "profileUrl": "https://www.indiansuperleague.com/players/defender-31845-nim-dorjee-tamang-profile"
+        },
+        {
+          "name": "Pedro Alejandro Zalaya Galardon",
+          "position": "Defender",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/233498.png?v=103.31",
+          "number": 15,
+          "profileUrl": "https://www.indiansuperleague.com/players/defender-233498-pedro-alejandro-zalaya-galardon-profile"
+        },
+        {
+          "name": "Ronney Willson Kharbudon",
+          "position": "Defender",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/175683.png?v=103.31",
+          "number": 35,
+          "profileUrl": "https://www.indiansuperleague.com/players/defender-175683-ronney-willson-kharbudon-profile"
+        },
+        {
+          "name": "Rudra Ved",
+          "position": "Defender",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/208092.png?v=103.31",
+          "number": 47,
+          "profileUrl": "https://www.indiansuperleague.com/players/defender-208092-rudra-ved-profile"
+        },
+        {
+          "name": "Sandesh Jhingan",
+          "position": "Defender",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/10641.png?v=103.31",
+          "number": 3,
+          "profileUrl": "https://www.indiansuperleague.com/players/defender-10641-sandesh-jhingan-profile"
+        },
+        {
+          "name": "Saveme Tariang",
+          "position": "Defender",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/233499.png?v=103.31",
+          "number": 25,
+          "profileUrl": "https://www.indiansuperleague.com/players/defender-233499-saveme-tariang-profile"
+        },
+        {
+          "name": "Seriton Benny Fernandes",
+          "position": "Defender",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/31824.png?v=103.31",
+          "number": 20,
+          "profileUrl": "https://www.indiansuperleague.com/players/defender-31824-seriton-benny-fernandes-profile"
+        },
+        {
+          "name": "Sitroy Carvalho",
+          "position": "Defender",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/189623.png?v=103.31",
+          "number": 41,
+          "profileUrl": "https://www.indiansuperleague.com/players/defender-189623-sitroy-carvalho-profile"
+        },
+        {
+          "name": "Udanta Singh Kumam",
+          "position": "Defender",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/26765.png?v=103.31",
+          "number": 21,
+          "profileUrl": "https://www.indiansuperleague.com/players/defender-26765-udanta-singh-kumam-profile"
+        },
+        {
+          "name": "Alexander Vallejo Minguez",
+          "position": "Midfielder",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/233500.png?v=103.31",
+          "number": 5,
+          "profileUrl": "https://www.indiansuperleague.com/players/midfielder-233500-alexander-vallejo-minguez-profile"
+        },
+        {
+          "name": "Dom Sahil Krishe de Noronha Tavora",
+          "position": "Midfielder",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/26717.png?v=103.31",
+          "number": 15,
+          "profileUrl": "https://www.indiansuperleague.com/players/midfielder-26717-dom-sahil-krishe-de-noronha-tavora-profile"
+        },
+        {
+          "name": "Francisco Feuillassier Abalo",
+          "position": "Midfielder",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/32050.png?v=103.31",
+          "number": 28,
+          "profileUrl": "https://www.indiansuperleague.com/players/midfielder-32050-francisco-feuillassier-abalo-profile"
+        },
+        {
+          "name": "Haobam Tomba Singh",
+          "position": "Midfielder",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/145060.png?v=103.31",
+          "number": 8,
+          "profileUrl": "https://www.indiansuperleague.com/players/midfielder-145060-haobam-tomba-singh-profile"
+        },
+        {
+          "name": "Harsh Shailesh Patre",
+          "position": "Midfielder",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/175729.png?v=103.31",
+          "number": 23,
+          "profileUrl": "https://www.indiansuperleague.com/players/midfielder-175729-harsh-shailesh-patre-profile"
+        },
+        {
+          "name": "Iker Guarrotxena Vallejo",
+          "position": "Midfielder",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/5075.png?v=103.31",
+          "number": 34,
+          "profileUrl": "https://www.indiansuperleague.com/players/midfielder-5075-iker-guarrotxena-vallejo-profile"
+        },
+        {
+          "name": "Mervin Domnic Fernandes",
+          "position": "Midfielder",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/192314.png?v=103.31",
+          "number": 49,
+          "profileUrl": "https://www.indiansuperleague.com/players/midfielder-192314-mervin-domnic-fernandes-profile"
+        },
+        {
+          "name": "Mohammad Yasir",
+          "position": "Midfielder",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/31851.png?v=103.31",
+          "number": 10,
+          "profileUrl": "https://www.indiansuperleague.com/players/midfielder-31851-mohammad-yasir-profile"
+        },
+        {
+          "name": "Prachit Gaonkar",
+          "position": "Midfielder",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/192321.png?v=103.31",
+          "number": 22,
+          "profileUrl": "https://www.indiansuperleague.com/players/midfielder-192321-prachit-gaonkar-profile"
+        },
+        {
+          "name": "Vellington Marcos Fernandes",
+          "position": "Midfielder",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/189622.png?v=103.31",
+          "number": 46,
+          "profileUrl": "https://www.indiansuperleague.com/players/midfielder-189622-vellington-marcos-fernandes-profile"
+        },
+        {
+          "name": "Christian Borrego Isabel",
+          "position": "Forward",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/186472.png?v=103.31",
+          "number": 9,
+          "profileUrl": "https://www.indiansuperleague.com/players/forward-186472-christian-borrego-isabel-profile"
+        },
+        {
+          "name": "Haodamlian Vaiphei",
+          "position": "Forward",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/233501.png?v=103.31",
+          "number": 40,
+          "profileUrl": "https://www.indiansuperleague.com/players/forward-233501-haodamlian-vaiphei-profile"
+        },
+        {
+          "name": "Isak Vanlalruatfela",
+          "position": "Forward",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/63486.png?v=103.31",
+          "number": 19,
+          "profileUrl": "https://www.indiansuperleague.com/players/forward-63486-isak-vanlalruatfela-profile"
+        },
+        {
+          "name": "Ishan Pandita",
+          "position": "Forward",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/142365.png?v=103.31",
+          "number": 26,
+          "profileUrl": "https://www.indiansuperleague.com/players/forward-142365-ishan-pandita-profile"
+        },
+        {
+          "name": "Jorge Ortiz Mendoza",
+          "position": "Forward",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/17556.png?v=103.31",
+          "number": 7,
+          "profileUrl": "https://www.indiansuperleague.com/players/forward-17556-jorge-ortiz-mendoza-profile"
+        },
+        {
+          "name": "KC Malsawmsanga",
+          "position": "Forward",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/229288.png?v=103.31",
+          "number": 77,
+          "profileUrl": "https://www.indiansuperleague.com/players/forward-229288-kc-malsawmsanga-profile"
+        },
+        {
+          "name": "Muhammed Nemil Valiyattil",
+          "position": "Forward",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/157105.png?v=103.31",
+          "number": 44,
+          "profileUrl": "https://www.indiansuperleague.com/players/forward-157105-muhammed-nemil-valiyattil-profile"
+        }
+      ],
+      "coach": {
+        "name": "Gouramangi Singh",
+        "position": "Head coach",
+        "photo": "https://www.indiansuperleague.com/static-assets/images/support-staff/10697.png?v=103.31",
+        "number": null
+      }
+    },
+    {
+      "teamId": "2354",
+      "sourceUrl": "https://www.indiansuperleague.com/clubs/2354-inter-kashi-profile/squad",
+      "verifiedAt": "2026-10-11T05:57:20.814774+00:00",
+      "players": [
+        {
+          "name": "Albino Giovanni Gomes",
+          "position": "Goalkeeper",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/19153.png?v=103.31",
+          "number": 32,
+          "profileUrl": "https://www.indiansuperleague.com/players/goalkeeper-19153-albino-giovanni-gomes-profile"
+        },
+        {
+          "name": "Mohit Singh Dhami",
+          "position": "Goalkeeper",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/157119.png?v=103.31",
+          "number": 31,
+          "profileUrl": "https://www.indiansuperleague.com/players/goalkeeper-157119-mohit-singh-dhami-profile"
+        },
+        {
+          "name": "Shubham Balasaheb Dhas",
+          "position": "Goalkeeper",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/68805.png?v=103.31",
+          "number": 1,
+          "profileUrl": "https://www.indiansuperleague.com/players/goalkeeper-68805-shubham-balasaheb-dhas-profile"
+        },
+        {
+          "name": "Aritra Das",
+          "position": "Defender",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/163116.png?v=103.31",
+          "number": 3,
+          "profileUrl": "https://www.indiansuperleague.com/players/defender-163116-aritra-das-profile"
+        },
+        {
+          "name": "Gursimrat Singh Gill",
+          "position": "Defender",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/30978.png?v=103.31",
+          "number": 33,
+          "profileUrl": "https://www.indiansuperleague.com/players/defender-30978-gursimrat-singh-gill-profile"
+        },
+        {
+          "name": "Laldinliana Renthlei",
+          "position": "Defender",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/35224.png?v=103.31",
+          "number": 26,
+          "profileUrl": "https://www.indiansuperleague.com/players/defender-35224-laldinliana-renthlei-profile"
+        },
+        {
+          "name": "Leewan Castanha",
+          "position": "Defender",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/198528.png?v=103.31",
+          "number": 19,
+          "profileUrl": "https://www.indiansuperleague.com/players/defender-198528-leewan-castanha-profile"
+        },
+        {
+          "name": "Nishchal Chandan",
+          "position": "Defender",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/162831.png?v=103.31",
+          "number": 2,
+          "profileUrl": "https://www.indiansuperleague.com/players/defender-162831-nishchal-chandan-profile"
+        },
+        {
+          "name": "Pratik Prabhakar Chaudhari",
+          "position": "Defender",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/26616.png?v=103.31",
+          "number": 4,
+          "profileUrl": "https://www.indiansuperleague.com/players/defender-26616-pratik-prabhakar-chaudhari-profile"
+        },
+        {
+          "name": "Sajad Hussain Parray",
+          "position": "Defender",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/176193.png?v=103.31",
+          "number": 6,
+          "profileUrl": "https://www.indiansuperleague.com/players/defender-176193-sajad-hussain-parray-profile"
+        },
+        {
+          "name": "Sumeet Passi",
+          "position": "Defender",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/25880.png?v=103.31",
+          "number": 25,
+          "profileUrl": "https://www.indiansuperleague.com/players/defender-25880-sumeet-passi-profile"
+        },
+        {
+          "name": "Tanush Pandey",
+          "position": "Defender",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/192284.png?v=103.31",
+          "number": 16,
+          "profileUrl": "https://www.indiansuperleague.com/players/defender-192284-tanush-pandey-profile"
+        },
+        {
+          "name": "Ashangbam Aphaoba Singh",
+          "position": "Midfielder",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/176251.png?v=103.31",
+          "number": 11,
+          "profileUrl": "https://www.indiansuperleague.com/players/midfielder-176251-ashangbam-aphaoba-singh-profile"
+        },
+        {
+          "name": "Hitesh Sharma",
+          "position": "Midfielder",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/31790.png?v=103.31",
+          "number": 18,
+          "profileUrl": "https://www.indiansuperleague.com/players/midfielder-31790-hitesh-sharma-profile"
+        },
+        {
+          "name": "Jitendra Singh",
+          "position": "Midfielder",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/33967.png?v=103.31",
+          "number": 14,
+          "profileUrl": "https://www.indiansuperleague.com/players/midfielder-33967-jitendra-singh-profile"
+        },
+        {
+          "name": "Karthik Jithendran Panicker",
+          "position": "Midfielder",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/163102.png?v=103.31",
+          "number": 15,
+          "profileUrl": "https://www.indiansuperleague.com/players/midfielder-163102-karthik-jithendran-panicker-profile"
+        },
+        {
+          "name": "Wayne Bosco Vaz",
+          "position": "Midfielder",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/31825.png?v=103.31",
+          "number": 5,
+          "profileUrl": "https://www.indiansuperleague.com/players/midfielder-31825-wayne-bosco-vaz-profile"
+        },
+        {
+          "name": "Ayush Chhikara",
+          "position": "Forward",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/162191.png?v=103.31",
+          "number": 28,
+          "profileUrl": "https://www.indiansuperleague.com/players/forward-162191-ayush-chhikara-profile"
+        },
+        {
+          "name": "Huidrom Thoi Singh",
+          "position": "Forward",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/144497.png?v=103.31",
+          "number": 20,
+          "profileUrl": "https://www.indiansuperleague.com/players/forward-144497-huidrom-thoi-singh-profile"
+        },
+        {
+          "name": "Manvir Singh",
+          "position": "Forward",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/69865.png?v=103.31",
+          "number": 9,
+          "profileUrl": "https://www.indiansuperleague.com/players/forward-69865-manvir-singh-profile"
+        },
+        {
+          "name": "Rosenberg Gilbert Gabriel",
+          "position": "Forward",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/176188.png?v=103.31",
+          "number": 17,
+          "profileUrl": "https://www.indiansuperleague.com/players/forward-176188-rosenberg-gilbert-gabriel-profile"
+        },
+        {
+          "name": "Sreekuttan Viruthiyil Santhosh",
+          "position": "Forward",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/157116.png?v=103.31",
+          "number": 41,
+          "profileUrl": "https://www.indiansuperleague.com/players/forward-157116-sreekuttan-viruthiyil-santhosh-profile"
+        }
+      ],
+      "coach": {
+        "name": "Abhijit Mondal",
+        "position": "Head coach",
+        "photo": "https://www.indiansuperleague.com/static-assets/images/support-staff/10703.png?v=103.31",
+        "number": null
+      }
+    },
+    {
+      "teamId": "498",
+      "sourceUrl": "https://www.indiansuperleague.com/clubs/498-kerala-blasters-fc-profile/squad",
+      "verifiedAt": "2026-10-11T05:57:27.953444+00:00",
+      "players": [
+        {
+          "name": "Alsabith Sulaiman Thekkekaramel",
+          "position": "Goalkeeper",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/196144.png?v=103.31",
+          "number": 81,
+          "profileUrl": "https://www.indiansuperleague.com/players/goalkeeper-196144-alsabith-sulaiman-thekkekaramel-profile"
+        },
+        {
+          "name": "Arsh Anwer Shaikh",
+          "position": "Goalkeeper",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/70538.png?v=103.31",
+          "number": 31,
+          "profileUrl": "https://www.indiansuperleague.com/players/goalkeeper-70538-arsh-anwer-shaikh-profile"
+        },
+        {
+          "name": "Aibanbha Kupar Dohling",
+          "position": "Defender",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/35212.png?v=103.31",
+          "number": 27,
+          "profileUrl": "https://www.indiansuperleague.com/players/defender-35212-aibanbha-kupar-dohling-profile"
+        },
+        {
+          "name": "Bikash Yumnam",
+          "position": "Defender",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/69528.png?v=103.31",
+          "number": 63,
+          "profileUrl": "https://www.indiansuperleague.com/players/defender-69528-bikash-yumnam-profile"
+        },
+        {
+          "name": "Brahmacharimayum Sumit Sharma",
+          "position": "Defender",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/226375.png?v=103.31",
+          "number": 30,
+          "profileUrl": "https://www.indiansuperleague.com/players/defender-226375-brahmacharimayum-sumit-sharma-profile"
+        },
+        {
+          "name": "Fallou Ndiaye",
+          "position": "Defender",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/229432.png?v=103.31",
+          "number": 44,
+          "profileUrl": "https://www.indiansuperleague.com/players/defender-229432-fallou-ndiaye-profile"
+        },
+        {
+          "name": "Huidrom Naocha Singh",
+          "position": "Defender",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/63629.png?v=103.31",
+          "number": 50,
+          "profileUrl": "https://www.indiansuperleague.com/players/defender-63629-huidrom-naocha-singh-profile"
+        },
+        {
+          "name": "Jaganath Jayan",
+          "position": "Defender",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/228876.png?v=103.31",
+          "number": 15,
+          "profileUrl": "https://www.indiansuperleague.com/players/defender-228876-jaganath-jayan-profile"
+        },
+        {
+          "name": "Ruivah Hormipam",
+          "position": "Defender",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/154107.png?v=103.31",
+          "number": 4,
+          "profileUrl": "https://www.indiansuperleague.com/players/defender-154107-ruivah-hormipam-profile"
+        },
+        {
+          "name": "Soraisham Sandeep Singh",
+          "position": "Defender",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/58793.png?v=103.31",
+          "number": 3,
+          "profileUrl": "https://www.indiansuperleague.com/players/defender-58793-soraisham-sandeep-singh-profile"
+        },
+        {
+          "name": "Adrian Nicolas Luna Retamar",
+          "position": "Midfielder",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/46791.png?v=103.31",
+          "number": 10,
+          "profileUrl": "https://www.indiansuperleague.com/players/midfielder-46791-adrian-nicolas-luna-retamar-profile"
+        },
+        {
+          "name": "Ebindas Yesudasan",
+          "position": "Midfielder",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/163113.png?v=103.31",
+          "number": 47,
+          "profileUrl": "https://www.indiansuperleague.com/players/midfielder-163113-ebindas-yesudasan-profile"
+        },
+        {
+          "name": "Freddy Lallawmawma",
+          "position": "Midfielder",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/176258.png?v=103.31",
+          "number": 6,
+          "profileUrl": "https://www.indiansuperleague.com/players/midfielder-176258-freddy-lallawmawma-profile"
+        },
+        {
+          "name": "Karim Benarif",
+          "position": "Midfielder",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/229656.png?v=103.31",
+          "number": 25,
+          "profileUrl": "https://www.indiansuperleague.com/players/midfielder-229656-karim-benarif-profile"
+        },
+        {
+          "name": "R Lalthanmawia",
+          "position": "Midfielder",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/176203.png?v=103.31",
+          "number": 97,
+          "profileUrl": "https://www.indiansuperleague.com/players/midfielder-176203-r-lalthanmawia-profile"
+        },
+        {
+          "name": "Salahudheen Adnan K",
+          "position": "Midfielder",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/192300.png?v=103.31",
+          "number": 26,
+          "profileUrl": "https://www.indiansuperleague.com/players/midfielder-192300-salahudheen-adnan-k-profile"
+        },
+        {
+          "name": "Vibin Mohanan",
+          "position": "Midfielder",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/163123.png?v=103.31",
+          "number": 8,
+          "profileUrl": "https://www.indiansuperleague.com/players/midfielder-163123-vibin-mohanan-profile"
+        },
+        {
+          "name": "Korou Singh Thingujam",
+          "position": "Forward",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/189678.png?v=103.31",
+          "number": 11,
+          "profileUrl": "https://www.indiansuperleague.com/players/forward-189678-korou-singh-thingujam-profile"
+        },
+        {
+          "name": "Loitongbam Taison Singh",
+          "position": "Forward",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/178935.png?v=103.31",
+          "number": 26,
+          "profileUrl": "https://www.indiansuperleague.com/players/forward-178935-loitongbam-taison-singh-profile"
+        },
+        {
+          "name": "Sreekuttan MS",
+          "position": "Forward",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/163105.png?v=103.31",
+          "number": 45,
+          "profileUrl": "https://www.indiansuperleague.com/players/forward-163105-sreekuttan-ms-profile"
+        }
+      ],
+      "coach": {
+        "name": "Ashley Westwood",
+        "position": "Head coach",
+        "photo": "https://www.indiansuperleague.com/static-assets/images/support-staff/38750.png?v=103.31",
+        "number": null
+      }
+    },
+    {
+      "teamId": "1874",
+      "sourceUrl": "https://www.indiansuperleague.com/clubs/1874-mohun-bagan-super-giant-profile/squad",
+      "verifiedAt": "2026-10-11T05:57:28.866617+00:00",
+      "players": [
+        {
+          "name": "Priyansh Dubey",
+          "position": "Goalkeeper",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/208311.png?v=103.31",
+          "number": 31,
+          "profileUrl": "https://www.indiansuperleague.com/players/goalkeeper-208311-priyansh-dubey-profile"
+        },
+        {
+          "name": "Syed Zahid Hussain Bukhari",
+          "position": "Goalkeeper",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/184612.png?v=103.31",
+          "number": 24,
+          "profileUrl": "https://www.indiansuperleague.com/players/goalkeeper-184612-syed-zahid-hussain-bukhari-profile"
+        },
+        {
+          "name": "Vishal Kaith",
+          "position": "Goalkeeper",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/26757.png?v=103.31",
+          "number": 1,
+          "profileUrl": "https://www.indiansuperleague.com/players/goalkeeper-26757-vishal-kaith-profile"
+        },
+        {
+          "name": "Alberto Rodriguez Martin",
+          "position": "Defender",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/158824.png?v=103.31",
+          "number": 21,
+          "profileUrl": "https://www.indiansuperleague.com/players/defender-158824-alberto-rodriguez-martin-profile"
+        },
+        {
+          "name": "Alex Saji",
+          "position": "Defender",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/69731.png?v=103.31",
+          "number": 40,
+          "profileUrl": "https://www.indiansuperleague.com/players/defender-69731-alex-saji-profile"
+        },
+        {
+          "name": "Asish Rai",
+          "position": "Defender",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/36329.png?v=103.31",
+          "number": 44,
+          "profileUrl": "https://www.indiansuperleague.com/players/defender-36329-asish-rai-profile"
+        },
+        {
+          "name": "Mehtab Singh",
+          "position": "Defender",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/35318.png?v=103.31",
+          "number": 5,
+          "profileUrl": "https://www.indiansuperleague.com/players/defender-35318-mehtab-singh-profile"
+        },
+        {
+          "name": "Rahul Shankar Bheke",
+          "position": "Defender",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/21201.png?v=103.31",
+          "number": 2,
+          "profileUrl": "https://www.indiansuperleague.com/players/defender-21201-rahul-shankar-bheke-profile"
+        },
+        {
+          "name": "Roshan Singh Thangjam",
+          "position": "Defender",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/208313.png?v=103.31",
+          "number": 77,
+          "profileUrl": "https://www.indiansuperleague.com/players/defender-208313-roshan-singh-thangjam-profile"
+        },
+        {
+          "name": "Subhasish Prodyut Bose",
+          "position": "Defender",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/31875.png?v=103.31",
+          "number": 15,
+          "profileUrl": "https://www.indiansuperleague.com/players/defender-31875-subhasish-prodyut-bose-profile"
+        },
+        {
+          "name": "Tekcham Abhishek Singh",
+          "position": "Defender",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/176261.png?v=103.31",
+          "number": 27,
+          "profileUrl": "https://www.indiansuperleague.com/players/defender-176261-tekcham-abhishek-singh-profile"
+        },
+        {
+          "name": "Abhishek Dhananjay Suryavanshi",
+          "position": "Midfielder",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/156066.png?v=103.31",
+          "number": 16,
+          "profileUrl": "https://www.indiansuperleague.com/players/midfielder-156066-abhishek-dhananjay-suryavanshi-profile"
+        },
+        {
+          "name": "Anirudh Thapa",
+          "position": "Midfielder",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/26751.png?v=103.31",
+          "number": 6,
+          "profileUrl": "https://www.indiansuperleague.com/players/midfielder-26751-anirudh-thapa-profile"
+        },
+        {
+          "name": "Deepak Tangri",
+          "position": "Midfielder",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/36315.png?v=103.31",
+          "number": 22,
+          "profileUrl": "https://www.indiansuperleague.com/players/midfielder-36315-deepak-tangri-profile"
+        },
+        {
+          "name": "Dejan Drazic",
+          "position": "Midfielder",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/19486.png?v=103.31",
+          "number": 71,
+          "profileUrl": "https://www.indiansuperleague.com/players/midfielder-19486-dejan-drazic-profile"
+        },
+        {
+          "name": "Lalengmawia Ralte",
+          "position": "Midfielder",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/33997.png?v=103.31",
+          "number": 45,
+          "profileUrl": "https://www.indiansuperleague.com/players/midfielder-33997-lalengmawia-ralte-profile"
+        },
+        {
+          "name": "Lallianzuala Chhangte",
+          "position": "Midfielder",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/25877.png?v=103.31",
+          "number": 9,
+          "profileUrl": "https://www.indiansuperleague.com/players/midfielder-25877-lallianzuala-chhangte-profile"
+        },
+        {
+          "name": "Liston Colaco",
+          "position": "Midfielder",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/35062.png?v=103.31",
+          "number": 7,
+          "profileUrl": "https://www.indiansuperleague.com/players/midfielder-35062-liston-colaco-profile"
+        },
+        {
+          "name": "Manvir Singh",
+          "position": "Midfielder",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/32021.png?v=103.31",
+          "number": 11,
+          "profileUrl": "https://www.indiansuperleague.com/players/midfielder-32021-manvir-singh-profile"
+        },
+        {
+          "name": "Miguel Figueira Damasceno",
+          "position": "Midfielder",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/142948.png?v=103.31",
+          "number": 10,
+          "profileUrl": "https://www.indiansuperleague.com/players/midfielder-142948-miguel-figueira-damasceno-profile"
+        },
+        {
+          "name": "Sahal Abdul Samad",
+          "position": "Midfielder",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/36603.png?v=103.31",
+          "number": 18,
+          "profileUrl": "https://www.indiansuperleague.com/players/midfielder-36603-sahal-abdul-samad-profile"
+        },
+        {
+          "name": "Samir Zeljkovic",
+          "position": "Midfielder",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/226391.png?v=103.31",
+          "number": 8,
+          "profileUrl": "https://www.indiansuperleague.com/players/defender-226391-samir-zeljkovic-profile"
+        },
+        {
+          "name": "Sayan Banerjee",
+          "position": "Midfielder",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/189580.png?v=103.31",
+          "number": 14,
+          "profileUrl": "https://www.indiansuperleague.com/players/midfielder-189580-sayan-banerjee-profile"
+        },
+        {
+          "name": "Jamie MacLaren",
+          "position": "Forward",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/25775.png?v=103.31",
+          "number": 29,
+          "profileUrl": "https://www.indiansuperleague.com/players/forward-25775-jamie-maclaren-profile"
+        },
+        {
+          "name": "Kiyan Nassiri Giri",
+          "position": "Forward",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/156065.png?v=103.31",
+          "number": 17,
+          "profileUrl": "https://www.indiansuperleague.com/players/forward-156065-kiyan-nassiri-giri-profile"
+        },
+        {
+          "name": "Lee Harry Erwin",
+          "position": "Forward",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/23029.png?v=103.31",
+          "number": 19,
+          "profileUrl": "https://www.indiansuperleague.com/players/forward-23029-lee-harry-erwin-profile"
+        },
+        {
+          "name": "Suhail Ahmad Bhat",
+          "position": "Forward",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/178933.png?v=103.31",
+          "number": 72,
+          "profileUrl": "https://www.indiansuperleague.com/players/forward-178933-suhail-ahmad-bhat-profile"
+        }
+      ],
+      "coach": {
+        "name": "Panagiotis Dilmperis",
+        "position": "Head coach",
+        "photo": "https://www.indiansuperleague.com/static-assets/images/support-staff/191655.png?v=103.31",
+        "number": null
+      }
+    },
+    {
+      "teamId": "506",
+      "sourceUrl": "https://www.indiansuperleague.com/clubs/506-mumbai-city-fc-profile/squad",
+      "verifiedAt": "2026-10-11T05:57:28.164967+00:00",
+      "players": [
+        {
+          "name": "Ahan Prakash",
+          "position": "Goalkeeper",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/174402.png?v=103.31",
+          "number": 32,
+          "profileUrl": "https://www.indiansuperleague.com/players/goalkeeper-174402-ahan-prakash-profile"
+        },
+        {
+          "name": "Ashish Sibi",
+          "position": "Goalkeeper",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/162826.png?v=103.31",
+          "number": 89,
+          "profileUrl": "https://www.indiansuperleague.com/players/goalkeeper-162826-ashish-sibi-profile"
+        },
+        {
+          "name": "Rehenesh Thumbirumbu Paramba",
+          "position": "Goalkeeper",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/10682.png?v=103.31",
+          "number": 23,
+          "profileUrl": "https://www.indiansuperleague.com/players/goalkeeper-10682-rehenesh-thumbirumbu-paramba-profile"
+        },
+        {
+          "name": "Akash Mishra",
+          "position": "Defender",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/63446.png?v=103.31",
+          "number": 31,
+          "profileUrl": "https://www.indiansuperleague.com/players/defender-63446-akash-mishra-profile"
+        },
+        {
+          "name": "Amandeep Vrish Bhan",
+          "position": "Defender",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/178934.png?v=103.31",
+          "number": 18,
+          "profileUrl": "https://www.indiansuperleague.com/players/defender-178934-amandeep-vrish-bhan-profile"
+        },
+        {
+          "name": "Bijay Chhetri",
+          "position": "Defender",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/63472.png?v=103.31",
+          "number": 17,
+          "profileUrl": "https://www.indiansuperleague.com/players/defender-63472-bijay-chhetri-profile"
+        },
+        {
+          "name": "Carlos Javier Delgado Rodriguez",
+          "position": "Defender",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/5171.png?v=103.31",
+          "number": 5,
+          "profileUrl": "https://www.indiansuperleague.com/players/defender-5171-carlos-javier-delgado-rodriguez-profile"
+        },
+        {
+          "name": "Dhruv Alva",
+          "position": "Defender",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/226233.png?v=103.31",
+          "number": 2,
+          "profileUrl": "https://www.indiansuperleague.com/players/defender-226233-dhruv-alva-profile"
+        },
+        {
+          "name": "Hmingthanmawia Ralte",
+          "position": "Defender",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/68808.png?v=103.31",
+          "number": 3,
+          "profileUrl": "https://www.indiansuperleague.com/players/defender-68808-hmingthanmawia-ralte-profile"
+        },
+        {
+          "name": "Lazar Cirkovic",
+          "position": "Defender",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/15295.png?v=103.31",
+          "number": 4,
+          "profileUrl": "https://www.indiansuperleague.com/players/defender-15295-lazar-cirkovic-profile"
+        },
+        {
+          "name": "Nathan Asher Rodrigues",
+          "position": "Defender",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/182725.png?v=103.31",
+          "number": 27,
+          "profileUrl": "https://www.indiansuperleague.com/players/defender-182725-nathan-asher-rodrigues-profile"
+        },
+        {
+          "name": "Sahil Panwar",
+          "position": "Defender",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/36521.png?v=103.31",
+          "number": 36,
+          "profileUrl": "https://www.indiansuperleague.com/players/defender-36521-sahil-panwar-profile"
+        },
+        {
+          "name": "Aadil Sheikh",
+          "position": "Midfielder",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/192306.png?v=103.31",
+          "number": 39,
+          "profileUrl": "https://www.indiansuperleague.com/players/midfielder-192306-aadil-sheikh-profile"
+        },
+        {
+          "name": "Bawitlung Lalnuntluanga",
+          "position": "Midfielder",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/176153.png?v=103.31",
+          "number": 14,
+          "profileUrl": "https://www.indiansuperleague.com/players/midfielder-176153-bawitlung-lalnuntluanga-profile"
+        },
+        {
+          "name": "Brandon Fernandes",
+          "position": "Midfielder",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/19152.png?v=103.31",
+          "number": 10,
+          "profileUrl": "https://www.indiansuperleague.com/players/midfielder-19152-brandon-fernandes-profile"
+        },
+        {
+          "name": "Franklin Nazareth",
+          "position": "Midfielder",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/182727.png?v=103.31",
+          "number": 16,
+          "profileUrl": "https://www.indiansuperleague.com/players/midfielder-182727-franklin-nazareth-profile"
+        },
+        {
+          "name": "Ishaan Shishodia",
+          "position": "Midfielder",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/189680.png?v=103.31",
+          "number": 21,
+          "profileUrl": "https://www.indiansuperleague.com/players/midfielder-189680-ishaan-shishodia-profile"
+        },
+        {
+          "name": "Sergio Llamas Pardo",
+          "position": "Midfielder",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/9899.png?v=103.31",
+          "number": 8,
+          "profileUrl": "https://www.indiansuperleague.com/players/midfielder-9899-sergio-llamas-pardo-profile"
+        },
+        {
+          "name": "Supratim Das",
+          "position": "Midfielder",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/192078.png?v=103.31",
+          "number": 24,
+          "profileUrl": "https://www.indiansuperleague.com/players/midfielder-192078-supratim-das-profile"
+        },
+        {
+          "name": "Zothanpuia",
+          "position": "Midfielder",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/184189.png?v=103.31",
+          "number": 45,
+          "profileUrl": "https://www.indiansuperleague.com/players/midfielder-184189-zothanpuia-profile"
+        },
+        {
+          "name": "Farukh Haji Kasam Choudhary",
+          "position": "Forward",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/26753.png?v=103.31",
+          "number": 27,
+          "profileUrl": "https://www.indiansuperleague.com/players/forward-26753-farukh-haji-kasam-choudhary-profile"
+        },
+        {
+          "name": "Hridaya Jain",
+          "position": "Forward",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/233516.png?v=103.31",
+          "number": 19,
+          "profileUrl": "https://www.indiansuperleague.com/players/forward-233516-hridaya-jain-profile"
+        },
+        {
+          "name": "Leandro Gaston Otormin Fumero",
+          "position": "Forward",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/214924.png?v=103.31",
+          "number": 20,
+          "profileUrl": "https://www.indiansuperleague.com/players/forward-214924-leandro-gaston-otormin-fumero-profile"
+        },
+        {
+          "name": "Muhammed Ajsal",
+          "position": "Forward",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/163111.png?v=103.31",
+          "number": 22,
+          "profileUrl": "https://www.indiansuperleague.com/players/forward-163111-muhammed-ajsal-profile"
+        },
+        {
+          "name": "Noufal P.N",
+          "position": "Forward",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/176154.png?v=103.31",
+          "number": 92,
+          "profileUrl": "https://www.indiansuperleague.com/players/forward-176154-noufal-p.n-profile"
+        },
+        {
+          "name": "Vikram Partap Singh",
+          "position": "Forward",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/63450.png?v=103.31",
+          "number": 6,
+          "profileUrl": "https://www.indiansuperleague.com/players/forward-63450-vikram-partap-singh-profile"
+        },
+        {
+          "name": "Wilmar Jordan Gil",
+          "position": "Forward",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/16507.png?v=103.31",
+          "number": 7,
+          "profileUrl": "https://www.indiansuperleague.com/players/forward-16507-wilmar-jordan-gil-profile"
+        },
+        {
+          "name": "Yuvraj Kadam",
+          "position": "Forward",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/232790.png?v=103.31",
+          "number": 49,
+          "profileUrl": "https://www.indiansuperleague.com/players/forward-232790-yuvraj-kadam-profile"
+        }
+      ],
+      "coach": {
+        "name": "Manolo Marquez",
+        "position": "Head coach",
+        "photo": "https://www.indiansuperleague.com/static-assets/images/support-staff/127200.png?v=103.31",
+        "number": null
+      }
+    },
+    {
+      "teamId": "504",
+      "sourceUrl": "https://www.indiansuperleague.com/clubs/504-northeast-united-fc-profile/squad",
+      "verifiedAt": "2026-10-11T05:57:28.198988+00:00",
+      "players": [
+        {
+          "name": "Dipesh Chauhan",
+          "position": "Goalkeeper",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/144495.png?v=103.31",
+          "number": 20,
+          "profileUrl": "https://www.indiansuperleague.com/players/goalkeeper-144495-dipesh-chauhan-profile"
+        },
+        {
+          "name": "Gurmeet Singh",
+          "position": "Goalkeeper",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/55664.png?v=103.31",
+          "number": 1,
+          "profileUrl": "https://www.indiansuperleague.com/players/goalkeeper-55664-gurmeet-singh-profile"
+        },
+        {
+          "name": "Mohanraj K",
+          "position": "Goalkeeper",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/186534.png?v=103.31",
+          "number": 33,
+          "profileUrl": "https://www.indiansuperleague.com/players/goalkeeper-186534-mohanraj-k-profile"
+        },
+        {
+          "name": "Asheer Akhtar",
+          "position": "Defender",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/55637.png?v=103.31",
+          "number": 12,
+          "profileUrl": "https://www.indiansuperleague.com/players/defender-55637-asheer-akhtar-profile"
+        },
+        {
+          "name": "Buanthanglun Samte",
+          "position": "Defender",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/162794.png?v=103.31",
+          "number": 77,
+          "profileUrl": "https://www.indiansuperleague.com/players/defender-162794-buanthanglun-samte-profile"
+        },
+        {
+          "name": "Ngasepam Tondonba Singh",
+          "position": "Defender",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/36348.png?v=103.31",
+          "number": 3,
+          "profileUrl": "https://www.indiansuperleague.com/players/defender-36348-ngasepam-tondonba-singh-profile"
+        },
+        {
+          "name": "Nikhil Barla",
+          "position": "Defender",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/61477.png?v=103.31",
+          "number": 66,
+          "profileUrl": "https://www.indiansuperleague.com/players/defender-61477-nikhil-barla-profile"
+        },
+        {
+          "name": "Pramveer Ranbir",
+          "position": "Defender",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/184783.png?v=103.31",
+          "number": 4,
+          "profileUrl": "https://www.indiansuperleague.com/players/defender-184783-pramveer-ranbir-profile"
+        },
+        {
+          "name": "Robin Yadav",
+          "position": "Defender",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/175575.png?v=103.31",
+          "number": 21,
+          "profileUrl": "https://www.indiansuperleague.com/players/defender-175575-robin-yadav-profile"
+        },
+        {
+          "name": "Saikhom Thoiba Singh",
+          "position": "Defender",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/193323.png?v=103.31",
+          "number": 26,
+          "profileUrl": "https://www.indiansuperleague.com/players/defender-193323-saikhom-thoiba-singh-profile"
+        },
+        {
+          "name": "Soraisham Dinesh Singh",
+          "position": "Defender",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/69571.png?v=103.31",
+          "number": 2,
+          "profileUrl": "https://www.indiansuperleague.com/players/defender-69571-soraisham-dinesh-singh-profile"
+        },
+        {
+          "name": "Abdul Rabeeh Anjukandan",
+          "position": "Midfielder",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/154633.png?v=103.31",
+          "number": 7,
+          "profileUrl": "https://www.indiansuperleague.com/players/midfielder-154633-abdul-rabeeh-anjukandan-profile"
+        },
+        {
+          "name": "Antonio Moyano",
+          "position": "Midfielder",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/64427.png?v=103.31",
+          "number": 8,
+          "profileUrl": "https://www.indiansuperleague.com/players/midfielder-64427-antonio-moyano-profile"
+        },
+        {
+          "name": "Danny Meitei Laishram",
+          "position": "Midfielder",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/192352.png?v=103.31",
+          "number": 17,
+          "profileUrl": "https://www.indiansuperleague.com/players/midfielder-192352-danny-meitei-laishram-profile"
+        },
+        {
+          "name": "Jithin Madathil Subran",
+          "position": "Midfielder",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/61097.png?v=103.31",
+          "number": 80,
+          "profileUrl": "https://www.indiansuperleague.com/players/midfielder-61097-jithin-madathil-subran-profile"
+        },
+        {
+          "name": "Macarton Louis Nickson",
+          "position": "Midfielder",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/184683.png?v=103.31",
+          "number": 15,
+          "profileUrl": "https://www.indiansuperleague.com/players/midfielder-184683-macarton-louis-nickson-profile"
+        },
+        {
+          "name": "Mark Zothanpuia",
+          "position": "Midfielder",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/144511.png?v=103.31",
+          "number": 45,
+          "profileUrl": "https://www.indiansuperleague.com/players/midfielder-144511-mark-zothanpuia-profile"
+        },
+        {
+          "name": "Muthu Irulandi Mayakkannan",
+          "position": "Midfielder",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/69510.png?v=103.31",
+          "number": 13,
+          "profileUrl": "https://www.indiansuperleague.com/players/midfielder-69510-muthu-irulandi-mayakkannan-profile"
+        },
+        {
+          "name": "Nikola Ninkovic",
+          "position": "Midfielder",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/15305.png?v=103.31",
+          "number": 10,
+          "profileUrl": "https://www.indiansuperleague.com/players/midfielder-15305-nikola-ninkovic-profile"
+        },
+        {
+          "name": "Alaeddine Ajaraie",
+          "position": "Forward",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/192667.png?v=103.31",
+          "number": 14,
+          "profileUrl": "https://www.indiansuperleague.com/players/forward-192667-alaeddine-ajaraie-profile"
+        },
+        {
+          "name": "Aman CK",
+          "position": "Forward",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/186538.png?v=103.31",
+          "number": null,
+          "profileUrl": "https://www.indiansuperleague.com/players/forward-186538-aman-ck-profile"
+        },
+        {
+          "name": "Eneko Satrustegui Plano",
+          "position": "Forward",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/52761.png?v=103.31",
+          "number": 19,
+          "profileUrl": "https://www.indiansuperleague.com/players/forward-52761-eneko-satrustegui-plano-profile"
+        },
+        {
+          "name": "Ethyan Jesus Gonzalez Morales",
+          "position": "Forward",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/157202.png?v=103.31",
+          "number": 9,
+          "profileUrl": "https://www.indiansuperleague.com/players/forward-157202-ethyan-jesus-gonzalez-morales-profile"
+        },
+        {
+          "name": "Lalrinzuala Lalbiaknia",
+          "position": "Forward",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/228879.png?v=103.31",
+          "number": 18,
+          "profileUrl": "https://www.indiansuperleague.com/players/forward-228879-lalrinzuala-lalbiaknia-profile"
+        },
+        {
+          "name": "Parthib Sundar Gogoi",
+          "position": "Forward",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/163619.png?v=103.31",
+          "number": 11,
+          "profileUrl": "https://www.indiansuperleague.com/players/forward-163619-parthib-sundar-gogoi-profile"
+        },
+        {
+          "name": "Redeem Tlang",
+          "position": "Forward",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/10688.png?v=103.31",
+          "number": 22,
+          "profileUrl": "https://www.indiansuperleague.com/players/forward-10688-redeem-tlang-profile"
+        }
+      ],
+      "coach": {
+        "name": "Juan Benali",
+        "position": "Head coach",
+        "photo": "https://www.indiansuperleague.com/static-assets/images/support-staff/181203.png?v=103.31",
+        "number": null
+      }
+    },
+    {
+      "teamId": "1499",
+      "sourceUrl": "https://www.indiansuperleague.com/clubs/1499-odisha-fc-profile/squad",
+      "verifiedAt": "2026-10-11T05:57:28.159410+00:00",
+      "players": [
+        {
+          "name": "Hrithik Tiwari",
+          "position": "Goalkeeper",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/157109.png?v=103.31",
+          "number": 27,
+          "profileUrl": "https://www.indiansuperleague.com/players/goalkeeper-157109-hrithik-tiwari-profile"
+        },
+        {
+          "name": "Manas Dubey",
+          "position": "Goalkeeper",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/144510.png?v=103.31",
+          "number": 99,
+          "profileUrl": "https://www.indiansuperleague.com/players/goalkeeper-144510-manas-dubey-profile"
+        },
+        {
+          "name": "Sachin A Suresh",
+          "position": "Goalkeeper",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/157115.png?v=103.31",
+          "number": 31,
+          "profileUrl": "https://www.indiansuperleague.com/players/goalkeeper-157115-sachin-a-suresh-profile"
+        },
+        {
+          "name": "Aashir Mohamed Salim Vazhappilli",
+          "position": "Defender",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/213383.png?v=103.31",
+          "number": 47,
+          "profileUrl": "https://www.indiansuperleague.com/players/defender-213383-aashir-mohamed-salim-vazhappilli-profile"
+        },
+        {
+          "name": "Moirangthem Thoiba Singh",
+          "position": "Defender",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/63457.png?v=103.31",
+          "number": 24,
+          "profileUrl": "https://www.indiansuperleague.com/players/defender-63457-moirangthem-thoiba-singh-profile"
+        },
+        {
+          "name": "Saurabh Bhanwala",
+          "position": "Defender",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/63442.png?v=103.31",
+          "number": 6,
+          "profileUrl": "https://www.indiansuperleague.com/players/defender-63442-saurabh-bhanwala-profile"
+        },
+        {
+          "name": "Saviour Gama",
+          "position": "Defender",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/55653.png?v=103.31",
+          "number": 13,
+          "profileUrl": "https://www.indiansuperleague.com/players/defender-55653-saviour-gama-profile"
+        },
+        {
+          "name": "Stephen Eze",
+          "position": "Defender",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/36944.png?v=103.31",
+          "number": 66,
+          "profileUrl": "https://www.indiansuperleague.com/players/defender-36944-stephen-eze-profile"
+        },
+        {
+          "name": "Subham Bhattacharya",
+          "position": "Defender",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/192273.png?v=103.31",
+          "number": 3,
+          "profileUrl": "https://www.indiansuperleague.com/players/defender-192273-subham-bhattacharya-profile"
+        },
+        {
+          "name": "Tejas Krishna S",
+          "position": "Defender",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/163108.png?v=103.31",
+          "number": 16,
+          "profileUrl": "https://www.indiansuperleague.com/players/defender-163108-tejas-krishna-s-profile"
+        },
+        {
+          "name": "Vanlalzuidika Chhakchhuak",
+          "position": "Defender",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/162837.png?v=103.31",
+          "number": 34,
+          "profileUrl": "https://www.indiansuperleague.com/players/defender-162837-vanlalzuidika-chhakchhuak-profile"
+        },
+        {
+          "name": "Edwin Sydney Vanspaul Henry",
+          "position": "Midfielder",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/36318.png?v=103.31",
+          "number": 33,
+          "profileUrl": "https://www.indiansuperleague.com/players/midfielder-36318-edwin-sydney-vanspaul-henry-profile"
+        },
+        {
+          "name": "Giorgi Aburjania",
+          "position": "Midfielder",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/23912.png?v=103.31",
+          "number": 29,
+          "profileUrl": "https://www.indiansuperleague.com/players/midfielder-23912-giorgi-aburjania-profile"
+        },
+        {
+          "name": "K Lalrinfela",
+          "position": "Midfielder",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/176200.png?v=103.31",
+          "number": 25,
+          "profileUrl": "https://www.indiansuperleague.com/players/midfielder-176200-k-lalrinfela-profile"
+        },
+        {
+          "name": "Lalthathanga Khawlhring",
+          "position": "Midfielder",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/35321.png?v=103.31",
+          "number": 7,
+          "profileUrl": "https://www.indiansuperleague.com/players/midfielder-35321-lalthathanga-khawlhring-profile"
+        },
+        {
+          "name": "Mahmoud Eid",
+          "position": "Midfielder",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/186153.png?v=103.31",
+          "number": 93,
+          "profileUrl": "https://www.indiansuperleague.com/players/midfielder-186153-mahmoud-eid-profile"
+        },
+        {
+          "name": "Manuel Antonio Molina Valero",
+          "position": "Midfielder",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/9902.png?v=103.31",
+          "number": 12,
+          "profileUrl": "https://www.indiansuperleague.com/players/midfielder-9902-manuel-antonio-molina-valero-profile"
+        },
+        {
+          "name": "Nihal Sudeesh",
+          "position": "Midfielder",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/163714.png?v=103.31",
+          "number": 77,
+          "profileUrl": "https://www.indiansuperleague.com/players/midfielder-163714-nihal-sudeesh-profile"
+        },
+        {
+          "name": "Ritwik Kumar Das",
+          "position": "Midfielder",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/63701.png?v=103.31",
+          "number": 18,
+          "profileUrl": "https://www.indiansuperleague.com/players/midfielder-63701-ritwik-kumar-das-profile"
+        },
+        {
+          "name": "Arjun Makkoth Mohanan",
+          "position": "Forward",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/195021.png?v=103.31",
+          "number": 20,
+          "profileUrl": "https://www.indiansuperleague.com/players/forward-195021-arjun-makkoth-mohanan-profile"
+        },
+        {
+          "name": "Everton Nascimento de Mendonça",
+          "position": "Forward",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/160529.png?v=103.31",
+          "number": 8,
+          "profileUrl": "https://www.indiansuperleague.com/players/forward-160529-everton-nascimento-de-mendonça-profile"
+        },
+        {
+          "name": "Imran Khan",
+          "position": "Forward",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/55661.png?v=103.31",
+          "number": 17,
+          "profileUrl": "https://www.indiansuperleague.com/players/forward-55661-imran-khan-profile"
+        },
+        {
+          "name": "Kartik Hantal",
+          "position": "Forward",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/175594.png?v=103.31",
+          "number": 9,
+          "profileUrl": "https://www.indiansuperleague.com/players/forward-175594-kartik-hantal-profile"
+        },
+        {
+          "name": "Nandhakumar Sekar",
+          "position": "Forward",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/33676.png?v=103.31",
+          "number": 22,
+          "profileUrl": "https://www.indiansuperleague.com/players/forward-33676-nandhakumar-sekar-profile"
+        },
+        {
+          "name": "Rahim Ali",
+          "position": "Forward",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/34011.png?v=103.31",
+          "number": 11,
+          "profileUrl": "https://www.indiansuperleague.com/players/forward-34011-rahim-ali-profile"
+        },
+        {
+          "name": "Rahul Kannoly Praveen",
+          "position": "Forward",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/34007.png?v=103.31",
+          "number": 10,
+          "profileUrl": "https://www.indiansuperleague.com/players/forward-34007-rahul-kannoly-praveen-profile"
+        },
+        {
+          "name": "Sanathoi Singh Heikrujam",
+          "position": "Forward",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/229024.png?v=103.31",
+          "number": 19,
+          "profileUrl": "https://www.indiansuperleague.com/players/forward-229024-sanathoi-singh-heikrujam-profile"
+        },
+        {
+          "name": "Suhair Vadakkepeedika",
+          "position": "Forward",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/35315.png?v=103.31",
+          "number": 15,
+          "profileUrl": "https://www.indiansuperleague.com/players/forward-35315-suhair-vadakkepeedika-profile"
+        }
+      ],
+      "coach": {
+        "name": "Purushothaman TG",
+        "position": "Head coach",
+        "photo": "https://www.indiansuperleague.com/static-assets/images/support-staff/196729.png?v=103.31",
+        "number": null
+      }
+    },
+    {
+      "teamId": "1252",
+      "sourceUrl": "https://www.indiansuperleague.com/clubs/1252-punjab-fc-profile/squad",
+      "verifiedAt": "2026-10-11T05:57:28.162836+00:00",
+      "players": [
+        {
+          "name": "Arshdeep Singh Saini",
+          "position": "Goalkeeper",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/35236.png?v=103.31",
+          "number": 1,
+          "profileUrl": "https://www.indiansuperleague.com/players/goalkeeper-35236-arshdeep-singh-saini-profile"
+        },
+        {
+          "name": "Aryaman Bengani",
+          "position": "Goalkeeper",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/229465.png?v=103.31",
+          "number": 25,
+          "profileUrl": "https://www.indiansuperleague.com/players/goalkeeper-229465-aryaman-bengani-profile"
+        },
+        {
+          "name": "Muheet Shabir Khan",
+          "position": "Goalkeeper",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/144516.png?v=103.31",
+          "number": 78,
+          "profileUrl": "https://www.indiansuperleague.com/players/goalkeeper-144516-muheet-shabir-khan-profile"
+        },
+        {
+          "name": "Bijoy Varghese",
+          "position": "Defender",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/157117.png?v=103.31",
+          "number": 3,
+          "profileUrl": "https://www.indiansuperleague.com/players/defender-157117-bijoy-varghese-profile"
+        },
+        {
+          "name": "Jephthe Patrick Gerard Bahanack",
+          "position": "Defender",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/41913.png?v=103.31",
+          "number": 5,
+          "profileUrl": "https://www.indiansuperleague.com/players/defender-41913-jephthe-patrick-gerard-bahanack-profile"
+        },
+        {
+          "name": "Khaiminthang Lhungdim",
+          "position": "Defender",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/69542.png?v=103.31",
+          "number": 12,
+          "profileUrl": "https://www.indiansuperleague.com/players/defender-69542-khaiminthang-lhungdim-profile"
+        },
+        {
+          "name": "Muhammed Uvais Moyikkal",
+          "position": "Defender",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/159230.png?v=103.31",
+          "number": 2,
+          "profileUrl": "https://www.indiansuperleague.com/players/defender-159230-muhammed-uvais-moyikkal-profile"
+        },
+        {
+          "name": "Nongmeikapam Suresh Meitei",
+          "position": "Defender",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/69485.png?v=103.31",
+          "number": 74,
+          "profileUrl": "https://www.indiansuperleague.com/players/defender-69485-nongmeikapam-suresh-meitei-profile"
+        },
+        {
+          "name": "Usham Thoungamba Singh",
+          "position": "Defender",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/192649.png?v=103.31",
+          "number": 30,
+          "profileUrl": "https://www.indiansuperleague.com/players/defender-192649-usham-thoungamba-singh-profile"
+        },
+        {
+          "name": "Alfred Planas Moya",
+          "position": "Midfielder",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/53148.png?v=103.31",
+          "number": 10,
+          "profileUrl": "https://www.indiansuperleague.com/players/midfielder-53148-alfred-planas-moya-profile"
+        },
+        {
+          "name": "Bishu Sharma",
+          "position": "Midfielder",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/233511.png?v=103.31",
+          "number": 18,
+          "profileUrl": "https://www.indiansuperleague.com/players/midfielder-233511-bishu-sharma-profile"
+        },
+        {
+          "name": "Leon Augustine Asokan",
+          "position": "Midfielder",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/69339.png?v=103.31",
+          "number": 31,
+          "profileUrl": "https://www.indiansuperleague.com/players/midfielder-69339-leon-augustine-asokan-profile"
+        },
+        {
+          "name": "Manglenthang Kipgen",
+          "position": "Midfielder",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/176253.png?v=103.31",
+          "number": 19,
+          "profileUrl": "https://www.indiansuperleague.com/players/midfielder-176253-manglenthang-kipgen-profile"
+        },
+        {
+          "name": "Mohammad Inam",
+          "position": "Midfielder",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/185182.png?v=103.31",
+          "number": 8,
+          "profileUrl": "https://www.indiansuperleague.com/players/midfielder-185182-mohammad-inam-profile"
+        },
+        {
+          "name": "Nikhil N Prabhu",
+          "position": "Midfielder",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/142364.png?v=103.31",
+          "number": 4,
+          "profileUrl": "https://www.indiansuperleague.com/players/midfielder-142364-nikhil-n-prabhu-profile"
+        },
+        {
+          "name": "Princeton Arnald Rebello",
+          "position": "Midfielder",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/36832.png?v=103.31",
+          "number": 11,
+          "profileUrl": "https://www.indiansuperleague.com/players/midfielder-36832-princeton-arnald-rebello-profile"
+        },
+        {
+          "name": "Ricky John Shabong",
+          "position": "Midfielder",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/63474.png?v=103.31",
+          "number": 6,
+          "profileUrl": "https://www.indiansuperleague.com/players/midfielder-63474-ricky-john-shabong-profile"
+        },
+        {
+          "name": "Singamayum Shami",
+          "position": "Midfielder",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/192309.png?v=103.31",
+          "number": 21,
+          "profileUrl": "https://www.indiansuperleague.com/players/midfielder-192309-singamayum-shami-profile"
+        },
+        {
+          "name": "Vinit Rai",
+          "position": "Midfielder",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/26742.png?v=103.31",
+          "number": 16,
+          "profileUrl": "https://www.indiansuperleague.com/players/midfielder-26742-vinit-rai-profile"
+        },
+        {
+          "name": "Diego Henrique Oliveira Raposo",
+          "position": "Forward",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/233491.png?v=103.31",
+          "number": 11,
+          "profileUrl": "https://www.indiansuperleague.com/players/forward-233491-diego-henrique-oliveira-raposo-profile"
+        },
+        {
+          "name": "Gurkirat Singh",
+          "position": "Forward",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/63453.png?v=103.31",
+          "number": 91,
+          "profileUrl": "https://www.indiansuperleague.com/players/forward-63453-gurkirat-singh-profile"
+        },
+        {
+          "name": "Konsam Sanathoi Singh",
+          "position": "Forward",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/212702.png?v=103.31",
+          "number": 99,
+          "profileUrl": "https://www.indiansuperleague.com/players/forward-212702-konsam-sanathoi-singh-profile"
+        },
+        {
+          "name": "Kumanthem Ninthoinganba Meetei",
+          "position": "Forward",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/33992.png?v=103.31",
+          "number": 7,
+          "profileUrl": "https://www.indiansuperleague.com/players/forward-33992-kumanthem-ninthoinganba-meetei-profile"
+        },
+        {
+          "name": "Muhammad Suhail F",
+          "position": "Forward",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/192313.png?v=103.31",
+          "number": 17,
+          "profileUrl": "https://www.indiansuperleague.com/players/forward-192313-muhammad-suhail--f-profile"
+        },
+        {
+          "name": "Raphael Eric Messi Bouli",
+          "position": "Forward",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/36860.png?v=103.31",
+          "number": 28,
+          "profileUrl": "https://www.indiansuperleague.com/players/forward-36860-raphael-eric-messi-bouli-profile"
+        },
+        {
+          "name": "Sagolsem Bikash Singh",
+          "position": "Forward",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/162765.png?v=103.31",
+          "number": 23,
+          "profileUrl": "https://www.indiansuperleague.com/players/forward-162765-sagolsem-bikash-singh-profile"
+        },
+        {
+          "name": "Vishal Yadav",
+          "position": "Forward",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/197927.png?v=103.31",
+          "number": 14,
+          "profileUrl": "https://www.indiansuperleague.com/players/forward-197927-vishal-yadav-profile"
+        }
+      ],
+      "coach": {
+        "name": "Pavlos Dermitzakis",
+        "position": "Head coach",
+        "photo": "https://www.indiansuperleague.com/static-assets/images/support-staff/233519.png?v=103.31",
+        "number": null
+      }
+    },
+    {
+      "teamId": "3234",
+      "sourceUrl": "https://www.indiansuperleague.com/clubs/3234-sporting-club-delhi-profile/squad",
+      "verifiedAt": "2026-10-11T05:57:36.196864+00:00",
+      "players": [
+        {
+          "name": "Bhabindra Malla Thakuri",
+          "position": "Goalkeeper",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/162802.png?v=103.31",
+          "number": 26,
+          "profileUrl": "https://www.indiansuperleague.com/players/goalkeeper-162802-bhabindra-malla-thakuri-profile"
+        },
+        {
+          "name": "Nora Fernandes",
+          "position": "Goalkeeper",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/176157.png?v=103.31",
+          "number": 20,
+          "profileUrl": "https://www.indiansuperleague.com/players/goalkeeper-176157-nora-fernandes-profile"
+        },
+        {
+          "name": "Tajamul Islam",
+          "position": "Goalkeeper",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/229202.png?v=103.31",
+          "number": 21,
+          "profileUrl": "https://www.indiansuperleague.com/players/goalkeeper-229202-tajamul-islam-profile"
+        },
+        {
+          "name": "Vishal Yadav",
+          "position": "Goalkeeper",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/61468.png?v=103.31",
+          "number": 31,
+          "profileUrl": "https://www.indiansuperleague.com/players/goalkeeper-61468-vishal-yadav-profile"
+        },
+        {
+          "name": "Ashutosh Mehta",
+          "position": "Defender",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/10710.png?v=103.31",
+          "number": 6,
+          "profileUrl": "https://www.indiansuperleague.com/players/defender-10710-ashutosh-mehta-profile"
+        },
+        {
+          "name": "Clarence Savio Fernandes",
+          "position": "Defender",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/184686.png?v=103.31",
+          "number": 15,
+          "profileUrl": "https://www.indiansuperleague.com/players/defender-184686-clarence-savio-fernandes-profile"
+        },
+        {
+          "name": "Duvan Felipe Viafara Mina",
+          "position": "Defender",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/190442.png?v=103.31",
+          "number": 28,
+          "profileUrl": "https://www.indiansuperleague.com/players/defender-190442-duvan-felipe-viafara-mina-profile"
+        },
+        {
+          "name": "Lamgoulen Gou Hangshing",
+          "position": "Defender",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/198450.png?v=103.31",
+          "number": 19,
+          "profileUrl": "https://www.indiansuperleague.com/players/defender-198450-lamgoulen-gou-hangshing-profile"
+        },
+        {
+          "name": "Manoj Mohammad",
+          "position": "Defender",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/226367.png?v=103.31",
+          "number": 41,
+          "profileUrl": "https://www.indiansuperleague.com/players/defender-226367-manoj-mohammad-profile"
+        },
+        {
+          "name": "Mohammed Kaif",
+          "position": "Defender",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/207987.png?v=103.31",
+          "number": 5,
+          "profileUrl": "https://www.indiansuperleague.com/players/defender-207987-mohammed-kaif-profile"
+        },
+        {
+          "name": "Nduka Junior",
+          "position": "Defender",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/199439.png?v=103.31",
+          "number": 45,
+          "profileUrl": "https://www.indiansuperleague.com/players/defender-199439-nduka-junior-profile"
+        },
+        {
+          "name": "Yanglem Sanatomba Singh",
+          "position": "Defender",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/192212.png?v=103.31",
+          "number": 25,
+          "profileUrl": "https://www.indiansuperleague.com/players/defender-192212-yanglem-sanatomba-singh-profile"
+        },
+        {
+          "name": "Akshat Mehra",
+          "position": "Midfielder",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/228881.png?v=103.31",
+          "number": 66,
+          "profileUrl": "https://www.indiansuperleague.com/players/midfielder-228881-akshat-mehra-profile"
+        },
+        {
+          "name": "Ayush Adhikari",
+          "position": "Midfielder",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/69864.png?v=103.31",
+          "number": 8,
+          "profileUrl": "https://www.indiansuperleague.com/players/midfielder-69864-ayush-adhikari-profile"
+        },
+        {
+          "name": "David Richard Ndayishimiye",
+          "position": "Midfielder",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/232628.png?v=103.31",
+          "number": 8,
+          "profileUrl": "https://www.indiansuperleague.com/players/midfielder-232628-david-richard-ndayishimiye-profile"
+        },
+        {
+          "name": "Devanandan",
+          "position": "Midfielder",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/232642.png?v=103.31",
+          "number": 18,
+          "profileUrl": "https://www.indiansuperleague.com/players/midfielder-232642-devanandan-profile"
+        },
+        {
+          "name": "Juan Sebastian Pena Bermudez",
+          "position": "Midfielder",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/232641.png?v=103.31",
+          "number": 10,
+          "profileUrl": "https://www.indiansuperleague.com/players/midfielder-232641-juan-sebastian-pena-bermudez-profile"
+        },
+        {
+          "name": "K S Shikhar",
+          "position": "Midfielder",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/212667.png?v=103.31",
+          "number": 80,
+          "profileUrl": "https://www.indiansuperleague.com/players/midfielder-212667-k-s-shikhar-profile"
+        },
+        {
+          "name": "Kharon Subba",
+          "position": "Midfielder",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/229028.png?v=103.31",
+          "number": 16,
+          "profileUrl": "https://www.indiansuperleague.com/players/midfielder-229028-kharon-subba-profile"
+        },
+        {
+          "name": "Lalrinliana Hnamte",
+          "position": "Midfielder",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/156381.png?v=103.31",
+          "number": 4,
+          "profileUrl": "https://www.indiansuperleague.com/players/midfielder-156381-lalrinliana-hnamte-profile"
+        },
+        {
+          "name": "Mohammed Azhar",
+          "position": "Midfielder",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/163118.png?v=103.31",
+          "number": 24,
+          "profileUrl": "https://www.indiansuperleague.com/players/midfielder-163118-mohammed-azhar-profile"
+        },
+        {
+          "name": "Thokchom Diamond Singh",
+          "position": "Midfielder",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/232629.png?v=103.31",
+          "number": 30,
+          "profileUrl": "https://www.indiansuperleague.com/players/midfielder-232629-thokchom-diamond-singh-profile"
+        },
+        {
+          "name": "Augustine Lalrochana",
+          "position": "Forward",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/178895.png?v=103.31",
+          "number": 18,
+          "profileUrl": "https://www.indiansuperleague.com/players/forward-178895-augustine-lalrochana-profile"
+        },
+        {
+          "name": "Carlos Manuel dos Santos Fortes",
+          "position": "Forward",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/233492.png?v=103.31",
+          "number": 99,
+          "profileUrl": "https://www.indiansuperleague.com/players/forward-233492-carlos-manuel-dos-santos-fortes-profile"
+        },
+        {
+          "name": "Joseph Sunny",
+          "position": "Forward",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/189649.png?v=103.31",
+          "number": 11,
+          "profileUrl": "https://www.indiansuperleague.com/players/forward-189649-joseph-sunny-profile"
+        },
+        {
+          "name": "Mohammed Aimen",
+          "position": "Forward",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/163109.png?v=103.31",
+          "number": 23,
+          "profileUrl": "https://www.indiansuperleague.com/players/forward-163109-mohammed-aimen-profile"
+        },
+        {
+          "name": "Ramhlunchhunga",
+          "position": "Forward",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/69882.png?v=103.31",
+          "number": 10,
+          "profileUrl": "https://www.indiansuperleague.com/players/forward-69882-ramhlunchhunga-profile"
+        },
+        {
+          "name": "Rodrigo Araujo da Silva Filho",
+          "position": "Forward",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/156966.png?v=103.31",
+          "number": 7,
+          "profileUrl": "https://www.indiansuperleague.com/players/forward-156966-rodrigo-araujo-da-silva-filho-profile"
+        },
+        {
+          "name": "Sourav K",
+          "position": "Forward",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/159215.png?v=103.31",
+          "number": 27,
+          "profileUrl": "https://www.indiansuperleague.com/players/forward-159215-sourav-k-profile"
+        },
+        {
+          "name": "Yohann Victor Britto",
+          "position": "Forward",
+          "photo": "https://www.indiansuperleague.com/static-assets/images/players/226475.png?v=103.31",
+          "number": 99,
+          "profileUrl": "https://www.indiansuperleague.com/players/forward-226475-yohann-victor-britto-profile"
+        }
+      ],
+      "coach": {
+        "name": "Tomasz Tchorz",
+        "position": "Head coach",
+        "photo": "https://www.indiansuperleague.com/static-assets/images/support-staff/228932.png?v=103.31",
+        "number": null
+      }
+    }
+  ]
+}

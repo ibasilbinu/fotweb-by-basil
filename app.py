@@ -7,6 +7,7 @@ import streamlit.components.v1 as components
 
 from postmatch import load_results
 from season import load_season
+from squads import load_squads
 from update_log import load_update_log
 from datetime import datetime
 from zoneinfo import ZoneInfo
@@ -83,7 +84,13 @@ try:
 except (ValueError, KeyError, TypeError, OSError):
     update_log = {"schemaVersion": 1, "season": "2026-27", "checks": []}
 
+try:
+    squad_data = load_squads(ROOT / "data" / "isl-squads.json", {t["id"] for t in season_data["teams"]})
+except (ValueError, KeyError, TypeError, OSError):
+    squad_data = {"schemaVersion": 1, "season": "2026-27", "teams": []}
+
 fotweb_workspace(
+    squad_data=squad_data,
     season_data=season_data,
     update_log=update_log,
     post_match_data=post_match_data,

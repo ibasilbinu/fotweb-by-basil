@@ -24,6 +24,9 @@ Live site: https://fotweb.streamlit.app/
   assists, recorded goal contributions, yellow cards and red cards. Players'
   clubs and published-stat coverage are shown, with no invented totals.
 - Club dashboards with their schedule, results and any sourced match statistics.
+- Team Dashboard shows official squad lists grouped by position, player portraits
+  with silhouette fallbacks, shirt numbers when published and the head coach.
+  Each club includes the source link and squad verification time.
 - Team Dashboard adds separate points earned at home and away, plus top-five
   player lists for scorers, assists, recorded goals + assists, yellow cards and
   red cards. Counts come only from verified league-stage results, named card

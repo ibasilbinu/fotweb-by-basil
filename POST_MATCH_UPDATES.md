@@ -389,3 +389,19 @@ Optional record fields:
 
 Add only sourced fields that validate using the current `postmatch.py` contract.
 The existing points table and other sections continue to use the same results file.
+
+## Club squad details
+
+Each check also verifies squad and head coach changes on the official squad page
+for each club (`profileUrl` from `data/isl-season.json` plus `/squad`).
+Maintain `data/isl-squads.json`: schemaVersion 1, season 2026-27, teams with
+teamId, sourceUrl, verifiedAt, players and coach. Persons have name, position,
+photo (official HTTPS image or null), number (published shirt number or null)
+and an optional official profileUrl. Positions: Goalkeeper, Defender,
+Midfielder, Forward, Head coach. Preserve the current squad if the source
+fails or an unexpectedly empty listing is returned. Never infer transfers,
+positions or coaches from old articles. Treat these as official club listings,
+not a claim of final league registration. Only change verifiedAt after actually
+reading that club's listing successfully. Use `squads.load_squads` with the
+season's team IDs to validate before committing. Missing portraits use the
+website's silhouette automatically. Preserve other results and navigation.

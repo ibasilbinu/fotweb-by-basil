@@ -243,3 +243,33 @@ function tdSeasonPlayersPanel(){
     '</div><p class="td-explainer">Rankings use published player statistics and named card events from verified ISL league matches. '+
     'Each player’s club is shown below their name. Missing player data is never inferred, and the lists update when new verified match records are added.</p></section>';
 }
+
+/* Squad identities come from official club listings, separate from match stats. */
+function tdSquadPortrait(person){
+  return '<div class="td-squad-portrait"><svg viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="35" r="17"/><path d="M17 94v-13a33 33 0 0 1 66 0v13z"/></svg>'+
+    (person.photo?'<img class="td-squad-photo" src="'+esc(person.photo)+'" alt="'+esc(person.name)+'" loading="lazy" decoding="async" referrerpolicy="no-referrer">':'')+'</div>';
+}
+function tdSquadPerson(person){
+  return '<article class="td-squad-person">'+tdSquadPortrait(person)+
+    '<div><span class="td-squad-role">'+esc(person.position)+
+    (person.number!=null?' · #'+esc(person.number):'')+'</span><h4>'+esc(person.name)+'</h4>'+
+    (person.profileUrl?sourceLink(person.profileUrl,person.position==='Head coach'?'Coach profile':'Player profile'):'')+'</div></article>';
+}
+function tdSquadPanel(team){
+  const squad=(squadData.teams||[]).find(s=>s.teamId===team.id);
+  const players=squad?.players||[];
+  const groups=[['Goalkeeper','Goalkeepers'],['Defender','Defenders'],['Midfielder','Midfielders'],['Forward','Forwards']];
+  return '<section class="td-panel td-squad"><div class="td-panel-title"><h2>Squad & head coach</h2><small>'+players.length+' listed players</small></div>'+
+    '<div class="td-squad-coach">'+(squad?.coach?tdSquadPerson(squad.coach):'<p class="report-note">Head coach details are not available from the official listing yet.</p>')+'</div>'+
+    (players.length?groups.map(([position,title])=>{
+      const rows=players.filter(p=>p.position===position);
+      return rows.length?'<div class="td-squad-group"><h3>'+title+' <span>'+rows.length+'</span></h3><div class="td-squad-grid">'+rows.map(tdSquadPerson).join('')+'</div></div>':'';
+    }).join(''):'<p class="report-note">Squad details are not available from the official club listing yet.</p>')+
+    '<p class="td-explainer">'+sourceLink(squad?.sourceUrl||team.profileUrl.replace(/\/$/,'')+'/squad','Official squad source')+
+    (squad?.verifiedAt?' · Checked '+esc(formatDate(squad.verifiedAt))+' at '+esc(formatTime(squad.verifiedAt))+' IST':'')+
+    '. Club listings can change during the season. A silhouette is shown when a photo is unavailable.</p></section>';
+}
+// Capture image failures, including lazy images; never loop on a failed fallback.
+document.addEventListener('error',event=>{
+  if(event.target.matches?.('.td-squad-photo'))event.target.remove();
+},true);
