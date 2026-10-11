@@ -140,6 +140,13 @@ scheduled streams. Preserve all verified prior entries.
 
 ## Official English YouTube streams
 
+### Unmatched scheduled-stream report (verify before publishing)
+
+- Viewer-reported YouTube Live URL: `https://www.youtube.com/live/r7fCiGAMU3w` (reported 11 October 2026 as an additional scheduled stream on `@IndianSuperLeague`'s LIVE tab).
+- This URL is **not yet verified** against a specific fixture, official channel ownership, actual video title, and an English/ENG commentary label; do not assume it belongs to the next fixture solely because it appeared after already recorded streams.
+- On every hourly run, prioritize resolving this video using the official LIVE > UPCOMING listing and direct video metadata, including possible source-access failures. If matched and verified, commit its `broadcast` record to the correct fixture and remove this pending item. Do not falsely report the entire streaming check as complete while the listing cannot be accessed.
+
+
 Check `https://www.youtube.com/@IndianSuperLeague/streams` for scheduled match
 streams as well as ongoing broadcasts. **Prioritize the channel's LIVE tab,
 including its Upcoming section, not just ordinary Video uploads or past
