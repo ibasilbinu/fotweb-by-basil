@@ -97,7 +97,7 @@ function overviewSeasonTotals(){
     stat('TOTAL RED CARDS THIS SEASON',red.value,coverage(red.covered),'▣')+
     stat('TOTAL YELLOW CARDS THIS SEASON',yellow.value,coverage(yellow.covered),'▧');
 }
-const overviewSections=[['summary','Season summary'],['form','Club form · All teams'],
+const overviewSections=[['summary','Season summary'],
   ['players','Season player leaders'],['fixtures','Upcoming fixtures'],['points','Points table'],['analysis','Match analysis information']];
 function overviewSectionSelector(){
   return '<div class="td-section-selector"><label for="overviewSectionFilter">Display section'+
@@ -110,7 +110,6 @@ function overview(){
   let content='';
   switch(state.overviewSection){
     case 'summary':content=`<section class="hero"><div class="hero-copy"><span class="eyebrow">FOTWEB BY BASIL</span><h2>A new season.<br>Every match matters.</h2><p>Follow the published schedule, explore all ${seasonData.teams.length} clubs and return for verified analysis after the final whistle.</p><button class="primary-button" data-page="fixtures">Explore the fixtures &nbsp; ↗</button></div><div class="season-hero-art" aria-hidden="true"><span>ISL</span><strong>26<span>—</span>27</strong><small>THE SEASON WORKSPACE</small></div></section><div class="stats overview-stats">${stat('CLUBS THIS SEASON',seasonData.teams.length,'Official participating club list','♧')}${stat('SCHEDULE ENTRIES',seasonData.fixtures.length,esc(seasonData.scheduleScope),'▦')}${stat('FIXTURE WINDOW','10 OCT – 17 JAN','2026 → 2027 · Published Phase 1','↗')}${overviewSeasonTotals()}</div>`;break;
-    case 'form':content=tdSeasonFormPanel();break;
     case 'players':content=tdSeasonPlayersPanel();break;
     case 'fixtures':{
       const next=teamFixtures('all').filter(f=>!f.result&&f.status==='NS'&&istDate(f.kickoff)>=today);

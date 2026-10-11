@@ -21,9 +21,9 @@ Live site: https://fotweb.streamlit.app/
   Completed broadcasts appear as Watch replay; unannounced streams have no button.
 - Points totals calculated from verified league-stage FT results.
 - Season Overview also shows one selected section at a time: Season summary,
-  Club form, Season player leaders, Upcoming fixtures, Points table or Match
+  Season player leaders, Upcoming fixtures, Points table or Match
   analysis information. Its selector is independent of Team Dashboard.
-- Season Overview combines all clubs’ per-match points into one form chart,
+- Club Analytics combines all clubs’ per-match points into one form chart,
   with club colours, a selectable legend and hover/tap/focus match details.
 - Season Overview shows league-wide top-five player leaderboards for scorers,
   assists, recorded goal contributions, yellow cards and red cards. Players'
@@ -47,7 +47,7 @@ Live site: https://fotweb.streamlit.app/
   published options are Indian Super League and 2026–27, plus all 13 clubs;
   selecting a club refreshes its dashboard without filtering Season Overview
   or Fixtures & Results. Other competitions/seasons are not invented.
-- Club Analytics: all-club trend overlays (points, shots and goals), attack/defence rankings,
+- Club Analytics: per-match points form, attack/defence rankings,
   two-club statistical comparisons and a league possession-vs-shots scatter plot.
   Computes only from verified completed league results; displays game counts,
   metric-specific availability and early-season caveats. No paid data feed.

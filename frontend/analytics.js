@@ -289,18 +289,13 @@ function analyticsPage(){
   const played=summaries.filter(s=>s.games>0);
   const compA=caSelectedTeam(summaries,state.analyticsCompareA);
   const compB=caSelectedTeam(summaries,state.analyticsCompareB,compA?.team.id);
-  const metric=caMetricChoices.some(m=>m[0]===state.analyticsMetric)?state.analyticsMetric:'points';
   const snapshot=header('Club Analytics.','Explore trends, compare teams and investigate the numbers behind ISL 2026–27.','ISL · DATA EXPLORER')+
     '<div class="ca-summary">'+
     '<div><small>Verified league matches</small><strong>'+caLeagueMatches().length+'</strong></div>'+
     '<div><small>Clubs with results</small><strong>'+played.length+' / '+summaries.length+'</strong></div>'+
     '<div><small>Coverage</small><strong>'+esc(resultsData.updatedAt?formatDate(resultsData.updatedAt):'Awaiting updates')+'</strong></div></div>'+
     '<p class="ca-opening-note">Early-season data can be misleading. Clubs with no completed games are not ranked; missing statistics are never counted as zero. Every chart is calculated from FotWeb’s sourced match reports.</p>';
-  const trend='<section class="ca-panel ca-wide"><div class="ca-panel-head"><h3>Team performance trends</h3>'+
-    '<span>All clubs · one chart</span></div><div class="ca-filters ca-trend-controls"><label>Metric<select id="caTrendMetric">'+
-    caMetricChoices.map(([key,label])=>'<option value="'+key+'"'+(key===metric?' selected':'')+'>'+
-    esc(label)+'</option>').join('')+'</select></label></div>'+
-    caTrendChart(summaries,metric)+'</section>';
+  const form=tdSeasonFormPanel();
   const rankings='<div class="ca-rankings">'+
     caRanking(summaries,'shots',true,'Attacking output · shots','More shots do not necessarily mean better attacking quality.')+
     caRanking(summaries,'shotsAgainst',false,'Defensive output · shots allowed','Fewer shots allowed does not necessarily mean stronger defending.')+'</div>';
@@ -312,7 +307,7 @@ function analyticsPage(){
   const league='<section class="ca-panel ca-wide"><div class="ca-panel-head"><h3>ISL performance explorer</h3>'+
     '<span>Possession versus shots</span></div>'+caScatter(summaries)+'</section>';
   const method='<div class="ca-method">METHOD · Results and match statistics come from FotWeb’s source-linked ISL reports. Averages use games with the relevant recorded metric, not the entire fixture list. Rankings are provisional for small samples. No shot coordinates, tracking, xG estimates or inferred player positions are generated. <a href="#fixtures" data-page="fixtures">View source-linked match details ↗</a></div>';
-  return snapshot+trend+'<h2 class="section-title">League-wide attack & defence</h2>'+
+  return snapshot+form+'<h2 class="section-title">League-wide attack & defence</h2>'+
     rankings+'<h2 class="section-title">Compare clubs</h2>'+comparison+
     '<h2 class="section-title">Explore relationships</h2>'+league+method;
 }
