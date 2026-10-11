@@ -1,6 +1,5 @@
 """Hourly FotWeb source availability checks; never invent lineup data."""
 import json
-import os
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
 from urllib.request import Request, urlopen
@@ -13,9 +12,13 @@ log = json.loads(log_path.read_text())
 now = datetime.now(timezone.utc)
 teams = {t["id"]: t["name"] for t in season["teams"]}
 known = {m["id"] for m in results["matches"]}
+import sys
+kind = sys.argv[1] if len(sys.argv) > 1 else "hourly"
+if kind not in ("hourly", "post-match-early", "post-match-late"):
+    raise ValueError("Unknown check kind")
 recent = [f for f in season["fixtures"] if
-          -timedelta(hours=8) <= datetime.fromisoformat(f["kickoff"]).astimezone(timezone.utc)-now <= timedelta(hours=36)
-          and f["id"] not in known]
+          -timedelta(hours=36) <= datetime.fromisoformat(f["kickoff"]).astimezone(timezone.utc)-now <= timedelta(hours=36)
+          and (f["id"] not in known or kind != "hourly")]
 links = []
 failures = []
 for fixture in recent[:6]:
@@ -32,7 +35,7 @@ for fixture in recent[:6]:
 outcome = "partial" if failures else "no-change"
 summary = (f"Checked {len(recent[:6])} pending official match pages; no verified lineup import available. "
            + (f"{len(failures)} source requests failed." if failures else "Source requests completed."))
-record = {"checkedAt": now.isoformat().replace("+00:00", "Z"), "kind": "hourly",
+record = {"checkedAt": now.isoformat().replace("+00:00", "Z"), "kind": kind,
           "outcome": outcome, "summary": summary, "links": links[:8]}
 log["checks"] = [record] + [x for x in log["checks"] if x["checkedAt"] != record["checkedAt"]][:335]
 log_path.write_text(json.dumps(log, indent=2, ensure_ascii=False) + "\n")
