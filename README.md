@@ -87,8 +87,15 @@ Coverage and small-sample notes accompany the analysis.
 Kickoff times are displayed in **IST**. Published venues are shown, with
 **Venue TBC** when no venue is available. Selecting a fixture opens its details;
 confirmed upcoming starting XIs appear when published, while completed matches
-open their source-linked reports. Reports show available scores, scorers,
-disciplinary events, lineups, statistics and analysis without filling data gaps.
+open their source-linked reports. Completed reports have a **Display section**
+dropdown, like Season Overview and Team Dashboard. The match scoreboard remains
+visible while only the chosen section is shown: **Match overview**, **Lineup**,
+**Match statistics**, **Player stats**, **Match timeline**, **Tactical analytics**,
+**Advanced analytics**, or **FotWeb Tactical Verdict**. Switching sections
+retains the match and supports returning to the previous section with the
+in-app Back button. All verified source links remain visible below the chosen
+section. Reports show available scores, scorers, disciplinary events, lineups,
+statistics and analysis without filling data gaps.
 
 Streaming buttons link to recorded official ISL **English YouTube broadcasts**.
 Scheduled broadcasts use **Watch live**, while completed broadcasts use
