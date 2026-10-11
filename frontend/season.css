@@ -291,25 +291,3 @@
   .td-dashboard-empty{padding:20px}
 }
 
-/* Sources & methodology — actual automated-check timeline */
-.update-history{border-top:1px solid var(--line);margin-top:21px;padding-top:15px}
-.update-history h3{font-size:14px;margin:4px 0 6px;color:var(--text)}
-.update-history .check-intro{margin:8px 0 12px;color:var(--muted);font-size:11px;line-height:1.7}
-.check-last-hourly{padding:10px 12px;border:1px solid #354a3b;border-radius:8px;background:#18241c;color:#d6e7d8!important;font-size:11px!important;margin:10px 0!important}
-.check-last-hourly strong{color:var(--accent)}
-.check-history-list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:9px}
-.check-record{border:1px solid #344139;background:#151d1a;border-radius:8px;padding:11px 13px;overflow-wrap:anywhere}
-.check-record-top{display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap}
-.check-record-top strong{color:var(--text);font-size:11px}
-.check-record-top time{font-size:10px;color:#a6b8ac}
-.check-status{margin-top:7px;display:inline-block;color:#b9dbc0;background:#27392e;border:1px solid #35503d;border-radius:4px;padding:3px 7px;font-size:10px;font-weight:650}
-.check-record.check-partial .check-status,.check-record.check-unrecorded .check-status{color:#eed6ac;background:#373024;border-color:#57452f}
-.check-record.check-error .check-status{color:#ebbbc0;background:#3c2528;border-color:#704045}
-.check-record p{margin:7px 0 0!important;font-size:11px!important;line-height:1.65!important;color:#b6c9ba!important}
-.check-links{margin-top:8px;display:flex;gap:8px;flex-wrap:wrap}
-.check-links .text-button{font-size:10px;text-align:left}
-.check-history-details{margin-top:13px!important;padding:0!important}
-.check-history-details summary{cursor:pointer;color:var(--accent);padding:9px 0;font-size:11px;font-weight:650}
-.check-history-details .check-history-list{max-height:340px;overflow-y:auto;padding-right:5px;margin-top:4px}
-.update-history .check-footnote,.update-history .check-empty{font-size:10px;line-height:1.65;color:var(--muted);margin:11px 0 0}
-@media(max-width:540px){.check-record-top{align-items:flex-start;flex-direction:column;gap:3px}.check-history-details .check-history-list{max-height:270px}}
