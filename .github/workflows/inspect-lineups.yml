@@ -19,10 +19,15 @@ jobs:
         with:
           python-version: '3.12'
       - run: pip install playwright && python -m playwright install --with-deps chromium
-      - name: Inspect rendered official lineup
+      - name: Inspect current fixtures automatically
         env:
           MATCH_ID: ${{ inputs.match_id }}
-        run: python inspect_lineups.py "$MATCH_ID"
+        run: |
+          if [ -n "$MATCH_ID" ]; then
+            python inspect_lineups.py "$MATCH_ID"
+          else
+            python inspect_lineups.py auto
+          fi
       - uses: actions/upload-artifact@v4
         if: always()
         with:
