@@ -373,11 +373,6 @@ function fwMatchReport(match) {
   const awayTeam=seasonData.teams.find(t=>t.name===canonical(match.away));
   const shield=t=>t?crest(t,'small'):'';
   const id='report-'+match.id;
-  const labels=[['overview','Overview'],['lineup','Lineup'],['statistics','Statistics'],
-    ['players','Player stats'],['timeline','Match timeline'],['tactics','Tactical analytics'],
-    ['advanced','Advanced analytics'],['verdict','Tactical verdict']];
-  const nav='<nav class="fw-report-nav" aria-label="Match report sections">' +
-    labels.map(([key,label])=>'<button type="button" data-report-section="'+esc(id+'-'+key)+'">'+esc(label)+'</button>').join('')+'</nav>';
   const headerBox='<header class="fw-match-hero"><span class="eyebrow">VERIFIED POST-MATCH REPORT</span>' +
     '<p>'+esc(formatDate(match.date))+' · '+esc(match.venue||'Venue unconfirmed')+
     ' · '+esc(match.status)+'</p><div class="fw-match-score"><div>'+shield(homeTeam)+'<strong>'+esc(match.home)+
@@ -389,15 +384,24 @@ function fwMatchReport(match) {
     esc(formatTime(match.verifiedAt))+' IST. Match phase: '+esc(match.phase)+'.</p>'+
     (match.matchUrl?'<p class="fw-report-links">'+sourceLink(match.matchUrl,'Official match centre')+'</p>':'');
   const sourceLinks=match.sources.map(s=>sourceLink(s.url,s.label)).join(' <span class="fw-link-separator">·</span> ');
-  return '<article id="'+esc(id)+'" class="fw-report">'+headerBox+nav+
-    fwReportPanel('01 · Match overview',overview,id+'-overview','MATCH CONTEXT')+
-    fwReportPanel('02 · Lineup',fwLineup(match),id+'-lineup','STARTING XI')+
-    fwReportPanel('03 · Match statistics',fwStatRows(match),id+'-statistics','VERIFIED METRICS')+
-    fwReportPanel('04 · Player stats',fwPlayerStats(match),id+'-players','INDIVIDUALS')+
-    fwReportPanel('05 · Match timeline',fwTimeline(match),id+'-timeline','KEY EVENTS')+
-    fwReportPanel('06 · Tactical analytics',fwTactics(match),id+'-tactics','EVIDENCE-BASED')+
-    fwReportPanel('07 · Advanced analytics',fwEfficiency(match)+fwShootingProfile(match)+fwMatchPerformanceProfile(match)+fwRecordedPlayerLeaders(match)+fwShotMap(match),id+'-advanced','DATA VISUALIZATION')+
-    fwReportPanel('08 · FotWeb Tactical Verdict',fwVerdict(match),id+'-verdict','ANALYST VIEW')+
+  const sections=[
+    ['overview','Match overview','MATCH CONTEXT',()=>fwReportPanel('01 · Match overview',overview,id+'-overview','MATCH CONTEXT')],
+    ['lineup','Lineup','STARTING XI',()=>fwReportPanel('02 · Lineup',fwLineup(match),id+'-lineup','STARTING XI')],
+    ['statistics','Match statistics','VERIFIED METRICS',()=>fwReportPanel('03 · Match statistics',fwStatRows(match),id+'-statistics','VERIFIED METRICS')],
+    ['players','Player stats','INDIVIDUALS',()=>fwReportPanel('04 · Player stats',fwPlayerStats(match),id+'-players','INDIVIDUALS')],
+    ['timeline','Match timeline','KEY EVENTS',()=>fwReportPanel('05 · Match timeline',fwTimeline(match),id+'-timeline','KEY EVENTS')],
+    ['tactics','Tactical analytics','EVIDENCE-BASED',()=>fwReportPanel('06 · Tactical analytics',fwTactics(match),id+'-tactics','EVIDENCE-BASED')],
+    ['advanced','Advanced analytics','DATA VISUALIZATION',()=>fwReportPanel('07 · Advanced analytics',fwEfficiency(match)+fwShootingProfile(match)+fwMatchPerformanceProfile(match)+fwRecordedPlayerLeaders(match)+fwShotMap(match),id+'-advanced','DATA VISUALIZATION')],
+    ['verdict','FotWeb Tactical Verdict','ANALYST VIEW',()=>fwReportPanel('08 · FotWeb Tactical Verdict',fwVerdict(match),id+'-verdict','ANALYST VIEW')]
+  ];
+  const selected=sections.find(([key])=>key===state.reportSection)||sections[0];
+  const selector='<div class="td-section-selector fw-report-selector"><label for="fwReportSectionFilter">Display section'+
+    '<select id="fwReportSectionFilter" aria-controls="fwReportSectionContent">'+
+    sections.map(([key,label])=>'<option value="'+esc(key)+'" '+(selected[0]===key?'selected':'')+'>'+esc(label)+'</option>').join('')+
+    '</select></label><p>Choose one section to explore this match.</p></div>';
+  return '<article id="'+esc(id)+'" class="fw-report">'+headerBox+selector+
+    '<div id="fwReportSectionContent" role="region" aria-label="'+esc(selected[1])+'">'+
+    selected[3]()+'</div>'+
     '<footer class="fw-report-sources"><strong>Verified sources</strong><div>'+sourceLinks+
     (match.fotmobUrl?' <span class="fw-link-separator">·</span> '+sourceLink(match.fotmobUrl,'View on FotMob (external)'):'')+
     '</div><p>FotMob data is not scraped or copied. Only approved sources and published, verifiable facts enter this report.</p></footer></article>';
