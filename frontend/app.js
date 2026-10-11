@@ -23,7 +23,7 @@ function card(title,body,tag=''){return `<section class="card"><div class="card-
 function empty(title,text){return card(esc(title),`<p class="report-note">${esc(text)}</p>`,'AWAITING DATA');}
 function officialStreamUrl(b){if(!b||b.language!=='English'||b.channelUrl!=='https://www.youtube.com/@IndianSuperLeague')return '';const u=safeUrl(b.url);if(!u)return '';const p=new URL(u);return p.hostname==='www.youtube.com'&&/^\/live\/[A-Za-z0-9_-]{11}$/.test(p.pathname)&&!p.search&&!p.hash?u:'';}
 function streamCandidateUrl(s){
-  if(!s||s.source!=='viewer-submitted'||s.status!=='scheduled')return '';
+  if(!s||s.source!=='viewer-submitted'||s.language!=='English'||s.languageEvidence!=='viewer-confirmed'||s.status!=='scheduled')return '';
   const u=safeUrl(s.url);
   if(!u)return '';
   const p=new URL(u);
@@ -37,11 +37,11 @@ function fixtureWatch(f){
   if(!u)return '';
   const ended=!!f.result||f.broadcast?.status==='ended';
   const label=verified?(ended?'Watch replay':'Watch live'):
-    (ended?'Open shared stream':'View scheduled stream');
+    (ended?'Watch stream replay':'Watch live');
   const explanation=verified?
     'Official ISL YouTube · English'+(!ended&&f.broadcast.status==='scheduled'?' · Scheduled stream':''):
-    'Viewer-shared match link · Commentary language not independently verified';
-  return `<div class="fixture-watch"><a class="watch-live" href="${esc(u)}" target="_blank" rel="noopener noreferrer" aria-label="${esc(label)}: ${esc(club(f.homeId).name)} vs ${esc(club(f.awayId).name)}${verified?' — English commentary':''}"><span aria-hidden="true">▶</span> ${esc(label)} <span aria-hidden="true">↗</span></a><span class="stream-note">${esc(explanation)}</span></div>`;
+    'English commentary (confirmed by FotWeb creator) · YouTube metadata pending independent verification';
+  return `<div class="fixture-watch"><a class="watch-live" href="${esc(u)}" target="_blank" rel="noopener noreferrer" aria-label="${esc(label)}: ${esc(club(f.homeId).name)} vs ${esc(club(f.awayId).name)}${verified||candidate?' — English commentary':''}"><span aria-hidden="true">▶</span> ${esc(label)} <span aria-hidden="true">↗</span></a><span class="stream-note">${esc(explanation)}</span></div>`;
 }
 /* The entire fixture card opens match details, while source/watch/calendar
    links remain independently interactive and keep their existing behavior. */
