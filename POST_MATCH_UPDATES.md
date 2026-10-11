@@ -111,6 +111,33 @@ matched to the verified lineups and player lists only when unambiguous;
 unnamed sanctions remain unavailable. A full team-level card count does
 not justify an invented individual card recipient.
 
+## Upcoming-stream priority and 30-minute target
+
+Run the hourly scheduled-stream check on the hour (Asia/Kolkata). The usual
+17:00 and 19:30 IST ISL kickoffs receive a 16:00 (60-minute advance) and a
+19:00 (30-minute advance) check respectively. Scan the official YouTube
+**LIVE -> UPCOMING** listings on **every hourly run**, not only the Videos tab,
+recent broadcasts, or items indexed by Google. Inspect the next 14 days
+with special priority to matches in the next 3 hours, and commit any verified
+new stream as soon as it is published, not at kickoff. An hourly check can
+only achieve a 30-minute lead when the official scheduled stream is actually
+available and verifiable sufficiently early; do not promise impossible
+deadlines for late announcements or unavailable services.
+
+On 11 October 2026 a user reported a further video listed by the official
+channel: `https://www.youtube.com/live/r7fCiGAMU3w`. Treat this video ID
+as **pending match identification and verification**: check the official
+uploader, actual published video title with English/ENG designation, start
+time and corresponding 2026–27 fixture. Do not guess that it belongs to
+NorthEast United vs Mohun Bagan (or any other fixture) just because that is
+the next streamless match. Once independently verified, add its canonical
+video URL and the actual metadata to the correct fixture.
+
+If YouTube's LIVE/Upcoming tab or a video's metadata cannot be accessed,
+state the verification failure prominently in the hourly report. Never label
+that situation a complete successful scan or claim there are no newly
+scheduled streams. Preserve all verified prior entries.
+
 ## Official English YouTube streams
 
 Check `https://www.youtube.com/@IndianSuperLeague/streams` for scheduled match
