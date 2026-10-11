@@ -153,11 +153,12 @@ scheduled streams. Preserve all verified prior entries.
 
 ## Official English YouTube streams
 
-### Unmatched scheduled-stream report (verify before publishing)
+### Creator-confirmed English scheduled stream (pending independent YouTube metadata)
 
-- Viewer-reported YouTube Live URL: `https://www.youtube.com/live/r7fCiGAMU3w` (reported 11 October 2026 as an additional scheduled stream on `@IndianSuperLeague`'s LIVE tab).
-- This URL is **not yet verified** against a specific fixture, official channel ownership, actual video title, and an English/ENG commentary label; do not assume it belongs to the next fixture solely because it appeared after already recorded streams.
-- On every hourly run, prioritize resolving this video using the official LIVE > UPCOMING listing and direct video metadata, including possible source-access failures. If matched and verified, commit its `broadcast` record to the correct fixture and remove this pending item. Do not falsely report the entire streaming check as complete while the listing cannot be accessed.
+- Match **194638**, **NorthEast United FC vs Mohun Bagan Super Giant**, **12 October 2026, 7:30 PM IST**: creator supplied `https://www.youtube.com/live/r7fCiGAMU3w` and explicitly confirmed it is the English stream on the official `@IndianSuperLeague` Live list.
+- FotWeb shows **Watch live** on this fixture, with an accompanying transparency note: `English commentary (confirmed by FotWeb creator) · YouTube metadata pending independent verification`. Source data is `streamCandidate`, NOT an independently verified `broadcast`. Do not remove the candidate just because YouTube access or search indexing fails.
+- On every hourly check, verify this exact video's **actual** title, publisher, scheduled kickoff/date and English commentary using YouTube Live > Upcoming or accessible official metadata. When verified, replace `streamCandidate` with `broadcast` using the video’s actual title, language=English, official channel, timestamp and scheduled status. Then remove the candidate field. If verification disproves the claim, alert the user and correct the data with a source.
+- `streamCandidate` schema: canonical `url`, `source: "viewer-submitted"`, `language: "English"`, `languageEvidence: "viewer-confirmed"`, `status: "scheduled"`, and timezone-aware `recordedAt`. It is a clearly sourced, usable watch link; don't invent a YouTube title or label it independently verified.
 
 
 Check `https://www.youtube.com/@IndianSuperLeague/streams` for scheduled match
