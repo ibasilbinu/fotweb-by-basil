@@ -157,14 +157,21 @@ scheduled streams. Preserve all verified prior entries.
 
 - Match **194638**, **NorthEast United FC vs Mohun Bagan Super Giant**, **12 October 2026, 7:30 PM IST**: creator supplied `https://www.youtube.com/live/r7fCiGAMU3w` and explicitly confirmed it is the English stream on the official `@IndianSuperLeague` Live list.
 - FotWeb shows **Watch live** on this fixture, with an accompanying transparency note: `English commentary (confirmed by FotWeb creator) · YouTube metadata pending independent verification`. Source data is `streamCandidate`, NOT an independently verified `broadcast`. Do not remove the candidate just because YouTube access or search indexing fails.
-- On every hourly check, verify this exact video's **actual** title, publisher, scheduled kickoff/date and English commentary using YouTube Live > Upcoming or accessible official metadata. When verified, replace `streamCandidate` with `broadcast` using the video’s actual title, language=English, official channel, timestamp and scheduled status. Then remove the candidate field. If verification disproves the claim, alert the user and correct the data with a source.
+- On every hourly check, verify this video's **actual** title, channel ownership, fixture and scheduled date with YouTube Live > Upcoming or official metadata. **An English stream may have no "English"/"ENG" title suffix**; the official channel often labels the *Hindi alternative* instead. Use the documented official-default naming convention with creator confirmation and, when accessible, the matching Hindi-labelled alternative. When the video itself is independently accessible and the fixture/channel match is confirmed, upgrade to `broadcast` with the **actual published title**, `language: "English"`, `languageEvidence: "official-default-unlabelled"` if the title omits English, official channel URL, actual status and verification timestamp. Then remove `streamCandidate`. Do not invent titles or video metadata. If evidence disproves this association, notify and correct it with a source.
 - `streamCandidate` schema: canonical `url`, `source: "viewer-submitted"`, `language: "English"`, `languageEvidence: "viewer-confirmed"`, `status: "scheduled"`, and timezone-aware `recordedAt`. It is a clearly sourced, usable watch link; don't invent a YouTube title or label it independently verified.
 
 
 Check `https://www.youtube.com/@IndianSuperLeague/streams` for scheduled match
 streams as well as ongoing broadcasts. **Prioritize the channel's LIVE tab,
 including its Upcoming section, not just ordinary Video uploads or past
-live broadcasts.** Cross-reference every visible scheduled English/ENG video
+live broadcasts.** **Do not require the words English or ENG in the title.**
+On the official ISL channel, the default English stream may have an unlabelled
+title while the separate Hindi stream explicitly says Hindi. Search for
+**both unlabelled and English/ENG-labelled** live streams, but exclude Hindi,
+regional-language, Vertical, Shorts and other non-match feeds. An unlabelled
+title ALONE is not enough to prove English; corroborate official ownership,
+fixture clubs/date, the channel's default naming convention and/or a matching
+Hindi-labelled alternate stream or creator confirmation. Cross-reference
 against the next 14 days of published fixtures and the stream URLs already
 recorded. A YouTube Live listing can be available before it is indexed by
 ordinary search engines, so an empty web search is NOT proof that no streams
@@ -178,15 +185,23 @@ unverified 11-character YouTube video ID. If a user supplies an official
 stream URL, validate its title, channel ownership, date and language before
 attaching it to the corresponding fixture. Add only videos published by the official
 Indian Super League channel, matched to the fixture's clubs, competition, season
-and IST scheduled date. Require an explicit English or ENG commentary label in
-the video title or official description. Do not add Hindi, Vertical, highlights,
-press conferences, third-party streams or generic channel links.
+and IST scheduled date. Accept either (a) explicitly English/ENG-labelled streams,
+or (b) the official channel's **unlabelled default English stream** when its
+fixture and uploader are verified and its English classification is supported
+by that channel's English-vs-Hindi naming pattern and corroborating evidence.
+For case (b), store `languageEvidence: "official-default-unlabelled"` and
+retain the **exact published unlabelled title**; never add "English" to it.
+Do not add Hindi, regional-language, Vertical, highlights, press conferences,
+third-party streams or generic channel links. Unlabelled alone is NOT proof.
 
 An optional fixture `broadcast` object in `data/isl-season.json` contains:
 `url` (canonical `https://www.youtube.com/live/VIDEO_ID`), `title` (actual published
 title), `channelUrl` (`https://www.youtube.com/@IndianSuperLeague`), `language`
 (`English`), `status` (`scheduled`, `live`, `ended`), and `verifiedAt` (timestamp
-with timezone). Confirm scheduled status and date from YouTube's public watch
+with timezone). If the actual video title omits English/ENG, add
+`languageEvidence: "official-default-unlabelled"` to document how it was
+classified as English; `season.py` enforces this. Confirm scheduled status
+and date from YouTube's public watch
 metadata where available. YouTube oEmbed can verify the title and publisher.
 Only change a broadcast timestamp when its metadata changes. Preserve working
 links during source failures; never guess video IDs or infer live status just
