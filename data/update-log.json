@@ -3,6 +3,26 @@
   "season": "2026-27",
   "checks": [
     {
+      "checkedAt": "2026-10-11T10:53:42.072594Z",
+      "kind": "hourly",
+      "outcome": "no-change",
+      "summary": "Checked 3 pending official match pages; no verified lineup import available. Source requests completed.",
+      "links": [
+        {
+          "label": "Inter Kashi vs Kerala Blasters FC",
+          "url": "https://www.indiansuperleague.com/matchcentre/194636"
+        },
+        {
+          "label": "Churchill Brothers vs Mumbai City FC",
+          "url": "https://www.indiansuperleague.com/matchcentre/194637"
+        },
+        {
+          "label": "NorthEast United FC vs Mohun Bagan Super Giant",
+          "url": "https://www.indiansuperleague.com/matchcentre/194638"
+        }
+      ]
+    },
+    {
       "checkedAt": "2026-10-11T05:28:12.521696Z",
       "kind": "hourly",
       "outcome": "unrecorded",
