@@ -8,6 +8,24 @@ It also checks the official fixture schedule for published changes.
 Checks and publication can be delayed. Refresh the site for new results.
 Manage or pause the task in ChatGPT Tasks.
 
+## Last updated timestamp in Sources & methodology
+
+The website shows **one line only**, `Last updated: <date>, <time> IST`, under
+the Sources & methodology dialog. This is the actual completion timestamp of
+the most recently recorded scheduled check, not the last modified date of the
+season fixture list or verified scores. Do not add an extra history UI.
+
+**After EVERY hourly check, even if no new fixture or result changes were found,**
+append its real completion timestamp to `data/update-log.json` using the current
+`update_log.py` schema: `checkedAt`, `kind: "hourly"`,
+`outcome: "updated" | "no-change" | "partial" | "error"`,
+a factual `summary`, and `links`. Validate with `update_log.py`, keep
+newest first, retain at most 336 records and use a conflict-aware safe commit.
+**This check-log commit is an exception** to the rule against commits without
+new football data: it is needed so visitors see when the automated source
+check actually ran. Never invent a timestamp, hide source blockers or claim a
+football-data change occurred simply because a new check was logged.
+
 ## Primary official ISL sources (required each check)
 
 **The Indian Super League's official website is** `https://www.indiansuperleague.com/`.
