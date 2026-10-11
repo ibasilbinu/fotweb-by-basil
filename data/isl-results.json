@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "season": "2026-27",
-  "updatedAt": "2026-10-11T13:53:27.495258+00:00",
+  "updatedAt": "2026-10-11T13:53:57.501409+00:00",
   "matches": [
     {
       "id": "194634",
@@ -1216,7 +1216,7 @@
       "awayGoals": 2,
       "status": "FT",
       "phase": "league",
-      "verifiedAt": "2026-10-11T13:53:27.495258+00:00",
+      "verifiedAt": "2026-10-11T13:53:57.501409+00:00",
       "sources": [
         {
           "label": "Indian Super League official match centre",
@@ -1330,7 +1330,7 @@
           "shots": 9,
           "shotsOnTarget": 3,
           "corners": 5,
-          "fouls": 14,
+          "fouls": 12,
           "offsides": 0,
           "yellowCards": 0,
           "redCards": 0,
@@ -1346,7 +1346,7 @@
           "shots": 14,
           "shotsOnTarget": 6,
           "corners": 2,
-          "fouls": 10,
+          "fouls": 11,
           "offsides": 0,
           "yellowCards": 0,
           "redCards": 0,
