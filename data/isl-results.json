@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "season": "2026-27",
-  "updatedAt": "2026-10-11T13:51:20.668586+00:00",
+  "updatedAt": "2026-10-11T13:53:27.495258+00:00",
   "matches": [
     {
       "id": "194634",
@@ -12,7 +12,7 @@
       "awayGoals": 2,
       "status": "FT",
       "phase": "league",
-      "verifiedAt": "2026-10-11T13:51:20.668586+00:00",
+      "verifiedAt": "2026-10-11T13:53:27.495258+00:00",
       "sources": [
         {
           "label": "Indian Super League official match centre",
@@ -84,6 +84,55 @@
           "player": "Mohammed Azhar"
         },
         {
+          "minute": 58,
+          "side": "home",
+          "type": "substitution",
+          "playerIn": "Manuel Ignacio Iriondo",
+          "playerOut": "Muhammed Ashique Kuruniyan"
+        },
+        {
+          "minute": 63,
+          "side": "away",
+          "type": "substitution",
+          "playerIn": "Sourav K",
+          "playerOut": "Mohammed Aimen"
+        },
+        {
+          "minute": 66,
+          "side": "away",
+          "type": "substitution",
+          "playerIn": "David Richard Ndayishimiye",
+          "playerOut": "Juan Sebastian Pena Bermudez"
+        },
+        {
+          "minute": 73,
+          "side": "away",
+          "type": "substitution",
+          "playerIn": "Thokchom Diamond Singh",
+          "playerOut": "Yanglem Sanatomba Singh"
+        },
+        {
+          "minute": 73,
+          "side": "away",
+          "type": "substitution",
+          "playerIn": "Ashutosh Mehta",
+          "playerOut": "Nduka Junior"
+        },
+        {
+          "minute": 73,
+          "side": "away",
+          "type": "substitution",
+          "playerIn": "Carlos Manuel dos Santos Fortes",
+          "playerOut": "Mohammed Azhar"
+        },
+        {
+          "minute": 73,
+          "side": "home",
+          "type": "substitution",
+          "playerIn": "Soham Varshneya",
+          "playerOut": "Suresh Singh Wangjam"
+        },
+        {
           "minute": 74,
           "side": "home",
           "type": "goal",
@@ -108,6 +157,14 @@
           "type": "goal",
           "player": "Menno Robert Maria Koch",
           "assist": "Soham Varshneya"
+        },
+        {
+          "minute": 90,
+          "side": "home",
+          "type": "substitution",
+          "playerIn": "Nikhil Chandrashekar Poojary",
+          "playerOut": "Chingambam Shivaldo Singh",
+          "addedMinute": 4
         }
       ],
       "lineups": {
@@ -552,7 +609,7 @@
       "awayGoals": 1,
       "status": "FT",
       "phase": "league",
-      "verifiedAt": "2026-10-11T13:51:20.668586+00:00",
+      "verifiedAt": "2026-10-11T13:53:27.495258+00:00",
       "sources": [
         {
           "label": "Indian Super League official match centre",
@@ -604,11 +661,39 @@
           "player": "Muhammed Nemil Valiyattil"
         },
         {
+          "minute": 36,
+          "side": "home",
+          "type": "substitution",
+          "playerIn": "Jorge Ortiz Mendoza",
+          "playerOut": "Francisco Feuillassier Abalo"
+        },
+        {
+          "minute": 37,
+          "side": "away",
+          "type": "substitution",
+          "playerIn": "Lalriathpuia Chawngthu",
+          "playerOut": "Glan Peter Martins"
+        },
+        {
           "minute": 45,
           "side": "home",
           "type": "yellow_card",
           "player": "Konsam Akash Singh",
           "addedMinute": 3
+        },
+        {
+          "minute": 59,
+          "side": "away",
+          "type": "substitution",
+          "playerIn": "Bryce Brian Miranda",
+          "playerOut": "Brison Deuben Fernandes"
+        },
+        {
+          "minute": 59,
+          "side": "away",
+          "type": "substitution",
+          "playerIn": "Madih Talal",
+          "playerOut": "Nikola Stojanovic"
         },
         {
           "minute": 62,
@@ -618,11 +703,53 @@
           "assist": "Namgyal Bhutia"
         },
         {
+          "minute": 69,
+          "side": "home",
+          "type": "substitution",
+          "playerIn": "Isak Vanlalruatfela",
+          "playerOut": "Muhammed Nemil Valiyattil"
+        },
+        {
+          "minute": 70,
+          "side": "home",
+          "type": "substitution",
+          "playerIn": "Harsh Shailesh Patre",
+          "playerOut": "Alexander Vallejo Minguez"
+        },
+        {
           "minute": 74,
           "side": "home",
           "type": "goal",
           "player": "Christian Borrego Isabel",
           "assist": "Aakash Sangwan"
+        },
+        {
+          "minute": 85,
+          "side": "away",
+          "type": "substitution",
+          "playerIn": "Laldinpuia Pachuau",
+          "playerOut": "Namgyal Bhutia"
+        },
+        {
+          "minute": 85,
+          "side": "away",
+          "type": "substitution",
+          "playerIn": "Nitishkumar Meitei Yengkhom",
+          "playerOut": "Irfan Yadwad"
+        },
+        {
+          "minute": 87,
+          "side": "home",
+          "type": "substitution",
+          "playerIn": "Ronney Willson Kharbudon",
+          "playerOut": "Prachit Gaonkar"
+        },
+        {
+          "minute": 87,
+          "side": "home",
+          "type": "substitution",
+          "playerIn": "Haobam Tomba Singh",
+          "playerOut": "Aakash Sangwan"
         }
       ],
       "lineups": {
@@ -1089,7 +1216,7 @@
       "awayGoals": 2,
       "status": "FT",
       "phase": "league",
-      "verifiedAt": "2026-10-11T13:51:20.668586+00:00",
+      "verifiedAt": "2026-10-11T13:53:27.495258+00:00",
       "sources": [
         {
           "label": "Indian Super League official match centre",
@@ -1203,7 +1330,7 @@
           "shots": 9,
           "shotsOnTarget": 3,
           "corners": 5,
-          "fouls": 12,
+          "fouls": 14,
           "offsides": 0,
           "yellowCards": 0,
           "redCards": 0,
@@ -1219,7 +1346,7 @@
           "shots": 14,
           "shotsOnTarget": 6,
           "corners": 2,
-          "fouls": 11,
+          "fouls": 10,
           "offsides": 0,
           "yellowCards": 0,
           "redCards": 0,
@@ -1594,6 +1721,76 @@
           "type": "goal",
           "player": "Vibin Mohanan",
           "assist": "Korou Singh Thingujam"
+        },
+        {
+          "minute": 45,
+          "side": "away",
+          "type": "substitution",
+          "playerIn": "Ramfangzauva Hmar Paul",
+          "playerOut": "Korou Singh Thingujam"
+        },
+        {
+          "minute": 45,
+          "side": "away",
+          "type": "substitution",
+          "playerIn": "Momo Yansane",
+          "playerOut": "Nebojsa Kosovic"
+        },
+        {
+          "minute": 65,
+          "side": "home",
+          "type": "substitution",
+          "playerIn": "Huidrom Thoi Singh",
+          "playerOut": "Aritra Das"
+        },
+        {
+          "minute": 65,
+          "side": "home",
+          "type": "substitution",
+          "playerIn": "Sajad Hussain Parray",
+          "playerOut": "Laldinliana Renthlei"
+        },
+        {
+          "minute": 65,
+          "side": "home",
+          "type": "substitution",
+          "playerIn": "Ayush Chhikara",
+          "playerOut": "Manvir Singh"
+        },
+        {
+          "minute": 65,
+          "side": "away",
+          "type": "substitution",
+          "playerIn": "Sanan Mohammed K",
+          "playerOut": "Vibin Mohanan"
+        },
+        {
+          "minute": 66,
+          "side": "away",
+          "type": "substitution",
+          "playerIn": "Ebindas Yesudasan",
+          "playerOut": "Sreekuttan MS"
+        },
+        {
+          "minute": 74,
+          "side": "home",
+          "type": "substitution",
+          "playerIn": "Sreekuttan Viruthiyil Santhosh",
+          "playerOut": "Rosenberg Gilbert Gabriel"
+        },
+        {
+          "minute": 86,
+          "side": "home",
+          "type": "substitution",
+          "playerIn": "Ashangbam Aphaoba Singh",
+          "playerOut": "Hitesh Sharma"
+        },
+        {
+          "minute": 86,
+          "side": "away",
+          "type": "substitution",
+          "playerIn": "Soraisham Sandeep Singh",
+          "playerOut": "Brahmacharimayum Sumit Sharma"
         },
         {
           "minute": 90,

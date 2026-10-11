@@ -288,13 +288,14 @@
       "phase": "league",
       "label": "Match 5",
       "sourceUrl": "https://www.indiansuperleague.com/schedule-fixtures",
-      "streamCandidate": {
+      "broadcast": {
         "url": "https://www.youtube.com/live/r7fCiGAMU3w",
-        "source": "viewer-submitted",
+        "title": "LIVE: NorthEast United FC vs Mohun Bagan Super Giant | MG ISL 2026-27 | Gameweek 1",
+        "channelUrl": "https://www.youtube.com/@IndianSuperLeague",
         "language": "English",
-        "languageEvidence": "viewer-confirmed",
         "status": "scheduled",
-        "recordedAt": "2026-10-11T05:36:23.825Z"
+        "verifiedAt": "2026-10-11T13:53:27.495258+00:00",
+        "languageEvidence": "official-default-unlabelled"
       }
     },
     {
