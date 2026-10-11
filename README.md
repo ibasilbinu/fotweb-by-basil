@@ -14,7 +14,7 @@ The current schedule snapshot contains **13 clubs and 78 Phase 1 fixtures**, fro
 
 | Page | What it offers |
 | --- | --- |
-| **Season Overview** | A season summary, player leaderboards, upcoming fixtures and the points table. A **Display section** dropdown shows one section at a time. |
+| **Season Overview** | Season summary and season-wide player leaderboards shown together, with no display selector. |
 | **Fixtures & Results** | Filter by club, month and match status. Open any fixture for match details, available confirmed starting XIs or a verified completed-match report. |
 | **Points Table** | League points, wins, draws, losses, goals for, goals against and goal difference, calculated from verified results. |
 | **Clubs This Season** | Participating clubs, official crests, upcoming fixtures and links to their dashboards and official profiles. |
@@ -29,16 +29,16 @@ details; without an earlier view, it returns to Season Overview.
 
 ## Season Overview
 
-The **Display section** selector provides:
+Season Overview shows **both sections together**, with no display selector:
 
 - **Season summary:** participating clubs, schedule entries, fixture window,
   verified goals and available disciplinary totals.
 - **Season player leaders:** top-five scorers, assists, recorded goals + assists,
   yellow cards and red cards, with each player’s club and data-coverage notes.
-- **Upcoming fixtures:** the next published fixtures and a link to the full list.
-- **Points table:** the participating clubs and their computed league standings.
 
-This selection is independent of the Team Dashboard and fixture filters.
+Upcoming fixtures remain available in **Fixtures & Results**; the full standings
+are available in **Points Table**. Team Dashboard and match report section
+selectors are unchanged.
 
 ## Team Dashboard
 
