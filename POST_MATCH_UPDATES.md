@@ -114,7 +114,21 @@ not justify an invented individual card recipient.
 ## Official English YouTube streams
 
 Check `https://www.youtube.com/@IndianSuperLeague/streams` for scheduled match
-streams as well as ongoing broadcasts. Add only videos published by the official
+streams as well as ongoing broadcasts. **Prioritize the channel's LIVE tab,
+including its Upcoming section, not just ordinary Video uploads or past
+live broadcasts.** Cross-reference every visible scheduled English/ENG video
+against the next 14 days of published fixtures and the stream URLs already
+recorded. A YouTube Live listing can be available before it is indexed by
+ordinary search engines, so an empty web search is NOT proof that no streams
+were announced. If a current LIVE-tab listing is not accessible through the
+available browsing tools, attempt a supported alternate direct channel feed
+or the YouTube live page metadata, and mark the check **PARTIALLY UNVERIFIED**
+for streaming if it remains inaccessible. Never report 'no new updates' as
+a fully verified finding when this required source could not be checked.
+Preserve existing verified stream records and do not guess or invent an
+unverified 11-character YouTube video ID. If a user supplies an official
+stream URL, validate its title, channel ownership, date and language before
+attaching it to the corresponding fixture. Add only videos published by the official
 Indian Super League channel, matched to the fixture's clubs, competition, season
 and IST scheduled date. Require an explicit English or ENG commentary label in
 the video title or official description. Do not add Hindi, Vertical, highlights,
