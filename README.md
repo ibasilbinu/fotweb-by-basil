@@ -21,8 +21,8 @@ Live site: https://fotweb.streamlit.app/
   Completed broadcasts appear as Watch replay; unannounced streams have no button.
 - Points totals calculated from verified league-stage FT results.
 - Season Overview also shows one selected section at a time: Season summary,
-  Season player leaders, Upcoming fixtures, Points table or Match
-  analysis information. Its selector is independent of Team Dashboard.
+  Season player leaders, Upcoming fixtures or Points table. Its selector is
+  independent of Team Dashboard.
 - Club Analytics combines all clubs’ per-match points into one form chart,
   with club colours, a selectable legend and hover/tap/focus match details.
 - Season Overview shows league-wide top-five player leaderboards for scorers,

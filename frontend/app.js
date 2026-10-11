@@ -98,7 +98,7 @@ function overviewSeasonTotals(){
     stat('TOTAL YELLOW CARDS THIS SEASON',yellow.value,coverage(yellow.covered),'▧');
 }
 const overviewSections=[['summary','Season summary'],
-  ['players','Season player leaders'],['fixtures','Upcoming fixtures'],['points','Points table'],['analysis','Match analysis information']];
+  ['players','Season player leaders'],['fixtures','Upcoming fixtures'],['points','Points table']];
 function overviewSectionSelector(){
   return '<div class="td-section-selector"><label for="overviewSectionFilter">Display section'+
     '<select id="overviewSectionFilter" aria-controls="overviewSectionContent">'+
@@ -116,7 +116,6 @@ function overview(){
       content=`<section class="card"><div class="card-head"><h3><span class="dot"></span>Next on the touchline</h3><span class="tag">IST</span></div><div class="card-body fixture-list">${next.slice(0,3).map(f=>fixtureCard(f,true)).join('')||'<p class="report-note">No upcoming fixtures. Check the official schedule for the next published phase.</p>'}</div><div class="card-bottom"><button class="text-button" data-page="fixtures">View all fixtures ↗</button></div></section>`;break;
     }
     case 'points':content=card('The season so far',tableMarkup()+'<div class="spaced"><button class="text-button" data-page="standings">View points table ↗</button></div>',resultsData.matches.length?'VERIFIED RESULTS':'BEFORE KICKOFF');break;
-    case 'analysis':content=card('From the final whistle to the full picture',`<p class="report-note">Final scores, match summaries and any published statistics will appear as they are verified. Unavailable player metrics, xG and shot maps are left unavailable.</p><div class="spaced"><button class="outline-button" data-page="fixtures">Explore match details ↗</button> ${sourceLink(seasonData.sourceUrl,'Official fixture source')}</div>`,'POST-MATCH ANALYSIS');break;
   }
   const label=overviewSections.find(([id])=>id===state.overviewSection)[1];
   return header('Indian football.<br>In focus.','Fixtures, clubs and the story of the season. Built on published ISL records.')+
