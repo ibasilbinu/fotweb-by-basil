@@ -184,52 +184,16 @@ function teamPage(){
 const t=club(state.team),r=tableRows().find(x=>x.id===t.id),fs=teamFixtures(t.id),ss=resultsData.matches.filter(m=>canonical(m.home)===t.name||canonical(m.away)===t.name),league=tdLeagueResults(t.name);let totals={};for(const [key,label] of Object.entries(statLabels)){const values=ss.map(m=>m.stats?.[canonical(m.home)===t.name?'home':'away']?.[key]).filter(v=>v!=null);if(values.length)totals[label]=key==='possession'?(values.reduce((a,b)=>a+b,0)/values.length).toFixed(1)+'% average':values.reduce((a,b)=>a+b,0);}
 return header(esc(t.name),'The club’s published schedule and verified season results.',esc(t.short)+' · TEAM DASHBOARD')+teamDashboardSelectors()+`<div class="ca-team-entry"><button type="button" class="outline-button" data-analytics-club="${esc(t.id)}">Analyse & compare this club ↗</button></div><div class="stats">${stat('LEAGUE MATCHES',r.mp,'Verified completed league matches','▦')}${stat('POINTS',r.pts,`${r.w} wins · ${r.d} draws · ${r.l} losses`,'♜')}${stat('GOALS FOR',r.gf,'From verified league scores','↗')}${stat('GOALS AGAINST',r.ga,'From verified league scores','↘')}</div>${tdVenuePanel(league,t.name)}${tdPlayersPanel(league,t.name)}<div class="grid equal">${card('Published team statistics',Object.keys(totals).length?`<div class="bar-chart">${Object.entries(totals).map(([k,v])=>`<div class="verified-stat"><span>${esc(k)}</span><strong>${esc(v)}</strong></div>`).join('')}</div><p class="chart-desc">Totals include only matches with a published value. Possession is the average of available match values.</p>`:'<p class="report-note">Team-performance statistics will appear after they are published and verified. No shot, passing or xG data is available here yet.</p>','AVAILABLE DATA')}${card('Club information',`<div class="club-profile">${crest(t,'large')}<div><h2>${esc(t.name)}</h2><p class="chart-desc">${fs.length} published Phase 1 fixtures.</p>${sourceLink(t.profileUrl,'Official club profile')}</div></div><p class="chart-desc">Player summaries are calculated from verified match events and available player statistics, with missing information clearly identified.</p>`,'2026–27')}</div><h2 class="section-title">Club fixtures & results</h2><div class="fixtures-grid">${fs.map(f=>fixtureCard(f)).join('')}</div>`;}
 function creatorPage(){return `<div class="page-head creator-page-head"><div><span class="eyebrow">CREATOR'S CORNER</span><h1>Behind the data.<br>Beyond the score.</h1><p>Meet the football fan behind FotWeb.</p></div><span class="season-tag">BY BASIL</span></div><div class="creator-layout"><article class="creator-story"><div class="creator-person"><div class="creator-monogram" aria-hidden="true">BB</div><div><span class="eyebrow">HELLO, I'M</span><h2>Basil Binu</h2><p>Aspiring Data Analyst</p></div></div><div class="creator-interests"><span>DATA ANALYSIS</span><span>FOOTBALL</span><span>ALWAYS LEARNING</span></div><p>I'm Basil Binu, an aspiring data analyst with a passion for making sense of numbers and a serious love for football. I enjoy looking beyond the final score and asking what the data can tell us about a match.</p><p>FotWeb brings these two interests together. I'm building a place where fans can follow Indian football, explore a club's season and understand matches through clear, sourced information.</p><p>My journey in analytics is still growing. This project is a way to keep learning, turn curiosity into practical work and share what I discover with other football fans.</p><blockquote>Football fuels the curiosity.<br>Data gives it direction.</blockquote></article><div class="creator-side"><section class="creator-online"><h2><span aria-hidden="true">↗</span> Find me online</h2><p>Connect with me on LinkedIn or GitHub, or send me an email.</p><div class="creator-links about-links">${$('#creatorLinks').innerHTML}</div></section><section class="creator-features"><h2><span aria-hidden="true">▦</span> What FotWeb does</h2><div class="creator-feature-list">${[['overview','Season overview','The published ISL season at a glance.'],['fixtures','Fixtures & results','Click fixtures for upcoming lineups, verified reports, match dates and streams.'],['standings','Points table','League points calculated from verified final scores.'],['team','Team dashboard','Explore a club’s fixtures, results and available statistics.'],['analytics','Club analytics','Team trends, attack and defence rankings, comparisons, and charts.']].map(([page,title,desc],i)=>`<a href="#${page}" data-page="${page}"><span class="feature-number">0${i+1}</span><div><strong>${title}</strong><p>${desc}</p></div><span aria-hidden="true">↗</span></a>`).join('')}</div><p class="creator-principle">Built with curiosity. Backed by sources.</p></section></div></div>`;}
-/* Run timestamps and data publication timestamps are deliberately distinct. */
-function checkTimeIST(value){
-  if(!value||Number.isNaN(new Date(value).getTime()))return 'Time unavailable';
-  return formatDate(value)+' · '+formatTime(value)+' IST';
-}
-function checkEntryHtml(record){
-  const kinds={'hourly':'Hourly update','post-match-early':'Early post-match',
-    'post-match-late':'Late post-match'};
-  const outcomes={'updated':'Data updated','no-change':'No new changes',
-    'partial':'Partially verified','error':'Check error',
-    'unrecorded':'Outcome not archived'};
-  const kind=kinds[record.kind]||'Check';
-  const status=outcomes[record.outcome]||'Status unknown';
-  const links=(Array.isArray(record.links)?record.links:[]).slice(0,8).map(item=>
-    sourceLink(item.url,item.label)).join(' ');
-  return '<li class="check-record check-'+esc(record.outcome)+'">'+
-    '<div class="check-record-top"><strong>'+esc(kind)+'</strong>'+
-    '<time>'+esc(checkTimeIST(record.checkedAt))+'</time></div>'+
-    '<div class="check-status">'+esc(status)+'</div>'+
-    '<p>'+esc(record.summary||'No details recorded.')+'</p>'+
-    (links?'<div class="check-links">'+links+'</div>':'')+'</li>';
-}
-function renderUpdateHistory(){
-  const target=$('#updateHistory');
-  if(!target)return;
+/* A check run is not the same as a change to official football data. */
+function latestUpdateLabel(){
   const checks=Array.isArray(updateLog?.checks)?updateLog.checks:[];
-  const lastHourly=checks.find(r=>r.kind==='hourly');
-  const subtitle='All recorded checks (most recent first), including hours without new match data. '+
-    'Fixture and result timestamps above reflect publication, not a check.';
-  const top='<h3>Automated update history</h3>'+
-    '<p class="check-intro">'+esc(subtitle)+'</p>';
-  if(!checks.length){
-    target.innerHTML=top+'<p class="check-empty">No hourly checks have been recorded in the website log yet. '+
-      'The log begins with the next recorded scheduled check.</p>';
-    return;
+  const last=checks[0];
+  if(!last||!last.checkedAt||Number.isNaN(Date.parse(last.checkedAt))){
+    return 'Last updated: Automated check time not yet available';
   }
-  const lead='<p class="check-last-hourly"><strong>Last hourly check:</strong> '+
-    (lastHourly?esc(checkTimeIST(lastHourly.checkedAt)):'Not yet recorded')+'</p>';
-  const recent='<ol class="check-history-list">'+checkEntryHtml(checks[0])+'</ol>';
-  const past=checks.length>1?'<details class="check-history-details"><summary>View all previous recorded checks ('+
-    (checks.length-1)+')</summary><ol class="check-history-list">'+
-    checks.slice(1).map(checkEntryHtml).join('')+'</ol></details>':'';
-  target.innerHTML=top+lead+recent+past+
-    '<p class="check-footnote">History retains the most recent 336 checks. Refresh the website after each automated run to see newly committed records.</p>';
+  return 'Last updated: '+formatDate(last.checkedAt)+' '+formatTime(last.checkedAt)+' IST';
 }
-function render(){if(!seasonData)return;if(state.page==='reports')state.page='fixtures';if(!pages.some(p=>p[0]===state.page))state.page='overview';if(state.team!=='all'&&!club(state.team))state.team='all';if(state.fixtureClub!=='all'&&!club(state.fixtureClub))state.fixtureClub='all';$('#navigation').innerHTML=pages.filter(p=>p[0]!=='creator').map(([id,label,path],i)=>`<a href="#${id}" data-page="${id}" class="${state.page===id?'active':''}" ${state.page===id?'aria-current="page"':''}><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="${path}"/></svg>${label}<span class="nav-index">0${i+1}</span></a>`).join('');$('#crumb').textContent=pages.find(p=>p[0]===state.page)[1];const backButton=$('#pageBack');backButton.disabled=!navigationHistory.length&&!state.fixture&&state.page==='overview';backButton.title=backButton.disabled?'No earlier page':'Return to previous page';const homeButton=$('#pageHome');homeButton.disabled=state.page==='overview'&&!state.fixture;homeButton.title=homeButton.disabled?'You are on Season Overview':'Go to Season Overview';const fn={overview,fixtures:fixturesPage,standings:standingsPage,clubs:clubsPage,team:teamPage,analytics:analyticsPage,creator:creatorPage}[state.page];$('#creatorCorner').classList.toggle('active',state.page==='creator');$('#main').innerHTML=(state.page==='creator'?'':`<div class="source-note">${esc(seasonData.scheduleScope)} · Fixtures verified ${esc(formatDate(seasonData.verifiedAt))}. ${sourceLink(seasonData.sourceUrl,'Official ISL source')}</div>`)+fn();$('#dataDescription').textContent='Fixture schedule verified: '+formatDate(seasonData.verifiedAt)+'. Verified results last changed: '+(resultsData.updatedAt?formatDate(resultsData.updatedAt)+' '+formatTime(resultsData.updatedAt)+' IST':'no completed results yet')+'.';renderUpdateHistory();bindPage();document.title='FotWeb by Basil · '+pages.find(p=>p[0]===state.page)[1];}
+function render(){if(!seasonData)return;if(state.page==='reports')state.page='fixtures';if(!pages.some(p=>p[0]===state.page))state.page='overview';if(state.team!=='all'&&!club(state.team))state.team='all';if(state.fixtureClub!=='all'&&!club(state.fixtureClub))state.fixtureClub='all';$('#navigation').innerHTML=pages.filter(p=>p[0]!=='creator').map(([id,label,path],i)=>`<a href="#${id}" data-page="${id}" class="${state.page===id?'active':''}" ${state.page===id?'aria-current="page"':''}><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="${path}"/></svg>${label}<span class="nav-index">0${i+1}</span></a>`).join('');$('#crumb').textContent=pages.find(p=>p[0]===state.page)[1];const backButton=$('#pageBack');backButton.disabled=!navigationHistory.length&&!state.fixture&&state.page==='overview';backButton.title=backButton.disabled?'No earlier page':'Return to previous page';const homeButton=$('#pageHome');homeButton.disabled=state.page==='overview'&&!state.fixture;homeButton.title=homeButton.disabled?'You are on Season Overview':'Go to Season Overview';const fn={overview,fixtures:fixturesPage,standings:standingsPage,clubs:clubsPage,team:teamPage,analytics:analyticsPage,creator:creatorPage}[state.page];$('#creatorCorner').classList.toggle('active',state.page==='creator');$('#main').innerHTML=(state.page==='creator'?'':`<div class="source-note">${esc(seasonData.scheduleScope)} · Fixtures verified ${esc(formatDate(seasonData.verifiedAt))}. ${sourceLink(seasonData.sourceUrl,'Official ISL source')}</div>`)+fn();$('#dataDescription').textContent=latestUpdateLabel();bindPage();document.title='FotWeb by Basil · '+pages.find(p=>p[0]===state.page)[1];}
 /* Keep a lightweight navigation trail so Back returns to the exact prior
    view, including fixture filters and an open match report. */
 const navigationHistory=[];
