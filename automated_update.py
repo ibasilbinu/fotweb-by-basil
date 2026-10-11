@@ -68,12 +68,18 @@ def convert(data, fixture, names, stamp):
                     if p.get(section,{}).get(key) is not None: player[target] = p[section][key]
             match['players'].append(player)
     events = []
-    kinds = {'Goal':'goal','Own Goal':'own_goal','Yellow Card':'yellow_card','Red Card':'red_card','Second Yellow Card':'second_yellow_red'}
+    kinds = {'Substitution':'substitution','Goal':'goal','Own Goal':'own_goal','Yellow Card':'yellow_card','Red Card':'red_card','Second Yellow Card':'second_yellow_red'}
     for e in data.get('events',[]):
         side = next((s for s,t in sides.items() if str(t['id']) == str(e.get('team_id'))),None)
         actor = e.get('offensive_player',{}).get('player_name')
+        sub = e.get('substitution',{})
+        if e.get('event') == 'Substitution': actor = sub.get('player_in',{}).get('player_full_name')
         if e.get('event') not in kinds or not side or not actor: continue
         ev = {'minute':int(e['time']['minutes']),'side':side,'type':kinds[e['event']],'player':actor}
+        if e.get('event') == 'Substitution':
+            ev.pop('player')
+            ev['playerIn'] = actor
+            ev['playerOut'] = sub['player_out']['player_full_name']
         if e['time'].get('additional_minutes'): ev['addedMinute'] = int(e['time']['additional_minutes'])
         assist = e.get('assisting_player',{}).get('full_name') or e.get('assisting_player',{}).get('player_name')
         if assist: ev['assist'] = assist
@@ -105,6 +111,7 @@ def main():
             if match:
                 old = known.get(f['id'],{})
                 merged = {**old,**match}
+                if old.get('report') and (old.get('homeGoals'),old.get('awayGoals')) == (match['homeGoals'],match['awayGoals']): merged['report'] = old['report']
                 merged['sources'] = list({s['url']:s for s in old.get('sources',[])+match['sources']}.values())
                 if 'events' not in match and old.get('events'): merged['events'] = old['events']
                 merged['lineups'] = {**old.get('lineups',{}),**match['lineups']}
