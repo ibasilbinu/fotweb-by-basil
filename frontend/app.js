@@ -2,7 +2,7 @@
 const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const pages=[['overview','Season overview','M3 18V7m6 11V3m6 15v-8m6 8H1'],['fixtures','Fixtures & results','M3 4h18v16H3zM3 9h18M7 2v4m10-4v4'],['standings','Points table','M3 6h18M3 12h18M3 18h18M8 3v18'],['clubs','Clubs this season','M3 3h7v7H3zM14 3h7v7h-7zM3 14h7v7H3zM14 14h7v7h-7z'],['team','Team dashboard','M3 3h18v18H3zM3 9h18M9 9v12'],['analytics','Club analytics','M3 18h18M3 12h18M3 6h18M7 15l4-5 3 2 4-7'],['creator',"Creator's Corner",'M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8M4 21v-2a8 8 0 0 1 16 0v2']];
-const state={page:location.hash.slice(1)||'overview',team:'all',teamSection:'summary',overviewSection:'summary',reportSection:'overview',status:'all',month:'all',fixtureClub:'all',report:'',fixture:'',analyticsTeam:'',analyticsFormClubs:[],analyticsMetric:'points',analyticsCompareA:'',analyticsCompareB:''};
+const state={page:location.hash.slice(1)||'overview',team:'all',teamSection:'summary',reportSection:'overview',status:'all',month:'all',fixtureClub:'all',report:'',fixture:'',analyticsTeam:'',analyticsFormClubs:[],analyticsMetric:'points',analyticsCompareA:'',analyticsCompareB:''};
 let squadData={teams:[]};
 let seasonData=null,resultsData={schemaVersion:1,season:'2026-27',updatedAt:null,matches:[]},today='';
 let updateLog={schemaVersion:1,season:'2026-27',checks:[]};
@@ -97,29 +97,10 @@ function overviewSeasonTotals(){
     stat('TOTAL RED CARDS THIS SEASON',red.value,coverage(red.covered),'▣')+
     stat('TOTAL YELLOW CARDS THIS SEASON',yellow.value,coverage(yellow.covered),'▧');
 }
-const overviewSections=[['summary','Season summary'],
-  ['players','Season player leaders'],['fixtures','Upcoming fixtures'],['points','Points table']];
-function overviewSectionSelector(){
-  return '<div class="td-section-selector"><label for="overviewSectionFilter">Display section'+
-    '<select id="overviewSectionFilter" aria-controls="overviewSectionContent">'+
-    overviewSections.map(([id,label])=>'<option value="'+id+'" '+(state.overviewSection===id?'selected':'')+'>'+esc(label)+'</option>').join('')+
-    '</select></label><p>Choose one section to explore the season.</p></div>';
-}
 function overview(){
-  if(!overviewSections.some(([id])=>id===state.overviewSection))state.overviewSection='summary';
-  let content='';
-  switch(state.overviewSection){
-    case 'summary':content=`<section class="hero"><div class="hero-copy"><span class="eyebrow">FOTWEB BY BASIL</span><h2>A new season.<br>Every match matters.</h2><p>Follow the published schedule, explore all ${seasonData.teams.length} clubs and return for verified analysis after the final whistle.</p><button class="primary-button" data-page="fixtures">Explore the fixtures &nbsp; ↗</button></div><div class="season-hero-art" aria-hidden="true"><span>ISL</span><strong>26<span>—</span>27</strong><small>THE SEASON WORKSPACE</small></div></section><div class="stats overview-stats">${stat('CLUBS THIS SEASON',seasonData.teams.length,'Official participating club list','♧')}${stat('SCHEDULE ENTRIES',seasonData.fixtures.length,esc(seasonData.scheduleScope),'▦')}${stat('FIXTURE WINDOW','10 OCT – 17 JAN','2026 → 2027 · Published Phase 1','↗')}${overviewSeasonTotals()}</div>`;break;
-    case 'players':content=tdSeasonPlayersPanel();break;
-    case 'fixtures':{
-      const next=teamFixtures('all').filter(f=>!f.result&&f.status==='NS'&&istDate(f.kickoff)>=today);
-      content=`<section class="card"><div class="card-head"><h3><span class="dot"></span>Next on the touchline</h3><span class="tag">IST</span></div><div class="card-body fixture-list">${next.slice(0,3).map(f=>fixtureCard(f,true)).join('')||'<p class="report-note">No upcoming fixtures. Check the official schedule for the next published phase.</p>'}</div><div class="card-bottom"><button class="text-button" data-page="fixtures">View all fixtures ↗</button></div></section>`;break;
-    }
-    case 'points':content=card('The season so far',tableMarkup()+'<div class="spaced"><button class="text-button" data-page="standings">View points table ↗</button></div>',resultsData.matches.length?'VERIFIED RESULTS':'BEFORE KICKOFF');break;
-  }
-  const label=overviewSections.find(([id])=>id===state.overviewSection)[1];
+  const summary = `<section class="hero"><div class="hero-copy"><span class="eyebrow">FOTWEB BY BASIL</span><h2>A new season.<br>Every match matters.</h2><p>Follow the published schedule, explore all ${seasonData.teams.length} clubs and return for verified analysis after the final whistle.</p><button class="primary-button" data-page="fixtures">Explore the fixtures &nbsp; ↗</button></div><div class="season-hero-art" aria-hidden="true"><span>ISL</span><strong>26<span>—</span>27</strong><small>THE SEASON WORKSPACE</small></div></section><div class="stats overview-stats">${stat('CLUBS THIS SEASON',seasonData.teams.length,'Official participating club list','♧')}${stat('SCHEDULE ENTRIES',seasonData.fixtures.length,esc(seasonData.scheduleScope),'▦')}${stat('FIXTURE WINDOW','10 OCT – 17 JAN','2026 → 2027 · Published Phase 1','↗')}${overviewSeasonTotals()}</div>`;
   return header('Indian football.<br>In focus.','Fixtures, clubs and the story of the season. Built on published ISL records.')+
-    overviewSectionSelector()+'<div id="overviewSectionContent" role="region" aria-label="'+esc(label)+'">'+content+'</div>';
+    '<section aria-label="Season summary">'+summary+'</section>'+tdSeasonPlayersPanel();
 }
 /* Opening a fixture does not destroy active month, status or club filters. */
 function openFixtureDetail(id) {
@@ -394,11 +375,6 @@ function bindPage(){
   tdBindSeasonFormLegend();
   bindScatterTooltips();
   bindTrendTooltips();
-  const overviewFilter=$('#overviewSectionFilter');
-  if(overviewFilter)overviewFilter.onchange=e=>{
-    rememberNavigation();state.overviewSection=e.target.value;render();
-    $('#overviewSectionFilter')?.focus({preventScroll:true});
-  };
   const sectionFilter=$('#tdSectionFilter');
   if(sectionFilter)sectionFilter.onchange=e=>{
     rememberNavigation();state.teamSection=e.target.value;render();
