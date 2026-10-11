@@ -127,9 +127,16 @@ def main():
                     changed += 1
         except Exception as exc:
             failures.append(f['id']+': '+str(exc)[:90])
+    if kind == 'hourly':
+        try:
+            from stream_update import update_streams
+            changed += update_streams(season, stamp)
+            links.append({'label':'Official ISL YouTube Live listing','url':'https://www.youtube.com/@IndianSuperLeague/streams'})
+        except Exception as exc:
+            failures.append('YouTube: '+str(exc)[:100])
     results['matches'] = list(known.values())
     if changed: results['updatedAt'] = stamp
-    summary = f"Official match import: {len(links)} checked, {changed} updates, {len(failures)} failures. Stream, squad and schedule discovery not covered by this importer."
+    summary = f"Official match import: {len(links)} checked, {changed} updates, {len(failures)} failures. Squad and schedule discovery not covered. Streams checked hourly only."
     log['checks'] = [{'checkedAt':datetime.now(timezone.utc).isoformat(),'kind':kind,'outcome':'partial','summary':summary,'links':links[:8]}]+log['checks'][:335]
     validate_results(results); validate_season(season); validate_update_log(log)
     for name,value in [('isl-season',season),('isl-results',results),('update-log',log)]:
