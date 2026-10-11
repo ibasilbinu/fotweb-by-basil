@@ -1,0 +1,29 @@
+name: Inspect official ISL lineups
+on:
+  workflow_dispatch:
+    inputs:
+      match_id:
+        description: Official ISL match ID
+        required: true
+        default: '194636'
+permissions:
+  contents: read
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install playwright && python -m playwright install --with-deps chromium
+      - name: Inspect rendered official lineup
+        env:
+          MATCH_ID: ${{ inputs.match_id }}
+        run: python inspect_lineups.py "$MATCH_ID"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: isl-lineup-diagnostics
+          path: diagnostics/
+          retention-days: 3
