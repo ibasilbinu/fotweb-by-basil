@@ -6,7 +6,7 @@ from yt_dlp import YoutubeDL
 CHANNEL = 'https://www.youtube.com/@IndianSuperLeague'
 
 def update_streams(season, stamp):
-    opts = {'quiet':True,'no_warnings':True,'extract_flat':True,'playlistend':30,'socket_timeout':15,'retries':1}
+    opts = {'quiet':True,'no_warnings':True,'extract_flat':True,'playlistend':30,'socket_timeout':15,'retries':1,'ignore_no_formats_error':True,'skip_download':True}
     with YoutubeDL(opts) as ydl:
         listing = ydl.extract_info(CHANNEL+'/streams',download=False)
     if not listing or not isinstance(listing.get('entries'),list):
@@ -39,7 +39,8 @@ def update_streams(season, stamp):
         candidate=f.get('streamCandidate',{})
         old=f.get('broadcast',{})
         explicit=bool(re.search(r'\b(english|eng)\b',low))
-        corroborated=(candidate.get('url')==url and candidate.get('language')=='English') or (old.get('url')==url and old.get('language')=='English')
+        paired_hindi=any('hindi' in e.get('title','').lower() and mentioned(e.get('title','').lower(),names[f['homeId']]) and mentioned(e.get('title','').lower(),names[f['awayId']]) for e in listing['entries'])
+        corroborated=paired_hindi or (candidate.get('url')==url and candidate.get('language')=='English') or (old.get('url')==url and old.get('language')=='English')
         if not explicit and not corroborated: continue
         status={'is_upcoming':'scheduled','is_live':'live','was_live':'ended','post_live':'ended'}.get(meta.get('live_status'))
         if not status: continue
