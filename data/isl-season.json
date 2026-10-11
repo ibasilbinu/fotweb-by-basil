@@ -185,7 +185,15 @@
       "status": "NS",
       "phase": "league",
       "label": "Match 5",
-      "sourceUrl": "https://www.indiansuperleague.com/schedule-fixtures"
+      "sourceUrl": "https://www.indiansuperleague.com/schedule-fixtures",
+      "streamCandidate": {
+        "url": "https://www.youtube.com/live/r7fCiGAMU3w",
+        "source": "viewer-submitted",
+        "language": "English",
+        "languageEvidence": "viewer-confirmed",
+        "status": "scheduled",
+        "recordedAt": "2026-10-11T05:36:23.825Z"
+      }
     },
     {
       "id": "194639",
