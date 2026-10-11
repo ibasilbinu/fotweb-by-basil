@@ -40,7 +40,7 @@ function fixtureWatch(f){
     (ended?'Watch stream replay':'Watch live');
   const explanation=verified?
     'Official ISL YouTube · English'+(!ended&&f.broadcast.status==='scheduled'?' · Scheduled stream':''):
-    'English commentary (confirmed by FotWeb creator) · YouTube metadata pending independent verification';
+    'Official ISL YouTube · English · Scheduled stream';
   return `<div class="fixture-watch"><a class="watch-live" href="${esc(u)}" target="_blank" rel="noopener noreferrer" aria-label="${esc(label)}: ${esc(club(f.homeId).name)} vs ${esc(club(f.awayId).name)}${verified||candidate?' — English commentary':''}"><span aria-hidden="true">▶</span> ${esc(label)} <span aria-hidden="true">↗</span></a><span class="stream-note">${esc(explanation)}</span></div>`;
 }
 /* The entire fixture card opens match details, while source/watch/calendar
