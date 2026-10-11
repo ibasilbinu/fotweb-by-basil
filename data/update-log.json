@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "season": "2026-27",
+  "checks": [
+    {
+      "checkedAt": "2026-10-11T05:28:12.521696Z",
+      "kind": "hourly",
+      "outcome": "unrecorded",
+      "summary": "Scheduled task execution was recorded before the website started archiving check outcomes; publication details were not saved.",
+      "links": []
+    }
+  ]
+}
