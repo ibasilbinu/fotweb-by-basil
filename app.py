@@ -7,6 +7,7 @@ import streamlit.components.v1 as components
 
 from postmatch import load_results
 from season import load_season
+from update_log import load_update_log
 from datetime import datetime
 from zoneinfo import ZoneInfo
 
@@ -77,8 +78,14 @@ except (ValueError, KeyError, TypeError, OSError):
     st.error("The ISL schedule is temporarily unavailable. Please try again later.")
     st.stop()
 
+try:
+    update_log = load_update_log(ROOT / "data" / "update-log.json")
+except (ValueError, KeyError, TypeError, OSError):
+    update_log = {"schemaVersion": 1, "season": "2026-27", "checks": []}
+
 fotweb_workspace(
     season_data=season_data,
+    update_log=update_log,
     post_match_data=post_match_data,
     today=datetime.now(ZoneInfo("Asia/Kolkata")).date().isoformat(),
     key="fotweb-workspace",
