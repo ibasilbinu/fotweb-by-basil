@@ -1,5 +1,7 @@
 name: Inspect official ISL lineups
 on:
+  schedule:
+    - cron: '*/10 * * * *'
   workflow_dispatch:
     inputs:
       match_id:
