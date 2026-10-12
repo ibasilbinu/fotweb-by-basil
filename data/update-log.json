@@ -3,6 +3,26 @@
   "season": "2026-27",
   "checks": [
     {
+      "checkedAt": "2026-10-12T09:44:25.792Z",
+      "kind": "hourly",
+      "outcome": "partial",
+      "summary": "Manual streaming check: verified official English scheduled links for Punjab FC vs Odisha FC (14 Oct) and Sporting Club Delhi vs Mohun Bagan Super Giant (16 Oct), with official channel identity and matching Hindi alternatives. Fixed Hindi-script recognition. Other source checks not covered by this check.",
+      "links": [
+        {
+          "label": "Official ISL YouTube streams",
+          "url": "https://www.youtube.com/@IndianSuperLeague/streams"
+        },
+        {
+          "label": "Punjab FC vs Odisha FC · English",
+          "url": "https://www.youtube.com/live/8VoKMQAmAbo"
+        },
+        {
+          "label": "Sporting Club Delhi vs Mohun Bagan Super Giant · English",
+          "url": "https://www.youtube.com/live/R6Rj00R4Mcs"
+        }
+      ]
+    },
+    {
       "checkedAt": "2026-10-12T02:36:09.795755+00:00",
       "kind": "hourly",
       "outcome": "no-change",

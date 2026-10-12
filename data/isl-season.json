@@ -307,7 +307,16 @@
       "status": "NS",
       "phase": "league",
       "label": "Match 6",
-      "sourceUrl": "https://www.indiansuperleague.com/schedule-fixtures"
+      "sourceUrl": "https://www.indiansuperleague.com/schedule-fixtures",
+      "broadcast": {
+        "url": "https://www.youtube.com/live/8VoKMQAmAbo",
+        "title": "LIVE: Punjab FC vs Odisha FC | MG ISL 2026-27 | Gameweek 1",
+        "channelUrl": "https://www.youtube.com/@IndianSuperLeague",
+        "language": "English",
+        "status": "scheduled",
+        "verifiedAt": "2026-10-12T09:44:25.792Z",
+        "languageEvidence": "official-default-unlabelled"
+      }
     },
     {
       "id": "194640",
@@ -318,7 +327,16 @@
       "status": "NS",
       "phase": "league",
       "label": "Match 7",
-      "sourceUrl": "https://www.indiansuperleague.com/schedule-fixtures"
+      "sourceUrl": "https://www.indiansuperleague.com/schedule-fixtures",
+      "broadcast": {
+        "url": "https://www.youtube.com/live/R6Rj00R4Mcs",
+        "title": "LIVE: Sporting Club Delhi vs Mohun Bagan Super Giant | MG ISL 2026-27 | Gameweek 2",
+        "channelUrl": "https://www.youtube.com/@IndianSuperLeague",
+        "language": "English",
+        "status": "scheduled",
+        "verifiedAt": "2026-10-12T09:44:25.792Z",
+        "languageEvidence": "official-default-unlabelled"
+      }
     },
     {
       "id": "194641",
