@@ -3,6 +3,18 @@
   "season": "2026-27",
   "checks": [
     {
+      "checkedAt": "2026-10-12T17:35:24.068784+00:00",
+      "kind": "post-match-late",
+      "outcome": "updated",
+      "summary": "Manually recovered missing scheduled publication: NorthEast United 1–0 Mohun Bagan FT; official lineups, events and available statistics imported.",
+      "links": [
+        {
+          "label": "Indian Super League official match centre",
+          "url": "https://www.indiansuperleague.com/matchcentre/194638"
+        }
+      ]
+    },
+    {
       "checkedAt": "2026-10-12T11:15:00.957850+00:00",
       "kind": "hourly",
       "outcome": "partial",
