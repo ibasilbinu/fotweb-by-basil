@@ -67,34 +67,41 @@ st.markdown(
 fotweb_workspace = components.declare_component(
     "fotweb_workspace", path=str(ROOT / "frontend")
 )
-try:
-    post_match_data = load_results(ROOT / "data" / "isl-results.json")
-except (ValueError, KeyError, TypeError, OSError):
-    st.warning("Post-match results are temporarily unavailable. Please try again later.")
-    post_match_data = None
 
-try:
-    season_data = load_season(ROOT / "data" / "isl-season.json")
-except (ValueError, KeyError, TypeError, OSError):
-    st.error("The ISL schedule is temporarily unavailable. Please try again later.")
-    st.stop()
+@st.fragment(run_every="60s")
+def refresh_workspace():
+    """Refresh published data for active visitors without a manual reload."""
+    try:
+        post_match_data = load_results(ROOT / "data" / "isl-results.json")
+    except (ValueError, KeyError, TypeError, OSError):
+        st.warning("Post-match results are temporarily unavailable. Please try again later.")
+        post_match_data = None
+    
+    try:
+        season_data = load_season(ROOT / "data" / "isl-season.json")
+    except (ValueError, KeyError, TypeError, OSError):
+        st.error("The ISL schedule is temporarily unavailable. Please try again later.")
+        st.stop()
+    
+    try:
+        update_log = load_update_log(ROOT / "data" / "update-log.json")
+    except (ValueError, KeyError, TypeError, OSError):
+        update_log = {"schemaVersion": 1, "season": "2026-27", "checks": []}
+    
+    try:
+        squad_data = load_squads(ROOT / "data" / "isl-squads.json", {t["id"] for t in season_data["teams"]})
+    except (ValueError, KeyError, TypeError, OSError):
+        squad_data = {"schemaVersion": 1, "season": "2026-27", "teams": []}
+    
+    fotweb_workspace(
+        squad_data=squad_data,
+        season_data=season_data,
+        update_log=update_log,
+        post_match_data=post_match_data,
+        today=datetime.now(ZoneInfo("Asia/Kolkata")).date().isoformat(),
+        key="fotweb-workspace",
+        default=None,
+    )
 
-try:
-    update_log = load_update_log(ROOT / "data" / "update-log.json")
-except (ValueError, KeyError, TypeError, OSError):
-    update_log = {"schemaVersion": 1, "season": "2026-27", "checks": []}
 
-try:
-    squad_data = load_squads(ROOT / "data" / "isl-squads.json", {t["id"] for t in season_data["teams"]})
-except (ValueError, KeyError, TypeError, OSError):
-    squad_data = {"schemaVersion": 1, "season": "2026-27", "teams": []}
-
-fotweb_workspace(
-    squad_data=squad_data,
-    season_data=season_data,
-    update_log=update_log,
-    post_match_data=post_match_data,
-    today=datetime.now(ZoneInfo("Asia/Kolkata")).date().isoformat(),
-    key="fotweb-workspace",
-    default=None,
-)
+refresh_workspace()
