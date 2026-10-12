@@ -3,6 +3,34 @@
   "season": "2026-27",
   "checks": [
     {
+      "checkedAt": "2026-10-12T02:36:09.795755+00:00",
+      "kind": "hourly",
+      "outcome": "no-change",
+      "summary": "Official match import: 5 checked, 0 updates, 0 failures, 0 awaiting FT (retried on subsequent runs). Squad and schedule discovery not covered. Streams checked hourly only.",
+      "links": [
+        {
+          "label": "Bengaluru FC vs Sporting Club Delhi",
+          "url": "https://www.indiansuperleague.com/matchcentre/194634"
+        },
+        {
+          "label": "FC Goa vs Chennaiyin FC",
+          "url": "https://www.indiansuperleague.com/matchcentre/194635"
+        },
+        {
+          "label": "Inter Kashi vs Kerala Blasters FC",
+          "url": "https://www.indiansuperleague.com/matchcentre/194636"
+        },
+        {
+          "label": "Churchill Brothers vs Mumbai City FC",
+          "url": "https://www.indiansuperleague.com/matchcentre/194637"
+        },
+        {
+          "label": "Official ISL YouTube Live listing",
+          "url": "https://www.youtube.com/@IndianSuperLeague/streams"
+        }
+      ]
+    },
+    {
       "checkedAt": "2026-10-11T23:05:27.334097+00:00",
       "kind": "hourly",
       "outcome": "no-change",
