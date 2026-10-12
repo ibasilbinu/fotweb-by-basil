@@ -104,8 +104,13 @@ def main():
         if delta > timedelta(hours=3) or (delta < -timedelta(days=3) and f['id'] in known): continue
         url = 'https://www.indiansuperleague.com/matchcentre/'+f['id']
         try:
-            with urlopen(Request(url,headers={'User-Agent':'Mozilla/5.0 FotWeb/1.0'}),timeout=30) as response:
-                document = response.read(4_000_000).decode('utf-8')
+            for attempt in range(2):
+                try:
+                    with urlopen(Request(url,headers={'User-Agent':'Mozilla/5.0 FotWeb/1.0','Cache-Control':'no-cache'}),timeout=20) as response:
+                        document = response.read(4_000_000).decode('utf-8')
+                    break
+                except OSError:
+                    if attempt == 1: raise
             match,xis = convert(extract_match(document),f,names,stamp)
             if not match and delta < -timedelta(hours=2): pending.append(f['id'])
             links.append({'label':(names[f['homeId']]+' vs '+names[f['awayId']])[:80],'url':url})
@@ -115,6 +120,7 @@ def main():
                 if old.get('report') and (old.get('homeGoals'),old.get('awayGoals')) == (match['homeGoals'],match['awayGoals']): merged['report'] = old['report']
                 merged['sources'] = list({s['url']:s for s in old.get('sources',[])+match['sources']}.values())
                 if 'events' not in match and old.get('events'): merged['events'] = old['events']
+                if not match['players'] and old.get('players'): merged['players'] = old['players']
                 merged['lineups'] = {**old.get('lineups',{}),**match['lineups']}
                 merged['stats'] = {s:{**old.get('stats',{}).get(s,{}),**match['stats'][s]} for s in ('home','away')}
                 if {k:v for k,v in old.items() if k!='verifiedAt'} != {k:v for k,v in merged.items() if k!='verifiedAt'}:
@@ -145,6 +151,7 @@ def main():
     results['matches'] = list(known.values())
     if changed: results['updatedAt'] = stamp
     summary = f"Official match import: {len(links)} checked, {changed} updates, {len(failures)} failures, {len(pending)} awaiting FT (retried on subsequent runs). Squad and schedule discovery not covered. Streams checked hourly only."
+    if failures: summary = (summary + ' Errors: ' + '; '.join(failures))[:400]
     log['checks'] = [{'checkedAt':datetime.now(timezone.utc).isoformat(),'kind':kind,'outcome':('error' if failures and not links else 'partial' if failures or pending else 'updated' if changed else 'no-change'),'summary':summary,'links':links[:8]}]+log['checks'][:335]
     validate_results(results); validate_season(season); validate_update_log(log)
     for name,value in [('isl-season',season),('isl-results',results),('update-log',log)]:

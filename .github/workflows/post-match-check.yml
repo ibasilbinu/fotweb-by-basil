@@ -1,8 +1,11 @@
 name: FotWeb post-match source checks
 on:
   schedule:
-    - cron: '*/10 10-17 * * *'
+    - cron: '7,17,27,37,47,57 10-18 * * *'
     - cron: '40 13 * * *'
+  push:
+    branches: [main]
+    paths: [automated_update.py, .github/workflows/post-match-check.yml]
   workflow_dispatch:
     inputs:
       check_kind:
@@ -19,6 +22,7 @@ concurrency:
   cancel-in-progress: false
 jobs:
   check:
+    timeout-minutes: 15
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
