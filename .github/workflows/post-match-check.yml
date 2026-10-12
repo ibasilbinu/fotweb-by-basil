@@ -1,20 +1,27 @@
-name: FotWeb post-match source checks
+name: FotWeb lineup and post-match checks
 on:
   schedule:
     - cron: '7,17,27,37,47,57 10-18 * * *'
+    # Explicit IST targets: 16:30 XI, 19:00 XI, 19:10 FT, 21:45 FT.
+    - cron: '0 11 * * *'
+    - cron: '30 13 * * *'
     - cron: '40 13 * * *'
+    - cron: '15 16 * * *'
   push:
     branches: [main]
-    paths: [automated_update.py, .github/workflows/post-match-check.yml]
+    paths: [automated_update.py, fixture_update.py, stream_update.py, season.py, postmatch.py, update_log.py, .github/workflows/post-match-check.yml]
   workflow_dispatch:
     inputs:
       check_kind:
-        description: "Post-match check"
+        description: "Match check"
         type: choice
         options:
+          - lineup-early
+          - lineup-late
+          - match-retry
           - post-match-early
           - post-match-late
-        default: post-match-early
+        default: match-retry
 permissions:
   contents: write
 concurrency:
@@ -32,9 +39,10 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - run: python -m pip install yt-dlp
       - name: Import and publish verified data with safe retries
         env:
-          CHECK_KIND: ${{ github.event_name == 'workflow_dispatch' && inputs.check_kind || 'post-match-early' }}
+          CHECK_KIND: ${{ github.event_name == 'workflow_dispatch' && inputs.check_kind || github.event.schedule == '0 11 * * *' && 'lineup-early' || github.event.schedule == '30 13 * * *' && 'lineup-late' || github.event.schedule == '40 13 * * *' && 'post-match-early' || github.event.schedule == '15 16 * * *' && 'post-match-late' || 'match-retry' }}
         run: |
           git config user.name "fotweb-update-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -43,7 +51,7 @@ jobs:
             git reset --hard origin/main
             check_status=0
             python automated_update.py "$CHECK_KIND" || check_status=$?
-            git add data/isl-results.json data/isl-season.json data/update-log.json
+            git add data/isl-results.json data/isl-season.json data/update-log.json data/automation-state.json
             if git diff --cached --quiet; then exit "$check_status"; fi
             git commit -m "Update verified ISL data and actual source check"
             if git push origin HEAD:main; then exit "$check_status"; fi

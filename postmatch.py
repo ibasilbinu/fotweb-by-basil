@@ -46,6 +46,14 @@ def validate_results(data):
         require(match["home"] != match["away"], "Teams must differ")
         for key in ("homeGoals", "awayGoals"):
             require(type(match.get(key)) is int and 0 <= match[key] <= 100, "Invalid final score")
+        if "penalties" in match:
+            penalties = match["penalties"]
+            require(match["status"] == "PEN" and isinstance(penalties, dict)
+                    and set(penalties) == {"home", "away"}
+                    and all(type(v) is int and 0 <= v <= 100 for v in penalties.values()),
+                    "Invalid penalty shootout score")
+        if "winnerId" in match:
+            require(isinstance(match["winnerId"], str) and match["winnerId"].isdigit(), "Invalid winner")
         timestamp(match["verifiedAt"])
         sources = match.get("sources")
         require(isinstance(sources, list) and 1 <= len(sources) <= 20, "A match requires source links")

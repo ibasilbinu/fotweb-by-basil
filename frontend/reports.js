@@ -377,7 +377,7 @@ function fwMatchReport(match) {
     '<p>'+esc(formatDate(match.date))+' · '+esc(match.venue||'Venue unconfirmed')+
     ' · '+esc(match.status)+'</p><div class="fw-match-score"><div>'+shield(homeTeam)+'<strong>'+esc(match.home)+
     '</strong></div><span>'+esc(match.homeGoals)+' <small>—</small> '+esc(match.awayGoals)+
-    '</span><div>'+shield(awayTeam)+'<strong>'+esc(match.away)+'</strong></div></div>'+fwGoalScorers(match)+fwRedCards(match)+'</header>';
+    '</span><div>'+shield(awayTeam)+'<strong>'+esc(match.away)+'</strong></div></div>'+(match.penalties?'<p>Penalties: '+esc(match.penalties.home)+' – '+esc(match.penalties.away)+'</p>':'')+fwGoalScorers(match)+fwRedCards(match)+'</header>';
   const overview='<p class="fw-report-summary">'+esc(match.report ||
     'The final score is verified. A sourced match narrative has not yet been published.')+'</p>' +
     '<p class="fw-report-footnote">Verified '+esc(formatDate(match.verifiedAt))+' · '+

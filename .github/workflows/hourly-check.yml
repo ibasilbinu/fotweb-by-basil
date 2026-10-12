@@ -1,10 +1,12 @@
 name: FotWeb hourly source checks
 on:
   schedule:
+    # UTC schedules: hourly at :43 IST, plus the requested 08:00 IST check.
     - cron: '13 * * * *'
+    - cron: '30 2 * * *'
   push:
     branches: [main]
-    paths: [automated_update.py, stream_update.py, .github/workflows/hourly-check.yml]
+    paths: [automated_update.py, fixture_update.py, stream_update.py, season.py, postmatch.py, update_log.py, tests/**, .github/workflows/hourly-check.yml]
   workflow_dispatch:
 permissions:
   contents: write
@@ -24,9 +26,10 @@ jobs:
         with:
           python-version: '3.12'
       - run: python -m pip install yt-dlp
+      - run: python -m unittest discover -s tests -v
       - name: Import and publish verified data with safe retries
         env:
-          CHECK_KIND: hourly
+          CHECK_KIND: ${{ github.event.schedule == '30 2 * * *' && 'morning' || 'hourly' }}
         run: |
           git config user.name "fotweb-update-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -35,7 +38,7 @@ jobs:
             git reset --hard origin/main
             check_status=0
             python automated_update.py "$CHECK_KIND" || check_status=$?
-            git add data/isl-results.json data/isl-season.json data/update-log.json
+            git add data/isl-results.json data/isl-season.json data/update-log.json data/automation-state.json
             if git diff --cached --quiet; then exit "$check_status"; fi
             git commit -m "Update verified ISL data and actual source check"
             if git push origin HEAD:main; then exit "$check_status"; fi

@@ -9,7 +9,8 @@ from datetime import datetime
 from pathlib import Path
 from urllib.parse import urlparse
 
-KINDS = {"hourly", "post-match-early", "post-match-late"}
+KINDS = {"hourly", "morning", "lineup-early", "lineup-late",
+         "post-match-early", "post-match-late", "match-retry"}
 OUTCOMES = {"updated", "no-change", "partial", "error", "unrecorded"}
 MAX_CHECKS = 336  # Most recent ~14 days, including special checks.
 

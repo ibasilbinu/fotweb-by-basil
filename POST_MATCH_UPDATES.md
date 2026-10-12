@@ -1,22 +1,11 @@
-## GitHub Actions importer (current execution path)
+# Current unattended execution
 
-The hourly and post-match Actions workflows now run `automated_update.py`
-and commit validated results, confirmed upcoming XIs and real check logs using
-GitHub's repository token. Hourly runs also call `stream_update.py`. Schedule:
-on the hour IST; ten-minute match checks from 15:30–23:20 IST; explicit 19:10 IST.
-Jobs may be delayed by GitHub. Concurrent commits retry from the latest main
-without force pushing. Publication failures remain failed jobs.
-
-This importer checks official structured match payload identity, clubs, season
-and date; only completed regulation-time league games become FT records.
-It imports published team/player statistics and named events, without xG or
-coordinates. Stream links require official channel identity, matching teams and
-start time, and English evidence (explicit English/ENG, a matching Hindi-labelled
-alternative, or an existing creator-confirmed/verified English link).
-
-Fixture rescheduling and squad discovery still require the separate editorial
-checks described below. All source and preservation rules below apply. Logs
-label coverage as partial so they do not imply these checks occurred.
+See [AUTOMATION.md](AUTOMATION.md) for the authoritative current schedule,
+source coverage, phase continuation, writer and recovery instructions. The
+GitHub Actions importer now discovers official fixtures, verifies scheduled
+streams, publishes confirmed XIs and handles FT/AET/PEN through the final.
+The following editorial source and preservation rules continue to apply;
+older timing or importer-coverage descriptions are superseded by AUTOMATION.md.
 
 # ISL 2026–27 post-match updates
 
