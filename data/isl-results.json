@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "season": "2026-27",
-  "updatedAt": "2026-10-12T17:37:41.152169+00:00",
+  "updatedAt": "2026-10-12T18:03:13.485080+00:00",
   "matches": [
     {
       "id": "194634",
@@ -12,7 +12,7 @@
       "awayGoals": 2,
       "status": "FT",
       "phase": "league",
-      "verifiedAt": "2026-10-11T13:53:27.495258+00:00",
+      "verifiedAt": "2026-10-12T18:03:13.485080+00:00",
       "sources": [
         {
           "label": "Indian Super League official match centre",
@@ -598,7 +598,9 @@
           "tackles": 0,
           "saves": 0
         }
-      ]
+      ],
+      "officialStage": "League",
+      "winnerId": "656"
     },
     {
       "id": "194635",
@@ -609,7 +611,7 @@
       "awayGoals": 1,
       "status": "FT",
       "phase": "league",
-      "verifiedAt": "2026-10-11T13:53:27.495258+00:00",
+      "verifiedAt": "2026-10-12T18:03:13.485080+00:00",
       "sources": [
         {
           "label": "Indian Super League official match centre",
@@ -1205,7 +1207,8 @@
           "tackles": 0,
           "saves": 0
         }
-      ]
+      ],
+      "officialStage": "League"
     },
     {
       "id": "194636",
@@ -1216,7 +1219,7 @@
       "awayGoals": 2,
       "status": "FT",
       "phase": "league",
-      "verifiedAt": "2026-10-11T17:06:59.225231+00:00",
+      "verifiedAt": "2026-10-12T18:03:13.485080+00:00",
       "sources": [
         {
           "label": "Indian Super League official match centre",
@@ -1800,7 +1803,9 @@
           "addedMinute": 4,
           "assist": "Sanan Mohammed K"
         }
-      ]
+      ],
+      "officialStage": "League",
+      "winnerId": "498"
     },
     {
       "id": "194637",
@@ -1811,7 +1816,7 @@
       "awayGoals": 1,
       "status": "FT",
       "phase": "league",
-      "verifiedAt": "2026-10-11T17:06:59.225231+00:00",
+      "verifiedAt": "2026-10-12T18:03:13.485080+00:00",
       "sources": [
         {
           "label": "Indian Super League official match centre",
@@ -2388,7 +2393,9 @@
           "player": "Maibam Deny Singh",
           "addedMinute": 1
         }
-      ]
+      ],
+      "officialStage": "League",
+      "winnerId": "1101"
     },
     {
       "id": "194638",
@@ -2399,7 +2406,7 @@
       "awayGoals": 0,
       "status": "FT",
       "phase": "league",
-      "verifiedAt": "2026-10-12T17:35:24.068784+00:00",
+      "verifiedAt": "2026-10-12T18:03:13.485080+00:00",
       "sources": [
         {
           "label": "Indian Super League official match centre",
@@ -3001,7 +3008,9 @@
           "player": "Alaeddine Ajaraie",
           "addedMinute": 5
         }
-      ]
+      ],
+      "officialStage": "League",
+      "winnerId": "504"
     }
   ]
 }

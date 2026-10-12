@@ -83,6 +83,42 @@
     "194712"
   ],
   "phaseOneLastKickoff": "2027-01-17T19:30+05:30",
-  "sources": {},
-  "pending": []
+  "sources": {
+    "fixtures": {
+      "checkedAt": "2026-10-12T18:03:13.485080+00:00",
+      "outcome": "ok"
+    },
+    "streams": {
+      "checkedAt": "2026-10-12T18:03:13.485080+00:00",
+      "outcome": "partial"
+    }
+  },
+  "pending": [],
+  "matchCheckedAt": {
+    "194638": "2026-10-12T18:03:13.485080+00:00",
+    "194634": "2026-10-12T18:03:13.485080+00:00",
+    "194635": "2026-10-12T18:03:13.485080+00:00",
+    "194636": "2026-10-12T18:03:13.485080+00:00",
+    "194637": "2026-10-12T18:03:13.485080+00:00"
+  },
+  "lastCheck": {
+    "checkedAt": "2026-10-12T18:03:13.485080+00:00",
+    "kind": "hourly",
+    "failures": [
+      "YouTube bj9c7TPl_18: Official channel identity unavailable or mismatched",
+      "YouTube r7fCiGAMU3w: Official channel identity unavailable or mismatched",
+      "YouTube 5IOC7sCXezo: Official channel identity unavailable or mismatched",
+      "YouTube ug5A-PvAtuE: Official channel identity unavailable or mismatched",
+      "YouTube wsysXETXWxA: Official channel identity unavailable or mismatched",
+      "YouTube cEK6dPHN9LQ: Official channel identity unavailable or mismatched",
+      "YouTube gDI508P5F3g: Official channel identity unavailable or mismatched",
+      "YouTube AgtTJNhbbNM: Official channel identity unavailable or mismatched"
+    ],
+    "changes": {
+      "fixtures": 79,
+      "results": 5,
+      "lineups": 0,
+      "streams": 1
+    }
+  }
 }
