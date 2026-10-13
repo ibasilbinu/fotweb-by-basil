@@ -1,10 +1,9 @@
-/* Android APK download directly from FotWeb; no PWA installation popup.
-   Hide the download action inside the installed Android WebView itself. */
+/* Hide the Android APK download button only inside the installed app. */
 (() => {
-  const inApp = /(?:^|[;\\s])wv(?:[;\\s]|$)/i.test(navigator.userAgent) ||
+  const inAndroidWebView = /\bwv\b/i.test(navigator.userAgent) ||
     navigator.userAgent.includes('FotWebAndroid/');
-  if (!inApp) return;
-  document.querySelectorAll('#installFotWeb, .sidebar-install-fotweb').forEach(node => {
-    node.hidden = true;
+  if (!inAndroidWebView) return;
+  document.querySelectorAll('#installFotWeb, .sidebar-install-fotweb').forEach(el => {
+    el.hidden = true;
   });
 })();
