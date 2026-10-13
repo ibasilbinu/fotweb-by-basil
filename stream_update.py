@@ -1,5 +1,6 @@
 """Verify official YouTube stream metadata without guessing links or language."""
 from datetime import datetime, timedelta, timezone
+from concurrent.futures import ThreadPoolExecutor
 import re
 import json
 from yt_dlp import YoutubeDL
@@ -27,8 +28,8 @@ def extract_video_metadata(document, video, now):
         raise ValueError('Public YouTube player metadata unavailable')
     player, _ = json.JSONDecoder().raw_decode(document[found.start(1):])
     details = player.get('videoDetails') or {}
-    live = (player.get('microformat', {}).get('playerMicroformatRenderer', {})
-            .get('liveBroadcastDetails') or {})
+    micro = player.get('microformat', {}).get('playerMicroformatRenderer', {})
+    live = micro.get('liveBroadcastDetails') or {}
     if details.get('videoId') != video or details.get('isPrivate'):
         raise ValueError('Video identity unavailable or private')
     start = datetime.fromisoformat(live['startTimestamp'].replace('Z', '+00:00'))
@@ -39,7 +40,10 @@ def extract_video_metadata(document, video, now):
               if details.get('isUpcoming') is True or start > now else None)
     if status is None:
         raise ValueError('Broadcast state unavailable')
-    return {'channel_id':details.get('channelId'), 'title':details.get('title'),
+    channel_id = details.get('channelId') or micro.get('externalChannelId')
+    if not channel_id:
+        raise ValueError('Public player metadata is missing its channel identity')
+    return {'channel_id':channel_id, 'title':details.get('title'),
             'release_timestamp':start.timestamp(), 'live_status':status}
 
 
@@ -70,13 +74,32 @@ def update_streams(season, stamp, failures=None):
                 and not f.get('needsConfirmation')
                 and datetime.fromisoformat(f['kickoff']) >= now-timedelta(days=3)]
     entries = [e for e in listing['entries'] if isinstance(e, dict)]
-    updates, selected = 0, set()
+    # Keep a still-verified existing feed rather than replacing it with a second
+    # unlabelled replay. Metadata still has to pass ownership/date/language checks.
+    existing = {f.get('broadcast', {}).get('url', '').rsplit('/', 1)[-1] for f in fixtures}
+    entries.sort(key=lambda e: e.get('id') not in existing)
+    eligible = []
     for entry in entries:
         title = entry.get('title') or ''
         video = entry.get('id') or ''
         if (not re.fullmatch(r'[A-Za-z0-9_-]{11}', video) or NON_ENGLISH.search(title)
-                or any(w in title.lower() for w in ('highlights', 'press conference', 'preview'))):
+                or any(w in title.lower() for w in ('highlights', 'press conference', 'preview', 'throwback'))):
             continue
+        if any(mentioned(title.lower(), names[f['homeId']]) and mentioned(title.lower(), names[f['awayId']])
+               for f in fixtures):
+            eligible.append(entry)
+    def read_metadata(entry):
+        try:
+            return video_metadata(entry['id'], opts, now), None
+        except Exception as exc:
+            return None, exc
+    # Independent public metadata requests can run concurrently. A slow video
+    # must not consume the whole match-window check before other links are read.
+    with ThreadPoolExecutor(max_workers=4) as pool:
+        metadata = list(pool.map(read_metadata, eligible))
+    updates, selected = 0, set()
+    for entry, (meta, error) in zip(eligible, metadata):
+        title, video = entry.get('title') or '', entry['id']
         # Find all published future fixtures, including later phases. Date matching
         # after metadata retrieval disambiguates the same clubs' return fixture.
         candidates = [f for f in fixtures if f['id'] not in selected
@@ -86,9 +109,11 @@ def update_streams(season, stamp, failures=None):
             continue
         url = 'https://www.youtube.com/live/'+video
         try:
-            meta = video_metadata(video, opts, now)
+            if error:
+                raise error
             if not meta or meta.get('channel_id') != CHANNEL_ID:
-                raise ValueError('Official channel identity unavailable or mismatched')
+                actual = (meta or {}).get('channel_id')
+                raise ValueError('Official channel identity unavailable or mismatched: '+repr(actual))
             start = meta.get('release_timestamp')
             if start is None:
                 raise ValueError('Scheduled stream start is not available yet')

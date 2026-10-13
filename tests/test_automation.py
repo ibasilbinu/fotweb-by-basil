@@ -178,6 +178,16 @@ class StreamTests(unittest.TestCase):
             failures = []; changed = stream_update.update_streams(self.season, STAMP, failures)
         return changed, failures
 
+    def test_verified_existing_feed_wins_over_duplicate_unlabelled_replay(self):
+        self.season['fixtures'][0]['broadcast'] = {'url':'https://www.youtube.com/live/'+self.video,
+            'title':self.title,'channelUrl':stream_update.CHANNEL,'language':'English',
+            'status':'scheduled','verifiedAt':STAMP}
+        duplicate = 'duplicate01'
+        changed, failures = self.update([{'id':duplicate,'title':self.title},{'id':self.video,'title':self.title}],
+            {duplicate:self.meta,self.video:self.meta})
+        self.assertEqual(changed,0); self.assertFalse(failures)
+        self.assertTrue(self.season['fixtures'][0]['broadcast']['url'].endswith(self.video))
+
     def test_public_watch_metadata_handles_upcoming_and_ended(self):
         player = {'videoDetails':{'videoId':self.video, 'channelId':stream_update.CHANNEL_ID,
                   'title':self.title,'isLiveContent':True},
@@ -186,6 +196,10 @@ class StreamTests(unittest.TestCase):
         doc = 'var ytInitialPlayerResponse = '+json.dumps(player)+';'
         meta = stream_update.extract_video_metadata(doc,self.video,datetime.fromisoformat(STAMP))
         self.assertEqual(meta['live_status'],'is_upcoming')
+        player['videoDetails'].pop('channelId')
+        player['microformat']['playerMicroformatRenderer']['externalChannelId'] = stream_update.CHANNEL_ID
+        alt = stream_update.extract_video_metadata('ytInitialPlayerResponse = '+json.dumps(player),self.video,datetime.fromisoformat(STAMP))
+        self.assertEqual(alt['channel_id'],stream_update.CHANNEL_ID)
         player['microformat']['playerMicroformatRenderer']['liveBroadcastDetails']['endTimestamp'] = '2027-02-01T14:00:00Z'
         meta = stream_update.extract_video_metadata('ytInitialPlayerResponse = '+json.dumps(player),self.video,datetime.fromisoformat(STAMP))
         self.assertEqual(meta['live_status'],'was_live')
