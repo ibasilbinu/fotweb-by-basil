@@ -3,6 +3,42 @@
   "season": "2026-27",
   "checks": [
     {
+      "checkedAt": "2026-10-13T11:06:37.817725+00:00",
+      "kind": "lineup-early",
+      "outcome": "partial",
+      "summary": "No fixtures on 13 October; 5 recent match centres and official streams checked. One official match-stat correction; no new XIs or stream links. No source errors. Hourly ChatGPT backup recovery failed: This task is no longer available. GitHub hourly checks are passing.",
+      "links": [
+        {
+          "label": "Bengaluru FC vs Sporting Club Delhi",
+          "url": "https://www.indiansuperleague.com/matchcentre/194634"
+        },
+        {
+          "label": "FC Goa vs Chennaiyin FC",
+          "url": "https://www.indiansuperleague.com/matchcentre/194635"
+        },
+        {
+          "label": "Inter Kashi vs Kerala Blasters FC",
+          "url": "https://www.indiansuperleague.com/matchcentre/194636"
+        },
+        {
+          "label": "Churchill Brothers vs Mumbai City FC",
+          "url": "https://www.indiansuperleague.com/matchcentre/194637"
+        },
+        {
+          "label": "NorthEast United FC vs Mohun Bagan Super Giant",
+          "url": "https://www.indiansuperleague.com/matchcentre/194638"
+        },
+        {
+          "label": "Official ISL YouTube Live listing",
+          "url": "https://www.youtube.com/@IndianSuperLeague/streams"
+        },
+        {
+          "label": "Official ISL fixture schedule",
+          "url": "https://www.indiansuperleague.com/schedule-fixtures"
+        }
+      ]
+    },
+    {
       "checkedAt": "2026-10-13T09:35:11.440875+00:00",
       "kind": "morning",
       "outcome": "no-change",
