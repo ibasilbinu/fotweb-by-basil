@@ -84,3 +84,24 @@ html,body{height:100%;overflow:hidden}.app{height:100vh}.main-wrap{height:100vh;
 }
 @media(max-width:520px){.topbar .breadcrumb{display:none}}
 @media print{.install-fotweb,.sidebar-install-fotweb{display:none!important}}
+
+
+/* Streamlit-site install guide: fully local, no navigation. */
+.install-help-dialog{width:min(440px,calc(100% - 24px));max-width:440px;
+  padding:23px;border:1px solid #465d49;border-radius:15px;background:#141a1b;
+  color:var(--text);box-shadow:0 28px 85px #000c;max-height:calc(100dvh - 36px);overflow:auto}
+.install-help-dialog::backdrop{background:rgba(0,0,0,.78)}
+.install-help-heading{display:flex;align-items:flex-start;justify-content:space-between;gap:14px}
+.install-help-heading h2{margin:9px 0 12px;font-size:22px;line-height:1.2}
+.install-help-close{border:1px solid #455053;background:#20292a;color:#f0f3f0;
+  border-radius:8px;min-width:35px;height:35px;font-size:23px}
+.install-help-description{color:#b7c1bf;font-size:13px;line-height:1.6;margin:7px 0 14px}
+.install-help-steps{border:1px solid #374532;border-radius:11px;background:#1d2a22;
+  padding:14px 16px;color:#e7efe4;font-size:13px;line-height:1.7}
+.install-help-steps p + p{margin-top:7px}
+.install-help-note{color:#9faeab;font-size:11px;line-height:1.6;margin:15px 0}
+.install-help-done{display:block;width:100%;border-radius:9px;background:var(--accent);
+  color:#172013;font-size:13px;font-weight:750;padding:12px}
+button.install-fotweb,button.sidebar-install-fotweb{text-align:center;cursor:pointer}
+button.sidebar-install-fotweb{width:100%;justify-content:flex-start}
+@media print{.install-help-dialog{display:none!important}}
