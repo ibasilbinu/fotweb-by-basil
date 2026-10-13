@@ -225,7 +225,9 @@ that same live site, without duplicating match data or modifying automated jobs.
 **One-time GitHub Pages setup:** On the repository's **Settings → Pages** screen,
 set **Build and deployment → Source: GitHub Actions**. The
 [Deploy installable FotWeb](.github/workflows/deploy-pwa.yml) workflow then
-publishes the contents of pwa/ when the installation shell changes. The workflow
+publishes the contents of pwa/ when the installation shell changes. After enabling
+Pages, open **Actions → Deploy installable FotWeb** and select **Re-run failed
+jobs** for its initial run (or use **Run workflow**). The workflow
 does not alter the deployed Streamlit application, GitHub football update
 workflows or verified data. The custom Streamlit Cloud hostname does not itself
 become a branded PWA; users install from the GitHub Pages URL.
