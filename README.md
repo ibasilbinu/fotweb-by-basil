@@ -206,6 +206,22 @@ property. FotWeb is an independent fan analytics project.
 
 ## Install FotWeb on your device
 
+**Install from the existing website:** Open https://fotweb.streamlit.app/ and
+choose **Install App** in the top toolbar (or **Install FotWeb App** in the
+navigation sidebar). The link opens the installable GitHub Pages shell, where
+the browser can offer **Install FotWeb** / **Add to Home Screen**. The shell
+loads the same live Streamlit app and preserves all fixture and match-update
+workflows.
+
+A browser can only show the native installation prompt for the origin hosting
+the PWA manifest and service worker. Streamlit Community Cloud cannot directly
+install the separate GitHub Pages origin from its embedded custom component.
+Users discover the install flow on FotWeb itself; no GitHub account is required.
+The first install action opens the installable page, and the browser may require
+a second tap to confirm.
+
+
+
 FotWeb remains hosted and automatically updated on Streamlit Community Cloud at
 **https://fotweb.streamlit.app/**. Its optional **installable PWA shell** embeds
 that same live site, without duplicating match data or modifying automated jobs.
