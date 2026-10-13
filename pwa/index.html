@@ -31,6 +31,8 @@
     #manual small{display:block;color:#b5bcb7;line-height:1.5;font-size:12px}
     #manual a{color:#d4f76b}
     #offline{position:fixed;top:max(12px,env(safe-area-inset-top));left:50%;transform:translateX(-50%);z-index:60;background:#161d1e;border:1px solid #668151;color:#f3f5f1;border-radius:9px;padding:11px 15px;font-size:13px;text-align:center;max-width:calc(100vw - 30px);box-shadow:0 10px 30px #000a}
+    #install.inline-install .pill{display:none}
+    #install.inline-install:has(#manual[hidden]){pointer-events:none}
     [hidden]{display:none!important}
     @media(display-mode:standalone){#install{display:none!important}}
     @media(max-width:480px){.button{padding:11px 15px}#manual{max-width:calc(100vw - 28px)}}
@@ -65,6 +67,46 @@
     const isiOS = /iPad|iPhone|iPod/i.test(navigator.userAgent) ||
       (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
     let installEvent = null;
+    const streamlitOrigin = 'https://fotweb.streamlit.app';
+    // The Streamlit component is a nested, cross-origin iframe. It sends an
+    // installation request up to this top-level PWA, which owns the manifest
+    // and browser's beforeinstallprompt event.
+    const showInstallInstructions = () => {
+      manualText.textContent = isiOS
+        ? 'On iPhone or iPad: tap Share in your browser, then choose Add to Home Screen.'
+        : 'Your browser has not offered a direct install prompt. Use the browser menu and choose Install app or Add to Home screen.';
+      install.hidden = false;
+      manual.hidden = false;
+      button.setAttribute('aria-expanded', 'true');
+    };
+    const requestNativeInstall = () => {
+      if (standalone) return;
+      if (!installEvent) {
+        showInstallInstructions();
+        return;
+      }
+      const pending = installEvent;
+      installEvent = null;
+      manual.hidden = true;
+      button.setAttribute('aria-expanded', 'false');
+      try {
+        // Call immediately, in the real user-activation path. Chrome passes
+        // activation from a clicked iframe through its ancestor windows.
+        Promise.resolve(pending.prompt()).then(result => {
+          if (result?.outcome === 'accepted') install.hidden = true;
+        }).catch(showInstallInstructions);
+      } catch (_) {
+        showInstallInstructions();
+      }
+    };
+    window.addEventListener('message', (event) => {
+      if (event.origin !== streamlitOrigin) return;
+      if (event.data?.type === 'fotweb:pwa-probe') {
+        event.source?.postMessage({ type: 'fotweb:pwa-ready', installed: standalone }, event.origin);
+        install.classList.add('inline-install');
+      }
+      if (event.data?.type === 'fotweb:pwa-install-request') requestNativeInstall();
+    });
     frame.addEventListener('load', () => { loading.hidden = true; });
     const connectivity = () => { offline.hidden = navigator.onLine; };
     window.addEventListener('offline', connectivity);
@@ -89,25 +131,7 @@
       install.hidden = true;
       try { sessionStorage.setItem('fotweb-install-dismissed', 'yes'); } catch (_) {}
     });
-    button.addEventListener('click', async () => {
-      if (installEvent) {
-        const event = installEvent;
-        installEvent = null;
-        manual.hidden = true;
-        button.setAttribute('aria-expanded', 'false');
-        event.prompt();
-        try {
-          const choice = await event.userChoice;
-          if (choice.outcome === 'accepted') install.hidden = true;
-        } catch (_) {}
-        return;
-      }
-      manualText.textContent = isiOS
-        ? 'On iPhone or iPad: tap Share in Safari, then choose Add to Home Screen and tap Add.'
-        : 'Open the browser menu and choose Install app or Add to Home screen. Some browsers do not support installing sites.';
-      manual.hidden = !manual.hidden;
-      button.setAttribute('aria-expanded', String(!manual.hidden));
-    });
+    button.addEventListener('click', requestNativeInstall);
   })();
   </script>
 </body>

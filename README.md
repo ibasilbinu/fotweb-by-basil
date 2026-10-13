@@ -5,7 +5,7 @@ FotWeb is an independent football analytics website for the **Indian Super Leagu
 Follow published fixtures, explore club squads, compare team form and read
 source-linked analysis after the final whistle.
 
-**[Visit FotWeb](https://fotweb.streamlit.app/)**
+**[Visit FotWeb — installable website](https://ibasilbinu.github.io/fotweb-by-basil/)** (powered by [Streamlit](https://fotweb.streamlit.app/))
 
 The current schedule snapshot contains **13 clubs and 78 Phase 1 fixtures**, from
 **10 October 2026 to 17 January 2027**. Fixtures and source coverage may change.
@@ -206,19 +206,21 @@ property. FotWeb is an independent fan analytics project.
 
 ## Install FotWeb on your device
 
-**Install from the existing website:** Open https://fotweb.streamlit.app/ and
-choose **Install App** in the top toolbar (or **Install FotWeb App** in the
-navigation sidebar). The link opens the installable GitHub Pages shell, where
-the browser can offer **Install FotWeb** / **Add to Home Screen**. The shell
-loads the same live Streamlit app and preserves all fixture and match-update
-workflows.
+**Install directly from FotWeb's public website:** Open
+https://ibasilbinu.github.io/fotweb-by-basil/ and select **Install App** in
+the site's own top bar (or **Install FotWeb App** in its sidebar). The custom
+Streamlit component sends a message to the top-level PWA. On supported Chromium
+browsers, FotWeb opens the native app-install confirmation in place, without
+changing pages. A manual Add to Home Screen guide appears when the browser
+cannot provide a prompt. After installation, the button is hidden.
 
-A browser can only show the native installation prompt for the origin hosting
-the PWA manifest and service worker. Streamlit Community Cloud cannot directly
-install the separate GitHub Pages origin from its embedded custom component.
-Users discover the install flow on FotWeb itself; no GitHub account is required.
-The first install action opens the installable page, and the browser may require
-a second tap to confirm.
+The original https://fotweb.streamlit.app/ remains the live backend. Visitors
+who open that legacy Streamlit link will still need to follow its install button
+to the installable website **once**: browsers cannot use the standard PWA
+installation prompt to install another origin directly from Streamlit's iframe.
+For a seamless install experience, share the GitHub Pages URL as FotWeb's
+primary public address. Neither GitHub sign-in nor a Play Store download is
+required.
 
 
 
