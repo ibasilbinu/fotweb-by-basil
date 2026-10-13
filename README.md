@@ -204,20 +204,27 @@ No fictional players, demonstration results, estimated shot locations, invented
 xG or predicted lineups are used. Club crests and portraits remain their owners’
 property. FotWeb is an independent fan analytics project.
 
-## Same-page installation from the original Streamlit website (experimental)
+## Download the FotWeb Android app from the original website
 
-On https://fotweb.streamlit.app/ select **Install App** in the FotWeb top bar.
-The site does not redirect or download an APK. A Streamlit `st.html` script
-runs in the original document, injects the `static/fotweb-manifest.json` web
-manifest and listens for `beforeinstallprompt`. If Chrome or Brave emits that
-event, tapping the button should open the native installation confirmation.
-Otherwise it shows device-specific installation guidance without leaving FotWeb.
+Visit **https://fotweb.streamlit.app/** and tap **Download App** in the
+top bar (or **Download Android App** in the sidebar). The action downloads
+the signed `FotWeb.apk` directly; it does not open GitHub Pages or show
+a PWA instruction popup.
 
-Streamlit Community Cloud may overwrite app branding or prevent the native
-prompt from firing. This workaround is **not guaranteed** to behave like
-a fully controlled PWA hosted on a dedicated frontend. iOS requires Safari's
-Add to Home Screen menu. The alternative Android APK beta is still available
-as a separate GitHub Release, but not from the main install button.
+**Android requires user confirmation for APK installations.** After the
+download, open the APK from browser Downloads or the notification and
+approve the system installer. FotWeb then appears in the Android app drawer
+as **FotWeb by Basil**, and launches the existing Streamlit site inside a
+native WebView (no Chrome address bar). Club navigation remains inside the
+app; genuinely external YouTube broadcasts and source articles may still
+open their normal browsers or apps.
+
+Latest APK: https://github.com/ibasilbinu/fotweb-by-basil/releases/download/android-v1.1.0/FotWeb.apk
+
+**Important for v1.0 beta testers:** Uninstall the previous FotWeb Android
+beta before installing v1.1.0. Each current beta build uses a temporary
+signing certificate; Android cannot upgrade it in place. The installed app
+requires internet access and receives the existing live football updates.
 
 FotWeb remains hosted and automatically updated on Streamlit Community Cloud at
 **https://fotweb.streamlit.app/**. Its optional **installable PWA shell** embeds
