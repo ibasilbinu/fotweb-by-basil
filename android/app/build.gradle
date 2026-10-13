@@ -1,0 +1,40 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.fotweb.bybasil'
+    compileSdk 35
+
+    defaultConfig {
+        applicationId 'com.fotweb.bybasil'
+        minSdk 24
+        targetSdk 34
+        versionCode 1
+        versionName '1.0.0'
+    }
+
+    signingConfigs {
+        release {
+            // GitHub Actions generates the temporary beta signing key.
+            // A permanent secret keystore must be configured for future
+            // in-place upgrades; do not commit a private key.
+            storeFile file(System.getenv('FOTWEB_KEYSTORE') ?: 'missing-key.jks')
+            storePassword System.getenv('FOTWEB_KEY_PASSWORD') ?: ''
+            keyAlias 'fotweb'
+            keyPassword System.getenv('FOTWEB_KEY_PASSWORD') ?: ''
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            signingConfig signingConfigs.release
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+}

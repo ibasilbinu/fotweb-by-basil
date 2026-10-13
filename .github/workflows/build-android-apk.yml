@@ -1,0 +1,57 @@
+name: Build and publish FotWeb Android APK
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'android/**'
+      - '.github/workflows/build-android-apk.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out FotWeb
+        uses: actions/checkout@v4
+      - name: Set up Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+      - name: Set up Android SDK
+        uses: android-actions/setup-android@v3
+      - name: Set up Gradle
+        uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '8.11.1'
+      - name: Prepare FotWeb launcher icon
+        run: |
+          python -m pip install Pillow
+          python pwa/make_icons.py
+          mkdir -p android/app/src/main/res/drawable-nodpi
+          cp pwa/icon-512.png android/app/src/main/res/drawable-nodpi/app_icon.png
+      - name: Generate temporary beta release signing certificate
+        shell: bash
+        run: |
+          set -euo pipefail
+          PASSWORD="$(openssl rand -hex 24)"
+          keytool -genkeypair -noprompt -keystore "$RUNNER_TEMP/fotweb-beta.jks" -storepass "$PASSWORD" -keypass "$PASSWORD" -alias fotweb -keyalg RSA -keysize 3072 -validity 10000 -dname 'CN=FotWeb by Basil, O=FotWeb, C=IN'
+          echo "FOTWEB_KEYSTORE=$RUNNER_TEMP/fotweb-beta.jks" >> "$GITHUB_ENV"
+          echo "FOTWEB_KEY_PASSWORD=$PASSWORD" >> "$GITHUB_ENV"
+      - name: Build signed Android APK
+        run: gradle --no-daemon -p android assembleRelease
+      - name: Prepare download
+        run: cp android/app/build/outputs/apk/release/app-release.apk "$RUNNER_TEMP/FotWeb.apk"
+      - name: Upload verified build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: FotWeb-Android-APK
+          path: android/app/build/outputs/apk/release/app-release.apk
+      - name: Publish APK for direct download
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          gh release create android-v1.0.0 "$RUNNER_TEMP/FotWeb.apk" --target "$GITHUB_SHA" --title 'FotWeb Android App v1.0.0 (beta)' --notes 'Installable signed Android app for FotWeb. Requires Android 7.0+ and an internet connection. This initial beta uses a temporary signing certificate, so subsequent builds require uninstalling this version unless a permanent signing key is configured. FotWeb remains hosted on Streamlit; match data updates normally.'
