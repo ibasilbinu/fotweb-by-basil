@@ -17,7 +17,7 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          gh release download android-v1.0.0 --pattern 'FotWeb.apk' --dir .
+          gh release download android-v1.1.0 --pattern 'FotWeb.apk' --dir .
           ls -lh FotWeb.apk
           file FotWeb.apk
           unzip -t FotWeb.apk | tail -n 3
@@ -42,5 +42,7 @@ jobs:
             echo 'Launching app:'
             adb shell monkey -p com.fotweb.bybasil -c android.intent.category.LAUNCHER 1
             sleep 3
-            adb shell pidof com.fotweb.bybasil || true
+            adb shell pidof com.fotweb.bybasil
+            echo 'Verify FotWeb is the foreground Android activity:'
+            adb shell dumpsys activity activities | grep -E 'topResumedActivity|mResumedActivity|com.fotweb.bybasil' | tail -n 12
             echo 'Emulator check finished.'
