@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0b0e11">
+  <meta name="description" content="Install FotWeb by Basil for Indian Super League fixtures, results and football analytics.">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="FotWeb">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="icon" type="image/svg+xml" href="./icon.svg">
+  <link rel="apple-touch-icon" href="./icon-192.png">
+  <title>FotWeb by Basil · Installable App</title>
+  <style>
+    :root{color-scheme:dark;font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+    *{box-sizing:border-box}
+    html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#0b0e11;color:#eef2ed}
+    #site{position:absolute;inset:0;width:100%;height:100%;height:100dvh;border:0;display:block;background:#0b0e11}
+    #loading{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);pointer-events:none;color:#b8c4b6;text-align:center;font-size:13px;letter-spacing:.03em}
+    #loading strong{display:block;margin-bottom:12px;font-size:27px;color:#d4f76b;letter-spacing:-.05em}
+    #install{position:fixed;right:max(14px,env(safe-area-inset-right));bottom:max(14px,env(safe-area-inset-bottom));z-index:50;max-width:calc(100vw - 28px)}
+    .button{appearance:none;border:1px solid #6d8748;border-radius:12px;background:#d4f76b;color:#0b0e11;padding:12px 17px;font:700 13px inherit;letter-spacing:.01em;box-shadow:0 10px 26px #0008;cursor:pointer}
+    .button:focus-visible,.dismiss:focus-visible{outline:3px solid white;outline-offset:3px}
+    .button:hover{background:#e6ff9f}
+    .pill{display:flex;align-items:center;gap:8px}
+    .pill svg{width:17px;height:17px}
+    .dismiss{appearance:none;border:1px solid #59605a;background:#14191a;color:#f4f6f1;border-radius:10px;width:42px;height:42px;cursor:pointer;font-size:21px}
+    #manual{margin-top:8px;padding:15px 16px;background:#161d1e;border:1px solid #44504c;box-shadow:0 14px 36px #000b;border-radius:14px;max-width:340px}
+    #manual p{margin:0 0 8px;font-size:14px;line-height:1.5}
+    #manual small{display:block;color:#b5bcb7;line-height:1.5;font-size:12px}
+    #manual a{color:#d4f76b}
+    #offline{position:fixed;top:max(12px,env(safe-area-inset-top));left:50%;transform:translateX(-50%);z-index:60;background:#161d1e;border:1px solid #668151;color:#f3f5f1;border-radius:9px;padding:11px 15px;font-size:13px;text-align:center;max-width:calc(100vw - 30px);box-shadow:0 10px 30px #000a}
+    [hidden]{display:none!important}
+    @media(display-mode:standalone){#install{display:none!important}}
+    @media(max-width:480px){.button{padding:11px 15px}#manual{max-width:calc(100vw - 28px)}}
+  </style>
+</head>
+<body>
+  <div id="loading" aria-live="polite"><strong>FotWeb ↗</strong>Loading football analytics…</div>
+  <iframe id="site" title="FotWeb by Basil · Indian Super League" src="https://fotweb.streamlit.app/?embed=true" allow="fullscreen; clipboard-read; clipboard-write" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+  <div id="offline" role="status" hidden>You are offline. Reconnect to load the latest FotWeb data.</div>
+  <div id="install" hidden>
+    <div class="pill">
+      <button id="installButton" class="button" type="button" aria-expanded="false" aria-controls="manual">↓ &nbsp;Install FotWeb</button>
+      <button id="dismiss" class="dismiss" type="button" aria-label="Dismiss install prompt">×</button>
+    </div>
+    <div id="manual" hidden role="status">
+      <p id="manualText"></p>
+      <small>This adds FotWeb to your home screen. Match data still requires an internet connection.</small>
+      <small><a href="https://fotweb.streamlit.app/" target="_blank" rel="noopener noreferrer">Open original Streamlit site ↗</a></small>
+    </div>
+  </div>
+  <script>
+  (() => {
+    const frame = document.getElementById('site');
+    const loading = document.getElementById('loading');
+    const install = document.getElementById('install');
+    const button = document.getElementById('installButton');
+    const dismiss = document.getElementById('dismiss');
+    const manual = document.getElementById('manual');
+    const manualText = document.getElementById('manualText');
+    const offline = document.getElementById('offline');
+    const standalone = window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone === true;
+    const isiOS = /iPad|iPhone|iPod/i.test(navigator.userAgent) ||
+      (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+    let installEvent = null;
+    frame.addEventListener('load', () => { loading.hidden = true; });
+    const connectivity = () => { offline.hidden = navigator.onLine; };
+    window.addEventListener('offline', connectivity);
+    window.addEventListener('online', connectivity);
+    connectivity();
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => navigator.serviceWorker.register('./sw.js').catch(() => {}));
+    }
+    if (standalone) return;
+    try { if (sessionStorage.getItem('fotweb-install-dismissed') !== 'yes') install.hidden = false; }
+    catch (_) { install.hidden = false; }
+    window.addEventListener('beforeinstallprompt', (event) => {
+      event.preventDefault();
+      installEvent = event;
+      install.hidden = false;
+    });
+    window.addEventListener('appinstalled', () => {
+      installEvent = null;
+      install.hidden = true;
+    });
+    dismiss.addEventListener('click', () => {
+      install.hidden = true;
+      try { sessionStorage.setItem('fotweb-install-dismissed', 'yes'); } catch (_) {}
+    });
+    button.addEventListener('click', async () => {
+      if (installEvent) {
+        const event = installEvent;
+        installEvent = null;
+        manual.hidden = true;
+        button.setAttribute('aria-expanded', 'false');
+        event.prompt();
+        try {
+          const choice = await event.userChoice;
+          if (choice.outcome === 'accepted') install.hidden = true;
+        } catch (_) {}
+        return;
+      }
+      manualText.textContent = isiOS
+        ? 'On iPhone or iPad: tap Share in Safari, then choose Add to Home Screen and tap Add.'
+        : 'Open the browser menu and choose Install app or Add to Home screen. Some browsers do not support installing sites.';
+      manual.hidden = !manual.hidden;
+      button.setAttribute('aria-expanded', String(!manual.hidden));
+    });
+  })();
+  </script>
+</body>
+</html>
