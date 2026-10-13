@@ -1,0 +1,46 @@
+name: Diagnose FotWeb Android installation
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/verify-android-install.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  install-test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download released APK
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release download android-v1.0.0 --pattern 'FotWeb.apk' --dir .
+          ls -lh FotWeb.apk
+          file FotWeb.apk
+          unzip -t FotWeb.apk | tail -n 3
+          sha256sum FotWeb.apk
+      - name: Install real release APK in Android emulator
+        uses: reactivecircus/android-emulator-runner@v2
+        with:
+          api-level: 35
+          target: google_apis
+          arch: x86_64
+          profile: pixel_6
+          script: |
+            set -e
+            echo 'APK manifest:'
+            "$ANDROID_HOME/build-tools/35.0.0/aapt" dump badging FotWeb.apk | head -n 20
+            echo 'APK signature:'
+            "$ANDROID_HOME/build-tools/35.0.0/apksigner" verify --verbose --print-certs FotWeb.apk
+            echo 'Installing released FotWeb.apk:'
+            adb install -r FotWeb.apk
+            echo 'Installed package:'
+            adb shell pm path com.fotweb.bybasil
+            echo 'Launching app:'
+            adb shell monkey -p com.fotweb.bybasil -c android.intent.category.LAUNCHER 1
+            sleep 3
+            adb shell pidof com.fotweb.bybasil || true
+            echo 'Emulator check finished.'
