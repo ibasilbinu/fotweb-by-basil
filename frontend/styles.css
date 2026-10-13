@@ -60,3 +60,27 @@ html,body{height:100%;overflow:hidden}.app{height:100vh}.main-wrap{height:100vh;
  .page-home svg{height:18px;width:18px}
 }
 @media print{.page-home{display:none!important}}
+
+
+/* Installable PWA: users discover installation inside the existing Streamlit UI.
+   Browser installation itself happens on the same-origin GitHub Pages shell. */
+.install-fotweb{display:inline-flex;align-items:center;justify-content:center;gap:7px;
+  padding:9px 13px;min-height:37px;border:1px solid #6f8e45;border-radius:8px;
+  background:#d4f76b;color:#142017;font-weight:750;font-size:12px;
+  line-height:1.2;white-space:nowrap;transition:background .15s ease}
+.install-fotweb:hover{background:#edffbc}
+.install-fotweb svg{flex:none}
+.sidebar-install-fotweb{display:flex;align-items:center;gap:10px;padding:12px 11px;
+  margin:0 0 18px;border:1px solid #52673d;background:#1b2a1b;border-radius:8px;
+  color:var(--accent);font-size:12px;font-weight:700;line-height:1.4}
+.sidebar-install-fotweb:hover{background:#263a22}
+.sidebar-install-fotweb svg{flex:none}
+@media(max-width:680px){
+  .topbar-right .data-badge{display:none}
+  .topbar-right{gap:0}
+  .install-fotweb{gap:5px;padding:9px 10px;min-width:38px}
+  .install-fotweb span{display:none}
+  .topbar{gap:8px}
+}
+@media(max-width:520px){.topbar .breadcrumb{display:none}}
+@media print{.install-fotweb,.sidebar-install-fotweb{display:none!important}}
