@@ -13,9 +13,9 @@ Push an Android-related change to `main` to run
 `pwa/make_icons.py`.
 
 The workflow produces a release-signed APK in GitHub Releases (tag
-`android-v1.0.0`) at:
+`android-v1.1.0`) at:
 
-https://github.com/ibasilbinu/fotweb-by-basil/releases/download/android-v1.0.0/FotWeb.apk
+https://github.com/ibasilbinu/fotweb-by-basil/releases/download/android-v1.1.0/FotWeb.apk
 
 The download is a file attachment, not an installation web page. Android may
 require permission to install apps from the user's browser.
@@ -32,3 +32,7 @@ Before maintaining a long-lived version, generate a permanent private keystore,
 save it securely, configure it through GitHub Actions secrets and adjust the
 workflow signing step. Then publish a new stable Android version with its
 permanent signing certificate. Never commit the private keystore/password.
+
+## FotWeb v1.1 Android window
+
+FotWeb now renders its Streamlit web workspace inside a full-screen native WebView, without launching Chrome as its main screen. Club/team navigation stays in the app. YouTube, match-source articles, and file downloads intentionally open their respective external handlers. The original v1.0 beta was signed with a temporary certificate, so uninstall it before installing this v1.1 beta.
