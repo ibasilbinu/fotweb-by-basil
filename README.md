@@ -204,6 +204,26 @@ No fictional players, demonstration results, estimated shot locations, invented
 xG or predicted lineups are used. Club crests and portraits remain their owners’
 property. FotWeb is an independent fan analytics project.
 
+## iOS support from the original FotWeb website
+
+iPhone/iPad users can visit **https://fotweb.streamlit.app/** and tap the
+site's **Install App** control. FotWeb detects iOS and displays installation
+instructions **inside the current website, without redirecting or downloading
+an Android APK**.
+
+In Safari use **Share → Add to Home Screen**, leave **Open as Web App**
+enabled, and tap **Add**. iOS then adds a FotWeb icon to the Home Screen, which
+can open FotWeb in standalone web-app mode on supported versions.
+Apple does not permit websites to silently install an iOS app or launch
+the Add to Home Screen confirmation directly from arbitrary JavaScript.
+
+The Streamlit host's iOS-only `st.html` metadata configures the title,
+theme, touch icon, standalone flag and the existing
+`static/fotweb-manifest.json` file on the original domain. Streamlit's
+managed hosting and browser behavior can override branding; actual iPhone
+behavior still needs device verification. Android retains its direct APK
+download and all football data updates are unchanged.
+
 ## Download the FotWeb Android app from the original website
 
 Visit **https://fotweb.streamlit.app/** and tap **Download App** in the

@@ -64,6 +64,46 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
+# Safari iOS Home Screen metadata on the ORIGINAL Streamlit document.
+# Only fixed developer-authored values; no user data or dynamic HTML.
+st.html(
+    """
+    <script>
+    (() => {
+      const ios = /iPad|iPhone|iPod/i.test(navigator.userAgent) ||
+        (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+      if (!ios) return;
+      const setMeta = (name, value) => {
+        let meta = document.head.querySelector('meta[name="' + name + '"]');
+        if (!meta) {
+          meta = document.createElement('meta');
+          meta.name = name;
+          document.head.appendChild(meta);
+        }
+        meta.content = value;
+      };
+      const setLink = (rel, href) => {
+        let link = document.head.querySelector('link[rel="' + rel + '"]');
+        if (!link) {
+          link = document.createElement('link');
+          link.rel = rel;
+          document.head.appendChild(link);
+        }
+        link.href = href;
+      };
+      setMeta('apple-mobile-web-app-capable', 'yes');
+      setMeta('apple-mobile-web-app-title', 'FotWeb');
+      setMeta('apple-mobile-web-app-status-bar-style', 'black');
+      setMeta('theme-color', '#0b0e11');
+      setLink('apple-touch-icon', 'https://ibasilbinu.github.io/fotweb-by-basil/icon-192.png');
+      setLink('manifest', '/app/static/fotweb-manifest.json');
+      document.title = 'FotWeb by Basil';
+    })();
+    </script>
+    """,
+    unsafe_allow_javascript=True,
+)
+
 fotweb_workspace = components.declare_component(
     "fotweb_workspace", path=str(ROOT / "frontend")
 )
