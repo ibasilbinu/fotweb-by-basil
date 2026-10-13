@@ -112,11 +112,11 @@
       "sourceUrl": "https://www.indiansuperleague.com/schedule-fixtures",
       "broadcast": {
         "url": "https://www.youtube.com/live/gDI508P5F3g",
-        "title": "LIVE: Bengaluru FC vs Sporting Club Delhi | MG ISL 2026-27 | Gameweek 1 | English",
+        "title": "FULL REPLAY (English): Bengaluru FC vs Sporting Club Delhi (3-2) | MG ISL 2026-27 | Gameweek 1",
         "channelUrl": "https://www.youtube.com/@IndianSuperLeague",
         "language": "English",
         "status": "ended",
-        "verifiedAt": "2026-10-10T13:45:18Z"
+        "verifiedAt": "2026-10-13T02:43:04.006705+00:00"
       },
       "officialStage": "league"
     },
@@ -132,11 +132,11 @@
       "sourceUrl": "https://www.indiansuperleague.com/schedule-fixtures",
       "broadcast": {
         "url": "https://www.youtube.com/live/cEK6dPHN9LQ",
-        "title": "LIVE: FC Goa vs Chennaiyin FC | MG ISL 2026-27 | Gameweek 1| English",
+        "title": "FULL REPLAY (English): FC Goa vs Chennaiyin FC (1-1) | MG ISL 2026-27 | Gameweek 1",
         "channelUrl": "https://www.youtube.com/@IndianSuperLeague",
         "language": "English",
         "status": "ended",
-        "verifiedAt": "2026-10-10T16:51:24Z"
+        "verifiedAt": "2026-10-13T02:43:04.006705+00:00"
       },
       "officialStage": "league"
     },
@@ -152,11 +152,11 @@
       "sourceUrl": "https://www.indiansuperleague.com/schedule-fixtures",
       "broadcast": {
         "url": "https://www.youtube.com/live/wsysXETXWxA",
-        "title": "LIVE: Inter Kashi FC vs Kerala Blasters FC | MG ISL 2026-27 | Gameweek 1 | ENG",
+        "title": "FULL REPLAY (English): Inter Kashi FC vs Kerala Blasters FC (0-2) | MG ISL 2026-27 | Gameweek 1",
         "channelUrl": "https://www.youtube.com/@IndianSuperLeague",
         "language": "English",
-        "status": "scheduled",
-        "verifiedAt": "2026-10-10T11:01:21+05:30"
+        "status": "ended",
+        "verifiedAt": "2026-10-13T02:43:04.006705+00:00"
       },
       "officialStage": "league"
     },
@@ -172,11 +172,11 @@
       "sourceUrl": "https://www.indiansuperleague.com/schedule-fixtures",
       "broadcast": {
         "url": "https://www.youtube.com/live/ug5A-PvAtuE",
-        "title": "LIVE: Churchill Brothers FC vs Mumbai City FC | MG ISL 2026-27 | Gameweek 1 | ENG",
+        "title": "FULL REPLAY (English): Churchill Brothers SC vs Mumbai City FC (2-1) | MG ISL 2026-27 | Gameweek 1",
         "channelUrl": "https://www.youtube.com/@IndianSuperLeague",
         "language": "English",
-        "status": "scheduled",
-        "verifiedAt": "2026-10-10T11:01:21+05:30"
+        "status": "ended",
+        "verifiedAt": "2026-10-13T02:43:04.006705+00:00"
       },
       "lineups": {
         "home": {
@@ -294,12 +294,11 @@
       "sourceUrl": "https://www.indiansuperleague.com/schedule-fixtures",
       "broadcast": {
         "url": "https://www.youtube.com/live/r7fCiGAMU3w",
-        "title": "LIVE: NorthEast United FC vs Mohun Bagan Super Giant | MG ISL 2026-27 | Gameweek 1",
+        "title": "FULL REPLAY (English) : NorthEast United FC vs Mohun Bagan Super Giant (1-0) | MG ISL 2026-27 | GW 1",
         "channelUrl": "https://www.youtube.com/@IndianSuperLeague",
         "language": "English",
-        "status": "scheduled",
-        "verifiedAt": "2026-10-11T13:53:27.495258+00:00",
-        "languageEvidence": "official-default-unlabelled"
+        "status": "ended",
+        "verifiedAt": "2026-10-13T02:43:04.006705+00:00"
       },
       "officialStage": "league"
     },

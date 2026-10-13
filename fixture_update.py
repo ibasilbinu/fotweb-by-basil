@@ -1,6 +1,7 @@
 """Discover published ISL fixtures without replacing a good snapshot with a partial feed."""
 from copy import deepcopy
 from datetime import datetime
+from http.client import HTTPException
 import json
 import re
 from urllib.request import Request, urlopen
@@ -19,7 +20,7 @@ def fetch_text(url):
                 'User-Agent': 'Mozilla/5.0 FotWeb/1.0', 'Cache-Control': 'no-cache'})
             with urlopen(request, timeout=20) as response:
                 return response.read(8_000_000).decode('utf-8')
-        except OSError:
+        except (OSError, HTTPException):
             if attempt == 1:
                 raise
 

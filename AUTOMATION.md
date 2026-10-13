@@ -34,6 +34,9 @@ YouTube is polled; no YouTube webhook subscription is connected.
   against every published future fixture, not only the next 14 days. Unlabelled
   default streams may use the documented paired Hindi alternative or an already
   creator-confirmed/verified English link. Never guess a video ID or language.
+  The current official Live listing may refresh the title and ended state of an
+  existing verified English video for the same past fixture. New URLs still
+  require complete channel, start-time, club and language verification.
 - Starting XIs, FT/AET/PEN, events and statistics: the fixture's official ISL
   match centre, `https://www.indiansuperleague.com/matchcentre/{id}`. Require the
   exact match, clubs, season and IST date. Only confirmed full starting XIs.

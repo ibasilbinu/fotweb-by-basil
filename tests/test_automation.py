@@ -2,6 +2,7 @@
 from copy import deepcopy
 from datetime import datetime, timedelta, timezone
 import json
+from http.client import IncompleteRead
 from pathlib import Path
 import tempfile
 import unittest
@@ -11,6 +12,7 @@ from urllib.parse import quote
 import automated_update as importer
 from fixture_update import extract_schedule, merge_fixtures, update_lifecycle
 import stream_update
+import fixture_update
 from season import validate_season
 from postmatch import validate_results
 
@@ -111,6 +113,13 @@ class FixtureTests(unittest.TestCase):
         document = '<script>window.fixtures_11_1 = '+json.dumps({'matches':[reordered]})+';</script>'
         self.assertEqual(extract_schedule(document),[reordered])
 
+    def test_truncated_http_response_is_retried_without_using_partial_data(self):
+        with patch.object(fixture_update, 'urlopen') as open_url:
+            response = open_url.return_value.__enter__.return_value
+            response.read.side_effect = [IncompleteRead(b'partial'), b'complete']
+            self.assertEqual(fixture_update.fetch_text('https://example.com'), 'complete')
+            self.assertEqual(open_url.call_count, 2)
+
     def test_incomplete_listing_preserves_all_existing_records(self):
         before = deepcopy(self.season)
         changed, errors = merge_fixtures(self.season, [schedule_row(self.f)], STAMP)
@@ -170,13 +179,40 @@ class StreamTests(unittest.TestCase):
         listing = {'channel_id':stream_update.CHANNEL_ID, 'entries':entries}
         def extract(url, download=False):
             if url.endswith('/streams'): return listing
-            value = metadata[url.rsplit('/',1)[-1]]
+            value = metadata[url.split('v=')[-1] if 'v=' in url else url.rsplit('/',1)[-1]]
             if isinstance(value, Exception): raise value
             return value
         with patch.object(stream_update, 'fetch_text', side_effect=OSError('use alternate metadata')), patch.object(stream_update, 'YoutubeDL') as ydl:
             ydl.return_value.__enter__.return_value.extract_info.side_effect = extract
             failures = []; changed = stream_update.update_streams(self.season, STAMP, failures)
         return changed, failures
+
+    def test_official_live_tab_refreshes_only_existing_verified_replays(self):
+        self.season['fixtures'] = [self.season['fixtures'][0]]
+        f = self.season['fixtures'][0]
+        f['kickoff'] = '2026-10-12T19:30:00+05:30'
+        f['broadcast'] = {'url':'https://www.youtube.com/live/'+self.video,
+            'title':self.title,'channelUrl':stream_update.CHANNEL,'language':'English',
+            'status':'scheduled','verifiedAt':STAMP}
+        entry = {'id':self.video,'title':self.title.replace('LIVE','FULL REPLAY'), 'live_status':'was_live'}
+        changed, failures = self.update([entry], {})
+        self.assertEqual(changed,1); self.assertFalse(failures)
+        self.assertEqual(f['broadcast']['status'],'ended')
+        f.pop('broadcast')
+        changed, failures = self.update([entry], {self.video:OSError('metadata unavailable')})
+        self.assertEqual(changed,0); self.assertTrue(failures)
+        self.assertNotIn('broadcast',f)
+
+    def test_official_replay_listing_rejects_conflicting_channel(self):
+        f = self.season['fixtures'][0]
+        f['kickoff'] = '2026-10-12T19:30:00+05:30'
+        f['broadcast'] = {'url':'https://www.youtube.com/live/'+self.video,
+            'title':self.title,'channelUrl':stream_update.CHANNEL,'language':'English',
+            'status':'scheduled','verifiedAt':STAMP}
+        entry = {'id':self.video,'title':self.title, 'live_status':'was_live', 'channel_id':'wrong-channel'}
+        changed, failures = self.update([entry], {self.video:{**self.meta, 'channel_id':'wrong-channel'}})
+        self.assertEqual(changed,0); self.assertTrue(failures)
+        self.assertEqual(f['broadcast']['status'],'scheduled')
 
     def test_verified_existing_feed_wins_over_duplicate_unlabelled_replay(self):
         self.season['fixtures'][0]['broadcast'] = {'url':'https://www.youtube.com/live/'+self.video,

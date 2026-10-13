@@ -52,9 +52,13 @@ def video_metadata(video, opts, now):
     # for links and may fail even while the public watch page is available.
     try:
         return extract_video_metadata(fetch_text('https://www.youtube.com/watch?v='+video), video, now)
-    except (OSError, ValueError, TypeError, KeyError):
+    except (OSError, ValueError, TypeError, KeyError) as public_error:
         with YoutubeDL({**opts, 'extract_flat':False}) as ydl:
-            return ydl.extract_info('https://www.youtube.com/live/'+video, download=False)
+            meta = ydl.extract_info('https://www.youtube.com/watch?v='+video, download=False)
+        if not meta or not meta.get('channel_id'):
+            raise ValueError('Public metadata: '+str(public_error)[:110]+
+                             '; alternate metadata missing channel identity')
+        return meta
 
 
 def update_streams(season, stamp, failures=None):
@@ -78,6 +82,40 @@ def update_streams(season, stamp, failures=None):
     # unlabelled replay. Metadata still has to pass ownership/date/language checks.
     existing = {f.get('broadcast', {}).get('url', '').rsplit('/', 1)[-1] for f in fixtures}
     entries.sort(key=lambda e: e.get('id') not in existing)
+    updates, selected = 0, set()
+    def publish(fixture, broadcast):
+        old = fixture.get('broadcast', {})
+        trial = {**season, 'fixtures':[{**x, 'broadcast':broadcast} if x['id'] == fixture['id'] else x
+                                     for x in season['fixtures']]}
+        validate_season(trial)
+        if {k:v for k,v in old.items() if k!='verifiedAt'} == {k:v for k,v in broadcast.items() if k!='verifiedAt'}:
+            return 0
+        fixture['broadcast'] = broadcast
+        fixture.pop('streamCandidate', None)
+        return 1
+    # The freshly verified official channel's Live tab can confirm that an
+    # already verified video has ended. Keep its original fixture association;
+    # never fabricate a new start time or use this path for a new video URL.
+    # A rescheduled fixture has its old broadcast cleared by merge_fixtures.
+    for entry in entries:
+        title = entry.get('title') or ''
+        if (entry.get('live_status') not in ('was_live', 'post_live')
+                or entry.get('channel_id') not in (None, CHANNEL_ID)
+                or NON_ENGLISH.search(title)
+                or any(w in title.lower() for w in ('highlights', 'throwback', 'preview', 'press conference'))):
+            continue
+        for f in fixtures:
+            old = f.get('broadcast', {})
+            if (f['id'] in selected or datetime.fromisoformat(f['kickoff']) > now
+                    or old.get('url') != 'https://www.youtube.com/live/'+str(entry.get('id'))
+                    or old.get('channelUrl') != CHANNEL or old.get('language') != 'English'
+                    or not all(mentioned(title.lower(), names[f[s+'Id']]) for s in ('home', 'away'))):
+                continue
+            broadcast = {**old, 'title':title, 'status':'ended', 'verifiedAt':stamp}
+            if re.search(r'\b(english|eng)\b', title, re.I):
+                broadcast.pop('languageEvidence', None)
+            updates += publish(f, broadcast)
+            selected.add(f['id'])
     eligible = []
     for entry in entries:
         title = entry.get('title') or ''
@@ -85,7 +123,7 @@ def update_streams(season, stamp, failures=None):
         if (not re.fullmatch(r'[A-Za-z0-9_-]{11}', video) or NON_ENGLISH.search(title)
                 or any(w in title.lower() for w in ('highlights', 'press conference', 'preview', 'throwback'))):
             continue
-        if any(mentioned(title.lower(), names[f['homeId']]) and mentioned(title.lower(), names[f['awayId']])
+        if any(f['id'] not in selected and mentioned(title.lower(), names[f['homeId']]) and mentioned(title.lower(), names[f['awayId']])
                for f in fixtures):
             eligible.append(entry)
     def read_metadata(entry):
@@ -97,7 +135,6 @@ def update_streams(season, stamp, failures=None):
     # must not consume the whole match-window check before other links are read.
     with ThreadPoolExecutor(max_workers=4) as pool:
         metadata = list(pool.map(read_metadata, eligible))
-    updates, selected = 0, set()
     for entry, (meta, error) in zip(eligible, metadata):
         title, video = entry.get('title') or '', entry['id']
         # Find all published future fixtures, including later phases. Date matching
@@ -146,13 +183,7 @@ def update_streams(season, stamp, failures=None):
                          'status':status, 'verifiedAt':stamp}
             if not explicit:
                 broadcast['languageEvidence'] = 'official-default-unlabelled'
-            trial = {**season, 'fixtures':[{**x, 'broadcast':broadcast} if x['id'] == f['id'] else x
-                                          for x in season['fixtures']]}
-            validate_season(trial)
-            if {k:v for k,v in old.items() if k!='verifiedAt'} != {k:v for k,v in broadcast.items() if k!='verifiedAt'}:
-                f['broadcast'] = broadcast
-                f.pop('streamCandidate', None)
-                updates += 1
+            updates += publish(f, broadcast)
             selected.add(f['id'])
         except Exception as exc:
             # One inaccessible video cannot prevent the remaining scheduled streams.

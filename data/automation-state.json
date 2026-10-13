@@ -85,39 +85,31 @@
   "phaseOneLastKickoff": "2027-01-17T19:30+05:30",
   "sources": {
     "fixtures": {
-      "checkedAt": "2026-10-13T02:35:17.439855+00:00",
+      "checkedAt": "2026-10-13T02:43:04.006705+00:00",
       "outcome": "ok"
     },
     "streams": {
-      "checkedAt": "2026-10-13T02:35:17.439855+00:00",
-      "outcome": "partial"
+      "checkedAt": "2026-10-13T02:43:04.006705+00:00",
+      "outcome": "ok"
     }
   },
   "pending": [],
   "matchCheckedAt": {
-    "194638": "2026-10-13T02:35:17.439855+00:00",
-    "194634": "2026-10-13T02:35:17.439855+00:00",
-    "194635": "2026-10-13T02:35:17.439855+00:00",
-    "194636": "2026-10-13T02:35:17.439855+00:00",
-    "194637": "2026-10-13T02:35:17.439855+00:00"
+    "194638": "2026-10-13T02:43:04.006705+00:00",
+    "194634": "2026-10-13T02:43:04.006705+00:00",
+    "194635": "2026-10-13T02:43:04.006705+00:00",
+    "194636": "2026-10-13T02:43:04.006705+00:00",
+    "194637": "2026-10-13T02:43:04.006705+00:00"
   },
   "lastCheck": {
-    "checkedAt": "2026-10-13T02:35:17.439855+00:00",
-    "kind": "hourly",
-    "failures": [
-      "YouTube r7fCiGAMU3w: Official channel identity unavailable or mismatched: None",
-      "YouTube ug5A-PvAtuE: Official channel identity unavailable or mismatched: None",
-      "YouTube wsysXETXWxA: Official channel identity unavailable or mismatched: None",
-      "YouTube cEK6dPHN9LQ: Official channel identity unavailable or mismatched: None",
-      "YouTube gDI508P5F3g: Official channel identity unavailable or mismatched: None",
-      "YouTube bj9c7TPl_18: Official channel identity unavailable or mismatched: None",
-      "YouTube 5IOC7sCXezo: Official channel identity unavailable or mismatched: None"
-    ],
+    "checkedAt": "2026-10-13T02:43:04.006705+00:00",
+    "kind": "morning",
+    "failures": [],
     "changes": {
       "fixtures": 0,
       "results": 0,
       "lineups": 0,
-      "streams": 0
+      "streams": 5
     }
   }
 }
