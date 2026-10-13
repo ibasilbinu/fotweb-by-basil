@@ -204,22 +204,22 @@ No fictional players, demonstration results, estimated shot locations, invented
 xG or predicted lineups are used. Club crests and portraits remain their owners’
 property. FotWeb is an independent fan analytics project.
 
-## Install FotWeb on your device
+## Download the FotWeb Android app
 
-**Install from the original site without redirecting:** Open
-https://fotweb.streamlit.app/ and select **Install App** in the top bar or
-**Install FotWeb App** in the sidebar. The button opens on-page, device-specific
-instructions to use your current browser's **Install app** or **Add to Home screen**
-menu without leaving the website. Streamlit Community Cloud cannot reliably
-trigger a FotWeb-branded native install prompt from this custom-component iframe;
-the installed shortcut may use Streamlit's branding.
+Visitors to **https://fotweb.streamlit.app/** can use **Download APK** in the
+top bar (or **Download FotWeb Android App** in the sidebar). The download
+starts from the release file rather than opening another installation website.
+The signed installable Android file is:
 
-The optional FotWeb-branded PWA remains at
-https://ibasilbinu.github.io/fotweb-by-basil/ and offers a native install
-prompt on supported browsers from its own in-page button. The PWA embeds the
-same live Streamlit app and shares all fixture and match-update workflows.
+https://github.com/ibasilbinu/fotweb-by-basil/releases/download/android-v1.0.0/FotWeb.apk
 
-
+Users open the downloaded `FotWeb.apk` and confirm Android installation,
+possibly allowing installs from their browser. This APK works on Android 7.0+
+and needs an internet connection. It opens the *original* Streamlit site
+and all existing match-report/fixture/club-analytics updates remain live.
+It does not work on iPhone. The first APK is a beta using a temporary signing
+certificate, so a future upgrade may require uninstalling this beta first.
+A permanent secure signing key is recommended before distributing updates.
 
 FotWeb remains hosted and automatically updated on Streamlit Community Cloud at
 **https://fotweb.streamlit.app/**. Its optional **installable PWA shell** embeds
