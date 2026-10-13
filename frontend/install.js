@@ -1,61 +1,51 @@
-/* Show installation help inside the original Streamlit website.
-   No redirects. On the separate PWA shell, request native install. */
+/* Same-page installation for the original Streamlit site, no APK download. */
 (() => {
-  const PWA_ORIGIN = 'https://ibasilbinu.github.io';
   const SELECTOR = '#installFotWeb, .sidebar-install-fotweb';
-  const dialog = document.getElementById('installHelpDialog');
-  const steps = document.getElementById('installHelpSteps');
-  let inPwa = false;
-  function showInstructions() {
-    if (!dialog || !steps) return;
-    const ua = navigator.userAgent || '';
-    const iOS = /iPad|iPhone|iPod/i.test(ua) ||
-      (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+  const PWA_ORIGIN = 'https://ibasilbinu.github.io';
+  let inPwaWrapper = false;
+  const dialog = document.createElement('dialog');
+  dialog.id = 'fotwebInstallHelp';
+  dialog.innerHTML =
+    '<div class="install-head"><strong>Install FotWeb</strong><button type="button" id="closeFotwebInstall" aria-label="Close">×</button></div>' +
+    '<div id="fotwebInstallSteps"></div>' +
+    '<p class="install-note">Installation is handled by your browser. Streamlit Cloud may use its own name and icon.</p>' +
+    '<button type="button" class="install-done">Got it</button>';
+  document.body.appendChild(dialog);
+  dialog.querySelector('#closeFotwebInstall').onclick = () => dialog.close();
+  dialog.querySelector('.install-done').onclick = () => dialog.close();
+  const showHelp = () => {
+    const ua = navigator.userAgent;
+    const ios = /iPad|iPhone|iPod/i.test(ua);
     const android = /Android/i.test(ua);
-    if (iOS) {
-      steps.innerHTML =
-        '<p>1. Open this website in <strong>Safari</strong>.</p>' +
-        '<p>2. Tap the <strong>Share</strong> button.</p>' +
-        '<p>3. Select <strong>Add to Home Screen</strong> and confirm.</p>';
-    } else if (android) {
-      steps.innerHTML =
-        '<p>1. Open the <strong>⋮ browser menu</strong>.</p>' +
-        '<p>2. Tap <strong>Add to Home screen</strong> or <strong>Install app</strong>.</p>' +
-        '<p>3. Confirm by tapping <strong>Install</strong> or <strong>Add</strong>.</p>';
-    } else {
-      steps.innerHTML =
-        '<p>1. Open the <strong>browser menu</strong>.</p>' +
-        '<p>2. Look for <strong>Install page as app</strong>, <strong>Install app</strong>, or <strong>Create shortcut</strong>.</p>' +
-        '<p>3. Follow the installation confirmation.</p>';
+    const steps = ios ?
+      ['Open this website in Safari.', 'Tap Share.', 'Choose Add to Home Screen.'] :
+      android ?
+      ['Open the browser’s three-dot menu.', 'Choose Install app or Add to Home screen.', 'Confirm installation.'] :
+      ['Open the browser menu.', 'Choose Install app or Create shortcut.', 'Confirm installation.'];
+    const target = dialog.querySelector('#fotwebInstallSteps');
+    target.replaceChildren(...steps.map((step, i) => {
+      const p = document.createElement('p'); p.textContent = (i + 1) + '. ' + step; return p;
+    }));
+    if (!dialog.open) dialog.showModal();
+  };
+  document.addEventListener('click', e => {
+    if (!(e.target instanceof Element) || !e.target.closest(SELECTOR)) return;
+    e.preventDefault();
+    if (inPwaWrapper) {
+      window.top.postMessage({type:'fotweb:pwa-install-request'}, PWA_ORIGIN);
+      return;
     }
-    if (typeof dialog.showModal === 'function') dialog.showModal();
-    else dialog.setAttribute('open', '');
-  }
-  window.addEventListener('message', event => {
-    if (event.source !== window.top || event.origin !== PWA_ORIGIN ||
-        event.data?.type !== 'fotweb:pwa-ready') return;
-    inPwa = true;
-    if (event.data.installed) {
-      document.querySelectorAll(SELECTOR).forEach(el => { el.hidden = true; });
-    }
+    try {
+      const bridge = window.parent.__fotwebPwa;
+      if (bridge?.installed()) return;
+      if (bridge?.request()) return;
+    } catch (_) {}
+    showHelp();
   });
-  document.addEventListener('click', event => {
-    const el = event.target instanceof Element ? event.target : null;
-    if (!el) return;
-    if (el.closest(SELECTOR)) {
-      event.preventDefault();
-      if (inPwa && window.top !== window) {
-        window.top.postMessage({type:'fotweb:pwa-install-request'}, PWA_ORIGIN);
-      } else {
-        showInstructions();
-      }
-    }
-    if (el.closest('#closeInstallHelp, #doneInstallHelp')) {
-      if (typeof dialog?.close === 'function') dialog.close();
-      else dialog?.removeAttribute('open');
-    }
+  window.addEventListener('message', e => {
+    if(e.source !== window.top || e.origin !== PWA_ORIGIN || e.data?.type !== 'fotweb:pwa-ready')return;
+    inPwaWrapper=true;
+    if(e.data.installed) document.querySelectorAll(SELECTOR).forEach(el=>el.hidden=true);
   });
-  if (window.top !== window) {
-    window.top.postMessage({type:'fotweb:pwa-probe'}, PWA_ORIGIN);
-  }
+  if(window.top !== window) window.top.postMessage({type:'fotweb:pwa-probe'}, PWA_ORIGIN);
 })();

@@ -64,6 +64,13 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
+# Best-effort same-origin installation on Streamlit Cloud. No redirect or APK.
+# Browser and Streamlit may override install metadata or withhold the prompt.
+st.html(
+    "<script>(() => {\n  if (window.__fotwebPwa) return;\n  let deferredPrompt = null;\n  let installed = matchMedia('(display-mode: standalone)').matches || navigator.standalone === true;\n  window.__fotwebPwa = {\n    installed: () => installed,\n    request: () => {\n      if (installed || !deferredPrompt) return false;\n      const event = deferredPrompt;\n      deferredPrompt = null;\n      try {\n        Promise.resolve(event.prompt()).catch(() => {});\n        return true;\n      } catch (_) { return false; }\n    }\n  };\n  const href = '/app/static/fotweb-manifest.json';\n  let link = document.querySelector('link[rel=\"manifest\"]');\n  if (!link) { link = document.createElement('link'); link.rel = 'manifest'; document.head.append(link); }\n  link.href = href;\n  window.addEventListener('beforeinstallprompt', event => {\n    event.preventDefault();\n    deferredPrompt = event;\n  });\n  window.addEventListener('appinstalled', () => { installed = true; deferredPrompt = null; });\n})();</script>",
+    unsafe_allow_javascript=True,
+)
+
 fotweb_workspace = components.declare_component(
     "fotweb_workspace", path=str(ROOT / "frontend")
 )

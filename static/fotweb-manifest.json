@@ -1,0 +1,26 @@
+{
+  "id": "/",
+  "name": "FotWeb by Basil",
+  "short_name": "FotWeb",
+  "description": "ISL fixtures, match reports, team analytics, and football statistics.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#0b0e11",
+  "theme_color": "#0b0e11",
+  "prefer_related_applications": false,
+  "icons": [
+    {
+      "src": "https://ibasilbinu.github.io/fotweb-by-basil/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "https://ibasilbinu.github.io/fotweb-by-basil/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

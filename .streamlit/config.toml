@@ -12,3 +12,6 @@ gatherUsageStats = false
 [client]
 # Suppress the built-in options menu and developer controls.
 toolbarMode = "minimal"
+
+[server]
+enableStaticServing = true
