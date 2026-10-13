@@ -292,31 +292,28 @@ function tdFormRows(matches,team){
 function tdFormPanel(matches,team){
   const rows=tdFormRows(matches,team);
   const heading='<section class="td-panel td-form"><div class="td-panel-title"><h2>Team form</h2>'+
-    '<small>Cumulative league points · Win +3 · Draw +1 · Loss +0</small></div>';
+    '<small>Points earned per league match · Win 3 · Draw 1 · Loss 0</small></div>';
   if(!rows.length)return heading+'<p class="report-note">The form graph will appear after this club’s first verified completed league match.</p></section>';
   const W=760,H=260,L=50,R=28,T=28,B=54,plotW=W-L-R,plotH=H-T-B;
-  const x=number=>L+number*plotW/Math.max(2,rows.length);
-  const high=Math.max(3,rows[rows.length-1].cumulative);
-  const tickStep=Math.max(1,Math.ceil(high/6)),axisMax=Math.ceil(high/tickStep)*tickStep;
-  const y=value=>T+(axisMax-value)*plotH/axisMax;
+  const x=i=>rows.length===1?L+plotW/2:L+i*plotW/(rows.length-1);
+  const y=value=>T+(3-value)*plotH/3;
   const step=Math.max(1,Math.ceil(rows.length/14));
   let grid='',labels='',dots='';
-  for(let points=0;points<=axisMax;points+=tickStep)grid+='<line x1="'+L+'" y1="'+y(points)+'" x2="'+(W-R)+'" y2="'+y(points)+'" class="td-form-gridline"/>'+
+  for(let points=0;points<=3;points++)grid+='<line x1="'+L+'" y1="'+y(points)+'" x2="'+(W-R)+'" y2="'+y(points)+'" class="td-form-gridline"/>'+
     '<text x="'+(L-15)+'" y="'+(y(points)+4)+'" text-anchor="end" class="td-form-axis">'+points+'</text>';
-  labels+='<text x="'+x(0)+'" y="'+(H-B+23)+'" text-anchor="middle" class="td-form-axis">M0</text>';
   rows.forEach((row,i)=>{
-    const description='Match '+row.index+' · '+row.date+' · '+row.venue+' vs '+row.opponent+' · '+row.score+' · '+row.result+' · '+row.points+' earned · '+row.cumulative+' total points';
-    dots+='<circle cx="'+x(row.index)+'" cy="'+y(row.cumulative)+'" r="6" class="td-form-dot td-form-'+row.result.toLowerCase()+'" tabindex="0" role="button" data-td-form-point data-form-title="'+esc('Match '+row.index+' · '+row.result+' · +'+row.points+' pts · Total '+row.cumulative+' pts')+'" data-form-opponent="'+esc(row.opponent)+'" data-form-date="'+esc(row.date+' · '+row.venue)+'" data-form-score="'+esc(row.score)+'" aria-label="'+esc(description)+'"><title>'+esc(description)+'</title></circle>';
-    if(i%step===0||i===rows.length-1)labels+='<text x="'+x(row.index)+'" y="'+(H-B+23)+'" text-anchor="middle" class="td-form-axis">M'+row.index+'</text>';
+    const description='Match '+row.index+' · '+row.date+' · '+row.venue+' vs '+row.opponent+' · '+row.score+' · '+row.result+' · '+row.points+' points earned';
+    dots+='<circle cx="'+x(i)+'" cy="'+y(row.points)+'" r="6" class="td-form-dot td-form-'+row.result.toLowerCase()+'" tabindex="0" role="button" data-td-form-point data-form-title="'+esc('Match '+row.index+' · '+row.result+' · '+row.points+' points earned')+'" data-form-opponent="'+esc(row.opponent)+'" data-form-date="'+esc(row.date+' · '+row.venue)+'" data-form-score="'+esc(row.score)+'" aria-label="'+esc(description)+'"><title>'+esc(description)+'</title></circle>';
+    if(i%step===0||i===rows.length-1)labels+='<text x="'+x(i)+'" y="'+(H-B+23)+'" text-anchor="middle" class="td-form-axis">M'+row.index+'</text>';
   });
-  const path='<polyline points="'+[[x(0),y(0)],...rows.map(r=>[x(r.index),y(r.cumulative)])].map(p=>p.join(',')).join(' ')+'" class="td-form-line"/>';
-  return heading+'<p class="td-form-caption">'+rows.length+' verified '+(rows.length===1?'match':'matches')+' · Running total starts at 0 and increases after wins or draws. Losses remain flat.</p>'+
-    '<div class="td-form-chart"><div class="td-form-scroll"><svg viewBox="0 0 '+W+' '+H+'" role="group" aria-label="'+esc(team)+' cumulative league points by completed match">'+
-    '<text x="'+L+'" y="15" class="td-form-axis">Total points</text>'+grid+path+dots+labels+
+  const path=rows.length>1?'<polyline points="'+rows.map((r,i)=>x(i)+','+y(r.points)).join(' ')+'" class="td-form-line"/>':'';
+  return heading+'<p class="td-form-caption">'+rows.length+' verified '+(rows.length===1?'match · The line will connect as more results are added.':'matches · Oldest to newest. Each point shows points earned in that match.')+'</p>'+
+    '<div class="td-form-chart"><div class="td-form-scroll"><svg viewBox="0 0 '+W+' '+H+'" role="group" aria-label="'+esc(team)+' points earned per completed league match">'+
+    '<text x="'+L+'" y="15" class="td-form-axis">Match points</text>'+grid+path+dots+labels+
     '<text x="'+(L+plotW/2)+'" y="'+(H-8)+'" text-anchor="middle" class="td-form-axis">Completed league matches</text></svg></div><div class="td-form-tooltip" role="status" aria-live="polite" hidden><strong data-form-tip-title></strong><span data-form-tip-opponent></span><span data-form-tip-date></span><span data-form-tip-score></span></div></div>'+
     '<details class="td-form-details"><summary>Match-by-match form</summary><div class="td-form-table-wrap"><table class="td-form-table">'+
-    '<thead><tr><th scope="col">Match</th><th scope="col">Date</th><th scope="col">Opponent</th><th scope="col">Venue</th><th scope="col">Score</th><th scope="col">Result</th><th scope="col">Match pts</th><th scope="col">Total pts</th></tr></thead><tbody>'+
-    rows.map(r=>'<tr><th scope="row">M'+r.index+'</th><td>'+esc(r.date)+'</td><td>'+esc(r.opponent)+'</td><td>'+r.venue+'</td><td>'+esc(r.score)+'</td><td>'+r.result+'</td><td>'+r.points+'</td><td>'+r.cumulative+'</td></tr>').join('')+
+    '<thead><tr><th scope="col">Match</th><th scope="col">Date</th><th scope="col">Opponent</th><th scope="col">Venue</th><th scope="col">Score</th><th scope="col">Result</th><th scope="col">Points</th></tr></thead><tbody>'+
+    rows.map(r=>'<tr><th scope="row">M'+r.index+'</th><td>'+esc(r.date)+'</td><td>'+esc(r.opponent)+'</td><td>'+r.venue+'</td><td>'+esc(r.score)+'</td><td>'+r.result+'</td><td>'+r.points+'</td></tr>').join('')+
     '</tbody></table></div></details></section>';
 }
 function tdBindFormTooltips(){
