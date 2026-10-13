@@ -274,9 +274,9 @@ document.addEventListener('error',event=>{
   if(event.target.matches?.('.td-squad-photo'))event.target.remove();
 },true);
 
-/* Form is points earned in each match, rather than cumulative league points. */
+/* Form shows cumulative league points after each verified completed match. */
 function tdFormRows(matches,team){
-  return matches.filter(m=>tdIsLeagueMatch(m)&&tdClubSide(m,team))
+  const history=matches.filter(m=>tdIsLeagueMatch(m)&&tdClubSide(m,team))
     .slice().sort((a,b)=>a.date.localeCompare(b.date)||String(a.id).localeCompare(String(b.id)))
     .map((m,index)=>{
       const side=tdClubSide(m,team),home=side==='home';
@@ -286,32 +286,37 @@ function tdFormRows(matches,team){
         venue:home?'Home':'Away',score:scored+'–'+conceded,points,
         result:points===3?'Win':points===1?'Draw':'Loss'};
     });
+  let cumulative=0;
+  return history.map(row=>({...row,cumulative:(cumulative+=row.points)}));
 }
 function tdFormPanel(matches,team){
   const rows=tdFormRows(matches,team);
   const heading='<section class="td-panel td-form"><div class="td-panel-title"><h2>Team form</h2>'+
-    '<small>Points earned per league match · Win 3 · Draw 1 · Loss 0</small></div>';
+    '<small>Cumulative league points · Win +3 · Draw +1 · Loss +0</small></div>';
   if(!rows.length)return heading+'<p class="report-note">The form graph will appear after this club’s first verified completed league match.</p></section>';
   const W=760,H=260,L=50,R=28,T=28,B=54,plotW=W-L-R,plotH=H-T-B;
-  const x=i=>rows.length===1?L+plotW/2:L+i*plotW/(rows.length-1);
-  const y=value=>T+(3-value)*plotH/3;
+  const x=number=>L+number*plotW/Math.max(2,rows.length);
+  const high=Math.max(3,rows[rows.length-1].cumulative);
+  const tickStep=Math.max(1,Math.ceil(high/6)),axisMax=Math.ceil(high/tickStep)*tickStep;
+  const y=value=>T+(axisMax-value)*plotH/axisMax;
   const step=Math.max(1,Math.ceil(rows.length/14));
   let grid='',labels='',dots='';
-  for(let points=0;points<=3;points++)grid+='<line x1="'+L+'" y1="'+y(points)+'" x2="'+(W-R)+'" y2="'+y(points)+'" class="td-form-gridline"/>'+
+  for(let points=0;points<=axisMax;points+=tickStep)grid+='<line x1="'+L+'" y1="'+y(points)+'" x2="'+(W-R)+'" y2="'+y(points)+'" class="td-form-gridline"/>'+
     '<text x="'+(L-15)+'" y="'+(y(points)+4)+'" text-anchor="end" class="td-form-axis">'+points+'</text>';
+  labels+='<text x="'+x(0)+'" y="'+(H-B+23)+'" text-anchor="middle" class="td-form-axis">M0</text>';
   rows.forEach((row,i)=>{
-    const description='Match '+row.index+' · '+row.date+' · '+row.venue+' vs '+row.opponent+' · '+row.score+' · '+row.result+' · '+row.points+' points';
-    dots+='<circle cx="'+x(i)+'" cy="'+y(row.points)+'" r="6" class="td-form-dot td-form-'+row.result.toLowerCase()+'" tabindex="0" role="button" data-td-form-point data-form-title="'+esc('Match '+row.index+' · '+row.result+' · '+row.points+' points')+'" data-form-opponent="'+esc(row.opponent)+'" data-form-date="'+esc(row.date+' · '+row.venue)+'" data-form-score="'+esc(row.score)+'" aria-label="'+esc(description)+'"><title>'+esc(description)+'</title></circle>';
-    if(i%step===0||i===rows.length-1)labels+='<text x="'+x(i)+'" y="'+(H-B+23)+'" text-anchor="middle" class="td-form-axis">M'+row.index+'</text>';
+    const description='Match '+row.index+' · '+row.date+' · '+row.venue+' vs '+row.opponent+' · '+row.score+' · '+row.result+' · '+row.points+' earned · '+row.cumulative+' total points';
+    dots+='<circle cx="'+x(row.index)+'" cy="'+y(row.cumulative)+'" r="6" class="td-form-dot td-form-'+row.result.toLowerCase()+'" tabindex="0" role="button" data-td-form-point data-form-title="'+esc('Match '+row.index+' · '+row.result+' · +'+row.points+' pts · Total '+row.cumulative+' pts')+'" data-form-opponent="'+esc(row.opponent)+'" data-form-date="'+esc(row.date+' · '+row.venue)+'" data-form-score="'+esc(row.score)+'" aria-label="'+esc(description)+'"><title>'+esc(description)+'</title></circle>';
+    if(i%step===0||i===rows.length-1)labels+='<text x="'+x(row.index)+'" y="'+(H-B+23)+'" text-anchor="middle" class="td-form-axis">M'+row.index+'</text>';
   });
-  const path=rows.length>1?'<polyline points="'+rows.map((r,i)=>x(i)+','+y(r.points)).join(' ')+'" class="td-form-line"/>':'';
-  return heading+'<p class="td-form-caption">'+rows.length+' verified '+(rows.length===1?'match · The line will connect as more results are added.':'matches · Oldest to newest.')+'</p>'+
-    '<div class="td-form-chart"><div class="td-form-scroll"><svg viewBox="0 0 '+W+' '+H+'" role="group" aria-label="'+esc(team)+' points earned per match">'+
-    '<text x="'+L+'" y="15" class="td-form-axis">Points</text>'+grid+path+dots+labels+
+  const path='<polyline points="'+[[x(0),y(0)],...rows.map(r=>[x(r.index),y(r.cumulative)])].map(p=>p.join(',')).join(' ')+'" class="td-form-line"/>';
+  return heading+'<p class="td-form-caption">'+rows.length+' verified '+(rows.length===1?'match':'matches')+' · Running total starts at 0 and increases after wins or draws. Losses remain flat.</p>'+
+    '<div class="td-form-chart"><div class="td-form-scroll"><svg viewBox="0 0 '+W+' '+H+'" role="group" aria-label="'+esc(team)+' cumulative league points by completed match">'+
+    '<text x="'+L+'" y="15" class="td-form-axis">Total points</text>'+grid+path+dots+labels+
     '<text x="'+(L+plotW/2)+'" y="'+(H-8)+'" text-anchor="middle" class="td-form-axis">Completed league matches</text></svg></div><div class="td-form-tooltip" role="status" aria-live="polite" hidden><strong data-form-tip-title></strong><span data-form-tip-opponent></span><span data-form-tip-date></span><span data-form-tip-score></span></div></div>'+
     '<details class="td-form-details"><summary>Match-by-match form</summary><div class="td-form-table-wrap"><table class="td-form-table">'+
-    '<thead><tr><th scope="col">Match</th><th scope="col">Date</th><th scope="col">Opponent</th><th scope="col">Venue</th><th scope="col">Score</th><th scope="col">Result</th><th scope="col">Points</th></tr></thead><tbody>'+
-    rows.map(r=>'<tr><th scope="row">M'+r.index+'</th><td>'+esc(r.date)+'</td><td>'+esc(r.opponent)+'</td><td>'+r.venue+'</td><td>'+esc(r.score)+'</td><td>'+r.result+'</td><td>'+r.points+'</td></tr>').join('')+
+    '<thead><tr><th scope="col">Match</th><th scope="col">Date</th><th scope="col">Opponent</th><th scope="col">Venue</th><th scope="col">Score</th><th scope="col">Result</th><th scope="col">Match pts</th><th scope="col">Total pts</th></tr></thead><tbody>'+
+    rows.map(r=>'<tr><th scope="row">M'+r.index+'</th><td>'+esc(r.date)+'</td><td>'+esc(r.opponent)+'</td><td>'+r.venue+'</td><td>'+esc(r.score)+'</td><td>'+r.result+'</td><td>'+r.points+'</td><td>'+r.cumulative+'</td></tr>').join('')+
     '</tbody></table></div></details></section>';
 }
 function tdBindFormTooltips(){
@@ -352,24 +357,27 @@ function tdSeasonFormPanel(){
   const series=seasonData.teams.map((team,i)=>({team,color:caColors[i%caColors.length],
     rows:tdFormRows(resultsData.matches||[],team.name)}));
   const maxGames=Math.max(0,...series.map(s=>s.rows.length));
+  const maxPoints=Math.max(3,...series.map(s=>s.rows.length?s.rows[s.rows.length-1].cumulative:0));
   const W=820,H=290,L=50,R=28,T=30,B=54,plotW=W-L-R,plotH=H-T-B;
-  const x=number=>maxGames===1?L+plotW/2:L+(number-1)*plotW/(maxGames-1);
-  const y=points=>T+(3-points)*plotH/3;
+  const x=number=>L+number*plotW/Math.max(2,maxGames);
+  const tickStep=Math.max(1,Math.ceil(maxPoints/6)),axisMax=Math.ceil(maxPoints/tickStep)*tickStep;
+  const y=points=>T+(axisMax-points)*plotH/axisMax;
   let grid='',paths='';
   if(maxGames){
-    for(let points=0;points<=3;points++)grid+='<line x1="'+L+'" y1="'+y(points)+'" x2="'+(W-R)+'" y2="'+y(points)+'" class="td-form-gridline"/>'+
+    for(let points=0;points<=axisMax;points+=tickStep)grid+='<line x1="'+L+'" y1="'+y(points)+'" x2="'+(W-R)+'" y2="'+y(points)+'" class="td-form-gridline"/>'+
       '<text x="'+(L-15)+'" y="'+(y(points)+4)+'" text-anchor="end" class="td-form-axis">'+points+'</text>';
     const step=Math.max(1,Math.ceil(maxGames/14));
+    grid+='<text x="'+x(0)+'" y="'+(H-B+23)+'" text-anchor="middle" class="td-form-axis">M0</text>';
     for(let number=1;number<=maxGames;number++)if((number-1)%step===0||number===maxGames)
       grid+='<text x="'+x(number)+'" y="'+(H-B+23)+'" text-anchor="middle" class="td-form-axis">M'+number+'</text>';
     paths=series.map(s=>{
       if(!s.rows.length)return '';
-      const line=s.rows.length>1?'<polyline points="'+s.rows.map(r=>x(r.index)+','+y(r.points)).join(' ')+'" class="td-form-line" style="stroke:'+s.color+'"/>':'';
+      const line='<polyline points="'+[[x(0),y(0)],...s.rows.map(r=>[x(r.index),y(r.cumulative)])].map(p=>p.join(',')).join(' ')+'" class="td-form-line" style="stroke:'+s.color+'"/>';
       const dots=s.rows.map(row=>{
-        const title=s.team.name+' · M'+row.index+' · '+row.result+' · '+row.points+' points';
+        const title=s.team.name+' · M'+row.index+' · '+row.result+' · +'+row.points+' pts · Total '+row.cumulative+' pts';
         const detail=row.date+' · '+row.venue;
         const description=title+' · '+detail+' vs '+row.opponent+' · '+row.score;
-        return '<circle cx="'+x(row.index)+'" cy="'+y(row.points)+'" r="6" class="td-form-dot" style="fill:'+s.color+'" tabindex="0" role="button" data-td-form-point'+
+        return '<circle cx="'+x(row.index)+'" cy="'+y(row.cumulative)+'" r="6" class="td-form-dot" style="fill:'+s.color+'" tabindex="0" role="button" data-td-form-point'+
           ' data-form-title="'+esc(title)+'" data-form-opponent="'+esc(row.opponent)+'" data-form-date="'+esc(detail)+'" data-form-score="'+esc(row.score)+'" aria-label="'+esc(description)+'"><title>'+esc(description)+'</title></circle>';
       }).join('');
       return '<g data-season-form-series="'+esc(s.team.id)+'">'+line+dots+'</g>';
@@ -381,14 +389,14 @@ function tdSeasonFormPanel(){
       '<span class="td-season-form-swatch" style="background:'+s.color+'"></span>'+esc(s.team.name)+
       (!s.rows.length?' <small>No matches yet</small>':'')+'</button>').join('')+'</div>';
   return '<section class="td-panel td-season-form"><div class="td-panel-title"><h2>Club form · All teams</h2>'+
-    '<small>Points per match · Win 3 · Draw 1 · Loss 0</small></div>'+
-    (maxGames?'<p class="td-form-caption">'+series.filter(s=>s.rows.length).length+' of '+series.length+' clubs have verified results. Select multiple clubs below to compare their form. Click a selected club again to remove it; All clubs resets the chart.</p>'+
-      '<div class="td-form-chart"><div class="td-form-scroll"><svg viewBox="0 0 '+W+' '+H+'" role="group" aria-label="All clubs’ points earned per completed league match">'+
-      '<text x="'+L+'" y="15" class="td-form-axis">Points</text>'+grid+paths+
+    '<small>Cumulative league points · Win +3 · Draw +1 · Loss +0</small></div>'+
+    (maxGames?'<p class="td-form-caption">'+series.filter(s=>s.rows.length).length+' of '+series.length+' clubs have verified results. Select multiple clubs below to compare their running totals. Click a selected club again to remove it; All clubs resets the chart.</p>'+
+      '<div class="td-form-chart"><div class="td-form-scroll"><svg viewBox="0 0 '+W+' '+H+'" role="group" aria-label="All clubs’ cumulative league points after completed league matches">'+
+      '<text x="'+L+'" y="15" class="td-form-axis">Total points</text>'+grid+paths+
       '<text x="'+(L+plotW/2)+'" y="'+(H-8)+'" text-anchor="middle" class="td-form-axis">Each club’s completed league match number</text></svg></div>'+
       '<div class="td-form-tooltip" role="status" aria-live="polite" hidden><strong data-form-tip-title></strong><span data-form-tip-opponent></span><span data-form-tip-date></span><span data-form-tip-score></span></div></div>':
       '<p class="report-note">Club form will appear as completed league results are verified.</p>')+
-    legend+'<p class="td-form-caption" data-form-selection role="status"></p><p class="td-explainer">Each colour represents one club. M1 is that club’s first completed match, M2 its second, and so on. Points earned in each match are shown; clubs without completed matches are listed without a line. Hover, tap or focus a point for match details.</p></section>';
+    legend+'<p class="td-form-caption" data-form-selection role="status"></p><p class="td-explainer">Each colour represents one club. M0 starts at zero league points, M1 is that club’s first completed match, M2 its second, and so on. Wins add 3, draws add 1, and losses leave the total unchanged. Hover, tap or focus a point to see the score, match points and cumulative total. Clubs without completed league matches are unplotted.</p></section>';
 }
 function tdBindSeasonFormLegend(){
   $$('.td-season-form').forEach(panel=>{
