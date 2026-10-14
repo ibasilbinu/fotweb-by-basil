@@ -3,6 +3,34 @@
   "season": "2026-27",
   "checks": [
     {
+      "checkedAt": "2026-10-14T13:34:14.292256+00:00",
+      "kind": "lineup-late",
+      "outcome": "partial",
+      "summary": "Published both confirmed starting XIs and verified the official English YouTube broadcast live for Punjab FC vs Odisha FC. No source errors or pending match data. The GitHub hourly workflow has not run since 1:18 pm IST, with expected hourly runs absent through 6:43 pm. The hourly ChatGPT backup remains unavailable: This task is no longer available.",
+      "links": [
+        {
+          "label": "Punjab FC vs Odisha FC",
+          "url": "https://www.indiansuperleague.com/matchcentre/194639"
+        },
+        {
+          "label": "Churchill Brothers vs Mumbai City FC",
+          "url": "https://www.indiansuperleague.com/matchcentre/194637"
+        },
+        {
+          "label": "NorthEast United FC vs Mohun Bagan Super Giant",
+          "url": "https://www.indiansuperleague.com/matchcentre/194638"
+        },
+        {
+          "label": "Official ISL YouTube Live listing",
+          "url": "https://www.youtube.com/@IndianSuperLeague/streams"
+        },
+        {
+          "label": "Latest GitHub hourly workflow run",
+          "url": "https://github.com/ibasilbinu/fotweb-by-basil/actions/runs/38530811094"
+        }
+      ]
+    },
+    {
       "checkedAt": "2026-10-14T11:06:44.870477+00:00",
       "kind": "lineup-early",
       "outcome": "no-change",

@@ -314,14 +314,115 @@
       "sourceUrl": "https://www.indiansuperleague.com/schedule-fixtures",
       "broadcast": {
         "url": "https://www.youtube.com/live/8VoKMQAmAbo",
-        "title": "LIVE: Punjab FC vs Odisha FC | MG ISL 2026-27 | Gameweek 1",
+        "title": "LIVE (English): Punjab FC vs Odisha FC | MG ISL 2026-27 | Gameweek 1",
         "channelUrl": "https://www.youtube.com/@IndianSuperLeague",
         "language": "English",
-        "status": "scheduled",
-        "verifiedAt": "2026-10-12T09:44:25.792Z",
-        "languageEvidence": "official-default-unlabelled"
+        "status": "live",
+        "verifiedAt": "2026-10-14T13:33:42.517374+00:00"
       },
-      "officialStage": "league"
+      "officialStage": "league",
+      "lineups": {
+        "home": {
+          "starters": [
+            {
+              "name": "Arshdeep Singh Saini",
+              "number": 1
+            },
+            {
+              "name": "Muhammed Uvais Moyikkal",
+              "number": 2
+            },
+            {
+              "name": "Bijoy Varghese",
+              "number": 3
+            },
+            {
+              "name": "Nikhil N Prabhu",
+              "number": 4
+            },
+            {
+              "name": "Ricky John Shabong",
+              "number": 6
+            },
+            {
+              "name": "Alfred Planas Moya",
+              "number": 10
+            },
+            {
+              "name": "Diego Henrique Oliveira Raposo",
+              "number": 11
+            },
+            {
+              "name": "Khaiminthang Lhungdim",
+              "number": 12
+            },
+            {
+              "name": "Muhammad Suhail  F",
+              "number": 17
+            },
+            {
+              "name": "Laishram Rishikanta Meitei",
+              "number": 22
+            },
+            {
+              "name": "Raphael Eric Messi Bouli",
+              "number": 28
+            }
+          ],
+          "formation": "4-3-3"
+        },
+        "away": {
+          "starters": [
+            {
+              "name": "Lalthathanga Khawlhring",
+              "number": 7
+            },
+            {
+              "name": "Rahim Ali",
+              "number": 11
+            },
+            {
+              "name": "Manuel Antonio Molina Valero",
+              "number": 12
+            },
+            {
+              "name": "Saviour Gama",
+              "number": 13
+            },
+            {
+              "name": "Nandhakumar Sekar",
+              "number": 22
+            },
+            {
+              "name": "Moirangthem Thoiba Singh",
+              "number": 24
+            },
+            {
+              "name": "Giorgi Aburjania",
+              "number": 29
+            },
+            {
+              "name": "Vanlalzuidika Chhakchhuak",
+              "number": 34
+            },
+            {
+              "name": "Hrithik Tiwari",
+              "number": 55
+            },
+            {
+              "name": "Stephen Eze",
+              "number": 66
+            },
+            {
+              "name": "Mahmoud Eid",
+              "number": 93
+            }
+          ],
+          "formation": "4-3-3"
+        },
+        "sourceUrl": "https://www.indiansuperleague.com/matchcentre/194639",
+        "verifiedAt": "2026-10-14T13:33:42.517374+00:00"
+      }
     },
     {
       "id": "194640",
