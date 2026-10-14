@@ -3,6 +3,22 @@
   "season": "2026-27",
   "checks": [
     {
+      "checkedAt": "2026-10-14T18:10:13.062786+00:00",
+      "kind": "post-match-early",
+      "outcome": "no-change",
+      "summary": "2 match centres checked; updates: fixtures 0, results 0, lineups 0, streams 0. Phase: phase-one. 0 pending; 0 errors.",
+      "links": [
+        {
+          "label": "Punjab FC vs Odisha FC",
+          "url": "https://www.indiansuperleague.com/matchcentre/194639"
+        },
+        {
+          "label": "NorthEast United FC vs Mohun Bagan Super Giant",
+          "url": "https://www.indiansuperleague.com/matchcentre/194638"
+        }
+      ]
+    },
+    {
       "checkedAt": "2026-10-14T18:08:15.124450+00:00",
       "kind": "lineup-late",
       "outcome": "updated",
