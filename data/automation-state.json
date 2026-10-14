@@ -95,25 +95,25 @@
   },
   "pending": [],
   "matchCheckedAt": {
-    "194638": "2026-10-14T13:33:42.517374+00:00",
+    "194638": "2026-10-14T13:38:18.948954+00:00",
     "194634": "2026-10-13T11:05:20.879015+00:00",
     "194635": "2026-10-13T13:42:02.790128+00:00",
     "194636": "2026-10-14T11:06:22.551766+00:00",
-    "194637": "2026-10-14T13:33:42.517374+00:00",
-    "194639": "2026-10-14T13:33:42.517374+00:00"
+    "194637": "2026-10-14T13:38:18.948954+00:00",
+    "194639": "2026-10-14T13:38:18.948954+00:00"
   },
   "lastCheck": {
-    "checkedAt": "2026-10-14T13:33:42.517374+00:00",
-    "kind": "lineup-late",
+    "checkedAt": "2026-10-14T13:38:18.948954+00:00",
+    "kind": "post-match-early",
     "failures": [
-      "GitHub hourly workflow stale: latest run was 2026-10-14T07:48:56+00:00; expected hourly runs through 2026-10-14T13:13:00+00:00 are absent.",
-      "Hourly ChatGPT backup recovery: This task is no longer available."
+      "GitHub hourly workflow stale: latest run started 2026-10-14T07:48:56+00:00; expected hourly runs through 2026-10-14T13:13:00+00:00 are absent.",
+      "Hourly ChatGPT backup remains unavailable: This task is no longer available."
     ],
     "changes": {
       "fixtures": 0,
       "results": 0,
-      "lineups": 1,
-      "streams": 1
+      "lineups": 0,
+      "streams": 0
     }
   }
 }

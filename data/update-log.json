@@ -3,6 +3,34 @@
   "season": "2026-27",
   "checks": [
     {
+      "checkedAt": "2026-10-14T13:38:29.402966+00:00",
+      "kind": "post-match-early",
+      "outcome": "partial",
+      "summary": "No 17:00 IST fixture on 14 October. Three official match centres checked; no football-data changes. GitHub hourly workflow remains stale: latest run started 1:18 pm IST, with expected runs absent through 6:43 pm. Four saved backup tasks are enabled; the separate hourly backup is unavailable.",
+      "links": [
+        {
+          "label": "Punjab FC vs Odisha FC",
+          "url": "https://www.indiansuperleague.com/matchcentre/194639"
+        },
+        {
+          "label": "Churchill Brothers vs Mumbai City FC",
+          "url": "https://www.indiansuperleague.com/matchcentre/194637"
+        },
+        {
+          "label": "NorthEast United FC vs Mohun Bagan Super Giant",
+          "url": "https://www.indiansuperleague.com/matchcentre/194638"
+        },
+        {
+          "label": "Official ISL fixture schedule",
+          "url": "https://www.indiansuperleague.com/schedule-fixtures"
+        },
+        {
+          "label": "Latest GitHub hourly workflow run",
+          "url": "https://github.com/ibasilbinu/fotweb-by-basil/actions/runs/38530811094"
+        }
+      ]
+    },
+    {
       "checkedAt": "2026-10-14T13:34:14.292256+00:00",
       "kind": "lineup-late",
       "outcome": "partial",
