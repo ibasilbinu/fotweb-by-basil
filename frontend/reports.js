@@ -461,7 +461,7 @@ function buildDetailedReportsPage() {
     .sort((a,b)=>(b.result?.date||istDate(b.kickoff)).localeCompare(a.result?.date||istDate(a.kickoff))||
       b.kickoff.localeCompare(a.kickoff));
   const body=matches.length?
-    '<div class="fw-match-browser-title"><h2>Completed matches</h2><span>'+matches.length+
+    '<div class="fw-match-browser-title"><h2>Past fixtures</h2><span>'+matches.length+
     ' '+(matches.length===1?'report':'reports')+' · Latest first</span></div>'+
     fwMatchDayGroups(matches):
     '<div class="fw-match-empty"><strong>No verified completed matches in this selection yet.</strong>'+
