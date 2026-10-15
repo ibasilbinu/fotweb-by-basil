@@ -327,6 +327,35 @@ class RunTests(unittest.TestCase):
             fetch.assert_called_once()
             self.assertEqual(len(json.loads((root/'data/isl-results.json').read_text())['matches']),1)
 
+    def test_clearance_pair_reset_is_preserved_and_pending_but_single_zero_is_allowed(self):
+        for incoming, protected in [((0, 0), True), ((0, 22), False), ((26, 21), False)]:
+            with self.subTest(incoming=incoming), tempfile.TemporaryDirectory() as directory:
+                root = Path(directory); season = self.setup_root(root)
+                fixture = season['fixtures'][0]
+                names = {t['id']: t['name'] for t in season['teams']}
+                data = payload(fixture)
+                for team, value in zip(data['teams'], (26, 22)):
+                    team['stats'] = {'touches': {'clearance': value}}
+                old, _ = importer.convert(data, fixture, names, STAMP)
+                results = {'schemaVersion': 1, 'season': '2026-27', 'matches': [old], 'updatedAt': STAMP}
+                (root/'data/isl-results.json').write_text(json.dumps(results))
+                for team, value in zip(data['teams'], incoming):
+                    team['stats']['touches']['clearance'] = value
+                doc = 'x="'+quote(json.dumps({'matchData': data}))+'"'
+                with patch.object(importer, 'fetch_text', return_value=doc):
+                    status = importer.run('match-retry', root, datetime.fromisoformat(STAMP))
+                saved = json.loads((root/'data/isl-results.json').read_text())
+                pair = tuple(saved['matches'][0]['stats'][side]['clearances'] for side in ('home', 'away'))
+                self.assertEqual(pair, (26, 22) if protected else incoming)
+                self.assertEqual(status, int(protected))
+                state = json.loads((root/'data/automation-state.json').read_text())
+                self.assertEqual('Clearances '+fixture['id'] in state['pending'], protected)
+                if protected:
+                    self.assertEqual(saved, results)
+                    self.assertEqual(state['lastCheck']['changes']['results'], 0)
+                    log = json.loads((root/'data/update-log.json').read_text())
+                    self.assertEqual(log['checks'][0]['outcome'], 'partial')
+
     def test_missing_xi_is_pending_and_existing_scores_remain(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory); season = self.setup_root(root)

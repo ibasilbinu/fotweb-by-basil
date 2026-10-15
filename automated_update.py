@@ -215,6 +215,18 @@ def run(kind='hourly', root=ROOT, now=None):
                 merged['lineups'] = {**old.get('lineups',{}), **match['lineups']}
                 merged['stats'] = {side:{**old.get('stats',{}).get(side,{}), **match['stats'].get(side,{})}
                                    for side in ('home','away')}
+                # A completed feed can reset an optional metric to placeholder
+                # zeros. Preserve the verified pair until the conflict is resolved.
+                previous_clearances = [old.get('stats', {}).get(side, {}).get('clearances')
+                                       for side in ('home', 'away')]
+                if (all(old.get(k) == match.get(k) for k in score_keys)
+                        and all(type(v) in (int, float) and v > 0 for v in previous_clearances)
+                        and all(match['stats'].get(side, {}).get('clearances') == 0
+                                for side in ('home', 'away'))):
+                    for side, value in zip(('home', 'away'), previous_clearances):
+                        merged['stats'][side]['clearances'] = value
+                    failures.append(f"{f['id']}: both clearance totals reset to zero; retained verified values pending confirmation")
+                    pending.append('Clearances ' + f['id'])
                 if {k:v for k,v in old.items() if k!='verifiedAt'} != {k:v for k,v in merged.items() if k!='verifiedAt'}:
                     candidate = {**results,'matches':[m for m in known.values() if m['id'] != f['id']]+[merged]}
                     validate_results(candidate)
