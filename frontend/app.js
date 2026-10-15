@@ -2,7 +2,8 @@
 const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const pages=[['overview','Season overview','M3 18V7m6 11V3m6 15v-8m6 8H1'],['fixtures','Fixtures & results','M3 4h18v16H3zM3 9h18M7 2v4m10-4v4'],['standings','Points table','M3 6h18M3 12h18M3 18h18M8 3v18'],['clubs','Clubs this season','M3 3h7v7H3zM14 3h7v7h-7zM3 14h7v7H3zM14 14h7v7h-7z'],['team','Team dashboard','M3 3h18v18H3zM3 9h18M9 9v12'],['analytics','Club analytics','M3 18h18M3 12h18M3 6h18M7 15l4-5 3 2 4-7'],['creator',"Creator's Corner",'M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8M4 21v-2a8 8 0 0 1 16 0v2']];
-const state={page:location.hash.slice(1)||'overview',team:'all',teamSection:'summary',reportSection:'overview',status:'upcoming',month:'all',fixtureWeek:'all',fixtureClub:'all',report:'',fixture:'',analyticsTeam:'',analyticsFormClubs:[],analyticsMetric:'points',analyticsCompareA:'',analyticsCompareB:''};
+const fixtureFilterDefaults={status:'upcoming',month:'all',fixtureWeek:'all',fixtureClub:'all'};
+const state={page:location.hash.slice(1)||'overview',team:'all',teamSection:'summary',reportSection:'overview',...fixtureFilterDefaults,report:'',fixture:'',analyticsTeam:'',analyticsFormClubs:[],analyticsMetric:'points',analyticsCompareA:'',analyticsCompareB:''};
 let squadData={teams:[]};
 let seasonData=null,resultsData={schemaVersion:1,season:'2026-27',updatedAt:null,matches:[]},today='';
 let updateLog={schemaVersion:1,season:'2026-27',checks:[]};
@@ -281,6 +282,7 @@ function rememberNavigation(){
   }
 }
 function returnToPreviousPage(){
+  const fromPage=state.page;
   const previous=navigationHistory.pop();
   if(previous){
     Object.assign(state,previous);
@@ -290,13 +292,17 @@ function returnToPreviousPage(){
   }else if(state.page!=='overview'){
     state.page='overview';
   }else return;
+  if(state.page==='fixtures'&&fromPage!=='fixtures'){
+    Object.assign(state,fixtureFilterDefaults);
+    state.fixture='';
+  }
   history.replaceState(null,'','#'+state.page);
   $('#sidebar').classList.remove('open');
   render();
   $('.main-wrap').scrollTo({top:0,behavior:'smooth'});
 }
 function navigate(page,changes={}){
-  if(page==='fixtures')changes={status:'upcoming',...changes};
+  if(page==='fixtures')changes={...fixtureFilterDefaults,...changes};
   const different=state.page!==page||Boolean(state.fixture)||
     Object.keys(changes).some(key=>state[key]!==changes[key]);
   if(different)rememberNavigation();
@@ -460,4 +466,4 @@ $$('[data-report]').forEach(el=>el.onclick=()=>openFixtureDetail(el.dataset.repo
   });
 });if($('#statusFilter'))$('#statusFilter').onchange=e=>{state.status=e.target.value;render();};if($('#matchweekFilter'))$('#matchweekFilter').onchange=e=>{state.fixtureWeek=e.target.value;render();$('#matchweekFilter')?.focus({preventScroll:true});};if($('#monthFilter'))$('#monthFilter').onchange=e=>{state.month=e.target.value;render();};if($('#fixtureClubFilter'))$('#fixtureClubFilter').onchange=e=>{state.fixtureClub=e.target.value;render();};}
 window.receiveSeasonData=args=>{if(!args?.season_data)return;seasonData=args.season_data;squadData=args.squad_data||{teams:[]};resultsData=args.post_match_data||{matches:[],updatedAt:null};updateLog=args.update_log||{schemaVersion:1,season:'2026-27',checks:[]};today=args.today||istDate(new Date().toISOString());render();};
-$('#pageBack').onclick=returnToPreviousPage;$('#pageHome').onclick=()=>navigate('overview');$('#menu').onclick=()=>$('#sidebar').classList.toggle('open');$('#sidebarBackdrop').onclick=()=>$('#sidebar').classList.remove('open');$('#methodology').onclick=()=>$('#dataDialog').showModal();$('#closeDialog').onclick=()=>$('#dataDialog').close();document.addEventListener('keydown',e=>{if(e.key==='Escape')$('#sidebar').classList.remove('open');});window.addEventListener('hashchange',()=>{const requested=location.hash.slice(1)||'overview';if(state.page!==requested||state.fixture)rememberNavigation();state.fixture='';state.page=requested;if(requested==='fixtures')state.status='upcoming';render();});
+$('#pageBack').onclick=returnToPreviousPage;$('#pageHome').onclick=()=>navigate('overview');$('#menu').onclick=()=>$('#sidebar').classList.toggle('open');$('#sidebarBackdrop').onclick=()=>$('#sidebar').classList.remove('open');$('#methodology').onclick=()=>$('#dataDialog').showModal();$('#closeDialog').onclick=()=>$('#dataDialog').close();document.addEventListener('keydown',e=>{if(e.key==='Escape')$('#sidebar').classList.remove('open');});window.addEventListener('hashchange',()=>{const requested=location.hash.slice(1)||'overview';if(state.page!==requested||state.fixture)rememberNavigation();state.fixture='';state.page=requested;if(requested==='fixtures')Object.assign(state,fixtureFilterDefaults);render();});
