@@ -427,12 +427,13 @@ function tdBindSeasonFormLegend(){
       groups.forEach(group=>{
         const hidden=selected.size>0&&!selected.has(group.dataset.seasonFormSeries);
         group.classList.toggle('is-muted',hidden);
+        group.setAttribute('aria-hidden',String(hidden));
         group.querySelectorAll('[data-td-form-point]').forEach(dot=>{
           dot.setAttribute('tabindex',hidden?'-1':'0');
           dot.setAttribute('aria-hidden',String(hidden));
         });
       });
-      const labels=groups.filter(group=>!group.classList.contains('is-muted')).map(group=>{
+      const labels=groups.map(group=>{
         const dots=group.querySelectorAll('[data-td-form-point]'),dot=dots[dots.length-1];
         return {group,x:Number(dot.getAttribute('cx')),y:Number(dot.getAttribute('cy'))};
       }).sort((a,b)=>a.y-b.y);

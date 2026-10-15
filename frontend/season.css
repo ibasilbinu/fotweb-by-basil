@@ -327,7 +327,7 @@
 .td-season-form-legend button:focus-visible{outline:2px solid #b5e399;outline-offset:2px}
 .td-season-form-legend small{font-size:9px;color:#a7baaa}
 .td-season-form-swatch{width:16px;height:3px;border-radius:2px;flex-shrink:0}
-[data-season-form-series].is-muted{display:none}
+[data-season-form-series].is-muted{opacity:.14;pointer-events:none}
 
 .td-section-selector{display:flex;align-items:flex-end;gap:18px;flex-wrap:wrap;margin:0 0 20px;padding:16px 18px;background:#121a17;border:1px solid #304237;border-radius:10px}
 .td-section-selector label{display:flex;flex-direction:column;gap:8px;min-width:260px;font-size:11px;font-weight:600;color:#b9ccbf}
