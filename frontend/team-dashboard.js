@@ -371,7 +371,7 @@ function tdSeasonFormPanel(){
     rows:tdFormRows(resultsData.matches||[],team.name)}));
   const maxGames=Math.max(0,...series.map(s=>s.rows.length));
   const maxPoints=Math.max(3,...series.map(s=>s.rows.length?s.rows[s.rows.length-1].cumulative:0));
-  const W=820,H=290,L=50,R=28,T=30,B=54,plotW=W-L-R,plotH=H-T-B;
+  const W=820,H=290,L=50,R=88,T=30,B=54,plotW=W-L-R,plotH=H-T-B;
   const x=number=>L+number*plotW/Math.max(2,maxGames);
   const tickStep=Math.max(1,Math.ceil(maxPoints/6)),axisMax=Math.ceil(maxPoints/tickStep)*tickStep;
   const y=points=>T+(axisMax-points)*plotH/axisMax;
@@ -393,7 +393,10 @@ function tdSeasonFormPanel(){
         return '<circle cx="'+x(row.index)+'" cy="'+y(row.cumulative)+'" r="6" class="td-form-dot" style="fill:'+s.color+'" tabindex="0" role="button" data-td-form-point'+
           ' data-form-title="'+esc(title)+'" data-form-opponent="'+esc(row.opponent)+'" data-form-date="'+esc(detail)+'" data-form-score="'+esc(row.score)+'" aria-label="'+esc(description)+'"><title>'+esc(description)+'</title></circle>';
       }).join('');
-      return '<g data-season-form-series="'+esc(s.team.id)+'">'+line+dots+'</g>';
+      const end=s.rows[s.rows.length-1],endX=x(end.index),endY=y(end.cumulative);
+      const label='<path data-form-end-link fill="none" stroke="'+s.color+'" stroke-width="1"/>'+
+        '<text data-form-end-label x="'+(endX+16)+'" y="'+(endY+4)+'" class="td-form-axis" style="fill:'+s.color+';font-weight:600;pointer-events:none">'+esc(s.team.short)+'</text>';
+      return '<g data-season-form-series="'+esc(s.team.id)+'">'+line+dots+label+'</g>';
     }).join('');
   }
   const legend='<div class="td-season-form-legend" aria-label="Select clubs to compare form">'+
@@ -428,6 +431,20 @@ function tdBindSeasonFormLegend(){
           dot.setAttribute('tabindex',hidden?'-1':'0');
           dot.setAttribute('aria-hidden',String(hidden));
         });
+      });
+      const labels=groups.filter(group=>!group.classList.contains('is-muted')).map(group=>{
+        const dots=group.querySelectorAll('[data-td-form-point]'),dot=dots[dots.length-1];
+        return {group,x:Number(dot.getAttribute('cx')),y:Number(dot.getAttribute('cy'))};
+      }).sort((a,b)=>a.y-b.y);
+      labels.forEach((label,i)=>{label.labelY=Math.max(label.y,i?labels[i-1].labelY+16:36);});
+      if(labels.length&&labels[labels.length-1].labelY>232){
+        labels[labels.length-1].labelY=232;
+        for(let i=labels.length-2;i>=0;i--)labels[i].labelY=Math.min(labels[i].labelY,labels[i+1].labelY-16);
+      }
+      labels.forEach(label=>{
+        label.group.querySelector('[data-form-end-label]').setAttribute('y',label.labelY+4);
+        label.group.querySelector('[data-form-end-link]').setAttribute('d',
+          'M'+(label.x+7)+','+label.y+'L'+(label.x+12)+','+label.labelY);
       });
       const status=panel.querySelector('[data-form-selection]');
       if(status)status.textContent=selected.size?selected.size+' '+(selected.size===1?'club selected.':'clubs selected for comparison.'):'All clubs shown.';
