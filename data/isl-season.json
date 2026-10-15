@@ -314,11 +314,11 @@
       "sourceUrl": "https://www.indiansuperleague.com/schedule-fixtures",
       "broadcast": {
         "url": "https://www.youtube.com/live/8VoKMQAmAbo",
-        "title": "FULL REPLAY (English): Punjab FC vs Odisha FC (2-1) | MG ISL 2026-27 | Gameweek 1",
+        "title": "FULL REPLAY (English): Punjab FC vs Odisha FC (2-1) | MG ISL 2026-27 | GW 1",
         "channelUrl": "https://www.youtube.com/@IndianSuperLeague",
         "language": "English",
         "status": "ended",
-        "verifiedAt": "2026-10-14T18:08:10.035153+00:00"
+        "verifiedAt": "2026-10-15T07:26:52.842196+00:00"
       },
       "officialStage": "league",
       "lineups": {
@@ -455,7 +455,16 @@
       "phase": "league",
       "label": "Match 8",
       "sourceUrl": "https://www.indiansuperleague.com/news/all-indian-inter-kashi-face-star-studded-kerala-blasters",
-      "officialStage": "league"
+      "officialStage": "league",
+      "broadcast": {
+        "url": "https://www.youtube.com/live/DdsyDa5Tils",
+        "title": "LIVE: Inter Kashi FC vs Odisha FC | MG ISL 2026-27 | Gameweek 2",
+        "channelUrl": "https://www.youtube.com/@IndianSuperLeague",
+        "language": "English",
+        "status": "scheduled",
+        "verifiedAt": "2026-10-15T07:26:52.842196+00:00",
+        "languageEvidence": "official-default-unlabelled"
+      }
     },
     {
       "id": "194642",
@@ -467,7 +476,16 @@
       "phase": "league",
       "label": "Match 9",
       "sourceUrl": "https://www.indiansuperleague.com/schedule-fixtures",
-      "officialStage": "league"
+      "officialStage": "league",
+      "broadcast": {
+        "url": "https://www.youtube.com/live/0XReoY9GNr4",
+        "title": "LIVE: Bengaluru FC vs Chennaiyin FC | MG ISL 2026-27 | Gameweek 2",
+        "channelUrl": "https://www.youtube.com/@IndianSuperLeague",
+        "language": "English",
+        "status": "scheduled",
+        "verifiedAt": "2026-10-15T07:26:52.842196+00:00",
+        "languageEvidence": "official-default-unlabelled"
+      }
     },
     {
       "id": "194643",
@@ -479,7 +497,16 @@
       "phase": "league",
       "label": "Match 10",
       "sourceUrl": "https://www.indiansuperleague.com/schedule-fixtures",
-      "officialStage": "league"
+      "officialStage": "league",
+      "broadcast": {
+        "url": "https://www.youtube.com/live/b4Xo33p3SXo",
+        "title": "LIVE: Churchill Brothers SC vs East Bengal FC | MG ISL 2026-27 | Gameweek 2",
+        "channelUrl": "https://www.youtube.com/@IndianSuperLeague",
+        "language": "English",
+        "status": "scheduled",
+        "verifiedAt": "2026-10-15T07:26:52.842196+00:00",
+        "languageEvidence": "official-default-unlabelled"
+      }
     },
     {
       "id": "194644",
@@ -491,7 +518,16 @@
       "phase": "league",
       "label": "Match 11",
       "sourceUrl": "https://www.indiansuperleague.com/schedule-fixtures",
-      "officialStage": "league"
+      "officialStage": "league",
+      "broadcast": {
+        "url": "https://www.youtube.com/live/fp_7X3VWIuA",
+        "title": "LIVE: NorthEast United FC vs Kerala Blasters FC | MG ISL 2026-27 | Gameweek 2",
+        "channelUrl": "https://www.youtube.com/@IndianSuperLeague",
+        "language": "English",
+        "status": "scheduled",
+        "verifiedAt": "2026-10-15T07:26:52.842196+00:00",
+        "languageEvidence": "official-default-unlabelled"
+      }
     },
     {
       "id": "194645",
