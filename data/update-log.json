@@ -3,6 +3,26 @@
   "season": "2026-27",
   "checks": [
     {
+      "checkedAt": "2026-10-15T18:18:32.459243+00:00",
+      "kind": "hourly",
+      "outcome": "updated",
+      "summary": "1 match centres checked; updates: fixtures 0, results 0, lineups 0, streams 2. Phase: phase-one. 0 pending; 0 errors.",
+      "links": [
+        {
+          "label": "Official ISL fixture discovery",
+          "url": "https://www.indiansuperleague.com/schedule-fixtures"
+        },
+        {
+          "label": "Punjab FC vs Odisha FC",
+          "url": "https://www.indiansuperleague.com/matchcentre/194639"
+        },
+        {
+          "label": "Official ISL YouTube Live listing",
+          "url": "https://www.youtube.com/@IndianSuperLeague/streams"
+        }
+      ]
+    },
+    {
       "checkedAt": "2026-10-15T17:52:57.812337+00:00",
       "kind": "post-match-early",
       "outcome": "no-change",
