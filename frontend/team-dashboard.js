@@ -350,8 +350,24 @@ function tdBindFormTooltips(){
   });
 }
 
+function tdSeasonFormPath(points){
+  if(!points.length)return '';
+  const slopes=points.slice(1).map((p,i)=>(p[1]-points[i][1])/(p[0]-points[i][0]));
+  const tangents=points.map((p,i)=>{
+    if(i===0)return slopes[0]||0;
+    if(i===points.length-1)return slopes[i-1]||0;
+    const before=slopes[i-1],after=slopes[i];
+    return before*after>0?2*before*after/(before+after):0;
+  });
+  return 'M'+points[0].join(',')+points.slice(1).map((p,i)=>{
+    const previous=points[i],third=(p[0]-previous[0])/3;
+    return 'C'+[previous[0]+third,previous[1]+tangents[i]*third,
+      p[0]-third,p[1]-tangents[i+1]*third,p[0],p[1]].join(',');
+  }).join('');
+}
 function tdSeasonFormPanel(){
-  const series=seasonData.teams.map((team,i)=>({team,color:caColors[i%caColors.length],
+  const formColors=['#ff5252','#298dff','#ff931e','#b471ff','#00d8e5','#ff55b5','#ffe22b','#36d67a','#f2f5fc','#d89967','#c5ec68','#7c85ff','#aeafb9'];
+  const series=seasonData.teams.map((team,i)=>({team,color:formColors[i%formColors.length],
     rows:tdFormRows(resultsData.matches||[],team.name)}));
   const maxGames=Math.max(0,...series.map(s=>s.rows.length));
   const maxPoints=Math.max(3,...series.map(s=>s.rows.length?s.rows[s.rows.length-1].cumulative:0));
@@ -369,7 +385,7 @@ function tdSeasonFormPanel(){
       grid+='<text x="'+x(number)+'" y="'+(H-B+23)+'" text-anchor="middle" class="td-form-axis">M'+number+'</text>';
     paths=series.map(s=>{
       if(!s.rows.length)return '';
-      const line='<polyline points="'+[[x(0),y(0)],...s.rows.map(r=>[x(r.index),y(r.cumulative)])].map(p=>p.join(',')).join(' ')+'" class="td-form-line" style="stroke:'+s.color+'"/>';
+      const line='<path d="'+tdSeasonFormPath([[x(0),y(0)],...s.rows.map(r=>[x(r.index),y(r.cumulative)])])+'" class="td-form-line" style="stroke:'+s.color+'"/>';
       const dots=s.rows.map(row=>{
         const title=s.team.name+' · M'+row.index+' · '+row.result+' · +'+row.points+' pts · Total '+row.cumulative+' pts';
         const detail=row.date+' · '+row.venue;
