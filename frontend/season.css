@@ -335,3 +335,11 @@
 .td-section-selector select:focus-visible{outline:2px solid #b5e399;outline-offset:2px}
 .td-section-selector p{margin:0 0 10px;font-size:11px;color:#a7baaa}
 @media(max-width:600px){.td-section-selector label{min-width:0;width:100%}.td-section-selector{gap:10px}.td-section-selector p{margin:0}}
+
+/* All-club fixture groups retain the existing responsive card grid. */
+.fixture-grouping-note{font-size:11px;line-height:1.7;color:var(--muted);margin:10px 0 24px}
+.fixture-matchweek{margin:0 0 32px}
+.fixture-matchweek-heading{display:flex;align-items:center;justify-content:space-between;gap:15px;padding:0 0 12px;border-bottom:1px solid var(--line)}
+.fixture-matchweek-heading h2{font-size:19px;letter-spacing:-.3px;color:var(--accent)}
+.fixture-matchweek-heading>span{font-size:11px;color:var(--muted);white-space:nowrap}
+.fixture-matchweek .fixtures-grid{margin-top:18px;margin-bottom:0}
