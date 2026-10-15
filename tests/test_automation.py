@@ -137,6 +137,30 @@ class FixtureTests(unittest.TestCase):
         self.assertNotIn('broadcast', updated)
         validate_season(self.season)
 
+    def test_resolved_duplicate_is_not_restored_or_counted_as_unplayed(self):
+        kept = next(f for f in self.season['fixtures'] if f['id'] == '194691')
+        duplicate = schedule_row(kept)
+        duplicate.update(game_id='194690', start_date='2026-11-17T19:30+05:30')
+        _, errors = merge_fixtures(self.season, [duplicate, schedule_row(kept)], STAMP)
+        self.assertFalse(errors)
+        self.assertNotIn('194690', [f['id'] for f in self.season['fixtures']])
+        self.assertNotIn('needsConfirmation', kept)
+        self.assertEqual(kept['kickoff'], '2026-12-17T19:30+05:30')
+        self.season['fixtures'] = [kept]
+        state = {'phaseOneFixtureIds':['194690','194691'],
+                 'phaseOneLastKickoff':kept['kickoff']}
+        update_lifecycle(self.season, {'matches':[{'id':'194691'}]}, state, STAMP)
+        self.assertEqual(state['phase'], 'awaiting-next-phase')
+
+    def test_resolved_duplicate_does_not_hide_changed_clubs(self):
+        kept = next(f for f in self.season['fixtures'] if f['id'] == '194691')
+        duplicate = schedule_row(kept)
+        duplicate['game_id'] = '194690'
+        duplicate['participants'][1]['id'] = '505'
+        _, errors = merge_fixtures(self.season, [duplicate], STAMP)
+        self.assertTrue(errors)
+        self.assertNotIn('194690', [f['id'] for f in self.season['fixtures']])
+
     def test_unknown_clubs_do_not_delete_valid_schedule(self):
         row = schedule_row(self.f); row['participants'][0]['id'] = '9999'
         before = deepcopy(self.season)

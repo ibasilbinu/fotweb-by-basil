@@ -3,7 +3,7 @@
   "season": "2026-27",
   "competition": "Indian Super League",
   "scheduleScope": "Published Phase 1",
-  "verifiedAt": "2026-10-12T18:03:13.485080+00:00",
+  "verifiedAt": "2026-10-15T08:21:17.562Z",
   "sourceUrl": "https://www.indiansuperleague.com/schedule-fixtures",
   "standingsSourceUrl": "https://www.indiansuperleague.com/standings",
   "teams": [
@@ -734,20 +734,6 @@
       "officialStage": "league"
     },
     {
-      "id": "194690",
-      "homeId": "656",
-      "awayId": "1102",
-      "kickoff": "2026-11-17T19:30+05:30",
-      "venue": "Sree Kanteerava Stadium, Bengaluru",
-      "status": "NS",
-      "phase": "league",
-      "label": "Match 57",
-      "sourceUrl": "https://www.indiansuperleague.com/schedule-fixtures",
-      "needsConfirmation": true,
-      "sourceNote": "The official schedule lists this home pairing as Match 57 on two dates. Confirm the date with ISL before making plans.",
-      "officialStage": "league"
-    },
-    {
       "id": "194662",
       "homeId": "1102",
       "awayId": "3234",
@@ -1093,9 +1079,14 @@
       "phase": "league",
       "label": "Match 57",
       "sourceUrl": "https://www.indiansuperleague.com/schedule-fixtures",
-      "needsConfirmation": true,
-      "sourceNote": "The official schedule lists this home pairing as Match 57 on two dates. Confirm the date with ISL before making plans.",
-      "officialStage": "league"
+      "officialStage": "league",
+      "supersedesFixtureIds": [
+        "194690"
+      ],
+      "dateConfirmation": {
+        "source": "site-owner",
+        "confirmedAt": "2026-10-15T08:21:17.562Z"
+      }
     },
     {
       "id": "194692",

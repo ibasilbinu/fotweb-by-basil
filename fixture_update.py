@@ -76,6 +76,11 @@ def competition_phase(stage):
 def merge_fixtures(season, records, stamp):
     candidate = deepcopy(season)
     known = {f['id']: f for f in candidate['fixtures']}
+    # Retain explicit duplicate resolutions across repeated source imports.
+    # A resolution is scoped to the exact old ID and the same home/away clubs;
+    # a new phase or a different fixture ID is still discovered normally.
+    superseded = {old_id: f for f in known.values()
+                  for old_id in f.get('supersedesFixtureIds', [])}
     team_ids = {t['id'] for t in season['teams']}
     changed, failures = 0, []
     for row in records:
@@ -89,6 +94,11 @@ def merge_fixtures(season, records, stamp):
                 raise ValueError('Invalid or unconfirmed kickoff')
             old = known.get(match_id, {})
             home, away = str(teams[0]['id']), str(teams[1]['id'])
+            if match_id in superseded:
+                replacement = superseded[match_id]
+                if (replacement['homeId'], replacement['awayId']) != (home, away):
+                    raise ValueError('Resolved duplicate clubs changed; needs review')
+                continue
             if old and (old['homeId'], old['awayId']) != (home, away):
                 raise ValueError('Fixture clubs changed; retained verified identity')
             status_text = str(row.get('event_status', '')).lower()
@@ -149,7 +159,9 @@ def update_lifecycle(season, results, state, stamp):
         return
     fixtures = {f['id']: f for f in season['fixtures']}
     completed = {m['id']: m for m in results['matches']}
-    baseline = set(state['phaseOneFixtureIds'])
+    superseded = {old_id for f in fixtures.values()
+                  for old_id in f.get('supersedesFixtureIds', [])}
+    baseline = set(state['phaseOneFixtureIds']) - superseded
     phase_one_done = all(i in completed or fixtures.get(i, {}).get('status') == 'CANC'
                          for i in baseline)
     later = any(f['phase'] == 'playoff' or

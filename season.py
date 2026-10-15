@@ -44,6 +44,19 @@ def validate_season(data):
         require(f.get("phase") in ("league", "playoff", "unknown"), "Invalid stage")
         require(f.get("venue") is None or (isinstance(f["venue"], str) and len(f["venue"]) <= 300), "Invalid venue")
         https(f["sourceUrl"])
+        if "supersedesFixtureIds" in f:
+            superseded = f["supersedesFixtureIds"]
+            require(isinstance(superseded, list) and bool(superseded)
+                    and all(isinstance(i, str) and i.isdigit() and i != f['id']
+                            for i in superseded)
+                    and len(set(superseded)) == len(superseded), "Invalid resolved duplicate IDs")
+            require(not set(superseded).intersection(x['id'] for x in data['fixtures']),
+                    "A resolved duplicate must not remain in the schedule")
+            confirmation = f.get("dateConfirmation", {})
+            require(isinstance(confirmation, dict) and confirmation.get('source') == 'site-owner',
+                    "Duplicate resolution requires its confirmation provenance")
+            require(datetime.fromisoformat(confirmation['confirmedAt']).tzinfo is not None,
+                    "Date confirmation requires a timezone")
         # Upcoming starting XIs are optional and must refer to the fixture's
         # official ISL match centre, never predicted squads or Ground View.
         lineup = f.get("lineups")

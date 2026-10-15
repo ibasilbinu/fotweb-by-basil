@@ -131,6 +131,17 @@ No frontend code, assets, permissions or secrets should change in this task.
 Do not invent fixture corrections where dates disagree: retain and label
 conflicting source entries until an official correction is verified.
 
+### Owner-confirmed Bengaluru date correction · 15 October 2026
+
+The site owner explicitly confirmed Bengaluru FC vs East Bengal FC on
+**17 December 2026**, resolving the duplicate Match 57 listing. Keep official
+fixture `194691` at its published 19:30 IST kickoff; remove November duplicate
+`194690`. The retained fixture records `dateConfirmation.source: site-owner`
+and `supersedesFixtureIds` so imports preserve this explicit correction.
+This is owner confirmation, not a claim that ISL removed its conflicting entry.
+The superseded ID does not count as an unplayed phase-one match. Scheduling
+times and workflows are unchanged.
+
 ## Team Dashboard statistics and coverage
 
 Season Overview also shows league-wide top-five player rankings across all
