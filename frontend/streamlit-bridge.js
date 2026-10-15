@@ -5,7 +5,9 @@
     { isStreamlitMessage: true, type, ...values }, '*'
   );
   const resize = () => send('streamlit:setFrameHeight', {
-    height: Math.max(620, Math.min(1000, window.screen.availHeight - 130))
+    // The host fits this frame to 100dvh, including mobile browser chrome and
+    // rotation. Do not estimate its size from the device's physical screen.
+    height: window.innerHeight
   });
   window.addEventListener('message', event => {
     if (event.source !== window.parent || event.data?.type !== 'streamlit:render') return;

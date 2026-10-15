@@ -5,8 +5,13 @@
 @media(max-width:680px){aside{transform:translateX(-100%);width:246px;transition:transform .2s;box-shadow:20px 0 40px #0009}aside.open{transform:translateX(0)}.main-wrap{margin:0}#menu{display:grid}.topbar{height:65px;padding:0 17px}.breadcrumb{flex:1}.breadcrumb>span{margin:0 5px}.data-badge{font-size:8px;letter-spacing:.3px}.topbar-right{gap:10px}.topbar-right .outline-button{padding:7px 10px}main{padding:25px 17px}.page-head{display:block;margin-bottom:23px}.season-tag{display:inline-block;margin-top:12px}.page-head h1{font-size:31px}.hero-copy{padding:23px}.hero h2{font-size:25px}.stats{gap:10px}.stat{padding:17px}.stat-sub{font-size:9px}.grid{gap:17px;margin-bottom:18px}.card-head{padding:17px}.card-body{padding:0 17px 17px}.player-grid,.match-grid{grid-template-columns:1fr}.profile{padding:18px;gap:12px}.profile h2{font-size:20px}.profile .season-tag{display:none}.controls{gap:12px}.controls label{min-width:130px}.card-head h3{font-size:12px}.mini-stats{gap:25px}.mini-stats strong{font-size:20px}footer>span:nth-child(2){display:none}footer{padding:20px 17px}.source-note{font-size:9px}.dialog-header h2{font-size:23px}dialog{padding:22px}.tabs{gap:20px}}
 @media print{aside,.topbar,footer,button,.source-note{display:none!important}.main-wrap{margin:0}body{background:#fff;color:#111}main{padding:0}.card,.stat,.hero{break-inside:avoid}body{-webkit-print-color-adjust:exact;print-color-adjust:exact}.card,.stat,.hero,.profile{background:#12171b;color:#fff}.page-head p{color:#333}}
 
-/* Streamlit component: retain an independent scrollable workspace. */
-html,body{height:100%;overflow:hidden}.app{height:100vh}.main-wrap{height:100vh;overflow-y:auto;overscroll-behavior:contain}.topbar{position:sticky;top:0;background:var(--bg);z-index:20}
+/* One workspace scroll area, with the top bar in the same flow as the page. */
+html,body{height:100%;overflow:hidden}
+.app{height:100%}
+.main-wrap{height:100%;min-height:0;overflow-y:auto;overscroll-behavior:contain}
+.topbar{position:static;background:var(--bg);height:auto;min-height:77px;flex-wrap:wrap;padding-top:14px;padding-bottom:14px}
+@media(max-width:680px){.topbar{min-height:65px}}
+.sidebar-last-updated{margin:16px 10px 0;padding-top:14px;border-top:1px solid var(--line);color:#a4b2a9;font-size:11px;line-height:1.7}
 
 /* Mobile-only dismissal surface: tap outside the open navigation to close it. */
 .sidebar-backdrop { display:none; }

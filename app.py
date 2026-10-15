@@ -28,7 +28,15 @@ st.markdown(
     """
     <style>
       .stApp { background: #0b0e11; }
-      .block-container { padding: 1rem 0 0 !important; max-width: 100% !important; }
+      /* The workspace owns scrolling. Fit its frame to the actual viewport so
+         Streamlit does not add a second page scrollbar around it. */
+      html, body, .stApp, [data-testid="stAppViewContainer"],
+      [data-testid="stMain"] { height: 100%; overflow: hidden; }
+      .block-container, [data-testid="stMainBlockContainer"] {
+        padding: 0 !important;
+        max-width: 100% !important;
+      }
+      [data-testid="stVerticalBlock"] { gap: 0; }
       /* FotWeb has its own header inside the component. Hide Streamlit's
          entire host header and toolbar, including its three-dot menu. */
       [data-testid="stHeader"],
@@ -57,8 +65,13 @@ st.markdown(
       }
       [data-testid="stMainMenuItem-print"],
       [data-testid="stMainMenuItem-recordScreencast"] { display: none !important; }
-      [data-testid="stMainBlockContainer"] { padding-top: 1rem !important; }
-      iframe[title*="fotweb_workspace"] { display: block; border: 0; }
+      iframe[title*="fotweb_workspace"] {
+        display: block;
+        border: 0;
+        width: 100%;
+        height: 100vh !important;
+        height: 100dvh !important;
+      }
     </style>
     """,
     unsafe_allow_html=True,
