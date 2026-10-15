@@ -354,8 +354,8 @@ function tdSeasonFormPath(points){
   if(!points.length)return '';
   const slopes=points.slice(1).map((p,i)=>(p[1]-points[i][1])/(p[0]-points[i][0]));
   const tangents=points.map((p,i)=>{
-    if(i===0)return slopes[0]||0;
-    if(i===points.length-1)return slopes[i-1]||0;
+    // Ease the start and finish so even the first result has a curved path.
+    if(i===0||i===points.length-1)return 0;
     const before=slopes[i-1],after=slopes[i];
     return before*after>0?2*before*after/(before+after):0;
   });
