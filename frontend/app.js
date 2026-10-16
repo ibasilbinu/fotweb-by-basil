@@ -52,9 +52,9 @@ function fixtureWatch(f){
   const u=verified||candidate;
   if(!u)return '';
   const ended=!!f.result||f.broadcast?.status==='ended';
-  const scheduled=!ended&&f.status!=='LIVE'&&(f.broadcast?.status==='scheduled'||!!candidate);
-  const label=scheduled?'Scheduled live':verified?(ended?'Watch replay':'Watch live'):
-    (ended?'Watch stream replay':'Watch live');
+  const live=!ended&&fixtureDisplayStatus(f)==='Live';
+  const scheduled=!ended&&!live;
+  const label=ended?(verified?'Watch replay':'Watch stream replay'):(live?'Watch live':'Scheduled live');
   const explanation=verified?
     'Official ISL YouTube · English'+(!ended&&f.broadcast.status==='scheduled'?' · Scheduled stream':''):
     'Official ISL YouTube · English · Scheduled stream';
