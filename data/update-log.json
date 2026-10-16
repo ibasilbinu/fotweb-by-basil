@@ -3,6 +3,22 @@
   "season": "2026-27",
   "checks": [
     {
+      "checkedAt": "2026-10-16T21:27:59.415783+00:00",
+      "kind": "match-retry",
+      "outcome": "no-change",
+      "summary": "2 match centres checked; updates: fixtures 0, results 0, lineups 0, streams 0. Phase: phase-one. 0 pending; 0 errors.",
+      "links": [
+        {
+          "label": "Punjab FC vs Odisha FC",
+          "url": "https://www.indiansuperleague.com/matchcentre/194639"
+        },
+        {
+          "label": "Sporting Club Delhi vs Mohun Bagan Super Giant",
+          "url": "https://www.indiansuperleague.com/matchcentre/194640"
+        }
+      ]
+    },
+    {
       "checkedAt": "2026-10-16T21:08:08.442185+00:00",
       "kind": "hourly",
       "outcome": "no-change",
