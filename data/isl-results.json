@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "season": "2026-27",
-  "updatedAt": "2026-10-16T14:32:37.970730+00:00",
+  "updatedAt": "2026-10-16T16:13:49.923161+00:00",
   "matches": [
     {
       "id": "194634",
@@ -4178,6 +4178,685 @@
           "player": "Raphael Eric Messi Bouli",
           "addedMinute": 5,
           "assist": "Bishu Sharma"
+        }
+      ]
+    },
+    {
+      "id": "194640",
+      "date": "2026-10-16",
+      "home": "Sporting Club Delhi",
+      "away": "Mohun Bagan Super Giant",
+      "homeGoals": 1,
+      "awayGoals": 2,
+      "status": "FT",
+      "phase": "league",
+      "officialStage": "League",
+      "verifiedAt": "2026-10-16T16:13:49.923161+00:00",
+      "sources": [
+        {
+          "label": "Indian Super League official match centre",
+          "url": "https://www.indiansuperleague.com/matchcentre/194640"
+        }
+      ],
+      "matchUrl": "https://www.indiansuperleague.com/matchcentre/194640",
+      "winnerId": "1874",
+      "venue": "Jawaharlal Nehru Stadium, New Delhi",
+      "report": "Sporting Club Delhi 1–2 Mohun Bagan Super Giant. Full-time; result confirmed by the official ISL match centre.",
+      "lineups": {
+        "home": {
+          "starters": [
+            {
+              "name": "Lalrinliana Hnamte",
+              "number": 4
+            },
+            {
+              "name": "Rodrigo Araujo da Silva Filho",
+              "number": 7
+            },
+            {
+              "name": "Juan Sebastian Pena Bermudez",
+              "number": 10
+            },
+            {
+              "name": "Lamgoulen Gou Hangshing",
+              "number": 19
+            },
+            {
+              "name": "Nora Fernandes",
+              "number": 20
+            },
+            {
+              "name": "Mohammed Aimen",
+              "number": 23
+            },
+            {
+              "name": "Mohammed Azhar",
+              "number": 24
+            },
+            {
+              "name": "Yanglem Sanatomba Singh",
+              "number": 25
+            },
+            {
+              "name": "Duvan Felipe Viafara Mina",
+              "number": 28
+            },
+            {
+              "name": "Manoj Mohammad",
+              "number": 41
+            },
+            {
+              "name": "Nduka Junior",
+              "number": 45
+            }
+          ],
+          "formation": "3-5-2",
+          "substitutes": [
+            {
+              "name": "Ashutosh Mehta",
+              "number": 6,
+              "position": "Defender"
+            },
+            {
+              "name": "David Richard Ndayishimiye",
+              "number": 8,
+              "position": "Midfielder"
+            },
+            {
+              "name": "Clarence Savio Fernandes",
+              "number": 15,
+              "position": "Defender"
+            },
+            {
+              "name": "Augustine Lalrochana",
+              "number": 18,
+              "position": "Forward"
+            },
+            {
+              "name": "Sourav Kumar",
+              "number": 27,
+              "position": "Forward"
+            },
+            {
+              "name": "Thokchom Diamond Singh",
+              "number": 30,
+              "position": "Midfielder"
+            },
+            {
+              "name": "Vishal Yadav",
+              "number": 31,
+              "position": "Goalkeeper"
+            },
+            {
+              "name": "Akshat Mehra",
+              "number": 66,
+              "position": "Midfielder"
+            },
+            {
+              "name": "Carlos Manuel dos Santos Fortes",
+              "number": 99,
+              "position": "Forward"
+            }
+          ]
+        },
+        "away": {
+          "starters": [
+            {
+              "name": "Vishal Kaith",
+              "number": 1
+            },
+            {
+              "name": "Rahul Shankar Bheke",
+              "number": 2
+            },
+            {
+              "name": "Mehtab Singh",
+              "number": 5
+            },
+            {
+              "name": "Anirudh Thapa",
+              "number": 6
+            },
+            {
+              "name": "Lallianzuala Chhangte",
+              "number": 9
+            },
+            {
+              "name": "Miguel Figueira Damasceno",
+              "number": 10
+            },
+            {
+              "name": "Lee Harry Erwin",
+              "number": 19
+            },
+            {
+              "name": "Alberto Rodriguez Martin",
+              "number": 21
+            },
+            {
+              "name": "Tekcham Abhishek Singh",
+              "number": 27
+            },
+            {
+              "name": "Lalengmawia Ralte",
+              "number": 45
+            },
+            {
+              "name": "Dejan Drazic",
+              "number": 71
+            }
+          ],
+          "formation": "4-2-3-1",
+          "substitutes": [
+            {
+              "name": "Liston Colaco",
+              "number": 7,
+              "position": "Midfielder"
+            },
+            {
+              "name": "Samir Zeljkovic",
+              "number": 8,
+              "position": "Midfielder"
+            },
+            {
+              "name": "Manvir Singh",
+              "number": 11,
+              "position": "Midfielder"
+            },
+            {
+              "name": "Subhasish Prodyut Bose",
+              "number": 15,
+              "position": "Defender"
+            },
+            {
+              "name": "Abhishek Dhananjay Suryavanshi",
+              "number": 16,
+              "position": "Midfielder"
+            },
+            {
+              "name": "Sahal Abdul Samad",
+              "number": 18,
+              "position": "Midfielder"
+            },
+            {
+              "name": "Syed Zahid Hussain Bukhari",
+              "number": 24,
+              "position": "Goalkeeper"
+            },
+            {
+              "name": "Alex Saji",
+              "number": 40,
+              "position": "Defender"
+            },
+            {
+              "name": "Suhail Ahmad Bhat",
+              "number": 72,
+              "position": "Forward"
+            }
+          ]
+        }
+      },
+      "stats": {
+        "home": {
+          "possession": 49,
+          "shots": 13,
+          "shotsOnTarget": 4,
+          "corners": 1,
+          "fouls": 12,
+          "offsides": 1,
+          "yellowCards": 2,
+          "redCards": 0,
+          "passes": 465,
+          "passAccuracy": 79,
+          "tackles": 17,
+          "interceptions": 11,
+          "clearances": 23,
+          "saves": 9
+        },
+        "away": {
+          "possession": 51,
+          "shots": 21,
+          "shotsOnTarget": 11,
+          "corners": 5,
+          "fouls": 7,
+          "offsides": 0,
+          "yellowCards": 4,
+          "redCards": 0,
+          "passes": 485,
+          "passAccuracy": 79,
+          "tackles": 14,
+          "interceptions": 7,
+          "clearances": 16,
+          "saves": 3
+        }
+      },
+      "players": [
+        {
+          "name": "Lalrinliana Hnamte",
+          "side": "home",
+          "position": "Midfielder",
+          "goals": 1,
+          "assists": 0,
+          "shots": 3,
+          "passes": 46,
+          "tackles": 3,
+          "saves": 0
+        },
+        {
+          "name": "Rodrigo Araujo da Silva Filho",
+          "side": "home",
+          "position": "Forward",
+          "goals": 0,
+          "assists": 0,
+          "shots": 3,
+          "passes": 22,
+          "tackles": 1,
+          "saves": 0
+        },
+        {
+          "name": "Juan Sebastian Pena Bermudez",
+          "side": "home",
+          "position": "Midfielder",
+          "goals": 0,
+          "assists": 0,
+          "shots": 3,
+          "passes": 47,
+          "tackles": 1,
+          "saves": 0
+        },
+        {
+          "name": "Lamgoulen Gou Hangshing",
+          "side": "home",
+          "position": "Defender",
+          "goals": 0,
+          "assists": 0,
+          "shots": 1,
+          "passes": 41,
+          "tackles": 4,
+          "saves": 0
+        },
+        {
+          "name": "Nora Fernandes",
+          "side": "home",
+          "position": "Goalkeeper",
+          "goals": 0,
+          "assists": 0,
+          "shots": 0,
+          "passes": 22,
+          "tackles": 0,
+          "saves": 0
+        },
+        {
+          "name": "Mohammed Aimen",
+          "side": "home",
+          "position": "Forward",
+          "goals": 0,
+          "assists": 0,
+          "shots": 3,
+          "passes": 41,
+          "tackles": 1,
+          "saves": 0
+        },
+        {
+          "name": "Mohammed Azhar",
+          "side": "home",
+          "position": "Midfielder",
+          "goals": 0,
+          "assists": 0,
+          "shots": 0,
+          "passes": 66,
+          "tackles": 1,
+          "saves": 0
+        },
+        {
+          "name": "Yanglem Sanatomba Singh",
+          "side": "home",
+          "position": "Defender",
+          "goals": 0,
+          "assists": 0,
+          "shots": 0,
+          "passes": 15,
+          "tackles": 1,
+          "saves": 0
+        },
+        {
+          "name": "Duvan Felipe Viafara Mina",
+          "side": "home",
+          "position": "Defender",
+          "goals": 0,
+          "assists": 0,
+          "shots": 0,
+          "passes": 45,
+          "tackles": 0,
+          "saves": 0
+        },
+        {
+          "name": "Manoj Mohammad",
+          "side": "home",
+          "position": "Defender",
+          "goals": 0,
+          "assists": 1,
+          "shots": 0,
+          "passes": 45,
+          "tackles": 2,
+          "saves": 0
+        },
+        {
+          "name": "Nduka Junior",
+          "side": "home",
+          "position": "Defender",
+          "goals": 0,
+          "assists": 0,
+          "shots": 0,
+          "passes": 49,
+          "tackles": 3,
+          "saves": 0
+        },
+        {
+          "name": "Clarence Savio Fernandes",
+          "side": "home",
+          "position": "Defender",
+          "goals": 0,
+          "assists": 0,
+          "shots": 0,
+          "passes": 23,
+          "tackles": 0,
+          "saves": 0
+        },
+        {
+          "name": "Augustine Lalrochana",
+          "side": "home",
+          "position": "Forward",
+          "goals": 0,
+          "assists": 0,
+          "shots": 0,
+          "passes": 3,
+          "tackles": 0,
+          "saves": 0
+        },
+        {
+          "name": "Vishal Kaith",
+          "side": "away",
+          "position": "Goalkeeper",
+          "goals": 0,
+          "assists": 0,
+          "shots": 0,
+          "passes": 23,
+          "tackles": 0,
+          "saves": 0
+        },
+        {
+          "name": "Rahul Shankar Bheke",
+          "side": "away",
+          "position": "Defender",
+          "goals": 0,
+          "assists": 1,
+          "shots": 2,
+          "passes": 49,
+          "tackles": 1,
+          "saves": 0
+        },
+        {
+          "name": "Mehtab Singh",
+          "side": "away",
+          "position": "Defender",
+          "goals": 0,
+          "assists": 0,
+          "shots": 1,
+          "passes": 61,
+          "tackles": 2,
+          "saves": 0
+        },
+        {
+          "name": "Anirudh Thapa",
+          "side": "away",
+          "position": "Midfielder",
+          "goals": 0,
+          "assists": 0,
+          "shots": 1,
+          "passes": 43,
+          "tackles": 1,
+          "saves": 0
+        },
+        {
+          "name": "Lallianzuala Chhangte",
+          "side": "away",
+          "position": "Midfielder",
+          "goals": 0,
+          "assists": 0,
+          "shots": 0,
+          "passes": 26,
+          "tackles": 1,
+          "saves": 0
+        },
+        {
+          "name": "Miguel Figueira Damasceno",
+          "side": "away",
+          "position": "Midfielder",
+          "goals": 1,
+          "assists": 0,
+          "shots": 4,
+          "passes": 46,
+          "tackles": 4,
+          "saves": 0
+        },
+        {
+          "name": "Lee Harry Erwin",
+          "side": "away",
+          "position": "Forward",
+          "goals": 1,
+          "assists": 0,
+          "shots": 7,
+          "passes": 13,
+          "tackles": 0,
+          "saves": 0
+        },
+        {
+          "name": "Alberto Rodriguez Martin",
+          "side": "away",
+          "position": "Defender",
+          "goals": 0,
+          "assists": 0,
+          "shots": 1,
+          "passes": 53,
+          "tackles": 0,
+          "saves": 0
+        },
+        {
+          "name": "Tekcham Abhishek Singh",
+          "side": "away",
+          "position": "Defender",
+          "goals": 0,
+          "assists": 0,
+          "shots": 0,
+          "passes": 45,
+          "tackles": 0,
+          "saves": 0
+        },
+        {
+          "name": "Lalengmawia Ralte",
+          "side": "away",
+          "position": "Midfielder",
+          "goals": 0,
+          "assists": 1,
+          "shots": 1,
+          "passes": 54,
+          "tackles": 2,
+          "saves": 0
+        },
+        {
+          "name": "Dejan Drazic",
+          "side": "away",
+          "position": "Midfielder",
+          "goals": 0,
+          "assists": 0,
+          "shots": 0,
+          "passes": 32,
+          "tackles": 1,
+          "saves": 0
+        },
+        {
+          "name": "Liston Colaco",
+          "side": "away",
+          "position": "Midfielder",
+          "goals": 0,
+          "assists": 0,
+          "shots": 1,
+          "passes": 5,
+          "tackles": 1,
+          "saves": 0
+        },
+        {
+          "name": "Samir Zeljkovic",
+          "side": "away",
+          "position": "Midfielder",
+          "goals": 0,
+          "assists": 0,
+          "shots": 2,
+          "passes": 9,
+          "tackles": 0,
+          "saves": 0
+        },
+        {
+          "name": "Manvir Singh",
+          "side": "away",
+          "position": "Midfielder",
+          "goals": 0,
+          "assists": 0,
+          "shots": 1,
+          "passes": 10,
+          "tackles": 0,
+          "saves": 0
+        },
+        {
+          "name": "Subhasish Prodyut Bose",
+          "side": "away",
+          "position": "Defender",
+          "goals": 0,
+          "assists": 0,
+          "shots": 0,
+          "passes": 3,
+          "tackles": 1,
+          "saves": 0
+        },
+        {
+          "name": "Sahal Abdul Samad",
+          "side": "away",
+          "position": "Midfielder",
+          "goals": 0,
+          "assists": 0,
+          "shots": 0,
+          "passes": 14,
+          "tackles": 0,
+          "saves": 0
+        }
+      ],
+      "events": [
+        {
+          "minute": 14,
+          "side": "away",
+          "type": "yellow_card",
+          "player": "Tekcham Abhishek Singh"
+        },
+        {
+          "minute": 22,
+          "side": "home",
+          "type": "goal",
+          "player": "Lalrinliana Hnamte",
+          "assist": "Manoj Mohammad"
+        },
+        {
+          "minute": 27,
+          "side": "away",
+          "type": "yellow_card",
+          "player": "Alberto Rodriguez Martin"
+        },
+        {
+          "minute": 55,
+          "side": "away",
+          "type": "goal",
+          "player": "Lee Harry Erwin",
+          "assist": "Rahul Shankar Bheke"
+        },
+        {
+          "minute": 56,
+          "side": "away",
+          "type": "yellow_card",
+          "player": "Miguel Figueira Damasceno"
+        },
+        {
+          "minute": 59,
+          "side": "away",
+          "type": "goal",
+          "player": "Miguel Figueira Damasceno",
+          "assist": "Lalengmawia Ralte"
+        },
+        {
+          "minute": 64,
+          "side": "home",
+          "type": "substitution",
+          "playerIn": "Clarence Savio Fernandes",
+          "playerOut": "Yanglem Sanatomba Singh"
+        },
+        {
+          "minute": 69,
+          "side": "home",
+          "type": "yellow_card",
+          "player": "Duvan Felipe Viafara Mina"
+        },
+        {
+          "minute": 69,
+          "side": "away",
+          "type": "yellow_card",
+          "player": "Lalengmawia Ralte"
+        },
+        {
+          "minute": 72,
+          "side": "away",
+          "type": "substitution",
+          "playerIn": "Samir Zeljkovic",
+          "playerOut": "Lee Harry Erwin"
+        },
+        {
+          "minute": 72,
+          "side": "away",
+          "type": "substitution",
+          "playerIn": "Manvir Singh",
+          "playerOut": "Anirudh Thapa"
+        },
+        {
+          "minute": 78,
+          "side": "away",
+          "type": "substitution",
+          "playerIn": "Liston Colaco",
+          "playerOut": "Dejan Drazic"
+        },
+        {
+          "minute": 78,
+          "side": "away",
+          "type": "substitution",
+          "playerIn": "Sahal Abdul Samad",
+          "playerOut": "Miguel Figueira Damasceno"
+        },
+        {
+          "minute": 86,
+          "side": "home",
+          "type": "substitution",
+          "playerIn": "Augustine Lalrochana",
+          "playerOut": "Lamgoulen Gou Hangshing"
+        },
+        {
+          "minute": 86,
+          "side": "away",
+          "type": "substitution",
+          "playerIn": "Subhasish Prodyut Bose",
+          "playerOut": "Lallianzuala Chhangte"
+        },
+        {
+          "minute": 88,
+          "side": "home",
+          "type": "yellow_card",
+          "player": "Clarence Savio Fernandes"
         }
       ]
     }
