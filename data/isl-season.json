@@ -443,7 +443,109 @@
         "verifiedAt": "2026-10-12T18:03:13.485080+00:00",
         "languageEvidence": "official-default-unlabelled"
       },
-      "officialStage": "league"
+      "officialStage": "league",
+      "lineups": {
+        "home": {
+          "starters": [
+            {
+              "name": "Lalrinliana Hnamte",
+              "number": 4
+            },
+            {
+              "name": "Rodrigo Araujo da Silva Filho",
+              "number": 7
+            },
+            {
+              "name": "Juan Sebastian Pena Bermudez",
+              "number": 10
+            },
+            {
+              "name": "Lamgoulen Gou Hangshing",
+              "number": 19
+            },
+            {
+              "name": "Nora Fernandes",
+              "number": 20
+            },
+            {
+              "name": "Mohammed Aimen",
+              "number": 23
+            },
+            {
+              "name": "Mohammed Azhar",
+              "number": 24
+            },
+            {
+              "name": "Yanglem Sanatomba Singh",
+              "number": 25
+            },
+            {
+              "name": "Duvan Felipe Viafara Mina",
+              "number": 28
+            },
+            {
+              "name": "Manoj Mohammad",
+              "number": 41
+            },
+            {
+              "name": "Nduka Junior",
+              "number": 45
+            }
+          ],
+          "formation": "5-3-2"
+        },
+        "away": {
+          "starters": [
+            {
+              "name": "Vishal Kaith",
+              "number": 1
+            },
+            {
+              "name": "Rahul Shankar Bheke",
+              "number": 2
+            },
+            {
+              "name": "Mehtab Singh",
+              "number": 5
+            },
+            {
+              "name": "Anirudh Thapa",
+              "number": 6
+            },
+            {
+              "name": "Lallianzuala Chhangte",
+              "number": 9
+            },
+            {
+              "name": "Miguel Figueira Damasceno",
+              "number": 10
+            },
+            {
+              "name": "Lee Harry Erwin",
+              "number": 19
+            },
+            {
+              "name": "Alberto Rodriguez Martin",
+              "number": 21
+            },
+            {
+              "name": "Tekcham Abhishek Singh",
+              "number": 27
+            },
+            {
+              "name": "Lalengmawia Ralte",
+              "number": 45
+            },
+            {
+              "name": "Dejan Drazic",
+              "number": 71
+            }
+          ],
+          "formation": "4-5-1"
+        },
+        "sourceUrl": "https://www.indiansuperleague.com/matchcentre/194640",
+        "verifiedAt": "2026-10-16T13:29:08.299321+00:00"
+      }
     },
     {
       "id": "194641",
