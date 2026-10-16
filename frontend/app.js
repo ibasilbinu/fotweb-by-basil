@@ -52,7 +52,8 @@ function fixtureWatch(f){
   const u=verified||candidate;
   if(!u)return '';
   const ended=!!f.result||f.broadcast?.status==='ended';
-  const label=verified?(ended?'Watch replay':'Watch live'):
+  const scheduled=!ended&&f.status!=='LIVE'&&(f.broadcast?.status==='scheduled'||!!candidate);
+  const label=scheduled?'Scheduled live':verified?(ended?'Watch replay':'Watch live'):
     (ended?'Watch stream replay':'Watch live');
   const explanation=verified?
     'Official ISL YouTube · English'+(!ended&&f.broadcast.status==='scheduled'?' · Scheduled stream':''):
