@@ -156,7 +156,7 @@ function fwUpcomingFixtureDetails(f) {
     '<p>'+when+' · '+esc(f.venue||'Venue TBC')+'</p>'+
     '<div class="fw-match-score"><div>'+crest(home,'small')+'<strong>'+esc(home.name)+
     '</strong></div><span><small>VS</small></span><div>'+crest(away,'small')+
-    '<strong>'+esc(away.name)+'</strong></div></div></header>'+
+    '<strong>'+esc(away.name)+'</strong></div></div>'+fixtureWatch(f)+'</header>'+
     '<div class="fw-fixture-preview-body">'+
     '<h2>'+(displayStatus==='Live'?'Match information':'Pre-match information')+'</h2>'+
     '<p class="fw-report-summary">Official match details and confirmed starting lineups are shown when published. '+
@@ -168,7 +168,6 @@ function fwUpcomingFixtureDetails(f) {
     '<div class="fw-fixture-preview-links">'+
     sourceLink(official,'Official fixture source')+
     (safeCentre?sourceLink(info.sourceUrl||safeCentre,'Official ISL match centre'):'')+'</div>'+
-    fixtureWatch(f)+
     '</div></article>';
 }
 function fwFixtureDetails(f) {
