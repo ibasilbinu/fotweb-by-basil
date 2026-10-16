@@ -181,8 +181,9 @@ function fwLineupListPanel(match,side) {
   const teamName=side==='home'?match.home:match.away;
   const info=match.lineups?.[side];
   const starters=Array.isArray(info?.starters)?info.starters:[];
+  const substitutes=Array.isArray(info?.substitutes)?info.substitutes:[];
   const verifiedPlayers=Array.isArray(match.players)?match.players:[];
-  const fullXI=starters.slice().sort((a,b)=>{
+  const playerRows=players=>players.slice().sort((a,b)=>{
     const aNo=Number.isInteger(a.number)?a.number:Infinity;
     const bNo=Number.isInteger(b.number)?b.number:Infinity;
     return aNo-bNo||String(a.name||'').localeCompare(String(b.name||''));
@@ -196,6 +197,10 @@ function fwLineupListPanel(match,side) {
       (role?'<small class="fw-xi-player-role">'+esc(role)+'</small>':'')+
       '</span></li>';
   }).join('');
+  const bench='<div class="fw-xi-list fw-substitutes-list" aria-label="'+esc(teamName)+' substitutes">'+
+    '<h5>Substitutes'+(substitutes.length?' <span>'+esc(substitutes.length)+' players</span>':'')+'</h5>'+
+    (substitutes.length?'<ol>'+playerRows(substitutes)+'</ol>':
+      fwMissing('Substitutes have not been published or verified for this team yet.'))+'</div>';
   const officialMatchLink=(()=>{
     const url=safeUrl(match.matchUrl);
     if(!url)return '';
@@ -213,8 +218,8 @@ function fwLineupListPanel(match,side) {
     '<div class="fw-lineup-pitch-footer"><span>'+esc(starters.length)+' starting players</span></div>'+
     '<div class="fw-xi-list" aria-label="'+esc(teamName)+' starting players">'+
       '<h5>Starting XI <span>'+esc(starters.length)+' players</span></h5>'+
-      '<ol>'+fullXI+'</ol></div>'+
-    '<p class="fw-lineup-disclaimer">The starting XI is reviewed against the official ISL match centre as updates become available.</p>'+
+      '<ol>'+playerRows(starters)+'</ol></div>'+bench+
+    '<p class="fw-lineup-disclaimer">The starting XI and substitutes are reviewed against the official ISL match centre as updates become available.</p>'+
     officialMatchLink+'</div>';
 }
 function fwLineupList(match) {

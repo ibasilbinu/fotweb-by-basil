@@ -4,6 +4,7 @@ import json
 import re
 from datetime import datetime
 from urllib.parse import urlparse
+from lineup_data import validate_substitutes
 
 
 def validate_season(data):
@@ -81,7 +82,7 @@ def validate_season(data):
                 info = lineup.get(side)
                 if info is None:
                     continue
-                require(isinstance(info, dict) and set(info).issubset({"formation", "starters"}),
+                require(isinstance(info, dict) and set(info).issubset({"formation", "starters", "substitutes"}),
                         "Invalid pre-match lineup side")
                 if "formation" in info:
                     require(isinstance(info["formation"], str) and 1 <= len(info["formation"]) <= 30,
@@ -106,6 +107,7 @@ def validate_season(data):
                                     "Invalid published player role")
                 require("formation" in info or "starters" in info,
                         "Pre-match team lineup must contain a formation or starting XI")
+                validate_substitutes(info)
         # A creator-submitted English stream may appear with its verification
         # provenance clearly disclosed. Only independent YouTube metadata
         # verification can promote it to the official broadcast record.

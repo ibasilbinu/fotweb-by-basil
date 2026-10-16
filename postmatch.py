@@ -4,6 +4,7 @@ import json
 import math
 from datetime import date, datetime
 from urllib.parse import urlparse
+from lineup_data import validate_substitutes
 
 
 STAT_LIMITS = {
@@ -105,6 +106,7 @@ def validate_results(data):
                             require(type(player["number"]) is int and 0 <= player["number"] <= 99, "Invalid shirt number")
                         require("pitchPosition" not in player,
                                 "FotWeb uses lineup lists only; pitch coordinates are not supported")
+                validate_substitutes(info)
         if "players" in match:
             require(isinstance(match["players"], list) and len(match["players"]) <= 100, "Invalid players")
             for player in match["players"]:

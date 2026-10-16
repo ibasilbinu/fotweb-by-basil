@@ -12,6 +12,7 @@ from fixture_update import (fetch_text, competition_phase, update_fixtures,
 from postmatch import validate_results
 from season import validate_season
 from update_log import KINDS, validate_update_log
+from lineup_data import validate_substitutes
 
 ROOT = Path(__file__).resolve().parent
 EVENT_STATS = {'shots':'shots','shots_on_target':'shotsOnTarget','corner_kicks':'corners','fouls_committed':'fouls','offsides':'offsides','yellow_cards':'yellowCards','red_cards':'redCards'}
@@ -27,7 +28,7 @@ def extract_match(document):
             return data['matchData']
     raise ValueError('Official structured match payload unavailable')
 
-def lineup(team):
+def lineup(team, warnings=None):
     starters = []
     for p in team.get('players', []):
         if p.get('is_started') is not True:
@@ -42,7 +43,42 @@ def lineup(team):
         return None
     value = {'starters':starters}
     if team.get('formation'): value['formation'] = team['formation']
+    # Explicit match-sheet flags distinguish named substitutes from a club squad.
+    # Used substitutes cease to be on the bench, but remain part of this list.
+    substitutes = []
+    for p in team.get('players', []):
+        if p.get('is_started') is not False or not (p.get('is_onbench') is True or p.get('is_substitute') is True):
+            continue
+        player = {'name':p.get('name')}
+        if str(p.get('jersey_no', '')).isdigit():
+            player['number'] = int(p['jersey_no'])
+        if p.get('position'):
+            player['position'] = p['position']
+        substitutes.append(player)
+    if substitutes:
+        try:
+            validate_substitutes({**value, 'substitutes':substitutes})
+            value['substitutes'] = substitutes
+        except ValueError as exc:
+            if warnings is not None:
+                warnings.append(f"Team {team.get('id')}: {exc}; retained confirmed XI")
     return value
+
+def merge_lineups(previous, incoming):
+    """Keep verified fields when a later official response omits them."""
+    merged = {**previous, **incoming}
+    for side in ('home', 'away'):
+        if side not in previous and side not in incoming:
+            continue
+        merged[side] = {**previous.get(side, {}), **incoming.get(side, {})}
+        if 'substitutes' in merged[side]:
+            starters = {p['name'].strip().casefold() for p in merged[side].get('starters', [])}
+            substitutes = [p for p in merged[side]['substitutes'] if p['name'].strip().casefold() not in starters]
+            if substitutes:
+                merged[side]['substitutes'] = substitutes
+            else:
+                merged[side].pop('substitutes')
+    return merged
 
 def convert(data, fixture, names, stamp, warnings=None):
     warnings = warnings if warnings is not None else []
@@ -56,7 +92,11 @@ def convert(data, fixture, names, stamp, warnings=None):
     if actual_date != datetime.fromisoformat(fixture['kickoff']).astimezone(timezone(timedelta(hours=5,minutes=30))).date().isoformat():
         raise ValueError('Fixture date mismatch')
     url = 'https://www.indiansuperleague.com/matchcentre/' + fixture['id']
-    lineups = {s:lineup(t) for s,t in sides.items() if lineup(t)}
+    lineups = {}
+    for side, team in sides.items():
+        confirmed = lineup(team, warnings)
+        if confirmed:
+            lineups[side] = confirmed
     if detail.get('is_completed') is not True:
         return None, lineups
     stage = detail.get('match_stage') or fixture.get('officialStage', '')
@@ -201,6 +241,9 @@ def run(kind='hourly', root=ROOT, now=None):
                 pending.append('FT ' + f['id'])
             if not match and -timedelta(hours=2) < delta <= timedelta(minutes=30) and len(xis) < 2:
                 pending.append('XI ' + f['id'])
+            if not match and len(xis) == 2 and -timedelta(hours=2) < delta <= timedelta(minutes=30) and any(
+                    not xis.get(side, {}).get('substitutes') for side in ('home', 'away')):
+                pending.append('Substitutes ' + f['id'])
             if match:
                 old = known.get(f['id'], {})
                 merged = {**old, **match}
@@ -212,7 +255,8 @@ def run(kind='hourly', root=ROOT, now=None):
                     merged['events'] = old['events']
                 if not match['players'] and old.get('players'):
                     merged['players'] = old['players']
-                merged['lineups'] = {**old.get('lineups',{}), **match['lineups']}
+                fixture_lineups = {s:f['lineups'][s] for s in ('home','away') if s in f.get('lineups',{})}
+                merged['lineups'] = merge_lineups(merge_lineups(fixture_lineups, old.get('lineups',{})), match['lineups'])
                 merged['stats'] = {side:{**old.get('stats',{}).get(side,{}), **match['stats'].get(side,{})}
                                    for side in ('home','away')}
                 # A completed feed can reset an optional metric to placeholder
@@ -233,7 +277,7 @@ def run(kind='hourly', root=ROOT, now=None):
                     known[f['id']] = merged
                     changes['results'] += 1
             elif xis:
-                updated = {**f.get('lineups',{}), **xis, 'sourceUrl':url, 'verifiedAt':stamp}
+                updated = {**merge_lineups(f.get('lineups',{}), xis), 'sourceUrl':url, 'verifiedAt':stamp}
                 if {k:v for k,v in updated.items() if k!='verifiedAt'} != {k:v for k,v in f.get('lineups',{}).items() if k!='verifiedAt'}:
                     previous = f.get('lineups')
                     f['lineups'] = updated

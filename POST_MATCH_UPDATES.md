@@ -286,6 +286,20 @@ Only the official published confirmed XI may be used. Team broad position
 labels are optional when expressly verified; FotWeb shows a player list only.
 Do not collect or reuse Ground View coordinates.
 
+### Named substitutes (all matches)
+
+Each `lineups.home` / `lineups.away` may also contain `substitutes`, using the
+same `{name, number?, position?}` player shape. Import only players explicitly
+marked on the bench or as used substitutes in the identity-checked official
+ISL match-centre payload; never derive the list from a club's squad. Starting
+players and substitutes must be distinct. Omit unavailable lists, retain prior
+verified lists when later responses omit them, and retry with the existing
+lineup checks. Pre-match lists carry the existing lineup source/timestamp;
+completed lists carry the result's official source and verification timestamp.
+The list appears below the starting XI for each team in upcoming and past
+match details. Formations are not displayed. Scheduler times and task settings
+are unchanged.
+
 Each hourly check should inspect the next imminent and current day's
 uncompleted fixtures (and any other fixtures with newly published official
 team announcements) for **confirmed starting XIs and formations**. Add these

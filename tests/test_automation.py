@@ -64,6 +64,46 @@ class MatchTests(unittest.TestCase):
         d = payload(self.f, complete=False); d['teams'][0]['players'].pop()
         self.assertNotIn('home', self.convert(d)[1])
 
+    def test_named_bench_and_used_substitutes_are_imported_without_squad_guesses(self):
+        data = payload(self.f, complete=False)
+        data['teams'][0]['players'] += [
+            {'name':'Bench player', 'jersey_no':'12', 'position':'Goalkeeper', 'is_started':False, 'is_onbench':True},
+            {'name':'Used substitute', 'jersey_no':13, 'is_started':False, 'is_onbench':False, 'is_substitute':True},
+            {'name':'Unknown squad member', 'is_started':False},
+            {'name':'Unconfirmed player', 'is_onbench':True}]
+        _, xis = self.convert(data)
+        self.assertEqual([p['name'] for p in xis['home']['substitutes']], ['Bench player','Used substitute'])
+        self.assertEqual(xis['home']['substitutes'][0]['position'], 'Goalkeeper')
+        self.assertEqual(len(xis['home']['starters']), 11)
+        self.assertNotIn('substitutes', xis['away'])
+
+    def test_invalid_bench_does_not_block_confirmed_xi_or_final_score(self):
+        data = payload(self.f)
+        data['teams'][0]['players'].append({'name':'HOME1', 'is_started':False, 'is_onbench':True})
+        warnings = []
+        match, xis = self.convert(data, warnings)
+        self.assertEqual(match['status'], 'FT')
+        self.assertEqual(len(xis['home']['starters']), 11)
+        self.assertNotIn('substitutes', xis['home'])
+        self.assertTrue(warnings)
+
+    def test_substitutes_validated_in_both_fixture_and_result_contracts(self):
+        match, xis = self.convert(payload(self.f))
+        good = {'name':'Verified substitute', 'number':12, 'position':'Defender'}
+        cases = [[good], [good, good], [{'name':'home1'}], [{'name':'Player','number':100}],
+                 [{'name':'Player','pitchPosition':{'x':1,'y':2}}], []]
+        for players in cases:
+            with self.subTest(players=players):
+                result = deepcopy(match); result['lineups']['home']['substitutes'] = players
+                season = deepcopy(self.season)
+                season['fixtures'][0]['lineups'] = {**deepcopy(xis), 'sourceUrl':match['matchUrl'], 'verifiedAt':STAMP}
+                season['fixtures'][0]['lineups']['home']['substitutes'] = players
+                for validate, value in [(validate_results, {'schemaVersion':1,'season':'2026-27','matches':[result]}),
+                                        (validate_season, season)]:
+                    if players == [good]: validate(value)
+                    else:
+                        with self.assertRaises(ValueError): validate(value)
+
     def test_wrong_season_clubs_and_date_rejected(self):
         for field in ('season', 'clubs', 'date'):
             data = payload(self.f)
@@ -302,6 +342,47 @@ class RunTests(unittest.TestCase):
                                       'phaseOneLastKickoff':season['fixtures'][0]['kickoff']}}
         for name,value in values.items(): (path/f'data/{name}.json').write_text(json.dumps(value))
         return season
+
+    def test_later_missing_bench_preserves_lists_before_and_after_full_time(self):
+        for complete in (False, True):
+            with self.subTest(complete=complete), tempfile.TemporaryDirectory() as directory:
+                root = Path(directory); season = self.setup_root(root)
+                fixture = season['fixtures'][0]
+                data = payload(fixture, complete=complete)
+                for team in data['teams']:
+                    team['players'].append({'name':str(team['id'])+' substitute', 'is_started':False, 'is_onbench':True})
+                now = datetime.fromisoformat(fixture['kickoff'])+timedelta(minutes=20)
+                for omit in (False, True):
+                    if omit:
+                        for team in data['teams']: team['players'] = team['players'][:11]
+                    doc = 'x="'+quote(json.dumps({'matchData':data}))+'"'
+                    with patch.object(importer,'fetch_text',return_value=doc):
+                        self.assertEqual(importer.run('match-retry',root,now),0)
+                file = 'isl-results' if complete else 'isl-season'
+                saved = json.loads((root/f'data/{file}.json').read_text())
+                lineup = saved['matches' if complete else 'fixtures'][0]['lineups']
+                self.assertEqual(len(lineup['home']['substitutes']),1)
+                self.assertEqual(len(lineup['away']['substitutes']),1)
+                if not complete:
+                    state = json.loads((root/'data/automation-state.json').read_text())
+                    self.assertIn('Substitutes '+fixture['id'],state['pending'])
+
+    def test_prematch_bench_retained_when_final_payload_omits_it(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory); season = self.setup_root(root); fixture = season['fixtures'][0]
+            data = payload(fixture, complete=False)
+            for team in data['teams']:
+                team['players'].append({'name':str(team['id'])+' substitute', 'is_started':False, 'is_onbench':True})
+            now = datetime.fromisoformat(fixture['kickoff'])+timedelta(minutes=20)
+            for complete in (False, True):
+                data['match_detail']['is_completed'] = complete
+                if complete:
+                    for team in data['teams']: team['players'] = team['players'][:11]
+                doc = 'x="'+quote(json.dumps({'matchData':data}))+'"'
+                with patch.object(importer,'fetch_text',return_value=doc): importer.run('match-retry',root,now)
+            saved = json.loads((root/'data/isl-results.json').read_text())['matches'][0]
+            self.assertEqual(len(saved['lineups']['home']['substitutes']),1)
+            self.assertEqual(len(saved['lineups']['away']['substitutes']),1)
 
     def test_source_failure_keeps_ft_publication_and_records_error(self):
         with tempfile.TemporaryDirectory() as directory:

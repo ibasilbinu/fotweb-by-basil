@@ -3,6 +3,42 @@
   "season": "2026-27",
   "checks": [
     {
+      "checkedAt": "2026-10-16T14:32:37.970730+00:00",
+      "kind": "match-retry",
+      "outcome": "updated",
+      "summary": "Substitute backfill: 7 matches enriched from official ISL match centres; 9 centres checked. Tomorrow's 2 fixtures have no confirmed XIs or substitutes yet; existing checks will retry. No scores, fixture times or scheduler settings changed.",
+      "links": [
+        {
+          "label": "Official ISL substitutes 194634",
+          "url": "https://www.indiansuperleague.com/matchcentre/194634"
+        },
+        {
+          "label": "Official ISL substitutes 194635",
+          "url": "https://www.indiansuperleague.com/matchcentre/194635"
+        },
+        {
+          "label": "Official ISL substitutes 194636",
+          "url": "https://www.indiansuperleague.com/matchcentre/194636"
+        },
+        {
+          "label": "Official ISL substitutes 194637",
+          "url": "https://www.indiansuperleague.com/matchcentre/194637"
+        },
+        {
+          "label": "Official ISL substitutes 194638",
+          "url": "https://www.indiansuperleague.com/matchcentre/194638"
+        },
+        {
+          "label": "Official ISL substitutes 194639",
+          "url": "https://www.indiansuperleague.com/matchcentre/194639"
+        },
+        {
+          "label": "Official ISL substitutes 194640",
+          "url": "https://www.indiansuperleague.com/matchcentre/194640"
+        }
+      ]
+    },
+    {
       "checkedAt": "2026-10-16T13:40:41.244185+00:00",
       "kind": "post-match-early",
       "outcome": "no-change",
