@@ -19,6 +19,19 @@ function crest(t,size=''){return t.logo?`<img class="crest ${size}" src="${esc(t
 function resultFor(f){return resultsData.matches.find(m=>String(m.id)===f.id||(m.date===istDate(f.kickoff)&&canonical(m.home)===club(f.homeId).name&&canonical(m.away)===club(f.awayId).name));}
 function allFixtures(){const fs=seasonData.fixtures.map(f=>({...f,result:resultFor(f)}));for(const m of resultsData.matches){if(fs.some(f=>f.result?.id===m.id))continue;const h=seasonData.teams.find(t=>t.name===canonical(m.home)),a=seasonData.teams.find(t=>t.name===canonical(m.away));if(h&&a)fs.push({id:String(m.id),homeId:h.id,awayId:a.id,kickoff:m.date+'T12:00:00+05:30',timeUnknown:true,venue:m.venue||null,status:'NS',phase:m.phase,label:'Completed match',sourceUrl:m.sources[0].url,result:m});}return fs.sort((a,b)=>a.kickoff.localeCompare(b.kickoff));}
 function teamFixtures(id=state.team){return allFixtures().filter(f=>id==='all'||f.homeId===id||f.awayId===id);}
+function fixtureDisplayStatus(f,now=Date.now()){
+  if(f.result)return f.result.status;
+  if(f.status==='PST')return 'Postponed';
+  if(f.status==='CANC')return 'Cancelled';
+  if(f.needsConfirmation)return 'Confirm date';
+  if(f.timeUnknown)return 'Scheduled';
+  const kickoff=Date.parse(f.kickoff);
+  if(Number.isFinite(kickoff)&&now>=kickoff)
+    return istDate(f.kickoff)<istDate(new Date(now).toISOString())?'Awaiting result':'Live';
+  return 'Scheduled';
+}
+function fixtureClockKey(){return allFixtures().map(f=>f.id+':'+fixtureDisplayStatus(f)).join('|');}
+let fixtureClockSignature='';
 function tableRows(){const rows=seasonData.teams.map(t=>({...t,mp:0,w:0,d:0,l:0,gf:0,ga:0,pts:0}));for(const m of resultsData.matches.filter(m=>m.phase==='league'&&m.status==='FT')){const h=rows.find(t=>t.name===canonical(m.home)),a=rows.find(t=>t.name===canonical(m.away));if(!h||!a)continue;for(const [t,gf,ga] of [[h,m.homeGoals,m.awayGoals],[a,m.awayGoals,m.homeGoals]]){t.mp++;t.gf+=gf;t.ga+=ga;if(gf>ga){t.w++;t.pts+=3;}else if(gf===ga){t.d++;t.pts++;}else t.l++;}}return rows.sort((a,b)=>b.pts-a.pts||(b.gf-b.ga)-(a.gf-a.ga)||b.gf-a.gf||a.name.localeCompare(b.name));}
 function header(title,desc,eyebrow='INDIAN SUPER LEAGUE · 2026–27'){return `<div class="page-head"><div><span class="eyebrow">${eyebrow}</span><h1>${title}</h1><p>${desc}</p></div><span class="season-tag">2026–27</span></div>`;}
 function stat(label,value,sub,icon='↗'){return `<div class="stat"><span class="stat-label">${label}</span><span class="stat-icon">${icon}</span><strong class="stat-value">${esc(value)}</strong><span class="stat-sub">${sub}</span></div>`;}
@@ -50,15 +63,13 @@ function fixtureWatch(f){
    links remain independently interactive and keep their existing behavior. */
 function fixtureCard(f,compact=false) {
   const h=club(f.homeId),a=club(f.awayId),r=f.result;
-  const status=r?r.status:f.needsConfirmation?'Confirm date':
-    f.status==='PST'?'Postponed':f.status==='CANC'?'Cancelled':
-    istDate(f.kickoff)<today?'Awaiting result':'Scheduled';
+  const status=fixtureDisplayStatus(f);
   const label=esc('Open match details: '+h.name+' versus '+a.name);
   return '<article class="fixture-card fw-fixture-clickable'+(compact?' compact':'')+
     '" data-fixture-open="'+esc(f.id)+'" role="group" tabindex="0" aria-label="'+label+'">'+
     '<div class="fixture-meta"><span>'+esc(formatDate(f.kickoff))+
     (!f.timeUnknown?' · '+esc(formatTime(f.kickoff))+' IST':'')+
-    '</span><span class="fixture-status '+(r?'complete':'')+'">'+esc(status)+'</span></div>'+
+    '</span><span class="fixture-status '+(r?'complete':status==='Live'?'is-live':'')+'">'+esc(status)+'</span></div>'+
     '<div class="fixture-teams"><span class="fixture-team">'+crest(h)+
     '<span>'+esc(h.name)+'</span></span><strong class="fixture-score">'+
     (r?esc(r.homeGoals)+'–'+esc(r.awayGoals):'VS')+
@@ -125,9 +136,8 @@ function openFixtureDetail(id) {
 function backToFixtures() { returnToPreviousPage(); }
 function fwUpcomingFixtureDetails(f) {
   const home=club(f.homeId),away=club(f.awayId);
-  const status=f.status==='PST'?'POSTPONED':f.status==='CANC'?'CANCELLED':
-    f.needsConfirmation?'DATE TO CONFIRM':istDate(f.kickoff)<today?
-    'AWAITING VERIFIED RESULT':'UPCOMING MATCH';
+  const displayStatus=fixtureDisplayStatus(f);
+  const status=displayStatus==='Scheduled'?'UPCOMING MATCH':displayStatus.toUpperCase();
   const when=esc(formatDate(f.kickoff))+
     (f.timeUnknown?' · Time not confirmed':' · '+esc(formatTime(f.kickoff))+' IST');
   const safeCentre=/^\d+$/.test(String(f.id))?
@@ -142,13 +152,13 @@ function fwUpcomingFixtureDetails(f) {
   const lineup=hasXI?fwLineup(fixtureXI):
     fwMissing('Confirmed starting XIs have not been published or verified for this fixture yet. Check back closer to kickoff.');
   return '<article class="fw-report fw-fixture-preview">'+
-    '<header class="fw-match-hero"><span class="eyebrow">'+esc(status)+'</span>'+
+    '<header class="fw-match-hero"><span class="eyebrow'+(displayStatus==='Live'?' fixture-is-live':'')+'">'+esc(status)+'</span>'+
     '<p>'+when+' · '+esc(f.venue||'Venue TBC')+'</p>'+
     '<div class="fw-match-score"><div>'+crest(home,'small')+'<strong>'+esc(home.name)+
     '</strong></div><span><small>VS</small></span><div>'+crest(away,'small')+
     '<strong>'+esc(away.name)+'</strong></div></div></header>'+
     '<div class="fw-fixture-preview-body">'+
-    '<h2>Pre-match information</h2>'+
+    '<h2>'+(displayStatus==='Live'?'Match information':'Pre-match information')+'</h2>'+
     '<p class="fw-report-summary">Official match details and confirmed starting lineups are shown when published. '+
     'A full match report becomes available after a verified final result.</p>'+
     '<div class="fw-fixture-preview-meta"><div><small>Kickoff</small><strong>'+when+'</strong></div>'+
@@ -275,7 +285,7 @@ function latestUpdateLabel(){
   }
   return 'Last updated: '+formatDate(last.checkedAt)+', '+formatTime(last.checkedAt).replace(/\b(am|pm)\b/i,m=>m.toUpperCase())+' IST';
 }
-function render(){if(!seasonData)return;if(state.page==='reports')state.page='fixtures';if(!pages.some(p=>p[0]===state.page))state.page='overview';if(state.team!=='all'&&!club(state.team))state.team='all';if(state.fixtureClub!=='all'&&!club(state.fixtureClub))state.fixtureClub='all';$('#navigation').innerHTML=pages.filter(p=>p[0]!=='creator').map(([id,label,path],i)=>`<a href="#${id}" data-page="${id}" class="${state.page===id?'active':''}" ${state.page===id?'aria-current="page"':''}><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="${path}"/></svg>${label}<span class="nav-index">0${i+1}</span></a>`).join('');$('#crumb').textContent=pages.find(p=>p[0]===state.page)[1];const backButton=$('#pageBack');backButton.disabled=state.page==='overview'&&!state.fixture;backButton.title=backButton.disabled?'No earlier page':'Return to previous page';const homeButton=$('#pageHome');homeButton.disabled=state.page==='overview'&&!state.fixture;homeButton.title=homeButton.disabled?'You are on Season Overview':'Go to Season Overview';const fn={overview,fixtures:fixturesPage,standings:standingsPage,clubs:clubsPage,team:teamPage,analytics:analyticsPage,creator:creatorPage}[state.page];$('#creatorCorner').classList.toggle('active',state.page==='creator');$('#main').innerHTML=fn();const updatedLabel=latestUpdateLabel();$('#dataDescription').textContent=updatedLabel;$('#sidebarLastUpdated').textContent=updatedLabel;bindPage();document.title='FotWeb by Basil · '+pages.find(p=>p[0]===state.page)[1];}
+function render(){if(!seasonData)return;fixtureClockSignature=fixtureClockKey();if(state.page==='reports')state.page='fixtures';if(!pages.some(p=>p[0]===state.page))state.page='overview';if(state.team!=='all'&&!club(state.team))state.team='all';if(state.fixtureClub!=='all'&&!club(state.fixtureClub))state.fixtureClub='all';$('#navigation').innerHTML=pages.filter(p=>p[0]!=='creator').map(([id,label,path],i)=>`<a href="#${id}" data-page="${id}" class="${state.page===id?'active':''}" ${state.page===id?'aria-current="page"':''}><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="${path}"/></svg>${label}<span class="nav-index">0${i+1}</span></a>`).join('');$('#crumb').textContent=pages.find(p=>p[0]===state.page)[1];const backButton=$('#pageBack');backButton.disabled=state.page==='overview'&&!state.fixture;backButton.title=backButton.disabled?'No earlier page':'Return to previous page';const homeButton=$('#pageHome');homeButton.disabled=state.page==='overview'&&!state.fixture;homeButton.title=homeButton.disabled?'You are on Season Overview':'Go to Season Overview';const fn={overview,fixtures:fixturesPage,standings:standingsPage,clubs:clubsPage,team:teamPage,analytics:analyticsPage,creator:creatorPage}[state.page];$('#creatorCorner').classList.toggle('active',state.page==='creator');$('#main').innerHTML=fn();const updatedLabel=latestUpdateLabel();$('#dataDescription').textContent=updatedLabel;$('#sidebarLastUpdated').textContent=updatedLabel;bindPage();document.title='FotWeb by Basil · '+pages.find(p=>p[0]===state.page)[1];}
 /* Keep a lightweight navigation trail so Back returns to the exact prior
    view, including fixture filters and an open match report. */
 const navigationHistory=[];
@@ -473,3 +483,8 @@ $$('[data-report]').forEach(el=>el.onclick=()=>openFixtureDetail(el.dataset.repo
 });if($('#statusFilter'))$('#statusFilter').onchange=e=>{state.status=e.target.value;render();};if($('#matchweekFilter'))$('#matchweekFilter').onchange=e=>{state.fixtureWeek=e.target.value;render();$('#matchweekFilter')?.focus({preventScroll:true});};if($('#monthFilter'))$('#monthFilter').onchange=e=>{state.month=e.target.value;render();};if($('#fixtureClubFilter'))$('#fixtureClubFilter').onchange=e=>{state.fixtureClub=e.target.value;render();};}
 window.receiveSeasonData=args=>{if(!args?.season_data)return;seasonData=args.season_data;squadData=args.squad_data||{teams:[]};resultsData=args.post_match_data||{matches:[],updatedAt:null};updateLog=args.update_log||{schemaVersion:1,season:'2026-27',checks:[]};today=args.today||istDate(new Date().toISOString());render();};
 $('#pageBack').onclick=returnToPreviousPage;$('#pageHome').onclick=()=>navigate('overview');$('#menu').onclick=()=>$('#sidebar').classList.toggle('open');$('#sidebarBackdrop').onclick=()=>$('#sidebar').classList.remove('open');$('#methodology').onclick=()=>$('#dataDialog').showModal();$('#closeDialog').onclick=()=>$('#dataDialog').close();document.addEventListener('keydown',e=>{if(e.key==='Escape')$('#sidebar').classList.remove('open');});window.addEventListener('hashchange',()=>{const requested=location.hash.slice(1)||'overview';if(state.page!==requested||state.fixture)rememberNavigation();state.fixture='';state.page=requested;if(requested==='fixtures')Object.assign(state,fixtureFilterDefaults);render();});
+
+// Refresh time-based fixture labels without changing any source-check schedule.
+setInterval(()=>{
+  if(seasonData&&fixtureClockKey()!==fixtureClockSignature)render();
+},15000);

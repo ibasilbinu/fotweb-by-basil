@@ -148,14 +148,9 @@ function fwShotMap(match) {
 }
 function fwTactics(match) {
   const findings=Array.isArray(match.tacticalInsights)?match.tacticalInsights:[];
-  const formations=match.lineups || {};
-  const form=['home','away'].filter(s=>formations[s]?.formation).map(s =>
-    '<div><small>' + esc(s==='home'?match.home:match.away) + '</small><strong>' +
-    esc(formations[s].formation) + '</strong></div>').join('');
-  const display=form ? '<div class="fw-formations">' + form + '</div>' : '';
   const insights=findings.map(t => '<article class="fw-finding"><strong>' + esc(t.title) +
     '</strong><p>' + esc(t.text) + '</p>' + sourceLink(t.sourceUrl,'Evidence') + '</article>').join('');
-  return display + (insights || fwMissing('No evidence-backed tactical findings have been published for this match yet. Formations alone do not establish a tactical conclusion.'));
+  return insights || fwMissing('No evidence-backed tactical findings have been published for this match yet.');
 }
 /* Verified squad data presented on a schematic football pitch.
    Exact left/right positions are never inferred from squad-list order. */
@@ -201,10 +196,6 @@ function fwLineupListPanel(match,side) {
       (role?'<small class="fw-xi-player-role">'+esc(role)+'</small>':'')+
       '</span></li>';
   }).join('');
-  const formation=info?.formation?
-    '<span class="fw-pitch-formation" title="Previously recorded formation; reviewed against official ISL updates">Recorded formation: '+
-    esc(info.formation)+'</span>':
-    '<span class="fw-lineup-no-formation">Official formation not yet confirmed</span>';
   const officialMatchLink=(()=>{
     const url=safeUrl(match.matchUrl);
     if(!url)return '';
@@ -219,12 +210,11 @@ function fwLineupListPanel(match,side) {
   return '<div class="fw-lineup-panel" id="fw-lineup-panel-'+esc(match.id)+'-'+side+'" '+
     'data-lineup-panel="'+side+'" role="tabpanel" aria-labelledby="fw-lineup-tab-'+
     esc(match.id)+'-'+side+'"'+(side==='away'?' hidden':'')+'>'+
-    '<div class="fw-lineup-pitch-footer">'+formation+
-      '<span>'+esc(starters.length)+' starting players</span></div>'+
+    '<div class="fw-lineup-pitch-footer"><span>'+esc(starters.length)+' starting players</span></div>'+
     '<div class="fw-xi-list" aria-label="'+esc(teamName)+' starting players">'+
       '<h5>Starting XI <span>'+esc(starters.length)+' players</span></h5>'+
       '<ol>'+fullXI+'</ol></div>'+
-    '<p class="fw-lineup-disclaimer">The starting XI and recorded formation are reviewed against the official ISL match centre as updates become available.</p>'+
+    '<p class="fw-lineup-disclaimer">The starting XI is reviewed against the official ISL match centre as updates become available.</p>'+
     officialMatchLink+'</div>';
 }
 function fwLineupList(match) {
@@ -235,14 +225,13 @@ function fwLineupList(match) {
   const defaultSide=hasHome?'home':'away';
   const tab=side=>{
     const t=seasonData.teams.find(t=>t.name===canonical(side==='home'?match.home:match.away));
-    const info=match.lineups?.[side],available=side==='home'?hasHome:hasAway;
+    const available=side==='home'?hasHome:hasAway;
     const name=side==='home'?match.home:match.away;
     return '<button type="button" role="tab" id="fw-lineup-tab-'+esc(match.id)+'-'+side+
       '" data-lineup-side="'+side+'" aria-controls="fw-lineup-panel-'+esc(match.id)+'-'+side+
       '" aria-selected="'+(side===defaultSide)+'"'+(!available?' disabled':'')+
       ' class="fw-lineup-tab'+(side===defaultSide?' active':'')+'">'+
-      (t?crest(t,'small'):'')+'<span><strong>'+esc(name)+'</strong><small>'+
-      esc(info?.formation||'Formation unavailable')+'</small></span></button>';
+      (t?crest(t,'small'):'')+'<span><strong>'+esc(name)+'</strong></span></button>';
   };
   let panels='';
   if(hasHome)panels+=fwLineupListPanel(match,'home');
@@ -410,9 +399,8 @@ function fwMatchReport(match) {
 function fwMatchFixtureRow(f) {
   const h=club(f.homeId), a=club(f.awayId), r=f.result;
   const completed=!!r;
-  const status=completed?'FULL TIME':f.status==='PST'?'POSTPONED':
-    f.status==='CANC'?'CANCELLED':f.needsConfirmation?'DATE TO CONFIRM':
-    istDate(f.kickoff)<today?'AWAITING RESULT':'UPCOMING';
+  const displayStatus=fixtureDisplayStatus(f);
+  const status=completed?'FULL TIME':displayStatus==='Scheduled'?'UPCOMING':displayStatus.toUpperCase();
   const when=(!f.timeUnknown ? formatTime(f.kickoff)+' IST' : 'Time unconfirmed');
   const meta='<span class="fw-match-list-meta">'+esc(when)+' · '+esc(r?.venue||f.venue||'Venue TBC')+'</span>';
   const content='<span class="fw-match-list-info"><span class="fw-match-list-status '+(completed?'is-final':'')+'">'+
