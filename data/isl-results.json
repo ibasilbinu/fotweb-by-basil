@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "season": "2026-27",
-  "updatedAt": "2026-10-16T16:13:49.923161+00:00",
+  "updatedAt": "2026-10-16T17:24:05.276525+00:00",
   "matches": [
     {
       "id": "194634",
@@ -4191,7 +4191,7 @@
       "status": "FT",
       "phase": "league",
       "officialStage": "League",
-      "verifiedAt": "2026-10-16T16:13:49.923161+00:00",
+      "verifiedAt": "2026-10-16T17:24:05.276525+00:00",
       "sources": [
         {
           "label": "Indian Super League official match centre",
@@ -4399,24 +4399,24 @@
       "stats": {
         "home": {
           "possession": 49,
-          "shots": 13,
+          "shots": 15,
           "shotsOnTarget": 4,
           "corners": 1,
-          "fouls": 12,
+          "fouls": 14,
           "offsides": 1,
           "yellowCards": 2,
           "redCards": 0,
-          "passes": 465,
+          "passes": 472,
           "passAccuracy": 79,
           "tackles": 17,
           "interceptions": 11,
           "clearances": 23,
-          "saves": 9
+          "saves": 8
         },
         "away": {
           "possession": 51,
-          "shots": 21,
-          "shotsOnTarget": 11,
+          "shots": 20,
+          "shotsOnTarget": 10,
           "corners": 5,
           "fouls": 7,
           "offsides": 0,
@@ -4459,8 +4459,8 @@
           "position": "Midfielder",
           "goals": 0,
           "assists": 0,
-          "shots": 3,
-          "passes": 47,
+          "shots": 4,
+          "passes": 48,
           "tackles": 1,
           "saves": 0
         },
@@ -4492,7 +4492,7 @@
           "position": "Forward",
           "goals": 0,
           "assists": 0,
-          "shots": 3,
+          "shots": 4,
           "passes": 41,
           "tackles": 1,
           "saves": 0
@@ -4504,7 +4504,7 @@
           "goals": 0,
           "assists": 0,
           "shots": 0,
-          "passes": 66,
+          "passes": 67,
           "tackles": 1,
           "saves": 0
         },
@@ -4526,7 +4526,7 @@
           "goals": 0,
           "assists": 0,
           "shots": 0,
-          "passes": 45,
+          "passes": 46,
           "tackles": 0,
           "saves": 0
         },
@@ -4537,7 +4537,7 @@
           "goals": 0,
           "assists": 1,
           "shots": 0,
-          "passes": 45,
+          "passes": 46,
           "tackles": 2,
           "saves": 0
         },
@@ -4548,7 +4548,7 @@
           "goals": 0,
           "assists": 0,
           "shots": 0,
-          "passes": 49,
+          "passes": 50,
           "tackles": 3,
           "saves": 0
         },
@@ -4559,7 +4559,7 @@
           "goals": 0,
           "assists": 0,
           "shots": 0,
-          "passes": 23,
+          "passes": 25,
           "tackles": 0,
           "saves": 0
         },
@@ -4602,7 +4602,7 @@
           "position": "Defender",
           "goals": 0,
           "assists": 0,
-          "shots": 1,
+          "shots": 0,
           "passes": 61,
           "tackles": 2,
           "saves": 0
@@ -4646,7 +4646,7 @@
           "position": "Forward",
           "goals": 1,
           "assists": 0,
-          "shots": 7,
+          "shots": 6,
           "passes": 13,
           "tackles": 0,
           "saves": 0
@@ -4657,7 +4657,7 @@
           "position": "Defender",
           "goals": 0,
           "assists": 0,
-          "shots": 1,
+          "shots": 2,
           "passes": 53,
           "tackles": 0,
           "saves": 0
@@ -4669,7 +4669,7 @@
           "goals": 0,
           "assists": 0,
           "shots": 0,
-          "passes": 45,
+          "passes": 44,
           "tackles": 0,
           "saves": 0
         },
