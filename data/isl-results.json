@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "season": "2026-27",
-  "updatedAt": "2026-10-17T13:44:59.310229+00:00",
+  "updatedAt": "2026-10-17T14:06:59.290004+00:00",
   "matches": [
     {
       "id": "194634",
@@ -4870,7 +4870,7 @@
       "status": "FT",
       "phase": "league",
       "officialStage": "League",
-      "verifiedAt": "2026-10-17T13:44:59.310229+00:00",
+      "verifiedAt": "2026-10-17T14:06:59.290004+00:00",
       "sources": [
         {
           "label": "Indian Super League official match centre",
@@ -5076,7 +5076,7 @@
       },
       "stats": {
         "home": {
-          "possession": 59,
+          "possession": 56,
           "shots": 6,
           "shotsOnTarget": 1,
           "corners": 3,
@@ -5084,15 +5084,15 @@
           "offsides": 1,
           "yellowCards": 2,
           "redCards": 0,
-          "passes": 415,
+          "passes": 438,
           "passAccuracy": 78,
-          "tackles": 7,
-          "interceptions": 10,
-          "clearances": 8,
+          "tackles": 21,
+          "interceptions": 17,
+          "clearances": 20,
           "saves": 1
         },
         "away": {
-          "possession": 41,
+          "possession": 44,
           "shots": 9,
           "shotsOnTarget": 1,
           "corners": 5,
@@ -5100,11 +5100,11 @@
           "offsides": 2,
           "yellowCards": 2,
           "redCards": 0,
-          "passes": 332,
+          "passes": 343,
           "passAccuracy": 77,
-          "tackles": 0,
-          "interceptions": 7,
-          "clearances": 9,
+          "tackles": 17,
+          "interceptions": 9,
+          "clearances": 24,
           "saves": 0
         }
       },
@@ -5116,7 +5116,7 @@
           "goals": 0,
           "assists": 0,
           "shots": 0,
-          "passes": 46,
+          "passes": 48,
           "tackles": 0,
           "saves": 0
         },
@@ -5127,7 +5127,7 @@
           "goals": 0,
           "assists": 0,
           "shots": 0,
-          "passes": 52,
+          "passes": 53,
           "tackles": 1,
           "saves": 0
         },
@@ -5138,7 +5138,7 @@
           "goals": 0,
           "assists": 0,
           "shots": 2,
-          "passes": 51,
+          "passes": 52,
           "tackles": 4,
           "saves": 0
         },
@@ -5149,7 +5149,7 @@
           "goals": 0,
           "assists": 0,
           "shots": 1,
-          "passes": 24,
+          "passes": 23,
           "tackles": 0,
           "saves": 0
         },
@@ -5171,8 +5171,8 @@
           "goals": 0,
           "assists": 0,
           "shots": 0,
-          "passes": 47,
-          "tackles": 4,
+          "passes": 52,
+          "tackles": 5,
           "saves": 0
         },
         {
@@ -5193,7 +5193,7 @@
           "goals": 0,
           "assists": 0,
           "shots": 0,
-          "passes": 35,
+          "passes": 37,
           "tackles": 3,
           "saves": 0
         },
@@ -5204,7 +5204,7 @@
           "goals": 0,
           "assists": 0,
           "shots": 0,
-          "passes": 26,
+          "passes": 28,
           "tackles": 1,
           "saves": 0
         },
@@ -5215,7 +5215,7 @@
           "goals": 0,
           "assists": 0,
           "shots": 0,
-          "passes": 39,
+          "passes": 41,
           "tackles": 1,
           "saves": 0
         },
@@ -5226,7 +5226,7 @@
           "goals": 0,
           "assists": 0,
           "shots": 0,
-          "passes": 18,
+          "passes": 20,
           "tackles": 0,
           "saves": 0
         },
@@ -5237,8 +5237,8 @@
           "goals": 0,
           "assists": 0,
           "shots": 1,
-          "passes": 13,
-          "tackles": 2,
+          "passes": 17,
+          "tackles": 3,
           "saves": 0
         },
         {
@@ -5248,7 +5248,7 @@
           "goals": 0,
           "assists": 0,
           "shots": 0,
-          "passes": 4,
+          "passes": 7,
           "tackles": 0,
           "saves": 0
         },
@@ -5259,7 +5259,7 @@
           "goals": 1,
           "assists": 0,
           "shots": 1,
-          "passes": 10,
+          "passes": 11,
           "tackles": 0,
           "saves": 0
         },
@@ -5281,7 +5281,7 @@
           "goals": 0,
           "assists": 0,
           "shots": 0,
-          "passes": 6,
+          "passes": 7,
           "tackles": 0,
           "saves": 0
         },
@@ -5292,7 +5292,7 @@
           "goals": 0,
           "assists": 0,
           "shots": 0,
-          "passes": 36,
+          "passes": 37,
           "tackles": 3,
           "saves": 0
         },
@@ -5314,8 +5314,8 @@
           "goals": 0,
           "assists": 0,
           "shots": 0,
-          "passes": 36,
-          "tackles": 1,
+          "passes": 37,
+          "tackles": 0,
           "saves": 0
         },
         {
@@ -5325,7 +5325,7 @@
           "goals": 0,
           "assists": 0,
           "shots": 0,
-          "passes": 28,
+          "passes": 29,
           "tackles": 2,
           "saves": 0
         },
@@ -5336,8 +5336,8 @@
           "goals": 0,
           "assists": 0,
           "shots": 2,
-          "passes": 16,
-          "tackles": 0,
+          "passes": 17,
+          "tackles": 1,
           "saves": 0
         },
         {
@@ -5347,8 +5347,8 @@
           "goals": 0,
           "assists": 0,
           "shots": 0,
-          "passes": 33,
-          "tackles": 2,
+          "passes": 36,
+          "tackles": 3,
           "saves": 0
         },
         {
@@ -5369,7 +5369,7 @@
           "goals": 0,
           "assists": 0,
           "shots": 0,
-          "passes": 27,
+          "passes": 29,
           "tackles": 3,
           "saves": 0
         },
@@ -5413,7 +5413,7 @@
           "goals": 0,
           "assists": 0,
           "shots": 0,
-          "passes": 6,
+          "passes": 7,
           "tackles": 1,
           "saves": 0
         },
@@ -5424,7 +5424,7 @@
           "goals": 0,
           "assists": 0,
           "shots": 0,
-          "passes": 0,
+          "passes": 2,
           "tackles": 0,
           "saves": 0
         },
@@ -5435,7 +5435,7 @@
           "goals": 0,
           "assists": 0,
           "shots": 2,
-          "passes": 9,
+          "passes": 12,
           "tackles": 0,
           "saves": 0
         },
@@ -5446,7 +5446,7 @@
           "goals": 0,
           "assists": 0,
           "shots": 0,
-          "passes": 8,
+          "passes": 11,
           "tackles": 1,
           "saves": 0
         },
@@ -5457,7 +5457,7 @@
           "goals": 0,
           "assists": 0,
           "shots": 0,
-          "passes": 2,
+          "passes": 4,
           "tackles": 0,
           "saves": 0
         }
@@ -5482,21 +5482,21 @@
           "player": "Pratik Prabhakar Chaudhari"
         },
         {
-          "minute": 59,
-          "side": "home",
-          "type": "substitution",
-          "playerIn": "Ayush Chhikara",
-          "playerOut": "Manvir Singh"
-        },
-        {
-          "minute": 59,
+          "minute": 57,
           "side": "home",
           "type": "substitution",
           "playerIn": "Aritra Das",
           "playerOut": "Sajad Hussain Parray"
         },
         {
-          "minute": 62,
+          "minute": 57,
+          "side": "home",
+          "type": "substitution",
+          "playerIn": "Ayush Chhikara",
+          "playerOut": "Manvir Singh"
+        },
+        {
+          "minute": 63,
           "side": "away",
           "type": "substitution",
           "playerIn": "K Lalrinfela",
@@ -5510,7 +5510,7 @@
           "playerOut": "Sumeet Passi"
         },
         {
-          "minute": 68,
+          "minute": 67,
           "side": "away",
           "type": "yellow_card",
           "player": "Manuel Antonio Molina Valero"
@@ -5540,15 +5540,15 @@
           "minute": 82,
           "side": "home",
           "type": "substitution",
-          "playerIn": "Sreekuttan Viruthiyil Santhosh",
-          "playerOut": "Hitesh Sharma"
+          "playerIn": "Ashangbam Aphaoba Singh",
+          "playerOut": "Wayne Bosco Vaz"
         },
         {
           "minute": 82,
           "side": "home",
           "type": "substitution",
-          "playerIn": "Ashangbam Aphaoba Singh",
-          "playerOut": "Wayne Bosco Vaz"
+          "playerIn": "Sreekuttan Viruthiyil Santhosh",
+          "playerOut": "Hitesh Sharma"
         },
         {
           "minute": 84,
