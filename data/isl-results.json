@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "season": "2026-27",
-  "updatedAt": "2026-10-17T14:06:59.290004+00:00",
+  "updatedAt": "2026-10-17T16:11:51.556072+00:00",
   "matches": [
     {
       "id": "194634",
@@ -5571,6 +5571,690 @@
           "addedMinute": 1
         }
       ]
+    },
+    {
+      "id": "194642",
+      "date": "2026-10-17",
+      "home": "Bengaluru FC",
+      "away": "Chennaiyin FC",
+      "homeGoals": 2,
+      "awayGoals": 0,
+      "status": "FT",
+      "phase": "league",
+      "officialStage": "League",
+      "verifiedAt": "2026-10-17T16:11:51.556072+00:00",
+      "sources": [
+        {
+          "label": "Indian Super League official match centre",
+          "url": "https://www.indiansuperleague.com/matchcentre/194642"
+        }
+      ],
+      "matchUrl": "https://www.indiansuperleague.com/matchcentre/194642",
+      "winnerId": "656",
+      "venue": "Sree Kanteerava Stadium, Bengaluru",
+      "report": "Bengaluru FC 2–0 Chennaiyin FC. Full-time; result confirmed by the official ISL match centre.",
+      "lineups": {
+        "home": {
+          "starters": [
+            {
+              "name": "Gurpreet Singh Sandhu",
+              "number": 1
+            },
+            {
+              "name": "Menno Robert Maria Koch",
+              "number": 3
+            },
+            {
+              "name": "Chinglensana Singh Konsham",
+              "number": 4
+            },
+            {
+              "name": "Manuel Ignacio Iriondo",
+              "number": 5
+            },
+            {
+              "name": "Borja Martinez Giner",
+              "number": 7
+            },
+            {
+              "name": "Mihaillo Perovic",
+              "number": 9
+            },
+            {
+              "name": "Ryan Dale Williams",
+              "number": 10
+            },
+            {
+              "name": "Soham Varshneya",
+              "number": 14
+            },
+            {
+              "name": "Haobam Ricky Meetei",
+              "number": 18
+            },
+            {
+              "name": "Fanai Lalremtluanga",
+              "number": 23
+            },
+            {
+              "name": "Chingambam Shivaldo Singh",
+              "number": 51
+            }
+          ],
+          "formation": "4-2-4-0",
+          "substitutes": [
+            {
+              "name": "Sandro Anibal Embalo",
+              "number": 6,
+              "position": "Defender"
+            },
+            {
+              "name": "Suresh Singh Wangjam",
+              "number": 8,
+              "position": "Defender"
+            },
+            {
+              "name": "Sunil Chhetri",
+              "number": 11,
+              "position": "Forward"
+            },
+            {
+              "name": "Muhammed Ashique Kuruniyan",
+              "number": 22,
+              "position": "Midfielder"
+            },
+            {
+              "name": "Nikhil Chandrashekar Poojary",
+              "number": 27,
+              "position": "Defender"
+            },
+            {
+              "name": "Lalthuammawia Ralte",
+              "number": 28,
+              "position": "Goalkeeper"
+            },
+            {
+              "name": "Serto Worneilen Kom",
+              "number": 29,
+              "position": "Forward"
+            },
+            {
+              "name": "Sahil Poonia",
+              "number": 30,
+              "position": "Goalkeeper"
+            },
+            {
+              "name": "Roshan Singh Naorem",
+              "number": 32,
+              "position": "Defender"
+            }
+          ]
+        },
+        "away": {
+          "starters": [
+            {
+              "name": "Emmanuel Imanishimwe",
+              "number": 2
+            },
+            {
+              "name": "Nuno Miguel Pereira Reis",
+              "number": 4
+            },
+            {
+              "name": "Saheef Muhammed",
+              "number": 5
+            },
+            {
+              "name": "Ramon de Andrade Souza",
+              "number": 7
+            },
+            {
+              "name": "Madih Talal",
+              "number": 10
+            },
+            {
+              "name": "Mohammad Nawaz",
+              "number": 13
+            },
+            {
+              "name": "Ayush Dev Chhetri",
+              "number": 14
+            },
+            {
+              "name": "Lalriathpuia Chawngthu",
+              "number": 17
+            },
+            {
+              "name": "Irfan Yadwad",
+              "number": 24
+            },
+            {
+              "name": "Namgyal Bhutia",
+              "number": 27
+            },
+            {
+              "name": "S Prakadeswaran",
+              "number": 52
+            }
+          ],
+          "formation": "4-3-3",
+          "substitutes": [
+            {
+              "name": "Samik Mitra",
+              "number": 1,
+              "position": "Goalkeeper"
+            },
+            {
+              "name": "Laldinpuia Pachuau",
+              "number": 3,
+              "position": "Defender"
+            },
+            {
+              "name": "Bryce Brian Miranda",
+              "number": 11,
+              "position": "Midfielder"
+            },
+            {
+              "name": "Shubham Rawat",
+              "number": 16,
+              "position": "Forward"
+            },
+            {
+              "name": "Dippendu Biswas",
+              "number": 32,
+              "position": "Defender"
+            },
+            {
+              "name": "Yumkhaibam Jiteshwor Singh",
+              "number": 37,
+              "position": "Midfielder"
+            },
+            {
+              "name": "Brison Deuben Fernandes",
+              "number": 42,
+              "position": "Forward"
+            },
+            {
+              "name": "Nitishkumar Meitei Yengkhom",
+              "number": 43,
+              "position": "Midfielder"
+            },
+            {
+              "name": "Klusner John Manuel Pereira",
+              "number": 47,
+              "position": "Midfielder"
+            }
+          ]
+        }
+      },
+      "players": [
+        {
+          "name": "Gurpreet Singh Sandhu",
+          "side": "home",
+          "position": "Goalkeeper",
+          "goals": 0,
+          "assists": 0,
+          "shots": 0,
+          "passes": 31,
+          "tackles": 0,
+          "saves": 0
+        },
+        {
+          "name": "Menno Robert Maria Koch",
+          "side": "home",
+          "position": "Defender",
+          "goals": 0,
+          "assists": 0,
+          "shots": 0,
+          "passes": 48,
+          "tackles": 3,
+          "saves": 0
+        },
+        {
+          "name": "Chinglensana Singh Konsham",
+          "side": "home",
+          "position": "Defender",
+          "goals": 0,
+          "assists": 0,
+          "shots": 0,
+          "passes": 52,
+          "tackles": 0,
+          "saves": 0
+        },
+        {
+          "name": "Manuel Ignacio Iriondo",
+          "side": "home",
+          "position": "Midfielder",
+          "goals": 0,
+          "assists": 0,
+          "shots": 1,
+          "passes": 40,
+          "tackles": 6,
+          "saves": 0
+        },
+        {
+          "name": "Borja Martinez Giner",
+          "side": "home",
+          "position": "Forward",
+          "goals": 0,
+          "assists": 1,
+          "shots": 1,
+          "passes": 21,
+          "tackles": 0,
+          "saves": 0
+        },
+        {
+          "name": "Mihaillo Perovic",
+          "side": "home",
+          "position": "Forward",
+          "goals": 1,
+          "assists": 0,
+          "shots": 4,
+          "passes": 29,
+          "tackles": 2,
+          "saves": 0
+        },
+        {
+          "name": "Ryan Dale Williams",
+          "side": "home",
+          "position": "Forward",
+          "goals": 1,
+          "assists": 0,
+          "shots": 1,
+          "passes": 15,
+          "tackles": 0,
+          "saves": 0
+        },
+        {
+          "name": "Soham Varshneya",
+          "side": "home",
+          "position": "Midfielder",
+          "goals": 0,
+          "assists": 0,
+          "shots": 1,
+          "passes": 16,
+          "tackles": 2,
+          "saves": 0
+        },
+        {
+          "name": "Haobam Ricky Meetei",
+          "side": "home",
+          "position": "Defender",
+          "goals": 0,
+          "assists": 0,
+          "shots": 0,
+          "passes": 32,
+          "tackles": 5,
+          "saves": 0
+        },
+        {
+          "name": "Fanai Lalremtluanga",
+          "side": "home",
+          "position": "Midfielder",
+          "goals": 0,
+          "assists": 0,
+          "shots": 1,
+          "passes": 54,
+          "tackles": 0,
+          "saves": 0
+        },
+        {
+          "name": "Chingambam Shivaldo Singh",
+          "side": "home",
+          "position": "Midfielder",
+          "goals": 0,
+          "assists": 0,
+          "shots": 0,
+          "passes": 25,
+          "tackles": 3,
+          "saves": 0
+        },
+        {
+          "name": "Suresh Singh Wangjam",
+          "side": "home",
+          "position": "Defender",
+          "goals": 0,
+          "assists": 0,
+          "shots": 0,
+          "passes": 17,
+          "tackles": 0,
+          "saves": 0
+        },
+        {
+          "name": "Sunil Chhetri",
+          "side": "home",
+          "position": "Forward",
+          "goals": 0,
+          "assists": 0,
+          "shots": 1,
+          "passes": 4,
+          "tackles": 0,
+          "saves": 0
+        },
+        {
+          "name": "Muhammed Ashique Kuruniyan",
+          "side": "home",
+          "position": "Midfielder",
+          "goals": 0,
+          "assists": 0,
+          "shots": 0,
+          "passes": 18,
+          "tackles": 1,
+          "saves": 0
+        },
+        {
+          "name": "Nikhil Chandrashekar Poojary",
+          "side": "home",
+          "position": "Defender",
+          "goals": 0,
+          "assists": 0,
+          "shots": 0,
+          "passes": 3,
+          "tackles": 1,
+          "saves": 0
+        },
+        {
+          "name": "Roshan Singh Naorem",
+          "side": "home",
+          "position": "Defender",
+          "goals": 0,
+          "assists": 0,
+          "shots": 0,
+          "passes": 10,
+          "tackles": 1,
+          "saves": 0
+        },
+        {
+          "name": "Emmanuel Imanishimwe",
+          "side": "away",
+          "position": "Defender",
+          "goals": 0,
+          "assists": 0,
+          "shots": 1,
+          "passes": 60,
+          "tackles": 0,
+          "saves": 0
+        },
+        {
+          "name": "Nuno Miguel Pereira Reis",
+          "side": "away",
+          "position": "Defender",
+          "goals": 0,
+          "assists": 0,
+          "shots": 2,
+          "passes": 75,
+          "tackles": 0,
+          "saves": 0
+        },
+        {
+          "name": "Saheef Muhammed",
+          "side": "away",
+          "position": "Defender",
+          "goals": 0,
+          "assists": 0,
+          "shots": 0,
+          "passes": 43,
+          "tackles": 1,
+          "saves": 0
+        },
+        {
+          "name": "Ramon de Andrade Souza",
+          "side": "away",
+          "position": "Forward",
+          "goals": 0,
+          "assists": 0,
+          "shots": 6,
+          "passes": 19,
+          "tackles": 0,
+          "saves": 0
+        },
+        {
+          "name": "Madih Talal",
+          "side": "away",
+          "position": "Midfielder",
+          "goals": 0,
+          "assists": 0,
+          "shots": 3,
+          "passes": 44,
+          "tackles": 0,
+          "saves": 0
+        },
+        {
+          "name": "Mohammad Nawaz",
+          "side": "away",
+          "position": "Goalkeeper",
+          "goals": 0,
+          "assists": 0,
+          "shots": 0,
+          "passes": 19,
+          "tackles": 0,
+          "saves": 0
+        },
+        {
+          "name": "Ayush Dev Chhetri",
+          "side": "away",
+          "position": "Midfielder",
+          "goals": 0,
+          "assists": 0,
+          "shots": 0,
+          "passes": 45,
+          "tackles": 1,
+          "saves": 0
+        },
+        {
+          "name": "Lalriathpuia Chawngthu",
+          "side": "away",
+          "position": "Midfielder",
+          "goals": 0,
+          "assists": 0,
+          "shots": 1,
+          "passes": 49,
+          "tackles": 1,
+          "saves": 0
+        },
+        {
+          "name": "Irfan Yadwad",
+          "side": "away",
+          "position": "Forward",
+          "goals": 0,
+          "assists": 0,
+          "shots": 1,
+          "passes": 13,
+          "tackles": 0,
+          "saves": 0
+        },
+        {
+          "name": "Namgyal Bhutia",
+          "side": "away",
+          "position": "Defender",
+          "goals": 0,
+          "assists": 0,
+          "shots": 2,
+          "passes": 36,
+          "tackles": 1,
+          "saves": 0
+        },
+        {
+          "name": "S Prakadeswaran",
+          "side": "away",
+          "position": "Midfielder",
+          "goals": 0,
+          "assists": 0,
+          "shots": 1,
+          "passes": 12,
+          "tackles": 1,
+          "saves": 0
+        },
+        {
+          "name": "Laldinpuia Pachuau",
+          "side": "away",
+          "position": "Defender",
+          "goals": 0,
+          "assists": 0,
+          "shots": 0,
+          "passes": 18,
+          "tackles": 0,
+          "saves": 0
+        },
+        {
+          "name": "Bryce Brian Miranda",
+          "side": "away",
+          "position": "Midfielder",
+          "goals": 0,
+          "assists": 0,
+          "shots": 0,
+          "passes": 9,
+          "tackles": 1,
+          "saves": 0
+        },
+        {
+          "name": "Shubham Rawat",
+          "side": "away",
+          "position": "Forward",
+          "goals": 0,
+          "assists": 0,
+          "shots": 0,
+          "passes": 3,
+          "tackles": 0,
+          "saves": 0
+        },
+        {
+          "name": "Yumkhaibam Jiteshwor Singh",
+          "side": "away",
+          "position": "Midfielder",
+          "goals": 0,
+          "assists": 0,
+          "shots": 1,
+          "passes": 8,
+          "tackles": 0,
+          "saves": 0
+        },
+        {
+          "name": "Brison Deuben Fernandes",
+          "side": "away",
+          "position": "Forward",
+          "goals": 0,
+          "assists": 0,
+          "shots": 2,
+          "passes": 5,
+          "tackles": 0,
+          "saves": 0
+        }
+      ],
+      "events": [
+        {
+          "minute": 23,
+          "side": "home",
+          "type": "goal",
+          "player": "Ryan Dale Williams"
+        },
+        {
+          "minute": 32,
+          "side": "home",
+          "type": "yellow_card",
+          "player": "Chingambam Shivaldo Singh"
+        },
+        {
+          "minute": 34,
+          "side": "away",
+          "type": "yellow_card",
+          "player": "Emmanuel Imanishimwe"
+        },
+        {
+          "minute": 45,
+          "side": "home",
+          "type": "yellow_card",
+          "player": "Haobam Ricky Meetei",
+          "addedMinute": 2
+        },
+        {
+          "minute": 45,
+          "side": "home",
+          "type": "substitution",
+          "playerIn": "Muhammed Ashique Kuruniyan",
+          "playerOut": "Ryan Dale Williams"
+        },
+        {
+          "minute": 51,
+          "side": "home",
+          "type": "goal",
+          "player": "Mihaillo Perovic",
+          "assist": "Borja Martinez Giner"
+        },
+        {
+          "minute": 61,
+          "side": "away",
+          "type": "substitution",
+          "playerIn": "Brison Deuben Fernandes",
+          "playerOut": "S Prakadeswaran"
+        },
+        {
+          "minute": 63,
+          "side": "home",
+          "type": "substitution",
+          "playerIn": "Roshan Singh Naorem",
+          "playerOut": "Chingambam Shivaldo Singh"
+        },
+        {
+          "minute": 63,
+          "side": "home",
+          "type": "substitution",
+          "playerIn": "Nikhil Chandrashekar Poojary",
+          "playerOut": "Haobam Ricky Meetei"
+        },
+        {
+          "minute": 66,
+          "side": "away",
+          "type": "substitution",
+          "playerIn": "Bryce Brian Miranda",
+          "playerOut": "Irfan Yadwad"
+        },
+        {
+          "minute": 66,
+          "side": "away",
+          "type": "substitution",
+          "playerIn": "Laldinpuia Pachuau",
+          "playerOut": "Namgyal Bhutia"
+        },
+        {
+          "minute": 69,
+          "side": "home",
+          "type": "substitution",
+          "playerIn": "Sunil Chhetri",
+          "playerOut": "Soham Varshneya"
+        },
+        {
+          "minute": 78,
+          "side": "home",
+          "type": "yellow_card",
+          "player": "Nikhil Chandrashekar Poojary"
+        },
+        {
+          "minute": 83,
+          "side": "away",
+          "type": "substitution",
+          "playerIn": "Yumkhaibam Jiteshwor Singh",
+          "playerOut": "Lalriathpuia Chawngthu"
+        },
+        {
+          "minute": 83,
+          "side": "away",
+          "type": "substitution",
+          "playerIn": "Shubham Rawat",
+          "playerOut": "Ayush Dev Chhetri"
+        },
+        {
+          "minute": 84,
+          "side": "home",
+          "type": "substitution",
+          "playerIn": "Suresh Singh Wangjam",
+          "playerOut": "Manuel Ignacio Iriondo"
+        }
+      ],
+      "stats": {
+        "home": {},
+        "away": {}
+      }
     }
   ]
 }
