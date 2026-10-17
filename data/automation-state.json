@@ -85,12 +85,12 @@
   "phaseOneLastKickoff": "2027-01-17T19:30+05:30",
   "sources": {
     "fixtures": {
-      "checkedAt": "2026-10-17T02:29:44.046649+00:00",
+      "checkedAt": "2026-10-17T04:25:18.770280+00:00",
       "outcome": "ok"
     },
     "streams": {
-      "checkedAt": "2026-10-17T02:29:44.046649+00:00",
-      "outcome": "ok"
+      "checkedAt": "2026-10-17T04:25:18.770280+00:00",
+      "outcome": "partial"
     }
   },
   "pending": [],
@@ -100,13 +100,19 @@
     "194636": "2026-10-14T11:06:22.551766+00:00",
     "194637": "2026-10-14T13:43:42.535618+00:00",
     "194638": "2026-10-15T13:43:59.567570+00:00",
-    "194639": "2026-10-17T02:29:44.046649+00:00",
-    "194640": "2026-10-17T02:29:44.046649+00:00"
+    "194639": "2026-10-17T04:25:18.770280+00:00",
+    "194640": "2026-10-17T04:25:18.770280+00:00"
   },
   "lastCheck": {
-    "checkedAt": "2026-10-17T02:29:44.046649+00:00",
-    "kind": "morning",
-    "failures": [],
+    "checkedAt": "2026-10-17T04:25:18.770280+00:00",
+    "kind": "hourly",
+    "failures": [
+      "YouTube WvHLJt16eyE: Scheduled stream start is not available yet",
+      "YouTube fp_7X3VWIuA: Scheduled stream start is not available yet",
+      "YouTube b4Xo33p3SXo: Scheduled stream start is not available yet",
+      "YouTube 0XReoY9GNr4: Scheduled stream start is not available yet",
+      "YouTube DdsyDa5Tils: Scheduled stream start is not available yet"
+    ],
     "changes": {
       "fixtures": 0,
       "results": 0,
