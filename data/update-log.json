@@ -3,6 +3,30 @@
   "season": "2026-27",
   "checks": [
     {
+      "checkedAt": "2026-10-17T11:07:48.637960+00:00",
+      "kind": "lineup-early",
+      "outcome": "partial",
+      "summary": "3 match centres checked; updates: fixtures 0, results 0, lineups 0, streams 0. Phase: phase-one. 1 pending; 5 errors. YouTube WvHLJt16eyE: Scheduled stream start is not available yet; YouTube fp_7X3VWIuA: Scheduled stream start is not available yet; YouTube b4Xo33p3SXo: Scheduled stream start is not available yet; YouTube 0XReoY9GNr4: Scheduled stream start is not available yet; YouTube DdsyDa5Til",
+      "links": [
+        {
+          "label": "Inter Kashi vs Odisha FC",
+          "url": "https://www.indiansuperleague.com/matchcentre/194641"
+        },
+        {
+          "label": "Punjab FC vs Odisha FC",
+          "url": "https://www.indiansuperleague.com/matchcentre/194639"
+        },
+        {
+          "label": "Sporting Club Delhi vs Mohun Bagan Super Giant",
+          "url": "https://www.indiansuperleague.com/matchcentre/194640"
+        },
+        {
+          "label": "Official ISL YouTube Live listing",
+          "url": "https://www.youtube.com/@IndianSuperLeague/streams"
+        }
+      ]
+    },
+    {
       "checkedAt": "2026-10-17T09:20:59.334899+00:00",
       "kind": "hourly",
       "outcome": "no-change",
