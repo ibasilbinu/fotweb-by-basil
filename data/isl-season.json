@@ -844,8 +844,8 @@
         "title": "LIVE (English): Inter Kashi FC vs Odisha FC | MG ISL 2026-27 | Gameweek 2",
         "channelUrl": "https://www.youtube.com/@IndianSuperLeague",
         "language": "English",
-        "status": "scheduled",
-        "verifiedAt": "2026-10-15T18:18:25.473888+00:00"
+        "status": "live",
+        "verifiedAt": "2026-10-17T13:31:54.421211+00:00"
       }
     },
     {
@@ -866,6 +866,202 @@
         "language": "English",
         "status": "scheduled",
         "verifiedAt": "2026-10-15T15:32:40.763116+00:00"
+      },
+      "lineups": {
+        "home": {
+          "starters": [
+            {
+              "name": "Gurpreet Singh Sandhu",
+              "number": 1
+            },
+            {
+              "name": "Menno Robert Maria Koch",
+              "number": 3
+            },
+            {
+              "name": "Chinglensana Singh Konsham",
+              "number": 4
+            },
+            {
+              "name": "Manuel Ignacio Iriondo",
+              "number": 5
+            },
+            {
+              "name": "Borja Martinez Giner",
+              "number": 7
+            },
+            {
+              "name": "Mihaillo Perovic",
+              "number": 9
+            },
+            {
+              "name": "Ryan Dale Williams",
+              "number": 10
+            },
+            {
+              "name": "Soham Varshneya",
+              "number": 14
+            },
+            {
+              "name": "Haobam Ricky Meetei",
+              "number": 18
+            },
+            {
+              "name": "Fanai Lalremtluanga",
+              "number": 23
+            },
+            {
+              "name": "Chingambam Shivaldo Singh",
+              "number": 51
+            }
+          ],
+          "formation": "4-2-4-0",
+          "substitutes": [
+            {
+              "name": "Sandro Anibal Embalo",
+              "number": 6,
+              "position": "Defender"
+            },
+            {
+              "name": "Suresh Singh Wangjam",
+              "number": 8,
+              "position": "Defender"
+            },
+            {
+              "name": "Sunil Chhetri",
+              "number": 11,
+              "position": "Forward"
+            },
+            {
+              "name": "Muhammed Ashique Kuruniyan",
+              "number": 22,
+              "position": "Midfielder"
+            },
+            {
+              "name": "Nikhil Chandrashekar Poojary",
+              "number": 27,
+              "position": "Defender"
+            },
+            {
+              "name": "Lalthuammawia Ralte",
+              "number": 28,
+              "position": "Goalkeeper"
+            },
+            {
+              "name": "Serto Worneilen Kom",
+              "number": 29,
+              "position": "Forward"
+            },
+            {
+              "name": "Sahil Poonia",
+              "number": 30,
+              "position": "Goalkeeper"
+            },
+            {
+              "name": "Roshan Singh Naorem",
+              "number": 32,
+              "position": "Defender"
+            }
+          ]
+        },
+        "away": {
+          "starters": [
+            {
+              "name": "Emmanuel Imanishimwe",
+              "number": 2
+            },
+            {
+              "name": "Nuno Miguel Pereira Reis",
+              "number": 4
+            },
+            {
+              "name": "Saheef Muhammed",
+              "number": 5
+            },
+            {
+              "name": "Ramon de Andrade Souza",
+              "number": 7
+            },
+            {
+              "name": "Madih Talal",
+              "number": 10
+            },
+            {
+              "name": "Mohammad Nawaz",
+              "number": 13
+            },
+            {
+              "name": "Ayush Dev Chhetri",
+              "number": 14
+            },
+            {
+              "name": "Lalriathpuia Chawngthu",
+              "number": 17
+            },
+            {
+              "name": "Irfan Yadwad",
+              "number": 24
+            },
+            {
+              "name": "Namgyal Bhutia",
+              "number": 27
+            },
+            {
+              "name": "S Prakadeswaran",
+              "number": 52
+            }
+          ],
+          "formation": "4-4-2",
+          "substitutes": [
+            {
+              "name": "Samik Mitra",
+              "number": 1,
+              "position": "Goalkeeper"
+            },
+            {
+              "name": "Laldinpuia Pachuau",
+              "number": 3,
+              "position": "Defender"
+            },
+            {
+              "name": "Bryce Brian Miranda",
+              "number": 11,
+              "position": "Midfielder"
+            },
+            {
+              "name": "Shubham Rawat",
+              "number": 16,
+              "position": "Forward"
+            },
+            {
+              "name": "Dippendu Biswas",
+              "number": 32,
+              "position": "Defender"
+            },
+            {
+              "name": "Yumkhaibam Jiteshwor Singh",
+              "number": 37,
+              "position": "Midfielder"
+            },
+            {
+              "name": "Brison Deuben Fernandes",
+              "number": 42,
+              "position": "Forward"
+            },
+            {
+              "name": "Nitishkumar Meitei Yengkhom",
+              "number": 43,
+              "position": "Midfielder"
+            },
+            {
+              "name": "Klusner John Manuel Pereira",
+              "number": 47,
+              "position": "Midfielder"
+            }
+          ]
+        },
+        "sourceUrl": "https://www.indiansuperleague.com/matchcentre/194642",
+        "verifiedAt": "2026-10-17T13:31:54.421211+00:00"
       }
     },
     {
