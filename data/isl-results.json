@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "season": "2026-27",
-  "updatedAt": "2026-10-17T16:11:51.556072+00:00",
+  "updatedAt": "2026-10-17T16:36:20.201253+00:00",
   "matches": [
     {
       "id": "194634",
@@ -5582,7 +5582,7 @@
       "status": "FT",
       "phase": "league",
       "officialStage": "League",
-      "verifiedAt": "2026-10-17T16:11:51.556072+00:00",
+      "verifiedAt": "2026-10-17T16:36:20.201253+00:00",
       "sources": [
         {
           "label": "Indian Super League official match centre",
@@ -5641,7 +5641,7 @@
               "number": 51
             }
           ],
-          "formation": "4-2-4-0",
+          "formation": "4-2-3-1",
           "substitutes": [
             {
               "name": "Sandro Anibal Embalo",
@@ -5737,7 +5737,7 @@
               "number": 52
             }
           ],
-          "formation": "4-3-3",
+          "formation": "4-4-2",
           "substitutes": [
             {
               "name": "Samik Mitra",
@@ -5817,7 +5817,7 @@
           "goals": 0,
           "assists": 0,
           "shots": 0,
-          "passes": 52,
+          "passes": 53,
           "tackles": 0,
           "saves": 0
         },
@@ -5828,8 +5828,8 @@
           "goals": 0,
           "assists": 0,
           "shots": 1,
-          "passes": 40,
-          "tackles": 6,
+          "passes": 41,
+          "tackles": 7,
           "saves": 0
         },
         {
@@ -5850,7 +5850,7 @@
           "goals": 1,
           "assists": 0,
           "shots": 4,
-          "passes": 29,
+          "passes": 30,
           "tackles": 2,
           "saves": 0
         },
@@ -5895,7 +5895,7 @@
           "assists": 0,
           "shots": 1,
           "passes": 54,
-          "tackles": 0,
+          "tackles": 1,
           "saves": 0
         },
         {
@@ -5960,7 +5960,7 @@
           "goals": 0,
           "assists": 0,
           "shots": 0,
-          "passes": 10,
+          "passes": 11,
           "tackles": 1,
           "saves": 0
         },
@@ -5993,7 +5993,7 @@
           "goals": 0,
           "assists": 0,
           "shots": 0,
-          "passes": 43,
+          "passes": 44,
           "tackles": 1,
           "saves": 0
         },
@@ -6015,7 +6015,7 @@
           "goals": 0,
           "assists": 0,
           "shots": 3,
-          "passes": 44,
+          "passes": 45,
           "tackles": 0,
           "saves": 0
         },
@@ -6070,7 +6070,7 @@
           "goals": 0,
           "assists": 0,
           "shots": 2,
-          "passes": 36,
+          "passes": 35,
           "tackles": 1,
           "saves": 0
         },
@@ -6081,7 +6081,7 @@
           "goals": 0,
           "assists": 0,
           "shots": 1,
-          "passes": 12,
+          "passes": 11,
           "tackles": 1,
           "saves": 0
         },
@@ -6182,21 +6182,21 @@
           "assist": "Borja Martinez Giner"
         },
         {
-          "minute": 61,
+          "minute": 60,
           "side": "away",
           "type": "substitution",
           "playerIn": "Brison Deuben Fernandes",
           "playerOut": "S Prakadeswaran"
         },
         {
-          "minute": 63,
+          "minute": 62,
           "side": "home",
           "type": "substitution",
           "playerIn": "Roshan Singh Naorem",
           "playerOut": "Chingambam Shivaldo Singh"
         },
         {
-          "minute": 63,
+          "minute": 62,
           "side": "home",
           "type": "substitution",
           "playerIn": "Nikhil Chandrashekar Poojary",
@@ -6224,20 +6224,20 @@
           "playerOut": "Soham Varshneya"
         },
         {
-          "minute": 78,
+          "minute": 77,
           "side": "home",
           "type": "yellow_card",
           "player": "Nikhil Chandrashekar Poojary"
         },
         {
-          "minute": 83,
+          "minute": 82,
           "side": "away",
           "type": "substitution",
           "playerIn": "Yumkhaibam Jiteshwor Singh",
           "playerOut": "Lalriathpuia Chawngthu"
         },
         {
-          "minute": 83,
+          "minute": 82,
           "side": "away",
           "type": "substitution",
           "playerIn": "Shubham Rawat",
@@ -6252,8 +6252,38 @@
         }
       ],
       "stats": {
-        "home": {},
-        "away": {}
+        "home": {
+          "possession": 47,
+          "shots": 10,
+          "shotsOnTarget": 5,
+          "corners": 3,
+          "fouls": 8,
+          "offsides": 0,
+          "yellowCards": 3,
+          "redCards": 0,
+          "passes": 419,
+          "passAccuracy": 82,
+          "tackles": 26,
+          "interceptions": 14,
+          "clearances": 37,
+          "saves": 5
+        },
+        "away": {
+          "possession": 53,
+          "shots": 20,
+          "shotsOnTarget": 5,
+          "corners": 7,
+          "fouls": 7,
+          "offsides": 3,
+          "yellowCards": 1,
+          "redCards": 0,
+          "passes": 458,
+          "passAccuracy": 84,
+          "tackles": 6,
+          "interceptions": 13,
+          "clearances": 10,
+          "saves": 3
+        }
       }
     }
   ]
