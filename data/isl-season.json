@@ -3,7 +3,7 @@
   "season": "2026-27",
   "competition": "Indian Super League",
   "scheduleScope": "Published Phase 1",
-  "verifiedAt": "2026-10-15T08:21:17.562Z",
+  "verifiedAt": "2026-10-17T13:43:21.579372+00:00",
   "sourceUrl": "https://www.indiansuperleague.com/schedule-fixtures",
   "standingsSourceUrl": "https://www.indiansuperleague.com/standings",
   "teams": [
@@ -833,19 +833,19 @@
       "homeId": "2354",
       "awayId": "1499",
       "kickoff": "2026-10-17T17:00+05:30",
-      "venue": "Shree Shiv Chhatrapati Sports Complex, Balewadi, Pune",
+      "venue": "Shree Shivchhatrapati Sports Complex, Pune",
       "status": "NS",
       "phase": "league",
       "label": "Match 8",
-      "sourceUrl": "https://www.indiansuperleague.com/news/all-indian-inter-kashi-face-star-studded-kerala-blasters",
+      "sourceUrl": "https://www.indiansuperleague.com/schedule-fixtures",
       "officialStage": "league",
       "broadcast": {
         "url": "https://www.youtube.com/live/DdsyDa5Tils",
-        "title": "LIVE (English): Inter Kashi FC vs Odisha FC | MG ISL 2026-27 | Gameweek 2",
+        "title": "FULL REPLAY (English): Inter Kashi FC vs Odisha FC | MG ISL 2026-27 | Gameweek 2",
         "channelUrl": "https://www.youtube.com/@IndianSuperLeague",
         "language": "English",
-        "status": "live",
-        "verifiedAt": "2026-10-17T13:31:54.421211+00:00"
+        "status": "ended",
+        "verifiedAt": "2026-10-17T13:43:21.579372+00:00"
       }
     },
     {
