@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "season": "2026-27",
-  "updatedAt": "2026-10-18T13:42:54.639467+00:00",
+  "updatedAt": "2026-10-18T13:55:07.952492+00:00",
   "matches": [
     {
       "id": "194634",
@@ -6296,7 +6296,7 @@
       "status": "FT",
       "phase": "league",
       "officialStage": "League",
-      "verifiedAt": "2026-10-18T13:42:54.639467+00:00",
+      "verifiedAt": "2026-10-18T13:55:07.952492+00:00",
       "sources": [
         {
           "label": "Indian Super League official match centre",
@@ -6511,8 +6511,8 @@
           "offsides": 2,
           "yellowCards": 3,
           "redCards": 0,
-          "passes": 399,
-          "passAccuracy": 81,
+          "passes": 400,
+          "passAccuracy": 80,
           "tackles": 17,
           "interceptions": 5,
           "clearances": 20,
@@ -6523,8 +6523,8 @@
           "shots": 21,
           "shotsOnTarget": 7,
           "corners": 1,
-          "fouls": 8,
-          "offsides": 6,
+          "fouls": 10,
+          "offsides": 5,
           "yellowCards": 1,
           "redCards": 0,
           "passes": 446,
@@ -6675,7 +6675,7 @@
           "goals": 0,
           "assists": 0,
           "shots": 0,
-          "passes": 26,
+          "passes": 27,
           "tackles": 1,
           "saves": 0
         },
