@@ -1080,8 +1080,8 @@
         "title": "LIVE (English): Churchill Brothers SC vs East Bengal FC | MG ISL 2026-27 | Gameweek 2",
         "channelUrl": "https://www.youtube.com/@IndianSuperLeague",
         "language": "English",
-        "status": "scheduled",
-        "verifiedAt": "2026-10-15T13:26:17.169734+00:00"
+        "status": "live",
+        "verifiedAt": "2026-10-18T13:28:57.261616+00:00"
       },
       "lineups": {
         "home": {
@@ -1293,6 +1293,202 @@
         "language": "English",
         "status": "scheduled",
         "verifiedAt": "2026-10-15T13:26:17.169734+00:00"
+      },
+      "lineups": {
+        "home": {
+          "starters": [
+            {
+              "name": "Gurmeet Singh",
+              "number": 1
+            },
+            {
+              "name": "Pramveer Ranbir",
+              "number": 4
+            },
+            {
+              "name": "Abdul Rabeeh Anjukandan",
+              "number": 7
+            },
+            {
+              "name": "Antonio Moyano",
+              "number": 8
+            },
+            {
+              "name": "Ethyan Jesus Gonzalez Morales",
+              "number": 9
+            },
+            {
+              "name": "Muthu Irulandi Mayakkannan",
+              "number": 13
+            },
+            {
+              "name": "Alaeddine Ajaraie",
+              "number": 14
+            },
+            {
+              "name": "Macarton Louis Nickson",
+              "number": 15
+            },
+            {
+              "name": "Eneko Satrustegui Plano",
+              "number": 19
+            },
+            {
+              "name": "Nikhil Barla",
+              "number": 66
+            },
+            {
+              "name": "Jithin Madathil Subran",
+              "number": 80
+            }
+          ],
+          "formation": "3-5-2",
+          "substitutes": [
+            {
+              "name": "Ngasepam Tondonba Singh",
+              "number": 3,
+              "position": "Defender"
+            },
+            {
+              "name": "Nikola Ninkovic",
+              "number": 10,
+              "position": "Midfielder"
+            },
+            {
+              "name": "Parthib Sundar Gogoi",
+              "number": 11,
+              "position": "Forward"
+            },
+            {
+              "name": "Dipesh Chauhan",
+              "number": 20,
+              "position": "Goalkeeper"
+            },
+            {
+              "name": "Robin Yadav",
+              "number": 21,
+              "position": "Defender"
+            },
+            {
+              "name": "Redeem Tlang",
+              "number": 22,
+              "position": "Forward"
+            },
+            {
+              "name": "Saikhom Thoiba Singh",
+              "number": 26,
+              "position": "Defender"
+            },
+            {
+              "name": "Aman CK",
+              "number": 27,
+              "position": "Forward"
+            },
+            {
+              "name": "Mark Zothanpuia",
+              "number": 88,
+              "position": "Midfielder"
+            }
+          ]
+        },
+        "away": {
+          "starters": [
+            {
+              "name": "Rv Hormipam",
+              "number": 4
+            },
+            {
+              "name": "Brahmacharimayum Sumit Sharma",
+              "number": 5
+            },
+            {
+              "name": "Freddy Lallawmawma",
+              "number": 6
+            },
+            {
+              "name": "Vibin Mohanan",
+              "number": 8
+            },
+            {
+              "name": "Andre Jay Green",
+              "number": 9
+            },
+            {
+              "name": "Adrian Nicolas Luna Retamar",
+              "number": 10
+            },
+            {
+              "name": "James William Bolton",
+              "number": 13
+            },
+            {
+              "name": "Aibanbha Kupar Dohling",
+              "number": 27
+            },
+            {
+              "name": "Arsh Anwer Shaikh",
+              "number": 31
+            },
+            {
+              "name": "Amey Ganesh Ranawade",
+              "number": 55
+            },
+            {
+              "name": "Momo Yansane",
+              "number": 99
+            }
+          ],
+          "formation": "5-3-2",
+          "substitutes": [
+            {
+              "name": "Amrinder Ranjit Singh",
+              "number": 1,
+              "position": "Goalkeeper"
+            },
+            {
+              "name": "Soraisham Sandeep Singh",
+              "number": 3,
+              "position": "Defender"
+            },
+            {
+              "name": "Thingujam Korou Singh",
+              "number": 7,
+              "position": "Forward"
+            },
+            {
+              "name": "Sanan Mohammed K",
+              "number": 11,
+              "position": "Forward"
+            },
+            {
+              "name": "Jaganath Jayan",
+              "number": 19,
+              "position": "Defender"
+            },
+            {
+              "name": "Nebojsa Kosovic",
+              "number": 23,
+              "position": "Midfielder"
+            },
+            {
+              "name": "Fallou Ndiaye",
+              "number": 44,
+              "position": "Defender"
+            },
+            {
+              "name": "Sreekuttan MS",
+              "number": 45,
+              "position": "Forward"
+            },
+            {
+              "name": "Ebindas Yesudasan",
+              "number": 47,
+              "position": "Midfielder"
+            }
+          ]
+        },
+        "sourceUrl": "https://www.indiansuperleague.com/matchcentre/194644",
+        "verifiedAt": "2026-10-18T13:28:57.261616+00:00"
       }
     },
     {
