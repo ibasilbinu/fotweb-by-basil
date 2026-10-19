@@ -3,7 +3,7 @@
   "season": "2026-27",
   "competition": "Indian Super League",
   "scheduleScope": "Published Phase 1",
-  "verifiedAt": "2026-10-17T13:43:21.579372+00:00",
+  "verifiedAt": "2026-10-19T15:35:54.774098+00:00",
   "sourceUrl": "https://www.indiansuperleague.com/schedule-fixtures",
   "standingsSourceUrl": "https://www.indiansuperleague.com/standings",
   "teams": [
@@ -1712,11 +1712,11 @@
       "homeId": "2354",
       "awayId": "1102",
       "kickoff": "2026-10-23T17:00+05:30",
-      "venue": "Shree Shiv Chhatrapati Sports Complex, Balewadi, Pune",
+      "venue": "Ekana International Football Stadium",
       "status": "NS",
       "phase": "league",
       "label": "Match 13",
-      "sourceUrl": "https://www.indiansuperleague.com/news/all-indian-inter-kashi-face-star-studded-kerala-blasters",
+      "sourceUrl": "https://www.indiansuperleague.com/schedule-fixtures",
       "officialStage": "league"
     },
     {
