@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "season": "2026-27",
-  "updatedAt": "2026-10-18T16:44:32.158699+00:00",
+  "updatedAt": "2026-10-19T07:46:10.788341+00:00",
   "matches": [
     {
       "id": "194634",
@@ -7006,7 +7006,7 @@
       "status": "FT",
       "phase": "league",
       "officialStage": "League",
-      "verifiedAt": "2026-10-18T16:44:32.158699+00:00",
+      "verifiedAt": "2026-10-19T07:46:10.788341+00:00",
       "sources": [
         {
           "label": "Indian Super League official match centre",
@@ -7714,16 +7714,16 @@
           "minute": 90,
           "side": "home",
           "type": "substitution",
-          "playerIn": "Parthib Sundar Gogoi",
-          "playerOut": "Ethyan Jesus Gonzalez Morales",
+          "playerIn": "Redeem Tlang",
+          "playerOut": "Abdul Rabeeh Anjukandan",
           "addedMinute": 5
         },
         {
           "minute": 90,
           "side": "home",
           "type": "substitution",
-          "playerIn": "Redeem Tlang",
-          "playerOut": "Abdul Rabeeh Anjukandan",
+          "playerIn": "Parthib Sundar Gogoi",
+          "playerOut": "Ethyan Jesus Gonzalez Morales",
           "addedMinute": 5
         }
       ]
