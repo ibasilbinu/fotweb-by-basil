@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "season": "2026-27",
-  "updatedAt": "2026-10-19T16:12:11.533577+00:00",
+  "updatedAt": "2026-10-19T16:55:04.915548+00:00",
   "matches": [
     {
       "id": "194634",
@@ -7738,7 +7738,7 @@
       "status": "FT",
       "phase": "league",
       "officialStage": "League",
-      "verifiedAt": "2026-10-19T16:12:11.533577+00:00",
+      "verifiedAt": "2026-10-19T16:55:04.915548+00:00",
       "sources": [
         {
           "label": "Indian Super League official match centre",
@@ -7944,7 +7944,7 @@
       },
       "stats": {
         "home": {
-          "possession": 50,
+          "possession": 58,
           "shots": 17,
           "shotsOnTarget": 3,
           "corners": 4,
@@ -7952,15 +7952,15 @@
           "offsides": 2,
           "yellowCards": 0,
           "redCards": 0,
-          "passes": 453,
-          "passAccuracy": 80,
+          "passes": 479,
+          "passAccuracy": 81,
           "tackles": 11,
           "interceptions": 7,
           "clearances": 14,
           "saves": 3
         },
         "away": {
-          "possession": 50,
+          "possession": 42,
           "shots": 11,
           "shotsOnTarget": 4,
           "corners": 4,
@@ -7968,11 +7968,11 @@
           "offsides": 0,
           "yellowCards": 0,
           "redCards": 0,
-          "passes": 340,
+          "passes": 349,
           "passAccuracy": 72,
           "tackles": 25,
-          "interceptions": 17,
-          "clearances": 24,
+          "interceptions": 18,
+          "clearances": 25,
           "saves": 2
         }
       },
@@ -7984,7 +7984,7 @@
           "goals": 0,
           "assists": 0,
           "shots": 0,
-          "passes": 38,
+          "passes": 39,
           "tackles": 0,
           "saves": 0
         },
@@ -7995,7 +7995,7 @@
           "goals": 0,
           "assists": 0,
           "shots": 0,
-          "passes": 35,
+          "passes": 37,
           "tackles": 1,
           "saves": 0
         },
@@ -8006,7 +8006,7 @@
           "goals": 0,
           "assists": 0,
           "shots": 0,
-          "passes": 73,
+          "passes": 76,
           "tackles": 0,
           "saves": 0
         },
@@ -8017,7 +8017,7 @@
           "goals": 0,
           "assists": 0,
           "shots": 0,
-          "passes": 79,
+          "passes": 83,
           "tackles": 3,
           "saves": 0
         },
@@ -8028,7 +8028,7 @@
           "goals": 0,
           "assists": 0,
           "shots": 1,
-          "passes": 56,
+          "passes": 58,
           "tackles": 1,
           "saves": 0
         },
@@ -8050,7 +8050,7 @@
           "goals": 0,
           "assists": 0,
           "shots": 2,
-          "passes": 39,
+          "passes": 42,
           "tackles": 1,
           "saves": 0
         },
@@ -8094,7 +8094,7 @@
           "goals": 0,
           "assists": 0,
           "shots": 4,
-          "passes": 26,
+          "passes": 28,
           "tackles": 1,
           "saves": 0
         },
@@ -8105,7 +8105,7 @@
           "goals": 0,
           "assists": 0,
           "shots": 1,
-          "passes": 18,
+          "passes": 19,
           "tackles": 0,
           "saves": 0
         },
@@ -8116,7 +8116,7 @@
           "goals": 0,
           "assists": 0,
           "shots": 0,
-          "passes": 11,
+          "passes": 14,
           "tackles": 0,
           "saves": 0
         },
@@ -8127,7 +8127,7 @@
           "goals": 1,
           "assists": 0,
           "shots": 3,
-          "passes": 12,
+          "passes": 14,
           "tackles": 1,
           "saves": 0
         },
@@ -8138,7 +8138,7 @@
           "goals": 0,
           "assists": 1,
           "shots": 1,
-          "passes": 2,
+          "passes": 5,
           "tackles": 0,
           "saves": 0
         },
@@ -8149,7 +8149,7 @@
           "goals": 0,
           "assists": 0,
           "shots": 0,
-          "passes": 24,
+          "passes": 25,
           "tackles": 3,
           "saves": 0
         },
@@ -8160,7 +8160,7 @@
           "goals": 0,
           "assists": 0,
           "shots": 0,
-          "passes": 37,
+          "passes": 38,
           "tackles": 0,
           "saves": 0
         },
@@ -8193,7 +8193,7 @@
           "goals": 0,
           "assists": 0,
           "shots": 1,
-          "passes": 54,
+          "passes": 56,
           "tackles": 4,
           "saves": 0
         },
@@ -8226,7 +8226,7 @@
           "goals": 0,
           "assists": 0,
           "shots": 0,
-          "passes": 17,
+          "passes": 19,
           "tackles": 0,
           "saves": 0
         },
@@ -8237,7 +8237,7 @@
           "goals": 0,
           "assists": 0,
           "shots": 1,
-          "passes": 45,
+          "passes": 47,
           "tackles": 8,
           "saves": 0
         },
@@ -8314,7 +8314,7 @@
           "goals": 0,
           "assists": 0,
           "shots": 0,
-          "passes": 3,
+          "passes": 4,
           "tackles": 0,
           "saves": 0
         }
@@ -8346,38 +8346,38 @@
           "side": "away",
           "type": "substitution",
           "playerIn": "Bawitlung Lalnuntluanga",
-          "playerOut": "Brandon Fernandes"
+          "playerOut": "Leandro Gaston Otormin Fumero"
         },
         {
           "minute": 66,
           "side": "away",
           "type": "substitution",
           "playerIn": "Wilmar Jordan Gil",
-          "playerOut": "Leandro Gaston Otormin Fumero"
+          "playerOut": "Brandon Fernandes"
         },
         {
-          "minute": 77,
+          "minute": 76,
           "side": "home",
           "type": "substitution",
           "playerIn": "Arshvir Singh",
           "playerOut": "Diego Henrique Oliveira Raposo"
         },
         {
-          "minute": 77,
+          "minute": 76,
           "side": "home",
           "type": "substitution",
           "playerIn": "Konsam Sanathoi Singh",
           "playerOut": "Muhammad Suhail  F"
         },
         {
-          "minute": 86,
+          "minute": 85,
           "side": "away",
           "type": "substitution",
           "playerIn": "Hridaya Jain",
           "playerOut": "Noufal P.N"
         },
         {
-          "minute": 86,
+          "minute": 85,
           "side": "away",
           "type": "substitution",
           "playerIn": "Muhammed Ajsal",
