@@ -1509,6 +1509,202 @@
         "language": "English",
         "status": "scheduled",
         "verifiedAt": "2026-10-15T18:18:25.473888+00:00"
+      },
+      "lineups": {
+        "home": {
+          "starters": [
+            {
+              "name": "Arshdeep Singh Saini",
+              "number": 1
+            },
+            {
+              "name": "Muhammed Uvais Moyikkal",
+              "number": 2
+            },
+            {
+              "name": "Bijoy Varghese",
+              "number": 3
+            },
+            {
+              "name": "Nikhil N Prabhu",
+              "number": 4
+            },
+            {
+              "name": "Ricky John Shabong",
+              "number": 6
+            },
+            {
+              "name": "Diego Henrique Oliveira Raposo",
+              "number": 11
+            },
+            {
+              "name": "Khaiminthang Lhungdim",
+              "number": 12
+            },
+            {
+              "name": "Vishal Yadav",
+              "number": 14
+            },
+            {
+              "name": "Muhammad Suhail  F",
+              "number": 17
+            },
+            {
+              "name": "Laishram Rishikanta Meitei",
+              "number": 22
+            },
+            {
+              "name": "Raphael Eric Messi Bouli",
+              "number": 28
+            }
+          ],
+          "formation": "4-2-3-1",
+          "substitutes": [
+            {
+              "name": "Bishu Sharma",
+              "number": 18,
+              "position": "Midfielder"
+            },
+            {
+              "name": "Karish Soram",
+              "number": 27,
+              "position": "Defender"
+            },
+            {
+              "name": "Leon Augustine Asokan",
+              "number": 31,
+              "position": "Midfielder"
+            },
+            {
+              "name": "Arshvir Singh",
+              "number": 40,
+              "position": "Midfielder"
+            },
+            {
+              "name": "Ngarin Shaiza",
+              "number": 66,
+              "position": "Defender"
+            },
+            {
+              "name": "Nongmeikapam Suresh Meitei",
+              "number": 74,
+              "position": "Defender"
+            },
+            {
+              "name": "Muheet Shabir Khan",
+              "number": 78,
+              "position": "Goalkeeper"
+            },
+            {
+              "name": "Gurkirat Singh",
+              "number": 91,
+              "position": "Forward"
+            },
+            {
+              "name": "Konsam Sanathoi Singh",
+              "number": 99,
+              "position": "Forward"
+            }
+          ]
+        },
+        "away": {
+          "starters": [
+            {
+              "name": "Hmingthanmawia Ralte",
+              "number": 3
+            },
+            {
+              "name": "Lazar Cirkovic",
+              "number": 4
+            },
+            {
+              "name": "Carlos Javier Delgado Rodriguez",
+              "number": 5
+            },
+            {
+              "name": "Vikram Partap Singh",
+              "number": 6
+            },
+            {
+              "name": "Sergio Llamas Pardo",
+              "number": 8
+            },
+            {
+              "name": "Brandon Fernandes",
+              "number": 10
+            },
+            {
+              "name": "Leandro Gaston Otormin Fumero",
+              "number": 20
+            },
+            {
+              "name": "Rehenesh Thumbirumbu Paramba",
+              "number": 23
+            },
+            {
+              "name": "Akash Mishra",
+              "number": 31
+            },
+            {
+              "name": "Zothanpuia",
+              "number": 45
+            },
+            {
+              "name": "Noufal P.N",
+              "number": 92
+            }
+          ],
+          "formation": "4-2-3-1",
+          "substitutes": [
+            {
+              "name": "Farukh Haji Kasam Choudhary",
+              "number": 7,
+              "position": "Forward"
+            },
+            {
+              "name": "Wilmar Jordan Gil",
+              "number": 9,
+              "position": "Forward"
+            },
+            {
+              "name": "Bawitlung Lalnuntluanga",
+              "number": 14,
+              "position": "Midfielder"
+            },
+            {
+              "name": "Bijay Chhetri",
+              "number": 17,
+              "position": "Defender"
+            },
+            {
+              "name": "Hridaya Jain",
+              "number": 19,
+              "position": "Forward"
+            },
+            {
+              "name": "Muhammed Ajsal",
+              "number": 22,
+              "position": "Forward"
+            },
+            {
+              "name": "Nathan Asher Rodrigues",
+              "number": 27,
+              "position": "Defender"
+            },
+            {
+              "name": "Yuvraj Kadam",
+              "number": 49,
+              "position": "Forward"
+            },
+            {
+              "name": "Ashish Sibi",
+              "number": 89,
+              "position": "Goalkeeper"
+            }
+          ]
+        },
+        "sourceUrl": "https://www.indiansuperleague.com/matchcentre/194645",
+        "verifiedAt": "2026-10-19T13:43:47.624956+00:00"
       }
     },
     {
