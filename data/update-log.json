@@ -3,6 +3,18 @@
   "season": "2026-27",
   "checks": [
     {
+      "checkedAt": "2026-10-20T16:19:18Z",
+      "kind": "post-match-late",
+      "outcome": "no-change",
+      "summary": "Connected-tool backup: official ISL 2026–27 schedule and saved fixtures show no 20 October 19:30 IST kickoff. No final result due. Existing verified results retained; local importer unavailable.",
+      "links": [
+        {
+          "label": "Official ISL 2026–27 fixtures and results",
+          "url": "https://www.indiansuperleague.com/schedule-fixtures"
+        }
+      ]
+    },
+    {
       "checkedAt": "2026-10-20T15:35:48.551049+00:00",
       "kind": "lineup-early",
       "outcome": "no-change",
