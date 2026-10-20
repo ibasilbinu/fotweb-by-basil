@@ -3,6 +3,30 @@
   "season": "2026-27",
   "checks": [
     {
+      "checkedAt": "2026-10-20T18:04:54.091085+00:00",
+      "kind": "lineup-late",
+      "outcome": "no-change",
+      "summary": "3 match centres checked; updates: fixtures 0, results 0, lineups 0, streams 0. Phase: phase-one. 0 pending; 0 errors.",
+      "links": [
+        {
+          "label": "Churchill Brothers vs East Bengal FC",
+          "url": "https://www.indiansuperleague.com/matchcentre/194643"
+        },
+        {
+          "label": "NorthEast United FC vs Kerala Blasters FC",
+          "url": "https://www.indiansuperleague.com/matchcentre/194644"
+        },
+        {
+          "label": "Punjab FC vs Mumbai City FC",
+          "url": "https://www.indiansuperleague.com/matchcentre/194645"
+        },
+        {
+          "label": "Official ISL YouTube Live listing",
+          "url": "https://www.youtube.com/@IndianSuperLeague/streams"
+        }
+      ]
+    },
+    {
       "checkedAt": "2026-10-20T17:10:20.139762+00:00",
       "kind": "hourly",
       "outcome": "no-change",
