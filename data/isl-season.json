@@ -1717,7 +1717,16 @@
       "phase": "league",
       "label": "Match 13",
       "sourceUrl": "https://www.indiansuperleague.com/schedule-fixtures",
-      "officialStage": "league"
+      "officialStage": "league",
+      "broadcast": {
+        "url": "https://www.youtube.com/live/WSGHeZmbNds",
+        "title": "LIVE: Inter Kashi FC vs East Bengal FC | MG ISL 2026-27 | Gameweek 3",
+        "channelUrl": "https://www.youtube.com/@IndianSuperLeague",
+        "language": "English",
+        "status": "scheduled",
+        "verifiedAt": "2026-10-20T11:00:38.704493+00:00",
+        "languageEvidence": "official-default-unlabelled"
+      }
     },
     {
       "id": "194647",
