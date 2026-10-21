@@ -3,6 +3,26 @@
   "season": "2026-27",
   "checks": [
     {
+      "checkedAt": "2026-10-21T20:09:54.019546+00:00",
+      "kind": "hourly",
+      "outcome": "no-change",
+      "summary": "1 match centres checked; updates: fixtures 0, results 0, lineups 0, streams 0. Phase: phase-one. 0 pending; 0 errors.",
+      "links": [
+        {
+          "label": "Official ISL fixture discovery",
+          "url": "https://www.indiansuperleague.com/schedule-fixtures"
+        },
+        {
+          "label": "Punjab FC vs Mumbai City FC",
+          "url": "https://www.indiansuperleague.com/matchcentre/194645"
+        },
+        {
+          "label": "Official ISL YouTube Live listing",
+          "url": "https://www.youtube.com/@IndianSuperLeague/streams"
+        }
+      ]
+    },
+    {
       "checkedAt": "2026-10-21T20:06:49.869047+00:00",
       "kind": "post-match-late",
       "outcome": "no-change",
