@@ -3,6 +3,13 @@
   "season": "2026-27",
   "checks": [
     {
+      "checkedAt": "2026-10-22T18:09:50.419222+00:00",
+      "kind": "post-match-early",
+      "outcome": "no-change",
+      "summary": "0 match centres checked; updates: fixtures 0, results 0, lineups 0, streams 0. Phase: phase-one. 0 pending; 0 errors.",
+      "links": []
+    },
+    {
       "checkedAt": "2026-10-22T18:07:19.060875+00:00",
       "kind": "lineup-late",
       "outcome": "no-change",
