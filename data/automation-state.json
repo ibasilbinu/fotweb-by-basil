@@ -85,11 +85,11 @@
   "phaseOneLastKickoff": "2027-01-17T19:30+05:30",
   "sources": {
     "fixtures": {
-      "checkedAt": "2026-10-23T02:28:58.241641+00:00",
+      "checkedAt": "2026-10-23T04:48:47.167235+00:00",
       "outcome": "ok"
     },
     "streams": {
-      "checkedAt": "2026-10-23T02:28:58.241641+00:00",
+      "checkedAt": "2026-10-23T04:48:47.167235+00:00",
       "outcome": "ok"
     }
   },
@@ -109,8 +109,8 @@
     "194645": "2026-10-22T13:29:11.595057+00:00"
   },
   "lastCheck": {
-    "checkedAt": "2026-10-23T02:28:58.241641+00:00",
-    "kind": "morning",
+    "checkedAt": "2026-10-23T04:48:47.167235+00:00",
+    "kind": "hourly",
     "failures": [],
     "changes": {
       "fixtures": 0,
