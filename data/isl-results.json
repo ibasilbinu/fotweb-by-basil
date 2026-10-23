@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "season": "2026-27",
-  "updatedAt": "2026-10-23T13:32:58.470309+00:00",
+  "updatedAt": "2026-10-23T14:54:43.023520+00:00",
   "matches": [
     {
       "id": "194634",
@@ -8402,7 +8402,7 @@
       "status": "FT",
       "phase": "league",
       "officialStage": "League",
-      "verifiedAt": "2026-10-23T13:32:58.470309+00:00",
+      "verifiedAt": "2026-10-23T14:54:43.023520+00:00",
       "sources": [
         {
           "label": "Indian Super League official match centre",
@@ -8613,7 +8613,7 @@
           "shots": 4,
           "shotsOnTarget": 0,
           "corners": 2,
-          "fouls": 16,
+          "fouls": 15,
           "offsides": 4,
           "yellowCards": 2,
           "redCards": 0,
@@ -8622,14 +8622,14 @@
           "tackles": 10,
           "interceptions": 7,
           "clearances": 26,
-          "saves": 4
+          "saves": 3
         },
         "away": {
           "possession": 51,
-          "shots": 25,
-          "shotsOnTarget": 9,
+          "shots": 26,
+          "shotsOnTarget": 8,
           "corners": 1,
-          "fouls": 14,
+          "fouls": 15,
           "offsides": 1,
           "yellowCards": 2,
           "redCards": 0,
@@ -8978,7 +8978,7 @@
           "position": "Defender",
           "goals": 0,
           "assists": 0,
-          "shots": 0,
+          "shots": 1,
           "passes": 9,
           "tackles": 0,
           "saves": 0
@@ -9075,7 +9075,7 @@
           "player": "Ake Arnaud Loba"
         },
         {
-          "minute": 60,
+          "minute": 59,
           "side": "away",
           "type": "substitution",
           "playerIn": "Lukasz Zwolinski",
@@ -9089,7 +9089,7 @@
           "playerOut": "Sumeet Passi"
         },
         {
-          "minute": 65,
+          "minute": 66,
           "side": "away",
           "type": "substitution",
           "playerIn": "Sandip Mandi",
@@ -9103,7 +9103,7 @@
           "playerOut": "Nishchal Chandan"
         },
         {
-          "minute": 77,
+          "minute": 76,
           "side": "away",
           "type": "substitution",
           "playerIn": "David Lalhlansanga",

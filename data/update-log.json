@@ -3,6 +3,18 @@
   "season": "2026-27",
   "checks": [
     {
+      "checkedAt": "2026-10-23T14:54:44.933198+00:00",
+      "kind": "match-retry",
+      "outcome": "updated",
+      "summary": "1 match centres checked; updates: fixtures 0, results 1, lineups 0, streams 0. Phase: phase-one. 0 pending; 0 errors.",
+      "links": [
+        {
+          "label": "Inter Kashi vs East Bengal FC",
+          "url": "https://www.indiansuperleague.com/matchcentre/194646"
+        }
+      ]
+    },
+    {
       "checkedAt": "2026-10-23T13:41:54Z",
       "kind": "post-match-early",
       "outcome": "no-change",
