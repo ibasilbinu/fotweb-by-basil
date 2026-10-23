@@ -1723,9 +1723,205 @@
         "title": "LIVE: Inter Kashi FC vs East Bengal FC | MG ISL 2026-27 | Gameweek 3",
         "channelUrl": "https://www.youtube.com/@IndianSuperLeague",
         "language": "English",
-        "status": "scheduled",
-        "verifiedAt": "2026-10-20T11:00:38.704493+00:00",
+        "status": "live",
+        "verifiedAt": "2026-10-23T10:58:43.370106+00:00",
         "languageEvidence": "official-default-unlabelled"
+      },
+      "lineups": {
+        "home": {
+          "starters": [
+            {
+              "name": "Nishchal Chandan",
+              "number": 2
+            },
+            {
+              "name": "Pratik Prabhakar Chaudhari",
+              "number": 4
+            },
+            {
+              "name": "Wayne Bosco Vaz",
+              "number": 5
+            },
+            {
+              "name": "Sajad Hussain Parray",
+              "number": 6
+            },
+            {
+              "name": "Jitendra Singh",
+              "number": 14
+            },
+            {
+              "name": "Rosenberg Gilbert Gabriel",
+              "number": 17
+            },
+            {
+              "name": "Hitesh Sharma",
+              "number": 18
+            },
+            {
+              "name": "Sumeet Passi",
+              "number": 25
+            },
+            {
+              "name": "Laldinliana Renthlei",
+              "number": 26
+            },
+            {
+              "name": "Ayush Chhikara",
+              "number": 28
+            },
+            {
+              "name": "Albino Giovanni Gomes",
+              "number": 32
+            }
+          ],
+          "formation": "5-3-2",
+          "substitutes": [
+            {
+              "name": "Shubham Balasaheb Dhas",
+              "number": 1,
+              "position": "Goalkeeper"
+            },
+            {
+              "name": "Aritra Das",
+              "number": 3,
+              "position": "Defender"
+            },
+            {
+              "name": "Manvir Singh",
+              "number": 9,
+              "position": "Forward"
+            },
+            {
+              "name": "Ashangbam Aphaoba Singh",
+              "number": 11,
+              "position": "Midfielder"
+            },
+            {
+              "name": "Karthik Jithendran Panicker",
+              "number": 15,
+              "position": "Midfielder"
+            },
+            {
+              "name": "Huidrom Thoi Singh",
+              "number": 20,
+              "position": "Forward"
+            },
+            {
+              "name": "Gursimrat Singh Gill",
+              "number": 33,
+              "position": "Defender"
+            },
+            {
+              "name": "Sreekuttan Viruthiyil Santhosh",
+              "number": 41,
+              "position": "Forward"
+            },
+            {
+              "name": "Sourav Das",
+              "number": 56,
+              "position": "Midfielder"
+            }
+          ]
+        },
+        "away": {
+          "starters": [
+            {
+              "name": "Hardik Bhatt",
+              "number": 3
+            },
+            {
+              "name": "Anwar Ali",
+              "number": 4
+            },
+            {
+              "name": "Lalchungnunga",
+              "number": 5
+            },
+            {
+              "name": "Rohit Kumar",
+              "number": 6
+            },
+            {
+              "name": "Vishnu Puthiya Valappill",
+              "number": 7
+            },
+            {
+              "name": "Daniel Ramirez Fernandez",
+              "number": 11
+            },
+            {
+              "name": "Prabhsukhan Singh Gill",
+              "number": 13
+            },
+            {
+              "name": "Jay Gupta",
+              "number": 27
+            },
+            {
+              "name": "Bipin Singh Thounaojam",
+              "number": 29
+            },
+            {
+              "name": "Mohammed Bassim Ahmed Rashid",
+              "number": 74
+            },
+            {
+              "name": "Ake Arnaud Loba",
+              "number": 90
+            }
+          ],
+          "formation": "4-5-1",
+          "substitutes": [
+            {
+              "name": "Christopher James Ikonomidis",
+              "number": 8,
+              "position": "Midfielder"
+            },
+            {
+              "name": "Edmund Lalrindika",
+              "number": 10,
+              "position": "Midfielder"
+            },
+            {
+              "name": "David Lalhlansanga",
+              "number": 14,
+              "position": "Forward"
+            },
+            {
+              "name": "Diego Zivulic",
+              "number": 21,
+              "position": "Midfielder"
+            },
+            {
+              "name": "Thounaojam Jeakson Singh",
+              "number": 25,
+              "position": "Midfielder"
+            },
+            {
+              "name": "Sandip Mandi",
+              "number": 34,
+              "position": "Defender"
+            },
+            {
+              "name": "Joseph Justin",
+              "number": 90,
+              "position": "Defender"
+            },
+            {
+              "name": "Gourab Shaw",
+              "number": 95,
+              "position": "Goalkeeper"
+            },
+            {
+              "name": "Lukasz Zwolinski",
+              "number": 99,
+              "position": "Forward"
+            }
+          ]
+        },
+        "sourceUrl": "https://www.indiansuperleague.com/matchcentre/194646",
+        "verifiedAt": "2026-10-23T10:58:43.370106+00:00"
       }
     },
     {
@@ -1759,7 +1955,16 @@
       "phase": "league",
       "label": "Match 15",
       "sourceUrl": "https://www.indiansuperleague.com/schedule-fixtures",
-      "officialStage": "league"
+      "officialStage": "league",
+      "broadcast": {
+        "url": "https://www.youtube.com/live/tadc1bC4AGE",
+        "title": "LIVE: Churchill Brothers SC vs Punjab FC | MG ISL 2026-27 | Gameweek 3",
+        "channelUrl": "https://www.youtube.com/@IndianSuperLeague",
+        "language": "English",
+        "status": "scheduled",
+        "verifiedAt": "2026-10-23T10:58:43.370106+00:00",
+        "languageEvidence": "official-default-unlabelled"
+      }
     },
     {
       "id": "194649",
@@ -1771,7 +1976,16 @@
       "phase": "league",
       "label": "Match 16",
       "sourceUrl": "https://www.indiansuperleague.com/schedule-fixtures",
-      "officialStage": "league"
+      "officialStage": "league",
+      "broadcast": {
+        "url": "https://www.youtube.com/live/FgVvdqYDmW4",
+        "title": "LIVE: Kerala Blasters FC vs Mumbai City FC | MG ISL 2026-27 | Gameweek 3",
+        "channelUrl": "https://www.youtube.com/@IndianSuperLeague",
+        "language": "English",
+        "status": "scheduled",
+        "verifiedAt": "2026-10-23T10:58:43.370106+00:00",
+        "languageEvidence": "official-default-unlabelled"
+      }
     },
     {
       "id": "194650",
