@@ -3,6 +3,18 @@
   "season": "2026-27",
   "checks": [
     {
+      "checkedAt": "2026-10-23T13:41:54Z",
+      "kind": "post-match-early",
+      "outcome": "no-change",
+      "summary": "Connected-tool backup verified Inter Kashi 1–5 East Bengal FC, FT, on the official ISL match centre. The validated result and match details were already present on main; no duplicate data change made.",
+      "links": [
+        {
+          "label": "Inter Kashi vs East Bengal FC",
+          "url": "https://www.indiansuperleague.com/matchcentre/194646"
+        }
+      ]
+    },
+    {
       "checkedAt": "2026-10-23T13:33:29.771869+00:00",
       "kind": "lineup-late",
       "outcome": "partial",
