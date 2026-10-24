@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "season": "2026-27",
-  "updatedAt": "2026-10-24T16:11:29Z",
+  "updatedAt": "2026-10-24T16:35:17.472221+00:00",
   "matches": [
     {
       "id": "194634",
@@ -9135,7 +9135,7 @@
       "status": "FT",
       "phase": "league",
       "officialStage": "League",
-      "verifiedAt": "2026-10-24T16:11:29Z",
+      "verifiedAt": "2026-10-24T16:35:17.472221+00:00",
       "sources": [
         {
           "label": "Indian Super League official match centre",
@@ -9338,7 +9338,444 @@
             }
           ]
         }
-      }
+      },
+      "stats": {
+        "home": {
+          "possession": 43,
+          "shots": 5,
+          "shotsOnTarget": 2,
+          "corners": 4,
+          "fouls": 15,
+          "offsides": 1,
+          "yellowCards": 4,
+          "redCards": 0,
+          "passes": 317,
+          "passAccuracy": 79,
+          "tackles": 14,
+          "interceptions": 6,
+          "clearances": 24,
+          "saves": 6
+        },
+        "away": {
+          "possession": 57,
+          "shots": 12,
+          "shotsOnTarget": 6,
+          "corners": 6,
+          "fouls": 10,
+          "offsides": 1,
+          "yellowCards": 1,
+          "redCards": 0,
+          "passes": 423,
+          "passAccuracy": 84,
+          "tackles": 12,
+          "interceptions": 5,
+          "clearances": 20,
+          "saves": 2
+        }
+      },
+      "players": [
+        {
+          "name": "Saurabh Bhanwala",
+          "side": "home",
+          "position": "Defender",
+          "goals": 0,
+          "assists": 0,
+          "shots": 0,
+          "passes": 28,
+          "tackles": 1,
+          "saves": 0
+        },
+        {
+          "name": "Lalthathanga Khawlhring",
+          "side": "home",
+          "position": "Midfielder",
+          "goals": 0,
+          "assists": 0,
+          "shots": 0,
+          "passes": 35,
+          "tackles": 0,
+          "saves": 0
+        },
+        {
+          "name": "Everton Nascimento de Mendonça",
+          "side": "home",
+          "position": "Forward",
+          "goals": 0,
+          "assists": 0,
+          "shots": 3,
+          "passes": 9,
+          "tackles": 0,
+          "saves": 0
+        },
+        {
+          "name": "Jeremy Zohminghlua",
+          "side": "home",
+          "position": "Defender",
+          "goals": 0,
+          "assists": 0,
+          "shots": 0,
+          "passes": 30,
+          "tackles": 2,
+          "saves": 0
+        },
+        {
+          "name": "Moirangthem Thoiba Singh",
+          "side": "home",
+          "position": "Defender",
+          "goals": 0,
+          "assists": 0,
+          "shots": 0,
+          "passes": 42,
+          "tackles": 0,
+          "saves": 0
+        },
+        {
+          "name": "K Lalrinfela",
+          "side": "home",
+          "position": "Midfielder",
+          "goals": 0,
+          "assists": 0,
+          "shots": 0,
+          "passes": 25,
+          "tackles": 3,
+          "saves": 0
+        },
+        {
+          "name": "Giorgi Aburjania",
+          "side": "home",
+          "position": "Midfielder",
+          "goals": 0,
+          "assists": 0,
+          "shots": 1,
+          "passes": 33,
+          "tackles": 3,
+          "saves": 0
+        },
+        {
+          "name": "Vanlalzuidika Chhakchhuak",
+          "side": "home",
+          "position": "Defender",
+          "goals": 0,
+          "assists": 0,
+          "shots": 1,
+          "passes": 37,
+          "tackles": 1,
+          "saves": 0
+        },
+        {
+          "name": "Hrithik Tiwari",
+          "side": "home",
+          "position": "Goalkeeper",
+          "goals": 0,
+          "assists": 0,
+          "shots": 0,
+          "passes": 22,
+          "tackles": 1,
+          "saves": 0
+        },
+        {
+          "name": "Stephen Eze",
+          "side": "home",
+          "position": "Defender",
+          "goals": 0,
+          "assists": 0,
+          "shots": 0,
+          "passes": 25,
+          "tackles": 0,
+          "saves": 0
+        },
+        {
+          "name": "Mahmoud Eid",
+          "side": "home",
+          "position": "Midfielder",
+          "goals": 0,
+          "assists": 0,
+          "shots": 0,
+          "passes": 13,
+          "tackles": 2,
+          "saves": 0
+        },
+        {
+          "name": "Rahim Ali",
+          "side": "home",
+          "position": "Forward",
+          "goals": 0,
+          "assists": 0,
+          "shots": 0,
+          "passes": 4,
+          "tackles": 0,
+          "saves": 0
+        },
+        {
+          "name": "Manuel Antonio Molina Valero",
+          "side": "home",
+          "position": "Midfielder",
+          "goals": 0,
+          "assists": 0,
+          "shots": 0,
+          "passes": 8,
+          "tackles": 0,
+          "saves": 0
+        },
+        {
+          "name": "Imran Khan",
+          "side": "home",
+          "position": "Forward",
+          "goals": 0,
+          "assists": 0,
+          "shots": 0,
+          "passes": 0,
+          "tackles": 1,
+          "saves": 0
+        },
+        {
+          "name": "Nandhakumar Sekar",
+          "side": "home",
+          "position": "Forward",
+          "goals": 0,
+          "assists": 0,
+          "shots": 0,
+          "passes": 6,
+          "tackles": 0,
+          "saves": 0
+        },
+        {
+          "name": "Gurmeet Singh",
+          "side": "away",
+          "position": "Goalkeeper",
+          "goals": 0,
+          "assists": 0,
+          "shots": 0,
+          "passes": 17,
+          "tackles": 0,
+          "saves": 0
+        },
+        {
+          "name": "Pramveer Ranbir",
+          "side": "away",
+          "position": "Defender",
+          "goals": 0,
+          "assists": 0,
+          "shots": 0,
+          "passes": 50,
+          "tackles": 1,
+          "saves": 0
+        },
+        {
+          "name": "Abdul Rabeeh Anjukandan",
+          "side": "away",
+          "position": "Midfielder",
+          "goals": 0,
+          "assists": 0,
+          "shots": 0,
+          "passes": 30,
+          "tackles": 1,
+          "saves": 0
+        },
+        {
+          "name": "Antonio Moyano",
+          "side": "away",
+          "position": "Midfielder",
+          "goals": 0,
+          "assists": 0,
+          "shots": 2,
+          "passes": 58,
+          "tackles": 1,
+          "saves": 0
+        },
+        {
+          "name": "Nikola Ninkovic",
+          "side": "away",
+          "position": "Midfielder",
+          "goals": 0,
+          "assists": 0,
+          "shots": 2,
+          "passes": 35,
+          "tackles": 0,
+          "saves": 0
+        },
+        {
+          "name": "Muthu Irulandi Mayakkannan",
+          "side": "away",
+          "position": "Midfielder",
+          "goals": 0,
+          "assists": 0,
+          "shots": 1,
+          "passes": 48,
+          "tackles": 0,
+          "saves": 0
+        },
+        {
+          "name": "Alaeddine Ajaraie",
+          "side": "away",
+          "position": "Forward",
+          "goals": 0,
+          "assists": 0,
+          "shots": 4,
+          "passes": 25,
+          "tackles": 0,
+          "saves": 0
+        },
+        {
+          "name": "Macarton Louis Nickson",
+          "side": "away",
+          "position": "Midfielder",
+          "goals": 0,
+          "assists": 0,
+          "shots": 1,
+          "passes": 43,
+          "tackles": 4,
+          "saves": 0
+        },
+        {
+          "name": "Eneko Satrustegui Plano",
+          "side": "away",
+          "position": "Forward",
+          "goals": 0,
+          "assists": 0,
+          "shots": 0,
+          "passes": 29,
+          "tackles": 0,
+          "saves": 0
+        },
+        {
+          "name": "Nikhil Barla",
+          "side": "away",
+          "position": "Defender",
+          "goals": 0,
+          "assists": 0,
+          "shots": 1,
+          "passes": 58,
+          "tackles": 2,
+          "saves": 0
+        },
+        {
+          "name": "Jithin Madathil Subran",
+          "side": "away",
+          "position": "Midfielder",
+          "goals": 0,
+          "assists": 0,
+          "shots": 1,
+          "passes": 18,
+          "tackles": 3,
+          "saves": 0
+        },
+        {
+          "name": "Ethyan Jesus Gonzalez Morales",
+          "side": "away",
+          "position": "Forward",
+          "goals": 0,
+          "assists": 0,
+          "shots": 0,
+          "passes": 2,
+          "tackles": 0,
+          "saves": 0
+        },
+        {
+          "name": "Parthib Sundar Gogoi",
+          "side": "away",
+          "position": "Forward",
+          "goals": 0,
+          "assists": 0,
+          "shots": 0,
+          "passes": 6,
+          "tackles": 0,
+          "saves": 0
+        },
+        {
+          "name": "Redeem Tlang",
+          "side": "away",
+          "position": "Forward",
+          "goals": 0,
+          "assists": 0,
+          "shots": 0,
+          "passes": 4,
+          "tackles": 0,
+          "saves": 0
+        }
+      ],
+      "events": [
+        {
+          "minute": 49,
+          "side": "home",
+          "type": "yellow_card",
+          "player": "Everton Nascimento de Mendonça"
+        },
+        {
+          "minute": 63,
+          "side": "home",
+          "type": "substitution",
+          "playerIn": "Nandhakumar Sekar",
+          "playerOut": "Jeremy Zohminghlua"
+        },
+        {
+          "minute": 63,
+          "side": "home",
+          "type": "yellow_card",
+          "player": "Giorgi Aburjania"
+        },
+        {
+          "minute": 70,
+          "side": "away",
+          "type": "yellow_card",
+          "player": "Nikola Ninkovic"
+        },
+        {
+          "minute": 74,
+          "side": "away",
+          "type": "substitution",
+          "playerIn": "Ethyan Jesus Gonzalez Morales",
+          "playerOut": "Nikola Ninkovic"
+        },
+        {
+          "minute": 74,
+          "side": "away",
+          "type": "substitution",
+          "playerIn": "Parthib Sundar Gogoi",
+          "playerOut": "Jithin Madathil Subran"
+        },
+        {
+          "minute": 76,
+          "side": "home",
+          "type": "substitution",
+          "playerIn": "Manuel Antonio Molina Valero",
+          "playerOut": "Giorgi Aburjania"
+        },
+        {
+          "minute": 76,
+          "side": "home",
+          "type": "substitution",
+          "playerIn": "Rahim Ali",
+          "playerOut": "Mahmoud Eid"
+        },
+        {
+          "minute": 86,
+          "side": "away",
+          "type": "substitution",
+          "playerIn": "Redeem Tlang",
+          "playerOut": "Macarton Louis Nickson"
+        },
+        {
+          "minute": 88,
+          "side": "home",
+          "type": "yellow_card",
+          "player": "Rahim Ali"
+        },
+        {
+          "minute": 89,
+          "side": "home",
+          "type": "yellow_card",
+          "player": "Manuel Antonio Molina Valero"
+        },
+        {
+          "minute": 90,
+          "side": "home",
+          "type": "substitution",
+          "playerIn": "Imran Khan",
+          "playerOut": "K Lalrinfela",
+          "addedMinute": 3
+        }
+      ]
     }
   ]
 }
