@@ -111,15 +111,13 @@
     "194647": "2026-10-24T13:32:56.524643+00:00"
   },
   "lastCheck": {
-    "checkedAt": "2026-10-24T13:32:56.524643+00:00",
-    "kind": "lineup-late",
-    "failures": [
-      "YouTube tTd6cg2yZ78: Scheduled stream start is not available yet"
-    ],
+    "checkedAt": "2026-10-24T13:42:33Z",
+    "kind": "post-match-early",
+    "failures": [],
     "changes": {
       "fixtures": 0,
       "results": 0,
-      "lineups": 1,
+      "lineups": 0,
       "streams": 0
     }
   }
