@@ -3,6 +3,18 @@
   "season": "2026-27",
   "checks": [
     {
+      "checkedAt": "2026-10-24T16:11:29Z",
+      "kind": "post-match-late",
+      "outcome": "updated",
+      "summary": "Official ISL match centre confirmed Odisha FC 0–0 NorthEast United FC, FT. Published the final score immediately with the already confirmed lineups; statistics and events remain available for later enrichment.",
+      "links": [
+        {
+          "label": "Odisha FC vs NorthEast United FC",
+          "url": "https://www.indiansuperleague.com/matchcentre/194647"
+        }
+      ]
+    },
+    {
       "checkedAt": "2026-10-24T14:22:21.493339+00:00",
       "kind": "lineup-early",
       "outcome": "partial",
