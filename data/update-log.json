@@ -3,6 +3,22 @@
   "season": "2026-27",
   "checks": [
     {
+      "checkedAt": "2026-10-24T16:57:07.054040+00:00",
+      "kind": "post-match-early",
+      "outcome": "no-change",
+      "summary": "2 match centres checked; updates: fixtures 0, results 0, lineups 0, streams 0. Phase: phase-one. 0 pending; 0 errors.",
+      "links": [
+        {
+          "label": "Odisha FC vs NorthEast United FC",
+          "url": "https://www.indiansuperleague.com/matchcentre/194647"
+        },
+        {
+          "label": "Inter Kashi vs East Bengal FC",
+          "url": "https://www.indiansuperleague.com/matchcentre/194646"
+        }
+      ]
+    },
+    {
       "checkedAt": "2026-10-24T16:51:11.683724+00:00",
       "kind": "lineup-late",
       "outcome": "updated",
