@@ -1996,7 +1996,16 @@
       "phase": "league",
       "label": "Match 17",
       "sourceUrl": "https://www.indiansuperleague.com/schedule-fixtures",
-      "officialStage": "league"
+      "officialStage": "league",
+      "broadcast": {
+        "url": "https://www.youtube.com/live/tN69WAzTwJI",
+        "title": "LIVE: Mohun Bagan Super Giant vs Chennaiyin FC | MG ISL 2026-27",
+        "channelUrl": "https://www.youtube.com/@IndianSuperLeague",
+        "language": "English",
+        "status": "scheduled",
+        "verifiedAt": "2026-10-24T12:40:28.638441+00:00",
+        "languageEvidence": "official-default-unlabelled"
+      }
     },
     {
       "id": "194651",
