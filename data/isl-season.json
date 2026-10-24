@@ -1991,7 +1991,7 @@
               "number": 93
             }
           ],
-          "formation": "5-3-2",
+          "formation": "4-3-3",
           "substitutes": [
             {
               "name": "Rahim Ali",
@@ -2087,7 +2087,7 @@
               "number": 80
             }
           ],
-          "formation": "3-5-2",
+          "formation": "4-3-3",
           "substitutes": [
             {
               "name": "Soraisham Dinesh Singh",
@@ -2137,7 +2137,7 @@
           ]
         },
         "sourceUrl": "https://www.indiansuperleague.com/matchcentre/194647",
-        "verifiedAt": "2026-10-24T13:32:56.524643+00:00"
+        "verifiedAt": "2026-10-24T14:22:15.886159+00:00"
       }
     },
     {
@@ -2213,7 +2213,16 @@
       "phase": "league",
       "label": "Match 18",
       "sourceUrl": "https://www.indiansuperleague.com/schedule-fixtures",
-      "officialStage": "league"
+      "officialStage": "league",
+      "broadcast": {
+        "url": "https://www.youtube.com/live/Ay1gYmJoFMk",
+        "title": "LIVE: FC Goa vs Sporting Club Delhi | MG ISL 2026-27",
+        "channelUrl": "https://www.youtube.com/@IndianSuperLeague",
+        "language": "English",
+        "status": "scheduled",
+        "verifiedAt": "2026-10-24T14:22:15.886159+00:00",
+        "languageEvidence": "official-default-unlabelled"
+      }
     },
     {
       "id": "194652",
