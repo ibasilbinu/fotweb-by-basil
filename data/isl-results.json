@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "season": "2026-27",
-  "updatedAt": "2026-10-24T16:35:17.472221+00:00",
+  "updatedAt": "2026-10-24T16:51:06.815955+00:00",
   "matches": [
     {
       "id": "194634",
@@ -9135,7 +9135,7 @@
       "status": "FT",
       "phase": "league",
       "officialStage": "League",
-      "verifiedAt": "2026-10-24T16:35:17.472221+00:00",
+      "verifiedAt": "2026-10-24T16:51:06.815955+00:00",
       "sources": [
         {
           "label": "Indian Super League official match centre",
@@ -9350,7 +9350,7 @@
           "yellowCards": 4,
           "redCards": 0,
           "passes": 317,
-          "passAccuracy": 79,
+          "passAccuracy": 78,
           "tackles": 14,
           "interceptions": 6,
           "clearances": 24,
@@ -9709,7 +9709,7 @@
           "playerOut": "Jeremy Zohminghlua"
         },
         {
-          "minute": 63,
+          "minute": 64,
           "side": "home",
           "type": "yellow_card",
           "player": "Giorgi Aburjania"
