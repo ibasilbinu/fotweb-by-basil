@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "season": "2026-27",
-  "updatedAt": "2026-10-25T13:37:06.567052+00:00",
+  "updatedAt": "2026-10-25T14:16:09.984355+00:00",
   "matches": [
     {
       "id": "194634",
@@ -9787,7 +9787,7 @@
       "status": "FT",
       "phase": "league",
       "officialStage": "League",
-      "verifiedAt": "2026-10-25T13:37:06.567052+00:00",
+      "verifiedAt": "2026-10-25T14:16:09.984355+00:00",
       "sources": [
         {
           "label": "Indian Super League official match centre",
@@ -9995,15 +9995,15 @@
       "stats": {
         "home": {
           "possession": 41,
-          "shots": 9,
-          "shotsOnTarget": 4,
+          "shots": 8,
+          "shotsOnTarget": 3,
           "corners": 3,
           "fouls": 9,
-          "offsides": 1,
+          "offsides": 0,
           "yellowCards": 2,
           "redCards": 0,
           "passes": 302,
-          "passAccuracy": 71,
+          "passAccuracy": 67,
           "tackles": 11,
           "interceptions": 7,
           "clearances": 19,
@@ -10015,15 +10015,15 @@
           "shotsOnTarget": 8,
           "corners": 3,
           "fouls": 19,
-          "offsides": 2,
+          "offsides": 3,
           "yellowCards": 3,
           "redCards": 0,
           "passes": 436,
-          "passAccuracy": 79,
+          "passAccuracy": 77,
           "tackles": 9,
           "interceptions": 9,
           "clearances": 17,
-          "saves": 2
+          "saves": 1
         }
       },
       "players": [
@@ -10077,7 +10077,7 @@
           "position": "Forward",
           "goals": 0,
           "assists": 0,
-          "shots": 4,
+          "shots": 3,
           "passes": 21,
           "tackles": 1,
           "saves": 0
@@ -10377,7 +10377,7 @@
           "side": "home",
           "type": "yellow_card",
           "player": "Trijoy Savio Dias",
-          "addedMinute": 2
+          "addedMinute": 1
         },
         {
           "minute": 45,
@@ -10397,15 +10397,15 @@
           "minute": 51,
           "side": "home",
           "type": "substitution",
-          "playerIn": "JOHN OKOLI",
-          "playerOut": "Joseph Okoro"
-        },
-        {
-          "minute": 51,
-          "side": "home",
-          "type": "substitution",
           "playerIn": "Melroy Melwin Assisi",
           "playerOut": "Trijoy Savio Dias"
+        },
+        {
+          "minute": 52,
+          "side": "home",
+          "type": "substitution",
+          "playerIn": "JOHN OKOLI",
+          "playerOut": "Joseph Okoro"
         },
         {
           "minute": 62,
@@ -10429,13 +10429,13 @@
           "playerOut": "Vincy Barretto"
         },
         {
-          "minute": 71,
+          "minute": 70,
           "side": "home",
           "type": "yellow_card",
           "player": "Anil Rama Gaonkar"
         },
         {
-          "minute": 76,
+          "minute": 75,
           "side": "away",
           "type": "yellow_card",
           "player": "Raphael Eric Messi Bouli"
