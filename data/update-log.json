@@ -3,6 +3,34 @@
   "season": "2026-27",
   "checks": [
     {
+      "checkedAt": "2026-10-25T14:54:37.533345+00:00",
+      "kind": "lineup-early",
+      "outcome": "partial",
+      "summary": "4 match centres checked; updates: fixtures 0, results 0, lineups 0, streams 0. Phase: phase-one. 0 pending; 1 errors. YouTube FgVvdqYDmW4: Public metadata: Video identity unavailable or private; alternate metadata missing channel identity",
+      "links": [
+        {
+          "label": "Churchill Brothers vs Punjab FC",
+          "url": "https://www.indiansuperleague.com/matchcentre/194648"
+        },
+        {
+          "label": "Kerala Blasters FC vs Mumbai City FC",
+          "url": "https://www.indiansuperleague.com/matchcentre/194649"
+        },
+        {
+          "label": "Inter Kashi vs East Bengal FC",
+          "url": "https://www.indiansuperleague.com/matchcentre/194646"
+        },
+        {
+          "label": "Odisha FC vs NorthEast United FC",
+          "url": "https://www.indiansuperleague.com/matchcentre/194647"
+        },
+        {
+          "label": "Official ISL YouTube Live listing",
+          "url": "https://www.youtube.com/@IndianSuperLeague/streams"
+        }
+      ]
+    },
+    {
       "checkedAt": "2026-10-25T14:16:12.035854+00:00",
       "kind": "match-retry",
       "outcome": "updated",
