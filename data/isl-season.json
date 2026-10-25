@@ -2153,11 +2153,11 @@
       "officialStage": "league",
       "broadcast": {
         "url": "https://www.youtube.com/live/tadc1bC4AGE",
-        "title": "LIVE: Churchill Brothers SC vs Punjab FC | MG ISL 2026-27",
+        "title": "FULL RECAP: Churchill Brothers SC vs Punjab FC (2-3) | MG ISL 2026-27",
         "channelUrl": "https://www.youtube.com/@IndianSuperLeague",
         "language": "English",
-        "status": "live",
-        "verifiedAt": "2026-10-25T11:00:18.492808+00:00",
+        "status": "ended",
+        "verifiedAt": "2026-10-25T13:37:06.567052+00:00",
         "languageEvidence": "official-default-unlabelled"
       },
       "lineups": {
@@ -2373,9 +2373,205 @@
         "title": "LIVE: Kerala Blasters FC vs Mumbai City FC | MG ISL 2026-27 |",
         "channelUrl": "https://www.youtube.com/@IndianSuperLeague",
         "language": "English",
-        "status": "scheduled",
-        "verifiedAt": "2026-10-23T13:32:58.470309+00:00",
+        "status": "live",
+        "verifiedAt": "2026-10-25T13:37:06.567052+00:00",
         "languageEvidence": "official-default-unlabelled"
+      },
+      "lineups": {
+        "home": {
+          "starters": [
+            {
+              "name": "Amrinder Ranjit Singh",
+              "number": 1
+            },
+            {
+              "name": "Rv Hormipam",
+              "number": 4
+            },
+            {
+              "name": "Freddy Lallawmawma",
+              "number": 6
+            },
+            {
+              "name": "Thingujam Korou Singh",
+              "number": 7
+            },
+            {
+              "name": "Adrian Nicolas Luna Retamar",
+              "number": 10
+            },
+            {
+              "name": "Sanan Mohammed K",
+              "number": 11
+            },
+            {
+              "name": "James William Bolton",
+              "number": 13
+            },
+            {
+              "name": "Nebojsa Kosovic",
+              "number": 23
+            },
+            {
+              "name": "Aibanbha Kupar Dohling",
+              "number": 27
+            },
+            {
+              "name": "Huidrom Naocha Singh",
+              "number": 50
+            },
+            {
+              "name": "Momo Yansane",
+              "number": 99
+            }
+          ],
+          "formation": "4-3-3",
+          "substitutes": [
+            {
+              "name": "Soraisham Sandeep Singh",
+              "number": 3,
+              "position": "Defender"
+            },
+            {
+              "name": "Brahmacharimayum Sumit Sharma",
+              "number": 5,
+              "position": "Defender"
+            },
+            {
+              "name": "Vibin Mohanan",
+              "number": 8,
+              "position": "Midfielder"
+            },
+            {
+              "name": "Andre Jay Green",
+              "number": 9,
+              "position": "Midfielder"
+            },
+            {
+              "name": "Dom Sahil Krishe de Noronha Tavora",
+              "number": 15,
+              "position": "Midfielder"
+            },
+            {
+              "name": "Arsh Anwer Shaikh",
+              "number": 31,
+              "position": "Goalkeeper"
+            },
+            {
+              "name": "Fallou Ndiaye",
+              "number": 44,
+              "position": "Defender"
+            },
+            {
+              "name": "Sreekuttan MS",
+              "number": 45,
+              "position": "Forward"
+            },
+            {
+              "name": "Ebindas Yesudasan",
+              "number": 47,
+              "position": "Midfielder"
+            }
+          ]
+        },
+        "away": {
+          "starters": [
+            {
+              "name": "Hmingthanmawia Ralte",
+              "number": 3
+            },
+            {
+              "name": "Lazar Cirkovic",
+              "number": 4
+            },
+            {
+              "name": "Carlos Javier Delgado Rodriguez",
+              "number": 5
+            },
+            {
+              "name": "Farukh Haji Kasam Choudhary",
+              "number": 7
+            },
+            {
+              "name": "Sergio Llamas Pardo",
+              "number": 8
+            },
+            {
+              "name": "Leandro Gaston Otormin Fumero",
+              "number": 20
+            },
+            {
+              "name": "Muhammed Ajsal",
+              "number": 22
+            },
+            {
+              "name": "Rehenesh Thumbirumbu Paramba",
+              "number": 23
+            },
+            {
+              "name": "Akash Mishra",
+              "number": 31
+            },
+            {
+              "name": "Zothanpuia",
+              "number": 45
+            },
+            {
+              "name": "Noufal P.N",
+              "number": 92
+            }
+          ],
+          "formation": "4-2-4-0",
+          "substitutes": [
+            {
+              "name": "Bawitlung Lalnuntluanga",
+              "number": 14,
+              "position": "Midfielder"
+            },
+            {
+              "name": "Bijay Chhetri",
+              "number": 17,
+              "position": "Defender"
+            },
+            {
+              "name": "Hridaya Jain",
+              "number": 19,
+              "position": "Forward"
+            },
+            {
+              "name": "Supratim Das",
+              "number": 24,
+              "position": "Midfielder"
+            },
+            {
+              "name": "Nathan Asher Rodrigues",
+              "number": 27,
+              "position": "Defender"
+            },
+            {
+              "name": "Sahil Panwar",
+              "number": 36,
+              "position": "Defender"
+            },
+            {
+              "name": "Aadil Sheikh",
+              "number": 39,
+              "position": "Midfielder"
+            },
+            {
+              "name": "Yuvraj Kadam",
+              "number": 49,
+              "position": "Forward"
+            },
+            {
+              "name": "Ashish Sibi",
+              "number": 89,
+              "position": "Goalkeeper"
+            }
+          ]
+        },
+        "sourceUrl": "https://www.indiansuperleague.com/matchcentre/194649",
+        "verifiedAt": "2026-10-25T13:37:06.567052+00:00"
       }
     },
     {
