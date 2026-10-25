@@ -3,6 +3,18 @@
   "season": "2026-27",
   "checks": [
     {
+      "checkedAt": "2026-10-25T13:45:24Z",
+      "kind": "post-match-early",
+      "outcome": "no-change",
+      "summary": "Official ISL match centre confirmed Churchill Brothers 2–3 Punjab FC, FT; the verified result, confirmed lineups, statistics, events and player data were already current. No football-data changes.",
+      "links": [
+        {
+          "label": "Churchill Brothers vs Punjab FC",
+          "url": "https://www.indiansuperleague.com/matchcentre/194648"
+        }
+      ]
+    },
+    {
       "checkedAt": "2026-10-25T13:37:34.239324+00:00",
       "kind": "lineup-late",
       "outcome": "updated",
