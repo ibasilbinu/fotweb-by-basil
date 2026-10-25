@@ -3,6 +3,18 @@
   "season": "2026-27",
   "checks": [
     {
+      "checkedAt": "2026-10-25T16:20:56Z",
+      "kind": "post-match-late",
+      "outcome": "no-change",
+      "summary": "Official ISL match centre confirmed Kerala Blasters FC 0–0 Mumbai City FC, FT. The verified result, confirmed lineups, statistics, events and player data were already published by the hourly importer; no football-data changes.",
+      "links": [
+        {
+          "label": "Kerala Blasters FC vs Mumbai City FC",
+          "url": "https://www.indiansuperleague.com/matchcentre/194649"
+        }
+      ]
+    },
+    {
       "checkedAt": "2026-10-25T16:18:32.617500+00:00",
       "kind": "hourly",
       "outcome": "partial",

@@ -110,17 +110,15 @@
     "194646": "2026-10-25T16:18:25.727631+00:00",
     "194647": "2026-10-25T16:18:25.727631+00:00",
     "194648": "2026-10-25T16:18:25.727631+00:00",
-    "194649": "2026-10-25T16:18:25.727631+00:00"
+    "194649": "2026-10-25T16:20:56Z"
   },
   "lastCheck": {
-    "checkedAt": "2026-10-25T16:18:25.727631+00:00",
-    "kind": "hourly",
-    "failures": [
-      "YouTube FgVvdqYDmW4: Public metadata: Video identity unavailable or private; alternate metadata missing channel identity"
-    ],
+    "checkedAt": "2026-10-25T16:20:56Z",
+    "kind": "post-match-late",
+    "failures": [],
     "changes": {
       "fixtures": 0,
-      "results": 1,
+      "results": 0,
       "lineups": 0,
       "streams": 0
     }
