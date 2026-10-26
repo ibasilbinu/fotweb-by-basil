@@ -113,9 +113,11 @@
     "194649": "2026-10-26T11:07:14.918950+00:00"
   },
   "lastCheck": {
-    "checkedAt": "2026-10-26T11:07:14.918950+00:00",
-    "kind": "lineup-early",
-    "failures": [],
+    "checkedAt": "2026-10-26T13:49:40Z",
+    "kind": "post-match-early",
+    "failures": [
+      "Official ISL 2026 fixture page: URL https://www.indiansuperleague.com/schedule-fixtures/2026 was not accessible via the connected web source"
+    ],
     "changes": {
       "fixtures": 0,
       "results": 0,
