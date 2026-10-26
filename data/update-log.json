@@ -3,6 +3,18 @@
   "season": "2026-27",
   "checks": [
     {
+      "checkedAt": "2026-10-26T16:19:53Z",
+      "kind": "post-match-late",
+      "outcome": "updated",
+      "summary": "Official ISL match centre confirmed Mohun Bagan Super Giant 1–0 Chennaiyin FC, FT. Published the final score immediately with the already confirmed lineups; statistics and events remain available for later enrichment.",
+      "links": [
+        {
+          "label": "Mohun Bagan Super Giant vs Chennaiyin FC",
+          "url": "https://www.indiansuperleague.com/matchcentre/194650"
+        }
+      ]
+    },
+    {
       "checkedAt": "2026-10-26T14:16:36.651587+00:00",
       "kind": "hourly",
       "outcome": "partial",

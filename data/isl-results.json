@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "season": "2026-27",
-  "updatedAt": "2026-10-25T17:10:58.408696+00:00",
+  "updatedAt": "2026-10-26T16:19:53Z",
   "matches": [
     {
       "id": "194634",
@@ -11125,6 +11125,224 @@
           "addedMinute": 2
         }
       ]
+    },
+    {
+      "id": "194650",
+      "date": "2026-10-26",
+      "home": "Mohun Bagan Super Giant",
+      "away": "Chennaiyin FC",
+      "homeGoals": 1,
+      "awayGoals": 0,
+      "status": "FT",
+      "phase": "league",
+      "officialStage": "League",
+      "verifiedAt": "2026-10-26T16:19:53Z",
+      "sources": [
+        {
+          "label": "Indian Super League official match centre",
+          "url": "https://www.indiansuperleague.com/matchcentre/194650"
+        }
+      ],
+      "matchUrl": "https://www.indiansuperleague.com/matchcentre/194650",
+      "winnerId": "1874",
+      "venue": "Vivekananda Yuba Bharati Krirangan, Kolkata",
+      "report": "Mohun Bagan Super Giant 1–0 Chennaiyin FC. Full-time; result confirmed by the official ISL match centre.",
+      "lineups": {
+        "home": {
+          "starters": [
+            {
+              "name": "Vishal Kaith",
+              "number": 1
+            },
+            {
+              "name": "Rahul Shankar Bheke",
+              "number": 2
+            },
+            {
+              "name": "Mehtab Singh",
+              "number": 5
+            },
+            {
+              "name": "Samir Zeljkovic",
+              "number": 8
+            },
+            {
+              "name": "Lallianzuala Chhangte",
+              "number": 9
+            },
+            {
+              "name": "Manvir Singh",
+              "number": 11
+            },
+            {
+              "name": "Lee Harry Erwin",
+              "number": 19
+            },
+            {
+              "name": "Alberto Rodriguez Martin",
+              "number": 21
+            },
+            {
+              "name": "Deepak Tangri",
+              "number": 22
+            },
+            {
+              "name": "Tekcham Abhishek Singh",
+              "number": 27
+            },
+            {
+              "name": "Dejan Drazic",
+              "number": 71
+            }
+          ],
+          "formation": "4-2-3-1",
+          "substitutes": [
+            {
+              "name": "Anirudh Thapa",
+              "number": 6,
+              "position": "Midfielder"
+            },
+            {
+              "name": "Liston Colaco",
+              "number": 7,
+              "position": "Midfielder"
+            },
+            {
+              "name": "Subhasish Prodyut Bose",
+              "number": 15,
+              "position": "Defender"
+            },
+            {
+              "name": "Abhishek Dhananjay Suryavanshi",
+              "number": 16,
+              "position": "Midfielder"
+            },
+            {
+              "name": "Kiyan Nassiri Giri",
+              "number": 17,
+              "position": "Forward"
+            },
+            {
+              "name": "Sahal Abdul Samad",
+              "number": 18,
+              "position": "Midfielder"
+            },
+            {
+              "name": "Syed Zahid Hussain Bukhari",
+              "number": 24,
+              "position": "Goalkeeper"
+            },
+            {
+              "name": "Alex Saji",
+              "number": 40,
+              "position": "Defender"
+            },
+            {
+              "name": "Suhail Ahmad Bhat",
+              "number": 72,
+              "position": "Forward"
+            }
+          ]
+        },
+        "away": {
+          "starters": [
+            {
+              "name": "Emmanuel Imanishimwe",
+              "number": 2
+            },
+            {
+              "name": "Laldinpuia Pachuau",
+              "number": 3
+            },
+            {
+              "name": "Saheef Muhammed",
+              "number": 5
+            },
+            {
+              "name": "Ramon de Andrade Souza",
+              "number": 7
+            },
+            {
+              "name": "Nikola Stojanovic",
+              "number": 8
+            },
+            {
+              "name": "Madih Talal",
+              "number": 10
+            },
+            {
+              "name": "Mohammad Nawaz",
+              "number": 13
+            },
+            {
+              "name": "Ayush Dev Chhetri",
+              "number": 14
+            },
+            {
+              "name": "Irfan Yadwad",
+              "number": 24
+            },
+            {
+              "name": "Namgyal Bhutia",
+              "number": 27
+            },
+            {
+              "name": "Brison Deuben Fernandes",
+              "number": 42
+            }
+          ],
+          "formation": "4-3-3",
+          "substitutes": [
+            {
+              "name": "Samik Mitra",
+              "number": 1,
+              "position": "Goalkeeper"
+            },
+            {
+              "name": "Nuno Miguel Pereira Reis",
+              "number": 4,
+              "position": "Defender"
+            },
+            {
+              "name": "Bryce Brian Miranda",
+              "number": 11,
+              "position": "Midfielder"
+            },
+            {
+              "name": "Shubham Rawat",
+              "number": 16,
+              "position": "Forward"
+            },
+            {
+              "name": "Lalriathpuia Chawngthu",
+              "number": 17,
+              "position": "Midfielder"
+            },
+            {
+              "name": "Dippendu Biswas",
+              "number": 32,
+              "position": "Defender"
+            },
+            {
+              "name": "Yumkhaibam Jiteshwor Singh",
+              "number": 37,
+              "position": "Midfielder"
+            },
+            {
+              "name": "Klusner John Manuel Pereira",
+              "number": 47,
+              "position": "Midfielder"
+            },
+            {
+              "name": "S Prakadeswaran",
+              "number": 52,
+              "position": "Midfielder"
+            }
+          ]
+        },
+        "sourceUrl": "https://www.indiansuperleague.com/matchcentre/194650",
+        "verifiedAt": "2026-10-26T13:53:04.455821+00:00"
+      }
     }
   ]
 }
