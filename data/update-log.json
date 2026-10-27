@@ -3,6 +3,26 @@
   "season": "2026-27",
   "checks": [
     {
+      "checkedAt": "2026-10-27T18:57:52.756556+00:00",
+      "kind": "post-match-early",
+      "outcome": "no-change",
+      "summary": "3 match centres checked; updates: fixtures 0, results 0, lineups 0, streams 0. Phase: phase-one. 0 pending; 0 errors.",
+      "links": [
+        {
+          "label": "Churchill Brothers vs Punjab FC",
+          "url": "https://www.indiansuperleague.com/matchcentre/194648"
+        },
+        {
+          "label": "Kerala Blasters FC vs Mumbai City FC",
+          "url": "https://www.indiansuperleague.com/matchcentre/194649"
+        },
+        {
+          "label": "Mohun Bagan Super Giant vs Chennaiyin FC",
+          "url": "https://www.indiansuperleague.com/matchcentre/194650"
+        }
+      ]
+    },
+    {
       "checkedAt": "2026-10-27T18:51:55.049039+00:00",
       "kind": "lineup-late",
       "outcome": "no-change",
