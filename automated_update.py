@@ -80,6 +80,20 @@ def merge_lineups(previous, incoming):
                 merged[side].pop('substitutes')
     return merged
 
+def repair_result_lineup_metadata(results):
+    """Remove fixture-only provenance keys accidentally copied into FT lineups."""
+    repaired = 0
+    allowed_metadata = {'sourceUrl', 'verifiedAt'}
+    for match in results.get('matches', []):
+        lineups = match.get('lineups')
+        if not isinstance(lineups, dict):
+            continue
+        extra = set(lineups) - {'home', 'away'}
+        if extra and extra <= allowed_metadata:
+            match['lineups'] = {side: lineups[side] for side in ('home', 'away') if side in lineups}
+            repaired += 1
+    return repaired
+
 def convert(data, fixture, names, stamp, warnings=None):
     warnings = warnings if warnings is not None else []
     detail = data['match_detail']
@@ -181,6 +195,7 @@ def run(kind='hourly', root=ROOT, now=None):
     state = json.loads((root/'data/automation-state.json').read_text())
     if state.get('season') != '2026-27' or not state.get('phaseOneFixtureIds'):
         raise ValueError('Invalid season automation state')
+    repaired_results = repair_result_lineup_metadata(results)
     validate_season(season); validate_results(results); validate_update_log(log)
     now = now or datetime.now(timezone.utc)
     stamp = now.isoformat()
@@ -190,7 +205,7 @@ def run(kind='hourly', root=ROOT, now=None):
         return 0
     names = {t['id']:t['name'] for t in season['teams']}
     known = {m['id']:m for m in results['matches']}
-    changes = {'fixtures':0, 'results':0, 'lineups':0, 'streams':0}
+    changes = {'fixtures':0, 'results':repaired_results, 'lineups':0, 'streams':0}
     links, failures, pending = [], [], []
     sources = state.setdefault('sources', {})
     if kind in ('hourly', 'morning'):

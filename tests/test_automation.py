@@ -343,6 +343,16 @@ class RunTests(unittest.TestCase):
         for name,value in values.items(): (path/f'data/{name}.json').write_text(json.dumps(value))
         return season
 
+    def test_result_lineup_fixture_metadata_is_repaired(self):
+        result = {'matches': [{'id': '194650', 'lineups': {
+            'home': {'starters': []}, 'away': {'starters': []},
+            'sourceUrl': 'https://www.indiansuperleague.com/matchcentre/194650',
+            'verifiedAt': STAMP,
+        }}]}
+        self.assertEqual(importer.repair_result_lineup_metadata(result), 1)
+        self.assertEqual(set(result['matches'][0]['lineups']), {'home', 'away'})
+        self.assertEqual(importer.repair_result_lineup_metadata(result), 0)
+
     def test_later_missing_bench_preserves_lists_before_and_after_full_time(self):
         for complete in (False, True):
             with self.subTest(complete=complete), tempfile.TemporaryDirectory() as directory:
