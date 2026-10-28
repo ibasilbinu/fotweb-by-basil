@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "season": "2026-27",
-  "updatedAt": "2026-10-27T02:34:02.677895+00:00",
+  "updatedAt": "2026-10-28T16:12:05+00:00",
   "matches": [
     {
       "id": "194634",
@@ -11814,6 +11814,221 @@
           "playerOut": "Namgyal Bhutia"
         }
       ]
+    },
+    {
+      "id": "194651",
+      "date": "2026-10-28",
+      "home": "FC Goa",
+      "away": "Sporting Club Delhi",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "status": "FT",
+      "phase": "league",
+      "officialStage": "League",
+      "verifiedAt": "2026-10-28T16:12:05+00:00",
+      "sources": [
+        {
+          "label": "Indian Super League official match centre",
+          "url": "https://www.indiansuperleague.com/matchcentre/194651"
+        }
+      ],
+      "matchUrl": "https://www.indiansuperleague.com/matchcentre/194651",
+      "venue": "Pandit Jawaharlal Nehru Stadium, Goa",
+      "report": "FC Goa 1–1 Sporting Club Delhi. Full-time; result confirmed by the official ISL match centre.",
+      "lineups": {
+        "home": {
+          "starters": [
+            {
+              "name": "Sandesh Jhingan",
+              "number": 3
+            },
+            {
+              "name": "Alexander Vallejo Minguez",
+              "number": 5
+            },
+            {
+              "name": "Haobam Tomba Singh",
+              "number": 8
+            },
+            {
+              "name": "Christian Borrego Isabel",
+              "number": 9
+            },
+            {
+              "name": "Pedro Alejandro Zalaya Galardon",
+              "number": 15
+            },
+            {
+              "name": "Udanta Singh Kumam",
+              "number": 21
+            },
+            {
+              "name": "Francisco Feuillassier Abalo",
+              "number": 28
+            },
+            {
+              "name": "Ronney Willson Kharbudon",
+              "number": 35
+            },
+            {
+              "name": "Muhammed Nemil Valiyattil",
+              "number": 44
+            },
+            {
+              "name": "Bob Jackson Raj",
+              "number": 45
+            },
+            {
+              "name": "KC Malsawmsanga",
+              "number": 77
+            }
+          ],
+          "formation": "3-4-3",
+          "substitutes": [
+            {
+              "name": "Isak Vanlalruatfela",
+              "number": 19,
+              "position": "Forward"
+            },
+            {
+              "name": "Saveme Tariang",
+              "number": 25,
+              "position": "Defender"
+            },
+            {
+              "name": "Nim Dorjee Tamang",
+              "number": 29,
+              "position": "Defender"
+            },
+            {
+              "name": "Haodamlian Vaiphei",
+              "number": 40,
+              "position": "Forward"
+            },
+            {
+              "name": "Sitroy Carvalho",
+              "number": 41,
+              "position": "Defender"
+            },
+            {
+              "name": "Vellington Marcos Fernandes",
+              "number": 46,
+              "position": "Midfielder"
+            },
+            {
+              "name": "Rudra Ved",
+              "number": 47,
+              "position": "Defender"
+            },
+            {
+              "name": "Konsam Akash Singh",
+              "number": 48,
+              "position": "Defender"
+            },
+            {
+              "name": "Lara Sharma",
+              "number": 72,
+              "position": "Goalkeeper"
+            }
+          ]
+        },
+        "away": {
+          "starters": [
+            {
+              "name": "Lalrinliana Hnamte",
+              "number": 4
+            },
+            {
+              "name": "Rodrigo Araujo da Silva Filho",
+              "number": 7
+            },
+            {
+              "name": "Juan Sebastian Pena Bermudez",
+              "number": 10
+            },
+            {
+              "name": "Clarence Savio Fernandes",
+              "number": 15
+            },
+            {
+              "name": "Lamgoulen SemkholunS",
+              "number": 19
+            },
+            {
+              "name": "Nora Fernandes",
+              "number": 20
+            },
+            {
+              "name": "Mohammed Aimen",
+              "number": 23
+            },
+            {
+              "name": "Mohammed Azhar",
+              "number": 24
+            },
+            {
+              "name": "Duvan Felipe Viafara Mina",
+              "number": 28
+            },
+            {
+              "name": "Manoj Mohammad",
+              "number": 41
+            },
+            {
+              "name": "Junior Harrison Nduka",
+              "number": 45
+            }
+          ],
+          "formation": "5-3-2",
+          "substitutes": [
+            {
+              "name": "Ashutosh Mehta",
+              "number": 6,
+              "position": "Defender"
+            },
+            {
+              "name": "David Richard Ndayishimiye",
+              "number": 8,
+              "position": "Midfielder"
+            },
+            {
+              "name": "Augustine Lalrochana",
+              "number": 18,
+              "position": "Forward"
+            },
+            {
+              "name": "Yanglem Sanatomba Singh",
+              "number": 25,
+              "position": "Defender"
+            },
+            {
+              "name": "Sourav Kumar",
+              "number": 27,
+              "position": "Forward"
+            },
+            {
+              "name": "Thokchom Diamond Singh",
+              "number": 30,
+              "position": "Midfielder"
+            },
+            {
+              "name": "Vishal Yadav",
+              "number": 31,
+              "position": "Goalkeeper"
+            },
+            {
+              "name": "Akshat Mehra",
+              "number": 66,
+              "position": "Midfielder"
+            },
+            {
+              "name": "Carlos Manuel dos Santos Fortes",
+              "number": 99,
+              "position": "Forward"
+            }
+          ]
+        }
+      }
     }
   ]
 }
