@@ -3,6 +3,18 @@
   "season": "2026-27",
   "checks": [
     {
+      "checkedAt": "2026-10-28T13:46:06+00:00",
+      "kind": "post-match-early",
+      "outcome": "no-change",
+      "summary": "No 17:00 IST fixture was scheduled for 28 October 2026; no final result was due. The published 19:30 IST FC Goa vs Sporting Club Delhi fixture remains outside this check.",
+      "links": [
+        {
+          "label": "Official ISL fixture schedule",
+          "url": "https://www.indiansuperleague.com/schedule-fixtures"
+        }
+      ]
+    },
+    {
       "checkedAt": "2026-10-28T13:33:20.305129+00:00",
       "kind": "lineup-late",
       "outcome": "updated",
