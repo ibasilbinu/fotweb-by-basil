@@ -3,6 +3,18 @@
   "season": "2026-27",
   "checks": [
     {
+      "checkedAt": "2026-10-29T21:27:38.028648+00:00",
+      "kind": "match-retry",
+      "outcome": "no-change",
+      "summary": "1 match centres checked; updates: fixtures 0, results 0, lineups 0, streams 0. Phase: phase-one. 0 pending; 0 errors.",
+      "links": [
+        {
+          "label": "FC Goa vs Sporting Club Delhi",
+          "url": "https://www.indiansuperleague.com/matchcentre/194651"
+        }
+      ]
+    },
+    {
       "checkedAt": "2026-10-29T21:07:36.160983+00:00",
       "kind": "hourly",
       "outcome": "no-change",
