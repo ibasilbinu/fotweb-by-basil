@@ -3,6 +3,22 @@
   "season": "2026-27",
   "checks": [
     {
+      "checkedAt": "2026-10-29T13:42:10+00:00",
+      "kind": "post-match-early",
+      "outcome": "partial",
+      "summary": "No 17:00 IST fixture was scheduled for 29 October 2026, so no final result was due. Official ISL season fixture page was inaccessible to this backup check; the successful 29 October 14:12 IST workflow snapshot was preserved.",
+      "links": [
+        {
+          "label": "Official ISL fixture schedule",
+          "url": "https://www.indiansuperleague.com/schedule-fixtures"
+        },
+        {
+          "label": "Latest successful source-check workflow",
+          "url": "https://github.com/ibasilbinu/fotweb-by-basil/actions/runs/40843992123"
+        }
+      ]
+    },
+    {
       "checkedAt": "2026-10-29T13:30:33.710855+00:00",
       "kind": "lineup-late",
       "outcome": "partial",

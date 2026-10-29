@@ -115,14 +115,10 @@
     "194651": "2026-10-29T13:27:03.913793+00:00"
   },
   "lastCheck": {
-    "checkedAt": "2026-10-29T13:27:03.913793+00:00",
-    "kind": "lineup-late",
+    "checkedAt": "2026-10-29T13:42:10+00:00",
+    "kind": "post-match-early",
     "failures": [
-      "YouTube k178PJ6DfII: Scheduled stream start is not available yet",
-      "YouTube gWexbVfNmFo: Scheduled stream start is not available yet",
-      "YouTube nZ8rESpcRTU: Scheduled stream start is not available yet",
-      "YouTube raS61rqsQQI: Scheduled stream start is not available yet",
-      "YouTube dNbGWuWcG5Y: Scheduled stream start is not available yet"
+      "Official ISL season fixture page was inaccessible to this backup check; the successful 29 October 14:12 IST workflow snapshot was preserved."
     ],
     "changes": {
       "fixtures": 0,
