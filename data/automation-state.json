@@ -85,12 +85,12 @@
   "phaseOneLastKickoff": "2027-01-17T19:30+05:30",
   "sources": {
     "fixtures": {
-      "checkedAt": "2026-10-29T08:41:55.192423+00:00",
+      "checkedAt": "2026-10-29T16:07:30.062974+00:00",
       "outcome": "ok"
     },
     "streams": {
-      "checkedAt": "2026-10-29T13:27:03.913793+00:00",
-      "outcome": "partial"
+      "checkedAt": "2026-10-29T16:07:30.062974+00:00",
+      "outcome": "ok"
     }
   },
   "pending": [],
@@ -112,14 +112,12 @@
     "194648": "2026-10-28T10:57:48.915592+00:00",
     "194649": "2026-10-28T13:32:32.746712+00:00",
     "194650": "2026-10-29T13:27:03.913793+00:00",
-    "194651": "2026-10-29T13:27:03.913793+00:00"
+    "194651": "2026-10-29T16:07:30.062974+00:00"
   },
   "lastCheck": {
-    "checkedAt": "2026-10-29T13:42:10+00:00",
-    "kind": "post-match-early",
-    "failures": [
-      "Official ISL season fixture page was inaccessible to this backup check; the successful 29 October 14:12 IST workflow snapshot was preserved."
-    ],
+    "checkedAt": "2026-10-29T16:07:30.062974+00:00",
+    "kind": "hourly",
+    "failures": [],
     "changes": {
       "fixtures": 0,
       "results": 0,
