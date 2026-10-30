@@ -3,6 +3,26 @@
   "season": "2026-27",
   "checks": [
     {
+      "checkedAt": "2026-10-30T13:27:12.661205+00:00",
+      "kind": "lineup-late",
+      "outcome": "updated",
+      "summary": "2 match centres checked; updates: fixtures 0, results 0, lineups 1, streams 0. Phase: phase-one. 0 pending; 0 errors.",
+      "links": [
+        {
+          "label": "NorthEast United FC vs Bengaluru FC",
+          "url": "https://www.indiansuperleague.com/matchcentre/194652"
+        },
+        {
+          "label": "FC Goa vs Sporting Club Delhi",
+          "url": "https://www.indiansuperleague.com/matchcentre/194651"
+        },
+        {
+          "label": "Official ISL YouTube Live listing",
+          "url": "https://www.youtube.com/@IndianSuperLeague/streams"
+        }
+      ]
+    },
+    {
       "checkedAt": "2026-10-30T11:00:55.629740+00:00",
       "kind": "lineup-early",
       "outcome": "no-change",
