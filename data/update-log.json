@@ -3,6 +3,30 @@
   "season": "2026-27",
   "checks": [
     {
+      "checkedAt": "2026-10-30T16:21:18.591475+00:00",
+      "kind": "hourly",
+      "outcome": "updated",
+      "summary": "2 match centres checked; updates: fixtures 0, results 1, lineups 0, streams 1. Phase: phase-one. 0 pending; 0 errors.",
+      "links": [
+        {
+          "label": "Official ISL fixture discovery",
+          "url": "https://www.indiansuperleague.com/schedule-fixtures"
+        },
+        {
+          "label": "NorthEast United FC vs Bengaluru FC",
+          "url": "https://www.indiansuperleague.com/matchcentre/194652"
+        },
+        {
+          "label": "FC Goa vs Sporting Club Delhi",
+          "url": "https://www.indiansuperleague.com/matchcentre/194651"
+        },
+        {
+          "label": "Official ISL YouTube Live listing",
+          "url": "https://www.youtube.com/@IndianSuperLeague/streams"
+        }
+      ]
+    },
+    {
       "checkedAt": "2026-10-30T14:07:50.286932+00:00",
       "kind": "hourly",
       "outcome": "partial",
@@ -7651,26 +7675,6 @@
         {
           "label": "Churchill Brothers vs Mumbai City FC",
           "url": "https://www.indiansuperleague.com/matchcentre/194637"
-        }
-      ]
-    },
-    {
-      "checkedAt": "2026-10-11T10:53:42.072594Z",
-      "kind": "hourly",
-      "outcome": "no-change",
-      "summary": "Checked 3 pending official match pages; no verified lineup import available. Source requests completed.",
-      "links": [
-        {
-          "label": "Inter Kashi vs Kerala Blasters FC",
-          "url": "https://www.indiansuperleague.com/matchcentre/194636"
-        },
-        {
-          "label": "Churchill Brothers vs Mumbai City FC",
-          "url": "https://www.indiansuperleague.com/matchcentre/194637"
-        },
-        {
-          "label": "NorthEast United FC vs Mohun Bagan Super Giant",
-          "url": "https://www.indiansuperleague.com/matchcentre/194638"
         }
       ]
     }
