@@ -3,6 +3,22 @@
   "season": "2026-27",
   "checks": [
     {
+      "checkedAt": "2026-10-30T13:38:45+00:00",
+      "kind": "post-match-early",
+      "outcome": "no-change",
+      "summary": "No 17:00 IST fixture was scheduled for 30 October 2026; no final result was due. Today's published fixture is NorthEast United FC vs Bengaluru FC at 19:30 IST.",
+      "links": [
+        {
+          "label": "Official ISL fixture schedule",
+          "url": "https://www.indiansuperleague.com/schedule-fixtures"
+        },
+        {
+          "label": "NorthEast United FC vs Bengaluru FC",
+          "url": "https://www.indiansuperleague.com/matchcentre/194652"
+        }
+      ]
+    },
+    {
       "checkedAt": "2026-10-30T13:27:12.661205+00:00",
       "kind": "lineup-late",
       "outcome": "updated",
