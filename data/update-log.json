@@ -3,6 +3,22 @@
   "season": "2026-27",
   "checks": [
     {
+      "checkedAt": "2026-10-30T16:22:30+00:00",
+      "kind": "post-match-late",
+      "outcome": "no-change",
+      "summary": "NorthEast United FC 1–1 Bengaluru FC was verified as FT from the official ISL match centre and had already been published by the retried source-check importer during this run; no additional data change was required.",
+      "links": [
+        {
+          "label": "NorthEast United FC vs Bengaluru FC",
+          "url": "https://www.indiansuperleague.com/matchcentre/194652"
+        },
+        {
+          "label": "Successful source-check retry",
+          "url": "https://github.com/ibasilbinu/fotweb-by-basil/actions/runs/41069079319"
+        }
+      ]
+    },
+    {
       "checkedAt": "2026-10-30T16:21:18.591475+00:00",
       "kind": "hourly",
       "outcome": "updated",
@@ -7651,30 +7667,6 @@
         {
           "label": "Official ISL YouTube Live listing",
           "url": "https://www.youtube.com/@IndianSuperLeague/streams"
-        }
-      ]
-    },
-    {
-      "checkedAt": "2026-10-11T13:51:52.865453+00:00",
-      "kind": "post-match-early",
-      "outcome": "partial",
-      "summary": "Official match import: 4 checked, 4 updates, 0 failures. Stream, squad and schedule discovery not covered by this importer.",
-      "links": [
-        {
-          "label": "Bengaluru FC vs Sporting Club Delhi",
-          "url": "https://www.indiansuperleague.com/matchcentre/194634"
-        },
-        {
-          "label": "FC Goa vs Chennaiyin FC",
-          "url": "https://www.indiansuperleague.com/matchcentre/194635"
-        },
-        {
-          "label": "Inter Kashi vs Kerala Blasters FC",
-          "url": "https://www.indiansuperleague.com/matchcentre/194636"
-        },
-        {
-          "label": "Churchill Brothers vs Mumbai City FC",
-          "url": "https://www.indiansuperleague.com/matchcentre/194637"
         }
       ]
     }
