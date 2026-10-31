@@ -3,6 +3,30 @@
   "season": "2026-27",
   "checks": [
     {
+      "checkedAt": "2026-10-31T08:35:02.501118+00:00",
+      "kind": "morning",
+      "outcome": "no-change",
+      "summary": "2 match centres checked; updates: fixtures 0, results 0, lineups 0, streams 0. Phase: phase-one. 0 pending; 0 errors.",
+      "links": [
+        {
+          "label": "Official ISL fixture discovery",
+          "url": "https://www.indiansuperleague.com/schedule-fixtures"
+        },
+        {
+          "label": "FC Goa vs Sporting Club Delhi",
+          "url": "https://www.indiansuperleague.com/matchcentre/194651"
+        },
+        {
+          "label": "NorthEast United FC vs Bengaluru FC",
+          "url": "https://www.indiansuperleague.com/matchcentre/194652"
+        },
+        {
+          "label": "Official ISL YouTube Live listing",
+          "url": "https://www.youtube.com/@IndianSuperLeague/streams"
+        }
+      ]
+    },
+    {
       "checkedAt": "2026-10-31T05:40:07.362717+00:00",
       "kind": "hourly",
       "outcome": "updated",
@@ -7575,34 +7599,6 @@
         {
           "label": "Indian Super League official match centre",
           "url": "https://www.indiansuperleague.com/matchcentre/194638"
-        }
-      ]
-    },
-    {
-      "checkedAt": "2026-10-12T11:15:00.957850+00:00",
-      "kind": "hourly",
-      "outcome": "partial",
-      "summary": "Official match import: 5 checked, 2 updates, 1 failures, 0 awaiting FT (retried on subsequent runs). Squad and schedule discovery not covered. Streams checked hourly only.",
-      "links": [
-        {
-          "label": "Bengaluru FC vs Sporting Club Delhi",
-          "url": "https://www.indiansuperleague.com/matchcentre/194634"
-        },
-        {
-          "label": "FC Goa vs Chennaiyin FC",
-          "url": "https://www.indiansuperleague.com/matchcentre/194635"
-        },
-        {
-          "label": "Inter Kashi vs Kerala Blasters FC",
-          "url": "https://www.indiansuperleague.com/matchcentre/194636"
-        },
-        {
-          "label": "Churchill Brothers vs Mumbai City FC",
-          "url": "https://www.indiansuperleague.com/matchcentre/194637"
-        },
-        {
-          "label": "Official ISL YouTube Live listing",
-          "url": "https://www.youtube.com/@IndianSuperLeague/streams"
         }
       ]
     }
