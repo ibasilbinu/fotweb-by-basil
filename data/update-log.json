@@ -3,6 +3,22 @@
   "season": "2026-27",
   "checks": [
     {
+      "checkedAt": "2026-10-31T16:17:37+00:00",
+      "kind": "post-match-late",
+      "outcome": "partial",
+      "summary": "Official ISL match centre checked: Mohun Bagan Super Giant led Punjab FC 2–1 at 47 minutes and the match was not completed. FT 194654 remains pending for scheduled retries; no final result was published.",
+      "links": [
+        {
+          "label": "Mohun Bagan Super Giant vs Punjab FC",
+          "url": "https://www.indiansuperleague.com/matchcentre/194654"
+        },
+        {
+          "label": "Latest FotWeb source check",
+          "url": "https://github.com/ibasilbinu/fotweb-by-basil/actions/runs/41217427120"
+        }
+      ]
+    },
+    {
       "checkedAt": "2026-10-31T15:59:19.578047+00:00",
       "kind": "lineup-early",
       "outcome": "partial",
@@ -7543,34 +7559,6 @@
         {
           "label": "Official ISL YouTube Live listing",
           "url": "https://www.youtube.com/@IndianSuperLeague/streams"
-        }
-      ]
-    },
-    {
-      "checkedAt": "2026-10-12T23:45:49.552865+00:00",
-      "kind": "match-retry",
-      "outcome": "no-change",
-      "summary": "5 match centres checked; updates: fixtures 0, results 0, lineups 0, streams 0. Phase: phase-one. 0 pending; 0 errors.",
-      "links": [
-        {
-          "label": "Bengaluru FC vs Sporting Club Delhi",
-          "url": "https://www.indiansuperleague.com/matchcentre/194634"
-        },
-        {
-          "label": "FC Goa vs Chennaiyin FC",
-          "url": "https://www.indiansuperleague.com/matchcentre/194635"
-        },
-        {
-          "label": "Inter Kashi vs Kerala Blasters FC",
-          "url": "https://www.indiansuperleague.com/matchcentre/194636"
-        },
-        {
-          "label": "Churchill Brothers vs Mumbai City FC",
-          "url": "https://www.indiansuperleague.com/matchcentre/194637"
-        },
-        {
-          "label": "NorthEast United FC vs Mohun Bagan Super Giant",
-          "url": "https://www.indiansuperleague.com/matchcentre/194638"
         }
       ]
     }
