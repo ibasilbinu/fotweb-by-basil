@@ -3,6 +3,26 @@
   "season": "2026-27",
   "checks": [
     {
+      "checkedAt": "2026-10-31T11:06:45.577448+00:00",
+      "kind": "lineup-early",
+      "outcome": "partial",
+      "summary": "3 match centres checked; updates: fixtures 0, results 0, lineups 1, streams 0. Phase: phase-one. 0 pending; 1 errors. YouTube: ERROR: [youtube:tab] @IndianSuperLeague/streams: Unable to download API page: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1010) (caused by CertificateVerifyError('[SSL: CERTIFICATE_VERIFY_FAILED] certific",
+      "links": [
+        {
+          "label": "Chennaiyin FC vs Kerala Blasters FC",
+          "url": "https://www.indiansuperleague.com/matchcentre/194653"
+        },
+        {
+          "label": "FC Goa vs Sporting Club Delhi",
+          "url": "https://www.indiansuperleague.com/matchcentre/194651"
+        },
+        {
+          "label": "NorthEast United FC vs Bengaluru FC",
+          "url": "https://www.indiansuperleague.com/matchcentre/194652"
+        }
+      ]
+    },
+    {
       "checkedAt": "2026-10-31T08:35:02.501118+00:00",
       "kind": "morning",
       "outcome": "no-change",
@@ -7587,18 +7607,6 @@
         {
           "label": "Official ISL YouTube Live listing",
           "url": "https://www.youtube.com/@IndianSuperLeague/streams"
-        }
-      ]
-    },
-    {
-      "checkedAt": "2026-10-12T17:35:24.068784+00:00",
-      "kind": "post-match-late",
-      "outcome": "updated",
-      "summary": "Manually recovered missing scheduled publication: NorthEast United 1–0 Mohun Bagan FT; official lineups, events and available statistics imported.",
-      "links": [
-        {
-          "label": "Indian Super League official match centre",
-          "url": "https://www.indiansuperleague.com/matchcentre/194638"
         }
       ]
     }
