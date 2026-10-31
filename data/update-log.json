@@ -3,6 +3,30 @@
   "season": "2026-27",
   "checks": [
     {
+      "checkedAt": "2026-10-31T17:52:27.302055+00:00",
+      "kind": "lineup-late",
+      "outcome": "no-change",
+      "summary": "3 match centres checked; updates: fixtures 0, results 0, lineups 0, streams 0. Phase: phase-one. 0 pending; 0 errors.",
+      "links": [
+        {
+          "label": "Mohun Bagan Super Giant vs Punjab FC",
+          "url": "https://www.indiansuperleague.com/matchcentre/194654"
+        },
+        {
+          "label": "NorthEast United FC vs Bengaluru FC",
+          "url": "https://www.indiansuperleague.com/matchcentre/194652"
+        },
+        {
+          "label": "Chennaiyin FC vs Kerala Blasters FC",
+          "url": "https://www.indiansuperleague.com/matchcentre/194653"
+        },
+        {
+          "label": "Official ISL YouTube Live listing",
+          "url": "https://www.youtube.com/@IndianSuperLeague/streams"
+        }
+      ]
+    },
+    {
       "checkedAt": "2026-10-31T17:43:12.766974+00:00",
       "kind": "hourly",
       "outcome": "updated",
@@ -7523,34 +7547,6 @@
         {
           "label": "Official ISL YouTube Live listing",
           "url": "https://www.youtube.com/@IndianSuperLeague/streams"
-        }
-      ]
-    },
-    {
-      "checkedAt": "2026-10-13T02:34:58.348683+00:00",
-      "kind": "match-retry",
-      "outcome": "no-change",
-      "summary": "5 match centres checked; updates: fixtures 0, results 0, lineups 0, streams 0. Phase: phase-one. 0 pending; 0 errors.",
-      "links": [
-        {
-          "label": "Bengaluru FC vs Sporting Club Delhi",
-          "url": "https://www.indiansuperleague.com/matchcentre/194634"
-        },
-        {
-          "label": "FC Goa vs Chennaiyin FC",
-          "url": "https://www.indiansuperleague.com/matchcentre/194635"
-        },
-        {
-          "label": "Inter Kashi vs Kerala Blasters FC",
-          "url": "https://www.indiansuperleague.com/matchcentre/194636"
-        },
-        {
-          "label": "Churchill Brothers vs Mumbai City FC",
-          "url": "https://www.indiansuperleague.com/matchcentre/194637"
-        },
-        {
-          "label": "NorthEast United FC vs Mohun Bagan Super Giant",
-          "url": "https://www.indiansuperleague.com/matchcentre/194638"
         }
       ]
     }
