@@ -85,13 +85,12 @@
   "phaseOneLastKickoff": "2027-01-17T19:30+05:30",
   "sources": {
     "fixtures": {
-      "checkedAt": "2026-10-31T08:34:57.563938+00:00",
+      "checkedAt": "2026-10-31T12:28:17.706929+00:00",
       "outcome": "ok"
     },
     "streams": {
-      "checkedAt": "2026-10-31T11:06:29.926108+00:00",
-      "outcome": "error",
-      "error": "ERROR: [youtube:tab] @IndianSuperLeague/streams: Unable to download API page: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1010) (caused by CertificateVerifyError('[SSL: CERTIFICATE_"
+      "checkedAt": "2026-10-31T12:28:17.706929+00:00",
+      "outcome": "partial"
     }
   },
   "pending": [],
@@ -113,15 +112,15 @@
     "194648": "2026-10-28T10:57:48.915592+00:00",
     "194649": "2026-10-28T13:32:32.746712+00:00",
     "194650": "2026-10-29T13:27:03.913793+00:00",
-    "194651": "2026-10-31T11:06:29.926108+00:00",
-    "194652": "2026-10-31T11:06:29.926108+00:00",
-    "194653": "2026-10-31T11:06:29.926108+00:00"
+    "194651": "2026-10-31T12:28:17.706929+00:00",
+    "194652": "2026-10-31T12:28:17.706929+00:00",
+    "194653": "2026-10-31T12:28:17.706929+00:00"
   },
   "lastCheck": {
-    "checkedAt": "2026-10-31T11:06:29.926108+00:00",
-    "kind": "lineup-early",
+    "checkedAt": "2026-10-31T12:28:17.706929+00:00",
+    "kind": "hourly",
     "failures": [
-      "YouTube: ERROR: [youtube:tab] @IndianSuperLeague/streams: Unable to download API page: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1010) (caused by CertificateVerifyError('[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1010)')); please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U"
+      "YouTube raS61rqsQQI: Public metadata: Video identity unavailable or private; alternate metadata missing channel identity"
     ],
     "changes": {
       "fixtures": 0,
