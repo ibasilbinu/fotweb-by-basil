@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "season": "2026-27",
-  "updatedAt": "2026-11-01T15:07:33.450195+00:00",
+  "updatedAt": "2026-11-01T16:44:22.929606+00:00",
   "matches": [
     {
       "id": "194634",
@@ -15272,6 +15272,703 @@
           "type": "yellow_card",
           "player": "Juan Sebastian Pena Bermudez",
           "addedMinute": 5
+        }
+      ]
+    },
+    {
+      "id": "194656",
+      "date": "2026-11-01",
+      "home": "Inter Kashi",
+      "away": "FC Goa",
+      "homeGoals": 1,
+      "awayGoals": 2,
+      "status": "FT",
+      "phase": "league",
+      "officialStage": "League",
+      "verifiedAt": "2026-11-01T16:44:22.929606+00:00",
+      "sources": [
+        {
+          "label": "Indian Super League official match centre",
+          "url": "https://www.indiansuperleague.com/matchcentre/194656"
+        }
+      ],
+      "matchUrl": "https://www.indiansuperleague.com/matchcentre/194656",
+      "winnerId": "496",
+      "venue": "Shree Shiv Chhatrapati Sports Complex, Pune",
+      "report": "Inter Kashi 1–2 FC Goa. Full-time; result confirmed by the official ISL match centre.",
+      "lineups": {
+        "home": {
+          "starters": [
+            {
+              "name": "Nishchal Chandan",
+              "number": 2
+            },
+            {
+              "name": "Aritra Das",
+              "number": 3
+            },
+            {
+              "name": "Pratik Prabhakar Chaudhari",
+              "number": 4
+            },
+            {
+              "name": "Wayne Bosco Vaz",
+              "number": 5
+            },
+            {
+              "name": "Jitendra Singh",
+              "number": 14
+            },
+            {
+              "name": "Rosenberg Gilbert Gabriel",
+              "number": 17
+            },
+            {
+              "name": "Huidrom Thoi Singh",
+              "number": 20
+            },
+            {
+              "name": "Sumeet Passi",
+              "number": 25
+            },
+            {
+              "name": "Laldinliana Renthlei",
+              "number": 26
+            },
+            {
+              "name": "Ayush Chhikara",
+              "number": 28
+            },
+            {
+              "name": "Albino Giovanni Gomes",
+              "number": 32
+            }
+          ],
+          "formation": "4-3-3",
+          "substitutes": [
+            {
+              "name": "Shubham Balasaheb Dhas",
+              "number": 1,
+              "position": "Goalkeeper"
+            },
+            {
+              "name": "Sourav Das",
+              "number": 8,
+              "position": "Midfielder"
+            },
+            {
+              "name": "Ashangbam Aphaoba Singh",
+              "number": 11,
+              "position": "Midfielder"
+            },
+            {
+              "name": "Karthik Jithendran Panicker",
+              "number": 15,
+              "position": "Midfielder"
+            },
+            {
+              "name": "Tanush Pandey",
+              "number": 16,
+              "position": "Defender"
+            },
+            {
+              "name": "Hitesh Sharma",
+              "number": 18,
+              "position": "Midfielder"
+            },
+            {
+              "name": "Leewan Castanha",
+              "number": 19,
+              "position": "Defender"
+            },
+            {
+              "name": "Gursimrat Singh Gill",
+              "number": 33,
+              "position": "Defender"
+            },
+            {
+              "name": "Sreekuttan Viruthiyil Santhosh",
+              "number": 41,
+              "position": "Forward"
+            }
+          ]
+        },
+        "away": {
+          "starters": [
+            {
+              "name": "Sandesh Jhingan",
+              "number": 3
+            },
+            {
+              "name": "Alexander Vallejo Minguez",
+              "number": 5
+            },
+            {
+              "name": "Haobam Tomba Singh",
+              "number": 8
+            },
+            {
+              "name": "Christian Borrego Isabel",
+              "number": 9
+            },
+            {
+              "name": "Pedro Alejandro Zalaya Galardon",
+              "number": 15
+            },
+            {
+              "name": "Isak Vanlalruatfela",
+              "number": 19
+            },
+            {
+              "name": "Udanta Singh Kumam",
+              "number": 21
+            },
+            {
+              "name": "Francisco Feuillassier Abalo",
+              "number": 28
+            },
+            {
+              "name": "Ronney Willson Kharbudon",
+              "number": 35
+            },
+            {
+              "name": "Bob Jackson Raj",
+              "number": 45
+            },
+            {
+              "name": "Konsam Akash Singh",
+              "number": 48
+            }
+          ],
+          "formation": "4-2-3-1",
+          "substitutes": [
+            {
+              "name": "Prachit Gaonkar",
+              "number": 22,
+              "position": "Midfielder"
+            },
+            {
+              "name": "Saveme Tariang",
+              "number": 25,
+              "position": "Defender"
+            },
+            {
+              "name": "Nim Dorjee Tamang",
+              "number": 29,
+              "position": "Defender"
+            },
+            {
+              "name": "Haodamlian Vaiphei",
+              "number": 40,
+              "position": "Midfielder"
+            },
+            {
+              "name": "Sitroy Carvalho",
+              "number": 41,
+              "position": "Defender"
+            },
+            {
+              "name": "Muhammed Nemil Valiyattil",
+              "number": 44,
+              "position": "Forward"
+            },
+            {
+              "name": "Rudra Ved",
+              "number": 47,
+              "position": "Defender"
+            },
+            {
+              "name": "Lara Sharma",
+              "number": 72,
+              "position": "Goalkeeper"
+            },
+            {
+              "name": "KC Malsawmsanga",
+              "number": 77,
+              "position": "Midfielder"
+            }
+          ]
+        }
+      },
+      "stats": {
+        "home": {
+          "possession": 28,
+          "shots": 6,
+          "shotsOnTarget": 1,
+          "corners": 3,
+          "fouls": 8,
+          "offsides": 1,
+          "yellowCards": 1,
+          "redCards": 0,
+          "passes": 234,
+          "passAccuracy": 66,
+          "tackles": 9,
+          "interceptions": 11,
+          "clearances": 19,
+          "saves": 4
+        },
+        "away": {
+          "possession": 72,
+          "shots": 21,
+          "shotsOnTarget": 6,
+          "corners": 5,
+          "fouls": 7,
+          "offsides": 0,
+          "yellowCards": 2,
+          "redCards": 0,
+          "passes": 625,
+          "passAccuracy": 88,
+          "tackles": 8,
+          "interceptions": 5,
+          "clearances": 15,
+          "saves": 0
+        }
+      },
+      "players": [
+        {
+          "name": "Nishchal Chandan",
+          "side": "home",
+          "position": "Defender",
+          "goals": 0,
+          "assists": 0,
+          "shots": 0,
+          "passes": 20,
+          "tackles": 0,
+          "saves": 0
+        },
+        {
+          "name": "Aritra Das",
+          "side": "home",
+          "position": "Defender",
+          "goals": 0,
+          "assists": 0,
+          "shots": 0,
+          "passes": 18,
+          "tackles": 1,
+          "saves": 0
+        },
+        {
+          "name": "Pratik Prabhakar Chaudhari",
+          "side": "home",
+          "position": "Defender",
+          "goals": 0,
+          "assists": 0,
+          "shots": 0,
+          "passes": 25,
+          "tackles": 0,
+          "saves": 0
+        },
+        {
+          "name": "Wayne Bosco Vaz",
+          "side": "home",
+          "position": "Midfielder",
+          "goals": 0,
+          "assists": 0,
+          "shots": 1,
+          "passes": 31,
+          "tackles": 3,
+          "saves": 0
+        },
+        {
+          "name": "Jitendra Singh",
+          "side": "home",
+          "position": "Midfielder",
+          "goals": 0,
+          "assists": 0,
+          "shots": 0,
+          "passes": 29,
+          "tackles": 1,
+          "saves": 0
+        },
+        {
+          "name": "Rosenberg Gilbert Gabriel",
+          "side": "home",
+          "position": "Forward",
+          "goals": 0,
+          "assists": 1,
+          "shots": 1,
+          "passes": 7,
+          "tackles": 0,
+          "saves": 0
+        },
+        {
+          "name": "Huidrom Thoi Singh",
+          "side": "home",
+          "position": "Forward",
+          "goals": 0,
+          "assists": 0,
+          "shots": 1,
+          "passes": 10,
+          "tackles": 1,
+          "saves": 0
+        },
+        {
+          "name": "Sumeet Passi",
+          "side": "home",
+          "position": "Defender",
+          "goals": 1,
+          "assists": 0,
+          "shots": 2,
+          "passes": 16,
+          "tackles": 2,
+          "saves": 0
+        },
+        {
+          "name": "Laldinliana Renthlei",
+          "side": "home",
+          "position": "Defender",
+          "goals": 0,
+          "assists": 0,
+          "shots": 0,
+          "passes": 13,
+          "tackles": 0,
+          "saves": 0
+        },
+        {
+          "name": "Ayush Chhikara",
+          "side": "home",
+          "position": "Forward",
+          "goals": 0,
+          "assists": 0,
+          "shots": 1,
+          "passes": 11,
+          "tackles": 1,
+          "saves": 0
+        },
+        {
+          "name": "Albino Giovanni Gomes",
+          "side": "home",
+          "position": "Goalkeeper",
+          "goals": 0,
+          "assists": 0,
+          "shots": 0,
+          "passes": 29,
+          "tackles": 0,
+          "saves": 0
+        },
+        {
+          "name": "Ashangbam Aphaoba Singh",
+          "side": "home",
+          "position": "Midfielder",
+          "goals": 0,
+          "assists": 0,
+          "shots": 0,
+          "passes": 4,
+          "tackles": 0,
+          "saves": 0
+        },
+        {
+          "name": "Karthik Jithendran Panicker",
+          "side": "home",
+          "position": "Midfielder",
+          "goals": 0,
+          "assists": 0,
+          "shots": 0,
+          "passes": 7,
+          "tackles": 0,
+          "saves": 0
+        },
+        {
+          "name": "Hitesh Sharma",
+          "side": "home",
+          "position": "Midfielder",
+          "goals": 0,
+          "assists": 0,
+          "shots": 0,
+          "passes": 5,
+          "tackles": 0,
+          "saves": 0
+        },
+        {
+          "name": "Leewan Castanha",
+          "side": "home",
+          "position": "Defender",
+          "goals": 0,
+          "assists": 0,
+          "shots": 0,
+          "passes": 6,
+          "tackles": 0,
+          "saves": 0
+        },
+        {
+          "name": "Sreekuttan Viruthiyil Santhosh",
+          "side": "home",
+          "position": "Forward",
+          "goals": 0,
+          "assists": 0,
+          "shots": 0,
+          "passes": 3,
+          "tackles": 0,
+          "saves": 0
+        },
+        {
+          "name": "Sandesh Jhingan",
+          "side": "away",
+          "position": "Defender",
+          "goals": 0,
+          "assists": 0,
+          "shots": 1,
+          "passes": 101,
+          "tackles": 1,
+          "saves": 0
+        },
+        {
+          "name": "Alexander Vallejo Minguez",
+          "side": "away",
+          "position": "Midfielder",
+          "goals": 0,
+          "assists": 0,
+          "shots": 4,
+          "passes": 67,
+          "tackles": 0,
+          "saves": 0
+        },
+        {
+          "name": "Haobam Tomba Singh",
+          "side": "away",
+          "position": "Midfielder",
+          "goals": 0,
+          "assists": 0,
+          "shots": 0,
+          "passes": 71,
+          "tackles": 1,
+          "saves": 0
+        },
+        {
+          "name": "Christian Borrego Isabel",
+          "side": "away",
+          "position": "Forward",
+          "goals": 1,
+          "assists": 0,
+          "shots": 5,
+          "passes": 28,
+          "tackles": 0,
+          "saves": 0
+        },
+        {
+          "name": "Pedro Alejandro Zalaya Galardon",
+          "side": "away",
+          "position": "Defender",
+          "goals": 0,
+          "assists": 0,
+          "shots": 0,
+          "passes": 107,
+          "tackles": 0,
+          "saves": 0
+        },
+        {
+          "name": "Isak Vanlalruatfela",
+          "side": "away",
+          "position": "Midfielder",
+          "goals": 0,
+          "assists": 1,
+          "shots": 4,
+          "passes": 37,
+          "tackles": 1,
+          "saves": 0
+        },
+        {
+          "name": "Udanta Singh Kumam",
+          "side": "away",
+          "position": "Midfielder",
+          "goals": 0,
+          "assists": 0,
+          "shots": 0,
+          "passes": 45,
+          "tackles": 2,
+          "saves": 0
+        },
+        {
+          "name": "Francisco Feuillassier Abalo",
+          "side": "away",
+          "position": "Forward",
+          "goals": 1,
+          "assists": 0,
+          "shots": 3,
+          "passes": 45,
+          "tackles": 0,
+          "saves": 0
+        },
+        {
+          "name": "Ronney Willson Kharbudon",
+          "side": "away",
+          "position": "Defender",
+          "goals": 0,
+          "assists": 0,
+          "shots": 0,
+          "passes": 17,
+          "tackles": 0,
+          "saves": 0
+        },
+        {
+          "name": "Bob Jackson Raj",
+          "side": "away",
+          "position": "Goalkeeper",
+          "goals": 0,
+          "assists": 0,
+          "shots": 0,
+          "passes": 22,
+          "tackles": 0,
+          "saves": 0
+        },
+        {
+          "name": "Konsam Akash Singh",
+          "side": "away",
+          "position": "Defender",
+          "goals": 0,
+          "assists": 0,
+          "shots": 0,
+          "passes": 28,
+          "tackles": 1,
+          "saves": 0
+        },
+        {
+          "name": "Haodamlian Vaiphei",
+          "side": "away",
+          "position": "Midfielder",
+          "goals": 0,
+          "assists": 0,
+          "shots": 0,
+          "passes": 2,
+          "tackles": 1,
+          "saves": 0
+        },
+        {
+          "name": "Sitroy Carvalho",
+          "side": "away",
+          "position": "Defender",
+          "goals": 0,
+          "assists": 0,
+          "shots": 0,
+          "passes": 29,
+          "tackles": 0,
+          "saves": 0
+        },
+        {
+          "name": "Muhammed Nemil Valiyattil",
+          "side": "away",
+          "position": "Forward",
+          "goals": 0,
+          "assists": 1,
+          "shots": 3,
+          "passes": 23,
+          "tackles": 1,
+          "saves": 0
+        },
+        {
+          "name": "KC Malsawmsanga",
+          "side": "away",
+          "position": "Midfielder",
+          "goals": 0,
+          "assists": 0,
+          "shots": 1,
+          "passes": 3,
+          "tackles": 0,
+          "saves": 0
+        }
+      ],
+      "events": [
+        {
+          "minute": 24,
+          "side": "away",
+          "type": "yellow_card",
+          "player": "Konsam Akash Singh"
+        },
+        {
+          "minute": 31,
+          "side": "away",
+          "type": "substitution",
+          "playerIn": "Muhammed Nemil Valiyattil",
+          "playerOut": "Konsam Akash Singh"
+        },
+        {
+          "minute": 33,
+          "side": "away",
+          "type": "goal",
+          "player": "Francisco Feuillassier Abalo",
+          "assist": "Isak Vanlalruatfela"
+        },
+        {
+          "minute": 45,
+          "side": "away",
+          "type": "substitution",
+          "playerIn": "Sitroy Carvalho",
+          "playerOut": "Ronney Willson Kharbudon"
+        },
+        {
+          "minute": 46,
+          "side": "away",
+          "type": "yellow_card",
+          "player": "Christian Borrego Isabel"
+        },
+        {
+          "minute": 50,
+          "side": "home",
+          "type": "goal",
+          "player": "Sumeet Passi",
+          "assist": "Rosenberg Gilbert Gabriel"
+        },
+        {
+          "minute": 64,
+          "side": "home",
+          "type": "yellow_card",
+          "player": "Rosenberg Gilbert Gabriel"
+        },
+        {
+          "minute": 65,
+          "side": "away",
+          "type": "goal",
+          "player": "Christian Borrego Isabel",
+          "assist": "Muhammed Nemil Valiyattil"
+        },
+        {
+          "minute": 76,
+          "side": "home",
+          "type": "substitution",
+          "playerIn": "Hitesh Sharma",
+          "playerOut": "Laldinliana Renthlei"
+        },
+        {
+          "minute": 76,
+          "side": "home",
+          "type": "substitution",
+          "playerIn": "Sreekuttan Viruthiyil Santhosh",
+          "playerOut": "Rosenberg Gilbert Gabriel"
+        },
+        {
+          "minute": 79,
+          "side": "away",
+          "type": "substitution",
+          "playerIn": "KC Malsawmsanga",
+          "playerOut": "Francisco Feuillassier Abalo"
+        },
+        {
+          "minute": 83,
+          "side": "home",
+          "type": "substitution",
+          "playerIn": "Ashangbam Aphaoba Singh",
+          "playerOut": "Huidrom Thoi Singh"
+        },
+        {
+          "minute": 83,
+          "side": "home",
+          "type": "substitution",
+          "playerIn": "Leewan Castanha",
+          "playerOut": "Sumeet Passi"
+        },
+        {
+          "minute": 83,
+          "side": "home",
+          "type": "substitution",
+          "playerIn": "Karthik Jithendran Panicker",
+          "playerOut": "Aritra Das"
+        },
+        {
+          "minute": 88,
+          "side": "away",
+          "type": "substitution",
+          "playerIn": "Haodamlian Vaiphei",
+          "playerOut": "Isak Vanlalruatfela"
         }
       ]
     }
