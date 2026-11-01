@@ -3670,9 +3670,205 @@
         "title": "LIVE: Mumbai City FC vs Sporting Club Delhi | MG ISL 2026-27",
         "channelUrl": "https://www.youtube.com/@IndianSuperLeague",
         "language": "English",
-        "status": "scheduled",
-        "verifiedAt": "2026-10-31T05:40:00.841104+00:00",
+        "status": "live",
+        "verifiedAt": "2026-11-01T11:00:47.462109+00:00",
         "languageEvidence": "official-default-unlabelled"
+      },
+      "lineups": {
+        "home": {
+          "starters": [
+            {
+              "name": "Hmingthanmawia Ralte",
+              "number": 3
+            },
+            {
+              "name": "Lazar Cirkovic",
+              "number": 4
+            },
+            {
+              "name": "Carlos Javier Delgado Rodriguez",
+              "number": 5
+            },
+            {
+              "name": "Sergio Llamas Pardo",
+              "number": 8
+            },
+            {
+              "name": "Bawitlung Lalnuntluanga",
+              "number": 14
+            },
+            {
+              "name": "Hridaya Jain",
+              "number": 19
+            },
+            {
+              "name": "Muhammed Ajsal",
+              "number": 22
+            },
+            {
+              "name": "Rehenesh Thumbirumbu Paramba",
+              "number": 23
+            },
+            {
+              "name": "Akash Mishra",
+              "number": 31
+            },
+            {
+              "name": "Zothanpuia",
+              "number": 45
+            },
+            {
+              "name": "Noufal P.N",
+              "number": 92
+            }
+          ],
+          "formation": "3-5-2",
+          "substitutes": [
+            {
+              "name": "Dhruv Alva",
+              "number": 2,
+              "position": "Defender"
+            },
+            {
+              "name": "Farukh Haji Kasam Choudhary",
+              "number": 7,
+              "position": "Forward"
+            },
+            {
+              "name": "Brandon Fernandes",
+              "number": 10,
+              "position": "Midfielder"
+            },
+            {
+              "name": "Bijay Chhetri",
+              "number": 17,
+              "position": "Defender"
+            },
+            {
+              "name": "Nathan Asher Rodrigues",
+              "number": 27,
+              "position": "Defender"
+            },
+            {
+              "name": "Sahil Panwar",
+              "number": 36,
+              "position": "Defender"
+            },
+            {
+              "name": "Aadil Sheikh",
+              "number": 39,
+              "position": "Midfielder"
+            },
+            {
+              "name": "Yuvraj Kadam",
+              "number": 49,
+              "position": "Forward"
+            },
+            {
+              "name": "Ashish Sibi",
+              "number": 89,
+              "position": "Goalkeeper"
+            }
+          ]
+        },
+        "away": {
+          "starters": [
+            {
+              "name": "Lalrinliana Hnamte",
+              "number": 4
+            },
+            {
+              "name": "Rodrigo Araujo da Silva Filho",
+              "number": 7
+            },
+            {
+              "name": "Juan Sebastian Pena Bermudez",
+              "number": 10
+            },
+            {
+              "name": "Clarence Savio Fernandes",
+              "number": 15
+            },
+            {
+              "name": "Lamgoulen SemkholunS",
+              "number": 19
+            },
+            {
+              "name": "Nora Fernandes",
+              "number": 20
+            },
+            {
+              "name": "Mohammed Aimen",
+              "number": 23
+            },
+            {
+              "name": "Mohammed Azhar",
+              "number": 24
+            },
+            {
+              "name": "Sourav Kumar",
+              "number": 27
+            },
+            {
+              "name": "Duvan Felipe Viafara Mina",
+              "number": 28
+            },
+            {
+              "name": "Manoj Mohammad",
+              "number": 41
+            }
+          ],
+          "formation": "3-4-3",
+          "substitutes": [
+            {
+              "name": "Ashutosh Mehta",
+              "number": 6,
+              "position": "Defender"
+            },
+            {
+              "name": "David Richard Ndayishimiye",
+              "number": 8,
+              "position": "Midfielder"
+            },
+            {
+              "name": "Augustine Lalrochana",
+              "number": 18,
+              "position": "Forward"
+            },
+            {
+              "name": "Yanglem Sanatomba Singh",
+              "number": 25,
+              "position": "Defender"
+            },
+            {
+              "name": "Thokchom Diamond Singh",
+              "number": 30,
+              "position": "Midfielder"
+            },
+            {
+              "name": "Vishal Yadav",
+              "number": 31,
+              "position": "Goalkeeper"
+            },
+            {
+              "name": "Junior Harrison Nduka",
+              "number": 45,
+              "position": "Defender"
+            },
+            {
+              "name": "Akshat Mehra",
+              "number": 66,
+              "position": "Midfielder"
+            },
+            {
+              "name": "Carlos Manuel dos Santos Fortes",
+              "number": 99,
+              "position": "Forward"
+            }
+          ]
+        },
+        "sourceUrl": "https://www.indiansuperleague.com/matchcentre/194655",
+        "verifiedAt": "2026-11-01T11:00:47.462109+00:00"
       }
     },
     {

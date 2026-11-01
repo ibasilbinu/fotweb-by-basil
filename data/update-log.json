@@ -3,6 +3,34 @@
   "season": "2026-27",
   "checks": [
     {
+      "checkedAt": "2026-11-01T11:01:25.486740+00:00",
+      "kind": "lineup-early",
+      "outcome": "updated",
+      "summary": "4 match centres checked; updates: fixtures 0, results 0, lineups 1, streams 1. Phase: phase-one. 0 pending; 0 errors.",
+      "links": [
+        {
+          "label": "Mumbai City FC vs Sporting Club Delhi",
+          "url": "https://www.indiansuperleague.com/matchcentre/194655"
+        },
+        {
+          "label": "NorthEast United FC vs Bengaluru FC",
+          "url": "https://www.indiansuperleague.com/matchcentre/194652"
+        },
+        {
+          "label": "Chennaiyin FC vs Kerala Blasters FC",
+          "url": "https://www.indiansuperleague.com/matchcentre/194653"
+        },
+        {
+          "label": "Mohun Bagan Super Giant vs Punjab FC",
+          "url": "https://www.indiansuperleague.com/matchcentre/194654"
+        },
+        {
+          "label": "Official ISL YouTube Live listing",
+          "url": "https://www.youtube.com/@IndianSuperLeague/streams"
+        }
+      ]
+    },
+    {
       "checkedAt": "2026-11-01T09:25:57.481997+00:00",
       "kind": "morning",
       "outcome": "no-change",
@@ -7434,42 +7462,6 @@
         },
         {
           "label": "Latest hourly workflow",
-          "url": "https://github.com/ibasilbinu/fotweb-by-basil/actions/runs/38377336183"
-        }
-      ]
-    },
-    {
-      "checkedAt": "2026-10-13T13:28:10.681116+00:00",
-      "kind": "lineup-late",
-      "outcome": "partial",
-      "summary": "The official schedule has no fixtures on 13 October; 4 recent match centres and official streams were checked. No new XIs or stream links. Source checks passed. The GitHub hourly workflow has not run since 3:04 pm IST, with four expected hourly runs absent through 6:43 pm. The hourly ChatGPT backup remains unavailable: This task is no longer available.",
-      "links": [
-        {
-          "label": "FC Goa vs Chennaiyin FC",
-          "url": "https://www.indiansuperleague.com/matchcentre/194635"
-        },
-        {
-          "label": "Inter Kashi vs Kerala Blasters FC",
-          "url": "https://www.indiansuperleague.com/matchcentre/194636"
-        },
-        {
-          "label": "Churchill Brothers vs Mumbai City FC",
-          "url": "https://www.indiansuperleague.com/matchcentre/194637"
-        },
-        {
-          "label": "NorthEast United FC vs Mohun Bagan Super Giant",
-          "url": "https://www.indiansuperleague.com/matchcentre/194638"
-        },
-        {
-          "label": "Official ISL YouTube Live listing",
-          "url": "https://www.youtube.com/@IndianSuperLeague/streams"
-        },
-        {
-          "label": "Official ISL fixture schedule",
-          "url": "https://www.indiansuperleague.com/schedule-fixtures"
-        },
-        {
-          "label": "Latest GitHub hourly workflow run",
           "url": "https://github.com/ibasilbinu/fotweb-by-basil/actions/runs/38377336183"
         }
       ]
