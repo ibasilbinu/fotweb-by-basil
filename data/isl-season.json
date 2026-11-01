@@ -3667,12 +3667,11 @@
       "officialStage": "league",
       "broadcast": {
         "url": "https://www.youtube.com/live/gWexbVfNmFo",
-        "title": "LIVE: Mumbai City FC vs Sporting Club Delhi | MG ISL 2026-27",
+        "title": "FULL REPLAY (English): Mumbai City FC vs Sporting Club Delhi (2-3) | MG ISL 2026-27",
         "channelUrl": "https://www.youtube.com/@IndianSuperLeague",
         "language": "English",
-        "status": "live",
-        "verifiedAt": "2026-11-01T11:00:47.462109+00:00",
-        "languageEvidence": "official-default-unlabelled"
+        "status": "ended",
+        "verifiedAt": "2026-11-01T15:07:33.450195+00:00"
       },
       "lineups": {
         "home": {
@@ -4007,10 +4006,6 @@
               "number": 9
             },
             {
-              "name": "Aakash Sangwan",
-              "number": 14
-            },
-            {
               "name": "Pedro Alejandro Zalaya Galardon",
               "number": 15
             },
@@ -4033,9 +4028,13 @@
             {
               "name": "Bob Jackson Raj",
               "number": 45
+            },
+            {
+              "name": "Konsam Akash Singh",
+              "number": 48
             }
           ],
-          "formation": "4-3-3",
+          "formation": "4-2-3-1",
           "substitutes": [
             {
               "name": "Prachit Gaonkar",
@@ -4085,7 +4084,7 @@
           ]
         },
         "sourceUrl": "https://www.indiansuperleague.com/matchcentre/194656",
-        "verifiedAt": "2026-11-01T13:27:07.024763+00:00"
+        "verifiedAt": "2026-11-01T15:07:33.450195+00:00"
       }
     },
     {

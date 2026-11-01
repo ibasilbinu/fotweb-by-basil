@@ -3,6 +3,42 @@
   "season": "2026-27",
   "checks": [
     {
+      "checkedAt": "2026-11-01T15:07:40.328118+00:00",
+      "kind": "hourly",
+      "outcome": "partial",
+      "summary": "5 match centres checked; updates: fixtures 0, results 1, lineups 1, streams 1. Phase: phase-one. 0 pending; 1 errors. YouTube k178PJ6DfII: Public metadata: Video identity unavailable or private; alternate metadata missing channel identity",
+      "links": [
+        {
+          "label": "Official ISL fixture discovery",
+          "url": "https://www.indiansuperleague.com/schedule-fixtures"
+        },
+        {
+          "label": "Inter Kashi vs FC Goa",
+          "url": "https://www.indiansuperleague.com/matchcentre/194656"
+        },
+        {
+          "label": "Mumbai City FC vs Sporting Club Delhi",
+          "url": "https://www.indiansuperleague.com/matchcentre/194655"
+        },
+        {
+          "label": "NorthEast United FC vs Bengaluru FC",
+          "url": "https://www.indiansuperleague.com/matchcentre/194652"
+        },
+        {
+          "label": "Chennaiyin FC vs Kerala Blasters FC",
+          "url": "https://www.indiansuperleague.com/matchcentre/194653"
+        },
+        {
+          "label": "Mohun Bagan Super Giant vs Punjab FC",
+          "url": "https://www.indiansuperleague.com/matchcentre/194654"
+        },
+        {
+          "label": "Official ISL YouTube Live listing",
+          "url": "https://www.youtube.com/@IndianSuperLeague/streams"
+        }
+      ]
+    },
+    {
       "checkedAt": "2026-11-01T13:44:28+00:00",
       "kind": "post-match-early",
       "outcome": "no-change",
@@ -7427,30 +7463,6 @@
         {
           "label": "NorthEast United FC vs Mohun Bagan Super Giant",
           "url": "https://www.indiansuperleague.com/matchcentre/194638"
-        }
-      ]
-    },
-    {
-      "checkedAt": "2026-10-13T16:20:52.294340+00:00",
-      "kind": "post-match-late",
-      "outcome": "no-change",
-      "summary": "Official ISL schedule checked: no 19:30 IST fixture on 13 October 2026. Three recent official match centres checked; no football-data changes, pending items or source errors.",
-      "links": [
-        {
-          "label": "Inter Kashi vs Kerala Blasters FC",
-          "url": "https://www.indiansuperleague.com/matchcentre/194636"
-        },
-        {
-          "label": "Churchill Brothers vs Mumbai City FC",
-          "url": "https://www.indiansuperleague.com/matchcentre/194637"
-        },
-        {
-          "label": "NorthEast United FC vs Mohun Bagan Super Giant",
-          "url": "https://www.indiansuperleague.com/matchcentre/194638"
-        },
-        {
-          "label": "Official ISL fixture schedule",
-          "url": "https://www.indiansuperleague.com/schedule-fixtures"
         }
       ]
     }
