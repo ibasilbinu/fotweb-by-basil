@@ -3890,6 +3890,202 @@
         "status": "scheduled",
         "verifiedAt": "2026-10-31T05:40:00.841104+00:00",
         "languageEvidence": "official-default-unlabelled"
+      },
+      "lineups": {
+        "home": {
+          "starters": [
+            {
+              "name": "Nishchal Chandan",
+              "number": 2
+            },
+            {
+              "name": "Aritra Das",
+              "number": 3
+            },
+            {
+              "name": "Pratik Prabhakar Chaudhari",
+              "number": 4
+            },
+            {
+              "name": "Wayne Bosco Vaz",
+              "number": 5
+            },
+            {
+              "name": "Jitendra Singh",
+              "number": 14
+            },
+            {
+              "name": "Rosenberg Gilbert Gabriel",
+              "number": 17
+            },
+            {
+              "name": "Huidrom Thoi Singh",
+              "number": 20
+            },
+            {
+              "name": "Sumeet Passi",
+              "number": 25
+            },
+            {
+              "name": "Laldinliana Renthlei",
+              "number": 26
+            },
+            {
+              "name": "Ayush Chhikara",
+              "number": 28
+            },
+            {
+              "name": "Albino Giovanni Gomes",
+              "number": 32
+            }
+          ],
+          "formation": "4-3-3",
+          "substitutes": [
+            {
+              "name": "Shubham Balasaheb Dhas",
+              "number": 1,
+              "position": "Goalkeeper"
+            },
+            {
+              "name": "Sourav Das",
+              "number": 8,
+              "position": "Midfielder"
+            },
+            {
+              "name": "Ashangbam Aphaoba Singh",
+              "number": 11,
+              "position": "Midfielder"
+            },
+            {
+              "name": "Karthik Jithendran Panicker",
+              "number": 15,
+              "position": "Midfielder"
+            },
+            {
+              "name": "Tanush Pandey",
+              "number": 16,
+              "position": "Defender"
+            },
+            {
+              "name": "Hitesh Sharma",
+              "number": 18,
+              "position": "Midfielder"
+            },
+            {
+              "name": "Leewan Castanha",
+              "number": 19,
+              "position": "Defender"
+            },
+            {
+              "name": "Gursimrat Singh Gill",
+              "number": 33,
+              "position": "Defender"
+            },
+            {
+              "name": "Sreekuttan Viruthiyil Santhosh",
+              "number": 41,
+              "position": "Forward"
+            }
+          ]
+        },
+        "away": {
+          "starters": [
+            {
+              "name": "Sandesh Jhingan",
+              "number": 3
+            },
+            {
+              "name": "Alexander Vallejo Minguez",
+              "number": 5
+            },
+            {
+              "name": "Haobam Tomba Singh",
+              "number": 8
+            },
+            {
+              "name": "Christian Borrego Isabel",
+              "number": 9
+            },
+            {
+              "name": "Aakash Sangwan",
+              "number": 14
+            },
+            {
+              "name": "Pedro Alejandro Zalaya Galardon",
+              "number": 15
+            },
+            {
+              "name": "Isak Vanlalruatfela",
+              "number": 19
+            },
+            {
+              "name": "Udanta Singh Kumam",
+              "number": 21
+            },
+            {
+              "name": "Francisco Feuillassier Abalo",
+              "number": 28
+            },
+            {
+              "name": "Ronney Willson Kharbudon",
+              "number": 35
+            },
+            {
+              "name": "Bob Jackson Raj",
+              "number": 45
+            }
+          ],
+          "formation": "4-3-3",
+          "substitutes": [
+            {
+              "name": "Prachit Gaonkar",
+              "number": 22,
+              "position": "Midfielder"
+            },
+            {
+              "name": "Saveme Tariang",
+              "number": 25,
+              "position": "Defender"
+            },
+            {
+              "name": "Nim Dorjee Tamang",
+              "number": 29,
+              "position": "Defender"
+            },
+            {
+              "name": "Haodamlian Vaiphei",
+              "number": 40,
+              "position": "Midfielder"
+            },
+            {
+              "name": "Sitroy Carvalho",
+              "number": 41,
+              "position": "Defender"
+            },
+            {
+              "name": "Muhammed Nemil Valiyattil",
+              "number": 44,
+              "position": "Forward"
+            },
+            {
+              "name": "Rudra Ved",
+              "number": 47,
+              "position": "Defender"
+            },
+            {
+              "name": "Lara Sharma",
+              "number": 72,
+              "position": "Goalkeeper"
+            },
+            {
+              "name": "KC Malsawmsanga",
+              "number": 77,
+              "position": "Midfielder"
+            }
+          ]
+        },
+        "sourceUrl": "https://www.indiansuperleague.com/matchcentre/194656",
+        "verifiedAt": "2026-11-01T13:27:07.024763+00:00"
       }
     },
     {
