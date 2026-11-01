@@ -93,7 +93,9 @@
       "outcome": "partial"
     }
   },
-  "pending": [],
+  "pending": [
+    "FT 194656"
+  ],
   "matchCheckedAt": {
     "194634": "2026-10-13T11:05:20.879015+00:00",
     "194635": "2026-10-13T13:42:02.790128+00:00",
@@ -117,19 +119,17 @@
     "194653": "2026-11-01T15:07:33.450195+00:00",
     "194654": "2026-11-01T15:07:33.450195+00:00",
     "194655": "2026-11-01T15:07:33.450195+00:00",
-    "194656": "2026-11-01T15:07:33.450195+00:00"
+    "194656": "2026-11-01T16:16:39+00:00"
   },
   "lastCheck": {
-    "checkedAt": "2026-11-01T15:07:33.450195+00:00",
-    "kind": "hourly",
-    "failures": [
-      "YouTube k178PJ6DfII: Public metadata: Video identity unavailable or private; alternate metadata missing channel identity"
-    ],
+    "checkedAt": "2026-11-01T16:16:39+00:00",
+    "kind": "post-match-late",
+    "failures": [],
     "changes": {
       "fixtures": 0,
-      "results": 1,
-      "lineups": 1,
-      "streams": 1
+      "results": 0,
+      "lineups": 0,
+      "streams": 0
     }
   }
 }

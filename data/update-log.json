@@ -3,6 +3,22 @@
   "season": "2026-27",
   "checks": [
     {
+      "checkedAt": "2026-11-01T16:16:39+00:00",
+      "kind": "post-match-late",
+      "outcome": "partial",
+      "summary": "Official ISL match centre checked: Inter Kashi vs FC Goa was 0–0 at 17 minutes after a delayed start and was not completed. FT 194656 remains pending for scheduled retries; no final result was published.",
+      "links": [
+        {
+          "label": "Inter Kashi vs FC Goa",
+          "url": "https://www.indiansuperleague.com/matchcentre/194656"
+        },
+        {
+          "label": "Latest FotWeb source check",
+          "url": "https://github.com/ibasilbinu/fotweb-by-basil/actions/runs/41319590772"
+        }
+      ]
+    },
+    {
       "checkedAt": "2026-11-01T15:07:40.328118+00:00",
       "kind": "hourly",
       "outcome": "partial",
@@ -7443,26 +7459,6 @@
         {
           "label": "Official ISL YouTube Live listing",
           "url": "https://www.youtube.com/@IndianSuperLeague/streams"
-        }
-      ]
-    },
-    {
-      "checkedAt": "2026-10-13T17:31:45.745391+00:00",
-      "kind": "match-retry",
-      "outcome": "no-change",
-      "summary": "3 match centres checked; updates: fixtures 0, results 0, lineups 0, streams 0. Phase: phase-one. 0 pending; 0 errors.",
-      "links": [
-        {
-          "label": "Inter Kashi vs Kerala Blasters FC",
-          "url": "https://www.indiansuperleague.com/matchcentre/194636"
-        },
-        {
-          "label": "Churchill Brothers vs Mumbai City FC",
-          "url": "https://www.indiansuperleague.com/matchcentre/194637"
-        },
-        {
-          "label": "NorthEast United FC vs Mohun Bagan Super Giant",
-          "url": "https://www.indiansuperleague.com/matchcentre/194638"
         }
       ]
     }
