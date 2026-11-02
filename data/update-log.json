@@ -3,6 +3,22 @@
   "season": "2026-27",
   "checks": [
     {
+      "checkedAt": "2026-11-02T16:13:21Z",
+      "kind": "post-match-late",
+      "outcome": "no-change",
+      "summary": "No 19:30 IST fixture was scheduled for 2 November 2026, so no final result was due. The official 2026–27 fixture page and FotWeb schedule snapshot agree.",
+      "links": [
+        {
+          "label": "Official ISL fixture schedule",
+          "url": "https://www.indiansuperleague.com/schedule-fixtures"
+        },
+        {
+          "label": "Latest successful source-check workflow",
+          "url": "https://github.com/ibasilbinu/fotweb-by-basil/actions/runs/41475608397"
+        }
+      ]
+    },
+    {
       "checkedAt": "2026-11-02T15:51:12.613393+00:00",
       "kind": "hourly",
       "outcome": "no-change",
@@ -7551,26 +7567,6 @@
         {
           "label": "NorthEast United FC vs Mohun Bagan Super Giant",
           "url": "https://www.indiansuperleague.com/matchcentre/194638"
-        }
-      ]
-    },
-    {
-      "checkedAt": "2026-10-14T18:08:15.124450+00:00",
-      "kind": "lineup-late",
-      "outcome": "updated",
-      "summary": "2 match centres checked; updates: fixtures 0, results 1, lineups 0, streams 1. Phase: phase-one. 0 pending; 0 errors.",
-      "links": [
-        {
-          "label": "Punjab FC vs Odisha FC",
-          "url": "https://www.indiansuperleague.com/matchcentre/194639"
-        },
-        {
-          "label": "NorthEast United FC vs Mohun Bagan Super Giant",
-          "url": "https://www.indiansuperleague.com/matchcentre/194638"
-        },
-        {
-          "label": "Official ISL YouTube Live listing",
-          "url": "https://www.youtube.com/@IndianSuperLeague/streams"
         }
       ]
     }
