@@ -3,6 +3,22 @@
   "season": "2026-27",
   "checks": [
     {
+      "checkedAt": "2026-11-03T13:40:21Z",
+      "kind": "post-match-early",
+      "outcome": "no-change",
+      "summary": "No 17:00 IST fixture was scheduled for 3 November 2026, so no final result was due. The official 2026–27 fixture page and FotWeb schedule snapshot agree.",
+      "links": [
+        {
+          "label": "Official ISL fixture schedule",
+          "url": "https://www.indiansuperleague.com/schedule-fixtures"
+        },
+        {
+          "label": "Latest successful source-check workflow",
+          "url": "https://github.com/ibasilbinu/fotweb-by-basil/actions/runs/41613521145"
+        }
+      ]
+    },
+    {
       "checkedAt": "2026-11-03T13:37:34.622655+00:00",
       "kind": "lineup-late",
       "outcome": "updated",
@@ -7619,30 +7635,6 @@
         {
           "label": "Punjab FC vs Odisha FC",
           "url": "https://www.indiansuperleague.com/matchcentre/194639"
-        }
-      ]
-    },
-    {
-      "checkedAt": "2026-10-15T11:08:41.161763+00:00",
-      "kind": "lineup-early",
-      "outcome": "partial",
-      "summary": "No 17:00 IST fixtures on 15 Oct 2026; official schedule checked. 2 match centres checked; updates: fixtures 0, results 0, lineups 0, streams 0. Phase: phase-one. 1 pending; 1 errors. 194638: both clearance totals reset to zero; retained verified values pending confirmation",
-      "links": [
-        {
-          "label": "Official ISL schedule, season 2026-27",
-          "url": "https://www.indiansuperleague.com/schedule-fixtures"
-        },
-        {
-          "label": "NorthEast United FC vs Mohun Bagan Super Giant",
-          "url": "https://www.indiansuperleague.com/matchcentre/194638"
-        },
-        {
-          "label": "Punjab FC vs Odisha FC",
-          "url": "https://www.indiansuperleague.com/matchcentre/194639"
-        },
-        {
-          "label": "Official ISL YouTube Live listing",
-          "url": "https://www.youtube.com/@IndianSuperLeague/streams"
         }
       ]
     }
