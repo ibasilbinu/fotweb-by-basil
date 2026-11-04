@@ -89,7 +89,7 @@
       "outcome": "ok"
     },
     "streams": {
-      "checkedAt": "2026-11-04T17:17:31.065911+00:00",
+      "checkedAt": "2026-11-04T18:30:55.309526+00:00",
       "outcome": "ok"
     }
   },
@@ -120,8 +120,8 @@
     "194656": "2026-11-04T13:49:37.032058+00:00"
   },
   "lastCheck": {
-    "checkedAt": "2026-11-04T17:56:02.890092+00:00",
-    "kind": "match-retry",
+    "checkedAt": "2026-11-04T18:30:55.309526+00:00",
+    "kind": "lineup-early",
     "failures": [],
     "changes": {
       "fixtures": 0,
