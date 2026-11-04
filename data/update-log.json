@@ -3,6 +3,26 @@
   "season": "2026-27",
   "checks": [
     {
+      "checkedAt": "2026-11-04T11:03:32.235546+00:00",
+      "kind": "lineup-early",
+      "outcome": "no-change",
+      "summary": "No 17:00 fixture is scheduled today. 2 recent match centres checked; updates: fixtures 0, results 0, lineups 0, streams 0. Phase: phase-one. 0 pending; 0 errors. Official YouTube Live listing verified through browser fallback after the importer TLS check failed; five upcoming English streams remain unchanged.",
+      "links": [
+        {
+          "label": "Mumbai City FC vs Sporting Club Delhi",
+          "url": "https://www.indiansuperleague.com/matchcentre/194655"
+        },
+        {
+          "label": "Inter Kashi vs FC Goa",
+          "url": "https://www.indiansuperleague.com/matchcentre/194656"
+        },
+        {
+          "label": "Official ISL YouTube Live listing",
+          "url": "https://www.youtube.com/@IndianSuperLeague/streams"
+        }
+      ]
+    },
+    {
       "checkedAt": "2026-11-04T09:31:32.210337+00:00",
       "kind": "morning",
       "outcome": "no-change",
@@ -7663,18 +7683,6 @@
         {
           "label": "Official ISL YouTube Live listing",
           "url": "https://www.youtube.com/@IndianSuperLeague/streams"
-        }
-      ]
-    },
-    {
-      "checkedAt": "2026-10-15T21:48:12.595893+00:00",
-      "kind": "match-retry",
-      "outcome": "no-change",
-      "summary": "1 match centres checked; updates: fixtures 0, results 0, lineups 0, streams 0. Phase: phase-one. 0 pending; 0 errors.",
-      "links": [
-        {
-          "label": "Punjab FC vs Odisha FC",
-          "url": "https://www.indiansuperleague.com/matchcentre/194639"
         }
       ]
     }
