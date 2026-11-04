@@ -120,8 +120,8 @@
     "194656": "2026-11-04T13:49:37.032058+00:00"
   },
   "lastCheck": {
-    "checkedAt": "2026-11-04T20:32:32.913099+00:00",
-    "kind": "post-match-early",
+    "checkedAt": "2026-11-04T21:51:23.904565+00:00",
+    "kind": "post-match-late",
     "failures": [],
     "changes": {
       "fixtures": 0,

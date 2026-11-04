@@ -3,6 +3,13 @@
   "season": "2026-27",
   "checks": [
     {
+      "checkedAt": "2026-11-04T21:51:23.904860+00:00",
+      "kind": "post-match-late",
+      "outcome": "no-change",
+      "summary": "0 match centres checked; updates: fixtures 0, results 0, lineups 0, streams 0. Phase: phase-one. 0 pending; 0 errors.",
+      "links": []
+    },
+    {
       "checkedAt": "2026-11-04T20:32:32.913276+00:00",
       "kind": "post-match-early",
       "outcome": "no-change",
@@ -7605,26 +7612,6 @@
         {
           "label": "Official ISL substitutes 194640",
           "url": "https://www.indiansuperleague.com/matchcentre/194640"
-        }
-      ]
-    },
-    {
-      "checkedAt": "2026-10-16T13:40:41.244185+00:00",
-      "kind": "post-match-early",
-      "outcome": "no-change",
-      "summary": "No 17:00 IST fixtures on 16 Oct 2026; official schedule checked. 2 match centres checked; updates: fixtures 0, results 0, lineups 0, streams 0. Phase: phase-one. 0 pending; 0 errors.",
-      "links": [
-        {
-          "label": "Official ISL fixture schedule",
-          "url": "https://www.indiansuperleague.com/schedule-fixtures"
-        },
-        {
-          "label": "Sporting Club Delhi vs Mohun Bagan Super Giant",
-          "url": "https://www.indiansuperleague.com/matchcentre/194640"
-        },
-        {
-          "label": "Punjab FC vs Odisha FC",
-          "url": "https://www.indiansuperleague.com/matchcentre/194639"
         }
       ]
     }
