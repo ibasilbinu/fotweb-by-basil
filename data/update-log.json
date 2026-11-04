@@ -3,6 +3,22 @@
   "season": "2026-27",
   "checks": [
     {
+      "checkedAt": "2026-11-04T16:13:16Z",
+      "kind": "post-match-late",
+      "outcome": "no-change",
+      "summary": "No 19:30 IST fixture was scheduled for 4 November 2026, so no final result was due. The official 2026–27 fixture page and FotWeb schedule snapshot agree.",
+      "links": [
+        {
+          "label": "Official ISL fixture schedule",
+          "url": "https://www.indiansuperleague.com/schedule-fixtures"
+        },
+        {
+          "label": "Latest successful source-check workflow",
+          "url": "https://github.com/ibasilbinu/fotweb-by-basil/actions/runs/41808130417"
+        }
+      ]
+    },
+    {
       "checkedAt": "2026-11-04T13:50:14.207228+00:00",
       "kind": "lineup-late",
       "outcome": "no-change",
@@ -7641,26 +7657,6 @@
     {
       "checkedAt": "2026-10-16T07:09:25.977142+00:00",
       "kind": "hourly",
-      "outcome": "no-change",
-      "summary": "1 match centres checked; updates: fixtures 0, results 0, lineups 0, streams 0. Phase: phase-one. 0 pending; 0 errors.",
-      "links": [
-        {
-          "label": "Official ISL fixture discovery",
-          "url": "https://www.indiansuperleague.com/schedule-fixtures"
-        },
-        {
-          "label": "Punjab FC vs Odisha FC",
-          "url": "https://www.indiansuperleague.com/matchcentre/194639"
-        },
-        {
-          "label": "Official ISL YouTube Live listing",
-          "url": "https://www.youtube.com/@IndianSuperLeague/streams"
-        }
-      ]
-    },
-    {
-      "checkedAt": "2026-10-16T02:35:13.363337+00:00",
-      "kind": "morning",
       "outcome": "no-change",
       "summary": "1 match centres checked; updates: fixtures 0, results 0, lineups 0, streams 0. Phase: phase-one. 0 pending; 0 errors.",
       "links": [
