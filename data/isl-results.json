@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "season": "2026-27",
-  "updatedAt": "2026-11-05T13:31:07.191789+00:00",
+  "updatedAt": "2026-11-05T15:27:18.520174+00:00",
   "matches": [
     {
       "id": "194634",
@@ -15982,7 +15982,7 @@
       "status": "FT",
       "phase": "league",
       "officialStage": "League",
-      "verifiedAt": "2026-11-05T13:31:07.191789+00:00",
+      "verifiedAt": "2026-11-05T15:27:18.520174+00:00",
       "sources": [
         {
           "label": "Indian Super League official match centre",
@@ -16189,32 +16189,32 @@
       },
       "stats": {
         "home": {
-          "possession": 59,
-          "shots": 14,
+          "possession": 58,
+          "shots": 15,
           "shotsOnTarget": 5,
           "corners": 2,
           "fouls": 17,
           "offsides": 1,
           "yellowCards": 1,
           "redCards": 0,
-          "passes": 404,
-          "passAccuracy": 83,
+          "passes": 405,
+          "passAccuracy": 82,
           "tackles": 10,
           "interceptions": 4,
           "clearances": 11,
           "saves": 2
         },
         "away": {
-          "possession": 41,
+          "possession": 42,
           "shots": 9,
           "shotsOnTarget": 4,
           "corners": 3,
-          "fouls": 13,
+          "fouls": 14,
           "offsides": 1,
           "yellowCards": 4,
           "redCards": 0,
           "passes": 294,
-          "passAccuracy": 71,
+          "passAccuracy": 70,
           "tackles": 16,
           "interceptions": 5,
           "clearances": 24,
@@ -16250,7 +16250,7 @@
           "position": "Midfielder",
           "goals": 0,
           "assists": 0,
-          "shots": 1,
+          "shots": 2,
           "passes": 51,
           "tackles": 0,
           "saves": 0
@@ -16284,7 +16284,7 @@
           "goals": 0,
           "assists": 0,
           "shots": 3,
-          "passes": 24,
+          "passes": 25,
           "tackles": 0,
           "saves": 0
         },
@@ -16619,7 +16619,7 @@
           "playerOut": "Ethyan Jesus Gonzalez Morales"
         },
         {
-          "minute": 65,
+          "minute": 64,
           "side": "away",
           "type": "yellow_card",
           "player": "Alaeddine Ajaraie"
@@ -16632,7 +16632,7 @@
           "playerOut": "Sebastian Gutierrez Atehortua"
         },
         {
-          "minute": 77,
+          "minute": 76,
           "side": "away",
           "type": "substitution",
           "playerIn": "Aman CK",
@@ -16642,15 +16642,15 @@
           "minute": 83,
           "side": "away",
           "type": "substitution",
-          "playerIn": "Saikhom Thoiba Singh",
-          "playerOut": "Alaeddine Ajaraie"
+          "playerIn": "Soraisham Dinesh Singh",
+          "playerOut": "Redeem Tlang"
         },
         {
           "minute": 84,
           "side": "away",
           "type": "substitution",
-          "playerIn": "Soraisham Dinesh Singh",
-          "playerOut": "Redeem Tlang"
+          "playerIn": "Saikhom Thoiba Singh",
+          "playerOut": "Alaeddine Ajaraie"
         },
         {
           "minute": 84,

@@ -3,6 +3,30 @@
   "season": "2026-27",
   "checks": [
     {
+      "checkedAt": "2026-11-05T15:27:24.364911+00:00",
+      "kind": "hourly",
+      "outcome": "partial",
+      "summary": "2 match centres checked; updates: fixtures 0, results 1, lineups 1, streams 1. Phase: phase-one. 0 pending; 1 errors. YouTube b8JRpEc1BUc: Public metadata: Video identity unavailable or private; alternate metadata missing channel identity",
+      "links": [
+        {
+          "label": "Official ISL fixture discovery",
+          "url": "https://www.indiansuperleague.com/schedule-fixtures"
+        },
+        {
+          "label": "Churchill Brothers vs NorthEast United FC",
+          "url": "https://www.indiansuperleague.com/matchcentre/194657"
+        },
+        {
+          "label": "Mohun Bagan Super Giant vs Odisha FC",
+          "url": "https://www.indiansuperleague.com/matchcentre/194658"
+        },
+        {
+          "label": "Official ISL YouTube Live listing",
+          "url": "https://www.youtube.com/@IndianSuperLeague/streams"
+        }
+      ]
+    },
+    {
       "checkedAt": "2026-11-05T13:42:03Z",
       "kind": "post-match-early",
       "outcome": "no-change",
@@ -7541,22 +7565,6 @@
     {
       "checkedAt": "2026-10-16T18:25:35.052958+00:00",
       "kind": "match-retry",
-      "outcome": "no-change",
-      "summary": "2 match centres checked; updates: fixtures 0, results 0, lineups 0, streams 0. Phase: phase-one. 0 pending; 0 errors.",
-      "links": [
-        {
-          "label": "Sporting Club Delhi vs Mohun Bagan Super Giant",
-          "url": "https://www.indiansuperleague.com/matchcentre/194640"
-        },
-        {
-          "label": "Punjab FC vs Odisha FC",
-          "url": "https://www.indiansuperleague.com/matchcentre/194639"
-        }
-      ]
-    },
-    {
-      "checkedAt": "2026-10-16T17:41:36.943834+00:00",
-      "kind": "post-match-early",
       "outcome": "no-change",
       "summary": "2 match centres checked; updates: fixtures 0, results 0, lineups 0, streams 0. Phase: phase-one. 0 pending; 0 errors.",
       "links": [

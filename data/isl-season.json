@@ -4099,12 +4099,11 @@
       "officialStage": "league",
       "broadcast": {
         "url": "https://www.youtube.com/live/tYRs4yoQGpo",
-        "title": "LIVE: Churchill Brothers SC vs NorthEast United FC | MG ISL 2026-27",
+        "title": "FULL REPLAY (English): Churchill Brothers SC vs NorthEast United FC (0-2) | MG ISL 2026-27",
         "channelUrl": "https://www.youtube.com/@IndianSuperLeague",
         "language": "English",
-        "status": "live",
-        "verifiedAt": "2026-11-05T11:05:45.534552+00:00",
-        "languageEvidence": "official-default-unlabelled"
+        "status": "ended",
+        "verifiedAt": "2026-11-05T15:27:18.520174+00:00"
       },
       "lineups": {
         "home": {
@@ -4371,7 +4370,7 @@
               "number": 71
             }
           ],
-          "formation": "4-5-1",
+          "formation": "4-4-2",
           "substitutes": [
             {
               "name": "Rahul Shankar Bheke",
@@ -4467,7 +4466,7 @@
               "number": 93
             }
           ],
-          "formation": "4-3-3",
+          "formation": "3-4-3",
           "substitutes": [
             {
               "name": "Subham Bhattacharya",
@@ -4517,7 +4516,7 @@
           ]
         },
         "sourceUrl": "https://www.indiansuperleague.com/matchcentre/194658",
-        "verifiedAt": "2026-11-05T13:31:07.191789+00:00"
+        "verifiedAt": "2026-11-05T15:27:18.520174+00:00"
       }
     },
     {
