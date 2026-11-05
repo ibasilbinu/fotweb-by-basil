@@ -3,6 +3,22 @@
   "season": "2026-27",
   "checks": [
     {
+      "checkedAt": "2026-11-05T16:17:56Z",
+      "kind": "post-match-late",
+      "outcome": "updated",
+      "summary": "Mohun Bagan Super Giant 3–2 Odisha FC, FT, confirmed by the official ISL match centre and published immediately. Updates: results 1; pending 0; errors 0. Existing confirmed lineups were preserved; optional enrichment remains for later checks.",
+      "links": [
+        {
+          "label": "Mohun Bagan Super Giant vs Odisha FC",
+          "url": "https://www.indiansuperleague.com/matchcentre/194658"
+        },
+        {
+          "label": "Latest source-check workflow",
+          "url": "https://github.com/ibasilbinu/fotweb-by-basil/actions/runs/42055101104"
+        }
+      ]
+    },
+    {
       "checkedAt": "2026-11-05T15:27:24.364911+00:00",
       "kind": "hourly",
       "outcome": "partial",
@@ -7549,22 +7565,6 @@
     {
       "checkedAt": "2026-10-16T19:32:24.133920+00:00",
       "kind": "post-match-late",
-      "outcome": "no-change",
-      "summary": "2 match centres checked; updates: fixtures 0, results 0, lineups 0, streams 0. Phase: phase-one. 0 pending; 0 errors.",
-      "links": [
-        {
-          "label": "Sporting Club Delhi vs Mohun Bagan Super Giant",
-          "url": "https://www.indiansuperleague.com/matchcentre/194640"
-        },
-        {
-          "label": "Punjab FC vs Odisha FC",
-          "url": "https://www.indiansuperleague.com/matchcentre/194639"
-        }
-      ]
-    },
-    {
-      "checkedAt": "2026-10-16T18:25:35.052958+00:00",
-      "kind": "match-retry",
       "outcome": "no-change",
       "summary": "2 match centres checked; updates: fixtures 0, results 0, lineups 0, streams 0. Phase: phase-one. 0 pending; 0 errors.",
       "links": [
