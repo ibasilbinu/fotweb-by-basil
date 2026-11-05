@@ -3,6 +3,26 @@
   "season": "2026-27",
   "checks": [
     {
+      "checkedAt": "2026-11-05T13:42:03Z",
+      "kind": "post-match-early",
+      "outcome": "no-change",
+      "summary": "Churchill Brothers 0–2 NorthEast United FC, FT, was independently verified from the official ISL match centre and was already published by the concurrent lineup-late check. Football-data updates: 0; pending 0; errors 0.",
+      "links": [
+        {
+          "label": "Churchill Brothers vs NorthEast United FC",
+          "url": "https://www.indiansuperleague.com/matchcentre/194657"
+        },
+        {
+          "label": "Verified data publication",
+          "url": "https://github.com/ibasilbinu/fotweb-by-basil/commit/fe526799b99530d224c5b310c5dd58ab6131de82"
+        },
+        {
+          "label": "Latest successful source-check workflow",
+          "url": "https://github.com/ibasilbinu/fotweb-by-basil/actions/runs/42004201429"
+        }
+      ]
+    },
+    {
       "checkedAt": "2026-11-05T13:32:43.098780+00:00",
       "kind": "lineup-late",
       "outcome": "updated",
@@ -7547,26 +7567,6 @@
         {
           "label": "Punjab FC vs Odisha FC",
           "url": "https://www.indiansuperleague.com/matchcentre/194639"
-        }
-      ]
-    },
-    {
-      "checkedAt": "2026-10-16T17:38:30.513778+00:00",
-      "kind": "lineup-late",
-      "outcome": "no-change",
-      "summary": "2 match centres checked; updates: fixtures 0, results 0, lineups 0, streams 0. Phase: phase-one. 0 pending; 0 errors.",
-      "links": [
-        {
-          "label": "Sporting Club Delhi vs Mohun Bagan Super Giant",
-          "url": "https://www.indiansuperleague.com/matchcentre/194640"
-        },
-        {
-          "label": "Punjab FC vs Odisha FC",
-          "url": "https://www.indiansuperleague.com/matchcentre/194639"
-        },
-        {
-          "label": "Official ISL YouTube Live listing",
-          "url": "https://www.youtube.com/@IndianSuperLeague/streams"
         }
       ]
     }
