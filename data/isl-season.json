@@ -4102,9 +4102,205 @@
         "title": "LIVE: Churchill Brothers SC vs NorthEast United FC | MG ISL 2026-27",
         "channelUrl": "https://www.youtube.com/@IndianSuperLeague",
         "language": "English",
-        "status": "scheduled",
-        "verifiedAt": "2026-11-03T13:37:04.942078+00:00",
+        "status": "live",
+        "verifiedAt": "2026-11-05T11:05:45.534552+00:00",
         "languageEvidence": "official-default-unlabelled"
+      },
+      "lineups": {
+        "home": {
+          "starters": [
+            {
+              "name": "Sayad Bin Abdul Kadir",
+              "number": 1
+            },
+            {
+              "name": "Joseph Okoro",
+              "number": 3
+            },
+            {
+              "name": "Dramane Salou",
+              "number": 5
+            },
+            {
+              "name": "Kingslee Fernandes",
+              "number": 8
+            },
+            {
+              "name": "Wayde Lekay",
+              "number": 9
+            },
+            {
+              "name": "Sebastian Gutierrez Atehortua",
+              "number": 10
+            },
+            {
+              "name": "Maibam Deny Singh",
+              "number": 20
+            },
+            {
+              "name": "Melroy Melwin Assisi",
+              "number": 21
+            },
+            {
+              "name": "Phijam Sanathoi Meetei",
+              "number": 26
+            },
+            {
+              "name": "Vincy Barretto",
+              "number": 47
+            },
+            {
+              "name": "Anil Rama Gaonkar",
+              "number": 57
+            }
+          ],
+          "formation": "3-5-2",
+          "substitutes": [
+            {
+              "name": "Wahengbam Angousana Luwang",
+              "number": 6,
+              "position": "Midfielder"
+            },
+            {
+              "name": "Stendly Teotonio Fernandes",
+              "number": 7,
+              "position": "Midfielder"
+            },
+            {
+              "name": "JOHN OKOLI",
+              "number": 19,
+              "position": "Forward"
+            },
+            {
+              "name": "Trijoy Savio Dias",
+              "number": 23,
+              "position": "Midfielder"
+            },
+            {
+              "name": "Anuj Kumar",
+              "number": 25,
+              "position": "Goalkeeper"
+            },
+            {
+              "name": "Richard Costa",
+              "number": 33,
+              "position": "Midfielder"
+            },
+            {
+              "name": "Gaurav Bora",
+              "number": 44,
+              "position": "Defender"
+            },
+            {
+              "name": "Freddy Lalrinkima",
+              "number": 90,
+              "position": "Midfielder"
+            },
+            {
+              "name": "Pasang Dorjee Tamang",
+              "number": 92,
+              "position": "Midfielder"
+            }
+          ]
+        },
+        "away": {
+          "starters": [
+            {
+              "name": "Gurmeet Singh",
+              "number": 1
+            },
+            {
+              "name": "Pramveer Ranbir",
+              "number": 4
+            },
+            {
+              "name": "Abdul Rabeeh Anjukandan",
+              "number": 7
+            },
+            {
+              "name": "Antonio Moyano",
+              "number": 8
+            },
+            {
+              "name": "Ethyan Jesus Gonzalez Morales",
+              "number": 9
+            },
+            {
+              "name": "Muthu Irulandi Mayakkannan",
+              "number": 13
+            },
+            {
+              "name": "Alaeddine Ajaraie",
+              "number": 14
+            },
+            {
+              "name": "Macarton Louis Nickson",
+              "number": 15
+            },
+            {
+              "name": "Eneko Satrustegui Plano",
+              "number": 19
+            },
+            {
+              "name": "Redeem Tlang",
+              "number": 22
+            },
+            {
+              "name": "Jithin Madathil Subran",
+              "number": 80
+            }
+          ],
+          "formation": "3-5-2",
+          "substitutes": [
+            {
+              "name": "Soraisham Dinesh Singh",
+              "number": 2,
+              "position": "Defender"
+            },
+            {
+              "name": "Ngasepam Tondonba Singh",
+              "number": 3,
+              "position": "Defender"
+            },
+            {
+              "name": "Nikola Ninkovic",
+              "number": 10,
+              "position": "Forward"
+            },
+            {
+              "name": "Parthib Sundar Gogoi",
+              "number": 11,
+              "position": "Forward"
+            },
+            {
+              "name": "Lalrinzuala Lalbiaknia",
+              "number": 18,
+              "position": "Forward"
+            },
+            {
+              "name": "Dipesh Chauhan",
+              "number": 20,
+              "position": "Goalkeeper"
+            },
+            {
+              "name": "Saikhom Thoiba Singh",
+              "number": 26,
+              "position": "Midfielder"
+            },
+            {
+              "name": "Aman CK",
+              "number": 27,
+              "position": "Forward"
+            },
+            {
+              "name": "Mark Zothanpuia",
+              "number": 88,
+              "position": "Defender"
+            }
+          ]
+        },
+        "sourceUrl": "https://www.indiansuperleague.com/matchcentre/194657",
+        "verifiedAt": "2026-11-05T11:03:35.186373+00:00"
       }
     },
     {

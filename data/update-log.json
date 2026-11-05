@@ -3,6 +3,22 @@
   "season": "2026-27",
   "checks": [
     {
+      "checkedAt": "2026-11-05T11:05:45.534552+00:00",
+      "kind": "lineup-early",
+      "outcome": "updated",
+      "summary": "1 match centre checked; updates: fixtures 0, results 0, lineups 1, streams 1. Phase: phase-one. 0 pending; 0 errors. Browser fallback recovered the importer TLS failure and confirmed the official English stream is live.",
+      "links": [
+        {
+          "label": "Churchill Brothers vs NorthEast United FC",
+          "url": "https://www.indiansuperleague.com/matchcentre/194657"
+        },
+        {
+          "label": "Official ISL YouTube Live listing",
+          "url": "https://www.youtube.com/@IndianSuperLeague/streams"
+        }
+      ]
+    },
+    {
       "checkedAt": "2026-11-05T09:39:57.300902+00:00",
       "kind": "morning",
       "outcome": "no-change",
@@ -7531,46 +7547,6 @@
         {
           "label": "Official ISL YouTube Live listing",
           "url": "https://www.youtube.com/@IndianSuperLeague/streams"
-        }
-      ]
-    },
-    {
-      "checkedAt": "2026-10-16T17:24:11.236433+00:00",
-      "kind": "hourly",
-      "outcome": "updated",
-      "summary": "2 match centres checked; updates: fixtures 0, results 1, lineups 0, streams 1. Phase: phase-one. 0 pending; 0 errors.",
-      "links": [
-        {
-          "label": "Official ISL fixture discovery",
-          "url": "https://www.indiansuperleague.com/schedule-fixtures"
-        },
-        {
-          "label": "Sporting Club Delhi vs Mohun Bagan Super Giant",
-          "url": "https://www.indiansuperleague.com/matchcentre/194640"
-        },
-        {
-          "label": "Punjab FC vs Odisha FC",
-          "url": "https://www.indiansuperleague.com/matchcentre/194639"
-        },
-        {
-          "label": "Official ISL YouTube Live listing",
-          "url": "https://www.youtube.com/@IndianSuperLeague/streams"
-        }
-      ]
-    },
-    {
-      "checkedAt": "2026-10-16T16:13:58.023237+00:00",
-      "kind": "post-match-late",
-      "outcome": "updated",
-      "summary": "2 match centres checked; updates: fixtures 0, results 1, lineups 0, streams 0. Phase: phase-one. 0 pending; 0 errors.",
-      "links": [
-        {
-          "label": "Sporting Club Delhi vs Mohun Bagan Super Giant",
-          "url": "https://www.indiansuperleague.com/matchcentre/194640"
-        },
-        {
-          "label": "Punjab FC vs Odisha FC",
-          "url": "https://www.indiansuperleague.com/matchcentre/194639"
         }
       ]
     }
