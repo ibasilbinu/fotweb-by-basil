@@ -4322,6 +4322,202 @@
         "status": "scheduled",
         "verifiedAt": "2026-11-03T13:37:04.942078+00:00",
         "languageEvidence": "official-default-unlabelled"
+      },
+      "lineups": {
+        "home": {
+          "starters": [
+            {
+              "name": "Vishal Kaith",
+              "number": 1
+            },
+            {
+              "name": "Mehtab Singh",
+              "number": 5
+            },
+            {
+              "name": "Anirudh Thapa",
+              "number": 6
+            },
+            {
+              "name": "Liston Colaco",
+              "number": 7
+            },
+            {
+              "name": "Samir Zeljkovic",
+              "number": 8
+            },
+            {
+              "name": "Manvir Singh",
+              "number": 11
+            },
+            {
+              "name": "Subhasish Prodyut Bose",
+              "number": 15
+            },
+            {
+              "name": "Lee Harry Erwin",
+              "number": 19
+            },
+            {
+              "name": "Alberto Rodriguez Martin",
+              "number": 21
+            },
+            {
+              "name": "Tekcham Abhishek Singh",
+              "number": 27
+            },
+            {
+              "name": "Dejan Drazic",
+              "number": 71
+            }
+          ],
+          "formation": "4-5-1",
+          "substitutes": [
+            {
+              "name": "Rahul Shankar Bheke",
+              "number": 2,
+              "position": "Defender"
+            },
+            {
+              "name": "Lallianzuala Chhangte",
+              "number": 9,
+              "position": "Midfielder"
+            },
+            {
+              "name": "Sayan Banerjee",
+              "number": 14,
+              "position": "Midfielder"
+            },
+            {
+              "name": "Kiyan Nassiri Giri",
+              "number": 17,
+              "position": "Forward"
+            },
+            {
+              "name": "Deepak Tangri",
+              "number": 22,
+              "position": "Midfielder"
+            },
+            {
+              "name": "Syed Zahid Hussain Bukhari",
+              "number": 24,
+              "position": "Goalkeeper"
+            },
+            {
+              "name": "Jamie MacLaren",
+              "number": 29,
+              "position": "Forward"
+            },
+            {
+              "name": "Alex Saji",
+              "number": 40,
+              "position": "Defender"
+            },
+            {
+              "name": "Asish Rai",
+              "number": 44,
+              "position": "Defender"
+            }
+          ]
+        },
+        "away": {
+          "starters": [
+            {
+              "name": "Saurabh Bhanwala",
+              "number": 6
+            },
+            {
+              "name": "Lalthathanga Khawlhring",
+              "number": 7
+            },
+            {
+              "name": "Everton Nascimento de Mendonça",
+              "number": 8
+            },
+            {
+              "name": "Jeremy Zohminghlua",
+              "number": 23
+            },
+            {
+              "name": "Moirangthem Thoiba Singh",
+              "number": 24
+            },
+            {
+              "name": "K Lalrinfela",
+              "number": 25
+            },
+            {
+              "name": "Giorgi Aburjania",
+              "number": 29
+            },
+            {
+              "name": "Hrithik Tiwari",
+              "number": 55
+            },
+            {
+              "name": "Stephen Eze",
+              "number": 66
+            },
+            {
+              "name": "Nihal Sudeesh",
+              "number": 77
+            },
+            {
+              "name": "Mahmoud Eid",
+              "number": 93
+            }
+          ],
+          "formation": "4-3-3",
+          "substitutes": [
+            {
+              "name": "Subham Bhattacharya",
+              "number": 3,
+              "position": "Defender"
+            },
+            {
+              "name": "Rahul Kannoly Praveen",
+              "number": 10,
+              "position": "Forward"
+            },
+            {
+              "name": "Manuel Antonio Molina Valero",
+              "number": 12,
+              "position": "Midfielder"
+            },
+            {
+              "name": "Suhair Vadakkepeedika",
+              "number": 15,
+              "position": "Forward"
+            },
+            {
+              "name": "Ritwik Kumar Das",
+              "number": 18,
+              "position": "Midfielder"
+            },
+            {
+              "name": "Nandhakumar Sekar",
+              "number": 22,
+              "position": "Forward"
+            },
+            {
+              "name": "Sachin A Suresh",
+              "number": 31,
+              "position": "Goalkeeper"
+            },
+            {
+              "name": "Edwin Sydney Vanspaul Henry",
+              "number": 33,
+              "position": "Midfielder"
+            },
+            {
+              "name": "Vanlalzuidika Chhakchhuak",
+              "number": 34,
+              "position": "Defender"
+            }
+          ]
+        },
+        "sourceUrl": "https://www.indiansuperleague.com/matchcentre/194658",
+        "verifiedAt": "2026-11-05T13:31:07.191789+00:00"
       }
     },
     {

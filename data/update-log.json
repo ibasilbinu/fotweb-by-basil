@@ -3,6 +3,26 @@
   "season": "2026-27",
   "checks": [
     {
+      "checkedAt": "2026-11-05T13:32:43.098780+00:00",
+      "kind": "lineup-late",
+      "outcome": "updated",
+      "summary": "2 match centres checked; updates: fixtures 0, results 1, lineups 1, streams 0. Phase: phase-one. 0 pending; 0 errors. Browser fallback recovered the importer TLS failure and reconfirmed the existing official English streams.",
+      "links": [
+        {
+          "label": "Mohun Bagan Super Giant vs Odisha FC",
+          "url": "https://www.indiansuperleague.com/matchcentre/194658"
+        },
+        {
+          "label": "Churchill Brothers vs NorthEast United FC",
+          "url": "https://www.indiansuperleague.com/matchcentre/194657"
+        },
+        {
+          "label": "Official ISL YouTube Live listing",
+          "url": "https://www.youtube.com/@IndianSuperLeague/streams"
+        }
+      ]
+    },
+    {
       "checkedAt": "2026-11-05T11:05:45.534552+00:00",
       "kind": "lineup-early",
       "outcome": "updated",
