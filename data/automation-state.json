@@ -123,14 +123,14 @@
     "194659": "2026-11-06T13:33:23.996390+00:00"
   },
   "lastCheck": {
-    "checkedAt": "2026-11-06T13:33:23.996390+00:00",
-    "kind": "lineup-late",
+    "checkedAt": "2026-11-06T13:45:18Z",
+    "kind": "post-match-early",
     "failures": [],
     "changes": {
       "fixtures": 0,
       "results": 0,
-      "lineups": 1,
-      "streams": 1
+      "lineups": 0,
+      "streams": 0
     }
   }
 }

@@ -3,6 +3,26 @@
   "season": "2026-27",
   "checks": [
     {
+      "checkedAt": "2026-11-06T13:45:18Z",
+      "kind": "post-match-early",
+      "outcome": "no-change",
+      "summary": "No 17:00 IST fixture was scheduled for 6 November 2026, so no final result was due. The official fixture page and FotWeb snapshot agree; FC Goa vs Bengaluru FC is the 19:30 fixture and remains covered by the later check.",
+      "links": [
+        {
+          "label": "Official ISL fixture schedule",
+          "url": "https://www.indiansuperleague.com/schedule-fixtures"
+        },
+        {
+          "label": "FC Goa vs Bengaluru FC",
+          "url": "https://www.indiansuperleague.com/matchcentre/194659"
+        },
+        {
+          "label": "Latest successful source-check workflow",
+          "url": "https://github.com/ibasilbinu/fotweb-by-basil/actions/runs/42205870844"
+        }
+      ]
+    },
+    {
       "checkedAt": "2026-11-06T13:33:55.097039+00:00",
       "kind": "lineup-late",
       "outcome": "updated",
@@ -7511,30 +7531,6 @@
         {
           "label": "Sporting Club Delhi vs Mohun Bagan Super Giant",
           "url": "https://www.indiansuperleague.com/matchcentre/194640"
-        }
-      ]
-    },
-    {
-      "checkedAt": "2026-10-17T14:07:05.988900+00:00",
-      "kind": "lineup-early",
-      "outcome": "partial",
-      "summary": "3 match centres checked; updates: fixtures 0, results 1, lineups 1, streams 0. Phase: phase-one. 0 pending; 1 errors. YouTube 0XReoY9GNr4: Public metadata: Video identity unavailable or private; alternate metadata missing channel identity",
-      "links": [
-        {
-          "label": "Inter Kashi vs Odisha FC",
-          "url": "https://www.indiansuperleague.com/matchcentre/194641"
-        },
-        {
-          "label": "Bengaluru FC vs Chennaiyin FC",
-          "url": "https://www.indiansuperleague.com/matchcentre/194642"
-        },
-        {
-          "label": "Sporting Club Delhi vs Mohun Bagan Super Giant",
-          "url": "https://www.indiansuperleague.com/matchcentre/194640"
-        },
-        {
-          "label": "Official ISL YouTube Live listing",
-          "url": "https://www.youtube.com/@IndianSuperLeague/streams"
         }
       ]
     }
