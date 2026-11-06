@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "season": "2026-27",
-  "updatedAt": "2026-11-05T17:56:58.401137+00:00",
+  "updatedAt": "2026-11-06T16:20:16Z",
   "matches": [
     {
       "id": "194634",
@@ -17361,6 +17361,224 @@
           "addedMinute": 3
         }
       ]
+    },
+    {
+      "id": "194659",
+      "date": "2026-11-06",
+      "home": "FC Goa",
+      "away": "Bengaluru FC",
+      "homeGoals": 1,
+      "awayGoals": 2,
+      "status": "FT",
+      "phase": "league",
+      "officialStage": "League",
+      "verifiedAt": "2026-11-06T16:20:16Z",
+      "sources": [
+        {
+          "label": "Indian Super League official match centre",
+          "url": "https://www.indiansuperleague.com/matchcentre/194659"
+        }
+      ],
+      "matchUrl": "https://www.indiansuperleague.com/matchcentre/194659",
+      "winnerId": "656",
+      "venue": "Pandit Jawaharlal Nehru Stadium, Goa",
+      "report": "FC Goa 1–2 Bengaluru FC. Full-time; result confirmed by the official ISL match centre.",
+      "lineups": {
+        "home": {
+          "starters": [
+            {
+              "name": "Sandesh Jhingan",
+              "number": 3
+            },
+            {
+              "name": "Alexander Vallejo Minguez",
+              "number": 5
+            },
+            {
+              "name": "Haobam Tomba Singh",
+              "number": 8
+            },
+            {
+              "name": "Christian Borrego Isabel",
+              "number": 9
+            },
+            {
+              "name": "Pedro Alejandro Zalaya Galardon",
+              "number": 15
+            },
+            {
+              "name": "Isak Vanlalruatfela",
+              "number": 19
+            },
+            {
+              "name": "Udanta Singh Kumam",
+              "number": 21
+            },
+            {
+              "name": "Francisco Feuillassier Abalo",
+              "number": 28
+            },
+            {
+              "name": "Muhammed Nemil Valiyattil",
+              "number": 44
+            },
+            {
+              "name": "Bob Jackson Raj",
+              "number": 45
+            },
+            {
+              "name": "Konsam Akash Singh",
+              "number": 48
+            }
+          ],
+          "formation": "3-4-3",
+          "substitutes": [
+            {
+              "name": "Jorge Ortiz Mendoza",
+              "number": 7,
+              "position": "Forward"
+            },
+            {
+              "name": "Prachit Gaonkar",
+              "number": 22,
+              "position": "Midfielder"
+            },
+            {
+              "name": "Saveme Tariang",
+              "number": 25,
+              "position": "Defender"
+            },
+            {
+              "name": "Nim Dorjee Tamang",
+              "number": 29,
+              "position": "Defender"
+            },
+            {
+              "name": "Lionel Daryl Rymmei",
+              "number": 33,
+              "position": "Goalkeeper"
+            },
+            {
+              "name": "Haodamlian Vaiphei",
+              "number": 40,
+              "position": "Midfielder"
+            },
+            {
+              "name": "Sitroy Carvalho",
+              "number": 41,
+              "position": "Defender"
+            },
+            {
+              "name": "Rudra Ved",
+              "number": 47,
+              "position": "Defender"
+            },
+            {
+              "name": "KC Malsawmsanga",
+              "number": 77,
+              "position": "Midfielder"
+            }
+          ]
+        },
+        "away": {
+          "starters": [
+            {
+              "name": "Gurpreet Singh Sandhu",
+              "number": 1
+            },
+            {
+              "name": "Menno Robert Maria Koch",
+              "number": 3
+            },
+            {
+              "name": "Chinglensana Singh Konsham",
+              "number": 4
+            },
+            {
+              "name": "Manuel Ignacio Iriondo",
+              "number": 5
+            },
+            {
+              "name": "Sandro Anibal Embalo",
+              "number": 6
+            },
+            {
+              "name": "Borja Martinez Giner",
+              "number": 7
+            },
+            {
+              "name": "Suresh Singh Wangjam",
+              "number": 8
+            },
+            {
+              "name": "Ryan Dale Williams",
+              "number": 10
+            },
+            {
+              "name": "Sunil Chhetri",
+              "number": 11
+            },
+            {
+              "name": "Haobam Ricky Meetei",
+              "number": 18
+            },
+            {
+              "name": "Fanai Lalremtluanga",
+              "number": 23
+            }
+          ],
+          "formation": "4-3-3",
+          "substitutes": [
+            {
+              "name": "Mihailo Perovic",
+              "number": 9,
+              "position": "Forward"
+            },
+            {
+              "name": "Soham Varshneya",
+              "number": 14,
+              "position": "Forward"
+            },
+            {
+              "name": "Monirul Molla",
+              "number": 17,
+              "position": "Forward"
+            },
+            {
+              "name": "Muhammed Ashique Kuruniyan",
+              "number": 22,
+              "position": "Forward"
+            },
+            {
+              "name": "Nikhil Chandrashekar Poojary",
+              "number": 27,
+              "position": "Defender"
+            },
+            {
+              "name": "Lalthuammawia Ralte",
+              "number": 28,
+              "position": "Goalkeeper"
+            },
+            {
+              "name": "Sahil Poonia",
+              "number": 30,
+              "position": "Goalkeeper"
+            },
+            {
+              "name": "Vinith Venkatesh",
+              "number": 31,
+              "position": "Midfielder"
+            },
+            {
+              "name": "Roshan Singh Naorem",
+              "number": 32,
+              "position": "Defender"
+            }
+          ]
+        },
+        "sourceUrl": "https://www.indiansuperleague.com/matchcentre/194659",
+        "verifiedAt": "2026-11-06T13:33:23.996390+00:00"
+      }
     }
   ]
 }
