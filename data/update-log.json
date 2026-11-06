@@ -3,6 +3,26 @@
   "season": "2026-27",
   "checks": [
     {
+      "checkedAt": "2026-11-06T17:23:18.458746+00:00",
+      "kind": "match-retry",
+      "outcome": "updated",
+      "summary": "3 match centres checked; updates: fixtures 0, results 2, lineups 0, streams 0. Phase: phase-one. 0 pending; 0 errors.",
+      "links": [
+        {
+          "label": "FC Goa vs Bengaluru FC",
+          "url": "https://www.indiansuperleague.com/matchcentre/194659"
+        },
+        {
+          "label": "Churchill Brothers vs NorthEast United FC",
+          "url": "https://www.indiansuperleague.com/matchcentre/194657"
+        },
+        {
+          "label": "Mohun Bagan Super Giant vs Odisha FC",
+          "url": "https://www.indiansuperleague.com/matchcentre/194658"
+        }
+      ]
+    },
+    {
       "checkedAt": "2026-11-06T16:20:16Z",
       "kind": "post-match-late",
       "outcome": "updated",
@@ -7503,30 +7523,6 @@
         {
           "label": "Sporting Club Delhi vs Mohun Bagan Super Giant",
           "url": "https://www.indiansuperleague.com/matchcentre/194640"
-        }
-      ]
-    },
-    {
-      "checkedAt": "2026-10-17T16:36:24.832784+00:00",
-      "kind": "lineup-late",
-      "outcome": "updated",
-      "summary": "3 match centres checked; updates: fixtures 0, results 1, lineups 0, streams 2. Phase: phase-one. 0 pending; 0 errors.",
-      "links": [
-        {
-          "label": "Inter Kashi vs Odisha FC",
-          "url": "https://www.indiansuperleague.com/matchcentre/194641"
-        },
-        {
-          "label": "Bengaluru FC vs Chennaiyin FC",
-          "url": "https://www.indiansuperleague.com/matchcentre/194642"
-        },
-        {
-          "label": "Sporting Club Delhi vs Mohun Bagan Super Giant",
-          "url": "https://www.indiansuperleague.com/matchcentre/194640"
-        },
-        {
-          "label": "Official ISL YouTube Live listing",
-          "url": "https://www.youtube.com/@IndianSuperLeague/streams"
         }
       ]
     }
