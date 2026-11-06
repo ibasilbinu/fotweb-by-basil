@@ -3,6 +3,30 @@
   "season": "2026-27",
   "checks": [
     {
+      "checkedAt": "2026-11-06T09:33:55.674934+00:00",
+      "kind": "morning",
+      "outcome": "no-change",
+      "summary": "2 match centres checked; updates: fixtures 0, results 0, lineups 0, streams 0. Phase: phase-one. 0 pending; 0 errors.",
+      "links": [
+        {
+          "label": "Official ISL fixture discovery",
+          "url": "https://www.indiansuperleague.com/schedule-fixtures"
+        },
+        {
+          "label": "Churchill Brothers vs NorthEast United FC",
+          "url": "https://www.indiansuperleague.com/matchcentre/194657"
+        },
+        {
+          "label": "Mohun Bagan Super Giant vs Odisha FC",
+          "url": "https://www.indiansuperleague.com/matchcentre/194658"
+        },
+        {
+          "label": "Official ISL YouTube Live listing",
+          "url": "https://www.youtube.com/@IndianSuperLeague/streams"
+        }
+      ]
+    },
+    {
       "checkedAt": "2026-11-06T02:32:24.189679+00:00",
       "kind": "morning",
       "outcome": "no-change",
@@ -7523,34 +7547,6 @@
         {
           "label": "Sporting Club Delhi vs Mohun Bagan Super Giant",
           "url": "https://www.indiansuperleague.com/matchcentre/194640"
-        }
-      ]
-    },
-    {
-      "checkedAt": "2026-10-17T13:32:26.891678+00:00",
-      "kind": "lineup-late",
-      "outcome": "partial",
-      "summary": "4 match centres checked; updates: fixtures 0, results 1, lineups 1, streams 1. Phase: phase-one. 0 pending; 1 errors. YouTube 0XReoY9GNr4: Scheduled stream start is not available yet",
-      "links": [
-        {
-          "label": "Bengaluru FC vs Chennaiyin FC",
-          "url": "https://www.indiansuperleague.com/matchcentre/194642"
-        },
-        {
-          "label": "Inter Kashi vs Odisha FC",
-          "url": "https://www.indiansuperleague.com/matchcentre/194641"
-        },
-        {
-          "label": "Punjab FC vs Odisha FC",
-          "url": "https://www.indiansuperleague.com/matchcentre/194639"
-        },
-        {
-          "label": "Sporting Club Delhi vs Mohun Bagan Super Giant",
-          "url": "https://www.indiansuperleague.com/matchcentre/194640"
-        },
-        {
-          "label": "Official ISL YouTube Live listing",
-          "url": "https://www.youtube.com/@IndianSuperLeague/streams"
         }
       ]
     }
