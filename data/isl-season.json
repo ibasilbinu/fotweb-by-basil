@@ -4531,12 +4531,11 @@
       "officialStage": "league",
       "broadcast": {
         "url": "https://www.youtube.com/live/Pk5JUphLm5o",
-        "title": "LIVE: FC Goa vs Bengaluru FC | MG ISL 2026-27",
+        "title": "FULL REPLAY (English): FC Goa vs Bengaluru FC (1-2) | MG ISL 2026-27",
         "channelUrl": "https://www.youtube.com/@IndianSuperLeague",
         "language": "English",
-        "status": "live",
-        "verifiedAt": "2026-11-06T13:33:23.996390+00:00",
-        "languageEvidence": "official-default-unlabelled"
+        "status": "ended",
+        "verifiedAt": "2026-11-06T17:52:01.200569+00:00"
       },
       "lineups": {
         "home": {
