@@ -3,6 +3,26 @@
   "season": "2026-27",
   "checks": [
     {
+      "checkedAt": "2026-11-07T13:40:19.508Z",
+      "kind": "post-match-early",
+      "outcome": "no-change",
+      "summary": "Inter Kashi 0–3 Sporting Club Delhi, FT, was already published from the official ISL match centre by the immediately preceding verified source check. Updates: results 0; pending 0; errors 0. Existing lineups, statistics, events and player data were preserved.",
+      "links": [
+        {
+          "label": "Inter Kashi vs Sporting Club Delhi",
+          "url": "https://www.indiansuperleague.com/matchcentre/194660"
+        },
+        {
+          "label": "Verified data publication commit",
+          "url": "https://github.com/ibasilbinu/fotweb-by-basil/commit/8821d21e53cddf4f97f9c2da19df48b9a8355cf4"
+        },
+        {
+          "label": "Latest successful source-check workflow",
+          "url": "https://github.com/ibasilbinu/fotweb-by-basil/actions/runs/42362586044"
+        }
+      ]
+    },
+    {
       "checkedAt": "2026-11-07T13:33:46.672052+00:00",
       "kind": "lineup-late",
       "outcome": "updated",
@@ -7483,38 +7503,6 @@
         {
           "label": "NorthEast United FC vs Kerala Blasters FC",
           "url": "https://www.indiansuperleague.com/matchcentre/194644"
-        },
-        {
-          "label": "Churchill Brothers vs East Bengal FC",
-          "url": "https://www.indiansuperleague.com/matchcentre/194643"
-        },
-        {
-          "label": "Sporting Club Delhi vs Mohun Bagan Super Giant",
-          "url": "https://www.indiansuperleague.com/matchcentre/194640"
-        },
-        {
-          "label": "Inter Kashi vs Odisha FC",
-          "url": "https://www.indiansuperleague.com/matchcentre/194641"
-        },
-        {
-          "label": "Bengaluru FC vs Chennaiyin FC",
-          "url": "https://www.indiansuperleague.com/matchcentre/194642"
-        },
-        {
-          "label": "Official ISL YouTube Live listing",
-          "url": "https://www.youtube.com/@IndianSuperLeague/streams"
-        }
-      ]
-    },
-    {
-      "checkedAt": "2026-10-18T11:04:28.579615+00:00",
-      "kind": "hourly",
-      "outcome": "partial",
-      "summary": "4 match centres checked; updates: fixtures 0, results 0, lineups 0, streams 0. Phase: phase-one. 0 pending; 1 errors. YouTube b4Xo33p3SXo: Public metadata: Video identity unavailable or private; alternate metadata missing channel identity",
-      "links": [
-        {
-          "label": "Official ISL fixture discovery",
-          "url": "https://www.indiansuperleague.com/schedule-fixtures"
         },
         {
           "label": "Churchill Brothers vs East Bengal FC",
