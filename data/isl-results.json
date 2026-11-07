@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "season": "2026-27",
-  "updatedAt": "2026-11-07T13:33:10.234413+00:00",
+  "updatedAt": "2026-11-07T16:17:50.293584+00:00",
   "matches": [
     {
       "id": "194634",
@@ -18067,7 +18067,7 @@
       "status": "FT",
       "phase": "league",
       "officialStage": "League",
-      "verifiedAt": "2026-11-07T13:33:10.234413+00:00",
+      "verifiedAt": "2026-11-07T16:17:50.293584+00:00",
       "sources": [
         {
           "label": "Indian Super League official match centre",
@@ -18274,35 +18274,35 @@
       },
       "stats": {
         "home": {
-          "possession": 57,
+          "possession": 61,
           "shots": 11,
           "shotsOnTarget": 1,
           "corners": 7,
-          "fouls": 12,
-          "offsides": 3,
-          "yellowCards": 1,
+          "fouls": 13,
+          "offsides": 2,
+          "yellowCards": 2,
           "redCards": 0,
-          "passes": 353,
-          "passAccuracy": 75,
-          "tackles": 8,
+          "passes": 515,
+          "passAccuracy": 83,
+          "tackles": 12,
           "interceptions": 5,
-          "clearances": 11,
-          "saves": 2
+          "clearances": 12,
+          "saves": 3
         },
         "away": {
-          "possession": 43,
-          "shots": 15,
-          "shotsOnTarget": 6,
+          "possession": 39,
+          "shots": 17,
+          "shotsOnTarget": 7,
           "corners": 3,
           "fouls": 9,
           "offsides": 2,
           "yellowCards": 1,
           "redCards": 0,
-          "passes": 275,
-          "passAccuracy": 81,
-          "tackles": 16,
+          "passes": 331,
+          "passAccuracy": 77,
+          "tackles": 18,
           "interceptions": 8,
-          "clearances": 19,
+          "clearances": 25,
           "saves": 1
         }
       },
@@ -18314,7 +18314,7 @@
           "goals": 0,
           "assists": 0,
           "shots": 0,
-          "passes": 24,
+          "passes": 34,
           "tackles": 0,
           "saves": 0
         },
@@ -18325,7 +18325,7 @@
           "goals": 0,
           "assists": 0,
           "shots": 0,
-          "passes": 39,
+          "passes": 69,
           "tackles": 1,
           "saves": 0
         },
@@ -18336,8 +18336,8 @@
           "goals": 0,
           "assists": 0,
           "shots": 2,
-          "passes": 44,
-          "tackles": 1,
+          "passes": 78,
+          "tackles": 2,
           "saves": 0
         },
         {
@@ -18347,7 +18347,7 @@
           "goals": 0,
           "assists": 0,
           "shots": 0,
-          "passes": 40,
+          "passes": 49,
           "tackles": 1,
           "saves": 0
         },
@@ -18358,7 +18358,7 @@
           "goals": 0,
           "assists": 0,
           "shots": 1,
-          "passes": 38,
+          "passes": 59,
           "tackles": 2,
           "saves": 0
         },
@@ -18369,7 +18369,7 @@
           "goals": 0,
           "assists": 0,
           "shots": 0,
-          "passes": 21,
+          "passes": 31,
           "tackles": 0,
           "saves": 0
         },
@@ -18380,7 +18380,7 @@
           "goals": 0,
           "assists": 0,
           "shots": 2,
-          "passes": 29,
+          "passes": 42,
           "tackles": 0,
           "saves": 0
         },
@@ -18391,7 +18391,7 @@
           "goals": 0,
           "assists": 0,
           "shots": 1,
-          "passes": 12,
+          "passes": 18,
           "tackles": 0,
           "saves": 0
         },
@@ -18402,8 +18402,8 @@
           "goals": 0,
           "assists": 0,
           "shots": 1,
-          "passes": 24,
-          "tackles": 2,
+          "passes": 36,
+          "tackles": 3,
           "saves": 0
         },
         {
@@ -18413,7 +18413,7 @@
           "goals": 0,
           "assists": 0,
           "shots": 0,
-          "passes": 24,
+          "passes": 34,
           "tackles": 0,
           "saves": 0
         },
@@ -18424,8 +18424,8 @@
           "goals": 0,
           "assists": 0,
           "shots": 3,
-          "passes": 7,
-          "tackles": 1,
+          "passes": 10,
+          "tackles": 2,
           "saves": 0
         },
         {
@@ -18446,7 +18446,7 @@
           "goals": 0,
           "assists": 0,
           "shots": 0,
-          "passes": 1,
+          "passes": 2,
           "tackles": 0,
           "saves": 0
         },
@@ -18457,7 +18457,7 @@
           "goals": 0,
           "assists": 0,
           "shots": 1,
-          "passes": 9,
+          "passes": 10,
           "tackles": 0,
           "saves": 0
         },
@@ -18468,8 +18468,8 @@
           "goals": 0,
           "assists": 0,
           "shots": 0,
-          "passes": 8,
-          "tackles": 0,
+          "passes": 9,
+          "tackles": 1,
           "saves": 0
         },
         {
@@ -18479,7 +18479,7 @@
           "goals": 0,
           "assists": 0,
           "shots": 0,
-          "passes": 3,
+          "passes": 4,
           "tackles": 0,
           "saves": 0
         },
@@ -18490,7 +18490,7 @@
           "goals": 0,
           "assists": 0,
           "shots": 1,
-          "passes": 32,
+          "passes": 39,
           "tackles": 3,
           "saves": 0
         },
@@ -18501,7 +18501,7 @@
           "goals": 0,
           "assists": 0,
           "shots": 0,
-          "passes": 30,
+          "passes": 32,
           "tackles": 0,
           "saves": 0
         },
@@ -18512,7 +18512,7 @@
           "goals": 1,
           "assists": 1,
           "shots": 5,
-          "passes": 19,
+          "passes": 21,
           "tackles": 0,
           "saves": 0
         },
@@ -18522,9 +18522,9 @@
           "position": "Midfielder",
           "goals": 1,
           "assists": 0,
-          "shots": 3,
-          "passes": 26,
-          "tackles": 1,
+          "shots": 5,
+          "passes": 28,
+          "tackles": 2,
           "saves": 0
         },
         {
@@ -18534,7 +18534,7 @@
           "goals": 0,
           "assists": 0,
           "shots": 0,
-          "passes": 22,
+          "passes": 31,
           "tackles": 0,
           "saves": 0
         },
@@ -18545,7 +18545,7 @@
           "goals": 0,
           "assists": 0,
           "shots": 0,
-          "passes": 13,
+          "passes": 21,
           "tackles": 0,
           "saves": 0
         },
@@ -18556,7 +18556,7 @@
           "goals": 0,
           "assists": 0,
           "shots": 4,
-          "passes": 16,
+          "passes": 20,
           "tackles": 2,
           "saves": 0
         },
@@ -18578,7 +18578,7 @@
           "goals": 0,
           "assists": 0,
           "shots": 0,
-          "passes": 34,
+          "passes": 42,
           "tackles": 1,
           "saves": 0
         },
@@ -18589,7 +18589,7 @@
           "goals": 0,
           "assists": 1,
           "shots": 0,
-          "passes": 14,
+          "passes": 19,
           "tackles": 2,
           "saves": 0
         },
@@ -18600,7 +18600,7 @@
           "goals": 1,
           "assists": 0,
           "shots": 1,
-          "passes": 20,
+          "passes": 21,
           "tackles": 1,
           "saves": 0
         },
@@ -18611,7 +18611,7 @@
           "goals": 0,
           "assists": 0,
           "shots": 1,
-          "passes": 6,
+          "passes": 8,
           "tackles": 1,
           "saves": 0
         },
@@ -18622,7 +18622,7 @@
           "goals": 0,
           "assists": 0,
           "shots": 0,
-          "passes": 6,
+          "passes": 8,
           "tackles": 1,
           "saves": 0
         },
@@ -18633,7 +18633,7 @@
           "goals": 0,
           "assists": 0,
           "shots": 0,
-          "passes": 0,
+          "passes": 1,
           "tackles": 0,
           "saves": 0
         },
@@ -18644,8 +18644,8 @@
           "goals": 0,
           "assists": 0,
           "shots": 0,
-          "passes": 0,
-          "tackles": 0,
+          "passes": 2,
+          "tackles": 1,
           "saves": 0
         },
         {
@@ -18655,7 +18655,7 @@
           "goals": 0,
           "assists": 0,
           "shots": 0,
-          "passes": 6,
+          "passes": 7,
           "tackles": 0,
           "saves": 0
         }
@@ -18673,6 +18673,12 @@
           "side": "home",
           "type": "yellow_card",
           "player": "Laldinliana Renthlei"
+        },
+        {
+          "minute": 58,
+          "side": "home",
+          "type": "yellow_card",
+          "player": "Jitendra Singh"
         },
         {
           "minute": 66,
@@ -18750,18 +18756,750 @@
           "player": "Rodrigo Araujo da Silva Filho"
         },
         {
-          "minute": 89,
+          "minute": 87,
           "side": "away",
           "type": "substitution",
           "playerIn": "Thokchom Diamond Singh",
           "playerOut": "Rodrigo Araujo da Silva Filho"
         },
         {
-          "minute": 89,
+          "minute": 87,
           "side": "away",
           "type": "substitution",
           "playerIn": "Junior Harrison Nduka",
           "playerOut": "Ashutosh Mehta"
+        }
+      ]
+    },
+    {
+      "id": "194661",
+      "date": "2026-11-07",
+      "home": "Chennaiyin FC",
+      "away": "East Bengal FC",
+      "homeGoals": 5,
+      "awayGoals": 3,
+      "status": "FT",
+      "phase": "league",
+      "officialStage": "League",
+      "verifiedAt": "2026-11-07T16:17:50.293584+00:00",
+      "sources": [
+        {
+          "label": "Indian Super League official match centre",
+          "url": "https://www.indiansuperleague.com/matchcentre/194661"
+        }
+      ],
+      "matchUrl": "https://www.indiansuperleague.com/matchcentre/194661",
+      "winnerId": "505",
+      "venue": "Jawaharlal Nehru Stadium, Chennai",
+      "report": "Chennaiyin FC 5–3 East Bengal FC. Full-time; result confirmed by the official ISL match centre.",
+      "lineups": {
+        "home": {
+          "starters": [
+            {
+              "name": "Laldinpuia Pachuau",
+              "number": 3
+            },
+            {
+              "name": "Nuno Miguel Pereira Reis",
+              "number": 4
+            },
+            {
+              "name": "Saheef Muhammed",
+              "number": 5
+            },
+            {
+              "name": "Ramon de Andrade Souza",
+              "number": 7
+            },
+            {
+              "name": "Nikola Stojanovic",
+              "number": 8
+            },
+            {
+              "name": "Madih Talal",
+              "number": 10
+            },
+            {
+              "name": "Mohammad Nawaz",
+              "number": 13
+            },
+            {
+              "name": "Ayush Dev Chhetri",
+              "number": 14
+            },
+            {
+              "name": "Irfan Yadwad",
+              "number": 24
+            },
+            {
+              "name": "Namgyal Bhutia",
+              "number": 27
+            },
+            {
+              "name": "Brison Deuben Fernandes",
+              "number": 42
+            }
+          ],
+          "formation": "4-3-3",
+          "substitutes": [
+            {
+              "name": "Bryce Brian Miranda",
+              "number": 11,
+              "position": "Midfielder"
+            },
+            {
+              "name": "Lalriathpuia Chawngthu",
+              "number": 17,
+              "position": "Midfielder"
+            },
+            {
+              "name": "Glan Peter Martins",
+              "number": 25,
+              "position": "Midfielder"
+            },
+            {
+              "name": "Malhar Mohol",
+              "number": 31,
+              "position": "Goalkeeper"
+            },
+            {
+              "name": "Dippendu Biswas",
+              "number": 32,
+              "position": "Defender"
+            },
+            {
+              "name": "Yumkhaibam Jiteshwor Singh",
+              "number": 37,
+              "position": "Midfielder"
+            },
+            {
+              "name": "Nitishkumar Meitei Yengkhom",
+              "number": 43,
+              "position": "Midfielder"
+            },
+            {
+              "name": "Klusner John Manuel Pereira",
+              "number": 47,
+              "position": "Defender"
+            },
+            {
+              "name": "S Prakadeswaran",
+              "number": 52,
+              "position": "Midfielder"
+            }
+          ]
+        },
+        "away": {
+          "starters": [
+            {
+              "name": "Lalchungnunga",
+              "number": 5
+            },
+            {
+              "name": "Vishnu Puthiya Valappill",
+              "number": 7
+            },
+            {
+              "name": "Daniel Ramirez Fernandez",
+              "number": 11
+            },
+            {
+              "name": "Prabhsukhan Singh Gill",
+              "number": 13
+            },
+            {
+              "name": "Diego Zivulic",
+              "number": 21
+            },
+            {
+              "name": "Thounaojam Jeakson Singh",
+              "number": 25
+            },
+            {
+              "name": "Jay Gupta",
+              "number": 27
+            },
+            {
+              "name": "Bipin Singh Thounaojam",
+              "number": 29
+            },
+            {
+              "name": "Sandip Mandi",
+              "number": 34
+            },
+            {
+              "name": "Mohammed Bassim Ahmed Rashid",
+              "number": 74
+            },
+            {
+              "name": "Ake Arnaud Loba",
+              "number": 90
+            }
+          ],
+          "formation": "4-4-1-1",
+          "substitutes": [
+            {
+              "name": "Hardik Bhatt",
+              "number": 3,
+              "position": "Defender"
+            },
+            {
+              "name": "Rohit Kumar",
+              "number": 6,
+              "position": "Midfielder"
+            },
+            {
+              "name": "Christopher James Ikonomidis",
+              "number": 8,
+              "position": "Midfielder"
+            },
+            {
+              "name": "Edmund Lalrindika",
+              "number": 10,
+              "position": "Forward"
+            },
+            {
+              "name": "David Lalhlansanga",
+              "number": 14,
+              "position": "Forward"
+            },
+            {
+              "name": "Rohit Danu",
+              "number": 19,
+              "position": "Midfielder"
+            },
+            {
+              "name": "Souvik Alok Chakrabarti",
+              "number": 23,
+              "position": "Midfielder"
+            },
+            {
+              "name": "Sonam Tsewang Lhokham",
+              "number": 69,
+              "position": "Defender"
+            },
+            {
+              "name": "Gourab Shaw",
+              "number": 95,
+              "position": "Goalkeeper"
+            }
+          ]
+        }
+      },
+      "stats": {
+        "home": {
+          "possession": 48,
+          "shots": 24,
+          "shotsOnTarget": 11,
+          "corners": 8,
+          "fouls": 5,
+          "offsides": 1,
+          "yellowCards": 0,
+          "redCards": 0,
+          "passes": 394,
+          "passAccuracy": 84,
+          "tackles": 8,
+          "interceptions": 7,
+          "clearances": 0,
+          "saves": 2
+        },
+        "away": {
+          "possession": 52,
+          "shots": 19,
+          "shotsOnTarget": 5,
+          "corners": 9,
+          "fouls": 9,
+          "offsides": 1,
+          "yellowCards": 2,
+          "redCards": 0,
+          "passes": 420,
+          "passAccuracy": 84,
+          "tackles": 14,
+          "interceptions": 7,
+          "clearances": 0,
+          "saves": 6
+        }
+      },
+      "players": [
+        {
+          "name": "Laldinpuia Pachuau",
+          "side": "home",
+          "position": "Defender",
+          "goals": 0,
+          "assists": 0,
+          "shots": 1,
+          "passes": 32,
+          "tackles": 0,
+          "saves": 0
+        },
+        {
+          "name": "Nuno Miguel Pereira Reis",
+          "side": "home",
+          "position": "Defender",
+          "goals": 0,
+          "assists": 0,
+          "shots": 0,
+          "passes": 49,
+          "tackles": 0,
+          "saves": 0
+        },
+        {
+          "name": "Saheef Muhammed",
+          "side": "home",
+          "position": "Defender",
+          "goals": 0,
+          "assists": 0,
+          "shots": 0,
+          "passes": 45,
+          "tackles": 0,
+          "saves": 0
+        },
+        {
+          "name": "Ramon de Andrade Souza",
+          "side": "home",
+          "position": "Forward",
+          "goals": 1,
+          "assists": 1,
+          "shots": 3,
+          "passes": 20,
+          "tackles": 0,
+          "saves": 0
+        },
+        {
+          "name": "Nikola Stojanovic",
+          "side": "home",
+          "position": "Midfielder",
+          "goals": 0,
+          "assists": 0,
+          "shots": 1,
+          "passes": 57,
+          "tackles": 2,
+          "saves": 0
+        },
+        {
+          "name": "Madih Talal",
+          "side": "home",
+          "position": "Midfielder",
+          "goals": 0,
+          "assists": 1,
+          "shots": 2,
+          "passes": 18,
+          "tackles": 0,
+          "saves": 0
+        },
+        {
+          "name": "Mohammad Nawaz",
+          "side": "home",
+          "position": "Goalkeeper",
+          "goals": 0,
+          "assists": 0,
+          "shots": 0,
+          "passes": 30,
+          "tackles": 0,
+          "saves": 0
+        },
+        {
+          "name": "Ayush Dev Chhetri",
+          "side": "home",
+          "position": "Midfielder",
+          "goals": 0,
+          "assists": 0,
+          "shots": 1,
+          "passes": 30,
+          "tackles": 2,
+          "saves": 0
+        },
+        {
+          "name": "Irfan Yadwad",
+          "side": "home",
+          "position": "Forward",
+          "goals": 2,
+          "assists": 1,
+          "shots": 9,
+          "passes": 23,
+          "tackles": 0,
+          "saves": 0
+        },
+        {
+          "name": "Namgyal Bhutia",
+          "side": "home",
+          "position": "Defender",
+          "goals": 0,
+          "assists": 0,
+          "shots": 0,
+          "passes": 35,
+          "tackles": 1,
+          "saves": 0
+        },
+        {
+          "name": "Brison Deuben Fernandes",
+          "side": "home",
+          "position": "Midfielder",
+          "goals": 2,
+          "assists": 0,
+          "shots": 4,
+          "passes": 12,
+          "tackles": 1,
+          "saves": 0
+        },
+        {
+          "name": "Bryce Brian Miranda",
+          "side": "home",
+          "position": "Midfielder",
+          "goals": 0,
+          "assists": 0,
+          "shots": 0,
+          "passes": 9,
+          "tackles": 0,
+          "saves": 0
+        },
+        {
+          "name": "Lalriathpuia Chawngthu",
+          "side": "home",
+          "position": "Midfielder",
+          "goals": 0,
+          "assists": 1,
+          "shots": 2,
+          "passes": 26,
+          "tackles": 1,
+          "saves": 0
+        },
+        {
+          "name": "Glan Peter Martins",
+          "side": "home",
+          "position": "Midfielder",
+          "goals": 0,
+          "assists": 0,
+          "shots": 0,
+          "passes": 2,
+          "tackles": 1,
+          "saves": 0
+        },
+        {
+          "name": "Yumkhaibam Jiteshwor Singh",
+          "side": "home",
+          "position": "Midfielder",
+          "goals": 0,
+          "assists": 0,
+          "shots": 0,
+          "passes": 2,
+          "tackles": 0,
+          "saves": 0
+        },
+        {
+          "name": "S Prakadeswaran",
+          "side": "home",
+          "position": "Midfielder",
+          "goals": 0,
+          "assists": 0,
+          "shots": 1,
+          "passes": 4,
+          "tackles": 0,
+          "saves": 0
+        },
+        {
+          "name": "Lalchungnunga",
+          "side": "away",
+          "position": "Defender",
+          "goals": 0,
+          "assists": 0,
+          "shots": 2,
+          "passes": 15,
+          "tackles": 1,
+          "saves": 0
+        },
+        {
+          "name": "Vishnu Puthiya Valappill",
+          "side": "away",
+          "position": "Midfielder",
+          "goals": 0,
+          "assists": 0,
+          "shots": 3,
+          "passes": 14,
+          "tackles": 0,
+          "saves": 0
+        },
+        {
+          "name": "Daniel Ramirez Fernandez",
+          "side": "away",
+          "position": "Midfielder",
+          "goals": 1,
+          "assists": 1,
+          "shots": 3,
+          "passes": 48,
+          "tackles": 1,
+          "saves": 0
+        },
+        {
+          "name": "Prabhsukhan Singh Gill",
+          "side": "away",
+          "position": "Goalkeeper",
+          "goals": 0,
+          "assists": 0,
+          "shots": 0,
+          "passes": 18,
+          "tackles": 0,
+          "saves": 0
+        },
+        {
+          "name": "Diego Zivulic",
+          "side": "away",
+          "position": "Defender",
+          "goals": 0,
+          "assists": 0,
+          "shots": 0,
+          "passes": 69,
+          "tackles": 0,
+          "saves": 0
+        },
+        {
+          "name": "Thounaojam Jeakson Singh",
+          "side": "away",
+          "position": "Midfielder",
+          "goals": 0,
+          "assists": 0,
+          "shots": 2,
+          "passes": 46,
+          "tackles": 1,
+          "saves": 0
+        },
+        {
+          "name": "Jay Gupta",
+          "side": "away",
+          "position": "Defender",
+          "goals": 0,
+          "assists": 0,
+          "shots": 0,
+          "passes": 36,
+          "tackles": 3,
+          "saves": 0
+        },
+        {
+          "name": "Bipin Singh Thounaojam",
+          "side": "away",
+          "position": "Midfielder",
+          "goals": 0,
+          "assists": 0,
+          "shots": 0,
+          "passes": 10,
+          "tackles": 0,
+          "saves": 0
+        },
+        {
+          "name": "Sandip Mandi",
+          "side": "away",
+          "position": "Defender",
+          "goals": 0,
+          "assists": 0,
+          "shots": 1,
+          "passes": 42,
+          "tackles": 1,
+          "saves": 0
+        },
+        {
+          "name": "Mohammed Bassim Ahmed Rashid",
+          "side": "away",
+          "position": "Midfielder",
+          "goals": 0,
+          "assists": 0,
+          "shots": 1,
+          "passes": 49,
+          "tackles": 4,
+          "saves": 0
+        },
+        {
+          "name": "Ake Arnaud Loba",
+          "side": "away",
+          "position": "Forward",
+          "goals": 1,
+          "assists": 0,
+          "shots": 1,
+          "passes": 13,
+          "tackles": 0,
+          "saves": 0
+        },
+        {
+          "name": "Hardik Bhatt",
+          "side": "away",
+          "position": "Defender",
+          "goals": 0,
+          "assists": 0,
+          "shots": 0,
+          "passes": 12,
+          "tackles": 2,
+          "saves": 0
+        },
+        {
+          "name": "Rohit Kumar",
+          "side": "away",
+          "position": "Midfielder",
+          "goals": 0,
+          "assists": 1,
+          "shots": 0,
+          "passes": 7,
+          "tackles": 0,
+          "saves": 0
+        },
+        {
+          "name": "Edmund Lalrindika",
+          "side": "away",
+          "position": "Forward",
+          "goals": 0,
+          "assists": 0,
+          "shots": 0,
+          "passes": 15,
+          "tackles": 1,
+          "saves": 0
+        },
+        {
+          "name": "David Lalhlansanga",
+          "side": "away",
+          "position": "Forward",
+          "goals": 1,
+          "assists": 0,
+          "shots": 3,
+          "passes": 9,
+          "tackles": 0,
+          "saves": 0
+        },
+        {
+          "name": "Rohit Danu",
+          "side": "away",
+          "position": "Midfielder",
+          "goals": 0,
+          "assists": 0,
+          "shots": 3,
+          "passes": 17,
+          "tackles": 0,
+          "saves": 0
+        }
+      ],
+      "events": [
+        {
+          "minute": 3,
+          "side": "home",
+          "type": "goal",
+          "player": "Brison Deuben Fernandes",
+          "assist": "Irfan Yadwad"
+        },
+        {
+          "minute": 17,
+          "side": "home",
+          "type": "goal",
+          "player": "Brison Deuben Fernandes",
+          "assist": "Madih Talal"
+        },
+        {
+          "minute": 28,
+          "side": "away",
+          "type": "goal",
+          "player": "Ake Arnaud Loba",
+          "assist": "Daniel Ramirez Fernandez"
+        },
+        {
+          "minute": 35,
+          "side": "home",
+          "type": "substitution",
+          "playerIn": "Lalriathpuia Chawngthu",
+          "playerOut": "Madih Talal"
+        },
+        {
+          "minute": 39,
+          "side": "away",
+          "type": "yellow_card",
+          "player": "Thounaojam Jeakson Singh"
+        },
+        {
+          "minute": 45,
+          "side": "away",
+          "type": "yellow_card",
+          "player": "Daniel Ramirez Fernandez",
+          "addedMinute": 2
+        },
+        {
+          "minute": 45,
+          "side": "away",
+          "type": "substitution",
+          "playerIn": "Edmund Lalrindika",
+          "playerOut": "Vishnu Puthiya Valappill"
+        },
+        {
+          "minute": 45,
+          "side": "away",
+          "type": "substitution",
+          "playerIn": "Rohit Danu",
+          "playerOut": "Bipin Singh Thounaojam"
+        },
+        {
+          "minute": 55,
+          "side": "home",
+          "type": "substitution",
+          "playerIn": "Bryce Brian Miranda",
+          "playerOut": "Brison Deuben Fernandes"
+        },
+        {
+          "minute": 58,
+          "side": "home",
+          "type": "goal",
+          "player": "Irfan Yadwad",
+          "assist": "Lalriathpuia Chawngthu"
+        },
+        {
+          "minute": 61,
+          "side": "away",
+          "type": "substitution",
+          "playerIn": "Hardik Bhatt",
+          "playerOut": "Lalchungnunga"
+        },
+        {
+          "minute": 61,
+          "side": "away",
+          "type": "substitution",
+          "playerIn": "David Lalhlansanga",
+          "playerOut": "Ake Arnaud Loba"
+        },
+        {
+          "minute": 66,
+          "side": "home",
+          "type": "goal",
+          "player": "Irfan Yadwad",
+          "assist": "Ramon de Andrade Souza"
+        },
+        {
+          "minute": 80,
+          "side": "home",
+          "type": "substitution",
+          "playerIn": "S Prakadeswaran",
+          "playerOut": "Ramon de Andrade Souza"
+        },
+        {
+          "minute": 80,
+          "side": "home",
+          "type": "substitution",
+          "playerIn": "Glan Peter Martins",
+          "playerOut": "Ayush Dev Chhetri"
+        },
+        {
+          "minute": 80,
+          "side": "home",
+          "type": "substitution",
+          "playerIn": "Yumkhaibam Jiteshwor Singh",
+          "playerOut": "Nikola Stojanovic"
+        },
+        {
+          "minute": 85,
+          "side": "away",
+          "type": "substitution",
+          "playerIn": "Rohit Kumar",
+          "playerOut": "Daniel Ramirez Fernandez"
+        },
+        {
+          "minute": 90,
+          "side": "away",
+          "type": "goal",
+          "player": "David Lalhlansanga",
+          "addedMinute": 1,
+          "assist": "Rohit Kumar"
         }
       ]
     }
