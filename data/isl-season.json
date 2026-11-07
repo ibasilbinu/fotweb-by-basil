@@ -4747,11 +4747,11 @@
       "officialStage": "league",
       "broadcast": {
         "url": "https://www.youtube.com/live/iQEyDUAbJUA",
-        "title": "LIVE: Inter Kashi FC vs Sporting Club Delhi | MG ISL 2026-27",
+        "title": "FULL REPLAY : Inter Kashi FC vs Sporting Club Delhi (0-3) | MG ISL 2026-27",
         "channelUrl": "https://www.youtube.com/@IndianSuperLeague",
         "language": "English",
-        "status": "scheduled",
-        "verifiedAt": "2026-11-03T13:37:04.942078+00:00",
+        "status": "ended",
+        "verifiedAt": "2026-11-07T13:33:10.234413+00:00",
         "languageEvidence": "official-default-unlabelled"
       },
       "lineups": {
@@ -4970,6 +4970,202 @@
         "status": "scheduled",
         "verifiedAt": "2026-11-03T13:37:04.942078+00:00",
         "languageEvidence": "official-default-unlabelled"
+      },
+      "lineups": {
+        "home": {
+          "starters": [
+            {
+              "name": "Laldinpuia Pachuau",
+              "number": 3
+            },
+            {
+              "name": "Nuno Miguel Pereira Reis",
+              "number": 4
+            },
+            {
+              "name": "Saheef Muhammed",
+              "number": 5
+            },
+            {
+              "name": "Ramon de Andrade Souza",
+              "number": 7
+            },
+            {
+              "name": "Nikola Stojanovic",
+              "number": 8
+            },
+            {
+              "name": "Madih Talal",
+              "number": 10
+            },
+            {
+              "name": "Mohammad Nawaz",
+              "number": 13
+            },
+            {
+              "name": "Ayush Dev Chhetri",
+              "number": 14
+            },
+            {
+              "name": "Irfan Yadwad",
+              "number": 24
+            },
+            {
+              "name": "Namgyal Bhutia",
+              "number": 27
+            },
+            {
+              "name": "Brison Deuben Fernandes",
+              "number": 42
+            }
+          ],
+          "formation": "4-4-2",
+          "substitutes": [
+            {
+              "name": "Bryce Brian Miranda",
+              "number": 11,
+              "position": "Midfielder"
+            },
+            {
+              "name": "Lalriathpuia Chawngthu",
+              "number": 17,
+              "position": "Midfielder"
+            },
+            {
+              "name": "Glan Peter Martins",
+              "number": 25,
+              "position": "Midfielder"
+            },
+            {
+              "name": "Malhar Mohol",
+              "number": 31,
+              "position": "Goalkeeper"
+            },
+            {
+              "name": "Dippendu Biswas",
+              "number": 32,
+              "position": "Defender"
+            },
+            {
+              "name": "Yumkhaibam Jiteshwor Singh",
+              "number": 37,
+              "position": "Midfielder"
+            },
+            {
+              "name": "Nitishkumar Meitei Yengkhom",
+              "number": 43,
+              "position": "Midfielder"
+            },
+            {
+              "name": "Klusner John Manuel Pereira",
+              "number": 47,
+              "position": "Defender"
+            },
+            {
+              "name": "S Prakadeswaran",
+              "number": 52,
+              "position": "Midfielder"
+            }
+          ]
+        },
+        "away": {
+          "starters": [
+            {
+              "name": "Lalchungnunga",
+              "number": 5
+            },
+            {
+              "name": "Vishnu Puthiya Valappill",
+              "number": 7
+            },
+            {
+              "name": "Daniel Ramirez Fernandez",
+              "number": 11
+            },
+            {
+              "name": "Prabhsukhan Singh Gill",
+              "number": 13
+            },
+            {
+              "name": "Diego Zivulic",
+              "number": 21
+            },
+            {
+              "name": "Thounaojam Jeakson Singh",
+              "number": 25
+            },
+            {
+              "name": "Jay Gupta",
+              "number": 27
+            },
+            {
+              "name": "Bipin Singh Thounaojam",
+              "number": 29
+            },
+            {
+              "name": "Sandip Mandi",
+              "number": 34
+            },
+            {
+              "name": "Mohammed Bassim Ahmed Rashid",
+              "number": 74
+            },
+            {
+              "name": "Ake Arnaud Loba",
+              "number": 90
+            }
+          ],
+          "formation": "4-5-1",
+          "substitutes": [
+            {
+              "name": "Hardik Bhatt",
+              "number": 3,
+              "position": "Defender"
+            },
+            {
+              "name": "Rohit Kumar",
+              "number": 6,
+              "position": "Midfielder"
+            },
+            {
+              "name": "Christopher James Ikonomidis",
+              "number": 8,
+              "position": "Midfielder"
+            },
+            {
+              "name": "Edmund Lalrindika",
+              "number": 10,
+              "position": "Forward"
+            },
+            {
+              "name": "David Lalhlansanga",
+              "number": 14,
+              "position": "Forward"
+            },
+            {
+              "name": "Rohit Danu",
+              "number": 19,
+              "position": "Midfielder"
+            },
+            {
+              "name": "Souvik Alok Chakrabarti",
+              "number": 23,
+              "position": "Midfielder"
+            },
+            {
+              "name": "Sonam Tsewang Lhokham",
+              "number": 69,
+              "position": "Defender"
+            },
+            {
+              "name": "Gourab Shaw",
+              "number": 95,
+              "position": "Goalkeeper"
+            }
+          ]
+        },
+        "sourceUrl": "https://www.indiansuperleague.com/matchcentre/194661",
+        "verifiedAt": "2026-11-07T13:33:10.234413+00:00"
       }
     },
     {
