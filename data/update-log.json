@@ -3,6 +3,22 @@
   "season": "2026-27",
   "checks": [
     {
+      "checkedAt": "2026-11-09T16:17:39.507Z",
+      "kind": "post-match-late",
+      "outcome": "no-change",
+      "summary": "No 19:30 IST fixture was scheduled for 9 November 2026. The official 2026–27 fixture page and the preserved FotWeb snapshot agree; the next published fixtures are on 20 November. Updates: fixtures 0; results 0; pending 0; errors 0.",
+      "links": [
+        {
+          "label": "Official ISL fixture discovery",
+          "url": "https://www.indiansuperleague.com/schedule-fixtures"
+        },
+        {
+          "label": "Latest successful source-check workflow",
+          "url": "https://github.com/ibasilbinu/fotweb-by-basil/actions/runs/42597343188"
+        }
+      ]
+    },
+    {
       "checkedAt": "2026-11-09T13:45:14.651Z",
       "kind": "post-match-early",
       "outcome": "no-change",
