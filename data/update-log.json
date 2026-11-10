@@ -3,6 +3,22 @@
   "season": "2026-27",
   "checks": [
     {
+      "checkedAt": "2026-11-10T02:33:44.403535+00:00",
+      "kind": "match-retry",
+      "outcome": "no-change",
+      "summary": "2 match centres checked; updates: fixtures 0, results 0, lineups 0, streams 0. Phase: phase-one. 0 pending; 0 errors.",
+      "links": [
+        {
+          "label": "Inter Kashi vs Sporting Club Delhi",
+          "url": "https://www.indiansuperleague.com/matchcentre/194660"
+        },
+        {
+          "label": "Chennaiyin FC vs East Bengal FC",
+          "url": "https://www.indiansuperleague.com/matchcentre/194661"
+        }
+      ]
+    },
+    {
       "checkedAt": "2026-11-10T02:32:04.066578+00:00",
       "kind": "morning",
       "outcome": "no-change",
@@ -7272,38 +7288,6 @@
       "outcome": "no-change",
       "summary": "4 match centres checked; updates: fixtures 0, results 0, lineups 0, streams 0. Phase: phase-one. 0 pending; 0 errors.",
       "links": [
-        {
-          "label": "Bengaluru FC vs Chennaiyin FC",
-          "url": "https://www.indiansuperleague.com/matchcentre/194642"
-        },
-        {
-          "label": "Churchill Brothers vs East Bengal FC",
-          "url": "https://www.indiansuperleague.com/matchcentre/194643"
-        },
-        {
-          "label": "NorthEast United FC vs Kerala Blasters FC",
-          "url": "https://www.indiansuperleague.com/matchcentre/194644"
-        },
-        {
-          "label": "Punjab FC vs Mumbai City FC",
-          "url": "https://www.indiansuperleague.com/matchcentre/194645"
-        },
-        {
-          "label": "Official ISL YouTube Live listing",
-          "url": "https://www.youtube.com/@IndianSuperLeague/streams"
-        }
-      ]
-    },
-    {
-      "checkedAt": "2026-10-20T11:35:59.384170+00:00",
-      "kind": "hourly",
-      "outcome": "no-change",
-      "summary": "4 match centres checked; updates: fixtures 0, results 0, lineups 0, streams 0. Phase: phase-one. 0 pending; 0 errors.",
-      "links": [
-        {
-          "label": "Official ISL fixture discovery",
-          "url": "https://www.indiansuperleague.com/schedule-fixtures"
-        },
         {
           "label": "Bengaluru FC vs Chennaiyin FC",
           "url": "https://www.indiansuperleague.com/matchcentre/194642"
