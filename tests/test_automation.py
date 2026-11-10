@@ -343,6 +343,27 @@ class RunTests(unittest.TestCase):
         for name,value in values.items(): (path/f'data/{name}.json').write_text(json.dumps(value))
         return season
 
+    def test_oversized_log_is_trimmed_before_source_checks(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory); self.setup_root(root)
+            base = datetime.fromisoformat('2026-10-01T00:00:00+00:00')
+            checks = []
+            for index in range(337):
+                checks.append({
+                    'checkedAt': (base-timedelta(minutes=index)).isoformat(),
+                    'kind': 'hourly', 'outcome': 'no-change',
+                    'summary': 'Verified no-change source check.', 'links': [],
+                })
+            (root/'data/update-log.json').write_text(json.dumps({
+                'schemaVersion': 1, 'season': '2026-27', 'checks': checks,
+            }))
+            now = datetime.fromisoformat('2026-09-01T00:00:00+00:00')
+            self.assertEqual(importer.run('match-retry', root, now), 0)
+            saved = json.loads((root/'data/update-log.json').read_text())['checks']
+            self.assertEqual(len(saved), 336)
+            self.assertEqual(saved[1]['checkedAt'], checks[0]['checkedAt'])
+            self.assertNotIn(checks[-1]['checkedAt'], {item['checkedAt'] for item in saved})
+
     def test_result_lineup_fixture_metadata_is_repaired(self):
         result = {'matches': [{'id': '194650', 'lineups': {
             'home': {'starters': []}, 'away': {'starters': []},

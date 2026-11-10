@@ -11,7 +11,7 @@ from fixture_update import (fetch_text, competition_phase, update_fixtures,
                             update_lifecycle, SCHEDULE_URL)
 from postmatch import validate_results
 from season import validate_season
-from update_log import KINDS, validate_update_log
+from update_log import KINDS, MAX_CHECKS, validate_update_log
 from lineup_data import validate_substitutes
 
 ROOT = Path(__file__).resolve().parent
@@ -195,6 +195,11 @@ def run(kind='hourly', root=ROOT, now=None):
     state = json.loads((root/'data/automation-state.json').read_text())
     if state.get('season') != '2026-27' or not state.get('phaseOneFixtureIds'):
         raise ValueError('Invalid season automation state')
+    # A concurrent writer can briefly leave one extra valid history entry.
+    # Retain the newest bounded history so source checks can recover and write
+    # the documented MAX_CHECKS snapshot instead of failing before retrieval.
+    if isinstance(log.get('checks'), list) and len(log['checks']) > MAX_CHECKS:
+        log['checks'] = sorted(log['checks'], key=lambda r:r.get('checkedAt', ''), reverse=True)[:MAX_CHECKS]
     repaired_results = repair_result_lineup_metadata(results)
     validate_season(season); validate_results(results); validate_update_log(log)
     now = now or datetime.now(timezone.utc)
