@@ -85,13 +85,12 @@
   "phaseOneLastKickoff": "2027-01-17T19:30+05:30",
   "sources": {
     "fixtures": {
-      "checkedAt": "2026-11-11T02:37:21.061Z",
+      "checkedAt": "2026-11-11T02:37:45.162478+00:00",
       "outcome": "ok"
     },
     "streams": {
-      "checkedAt": "2026-11-11T02:37:21.061Z",
-      "outcome": "error",
-      "error": "Official ISL YouTube Live/Upcoming metadata could not be read through connected web access (streams page returned only a stale 2024 footer/DisabledError); local importer checkout could not run because GitHub clone failed DNS resolution: Could not res"
+      "checkedAt": "2026-11-11T02:37:45.162478+00:00",
+      "outcome": "ok"
     }
   },
   "pending": [],
@@ -126,11 +125,9 @@
     "194661": "2026-11-10T10:06:30.880805+00:00"
   },
   "lastCheck": {
-    "checkedAt": "2026-11-11T02:37:21.061Z",
-    "kind": "morning",
-    "failures": [
-      "Official ISL YouTube Live/Upcoming metadata could not be read through connected web access (streams page returned only a stale 2024 footer/DisabledError); local importer checkout could not run because GitHub clone failed DNS resolution: Could not resolve host: github.com."
-    ],
+    "checkedAt": "2026-11-11T02:37:45.162478+00:00",
+    "kind": "hourly",
+    "failures": [],
     "changes": {
       "fixtures": 0,
       "results": 0,
