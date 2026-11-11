@@ -3,6 +3,22 @@
   "season": "2026-27",
   "checks": [
     {
+      "checkedAt": "2026-11-11T16:41:20+05:30",
+      "kind": "lineup-early",
+      "outcome": "partial",
+      "summary": "No 17:00 IST fixture today; next is 20 Nov: East Bengal FC vs Sporting Club Delhi. 0 match centres checked; updates: fixtures 0, results 0, lineups 0, streams 0. Phase-one schedule ends 17 Jan 2027; 0 pending; 1 YouTube metadata error (stale 2024 footer).",
+      "links": [
+        {
+          "label": "Official ISL 2026-27 fixture schedule",
+          "url": "https://www.indiansuperleague.com/schedule-fixtures"
+        },
+        {
+          "label": "Official ISL YouTube Live/Upcoming",
+          "url": "https://www.youtube.com/@IndianSuperLeague/streams"
+        }
+      ]
+    },
+    {
       "checkedAt": "2026-11-11T09:38:33.199708+00:00",
       "kind": "morning",
       "outcome": "no-change",
@@ -7159,34 +7175,6 @@
     {
       "checkedAt": "2026-10-21T04:46:02.197287+00:00",
       "kind": "hourly",
-      "outcome": "no-change",
-      "summary": "3 match centres checked; updates: fixtures 0, results 0, lineups 0, streams 0. Phase: phase-one. 0 pending; 0 errors.",
-      "links": [
-        {
-          "label": "Official ISL fixture discovery",
-          "url": "https://www.indiansuperleague.com/schedule-fixtures"
-        },
-        {
-          "label": "Churchill Brothers vs East Bengal FC",
-          "url": "https://www.indiansuperleague.com/matchcentre/194643"
-        },
-        {
-          "label": "NorthEast United FC vs Kerala Blasters FC",
-          "url": "https://www.indiansuperleague.com/matchcentre/194644"
-        },
-        {
-          "label": "Punjab FC vs Mumbai City FC",
-          "url": "https://www.indiansuperleague.com/matchcentre/194645"
-        },
-        {
-          "label": "Official ISL YouTube Live listing",
-          "url": "https://www.youtube.com/@IndianSuperLeague/streams"
-        }
-      ]
-    },
-    {
-      "checkedAt": "2026-10-21T02:33:15.090418+00:00",
-      "kind": "morning",
       "outcome": "no-change",
       "summary": "3 match centres checked; updates: fixtures 0, results 0, lineups 0, streams 0. Phase: phase-one. 0 pending; 0 errors.",
       "links": [
