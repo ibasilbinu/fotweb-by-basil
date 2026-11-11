@@ -364,6 +364,34 @@ class RunTests(unittest.TestCase):
             self.assertEqual(saved[1]['checkedAt'], checks[0]['checkedAt'])
             self.assertNotIn(checks[-1]['checkedAt'], {item['checkedAt'] for item in saved})
 
+    def test_mixed_timezone_offsets_are_sorted_by_actual_instant(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory); season = self.setup_root(root)
+            season['fixtures'][0]['status'] = 'PST'
+            (root/'data/isl-season.json').write_text(json.dumps(season))
+            checks = []
+            for timestamp in (
+                '2026-11-10T21:56:03+05:30',  # 16:26:03Z
+                '2026-11-10T19:09:36+05:30',  # 13:39:36Z
+                '2026-11-10T16:17:39Z',       # 16:17:39Z
+            ):
+                checks.append({'checkedAt': timestamp, 'kind': 'hourly',
+                               'outcome': 'no-change', 'summary': 'Verified no-change source check.', 'links': []})
+            (root/'data/update-log.json').write_text(json.dumps({
+                'schemaVersion': 1, 'season': '2026-27', 'checks': checks,
+            }))
+            with patch.object(importer, 'update_fixtures', return_value=(0, [], [])), \
+                 patch.object(stream_update, 'update_streams', return_value=0):
+                status = importer.run('morning', root, datetime.fromisoformat('2026-11-11T02:31:00+00:00'))
+            self.assertEqual(status, 0)
+            saved = json.loads((root/'data/update-log.json').read_text())['checks']
+            old_timestamps = [item['checkedAt'] for item in saved[1:]]
+            self.assertEqual(old_timestamps, [
+                '2026-11-10T21:56:03+05:30',
+                '2026-11-10T16:17:39Z',
+                '2026-11-10T19:09:36+05:30',
+            ])
+
     def test_result_lineup_fixture_metadata_is_repaired(self):
         result = {'matches': [{'id': '194650', 'lineups': {
             'home': {'starters': []}, 'away': {'starters': []},

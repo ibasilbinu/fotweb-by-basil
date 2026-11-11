@@ -18,6 +18,19 @@ ROOT = Path(__file__).resolve().parent
 EVENT_STATS = {'shots':'shots','shots_on_target':'shotsOnTarget','corner_kicks':'corners','fouls_committed':'fouls','offsides':'offsides','yellow_cards':'yellowCards','red_cards':'redCards'}
 TOUCH_STATS = {'total_passes':'passes','pass_accuracy_percentage':'passAccuracy','tackles':'tackles','interceptions':'interceptions','clearance':'clearances','saves':'saves'}
 
+def sort_checks(checks):
+    """Sort mixed-offset check timestamps by their actual UTC instant."""
+    def instant(record):
+        value = record.get('checkedAt')
+        if not isinstance(value, str):
+            raise ValueError('Invalid update log timestamp')
+        parsed = datetime.fromisoformat(value.replace('Z', '+00:00'))
+        if parsed.tzinfo is None:
+            raise ValueError('Update log timestamps must contain timezone')
+        return parsed.astimezone(timezone.utc)
+    return sorted(checks, key=instant, reverse=True)
+
+
 def extract_match(document):
     for _, encoded in re.findall(r'''=(["'])(%7[Bb].*?)\1''', document):
         try:
@@ -195,11 +208,10 @@ def run(kind='hourly', root=ROOT, now=None):
     state = json.loads((root/'data/automation-state.json').read_text())
     if state.get('season') != '2026-27' or not state.get('phaseOneFixtureIds'):
         raise ValueError('Invalid season automation state')
-    # A concurrent writer can briefly leave one extra valid history entry.
-    # Retain the newest bounded history so source checks can recover and write
-    # the documented MAX_CHECKS snapshot instead of failing before retrieval.
-    if isinstance(log.get('checks'), list) and len(log['checks']) > MAX_CHECKS:
-        log['checks'] = sorted(log['checks'], key=lambda r:r.get('checkedAt', ''), reverse=True)[:MAX_CHECKS]
+    # Timestamps may mix UTC and local offsets. Sort by instant before validation
+    # and trim the newest bounded history so concurrent writes cannot strand a run.
+    if isinstance(log.get('checks'), list):
+        log['checks'] = sort_checks(log['checks'])[:MAX_CHECKS]
     repaired_results = repair_result_lineup_metadata(results)
     validate_season(season); validate_results(results); validate_update_log(log)
     now = now or datetime.now(timezone.utc)
@@ -343,7 +355,7 @@ def run(kind='hourly', root=ROOT, now=None):
                else 'updated' if changed else 'no-change')
     record = {'checkedAt':datetime.now(timezone.utc).isoformat(), 'kind':kind,
               'outcome':outcome, 'summary':summary[:400], 'links':links[:8]}
-    log['checks'] = sorted([record]+log['checks'], key=lambda r:r['checkedAt'], reverse=True)[:336]
+    log['checks'] = sort_checks([record]+log['checks'])[:MAX_CHECKS]
     validate_results(results); validate_season(season); validate_update_log(log)
     # Validate everything before touching any snapshot. Git publishes the set atomically.
     for name, value in [('isl-season',season), ('isl-results',results),
