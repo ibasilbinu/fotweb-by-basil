@@ -125,8 +125,8 @@
     "194661": "2026-11-10T10:06:30.880805+00:00"
   },
   "lastCheck": {
-    "checkedAt": "2026-11-11T21:59:26.240720+00:00",
-    "kind": "hourly",
+    "checkedAt": "2026-11-11T22:40:00.708959+00:00",
+    "kind": "post-match-late",
     "failures": [],
     "changes": {
       "fixtures": 0,
