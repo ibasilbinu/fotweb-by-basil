@@ -3,6 +3,22 @@
   "season": "2026-27",
   "checks": [
     {
+      "checkedAt": "2026-11-11T21:51:38+05:30",
+      "kind": "post-match-late",
+      "outcome": "no-change",
+      "summary": "Official ISL 2026–27 schedule and AIFF listing show no ISL fixture on 11 Nov 2026; no 19:30 IST final was due. Next fixtures are 20 Nov: East Bengal FC–Sporting Club Delhi (17:00) and Bengaluru FC–Mumbai City FC (19:30). 0 match centres checked; 0 results due; 0 pending. Connected-source fallback; local importer not run because the temporary checkout could not resolve github.com.",
+      "links": [
+        {
+          "label": "Official ISL 2026-27 fixture schedule",
+          "url": "https://www.indiansuperleague.com/schedule-fixtures"
+        },
+        {
+          "label": "AIFF ISL 2026-27 fixtures",
+          "url": "https://www.the-aiff.com/competitions/isl"
+        }
+      ]
+    },
+    {
       "checkedAt": "2026-11-11T15:11:27.011285+00:00",
       "kind": "hourly",
       "outcome": "no-change",
@@ -7126,30 +7142,6 @@
       "outcome": "partial",
       "summary": "2 match centres checked; updates: fixtures 0, results 0, lineups 0, streams 0. Phase: phase-one. 0 pending; 1 errors. YouTube WSGHeZmbNds: Scheduled stream start is not available yet",
       "links": [
-        {
-          "label": "NorthEast United FC vs Kerala Blasters FC",
-          "url": "https://www.indiansuperleague.com/matchcentre/194644"
-        },
-        {
-          "label": "Punjab FC vs Mumbai City FC",
-          "url": "https://www.indiansuperleague.com/matchcentre/194645"
-        },
-        {
-          "label": "Official ISL YouTube Live listing",
-          "url": "https://www.youtube.com/@IndianSuperLeague/streams"
-        }
-      ]
-    },
-    {
-      "checkedAt": "2026-10-21T11:00:35.691504+00:00",
-      "kind": "lineup-early",
-      "outcome": "no-change",
-      "summary": "3 match centres checked; updates: fixtures 0, results 0, lineups 0, streams 0. Phase: phase-one. 0 pending; 0 errors.",
-      "links": [
-        {
-          "label": "Churchill Brothers vs East Bengal FC",
-          "url": "https://www.indiansuperleague.com/matchcentre/194643"
-        },
         {
           "label": "NorthEast United FC vs Kerala Blasters FC",
           "url": "https://www.indiansuperleague.com/matchcentre/194644"
