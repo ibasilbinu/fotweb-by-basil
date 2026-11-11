@@ -85,13 +85,12 @@
   "phaseOneLastKickoff": "2027-01-17T19:30+05:30",
   "sources": {
     "fixtures": {
-      "checkedAt": "2026-11-11T19:15:31+05:30",
+      "checkedAt": "2026-11-11T15:11:22.051391+00:00",
       "outcome": "ok"
     },
     "streams": {
-      "checkedAt": "2026-11-11T19:09:52+05:30",
-      "outcome": "error",
-      "error": "Official ISL YouTube Live/Upcoming page returned only the stale 2024 footer through connected web retrieval; current stream metadata could not be verified."
+      "checkedAt": "2026-11-11T15:11:22.051391+00:00",
+      "outcome": "ok"
     }
   },
   "pending": [],
@@ -126,8 +125,8 @@
     "194661": "2026-11-10T10:06:30.880805+00:00"
   },
   "lastCheck": {
-    "checkedAt": "2026-11-11T19:15:31+05:30",
-    "kind": "post-match-early",
+    "checkedAt": "2026-11-11T15:11:22.051391+00:00",
+    "kind": "hourly",
     "failures": [],
     "changes": {
       "fixtures": 0,
