@@ -3,7 +3,7 @@
   "season": "2026-27",
   "checks": [
     {
-      "checkedAt": "2026-11-12T16:31:41+05:30",
+      "checkedAt": "2026-11-12T16:37:02+05:30",
       "kind": "lineup-early",
       "outcome": "partial",
       "summary": "0 match centres checked; updates: fixtures 0, results 0, lineups 0, streams 0. Phase: phase-one. 0 pending; 1 errors. Official YouTube Live/Upcoming metadata unavailable: /streams returned a stale 2024 footer; channel-ID /streams and /live returned DisabledError. Existing streams preserved.",
