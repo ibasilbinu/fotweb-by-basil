@@ -3,6 +3,13 @@
   "season": "2026-27",
   "checks": [
     {
+      "checkedAt": "2026-11-12T23:38:08.726404+00:00",
+      "kind": "match-retry",
+      "outcome": "no-change",
+      "summary": "0 match centres checked; updates: fixtures 0, results 0, lineups 0, streams 0. Phase: phase-one. 0 pending; 0 errors.",
+      "links": []
+    },
+    {
       "checkedAt": "2026-11-12T22:13:31.348242+00:00",
       "kind": "post-match-late",
       "outcome": "no-change",
@@ -7074,13 +7081,6 @@
           "url": "https://www.youtube.com/@IndianSuperLeague/streams"
         }
       ]
-    },
-    {
-      "checkedAt": "2026-10-22T15:03:45.283812+00:00",
-      "kind": "match-retry",
-      "outcome": "no-change",
-      "summary": "0 match centres checked; updates: fixtures 0, results 0, lineups 0, streams 0. Phase: phase-one. 0 pending; 0 errors.",
-      "links": []
     }
   ]
 }
