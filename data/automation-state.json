@@ -89,9 +89,8 @@
       "outcome": "ok"
     },
     "streams": {
-      "checkedAt": "2026-11-12T19:06:29+05:30",
-      "outcome": "error",
-      "error": "Official ISL YouTube /streams page was accessible only as a stale 2024 footer in the connected browser; current Live/Upcoming metadata could not be verified."
+      "checkedAt": "2026-11-12T18:44:32.152948+00:00",
+      "outcome": "ok"
     }
   },
   "pending": [],
@@ -126,8 +125,8 @@
     "194661": "2026-11-10T10:06:30.880805+00:00"
   },
   "lastCheck": {
-    "checkedAt": "2026-11-12T18:08:07.996307+00:00",
-    "kind": "match-retry",
+    "checkedAt": "2026-11-12T18:44:32.152948+00:00",
+    "kind": "lineup-early",
     "failures": [],
     "changes": {
       "fixtures": 0,
