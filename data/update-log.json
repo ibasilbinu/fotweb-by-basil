@@ -3,6 +3,22 @@
   "season": "2026-27",
   "checks": [
     {
+      "checkedAt": "2026-11-12T08:01:21+05:30",
+      "kind": "morning",
+      "outcome": "partial",
+      "summary": "0 match centres checked; updates: fixtures 0, results 0, lineups 0, streams 0. Phase: phase-one. 0 pending; 1 error. Official YouTube Live/Upcoming metadata unavailable: the official streams page returned only a stale 2024 footer; direct official channel /streams and /live endpoints returned DisabledError. No current video metadata could be verified. Existing stream links preserved.",
+      "links": [
+        {
+          "label": "Official ISL 2026-27 fixture schedule",
+          "url": "https://www.indiansuperleague.com/schedule-fixtures"
+        },
+        {
+          "label": "Official ISL YouTube Live listing",
+          "url": "https://www.youtube.com/@IndianSuperLeague/streams"
+        }
+      ]
+    },
+    {
       "checkedAt": "2026-11-11T23:43:53.584040+00:00",
       "kind": "match-retry",
       "outcome": "no-change",
@@ -7110,18 +7126,6 @@
         {
           "label": "Official ISL YouTube Live listing",
           "url": "https://www.youtube.com/@IndianSuperLeague/streams"
-        }
-      ]
-    },
-    {
-      "checkedAt": "2026-10-21T16:17:43Z",
-      "kind": "post-match-late",
-      "outcome": "no-change",
-      "summary": "Connected-tool backup: official ISL 2026–27 schedule and saved fixtures show no 21 October 19:30 IST kickoff. No final result due. Existing verified results retained; local importer unavailable.",
-      "links": [
-        {
-          "label": "Official ISL 2026–27 fixtures and results",
-          "url": "https://www.indiansuperleague.com/schedule-fixtures"
         }
       ]
     }
