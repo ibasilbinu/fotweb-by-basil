@@ -3,6 +3,22 @@
   "season": "2026-27",
   "checks": [
     {
+      "checkedAt": "2026-11-12T21:53:31+05:30",
+      "kind": "post-match-late",
+      "outcome": "no-change",
+      "summary": "Official ISL 2026–27 schedule and AIFF fixtures show no 19:30 IST kickoff on 12 Nov; the next published 19:30 IST fixture is Bengaluru FC vs Mumbai City FC on 20 Nov. No unrecorded past fixtures; 0 match centres/results due; 0 changes; 0 pending; 0 errors.",
+      "links": [
+        {
+          "label": "Official ISL 2026–27 fixture schedule",
+          "url": "https://www.indiansuperleague.com/schedule-fixtures"
+        },
+        {
+          "label": "AIFF ISL 2026–27 fixtures",
+          "url": "https://www.the-aiff.com/competitions/isl"
+        }
+      ]
+    },
+    {
       "checkedAt": "2026-11-12T19:20:53+05:30",
       "kind": "post-match-early",
       "outcome": "no-change",
@@ -7092,26 +7108,6 @@
     {
       "checkedAt": "2026-10-22T04:44:29.901335+00:00",
       "kind": "hourly",
-      "outcome": "no-change",
-      "summary": "1 match centres checked; updates: fixtures 0, results 0, lineups 0, streams 0. Phase: phase-one. 0 pending; 0 errors.",
-      "links": [
-        {
-          "label": "Official ISL fixture discovery",
-          "url": "https://www.indiansuperleague.com/schedule-fixtures"
-        },
-        {
-          "label": "Punjab FC vs Mumbai City FC",
-          "url": "https://www.indiansuperleague.com/matchcentre/194645"
-        },
-        {
-          "label": "Official ISL YouTube Live listing",
-          "url": "https://www.youtube.com/@IndianSuperLeague/streams"
-        }
-      ]
-    },
-    {
-      "checkedAt": "2026-10-22T02:28:18.776638+00:00",
-      "kind": "morning",
       "outcome": "no-change",
       "summary": "1 match centres checked; updates: fixtures 0, results 0, lineups 0, streams 0. Phase: phase-one. 0 pending; 0 errors.",
       "links": [
