@@ -3,6 +3,22 @@
   "season": "2026-27",
   "checks": [
     {
+      "checkedAt": "2026-11-13T08:04:01+05:30",
+      "kind": "morning",
+      "outcome": "partial",
+      "summary": "Morning backup: official ISL 2026-27 schedule page remains consistent with the saved 78 fixtures through 17 Jan 2027; no later phase or fixture correction was visible. YouTube Live/Upcoming exposed only a stale 2024 footer and channel-ID endpoints returned DisabledError; English streams for 50 future fixtures could not be rechecked. 0 changes; 0 pending; 1 source error.",
+      "links": [
+        {
+          "label": "Official ISL fixture discovery",
+          "url": "https://www.indiansuperleague.com/schedule-fixtures"
+        },
+        {
+          "label": "Official ISL YouTube Live listing",
+          "url": "https://www.youtube.com/@IndianSuperLeague/streams"
+        }
+      ]
+    },
+    {
       "checkedAt": "2026-11-13T00:23:21.641907+00:00",
       "kind": "hourly",
       "outcome": "no-change",
@@ -7067,18 +7083,6 @@
         {
           "label": "Official ISL 2026–27 fixtures and results",
           "url": "https://www.indiansuperleague.com/schedule-fixtures"
-        }
-      ]
-    },
-    {
-      "checkedAt": "2026-10-22T15:49:38.562364+00:00",
-      "kind": "lineup-early",
-      "outcome": "no-change",
-      "summary": "0 match centres checked; updates: fixtures 0, results 0, lineups 0, streams 0. Phase: phase-one. 0 pending; 0 errors.",
-      "links": [
-        {
-          "label": "Official ISL YouTube Live listing",
-          "url": "https://www.youtube.com/@IndianSuperLeague/streams"
         }
       ]
     }
