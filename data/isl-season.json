@@ -3,7 +3,7 @@
   "season": "2026-27",
   "competition": "Indian Super League",
   "scheduleScope": "Published Phase 1",
-  "verifiedAt": "2026-11-13T09:46:17.587363+00:00",
+  "verifiedAt": "2026-11-13T16:22:29.663343+00:00",
   "sourceUrl": "https://www.indiansuperleague.com/schedule-fixtures",
   "standingsSourceUrl": "https://www.indiansuperleague.com/standings",
   "teams": [
@@ -5275,6 +5275,18 @@
       "officialStage": "league"
     },
     {
+      "id": "194672",
+      "homeId": "504",
+      "awayId": "1252",
+      "kickoff": "2026-11-30T17:00+05:30",
+      "venue": "Indira Gandhi Athletic Stadium, Guwahati",
+      "status": "NS",
+      "phase": "league",
+      "label": "Match 39",
+      "sourceUrl": "https://www.indiansuperleague.com/schedule-fixtures",
+      "officialStage": "league"
+    },
+    {
       "id": "194671",
       "homeId": "506",
       "awayId": "505",
@@ -5283,18 +5295,6 @@
       "status": "NS",
       "phase": "league",
       "label": "Match 38",
-      "sourceUrl": "https://www.indiansuperleague.com/schedule-fixtures",
-      "officialStage": "league"
-    },
-    {
-      "id": "194672",
-      "homeId": "504",
-      "awayId": "1252",
-      "kickoff": "2026-11-30T19:30+05:30",
-      "venue": "Indira Gandhi Athletic Stadium, Guwahati",
-      "status": "NS",
-      "phase": "league",
-      "label": "Match 39",
       "sourceUrl": "https://www.indiansuperleague.com/schedule-fixtures",
       "officialStage": "league"
     },
@@ -5558,18 +5558,6 @@
       "officialStage": "league"
     },
     {
-      "id": "194695",
-      "homeId": "1102",
-      "awayId": "504",
-      "kickoff": "2026-12-21T19:30+05:30",
-      "venue": "Vivekananda Yuba Bharati Krirangan, Kolkata",
-      "status": "NS",
-      "phase": "league",
-      "label": "Match 61",
-      "sourceUrl": "https://www.indiansuperleague.com/schedule-fixtures",
-      "officialStage": "league"
-    },
-    {
       "id": "194696",
       "homeId": "656",
       "awayId": "1252",
@@ -5686,6 +5674,18 @@
       "status": "NS",
       "phase": "league",
       "label": "Match 71",
+      "sourceUrl": "https://www.indiansuperleague.com/schedule-fixtures",
+      "officialStage": "league"
+    },
+    {
+      "id": "194695",
+      "homeId": "1102",
+      "awayId": "504",
+      "kickoff": "2027-01-12T17:00+05:30",
+      "venue": "Vivekananda Yuba Bharati Krirangan, Kolkata",
+      "status": "NS",
+      "phase": "league",
+      "label": "Match 61",
       "sourceUrl": "https://www.indiansuperleague.com/schedule-fixtures",
       "officialStage": "league"
     },
