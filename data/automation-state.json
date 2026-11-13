@@ -85,13 +85,13 @@
   "phaseOneLastKickoff": "2027-01-17T19:30+05:30",
   "sources": {
     "fixtures": {
-      "checkedAt": "2026-11-13T16:32:49+05:30",
+      "checkedAt": "2026-11-13T19:03:25+05:30",
       "outcome": "ok"
     },
     "streams": {
-      "checkedAt": "2026-11-13T16:32:49+05:30",
+      "checkedAt": "2026-11-13T19:03:25+05:30",
       "outcome": "error",
-      "error": "Official YouTube Live/Upcoming could not be verified: @IndianSuperLeague/streams returned only a three-line stale footer (© 2024 Google LLC); channel-ID /streams and /live endpoints returned DisabledError."
+      "error": "Official YouTube Live/Upcoming could not be verified: /@IndianSuperLeague/streams returned a three-line stale footer (© 2024 Google LLC); channel RSS and video oEmbed endpoints returned DisabledError."
     }
   },
   "pending": [],
@@ -126,10 +126,10 @@
     "194661": "2026-11-10T10:06:30.880805+00:00"
   },
   "lastCheck": {
-    "checkedAt": "2026-11-13T16:32:49+05:30",
-    "kind": "lineup-early",
+    "checkedAt": "2026-11-13T19:03:25+05:30",
+    "kind": "lineup-late",
     "failures": [
-      "Official YouTube Live/Upcoming could not be verified: @IndianSuperLeague/streams returned only a three-line stale footer (© 2024 Google LLC); channel-ID /streams and /live endpoints returned DisabledError."
+      "Official YouTube Live/Upcoming could not be verified: /@IndianSuperLeague/streams returned a three-line stale footer (© 2024 Google LLC); channel RSS and video oEmbed endpoints returned DisabledError."
     ],
     "changes": {
       "fixtures": 0,

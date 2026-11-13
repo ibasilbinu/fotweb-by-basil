@@ -3,6 +3,22 @@
   "season": "2026-27",
   "checks": [
     {
+      "checkedAt": "2026-11-13T19:03:25+05:30",
+      "kind": "lineup-late",
+      "outcome": "partial",
+      "summary": "Connected lineup-late check: official ISL 2026–27 schedule shows no 19:30 IST kickoff on 13 Nov; next is Bengaluru FC vs Mumbai City FC on 20 Nov. YouTube Live/Upcoming returned only a stale three-line 2024 footer; channel RSS and video oEmbed returned DisabledError, so English streams for 50 future fixtures could not be verified. 0 changes; 0 pending; 1 source error.",
+      "links": [
+        {
+          "label": "Official ISL 2026–27 fixture schedule",
+          "url": "https://www.indiansuperleague.com/schedule-fixtures"
+        },
+        {
+          "label": "Official ISL YouTube Live listing",
+          "url": "https://www.youtube.com/@IndianSuperLeague/streams"
+        }
+      ]
+    },
+    {
       "checkedAt": "2026-11-13T16:32:49+05:30",
       "kind": "lineup-early",
       "outcome": "partial",
@@ -7092,13 +7108,6 @@
     {
       "checkedAt": "2026-10-22T20:03:44.515086+00:00",
       "kind": "post-match-late",
-      "outcome": "no-change",
-      "summary": "0 match centres checked; updates: fixtures 0, results 0, lineups 0, streams 0. Phase: phase-one. 0 pending; 0 errors.",
-      "links": []
-    },
-    {
-      "checkedAt": "2026-10-22T19:10:07.599281+00:00",
-      "kind": "match-retry",
       "outcome": "no-change",
       "summary": "0 match centres checked; updates: fixtures 0, results 0, lineups 0, streams 0. Phase: phase-one. 0 pending; 0 errors.",
       "links": []
