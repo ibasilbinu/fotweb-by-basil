@@ -85,11 +85,11 @@
   "phaseOneLastKickoff": "2027-01-17T19:30+05:30",
   "sources": {
     "fixtures": {
-      "checkedAt": "2026-11-13T16:22:29.663343+00:00",
+      "checkedAt": "2026-11-13T22:37:17.769346+00:00",
       "outcome": "ok"
     },
     "streams": {
-      "checkedAt": "2026-11-13T20:36:53.857356+00:00",
+      "checkedAt": "2026-11-13T22:37:17.769346+00:00",
       "outcome": "ok"
     }
   },
@@ -125,8 +125,8 @@
     "194661": "2026-11-10T10:06:30.880805+00:00"
   },
   "lastCheck": {
-    "checkedAt": "2026-11-13T21:57:03.690592+00:00",
-    "kind": "post-match-late",
+    "checkedAt": "2026-11-13T22:37:17.769346+00:00",
+    "kind": "hourly",
     "failures": [],
     "changes": {
       "fixtures": 0,
