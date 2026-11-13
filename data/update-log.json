@@ -3,6 +3,13 @@
   "season": "2026-27",
   "checks": [
     {
+      "checkedAt": "2026-11-13T20:38:49.661014+00:00",
+      "kind": "post-match-early",
+      "outcome": "no-change",
+      "summary": "0 match centres checked; updates: fixtures 0, results 0, lineups 0, streams 0. Phase: phase-one. 0 pending; 0 errors.",
+      "links": []
+    },
+    {
       "checkedAt": "2026-11-13T20:36:55.896582+00:00",
       "kind": "lineup-late",
       "outcome": "no-change",
@@ -7081,22 +7088,6 @@
         {
           "label": "Inter Kashi vs East Bengal FC",
           "url": "https://www.indiansuperleague.com/matchcentre/194646"
-        },
-        {
-          "label": "Official ISL YouTube Live listing",
-          "url": "https://www.youtube.com/@IndianSuperLeague/streams"
-        }
-      ]
-    },
-    {
-      "checkedAt": "2026-10-23T10:03:27.805558+00:00",
-      "kind": "hourly",
-      "outcome": "updated",
-      "summary": "0 match centres checked; updates: fixtures 6, results 0, lineups 0, streams 0. Phase: phase-one. 0 pending; 0 errors.",
-      "links": [
-        {
-          "label": "Official ISL fixture discovery",
-          "url": "https://www.indiansuperleague.com/schedule-fixtures"
         },
         {
           "label": "Official ISL YouTube Live listing",
