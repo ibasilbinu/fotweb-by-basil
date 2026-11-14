@@ -85,12 +85,13 @@
   "phaseOneLastKickoff": "2027-01-17T19:30+05:30",
   "sources": {
     "fixtures": {
-      "checkedAt": "2026-11-13T22:37:17.769346+00:00",
+      "checkedAt": "2026-11-14T02:31:43.894Z",
       "outcome": "ok"
     },
     "streams": {
-      "checkedAt": "2026-11-13T22:37:17.769346+00:00",
-      "outcome": "ok"
+      "checkedAt": "2026-11-14T02:31:43.894Z",
+      "outcome": "error",
+      "error": "Official YouTube Live/Upcoming metadata unavailable: the @IndianSuperLeague/streams page returned only a stale footer; channel-ID /streams and /live plus the official channel RSS returned DisabledError; direct video metadata was Online fetch throttle"
     }
   },
   "pending": [],
@@ -125,9 +126,11 @@
     "194661": "2026-11-10T10:06:30.880805+00:00"
   },
   "lastCheck": {
-    "checkedAt": "2026-11-13T22:53:18.980597+00:00",
-    "kind": "match-retry",
-    "failures": [],
+    "checkedAt": "2026-11-14T02:31:43.894Z",
+    "kind": "morning",
+    "failures": [
+      "YouTube: Official YouTube Live/Upcoming metadata unavailable: the @IndianSuperLeague/streams page returned only a stale footer; channel-ID /streams and /live plus the official channel RSS returned DisabledError; direct video metadata was Online fetch throttled."
+    ],
     "changes": {
       "fixtures": 0,
       "results": 0,
