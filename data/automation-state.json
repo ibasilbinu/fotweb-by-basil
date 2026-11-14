@@ -126,11 +126,9 @@
     "194661": "2026-11-10T10:06:30.880805+00:00"
   },
   "lastCheck": {
-    "checkedAt": "2026-11-14T21:49:48.986+05:30",
-    "kind": "post-match-late",
-    "failures": [
-      "Local importer not executed: git clone failed: Could not resolve host: github.com."
-    ],
+    "checkedAt": "2026-11-14T16:30:31.076309+00:00",
+    "kind": "match-retry",
+    "failures": [],
     "changes": {
       "fixtures": 0,
       "results": 0,
