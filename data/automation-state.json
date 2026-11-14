@@ -126,11 +126,9 @@
     "194661": "2026-11-10T10:06:30.880805+00:00"
   },
   "lastCheck": {
-    "checkedAt": "2026-11-14T19:00:24+05:30",
-    "kind": "lineup-late",
-    "failures": [
-      "YouTube: official /@IndianSuperLeague/streams returned only a stale 2024 footer; channel-ID /streams, /live and official channel RSS returned DisabledError."
-    ],
+    "checkedAt": "2026-11-14T19:09:46+05:30",
+    "kind": "post-match-early",
+    "failures": [],
     "changes": {
       "fixtures": 0,
       "results": 0,
