@@ -85,12 +85,13 @@
   "phaseOneLastKickoff": "2027-01-17T19:30+05:30",
   "sources": {
     "fixtures": {
-      "checkedAt": "2026-11-14T11:27:52.220448+00:00",
+      "checkedAt": "2026-11-14T19:00:24+05:30",
       "outcome": "ok"
     },
     "streams": {
-      "checkedAt": "2026-11-14T11:27:52.220448+00:00",
-      "outcome": "ok"
+      "checkedAt": "2026-11-14T19:00:24+05:30",
+      "outcome": "error",
+      "error": "official /@IndianSuperLeague/streams returned only a stale 2024 footer; channel-ID /streams, /live and official channel RSS returned DisabledError."
     }
   },
   "pending": [],
@@ -125,9 +126,11 @@
     "194661": "2026-11-10T10:06:30.880805+00:00"
   },
   "lastCheck": {
-    "checkedAt": "2026-11-14T11:27:52.220448+00:00",
-    "kind": "hourly",
-    "failures": [],
+    "checkedAt": "2026-11-14T19:00:24+05:30",
+    "kind": "lineup-late",
+    "failures": [
+      "YouTube: official /@IndianSuperLeague/streams returned only a stale 2024 footer; channel-ID /streams, /live and official channel RSS returned DisabledError."
+    ],
     "changes": {
       "fixtures": 0,
       "results": 0,
