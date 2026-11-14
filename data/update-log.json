@@ -3,6 +3,18 @@
   "season": "2026-27",
   "checks": [
     {
+      "checkedAt": "2026-11-14T21:49:48.986+05:30",
+      "kind": "post-match-late",
+      "outcome": "partial",
+      "summary": "Official ISL 2026-27 fixture page and FotWeb snapshot show no 19:30 IST kickoff on 14 Nov; next matchday is 20 Nov. No match centres due; 28 results preserved; 0 pending. Local importer not executed: git clone failed: Could not resolve host: github.com.",
+      "links": [
+        {
+          "label": "Official ISL 2026-27 fixture schedule",
+          "url": "https://www.indiansuperleague.com/schedule-fixtures"
+        }
+      ]
+    },
+    {
       "checkedAt": "2026-11-14T19:09:46+05:30",
       "kind": "post-match-early",
       "outcome": "no-change",
@@ -7066,26 +7078,6 @@
         {
           "label": "Inter Kashi vs East Bengal FC",
           "url": "https://www.indiansuperleague.com/matchcentre/194646"
-        }
-      ]
-    },
-    {
-      "checkedAt": "2026-10-23T19:13:16.203254+00:00",
-      "kind": "hourly",
-      "outcome": "no-change",
-      "summary": "1 match centres checked; updates: fixtures 0, results 0, lineups 0, streams 0. Phase: phase-one. 0 pending; 0 errors.",
-      "links": [
-        {
-          "label": "Official ISL fixture discovery",
-          "url": "https://www.indiansuperleague.com/schedule-fixtures"
-        },
-        {
-          "label": "Inter Kashi vs East Bengal FC",
-          "url": "https://www.indiansuperleague.com/matchcentre/194646"
-        },
-        {
-          "label": "Official ISL YouTube Live listing",
-          "url": "https://www.youtube.com/@IndianSuperLeague/streams"
         }
       ]
     }
