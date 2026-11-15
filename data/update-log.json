@@ -3,6 +3,22 @@
   "season": "2026-27",
   "checks": [
     {
+      "checkedAt": "2026-11-15T16:18:17.279Z",
+      "kind": "post-match-late",
+      "outcome": "partial",
+      "summary": "Official ISL 2026-27 schedule confirms no 15 Nov 19:30 IST kickoff; the next published 19:30 fixture is Bengaluru FC vs Mumbai City FC on 20 Nov. 0 match centres due; 0 result updates; 0 pending. Manual schedule check completed; local importer could not run (GitHub DNS), and the 21:45 post-match workflow was not visible by 21:48 IST.",
+      "links": [
+        {
+          "label": "Official ISL fixture schedule",
+          "url": "https://www.indiansuperleague.com/schedule-fixtures"
+        },
+        {
+          "label": "FotWeb GitHub Actions",
+          "url": "https://github.com/ibasilbinu/fotweb-by-basil/actions"
+        }
+      ]
+    },
+    {
       "checkedAt": "2026-11-15T13:41:36.435Z",
       "kind": "lineup-late",
       "outcome": "partial",
@@ -6976,22 +6992,6 @@
     {
       "checkedAt": "2026-10-24T17:11:32.831515+00:00",
       "kind": "match-retry",
-      "outcome": "no-change",
-      "summary": "2 match centres checked; updates: fixtures 0, results 0, lineups 0, streams 0. Phase: phase-one. 0 pending; 0 errors.",
-      "links": [
-        {
-          "label": "Odisha FC vs NorthEast United FC",
-          "url": "https://www.indiansuperleague.com/matchcentre/194647"
-        },
-        {
-          "label": "Inter Kashi vs East Bengal FC",
-          "url": "https://www.indiansuperleague.com/matchcentre/194646"
-        }
-      ]
-    },
-    {
-      "checkedAt": "2026-10-24T16:57:07.054040+00:00",
-      "kind": "post-match-early",
       "outcome": "no-change",
       "summary": "2 match centres checked; updates: fixtures 0, results 0, lineups 0, streams 0. Phase: phase-one. 0 pending; 0 errors.",
       "links": [
