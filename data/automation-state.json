@@ -85,12 +85,13 @@
   "phaseOneLastKickoff": "2027-01-17T19:30+05:30",
   "sources": {
     "fixtures": {
-      "checkedAt": "2026-11-15T10:52:18.753395+00:00",
+      "checkedAt": "2026-11-15T11:14:21.960Z",
       "outcome": "ok"
     },
     "streams": {
-      "checkedAt": "2026-11-15T10:52:18.753395+00:00",
-      "outcome": "ok"
+      "checkedAt": "2026-11-15T11:14:21.960Z",
+      "outcome": "error",
+      "error": "Official YouTube Live/Upcoming browser metadata unavailable: /@IndianSuperLeague/streams returned only a stale ©2024 footer; channel-ID /streams and /live returned DisabledError."
     }
   },
   "pending": [],
@@ -125,9 +126,12 @@
     "194661": "2026-11-10T10:06:30.880805+00:00"
   },
   "lastCheck": {
-    "checkedAt": "2026-11-15T10:52:18.753395+00:00",
-    "kind": "hourly",
-    "failures": [],
+    "checkedAt": "2026-11-15T11:14:21.960Z",
+    "kind": "lineup-early",
+    "failures": [
+      "YouTube: Official YouTube Live/Upcoming browser metadata unavailable: /@IndianSuperLeague/streams returned only a stale ©2024 footer; channel-ID /streams and /live returned DisabledError.",
+      "Importer: Local importer unavailable: git checkout failed with Could not resolve host: github.com."
+    ],
     "changes": {
       "fixtures": 0,
       "results": 0,

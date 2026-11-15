@@ -3,6 +3,22 @@
   "season": "2026-27",
   "checks": [
     {
+      "checkedAt": "2026-11-15T11:14:21.960Z",
+      "kind": "lineup-early",
+      "outcome": "partial",
+      "summary": "Official 2026-27 fixture listing has no 15 Nov match; next published fixtures start 20 Nov. 0 match centres/XIs due. Official YouTube Live/Upcoming browser check returned stale ©2024 footer; channel-ID /streams and /live returned DisabledError. Local importer unavailable (Could not resolve host: github.com). Preserved 78 fixtures, 28 results and 28 verified broadcasts; 0 pending.",
+      "links": [
+        {
+          "label": "Official ISL 2026-27 fixture schedule",
+          "url": "https://www.indiansuperleague.com/schedule-fixtures"
+        },
+        {
+          "label": "Official ISL YouTube Live listing",
+          "url": "https://www.youtube.com/@IndianSuperLeague/streams"
+        }
+      ]
+    },
+    {
       "checkedAt": "2026-11-15T10:52:20.799247+00:00",
       "kind": "hourly",
       "outcome": "no-change",
@@ -6994,26 +7010,6 @@
         {
           "label": "Odisha FC vs NorthEast United FC",
           "url": "https://www.indiansuperleague.com/matchcentre/194647"
-        }
-      ]
-    },
-    {
-      "checkedAt": "2026-10-24T14:22:21.493339+00:00",
-      "kind": "lineup-early",
-      "outcome": "partial",
-      "summary": "2 match centres checked; updates: fixtures 0, results 0, lineups 1, streams 1. Phase: phase-one. 0 pending; 1 errors. YouTube tTd6cg2yZ78: Public metadata: Video identity unavailable or private; alternate metadata missing channel identity",
-      "links": [
-        {
-          "label": "Odisha FC vs NorthEast United FC",
-          "url": "https://www.indiansuperleague.com/matchcentre/194647"
-        },
-        {
-          "label": "Inter Kashi vs East Bengal FC",
-          "url": "https://www.indiansuperleague.com/matchcentre/194646"
-        },
-        {
-          "label": "Official ISL YouTube Live listing",
-          "url": "https://www.youtube.com/@IndianSuperLeague/streams"
         }
       ]
     }
