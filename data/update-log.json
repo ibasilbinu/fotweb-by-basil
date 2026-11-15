@@ -3,6 +3,22 @@
   "season": "2026-27",
   "checks": [
     {
+      "checkedAt": "2026-11-15T09:38:55.390192+00:00",
+      "kind": "morning",
+      "outcome": "no-change",
+      "summary": "0 match centres checked; updates: fixtures 0, results 0, lineups 0, streams 0. Phase: phase-one. 0 pending; 0 errors.",
+      "links": [
+        {
+          "label": "Official ISL fixture discovery",
+          "url": "https://www.indiansuperleague.com/schedule-fixtures"
+        },
+        {
+          "label": "Official ISL YouTube Live listing",
+          "url": "https://www.youtube.com/@IndianSuperLeague/streams"
+        }
+      ]
+    },
+    {
       "checkedAt": "2026-11-15T02:39:21.650478+00:00",
       "kind": "hourly",
       "outcome": "partial",
@@ -6998,18 +7014,6 @@
         {
           "label": "Inter Kashi vs East Bengal FC",
           "url": "https://www.indiansuperleague.com/matchcentre/194646"
-        }
-      ]
-    },
-    {
-      "checkedAt": "2026-10-24T13:42:33Z",
-      "kind": "post-match-early",
-      "outcome": "no-change",
-      "summary": "Connected-tool backup: official ISL 2026–27 schedule and saved fixtures show no 24 October 17:00 IST kickoff. No early final result due. Existing verified results retained; tonight’s 19:30 fixture remains scheduled.",
-      "links": [
-        {
-          "label": "Official ISL 2026–27 fixtures and results",
-          "url": "https://www.indiansuperleague.com/schedule-fixtures"
         }
       ]
     }
