@@ -85,13 +85,13 @@
   "phaseOneLastKickoff": "2027-01-17T19:30+05:30",
   "sources": {
     "fixtures": {
-      "checkedAt": "2026-11-15T13:40:03+00:00",
+      "checkedAt": "2026-11-15T13:41:36.435Z",
       "outcome": "ok"
     },
     "streams": {
-      "checkedAt": "2026-11-15T11:30:21.627Z",
+      "checkedAt": "2026-11-15T13:41:36.435Z",
       "outcome": "error",
-      "error": "Official YouTube Live/Upcoming metadata unavailable: /@IndianSuperLeague/streams returned only a stale ©2024 footer; channel-ID /streams and /live returned DisabledError."
+      "error": "Official YouTube Live/Upcoming metadata unavailable in this run: /@IndianSuperLeague/streams returned only a stale ©2024 footer; channel-ID /streams, /live and RSS returned DisabledError; r7fCiGAMU3w watch page returned Online fetch throttled."
     }
   },
   "pending": [],
@@ -126,10 +126,12 @@
     "194661": "2026-11-10T10:06:30.880805+00:00"
   },
   "lastCheck": {
-    "checkedAt": "2026-11-15T13:40:03+00:00",
-    "kind": "post-match-early",
+    "checkedAt": "2026-11-15T13:41:36.435Z",
+    "kind": "lineup-late",
     "failures": [
-      "Importer: git ls-remote https://github.com/ibasilbinu/fotweb-by-basil.git refs/heads/main failed: fatal: unable to access 'https://github.com/ibasilbinu/fotweb-by-basil.git/': Could not resolve host: github.com."
+      "Official YouTube Live/Upcoming metadata unavailable in this run: /@IndianSuperLeague/streams returned only a stale ©2024 footer; channel-ID /streams, /live and RSS returned DisabledError; r7fCiGAMU3w watch page returned Online fetch throttled.",
+      "Importer: local git clone failed: fatal: unable to access 'https://github.com/ibasilbinu/fotweb-by-basil.git/': Could not resolve host: github.com.",
+      "Workflow inspection: GitHub Actions workflow-state read returned HTTP 400: GitHub Fetch URL is not an allowed public GitHub repository or search endpoint; no 19:00 run was listed by 19:09 IST (latest listed run completed 16:22 IST)."
     ],
     "changes": {
       "fixtures": 0,
