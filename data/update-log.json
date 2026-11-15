@@ -3,6 +3,22 @@
   "season": "2026-27",
   "checks": [
     {
+      "checkedAt": "2026-11-15T11:30:21.627Z",
+      "kind": "lineup-early",
+      "outcome": "partial",
+      "summary": "2026-27 schedule: no 15 Nov 17:00 IST fixture; next published fixtures start 20 Nov. No match centres/XIs due. Official YouTube Live/Upcoming unavailable (stale ©2024 footer; channel-ID /streams and /live returned DisabledError). Local importer not run: git ls-remote failed: Could not resolve host: github.com. Preserved 78 fixtures, 28 results, 28 verified broadcasts; 0 pending.",
+      "links": [
+        {
+          "label": "Official ISL 2026-27 fixture schedule",
+          "url": "https://www.indiansuperleague.com/schedule-fixtures"
+        },
+        {
+          "label": "Official ISL YouTube Live listing",
+          "url": "https://www.youtube.com/@IndianSuperLeague/streams"
+        }
+      ]
+    },
+    {
       "checkedAt": "2026-11-15T11:14:21.960Z",
       "kind": "lineup-early",
       "outcome": "partial",
@@ -6998,18 +7014,6 @@
         {
           "label": "Official ISL YouTube Live listing",
           "url": "https://www.youtube.com/@IndianSuperLeague/streams"
-        }
-      ]
-    },
-    {
-      "checkedAt": "2026-10-24T16:11:29Z",
-      "kind": "post-match-late",
-      "outcome": "updated",
-      "summary": "Official ISL match centre confirmed Odisha FC 0–0 NorthEast United FC, FT. Published the final score immediately with the already confirmed lineups; statistics and events remain available for later enrichment.",
-      "links": [
-        {
-          "label": "Odisha FC vs NorthEast United FC",
-          "url": "https://www.indiansuperleague.com/matchcentre/194647"
         }
       ]
     }
