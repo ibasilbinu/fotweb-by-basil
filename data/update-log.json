@@ -3,6 +3,22 @@
   "season": "2026-27",
   "checks": [
     {
+      "checkedAt": "2026-11-15T08:01:09.640+05:30",
+      "kind": "morning",
+      "outcome": "partial",
+      "summary": "Official ISL 2026-27 schedule checked: 78 fixtures through 17 Jan 2027; no new phase or fixture corrections. YouTube Live/Upcoming returned only a stale ©2024 footer, so no new English streams could be verified. Preserved 28 results and 28 verified broadcasts; 50 future fixtures still lack verified links. 0 pending; 1 source error.",
+      "links": [
+        {
+          "label": "Official ISL fixture schedule",
+          "url": "https://www.indiansuperleague.com/schedule-fixtures"
+        },
+        {
+          "label": "Official ISL YouTube Live listing",
+          "url": "https://www.youtube.com/@IndianSuperLeague/streams"
+        }
+      ]
+    },
+    {
       "checkedAt": "2026-11-14T22:23:33.106869+00:00",
       "kind": "hourly",
       "outcome": "no-change",
@@ -6994,26 +7010,6 @@
         {
           "label": "Odisha FC vs NorthEast United FC",
           "url": "https://www.indiansuperleague.com/matchcentre/194647"
-        },
-        {
-          "label": "Inter Kashi vs East Bengal FC",
-          "url": "https://www.indiansuperleague.com/matchcentre/194646"
-        },
-        {
-          "label": "Official ISL YouTube Live listing",
-          "url": "https://www.youtube.com/@IndianSuperLeague/streams"
-        }
-      ]
-    },
-    {
-      "checkedAt": "2026-10-24T12:40:34.786725+00:00",
-      "kind": "hourly",
-      "outcome": "updated",
-      "summary": "1 match centres checked; updates: fixtures 0, results 0, lineups 0, streams 1. Phase: phase-one. 0 pending; 0 errors.",
-      "links": [
-        {
-          "label": "Official ISL fixture discovery",
-          "url": "https://www.indiansuperleague.com/schedule-fixtures"
         },
         {
           "label": "Inter Kashi vs East Bengal FC",
