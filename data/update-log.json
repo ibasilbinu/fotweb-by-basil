@@ -3,6 +3,26 @@
   "season": "2026-27",
   "checks": [
     {
+      "checkedAt": "2026-11-16T11:23:11.594Z",
+      "kind": "lineup-early",
+      "outcome": "no-change",
+      "summary": "No 17:00 IST ISL fixture is scheduled for 2026-11-16; the official 2026-27 schedule moves from 7 Nov to 20 Nov. The latest hourly importer run #210 (16:46 IST) completed with fixture and official YouTube Live/Upcoming sources OK; 0 match centres due, 0 XI/stream/fixture/result changes, 0 pending and 0 errors.",
+      "links": [
+        {
+          "label": "Official ISL 2026-27 fixture schedule",
+          "url": "https://www.indiansuperleague.com/schedule-fixtures"
+        },
+        {
+          "label": "Official ISL YouTube Live listing",
+          "url": "https://www.youtube.com/@IndianSuperLeague/streams"
+        },
+        {
+          "label": "GitHub Actions hourly source check #210",
+          "url": "https://github.com/ibasilbinu/fotweb-by-basil/actions/runs/43856237519"
+        }
+      ]
+    },
+    {
       "checkedAt": "2026-11-16T11:16:21.822739+00:00",
       "kind": "hourly",
       "outcome": "no-change",
@@ -6866,18 +6886,6 @@
         {
           "label": "Odisha FC vs NorthEast United FC",
           "url": "https://www.indiansuperleague.com/matchcentre/194647"
-        }
-      ]
-    },
-    {
-      "checkedAt": "2026-10-25T13:45:24Z",
-      "kind": "post-match-early",
-      "outcome": "no-change",
-      "summary": "Official ISL match centre confirmed Churchill Brothers 2–3 Punjab FC, FT; the verified result, confirmed lineups, statistics, events and player data were already current. No football-data changes.",
-      "links": [
-        {
-          "label": "Churchill Brothers vs Punjab FC",
-          "url": "https://www.indiansuperleague.com/matchcentre/194648"
         }
       ]
     }
