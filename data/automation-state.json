@@ -125,12 +125,9 @@
     "194661": "2026-11-10T10:06:30.880805+00:00"
   },
   "lastCheck": {
-    "checkedAt": "2026-11-16T21:55:40+05:30",
-    "kind": "post-match-late",
-    "failures": [
-      "Importer checkout failed: fatal: unable to access 'https://github.com/ibasilbinu/fotweb-by-basil.git/': Could not resolve host: github.com",
-      "Scheduled 21:45 IST post-match-late workflow was not present in the latest Actions run listing at 21:55 IST; leave the recurring schedule enabled for retry."
-    ],
+    "checkedAt": "2026-11-16T20:16:57.681006+00:00",
+    "kind": "match-retry",
+    "failures": [],
     "changes": {
       "fixtures": 0,
       "results": 0,
