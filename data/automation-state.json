@@ -31,7 +31,6 @@
     "194659",
     "194660",
     "194661",
-    "194690",
     "194662",
     "194663",
     "194664",
@@ -41,8 +40,8 @@
     "194668",
     "194669",
     "194670",
-    "194671",
     "194672",
+    "194671",
     "194673",
     "194674",
     "194675",
@@ -64,7 +63,6 @@
     "194692",
     "194693",
     "194694",
-    "194695",
     "194696",
     "194697",
     "194698",
@@ -72,8 +70,10 @@
     "194700",
     "194701",
     "194702",
+    "194703",
     "194704",
     "194705",
+    "194695",
     "194706",
     "194707",
     "194708",
@@ -85,12 +85,13 @@
   "phaseOneLastKickoff": "2027-01-17T19:30+05:30",
   "sources": {
     "fixtures": {
-      "checkedAt": "2026-11-15T22:47:37.454030+00:00",
+      "checkedAt": "2026-11-16T02:34:00.430456+00:00",
       "outcome": "ok"
     },
     "streams": {
-      "checkedAt": "2026-11-15T22:47:37.454030+00:00",
-      "outcome": "ok"
+      "checkedAt": "2026-11-16T02:34:00.430456+00:00",
+      "outcome": "error",
+      "error": "YouTube: official Live/Upcoming returned only the stale © 2024 Google LLC footer; channel-ID /streams and RSS returned DisabledError."
     }
   },
   "pending": [],
@@ -125,9 +126,11 @@
     "194661": "2026-11-10T10:06:30.880805+00:00"
   },
   "lastCheck": {
-    "checkedAt": "2026-11-15T22:47:37.454030+00:00",
-    "kind": "hourly",
-    "failures": [],
+    "checkedAt": "2026-11-16T02:34:00.430456+00:00",
+    "kind": "morning",
+    "failures": [
+      "YouTube: official Live/Upcoming returned only the stale © 2024 Google LLC footer; channel-ID /streams and RSS returned DisabledError."
+    ],
     "changes": {
       "fixtures": 0,
       "results": 0,

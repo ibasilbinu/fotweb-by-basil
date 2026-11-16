@@ -3,6 +3,22 @@
   "season": "2026-27",
   "checks": [
     {
+      "checkedAt": "2026-11-16T02:39:39.000000+00:00",
+      "kind": "morning",
+      "outcome": "partial",
+      "summary": "0 match centres checked; updates: fixtures 0, results 0, lineups 0, streams 0. Phase: phase-one. 0 pending; 1 source error. YouTube Live/Upcoming unavailable (stale footer; channel-ID streams/RSS DisabledError). Phase tracking repaired: removed superseded 194690, restored active 194703. Local importer not run: GitHub DNS failure.",
+      "links": [
+        {
+          "label": "Official ISL fixture discovery",
+          "url": "https://www.indiansuperleague.com/schedule-fixtures"
+        },
+        {
+          "label": "Official ISL YouTube Live listing",
+          "url": "https://www.youtube.com/@IndianSuperLeague/streams"
+        }
+      ]
+    },
+    {
       "checkedAt": "2026-11-15T22:47:41.483520+00:00",
       "kind": "hourly",
       "outcome": "no-change",
@@ -6882,30 +6898,6 @@
         {
           "label": "Churchill Brothers vs Punjab FC",
           "url": "https://www.indiansuperleague.com/matchcentre/194648"
-        },
-        {
-          "label": "Inter Kashi vs East Bengal FC",
-          "url": "https://www.indiansuperleague.com/matchcentre/194646"
-        },
-        {
-          "label": "Odisha FC vs NorthEast United FC",
-          "url": "https://www.indiansuperleague.com/matchcentre/194647"
-        },
-        {
-          "label": "Official ISL YouTube Live listing",
-          "url": "https://www.youtube.com/@IndianSuperLeague/streams"
-        }
-      ]
-    },
-    {
-      "checkedAt": "2026-10-25T07:41:27.163605+00:00",
-      "kind": "morning",
-      "outcome": "no-change",
-      "summary": "2 match centres checked; updates: fixtures 0, results 0, lineups 0, streams 0. Phase: phase-one. 0 pending; 0 errors.",
-      "links": [
-        {
-          "label": "Official ISL fixture discovery",
-          "url": "https://www.indiansuperleague.com/schedule-fixtures"
         },
         {
           "label": "Inter Kashi vs East Bengal FC",
