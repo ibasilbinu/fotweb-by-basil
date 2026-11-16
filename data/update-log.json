@@ -3,6 +3,18 @@
   "season": "2026-27",
   "checks": [
     {
+      "checkedAt": "2026-11-16T20:52:04.223231+00:00",
+      "kind": "lineup-early",
+      "outcome": "no-change",
+      "summary": "0 match centres checked; updates: fixtures 0, results 0, lineups 0, streams 0. Phase: phase-one. 0 pending; 0 errors.",
+      "links": [
+        {
+          "label": "Official ISL YouTube Live listing",
+          "url": "https://www.youtube.com/@IndianSuperLeague/streams"
+        }
+      ]
+    },
+    {
       "checkedAt": "2026-11-16T20:16:57.681292+00:00",
       "kind": "match-retry",
       "outcome": "no-change",
@@ -6841,18 +6853,6 @@
         {
           "label": "Official ISL YouTube Live listing",
           "url": "https://www.youtube.com/@IndianSuperLeague/streams"
-        }
-      ]
-    },
-    {
-      "checkedAt": "2026-10-25T16:20:56Z",
-      "kind": "post-match-late",
-      "outcome": "no-change",
-      "summary": "Official ISL match centre confirmed Kerala Blasters FC 0–0 Mumbai City FC, FT. The verified result, confirmed lineups, statistics, events and player data were already published by the hourly importer; no football-data changes.",
-      "links": [
-        {
-          "label": "Kerala Blasters FC vs Mumbai City FC",
-          "url": "https://www.indiansuperleague.com/matchcentre/194649"
         }
       ]
     }
