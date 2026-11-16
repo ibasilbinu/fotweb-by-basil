@@ -3,6 +3,30 @@
   "season": "2026-27",
   "checks": [
     {
+      "checkedAt": "2026-11-16T21:55:40+05:30",
+      "kind": "post-match-late",
+      "outcome": "partial",
+      "summary": "Official ISL schedule and AIFF listing confirm no 19:30 IST ISL fixture on 2026-11-16; next published 19:30 fixture is Bengaluru FC vs Mumbai City FC on 2026-11-20. 0 match centres due; 0 result changes; 28 verified results preserved. Partial: importer checkout failed (Could not resolve host: github.com); 21:45 IST Actions run absent at 21:55.",
+      "links": [
+        {
+          "label": "Official ISL 2026-27 fixture schedule",
+          "url": "https://www.indiansuperleague.com/schedule-fixtures"
+        },
+        {
+          "label": "AIFF ISL competition fixtures",
+          "url": "https://www.the-aiff.com/competitions/isl"
+        },
+        {
+          "label": "Next fixture official match centre",
+          "url": "https://www.indiansuperleague.com/matchcentre/194663"
+        },
+        {
+          "label": "FotWeb post-match GitHub Actions",
+          "url": "https://github.com/ibasilbinu/fotweb-by-basil/actions/workflows/post-match-check.yml"
+        }
+      ]
+    },
+    {
       "checkedAt": "2026-11-16T19:25:58+05:30",
       "kind": "post-match-early",
       "outcome": "no-change",
@@ -6835,34 +6859,6 @@
           "label": "Official ISL fixture discovery",
           "url": "https://www.indiansuperleague.com/schedule-fixtures"
         },
-        {
-          "label": "Churchill Brothers vs Punjab FC",
-          "url": "https://www.indiansuperleague.com/matchcentre/194648"
-        },
-        {
-          "label": "Kerala Blasters FC vs Mumbai City FC",
-          "url": "https://www.indiansuperleague.com/matchcentre/194649"
-        },
-        {
-          "label": "Inter Kashi vs East Bengal FC",
-          "url": "https://www.indiansuperleague.com/matchcentre/194646"
-        },
-        {
-          "label": "Odisha FC vs NorthEast United FC",
-          "url": "https://www.indiansuperleague.com/matchcentre/194647"
-        },
-        {
-          "label": "Official ISL YouTube Live listing",
-          "url": "https://www.youtube.com/@IndianSuperLeague/streams"
-        }
-      ]
-    },
-    {
-      "checkedAt": "2026-10-25T14:54:37.533345+00:00",
-      "kind": "lineup-early",
-      "outcome": "partial",
-      "summary": "4 match centres checked; updates: fixtures 0, results 0, lineups 0, streams 0. Phase: phase-one. 0 pending; 1 errors. YouTube FgVvdqYDmW4: Public metadata: Video identity unavailable or private; alternate metadata missing channel identity",
-      "links": [
         {
           "label": "Churchill Brothers vs Punjab FC",
           "url": "https://www.indiansuperleague.com/matchcentre/194648"
