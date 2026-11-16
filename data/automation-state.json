@@ -85,13 +85,12 @@
   "phaseOneLastKickoff": "2027-01-17T19:30+05:30",
   "sources": {
     "fixtures": {
-      "checkedAt": "2026-11-16T02:34:00.430456+00:00",
+      "checkedAt": "2026-11-16T02:43:34.635099+00:00",
       "outcome": "ok"
     },
     "streams": {
-      "checkedAt": "2026-11-16T02:34:00.430456+00:00",
-      "outcome": "error",
-      "error": "YouTube: official Live/Upcoming returned only the stale © 2024 Google LLC footer; channel-ID /streams and RSS returned DisabledError."
+      "checkedAt": "2026-11-16T02:43:34.635099+00:00",
+      "outcome": "ok"
     }
   },
   "pending": [],
@@ -126,11 +125,9 @@
     "194661": "2026-11-10T10:06:30.880805+00:00"
   },
   "lastCheck": {
-    "checkedAt": "2026-11-16T02:34:00.430456+00:00",
-    "kind": "morning",
-    "failures": [
-      "YouTube: official Live/Upcoming returned only the stale © 2024 Google LLC footer; channel-ID /streams and RSS returned DisabledError."
-    ],
+    "checkedAt": "2026-11-16T02:43:34.635099+00:00",
+    "kind": "hourly",
+    "failures": [],
     "changes": {
       "fixtures": 0,
       "results": 0,
