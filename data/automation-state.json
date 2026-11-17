@@ -85,8 +85,9 @@
   "phaseOneLastKickoff": "2027-01-17T19:30+05:30",
   "sources": {
     "fixtures": {
-      "checkedAt": "2026-11-17T14:23:46.014514+00:00",
-      "outcome": "partial"
+      "checkedAt": "2026-11-17T21:53:52+05:30",
+      "outcome": "partial",
+      "error": "Official schedule omits 17 Nov; legacy official match centre 194690 still lists 17 Nov but has no result data and is superseded by owner-confirmed 194691 on 17 Dec."
     },
     "streams": {
       "checkedAt": "2026-11-17T14:23:46.014514+00:00",
@@ -125,16 +126,16 @@
     "194661": "2026-11-10T10:06:30.880805+00:00"
   },
   "lastCheck": {
-    "checkedAt": "2026-11-17T14:23:46.014514+00:00",
-    "kind": "hourly",
+    "checkedAt": "2026-11-17T21:53:52+05:30",
+    "kind": "post-match-late",
     "failures": [
-      "Fixture 194671: Fixture clubs changed; retained verified identity"
+      "Legacy official match centre 194690 still displays Bengaluru FC vs East Bengal FC at 19:30 IST on 17 Nov, but it is superseded by owner-confirmed fixture 194691 on 17 Dec; the legacy page has no play-by-play or result data. No score published."
     ],
     "changes": {
       "fixtures": 0,
       "results": 0,
       "lineups": 0,
-      "streams": 6
+      "streams": 0
     }
   }
 }
