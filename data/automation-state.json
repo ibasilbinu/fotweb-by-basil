@@ -90,7 +90,7 @@
       "error": "Official schedule omits 17 Nov; legacy official match centre 194690 still lists 17 Nov but has no result data and is superseded by owner-confirmed 194691 on 17 Dec."
     },
     "streams": {
-      "checkedAt": "2026-11-17T19:40:58.192694+00:00",
+      "checkedAt": "2026-11-17T21:51:49.257949+00:00",
       "outcome": "ok"
     }
   },
@@ -126,8 +126,8 @@
     "194661": "2026-11-10T10:06:30.880805+00:00"
   },
   "lastCheck": {
-    "checkedAt": "2026-11-17T19:40:58.192694+00:00",
-    "kind": "lineup-early",
+    "checkedAt": "2026-11-17T21:51:49.257949+00:00",
+    "kind": "lineup-late",
     "failures": [],
     "changes": {
       "fixtures": 0,
