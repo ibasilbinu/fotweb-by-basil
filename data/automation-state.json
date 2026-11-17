@@ -85,12 +85,13 @@
   "phaseOneLastKickoff": "2027-01-17T19:30+05:30",
   "sources": {
     "fixtures": {
-      "checkedAt": "2026-11-17T11:13:48.340Z",
+      "checkedAt": "2026-11-17T13:37:48.600Z",
       "outcome": "ok"
     },
     "streams": {
-      "checkedAt": "2026-11-17T10:53:04.941680+00:00",
-      "outcome": "ok"
+      "checkedAt": "2026-11-17T13:37:48.600Z",
+      "outcome": "error",
+      "error": "YouTube: /streams returned only stale © 2024 Google LLC footer; channel-ID /streams and /live returned DisabledError; video metadata r7fCiGAMU3w was throttled."
     }
   },
   "pending": [],
@@ -125,9 +126,11 @@
     "194661": "2026-11-10T10:06:30.880805+00:00"
   },
   "lastCheck": {
-    "checkedAt": "2026-11-17T11:13:48.340Z",
-    "kind": "lineup-early",
-    "failures": [],
+    "checkedAt": "2026-11-17T13:37:48.600Z",
+    "kind": "lineup-late",
+    "failures": [
+      "YouTube: /streams returned only stale © 2024 Google LLC footer; channel-ID /streams and /live returned DisabledError; video metadata r7fCiGAMU3w was throttled."
+    ],
     "changes": {
       "fixtures": 0,
       "results": 0,
