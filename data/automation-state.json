@@ -125,11 +125,9 @@
     "194661": "2026-11-10T10:06:30.880805+00:00"
   },
   "lastCheck": {
-    "checkedAt": "2026-11-17T22:52:26.452589+00:00",
-    "kind": "hourly",
-    "failures": [
-      "Fixture 194671: Fixture clubs changed; retained verified identity"
-    ],
+    "checkedAt": "2026-11-17T23:28:58.594611+00:00",
+    "kind": "post-match-late",
+    "failures": [],
     "changes": {
       "fixtures": 0,
       "results": 0,
