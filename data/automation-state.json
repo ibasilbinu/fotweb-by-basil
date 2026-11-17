@@ -85,12 +85,11 @@
   "phaseOneLastKickoff": "2027-01-17T19:30+05:30",
   "sources": {
     "fixtures": {
-      "checkedAt": "2026-11-17T21:53:52+05:30",
-      "outcome": "partial",
-      "error": "Official schedule omits 17 Nov; legacy official match centre 194690 still lists 17 Nov but has no result data and is superseded by owner-confirmed 194691 on 17 Dec."
+      "checkedAt": "2026-11-17T22:52:26.452589+00:00",
+      "outcome": "partial"
     },
     "streams": {
-      "checkedAt": "2026-11-17T21:51:49.257949+00:00",
+      "checkedAt": "2026-11-17T22:52:26.452589+00:00",
       "outcome": "ok"
     }
   },
@@ -126,9 +125,11 @@
     "194661": "2026-11-10T10:06:30.880805+00:00"
   },
   "lastCheck": {
-    "checkedAt": "2026-11-17T21:54:13.114947+00:00",
-    "kind": "post-match-early",
-    "failures": [],
+    "checkedAt": "2026-11-17T22:52:26.452589+00:00",
+    "kind": "hourly",
+    "failures": [
+      "Fixture 194671: Fixture clubs changed; retained verified identity"
+    ],
     "changes": {
       "fixtures": 0,
       "results": 0,
