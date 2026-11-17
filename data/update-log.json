@@ -3,6 +3,13 @@
   "season": "2026-27",
   "checks": [
     {
+      "checkedAt": "2026-11-17T21:54:13.115202+00:00",
+      "kind": "post-match-early",
+      "outcome": "no-change",
+      "summary": "0 match centres checked; updates: fixtures 0, results 0, lineups 0, streams 0. Phase: phase-one. 0 pending; 0 errors.",
+      "links": []
+    },
+    {
       "checkedAt": "2026-11-17T21:51:53.506639+00:00",
       "kind": "lineup-late",
       "outcome": "no-change",
@@ -6626,18 +6633,6 @@
         {
           "label": "Official ISL YouTube Live listing",
           "url": "https://www.youtube.com/@IndianSuperLeague/streams"
-        }
-      ]
-    },
-    {
-      "checkedAt": "2026-10-26T16:19:53Z",
-      "kind": "post-match-late",
-      "outcome": "updated",
-      "summary": "Official ISL match centre confirmed Mohun Bagan Super Giant 1–0 Chennaiyin FC, FT. Published the final score immediately with the already confirmed lineups; statistics and events remain available for later enrichment.",
-      "links": [
-        {
-          "label": "Mohun Bagan Super Giant vs Chennaiyin FC",
-          "url": "https://www.indiansuperleague.com/matchcentre/194650"
         }
       ]
     }
