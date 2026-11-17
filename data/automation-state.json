@@ -126,11 +126,9 @@
     "194661": "2026-11-10T10:06:30.880805+00:00"
   },
   "lastCheck": {
-    "checkedAt": "2026-11-17T21:53:52+05:30",
-    "kind": "post-match-late",
-    "failures": [
-      "Legacy official match centre 194690 still displays Bengaluru FC vs East Bengal FC at 19:30 IST on 17 Nov, but it is superseded by owner-confirmed fixture 194691 on 17 Dec; the legacy page has no play-by-play or result data. No score published."
-    ],
+    "checkedAt": "2026-11-17T19:04:32.713212+00:00",
+    "kind": "match-retry",
+    "failures": [],
     "changes": {
       "fixtures": 0,
       "results": 0,

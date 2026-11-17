@@ -3,6 +3,13 @@
   "season": "2026-27",
   "checks": [
     {
+      "checkedAt": "2026-11-17T19:04:32.713527+00:00",
+      "kind": "match-retry",
+      "outcome": "no-change",
+      "summary": "0 match centres checked; updates: fixtures 0, results 0, lineups 0, streams 0. Phase: phase-one. 0 pending; 0 errors.",
+      "links": []
+    },
+    {
       "checkedAt": "2026-11-17T21:53:52+05:30",
       "kind": "post-match-late",
       "outcome": "partial",
@@ -6667,22 +6674,6 @@
         {
           "label": "Official ISL YouTube Live listing",
           "url": "https://www.youtube.com/@IndianSuperLeague/streams"
-        }
-      ]
-    },
-    {
-      "checkedAt": "2026-10-26T13:49:40Z",
-      "kind": "post-match-early",
-      "outcome": "partial",
-      "summary": "No 17:00 IST fixture is scheduled for 26 October in the current official FotWeb snapshot; the only published fixture is Mohun Bagan Super Giant vs Chennaiyin FC at 19:30 IST. No result update was due. Direct access to the official season fixture page failed in this backup check; verified data was preserved for retry.",
-      "links": [
-        {
-          "label": "Official ISL fixture schedule",
-          "url": "https://www.indiansuperleague.com/schedule-fixtures/2026"
-        },
-        {
-          "label": "Mohun Bagan Super Giant vs Chennaiyin FC",
-          "url": "https://www.indiansuperleague.com/matchcentre/194650"
         }
       ]
     }
