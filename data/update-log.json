@@ -3,6 +3,22 @@
   "season": "2026-27",
   "checks": [
     {
+      "checkedAt": "2026-11-17T21:53:52+05:30",
+      "kind": "post-match-late",
+      "outcome": "partial",
+      "summary": "Current official 2026-27 schedule lists no active 19:30 IST fixture for 17 Nov; next published 19:30 fixture is 20 Nov. Legacy official match centre 194690 still displays Bengaluru FC vs East Bengal FC on 17 Nov, but it is superseded by owner-confirmed fixture 194691 on 17 Dec and has no match data. 0 results changed; 0 pending.",
+      "links": [
+        {
+          "label": "Official ISL 2026-27 fixture schedule",
+          "url": "https://www.indiansuperleague.com/schedule-fixtures"
+        },
+        {
+          "label": "Legacy official match centre 194690",
+          "url": "https://www.indiansuperleague.com/matchcentre/194690"
+        }
+      ]
+    },
+    {
       "checkedAt": "2026-11-17T14:23:50.833432+00:00",
       "kind": "hourly",
       "outcome": "partial",
@@ -6667,34 +6683,6 @@
         {
           "label": "Mohun Bagan Super Giant vs Chennaiyin FC",
           "url": "https://www.indiansuperleague.com/matchcentre/194650"
-        }
-      ]
-    },
-    {
-      "checkedAt": "2026-10-26T11:07:33.585053+00:00",
-      "kind": "lineup-early",
-      "outcome": "no-change",
-      "summary": "4 match centres checked; updates: fixtures 0, results 0, lineups 0, streams 0. Phase: phase-one. 0 pending; 0 errors.",
-      "links": [
-        {
-          "label": "Inter Kashi vs East Bengal FC",
-          "url": "https://www.indiansuperleague.com/matchcentre/194646"
-        },
-        {
-          "label": "Odisha FC vs NorthEast United FC",
-          "url": "https://www.indiansuperleague.com/matchcentre/194647"
-        },
-        {
-          "label": "Churchill Brothers vs Punjab FC",
-          "url": "https://www.indiansuperleague.com/matchcentre/194648"
-        },
-        {
-          "label": "Kerala Blasters FC vs Mumbai City FC",
-          "url": "https://www.indiansuperleague.com/matchcentre/194649"
-        },
-        {
-          "label": "Official ISL YouTube Live listing",
-          "url": "https://www.youtube.com/@IndianSuperLeague/streams"
         }
       ]
     }
