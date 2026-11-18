@@ -126,13 +126,11 @@
     "194661": "2026-11-10T10:06:30.880805+00:00"
   },
   "lastCheck": {
-    "checkedAt": "2026-11-18T08:04:51+05:30",
-    "kind": "morning",
-    "failures": [
-      "YouTube: Official ISL YouTube /streams returned only the generic © 2024 Google LLC footer; channel RSS and direct watch metadata returned DisabledError."
-    ],
+    "checkedAt": "2026-11-18T02:36:16.097336+00:00",
+    "kind": "match-retry",
+    "failures": [],
     "changes": {
-      "fixtures": 1,
+      "fixtures": 0,
       "results": 0,
       "lineups": 0,
       "streams": 0
