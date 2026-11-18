@@ -3,6 +3,26 @@
   "season": "2026-27",
   "checks": [
     {
+      "checkedAt": "2026-11-18T16:22:29.786Z",
+      "kind": "post-match-late",
+      "outcome": "partial",
+      "summary": "Official ISL 2026-27 schedule verified: no 19:30 IST kickoff on 18 Nov; next 19:30 is Bengaluru FC vs Mumbai City FC on 20 Nov (194663). No match centre due. Local importer unavailable: git clone failed, Could not resolve host: github.com.",
+      "links": [
+        {
+          "label": "Official ISL 2026-27 fixtures",
+          "url": "https://www.indiansuperleague.com/schedule-fixtures"
+        },
+        {
+          "label": "Next 19:30 fixture 194663",
+          "url": "https://www.indiansuperleague.com/matchcentre/194663"
+        },
+        {
+          "label": "Latest hourly source-check run 221",
+          "url": "https://github.com/ibasilbinu/fotweb-by-basil/actions/runs/44319035450"
+        }
+      ]
+    },
+    {
       "checkedAt": "2026-11-18T13:57:56.445703+00:00",
       "kind": "hourly",
       "outcome": "partial",
@@ -6503,26 +6523,6 @@
         {
           "label": "Official ISL fixture schedule",
           "url": "https://www.indiansuperleague.com/schedule-fixtures/2026"
-        }
-      ]
-    },
-    {
-      "checkedAt": "2026-10-27T15:50:15.221146+00:00",
-      "kind": "match-retry",
-      "outcome": "no-change",
-      "summary": "3 match centres checked; updates: fixtures 0, results 0, lineups 0, streams 0. Phase: phase-one. 0 pending; 0 errors.",
-      "links": [
-        {
-          "label": "Churchill Brothers vs Punjab FC",
-          "url": "https://www.indiansuperleague.com/matchcentre/194648"
-        },
-        {
-          "label": "Kerala Blasters FC vs Mumbai City FC",
-          "url": "https://www.indiansuperleague.com/matchcentre/194649"
-        },
-        {
-          "label": "Mohun Bagan Super Giant vs Chennaiyin FC",
-          "url": "https://www.indiansuperleague.com/matchcentre/194650"
         }
       ]
     }
