@@ -140,6 +140,10 @@ class FixtureTests(unittest.TestCase):
     def setUp(self):
         self.season = sample_season(); self.f = self.season['fixtures'][0]
 
+    def test_saved_fixture_order_is_chronological(self):
+        keys = [(f['kickoff'], f['id']) for f in self.season['fixtures']]
+        self.assertEqual(keys, sorted(keys))
+
     def test_duplicate_widgets_and_season_filter(self):
         row = schedule_row(self.f)
         wrong = {**row, 'series_name':'Indian Super League, 2025-26'}
