@@ -173,7 +173,20 @@ class FixtureTests(unittest.TestCase):
 
     def test_verified_matchcentre_correction_survives_stale_schedule_then_clears(self):
         fixture = next(f for f in self.season['fixtures'] if f['id'] == '194671')
-        correction = fixture['identityCorrection']
+        # The published snapshot has caught up. Construct a test-only saved
+        # correction to exercise the stale-widget retention and clearing path.
+        current = {'homeId':fixture['homeId'], 'awayId':fixture['awayId'],
+                   'kickoff':fixture['kickoff'], 'venue':fixture['venue']}
+        correction = {
+            'sourceUrl':'https://www.indiansuperleague.com/matchcentre/194671',
+            'verifiedAt':STAMP,
+            'previous':{'homeId':current['awayId'], 'awayId':current['homeId'],
+                        'kickoff':'2026-11-30T19:30+05:30',
+                        'venue':'Mumbai Football Arena, Mumbai'},
+            'current':current,
+        }
+        fixture['identityCorrection'] = correction
+        validate_season(self.season)
         stale = schedule_row(fixture)
         stale['participants'] = [
             {'id':correction['previous']['homeId']},
