@@ -3,6 +3,22 @@
   "season": "2026-27",
   "checks": [
     {
+      "checkedAt": "2026-11-18T12:09:50.531554+00:00",
+      "kind": "hourly",
+      "outcome": "partial",
+      "summary": "0 match centres checked; updates: fixtures 55, results 0, lineups 0, streams 0. Phase: later-phases. 0 pending; 26 errors. YouTube TXFuTctMNss: Public metadata: Video identity unavailable or private; alternate metadata missing channel identity; YouTube Pk5JUphLm5o: Public metadata: Video identity unavailable or private; alternate metadata missing channel identity; YouTube tYRs4yoQGpo: Public metad",
+      "links": [
+        {
+          "label": "Official ISL fixture discovery",
+          "url": "https://www.indiansuperleague.com/schedule-fixtures"
+        },
+        {
+          "label": "Official ISL YouTube Live listing",
+          "url": "https://www.youtube.com/@IndianSuperLeague/streams"
+        }
+      ]
+    },
+    {
       "checkedAt": "2026-11-18T17:38:50+05:30",
       "kind": "lineup-early",
       "outcome": "partial",
@@ -6500,34 +6516,6 @@
           "label": "Official ISL fixture discovery",
           "url": "https://www.indiansuperleague.com/schedule-fixtures"
         },
-        {
-          "label": "Odisha FC vs NorthEast United FC",
-          "url": "https://www.indiansuperleague.com/matchcentre/194647"
-        },
-        {
-          "label": "Churchill Brothers vs Punjab FC",
-          "url": "https://www.indiansuperleague.com/matchcentre/194648"
-        },
-        {
-          "label": "Kerala Blasters FC vs Mumbai City FC",
-          "url": "https://www.indiansuperleague.com/matchcentre/194649"
-        },
-        {
-          "label": "Mohun Bagan Super Giant vs Chennaiyin FC",
-          "url": "https://www.indiansuperleague.com/matchcentre/194650"
-        },
-        {
-          "label": "Official ISL YouTube Live listing",
-          "url": "https://www.youtube.com/@IndianSuperLeague/streams"
-        }
-      ]
-    },
-    {
-      "checkedAt": "2026-10-27T11:03:28.307606+00:00",
-      "kind": "lineup-early",
-      "outcome": "no-change",
-      "summary": "4 match centres checked; updates: fixtures 0, results 0, lineups 0, streams 0. Phase: phase-one. 0 pending; 0 errors.",
-      "links": [
         {
           "label": "Odisha FC vs NorthEast United FC",
           "url": "https://www.indiansuperleague.com/matchcentre/194647"
