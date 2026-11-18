@@ -167,6 +167,35 @@ class FixtureTests(unittest.TestCase):
         self.assertEqual(self.season['fixtures'][0]['broadcast'], self.f['broadcast'])
         self.assertEqual(self.season['fixtures'][0]['venue'], self.f['venue'])
 
+    def test_verified_matchcentre_correction_survives_stale_schedule_then_clears(self):
+        fixture = next(f for f in self.season['fixtures'] if f['id'] == '194671')
+        correction = fixture['identityCorrection']
+        stale = schedule_row(fixture)
+        stale['participants'] = [
+            {'id':correction['previous']['homeId']},
+            {'id':correction['previous']['awayId']}
+        ]
+        stale['start_date'] = correction['previous']['kickoff']
+        stale['venue_name'] = correction['previous']['venue']
+        changed, errors = merge_fixtures(self.season, [stale], STAMP)
+        self.assertFalse(errors)
+        self.assertEqual(changed, 0)
+        retained = next(f for f in self.season['fixtures'] if f['id'] == '194671')
+        self.assertEqual((retained['homeId'], retained['awayId'], retained['kickoff']),
+                         (correction['current']['homeId'], correction['current']['awayId'],
+                          correction['current']['kickoff']))
+        self.assertIn('identityCorrection', retained)
+        validate_season(self.season)
+
+        current_row = schedule_row(retained)
+        current_row['venue_name'] = correction['current']['venue']
+        changed, errors = merge_fixtures(self.season, [current_row], STAMP)
+        self.assertFalse(errors)
+        self.assertEqual(changed, 1)
+        caught_up = next(f for f in self.season['fixtures'] if f['id'] == '194671')
+        self.assertNotIn('identityCorrection', caught_up)
+        validate_season(self.season)
+
     def test_phase_two_discovered_and_reschedule_invalidates_stale_links(self):
         row = schedule_row(self.f); row.update(game_id='999001', start_date='2027-02-01T17:00+05:30')
         _, errors = merge_fixtures(self.season, [row], STAMP)

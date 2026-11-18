@@ -45,6 +45,40 @@ def validate_season(data):
         require(f.get("phase") in ("league", "playoff", "unknown"), "Invalid stage")
         require(f.get("venue") is None or (isinstance(f["venue"], str) and len(f["venue"]) <= 300), "Invalid venue")
         https(f["sourceUrl"])
+        correction = f.get("identityCorrection")
+        if correction is not None:
+            require(isinstance(correction, dict) and set(correction) == {
+                "sourceUrl", "verifiedAt", "previous", "current"
+            }, "Invalid verified fixture correction")
+            https(correction["sourceUrl"])
+            correction_url = urlparse(correction["sourceUrl"])
+            require(correction_url.hostname in ("www.indiansuperleague.com", "indiansuperleague.com")
+                    and correction_url.path.rstrip("/") == f"/matchcentre/{f['id']}"
+                    and not correction_url.query and not correction_url.fragment,
+                    "Fixture correction must cite its official ISL match centre")
+            require(isinstance(correction["verifiedAt"], str)
+                    and datetime.fromisoformat(correction["verifiedAt"].replace("Z", "+00:00")).tzinfo is not None,
+                    "Fixture correction timestamp requires timezone")
+            for label in ("previous", "current"):
+                identity = correction[label]
+                require(isinstance(identity, dict) and set(identity) == {
+                    "homeId", "awayId", "kickoff", "venue"
+                }, "Invalid corrected fixture identity")
+                require(identity["homeId"] in ids and identity["awayId"] in ids
+                        and identity["homeId"] != identity["awayId"],
+                        "Invalid corrected fixture clubs")
+                corrected_kickoff = datetime.fromisoformat(identity["kickoff"])
+                require(corrected_kickoff.tzinfo is not None and corrected_kickoff.year in (2026, 2027),
+                        "Invalid corrected fixture kickoff")
+                require(isinstance(identity["venue"], str) and 0 < len(identity["venue"]) <= 300,
+                        "Invalid corrected fixture venue")
+            require(correction["previous"] != correction["current"],
+                    "Fixture correction must record a real change")
+            current_identity = correction["current"]
+            require((f["homeId"], f["awayId"], f["kickoff"], f.get("venue")) == (
+                current_identity["homeId"], current_identity["awayId"],
+                current_identity["kickoff"], current_identity["venue"]
+            ), "Saved fixture must match its verified correction")
         if "supersedesFixtureIds" in f:
             superseded = f["supersedesFixtureIds"]
             require(isinstance(superseded, list) and bool(superseded)

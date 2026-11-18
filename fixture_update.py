@@ -89,8 +89,8 @@ def merge_fixtures(season, records, stamp):
             teams = row['participants']
             if len(teams) != 2 or any(str(t['id']) not in team_ids for t in teams):
                 raise ValueError('Clubs not confirmed; will retry discovery')
-            kickoff = datetime.fromisoformat(row['start_date'])
-            if kickoff.tzinfo is None or kickoff.year not in (2026, 2027):
+            source_kickoff = datetime.fromisoformat(row['start_date'])
+            if source_kickoff.tzinfo is None or source_kickoff.year not in (2026, 2027):
                 raise ValueError('Invalid or unconfirmed kickoff')
             old = known.get(match_id, {})
             home, away = str(teams[0]['id']), str(teams[1]['id'])
@@ -99,26 +99,61 @@ def merge_fixtures(season, records, stamp):
                 if (replacement['homeId'], replacement['awayId']) != (home, away):
                     raise ValueError('Resolved duplicate clubs changed; needs review')
                 continue
-            if old and (old['homeId'], old['awayId']) != (home, away):
+            effective_kickoff = row['start_date']
+            use_saved_correction = False
+            clear_correction = False
+            correction = old.get('identityCorrection')
+            if correction:
+                previous = correction['previous']
+                current = correction['current']
+                source_identity = (home, away, source_kickoff)
+                previous_identity = (previous['homeId'], previous['awayId'],
+                                     datetime.fromisoformat(previous['kickoff']))
+                current_identity = (current['homeId'], current['awayId'],
+                                    datetime.fromisoformat(current['kickoff']))
+                if source_identity == previous_identity:
+                    # The public schedule widget is still serving the exact old
+                    # identity. Keep the match-centre-verified correction until
+                    # the schedule source catches up.
+                    home, away = current['homeId'], current['awayId']
+                    effective_kickoff = current['kickoff']
+                    use_saved_correction = True
+                elif source_identity == current_identity:
+                    clear_correction = True
+                elif (home, away) == (old['homeId'], old['awayId']):
+                    # Same corrected clubs with a newer official kickoff: treat
+                    # it as a new schedule change and reverify pre-match links.
+                    clear_correction = True
+                else:
+                    raise ValueError('Fixture identity differs from both the saved schedule and its verified match-centre correction')
+            elif old and (old['homeId'], old['awayId']) != (home, away):
                 raise ValueError('Fixture clubs changed; retained verified identity')
+            kickoff = datetime.fromisoformat(effective_kickoff)
+            if kickoff.tzinfo is None or kickoff.year not in (2026, 2027):
+                raise ValueError('Invalid or unconfirmed corrected kickoff')
             status_text = str(row.get('event_status', '')).lower()
             status = ('CANC' if 'cancel' in status_text else 'PST'
                       if any(w in status_text for w in ('postpon', 'suspend', 'abandon')) else 'NS')
             updated = {**old, 'id': match_id, 'homeId': home, 'awayId': away,
-                       'kickoff': row['start_date'], 'status': status,
+                       'kickoff': effective_kickoff, 'status': status,
                        'phase': competition_phase(row.get('event_stage')),
                        'officialStage': row.get('event_stage', ''),
                        'label': row.get('event_name') or old.get('label', 'ISL match'),
                        'sourceUrl': SCHEDULE_URL}
-            # Missing venue fields in this listing must not undo the sourced
-            # Inter Kashi season venue or any other confirmed venue.
-            venue = row.get('venue_name')
-            if venue and venue.strip().lower() not in ('tbc', 'tbd', 'venue tbc'):
-                updated['venue'] = venue
+            if use_saved_correction:
+                updated['identityCorrection'] = correction
+                updated['venue'] = correction['current']['venue']
             else:
-                updated['venue'] = old.get('venue')
-                if old.get('sourceUrl'):
-                    updated['sourceUrl'] = old['sourceUrl']
+                if clear_correction:
+                    updated.pop('identityCorrection', None)
+                # Missing venue fields in this listing must not undo a sourced venue.
+                venue = row.get('venue_name')
+                if venue and venue.strip().lower() not in ('tbc', 'tbd', 'venue tbc'):
+                    updated['venue'] = venue
+                else:
+                    updated['venue'] = old.get('venue')
+                    if old.get('sourceUrl'):
+                        updated['sourceUrl'] = old['sourceUrl']
             if old.get('kickoff') and datetime.fromisoformat(old['kickoff']) != kickoff:
                 # A rescheduled game needs a fresh XI and a freshly verified broadcast.
                 updated.pop('lineups', None)
