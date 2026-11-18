@@ -3,6 +3,18 @@
   "season": "2026-27",
   "checks": [
     {
+      "checkedAt": "2026-11-18T19:18:16+05:30",
+      "kind": "post-match-early",
+      "outcome": "partial",
+      "summary": "0 match centres checked; updates: fixtures 0, results 0, lineups 0, streams 0. Phase: later-phases. No 17:00 IST fixture appears in the saved schedule; the official 2026-27 page search shows the next matchday on 20 November, but its full-page fetch timed out (HTTP 400). 0 pending; 1 error.",
+      "links": [
+        {
+          "label": "Official ISL 2026-27 fixture schedule",
+          "url": "https://www.indiansuperleague.com/schedule-fixtures"
+        }
+      ]
+    },
+    {
       "checkedAt": "2026-11-18T19:10:39.027+05:30",
       "kind": "lineup-late",
       "outcome": "partial",
@@ -6507,34 +6519,6 @@
         {
           "label": "Official ISL fixture schedule",
           "url": "https://www.indiansuperleague.com/schedule-fixtures/2026"
-        }
-      ]
-    },
-    {
-      "checkedAt": "2026-10-27T13:30:12.165527+00:00",
-      "kind": "lineup-late",
-      "outcome": "no-change",
-      "summary": "4 match centres checked; updates: fixtures 0, results 0, lineups 0, streams 0. Phase: phase-one. 0 pending; 0 errors.",
-      "links": [
-        {
-          "label": "Odisha FC vs NorthEast United FC",
-          "url": "https://www.indiansuperleague.com/matchcentre/194647"
-        },
-        {
-          "label": "Churchill Brothers vs Punjab FC",
-          "url": "https://www.indiansuperleague.com/matchcentre/194648"
-        },
-        {
-          "label": "Kerala Blasters FC vs Mumbai City FC",
-          "url": "https://www.indiansuperleague.com/matchcentre/194649"
-        },
-        {
-          "label": "Mohun Bagan Super Giant vs Chennaiyin FC",
-          "url": "https://www.indiansuperleague.com/matchcentre/194650"
-        },
-        {
-          "label": "Official ISL YouTube Live listing",
-          "url": "https://www.youtube.com/@IndianSuperLeague/streams"
         }
       ]
     }

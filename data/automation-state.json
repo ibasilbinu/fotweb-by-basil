@@ -85,8 +85,9 @@
   "phaseOneLastKickoff": "2027-01-17T19:30+05:30",
   "sources": {
     "fixtures": {
-      "checkedAt": "2026-11-18T19:10:39.027+05:30",
-      "outcome": "partial"
+      "checkedAt": "2026-11-18T19:18:16+05:30",
+      "outcome": "partial",
+      "error": "Official ISL schedule full-page fetch timed out (HTTP 400); the current official 2026-27 search snapshot shows the next matchday on 20 November, but direct page verification remains unavailable."
     },
     "streams": {
       "checkedAt": "2026-11-18T19:10:39.027+05:30",
@@ -126,11 +127,10 @@
     "194661": "2026-11-10T10:06:30.880805+00:00"
   },
   "lastCheck": {
-    "checkedAt": "2026-11-18T19:10:39.027+05:30",
-    "kind": "lineup-late",
+    "checkedAt": "2026-11-18T19:18:16+05:30",
+    "kind": "post-match-early",
     "failures": [
-      "Official fixture schedule full-page fetch timed out with HTTP 400; the current official 2026-27 search snapshot confirms the next matchday but did not expose the complete listing.",
-      "YouTube: official /streams returned only the stale © 2024 Google LLC footer; direct metadata for all six saved upcoming video IDs returned DisabledError."
+      "Official ISL schedule full-page fetch timed out (HTTP 400); the current official 2026-27 search snapshot shows the next matchday on 20 November, but direct page verification remains unavailable."
     ],
     "changes": {
       "fixtures": 0,
