@@ -126,11 +126,9 @@
     "194661": "2026-11-10T10:06:30.880805+00:00"
   },
   "lastCheck": {
-    "checkedAt": "2026-11-19T19:14:35+05:30",
-    "kind": "post-match-early",
-    "failures": [
-      "Local importer not executed: git clone https://github.com/ibasilbinu/fotweb-by-basil.git failed: Could not resolve host: github.com."
-    ],
+    "checkedAt": "2026-11-19T21:51:58.818+05:30",
+    "kind": "post-match-late",
+    "failures": [],
     "changes": {
       "fixtures": 0,
       "results": 0,

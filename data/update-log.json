@@ -3,6 +3,22 @@
   "season": "2026-27",
   "checks": [
     {
+      "checkedAt": "2026-11-19T21:51:58.818+05:30",
+      "kind": "post-match-late",
+      "outcome": "no-change",
+      "summary": "No 19:30 IST ISL kickoff was scheduled for 19 Nov 2026. The latest official ISL schedule check and current AIFF fixture listing agree that the next matchday is 20 Nov. 0 match centres due; 0 results due; 0 pending; 0 errors.",
+      "links": [
+        {
+          "label": "Official AIFF ISL fixtures and results",
+          "url": "https://www.the-aiff.com/competitions/isl"
+        },
+        {
+          "label": "Official ISL 2026-27 fixture schedule",
+          "url": "https://www.indiansuperleague.com/schedule-fixtures"
+        }
+      ]
+    },
+    {
       "checkedAt": "2026-11-19T19:14:35+05:30",
       "kind": "post-match-early",
       "outcome": "partial",
@@ -6378,22 +6394,6 @@
         {
           "label": "Official ISL YouTube Live listing",
           "url": "https://www.youtube.com/@IndianSuperLeague/streams"
-        }
-      ]
-    },
-    {
-      "checkedAt": "2026-10-28T16:33:57.846484+00:00",
-      "kind": "match-retry",
-      "outcome": "updated",
-      "summary": "2 match centres checked; updates: fixtures 0, results 1, lineups 0, streams 0. Phase: phase-one. 0 pending; 0 errors.",
-      "links": [
-        {
-          "label": "FC Goa vs Sporting Club Delhi",
-          "url": "https://www.indiansuperleague.com/matchcentre/194651"
-        },
-        {
-          "label": "Mohun Bagan Super Giant vs Chennaiyin FC",
-          "url": "https://www.indiansuperleague.com/matchcentre/194650"
         }
       ]
     }
