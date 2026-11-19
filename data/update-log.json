@@ -3,6 +3,22 @@
   "season": "2026-27",
   "checks": [
     {
+      "checkedAt": "2026-11-19T16:31:32+05:30",
+      "kind": "lineup-early",
+      "outcome": "partial",
+      "summary": "No 17:00 IST fixture is listed for 19 Nov 2026; 0 match centres or starting XIs due. Phase remains later-phases; 0 pending. YouTube Live/Upcoming verification incomplete: stale 2024 footer and DisabledError on channel-ID endpoints. Local importer checkout failed DNS; manual source checks used.",
+      "links": [
+        {
+          "label": "Official ISL 2026-27 fixture schedule",
+          "url": "https://www.indiansuperleague.com/schedule-fixtures"
+        },
+        {
+          "label": "Official ISL YouTube Live listing",
+          "url": "https://www.youtube.com/@IndianSuperLeague/streams"
+        }
+      ]
+    },
+    {
       "checkedAt": "2026-11-19T10:31:21.002002+00:00",
       "kind": "morning",
       "outcome": "partial",
@@ -6362,30 +6378,6 @@
         {
           "label": "FC Goa vs Sporting Club Delhi",
           "url": "https://www.indiansuperleague.com/matchcentre/194651"
-        },
-        {
-          "label": "Kerala Blasters FC vs Mumbai City FC",
-          "url": "https://www.indiansuperleague.com/matchcentre/194649"
-        },
-        {
-          "label": "Mohun Bagan Super Giant vs Chennaiyin FC",
-          "url": "https://www.indiansuperleague.com/matchcentre/194650"
-        },
-        {
-          "label": "Official ISL YouTube Live listing",
-          "url": "https://www.youtube.com/@IndianSuperLeague/streams"
-        }
-      ]
-    },
-    {
-      "checkedAt": "2026-10-28T10:59:11.446913+00:00",
-      "kind": "lineup-early",
-      "outcome": "partial",
-      "summary": "3 match centres checked; updates: fixtures 0, results 0, lineups 0, streams 0. Phase: phase-one. 0 pending; 6 errors. YouTube k178PJ6DfII: Scheduled stream start is not available yet; YouTube gWexbVfNmFo: Scheduled stream start is not available yet; YouTube nZ8rESpcRTU: Scheduled stream start is not available yet; YouTube raS61rqsQQI: Scheduled stream start is not available yet; YouTube dNbGWuWcG5",
-      "links": [
-        {
-          "label": "Churchill Brothers vs Punjab FC",
-          "url": "https://www.indiansuperleague.com/matchcentre/194648"
         },
         {
           "label": "Kerala Blasters FC vs Mumbai City FC",
