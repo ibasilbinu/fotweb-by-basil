@@ -126,13 +126,9 @@
     "194661": "2026-11-10T10:06:30.880805+00:00"
   },
   "lastCheck": {
-    "checkedAt": "2026-11-19T08:16:39+05:30",
-    "kind": "morning",
-    "failures": [
-      "Fixtures: seven unassigned playoff placeholders (IDs 194866–194872) remain TBC and are excluded until both clubs are assigned.",
-      "YouTube: official /streams returned only the stale footer; channel RSS returned DisabledError.",
-      "Local importer: git clone failed: Could not resolve host: github.com."
-    ],
+    "checkedAt": "2026-11-19T02:50:00.542589+00:00",
+    "kind": "match-retry",
+    "failures": [],
     "changes": {
       "fixtures": 0,
       "results": 0,
