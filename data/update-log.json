@@ -3,6 +3,18 @@
   "season": "2026-27",
   "checks": [
     {
+      "checkedAt": "2026-11-19T19:14:35+05:30",
+      "kind": "post-match-early",
+      "outcome": "partial",
+      "summary": "No 17:00 IST fixture is scheduled for 19 Nov 2026, so no final result or match-centre check was due. Official 2026-27 schedule was accessible. Local importer checkout failed: Could not resolve host: github.com; no football data changed.",
+      "links": [
+        {
+          "label": "Official ISL 2026-27 fixture schedule",
+          "url": "https://www.indiansuperleague.com/schedule-fixtures"
+        }
+      ]
+    },
+    {
       "checkedAt": "2026-11-19T19:11:46.751+05:30",
       "kind": "lineup-late",
       "outcome": "partial",
@@ -6382,18 +6394,6 @@
         {
           "label": "Mohun Bagan Super Giant vs Chennaiyin FC",
           "url": "https://www.indiansuperleague.com/matchcentre/194650"
-        }
-      ]
-    },
-    {
-      "checkedAt": "2026-10-28T16:12:05+00:00",
-      "kind": "post-match-late",
-      "outcome": "updated",
-      "summary": "1 match centre checked; updates: fixtures 0, results 1, lineups 0, streams 0. Phase: phase-one. 0 pending; 0 errors.",
-      "links": [
-        {
-          "label": "FC Goa vs Sporting Club Delhi",
-          "url": "https://www.indiansuperleague.com/matchcentre/194651"
         }
       ]
     }

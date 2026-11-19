@@ -85,7 +85,7 @@
   "phaseOneLastKickoff": "2027-01-17T19:30+05:30",
   "sources": {
     "fixtures": {
-      "checkedAt": "2026-11-19T19:11:46.751+05:30",
+      "checkedAt": "2026-11-19T19:14:35+05:30",
       "outcome": "ok"
     },
     "streams": {
@@ -126,10 +126,9 @@
     "194661": "2026-11-10T10:06:30.880805+00:00"
   },
   "lastCheck": {
-    "checkedAt": "2026-11-19T19:11:46.751+05:30",
-    "kind": "lineup-late",
+    "checkedAt": "2026-11-19T19:14:35+05:30",
+    "kind": "post-match-early",
     "failures": [
-      "Official YouTube Live/Upcoming unavailable: /@IndianSuperLeague/streams returned only the stale © 2024 Google LLC footer; channel-ID /streams, channel-ID /live, @IndianSuperLeague/live and channel RSS returned DisabledError.",
       "Local importer not executed: git clone https://github.com/ibasilbinu/fotweb-by-basil.git failed: Could not resolve host: github.com."
     ],
     "changes": {
