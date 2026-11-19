@@ -3,6 +3,18 @@
   "season": "2026-27",
   "checks": [
     {
+      "checkedAt": "2026-11-19T21:43:53.547541+00:00",
+      "kind": "lineup-late",
+      "outcome": "partial",
+      "summary": "0 match centres checked; updates: fixtures 0, results 0, lineups 0, streams 0. Phase: later-phases. 0 pending; 33 errors. YouTube TXFuTctMNss: Public metadata: Video identity unavailable or private; alternate metadata missing channel identity; YouTube iQEyDUAbJUA: Public metadata: Video identity unavailable or private; alternate metadata missing channel identity; YouTube Pk5JUphLm5o: Public metada",
+      "links": [
+        {
+          "label": "Official ISL YouTube Live listing",
+          "url": "https://www.youtube.com/@IndianSuperLeague/streams"
+        }
+      ]
+    },
+    {
       "checkedAt": "2026-11-19T21:36:30.232014+00:00",
       "kind": "hourly",
       "outcome": "partial",
@@ -6349,22 +6361,6 @@
         {
           "label": "FC Goa vs Sporting Club Delhi",
           "url": "https://www.indiansuperleague.com/matchcentre/194651"
-        }
-      ]
-    },
-    {
-      "checkedAt": "2026-10-28T19:06:43.510871+00:00",
-      "kind": "post-match-early",
-      "outcome": "no-change",
-      "summary": "2 match centres checked; updates: fixtures 0, results 0, lineups 0, streams 0. Phase: phase-one. 0 pending; 0 errors.",
-      "links": [
-        {
-          "label": "FC Goa vs Sporting Club Delhi",
-          "url": "https://www.indiansuperleague.com/matchcentre/194651"
-        },
-        {
-          "label": "Mohun Bagan Super Giant vs Chennaiyin FC",
-          "url": "https://www.indiansuperleague.com/matchcentre/194650"
         }
       ]
     }
