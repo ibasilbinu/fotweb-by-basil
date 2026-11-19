@@ -44,6 +44,9 @@ YouTube is polled; no YouTube webhook subscription is connected.
   https://www.indiansuperleague.com/schedule-fixtures and its season-pinned
   https://www.indiansuperleague.com/schedule-fixtures/2026 page. Do not overwrite
   a saved full schedule with a partial/empty response. Never invent phase two.
+  The public schedule may reserve playoff slots with both participants linked to
+  the official TBC club profile (club ID `0`). Exclude these placeholders until
+  both clubs are assigned, and retry them on subsequent fixture checks.
 - If the direct importer fails, the ChatGPT backup checks official ISL reports,
   AIFF and official clubs, then reputable independent reporting. Publish FT only
   on official confirmation or agreement between two independent credible

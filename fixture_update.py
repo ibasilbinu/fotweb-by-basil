@@ -87,6 +87,12 @@ def merge_fixtures(season, records, stamp):
         match_id = str(row['game_id'])
         try:
             teams = row['participants']
+            # The official schedule reserves some playoff slots with both clubs
+            # linked to its TBC profile (club ID 0). They are not fixtures yet.
+            if (isinstance(teams, list) and len(teams) == 2
+                    and all(isinstance(team, dict) and str(team.get('id')) == '0'
+                            for team in teams)):
+                continue
             if len(teams) != 2 or any(str(t['id']) not in team_ids for t in teams):
                 raise ValueError('Clubs not confirmed; will retry discovery')
             source_kickoff = datetime.fromisoformat(row['start_date'])

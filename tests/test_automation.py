@@ -247,6 +247,24 @@ class FixtureTests(unittest.TestCase):
         self.assertTrue(errors)
         self.assertNotIn('194690', [f['id'] for f in self.season['fixtures']])
 
+    def test_tbc_playoff_placeholders_are_ignored_until_clubs_are_assigned(self):
+        row = schedule_row(self.f)
+        row.update(game_id='194866', start_date='2027-04-24T17:00+05:30',
+                   event_stage='Playoff', event_name='Match 157')
+        row['participants'] = [{'id':'0'}, {'id':'0'}]
+        changed, errors = merge_fixtures(self.season, [row], STAMP)
+        self.assertEqual(changed, 0)
+        self.assertFalse(errors)
+        self.assertNotIn('194866', {f['id'] for f in self.season['fixtures']})
+        row['participants'] = [{'id':'0'}, {'id':self.f['awayId']}]
+        _, errors = merge_fixtures(self.season, [row], STAMP)
+        self.assertTrue(errors)
+        row['participants'] = [{'id':self.f['homeId']}, {'id':self.f['awayId']}]
+        changed, errors = merge_fixtures(self.season, [row], STAMP)
+        self.assertEqual(changed, 1)
+        self.assertFalse(errors)
+        self.assertIn('194866', {f['id'] for f in self.season['fixtures']})
+
     def test_unknown_clubs_do_not_delete_valid_schedule(self):
         row = schedule_row(self.f); row['participants'][0]['id'] = '9999'
         before = deepcopy(self.season)
