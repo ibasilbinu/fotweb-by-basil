@@ -3,6 +3,30 @@
   "season": "2026-27",
   "checks": [
     {
+      "checkedAt": "2026-11-19T19:11:46.751+05:30",
+      "kind": "lineup-late",
+      "outcome": "partial",
+      "summary": "No 19:30 IST fixture is listed for 19 Nov 2026; no XI was due. Tomorrow's official match centre 194663 lists Bengaluru FC vs Mumbai City FC at 19:30 but no full XI. Official schedule remains 155 named fixtures through 18 Apr 2027, with seven TBC playoff slots. YouTube /streams returned only the stale 2024 footer; channel-ID endpoints/RSS returned DisabledError. Local git clone failed DNS.",
+      "links": [
+        {
+          "label": "Official ISL 2026-27 fixture schedule",
+          "url": "https://www.indiansuperleague.com/schedule-fixtures"
+        },
+        {
+          "label": "Official match centre 194663",
+          "url": "https://www.indiansuperleague.com/matchcentre/194663"
+        },
+        {
+          "label": "Official match centre 194662",
+          "url": "https://www.indiansuperleague.com/matchcentre/194662"
+        },
+        {
+          "label": "Official ISL YouTube Live listing",
+          "url": "https://www.youtube.com/@IndianSuperLeague/streams"
+        }
+      ]
+    },
+    {
       "checkedAt": "2026-11-19T13:05:52.624491+00:00",
       "kind": "hourly",
       "outcome": "partial",
@@ -6370,18 +6394,6 @@
         {
           "label": "FC Goa vs Sporting Club Delhi",
           "url": "https://www.indiansuperleague.com/matchcentre/194651"
-        }
-      ]
-    },
-    {
-      "checkedAt": "2026-10-28T13:46:06+00:00",
-      "kind": "post-match-early",
-      "outcome": "no-change",
-      "summary": "No 17:00 IST fixture was scheduled for 28 October 2026; no final result was due. The published 19:30 IST FC Goa vs Sporting Club Delhi fixture remains outside this check.",
-      "links": [
-        {
-          "label": "Official ISL fixture schedule",
-          "url": "https://www.indiansuperleague.com/schedule-fixtures"
         }
       ]
     }
