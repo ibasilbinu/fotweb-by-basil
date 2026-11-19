@@ -85,11 +85,11 @@
   "phaseOneLastKickoff": "2027-01-17T19:30+05:30",
   "sources": {
     "fixtures": {
-      "checkedAt": "2026-11-19T03:27:13.511902+00:00",
+      "checkedAt": "2026-11-19T10:31:00.511617+00:00",
       "outcome": "ok"
     },
     "streams": {
-      "checkedAt": "2026-11-19T03:27:13.511902+00:00",
+      "checkedAt": "2026-11-19T10:31:00.511617+00:00",
       "outcome": "partial"
     }
   },
@@ -125,8 +125,8 @@
     "194661": "2026-11-10T10:06:30.880805+00:00"
   },
   "lastCheck": {
-    "checkedAt": "2026-11-19T03:27:13.511902+00:00",
-    "kind": "hourly",
+    "checkedAt": "2026-11-19T10:31:00.511617+00:00",
+    "kind": "morning",
     "failures": [
       "YouTube TXFuTctMNss: Public metadata: Video identity unavailable or private; alternate metadata missing channel identity",
       "YouTube iQEyDUAbJUA: Public metadata: Video identity unavailable or private; alternate metadata missing channel identity",
