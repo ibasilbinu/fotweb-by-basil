@@ -5185,6 +5185,202 @@
         "status": "scheduled",
         "verifiedAt": "2026-11-17T14:23:46.014514+00:00",
         "languageEvidence": "official-default-unlabelled"
+      },
+      "lineups": {
+        "home": {
+          "starters": [
+            {
+              "name": "Hardik Bhatt",
+              "number": 3
+            },
+            {
+              "name": "Lalchungnunga",
+              "number": 5
+            },
+            {
+              "name": "Edmund Lalrindika",
+              "number": 10
+            },
+            {
+              "name": "Daniel Ramirez Fernandez",
+              "number": 11
+            },
+            {
+              "name": "Prabhsukhan Singh Gill",
+              "number": 13
+            },
+            {
+              "name": "Diego Zivulic",
+              "number": 21
+            },
+            {
+              "name": "Thounaojam Jeakson Singh",
+              "number": 25
+            },
+            {
+              "name": "Jay Gupta",
+              "number": 27
+            },
+            {
+              "name": "Bipin Singh Thounaojam",
+              "number": 29
+            },
+            {
+              "name": "Mohammed Bassim Ahmed Rashid",
+              "number": 74
+            },
+            {
+              "name": "Lukasz Zwolinski",
+              "number": 99
+            }
+          ],
+          "formation": "4-4-1-1",
+          "substitutes": [
+            {
+              "name": "Rohit Kumar",
+              "number": 6,
+              "position": "Midfielder"
+            },
+            {
+              "name": "Vishnu Puthiya Valappill",
+              "number": 7,
+              "position": "Midfielder"
+            },
+            {
+              "name": "Christopher James Ikonomidis",
+              "number": 8,
+              "position": "Midfielder"
+            },
+            {
+              "name": "David Lalhlansanga",
+              "number": 14,
+              "position": "Forward"
+            },
+            {
+              "name": "Sandip Mandi",
+              "number": 34,
+              "position": "Defender"
+            },
+            {
+              "name": "Mohammed Asif Khan",
+              "number": 36,
+              "position": "Midfielder"
+            },
+            {
+              "name": "Sonam Tsewang Lhokham",
+              "number": 69,
+              "position": "Defender"
+            },
+            {
+              "name": "Ake Arnaud Loba",
+              "number": 90,
+              "position": "Forward"
+            },
+            {
+              "name": "Gourab Shaw",
+              "number": 95,
+              "position": "Goalkeeper"
+            }
+          ]
+        },
+        "away": {
+          "starters": [
+            {
+              "name": "Lalrinliana Hnamte",
+              "number": 4
+            },
+            {
+              "name": "Ashutosh Mehta",
+              "number": 6
+            },
+            {
+              "name": "Rodrigo Araujo da Silva Filho",
+              "number": 7
+            },
+            {
+              "name": "Juan Sebastian Pena Bermudez",
+              "number": 10
+            },
+            {
+              "name": "Clarence Savio Fernandes",
+              "number": 15
+            },
+            {
+              "name": "Nora Fernandes",
+              "number": 20
+            },
+            {
+              "name": "Mohammed Aimen",
+              "number": 23
+            },
+            {
+              "name": "Mohammed Azhar",
+              "number": 24
+            },
+            {
+              "name": "Duvan Felipe Viafara Mina",
+              "number": 28
+            },
+            {
+              "name": "Manoj Mohammad",
+              "number": 41
+            },
+            {
+              "name": "Carlos Manuel dos Santos Fortes",
+              "number": 99
+            }
+          ],
+          "formation": "4-2-3-1",
+          "substitutes": [
+            {
+              "name": "David Richard Ndayishimiye",
+              "number": 8,
+              "position": "Midfielder"
+            },
+            {
+              "name": "Kharon Subba",
+              "number": 16,
+              "position": "Midfielder"
+            },
+            {
+              "name": "Augustine Lalrochana",
+              "number": 18,
+              "position": "Forward"
+            },
+            {
+              "name": "Lamgoulen SemkholunS",
+              "number": 19,
+              "position": "Defender"
+            },
+            {
+              "name": "Yanglem Sanatomba Singh",
+              "number": 25,
+              "position": "Defender"
+            },
+            {
+              "name": "Thokchom Diamond Singh",
+              "number": 30,
+              "position": "Midfielder"
+            },
+            {
+              "name": "Vishal Yadav",
+              "number": 31,
+              "position": "Goalkeeper"
+            },
+            {
+              "name": "Junior Harrison Nduka",
+              "number": 45,
+              "position": "Defender"
+            },
+            {
+              "name": "Akshat Mehra",
+              "number": 66,
+              "position": "Midfielder"
+            }
+          ]
+        },
+        "sourceUrl": "https://www.indiansuperleague.com/matchcentre/194662",
+        "verifiedAt": "2026-11-20T12:53:38.061238+00:00"
       }
     },
     {
