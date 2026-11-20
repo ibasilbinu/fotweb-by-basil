@@ -3,6 +3,26 @@
   "season": "2026-27",
   "checks": [
     {
+      "checkedAt": "2026-11-20T19:00:28.283873+00:00",
+      "kind": "lineup-early",
+      "outcome": "partial",
+      "summary": "2 match centres checked; updates: fixtures 0, results 0, lineups 0, streams 2. Phase: later-phases. 0 pending; 35 errors. YouTube QT3j7GEOoFk: Public metadata: Video identity unavailable or private; alternate metadata missing channel identity; YouTube xVLnRfZ2Mh0: Public metadata: Video identity unavailable or private; alternate metadata missing channel identity; YouTube TXFuTctMNss: Public metada",
+      "links": [
+        {
+          "label": "Bengaluru FC vs Mumbai City FC",
+          "url": "https://www.indiansuperleague.com/matchcentre/194663"
+        },
+        {
+          "label": "East Bengal FC vs Sporting Club Delhi",
+          "url": "https://www.indiansuperleague.com/matchcentre/194662"
+        },
+        {
+          "label": "Official ISL YouTube Live listing",
+          "url": "https://www.youtube.com/@IndianSuperLeague/streams"
+        }
+      ]
+    },
+    {
       "checkedAt": "2026-11-20T18:30:31.956995+00:00",
       "kind": "match-retry",
       "outcome": "updated",
@@ -6302,18 +6322,6 @@
         {
           "label": "Official ISL YouTube Live listing",
           "url": "https://www.youtube.com/@IndianSuperLeague/streams"
-        }
-      ]
-    },
-    {
-      "checkedAt": "2026-10-29T16:51:53.341412+00:00",
-      "kind": "match-retry",
-      "outcome": "no-change",
-      "summary": "1 match centres checked; updates: fixtures 0, results 0, lineups 0, streams 0. Phase: phase-one. 0 pending; 0 errors.",
-      "links": [
-        {
-          "label": "FC Goa vs Sporting Club Delhi",
-          "url": "https://www.indiansuperleague.com/matchcentre/194651"
         }
       ]
     }
