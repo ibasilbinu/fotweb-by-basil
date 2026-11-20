@@ -3,6 +3,22 @@
   "season": "2026-27",
   "checks": [
     {
+      "checkedAt": "2026-11-20T21:31:25.458297+00:00",
+      "kind": "post-match-early",
+      "outcome": "no-change",
+      "summary": "2 match centres checked; updates: fixtures 0, results 0, lineups 0, streams 0. Phase: later-phases. 0 pending; 0 errors.",
+      "links": [
+        {
+          "label": "East Bengal FC vs Sporting Club Delhi",
+          "url": "https://www.indiansuperleague.com/matchcentre/194662"
+        },
+        {
+          "label": "Bengaluru FC vs Mumbai City FC",
+          "url": "https://www.indiansuperleague.com/matchcentre/194663"
+        }
+      ]
+    },
+    {
       "checkedAt": "2026-11-20T21:27:00.634647+00:00",
       "kind": "lineup-late",
       "outcome": "partial",
@@ -6316,18 +6332,6 @@
     {
       "checkedAt": "2026-10-29T21:05:06.577846+00:00",
       "kind": "post-match-late",
-      "outcome": "no-change",
-      "summary": "1 match centres checked; updates: fixtures 0, results 0, lineups 0, streams 0. Phase: phase-one. 0 pending; 0 errors.",
-      "links": [
-        {
-          "label": "FC Goa vs Sporting Club Delhi",
-          "url": "https://www.indiansuperleague.com/matchcentre/194651"
-        }
-      ]
-    },
-    {
-      "checkedAt": "2026-10-29T19:12:18.842342+00:00",
-      "kind": "post-match-early",
       "outcome": "no-change",
       "summary": "1 match centres checked; updates: fixtures 0, results 0, lineups 0, streams 0. Phase: phase-one. 0 pending; 0 errors.",
       "links": [
