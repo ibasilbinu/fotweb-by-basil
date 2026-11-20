@@ -85,12 +85,13 @@
   "phaseOneLastKickoff": "2027-01-17T19:30+05:30",
   "sources": {
     "fixtures": {
-      "checkedAt": "2026-11-19T21:33:40.783757+00:00",
+      "checkedAt": "2026-11-20T08:02:20.942+05:30",
       "outcome": "ok"
     },
     "streams": {
-      "checkedAt": "2026-11-19T21:43:36.043220+00:00",
-      "outcome": "partial"
+      "checkedAt": "2026-11-20T08:02:20.942+05:30",
+      "outcome": "error",
+      "error": "YouTube Live/Upcoming listing unavailable: connected browser returned only the 2024 footer; channel-ID /streams and saved watch-page requests returned DisabledError."
     }
   },
   "pending": [],
@@ -125,9 +126,12 @@
     "194661": "2026-11-10T10:06:30.880805+00:00"
   },
   "lastCheck": {
-    "checkedAt": "2026-11-20T01:00:33.330612+00:00",
-    "kind": "match-retry",
-    "failures": [],
+    "checkedAt": "2026-11-20T08:02:20.942+05:30",
+    "kind": "morning",
+    "failures": [
+      "YouTube Live/Upcoming listing unavailable: connected browser returned only the 2024 footer; channel-ID /streams and saved watch-page requests returned DisabledError.",
+      "Local importer not executed: git clone failed with Could not resolve host: github.com; connected GitHub tools expose no workflow-dispatch action."
+    ],
     "changes": {
       "fixtures": 0,
       "results": 0,

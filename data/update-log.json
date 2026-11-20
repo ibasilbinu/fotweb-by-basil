@@ -3,6 +3,30 @@
   "season": "2026-27",
   "checks": [
     {
+      "checkedAt": "2026-11-20T08:02:20.942+05:30",
+      "kind": "morning",
+      "outcome": "partial",
+      "summary": "Official ISL 2026-27 schedule and match centres 194662/194663 checked; the saved 155-fixture schedule still ends with named matches on 18 Apr 2027 and seven TBC placeholders. YouTube /streams returned only the 2024 footer; channel-ID and watch-page requests returned DisabledError. Local importer clone failed DNS; no football data changed.",
+      "links": [
+        {
+          "label": "Official ISL 2026-27 fixture schedule",
+          "url": "https://www.indiansuperleague.com/schedule-fixtures"
+        },
+        {
+          "label": "Official match centre 194662",
+          "url": "https://www.indiansuperleague.com/matchcentre/194662"
+        },
+        {
+          "label": "Official match centre 194663",
+          "url": "https://www.indiansuperleague.com/matchcentre/194663"
+        },
+        {
+          "label": "Official ISL YouTube Live listing",
+          "url": "https://www.youtube.com/@IndianSuperLeague/streams"
+        }
+      ]
+    },
+    {
       "checkedAt": "2026-11-20T01:00:33.330908+00:00",
       "kind": "match-retry",
       "outcome": "no-change",
@@ -6288,30 +6312,6 @@
     {
       "checkedAt": "2026-10-29T02:36:11.678446+00:00",
       "kind": "morning",
-      "outcome": "no-change",
-      "summary": "2 match centres checked; updates: fixtures 0, results 0, lineups 0, streams 0. Phase: phase-one. 0 pending; 0 errors.",
-      "links": [
-        {
-          "label": "Official ISL fixture discovery",
-          "url": "https://www.indiansuperleague.com/schedule-fixtures"
-        },
-        {
-          "label": "Mohun Bagan Super Giant vs Chennaiyin FC",
-          "url": "https://www.indiansuperleague.com/matchcentre/194650"
-        },
-        {
-          "label": "FC Goa vs Sporting Club Delhi",
-          "url": "https://www.indiansuperleague.com/matchcentre/194651"
-        },
-        {
-          "label": "Official ISL YouTube Live listing",
-          "url": "https://www.youtube.com/@IndianSuperLeague/streams"
-        }
-      ]
-    },
-    {
-      "checkedAt": "2026-10-29T01:47:42.720783+00:00",
-      "kind": "hourly",
       "outcome": "no-change",
       "summary": "2 match centres checked; updates: fixtures 0, results 0, lineups 0, streams 0. Phase: phase-one. 0 pending; 0 errors.",
       "links": [
