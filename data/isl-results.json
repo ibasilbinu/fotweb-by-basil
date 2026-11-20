@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "season": "2026-27",
-  "updatedAt": "2026-11-07T16:26:11.567015+00:00",
+  "updatedAt": "2026-11-20T19:16:48.501+05:30",
   "matches": [
     {
       "id": "194634",
@@ -19502,6 +19502,27 @@
           "assist": "Rohit Kumar"
         }
       ]
+    },
+    {
+      "id": "194662",
+      "date": "2026-11-20",
+      "home": "East Bengal FC",
+      "away": "Sporting Club Delhi",
+      "homeGoals": 2,
+      "awayGoals": 2,
+      "status": "FT",
+      "phase": "league",
+      "officialStage": "League",
+      "verifiedAt": "2026-11-20T19:16:48.501+05:30",
+      "sources": [
+        {
+          "label": "Indian Super League official match centre",
+          "url": "https://www.indiansuperleague.com/matchcentre/194662"
+        }
+      ],
+      "matchUrl": "https://www.indiansuperleague.com/matchcentre/194662",
+      "venue": "Vivekananda Yuba Bharati Krirangan, Kolkata",
+      "report": "East Bengal FC 2–2 Sporting Club Delhi. Full-time; result confirmed by the official ISL match centre."
     }
   ]
 }

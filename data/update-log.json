@@ -3,6 +3,22 @@
   "season": "2026-27",
   "checks": [
     {
+      "checkedAt": "2026-11-20T19:16:48.501+05:30",
+      "kind": "post-match-early",
+      "outcome": "updated",
+      "summary": "Official ISL match centre 194662 confirmed East Bengal FC 2–2 Sporting Club Delhi, FT, on 20 Nov 2026; added the verified result. No match-stat values were present in the fetched page text, so none were added.",
+      "links": [
+        {
+          "label": "Official ISL match centre 194662",
+          "url": "https://www.indiansuperleague.com/matchcentre/194662"
+        },
+        {
+          "label": "Official ISL fixture schedule",
+          "url": "https://www.indiansuperleague.com/schedule-fixtures"
+        }
+      ]
+    },
+    {
       "checkedAt": "2026-11-20T19:04:49+05:30",
       "kind": "lineup-late",
       "outcome": "partial",
@@ -6302,22 +6318,6 @@
         {
           "label": "Official ISL YouTube Live listing",
           "url": "https://www.youtube.com/@IndianSuperLeague/streams"
-        }
-      ]
-    },
-    {
-      "checkedAt": "2026-10-29T13:42:10+00:00",
-      "kind": "post-match-early",
-      "outcome": "partial",
-      "summary": "No 17:00 IST fixture was scheduled for 29 October 2026, so no final result was due. Official ISL season fixture page was inaccessible to this backup check; the successful 29 October 14:12 IST workflow snapshot was preserved.",
-      "links": [
-        {
-          "label": "Official ISL fixture schedule",
-          "url": "https://www.indiansuperleague.com/schedule-fixtures"
-        },
-        {
-          "label": "Latest successful source-check workflow",
-          "url": "https://github.com/ibasilbinu/fotweb-by-basil/actions/runs/40843992123"
         }
       ]
     }
