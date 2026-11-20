@@ -3,6 +3,30 @@
   "season": "2026-27",
   "checks": [
     {
+      "checkedAt": "2026-11-20T19:04:49+05:30",
+      "kind": "lineup-late",
+      "outcome": "partial",
+      "summary": "1 official ISL match centre checked for 20 Nov 2026 19:30 IST Bengaluru FC vs Mumbai City FC; Bengaluru FC's 4-3-3 XI and nine substitutes published from the match centre; Mumbai City FC XI remains pending. Official YouTube /streams returned only the stale 2024 footer and saved watch page QT3j7GEOoFk returned DisabledError. 1 pending; 2 source errors.",
+      "links": [
+        {
+          "label": "Official ISL match centre 194663",
+          "url": "https://www.indiansuperleague.com/matchcentre/194663"
+        },
+        {
+          "label": "Official ISL YouTube Live listing",
+          "url": "https://www.youtube.com/@IndianSuperLeague/streams"
+        },
+        {
+          "label": "Saved scheduled stream 194663",
+          "url": "https://www.youtube.com/watch?v=QT3j7GEOoFk"
+        },
+        {
+          "label": "Official ISL fixture schedule",
+          "url": "https://www.indiansuperleague.com/schedule-fixtures"
+        }
+      ]
+    },
+    {
       "checkedAt": "2026-11-20T12:53:57.691656+00:00",
       "kind": "hourly",
       "outcome": "partial",
@@ -6294,26 +6318,6 @@
         {
           "label": "Latest successful source-check workflow",
           "url": "https://github.com/ibasilbinu/fotweb-by-basil/actions/runs/40843992123"
-        }
-      ]
-    },
-    {
-      "checkedAt": "2026-10-29T13:30:33.710855+00:00",
-      "kind": "lineup-late",
-      "outcome": "partial",
-      "summary": "2 match centres checked; updates: fixtures 0, results 0, lineups 0, streams 0. Phase: phase-one. 0 pending; 5 errors. YouTube k178PJ6DfII: Scheduled stream start is not available yet; YouTube gWexbVfNmFo: Scheduled stream start is not available yet; YouTube nZ8rESpcRTU: Scheduled stream start is not available yet; YouTube raS61rqsQQI: Scheduled stream start is not available yet; YouTube dNbGWuWcG5",
-      "links": [
-        {
-          "label": "Mohun Bagan Super Giant vs Chennaiyin FC",
-          "url": "https://www.indiansuperleague.com/matchcentre/194650"
-        },
-        {
-          "label": "FC Goa vs Sporting Club Delhi",
-          "url": "https://www.indiansuperleague.com/matchcentre/194651"
-        },
-        {
-          "label": "Official ISL YouTube Live listing",
-          "url": "https://www.youtube.com/@IndianSuperLeague/streams"
         }
       ]
     }

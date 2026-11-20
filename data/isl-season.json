@@ -5402,6 +5402,106 @@
         "status": "scheduled",
         "verifiedAt": "2026-11-17T14:23:46.014514+00:00",
         "languageEvidence": "official-default-unlabelled"
+      },
+      "lineups": {
+        "sourceUrl": "https://www.indiansuperleague.com/matchcentre/194663",
+        "verifiedAt": "2026-11-20T19:04:49+05:30",
+        "home": {
+          "formation": "4-3-3",
+          "starters": [
+            {
+              "name": "Gurpreet Singh Sandhu",
+              "number": 1
+            },
+            {
+              "name": "Menno Robert Maria Koch",
+              "number": 3
+            },
+            {
+              "name": "Manuel Ignacio Iriondo",
+              "number": 5
+            },
+            {
+              "name": "Sandro Anibal Embalo",
+              "number": 6
+            },
+            {
+              "name": "Borja Martinez Giner",
+              "number": 7
+            },
+            {
+              "name": "Sunil Chhetri",
+              "number": 11
+            },
+            {
+              "name": "Soham Varshneya",
+              "number": 14
+            },
+            {
+              "name": "Fanai Lalremtluanga",
+              "number": 23
+            },
+            {
+              "name": "Nikhil Chandrashekar Poojary",
+              "number": 27
+            },
+            {
+              "name": "Vinith Venkatesh",
+              "number": 31
+            },
+            {
+              "name": "Roshan Singh Naorem",
+              "number": 32
+            }
+          ],
+          "substitutes": [
+            {
+              "name": "Chinglensana Singh Konsham",
+              "number": 4,
+              "position": "Defender"
+            },
+            {
+              "name": "Ryan Dale Williams",
+              "number": 10,
+              "position": "Forward"
+            },
+            {
+              "name": "Monirul Molla",
+              "number": 17,
+              "position": "Forward"
+            },
+            {
+              "name": "Lalthuammawia Ralte",
+              "number": 28,
+              "position": "Goalkeeper"
+            },
+            {
+              "name": "Serto Worneilen Kom",
+              "number": 29,
+              "position": "Forward"
+            },
+            {
+              "name": "Sahil Poonia",
+              "number": 30,
+              "position": "Goalkeeper"
+            },
+            {
+              "name": "Taorem Kelvin Singh",
+              "number": 37,
+              "position": "Forward"
+            },
+            {
+              "name": "Takhellambam Bungson Singh",
+              "number": 66,
+              "position": "Defender"
+            },
+            {
+              "name": "Yaipharemba Chingakham",
+              "number": 72,
+              "position": "Defender"
+            }
+          ]
+        }
       }
     },
     {
