@@ -85,15 +85,18 @@
   "phaseOneLastKickoff": "2027-01-17T19:30+05:30",
   "sources": {
     "fixtures": {
-      "checkedAt": "2026-11-20T10:12:23.513214+00:00",
+      "checkedAt": "2026-11-20T11:16:19.802027+00:00",
       "outcome": "ok"
     },
     "streams": {
-      "checkedAt": "2026-11-20T10:12:23.513214+00:00",
-      "outcome": "partial"
+      "checkedAt": "2026-11-20T11:16:19.802027+00:00",
+      "outcome": "error",
+      "error": "Official /streams listing returned only a stale 2024 footer; watch page xVLnRfZ2Mh0 returned DisabledError."
     }
   },
-  "pending": [],
+  "pending": [
+    "XI 194662"
+  ],
   "matchCheckedAt": {
     "194634": "2026-10-13T11:05:20.879015+00:00",
     "194635": "2026-10-13T13:42:02.790128+00:00",
@@ -122,45 +125,15 @@
     "194658": "2026-11-08T13:27:33.945150+00:00",
     "194659": "2026-11-09T13:38:33.967916+00:00",
     "194660": "2026-11-10T10:06:30.880805+00:00",
-    "194661": "2026-11-10T10:06:30.880805+00:00"
+    "194661": "2026-11-10T10:06:30.880805+00:00",
+    "194662": "2026-11-20T11:16:19.802027+00:00"
   },
   "lastCheck": {
-    "checkedAt": "2026-11-20T10:12:23.513214+00:00",
-    "kind": "morning",
+    "checkedAt": "2026-11-20T11:16:19.802027+00:00",
+    "kind": "lineup-early",
     "failures": [
-      "YouTube TXFuTctMNss: Public metadata: Video identity unavailable or private; alternate metadata missing channel identity",
-      "YouTube iQEyDUAbJUA: Public metadata: Video identity unavailable or private; alternate metadata missing channel identity",
-      "YouTube Pk5JUphLm5o: Public metadata: Video identity unavailable or private; alternate metadata missing channel identity",
-      "YouTube b8JRpEc1BUc: Public metadata: Video identity unavailable or private; alternate metadata missing channel identity",
-      "YouTube tYRs4yoQGpo: Public metadata: Video identity unavailable or private; alternate metadata missing channel identity",
-      "YouTube k178PJ6DfII: Public metadata: Video identity unavailable or private; alternate metadata missing channel identity",
-      "YouTube gWexbVfNmFo: Public metadata: Video identity unavailable or private; alternate metadata missing channel identity",
-      "YouTube nZ8rESpcRTU: Public metadata: Video identity unavailable or private; alternate metadata missing channel identity",
-      "YouTube raS61rqsQQI: Public metadata: Video identity unavailable or private; alternate metadata missing channel identity",
-      "YouTube dNbGWuWcG5Y: Public metadata: Video identity unavailable or private; alternate metadata missing channel identity",
-      "YouTube Ay1gYmJoFMk: Public metadata: Video identity unavailable or private; alternate metadata missing channel identity",
-      "YouTube tN69WAzTwJI: Public metadata: Video identity unavailable or private; alternate metadata missing channel identity",
-      "YouTube FgVvdqYDmW4: Public metadata: Video identity unavailable or private; alternate metadata missing channel identity",
-      "YouTube tadc1bC4AGE: Public metadata: Video identity unavailable or private; alternate metadata missing channel identity",
-      "YouTube tTd6cg2yZ78: Public metadata: Video identity unavailable or private; alternate metadata missing channel identity",
-      "YouTube WSGHeZmbNds: Public metadata: Video identity unavailable or private; alternate metadata missing channel identity",
-      "YouTube 0QesNY7MKkc: Public metadata: Video identity unavailable or private; alternate metadata missing channel identity",
-      "YouTube WvHLJt16eyE: Public metadata: Video identity unavailable or private; alternate metadata missing channel identity",
-      "YouTube fp_7X3VWIuA: Public metadata: Video identity unavailable or private; alternate metadata missing channel identity",
-      "YouTube Ujcb0xvB90Y: Public metadata: Video identity unavailable or private; alternate metadata missing channel identity",
-      "YouTube b4Xo33p3SXo: Public metadata: Video identity unavailable or private; alternate metadata missing channel identity",
-      "YouTube qTHpJGNG2Rg: Public metadata: Video identity unavailable or private; alternate metadata missing channel identity",
-      "YouTube 0XReoY9GNr4: Public metadata: Video identity unavailable or private; alternate metadata missing channel identity",
-      "YouTube DdsyDa5Tils: Public metadata: Video identity unavailable or private; alternate metadata missing channel identity",
-      "YouTube -YxgaOJe2x0: Public metadata: Video identity unavailable or private; alternate metadata missing channel identity",
-      "YouTube tKhQ8hzCMxE: Public metadata: Video identity unavailable or private; alternate metadata missing channel identity",
-      "YouTube R6Rj00R4Mcs: Public metadata: Video identity unavailable or private; alternate metadata missing channel identity",
-      "YouTube 8VoKMQAmAbo: Public metadata: Video identity unavailable or private; alternate metadata missing channel identity",
-      "YouTube r7fCiGAMU3w: Public metadata: Video identity unavailable or private; alternate metadata missing channel identity",
-      "YouTube 5IOC7sCXezo: Public metadata: Video identity unavailable or private; alternate metadata missing channel identity",
-      "YouTube ug5A-PvAtuE: Public metadata: Video identity unavailable or private; alternate metadata missing channel identity",
-      "YouTube wsysXETXWxA: Public metadata: Video identity unavailable or private; alternate metadata missing channel identity",
-      "YouTube cEK6dPHN9LQ: Public metadata: Video identity unavailable or private; alternate metadata missing channel identity"
+      "YouTube /streams listing returned only a stale 2024 footer; current Live/Upcoming metadata was unavailable.",
+      "YouTube watch page xVLnRfZ2Mh0 returned DisabledError; its scheduled metadata could not be reverified."
     ],
     "changes": {
       "fixtures": 0,
