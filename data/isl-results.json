@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "season": "2026-27",
-  "updatedAt": "2026-11-20T19:16:48.501+05:30",
+  "updatedAt": "2026-11-20T21:49:37+05:30",
   "matches": [
     {
       "id": "194634",
@@ -19523,6 +19523,34 @@
       "matchUrl": "https://www.indiansuperleague.com/matchcentre/194662",
       "venue": "Vivekananda Yuba Bharati Krirangan, Kolkata",
       "report": "East Bengal FC 2–2 Sporting Club Delhi. Full-time; result confirmed by the official ISL match centre."
+    },
+    {
+      "id": "194663",
+      "date": "2026-11-20",
+      "home": "Bengaluru FC",
+      "away": "Mumbai City FC",
+      "homeGoals": 2,
+      "awayGoals": 0,
+      "status": "FT",
+      "phase": "league",
+      "officialStage": "League",
+      "verifiedAt": "2026-11-20T21:49:37+05:30",
+      "sources": [
+        {
+          "label": "Indian Super League official match centre",
+          "url": "https://www.indiansuperleague.com/matchcentre/194663"
+        },
+        {
+          "label": "Indian Super League official fixture schedule",
+          "url": "https://www.indiansuperleague.com/schedule-fixtures"
+        }
+      ],
+      "matchUrl": "https://www.indiansuperleague.com/matchcentre/194663",
+      "venue": "Sree Kanteerava Stadium, Bengaluru",
+      "report": "Bengaluru FC 2–0 Mumbai City FC. Full-time; result confirmed by the official ISL match centre.",
+      "lineups": {},
+      "stats": {},
+      "players": []
     }
   ]
 }
