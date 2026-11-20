@@ -89,7 +89,7 @@
       "outcome": "ok"
     },
     "streams": {
-      "checkedAt": "2026-11-20T21:05:02.966586+00:00",
+      "checkedAt": "2026-11-20T21:26:41.440493+00:00",
       "outcome": "partial"
     }
   },
@@ -123,12 +123,12 @@
     "194659": "2026-11-09T13:38:33.967916+00:00",
     "194660": "2026-11-10T10:06:30.880805+00:00",
     "194661": "2026-11-10T10:06:30.880805+00:00",
-    "194662": "2026-11-20T21:05:02.966586+00:00",
-    "194663": "2026-11-20T21:05:02.966586+00:00"
+    "194662": "2026-11-20T21:26:41.440493+00:00",
+    "194663": "2026-11-20T21:26:41.440493+00:00"
   },
   "lastCheck": {
-    "checkedAt": "2026-11-20T21:05:02.966586+00:00",
-    "kind": "hourly",
+    "checkedAt": "2026-11-20T21:26:41.440493+00:00",
+    "kind": "lineup-late",
     "failures": [
       "YouTube QT3j7GEOoFk: Public metadata: Video identity unavailable or private; alternate metadata missing channel identity",
       "YouTube xVLnRfZ2Mh0: Public metadata: Video identity unavailable or private; alternate metadata missing channel identity",
