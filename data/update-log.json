@@ -3,6 +3,30 @@
   "season": "2026-27",
   "checks": [
     {
+      "checkedAt": "2026-11-21T20:15:03.804591+00:00",
+      "kind": "post-match-early",
+      "outcome": "no-change",
+      "summary": "4 match centres checked; updates: fixtures 0, results 0, lineups 0, streams 0. Phase: later-phases. 0 pending; 0 errors.",
+      "links": [
+        {
+          "label": "East Bengal FC vs Sporting Club Delhi",
+          "url": "https://www.indiansuperleague.com/matchcentre/194662"
+        },
+        {
+          "label": "Bengaluru FC vs Mumbai City FC",
+          "url": "https://www.indiansuperleague.com/matchcentre/194663"
+        },
+        {
+          "label": "Chennaiyin FC vs Punjab FC",
+          "url": "https://www.indiansuperleague.com/matchcentre/194664"
+        },
+        {
+          "label": "NorthEast United FC vs FC Goa",
+          "url": "https://www.indiansuperleague.com/matchcentre/194665"
+        }
+      ]
+    },
+    {
       "checkedAt": "2026-11-21T20:13:10.857993+00:00",
       "kind": "lineup-late",
       "outcome": "partial",
@@ -6386,22 +6410,6 @@
         {
           "label": "Official ISL YouTube Live listing",
           "url": "https://www.youtube.com/@IndianSuperLeague/streams"
-        }
-      ]
-    },
-    {
-      "checkedAt": "2026-10-30T18:51:02.702315+00:00",
-      "kind": "post-match-early",
-      "outcome": "no-change",
-      "summary": "2 match centres checked; updates: fixtures 0, results 0, lineups 0, streams 0. Phase: phase-one. 0 pending; 0 errors.",
-      "links": [
-        {
-          "label": "NorthEast United FC vs Bengaluru FC",
-          "url": "https://www.indiansuperleague.com/matchcentre/194652"
-        },
-        {
-          "label": "FC Goa vs Sporting Club Delhi",
-          "url": "https://www.indiansuperleague.com/matchcentre/194651"
         }
       ]
     }
