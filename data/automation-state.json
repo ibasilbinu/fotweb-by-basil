@@ -85,11 +85,11 @@
   "phaseOneLastKickoff": "2027-01-17T19:30+05:30",
   "sources": {
     "fixtures": {
-      "checkedAt": "2026-11-21T21:50:36+05:30",
+      "checkedAt": "2026-11-21T17:57:59.050616+00:00",
       "outcome": "ok"
     },
     "streams": {
-      "checkedAt": "2026-11-21T17:54:59.166689+00:00",
+      "checkedAt": "2026-11-21T17:57:59.050616+00:00",
       "outcome": "partial"
     }
   },
@@ -123,18 +123,18 @@
     "194659": "2026-11-09T13:38:33.967916+00:00",
     "194660": "2026-11-10T10:06:30.880805+00:00",
     "194661": "2026-11-10T10:06:30.880805+00:00",
-    "194662": "2026-11-21T17:54:59.166689+00:00",
-    "194663": "2026-11-21T17:54:59.166689+00:00",
-    "194664": "2026-11-21T17:54:59.166689+00:00",
-    "194665": "2026-11-21T17:54:59.166689+00:00"
+    "194662": "2026-11-21T17:57:59.050616+00:00",
+    "194663": "2026-11-21T17:57:59.050616+00:00",
+    "194664": "2026-11-21T17:57:59.050616+00:00",
+    "194665": "2026-11-21T17:57:59.050616+00:00"
   },
   "lastCheck": {
-    "checkedAt": "2026-11-21T17:54:59.166689+00:00",
-    "kind": "lineup-early",
+    "checkedAt": "2026-11-21T17:57:59.050616+00:00",
+    "kind": "hourly",
     "failures": [
       "YouTube KDvN0-x_IeM: Public metadata: Video identity unavailable or private; alternate metadata missing channel identity",
       "YouTube oUfIZcRyKBw: Public metadata: Video identity unavailable or private; alternate metadata missing channel identity",
-      "YouTube QT3j7GEOoFk: Public metadata: Video identity unavailable or private; alternate metadata missing channel identity",
+      "YouTube QT3j7GEOoFk: Scheduled stream start is not available yet",
       "YouTube xVLnRfZ2Mh0: Public metadata: Video identity unavailable or private; alternate metadata missing channel identity",
       "YouTube TXFuTctMNss: Public metadata: Video identity unavailable or private; alternate metadata missing channel identity",
       "YouTube iQEyDUAbJUA: Public metadata: Video identity unavailable or private; alternate metadata missing channel identity",
@@ -174,7 +174,7 @@
       "fixtures": 0,
       "results": 0,
       "lineups": 0,
-      "streams": 2
+      "streams": 0
     }
   }
 }
