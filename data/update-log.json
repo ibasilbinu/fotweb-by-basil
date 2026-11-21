@@ -3,6 +3,26 @@
   "season": "2026-27",
   "checks": [
     {
+      "checkedAt": "2026-11-21T11:07:49+00:00",
+      "kind": "lineup-early",
+      "outcome": "partial",
+      "summary": "1 official match centre checked (194664); both full 11-player XIs were already saved from its official match-centre payload at 16:30 IST. No new data changes; 0 pending. YouTube Live/Upcoming unavailable: streams page showed a stale 2024 footer; channel-ID streams/live and the saved watch page returned DisabledError.",
+      "links": [
+        {
+          "label": "Chennaiyin FC vs Punjab FC — official match centre",
+          "url": "https://www.indiansuperleague.com/matchcentre/194664"
+        },
+        {
+          "label": "Official ISL 2026-27 fixture schedule",
+          "url": "https://www.indiansuperleague.com/schedule-fixtures"
+        },
+        {
+          "label": "Official ISL YouTube Live/Upcoming listing",
+          "url": "https://www.youtube.com/@IndianSuperLeague/streams"
+        }
+      ]
+    },
+    {
       "checkedAt": "2026-11-21T11:00:27.788521+00:00",
       "kind": "hourly",
       "outcome": "partial",
@@ -6350,26 +6370,6 @@
         {
           "label": "NorthEast United FC vs Bengaluru FC",
           "url": "https://www.indiansuperleague.com/matchcentre/194652"
-        }
-      ]
-    },
-    {
-      "checkedAt": "2026-10-30T13:27:12.661205+00:00",
-      "kind": "lineup-late",
-      "outcome": "updated",
-      "summary": "2 match centres checked; updates: fixtures 0, results 0, lineups 1, streams 0. Phase: phase-one. 0 pending; 0 errors.",
-      "links": [
-        {
-          "label": "NorthEast United FC vs Bengaluru FC",
-          "url": "https://www.indiansuperleague.com/matchcentre/194652"
-        },
-        {
-          "label": "FC Goa vs Sporting Club Delhi",
-          "url": "https://www.indiansuperleague.com/matchcentre/194651"
-        },
-        {
-          "label": "Official ISL YouTube Live listing",
-          "url": "https://www.youtube.com/@IndianSuperLeague/streams"
         }
       ]
     }
