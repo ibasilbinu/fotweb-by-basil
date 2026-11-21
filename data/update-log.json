@@ -3,6 +3,30 @@
   "season": "2026-27",
   "checks": [
     {
+      "checkedAt": "2026-11-21T09:59:20.911993+00:00",
+      "kind": "morning",
+      "outcome": "no-change",
+      "summary": "2 match centres checked; updates: fixtures 0, results 0, lineups 0, streams 0. Phase: later-phases. 0 pending; 0 errors.",
+      "links": [
+        {
+          "label": "Official ISL fixture discovery",
+          "url": "https://www.indiansuperleague.com/schedule-fixtures"
+        },
+        {
+          "label": "East Bengal FC vs Sporting Club Delhi",
+          "url": "https://www.indiansuperleague.com/matchcentre/194662"
+        },
+        {
+          "label": "Bengaluru FC vs Mumbai City FC",
+          "url": "https://www.indiansuperleague.com/matchcentre/194663"
+        },
+        {
+          "label": "Official ISL YouTube Live listing",
+          "url": "https://www.youtube.com/@IndianSuperLeague/streams"
+        }
+      ]
+    },
+    {
       "checkedAt": "2026-11-21T02:32:16.445647+00:00",
       "kind": "match-retry",
       "outcome": "no-change",
@@ -6327,26 +6351,6 @@
       "outcome": "no-change",
       "summary": "1 match centres checked; updates: fixtures 0, results 0, lineups 0, streams 0. Phase: phase-one. 0 pending; 0 errors.",
       "links": [
-        {
-          "label": "FC Goa vs Sporting Club Delhi",
-          "url": "https://www.indiansuperleague.com/matchcentre/194651"
-        },
-        {
-          "label": "Official ISL YouTube Live listing",
-          "url": "https://www.youtube.com/@IndianSuperLeague/streams"
-        }
-      ]
-    },
-    {
-      "checkedAt": "2026-10-30T08:47:42.782483+00:00",
-      "kind": "morning",
-      "outcome": "no-change",
-      "summary": "1 match centres checked; updates: fixtures 0, results 0, lineups 0, streams 0. Phase: phase-one. 0 pending; 0 errors.",
-      "links": [
-        {
-          "label": "Official ISL fixture discovery",
-          "url": "https://www.indiansuperleague.com/schedule-fixtures"
-        },
         {
           "label": "FC Goa vs Sporting Club Delhi",
           "url": "https://www.indiansuperleague.com/matchcentre/194651"
