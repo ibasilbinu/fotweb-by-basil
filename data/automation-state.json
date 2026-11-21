@@ -128,19 +128,17 @@
     "194661": "2026-11-10T10:06:30.880805+00:00",
     "194662": "2026-11-21T11:00:07.825663+00:00",
     "194663": "2026-11-21T11:00:07.825663+00:00",
-    "194664": "2026-11-21T19:09:30+05:30",
+    "194664": "2026-11-21T19:11:13+05:30",
     "194665": "2026-11-21T19:09:30+05:30"
   },
   "lastCheck": {
-    "checkedAt": "2026-11-21T19:09:30+05:30",
-    "kind": "lineup-late",
-    "failures": [
-      "Official @IndianSuperLeague/streams returned only the stale © 2024 Google LLC footer; saved watch page KDvN0-x_IeM returned DisabledError."
-    ],
+    "checkedAt": "2026-11-21T19:11:13+05:30",
+    "kind": "post-match-early",
+    "failures": [],
     "changes": {
       "fixtures": 0,
-      "results": 1,
-      "lineups": 1,
+      "results": 0,
+      "lineups": 0,
       "streams": 0
     }
   }
