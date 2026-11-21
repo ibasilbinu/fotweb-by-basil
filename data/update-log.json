@@ -3,6 +3,30 @@
   "season": "2026-27",
   "checks": [
     {
+      "checkedAt": "2026-11-21T19:09:30+05:30",
+      "kind": "lineup-late",
+      "outcome": "partial",
+      "summary": "2 official match centres checked; results 1 (194664: Chennaiyin FC 1–1 Punjab FC FT); lineups 1 (NorthEast United FC 194665, 3-5-2); FC Goa XI pending. Fixture/stream changes 0. YouTube Live listing showed stale © 2024 footer; saved watch page returned DisabledError.",
+      "links": [
+        {
+          "label": "Official ISL 2026-27 fixture schedule",
+          "url": "https://www.indiansuperleague.com/schedule-fixtures"
+        },
+        {
+          "label": "Chennaiyin FC vs Punjab FC — official match centre",
+          "url": "https://www.indiansuperleague.com/matchcentre/194664"
+        },
+        {
+          "label": "NorthEast United FC vs FC Goa — official match centre",
+          "url": "https://www.indiansuperleague.com/matchcentre/194665"
+        },
+        {
+          "label": "Official ISL YouTube Live/Upcoming listing",
+          "url": "https://www.youtube.com/@IndianSuperLeague/streams"
+        }
+      ]
+    },
+    {
       "checkedAt": "2026-11-21T11:07:49+00:00",
       "kind": "lineup-early",
       "outcome": "partial",
@@ -6354,22 +6378,6 @@
         {
           "label": "Official ISL YouTube Live listing",
           "url": "https://www.youtube.com/@IndianSuperLeague/streams"
-        }
-      ]
-    },
-    {
-      "checkedAt": "2026-10-30T13:38:45+00:00",
-      "kind": "post-match-early",
-      "outcome": "no-change",
-      "summary": "No 17:00 IST fixture was scheduled for 30 October 2026; no final result was due. Today's published fixture is NorthEast United FC vs Bengaluru FC at 19:30 IST.",
-      "links": [
-        {
-          "label": "Official ISL fixture schedule",
-          "url": "https://www.indiansuperleague.com/schedule-fixtures"
-        },
-        {
-          "label": "NorthEast United FC vs Bengaluru FC",
-          "url": "https://www.indiansuperleague.com/matchcentre/194652"
         }
       ]
     }
