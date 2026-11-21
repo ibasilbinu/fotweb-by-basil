@@ -56,7 +56,8 @@ YouTube is polled; no YouTube webhook subscription is connected.
 ## Writer and verification
 
 1. Read the latest `main`, code, validators and all four data snapshots. In a
-   temporary checkout install yt-dlp and run `python automated_update.py KIND`.
+   temporary checkout install Deno 2.x and `yt-dlp[default]` (including
+   `yt-dlp-ejs`), then run `python automated_update.py KIND`.
    Kinds: hourly, morning, lineup-early, lineup-late, post-match-early,
    post-match-late, match-retry. A ChatGPT backup without shell/network access
    can apply the same source and validation rules with its connected tools.
@@ -108,7 +109,13 @@ suppress routine no-change notifications. Do not claim uninterrupted service.
 
 ## Tests
 
-`python -m pip install yt-dlp`
+YouTube metadata checks require a supported JavaScript runtime and yt-dlp's
+EJS challenge scripts. GitHub Actions installs Deno 2.x and `yt-dlp[default]`
+(the latter includes `yt-dlp-ejs`). Local checkouts should use the same setup:
+
+`deno --version`
+
+`python -m pip install --upgrade "yt-dlp[default]"`
 
 `python -m unittest discover -s tests -v`
 
