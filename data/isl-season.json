@@ -5515,12 +5515,11 @@
       "officialStage": "league",
       "broadcast": {
         "url": "https://www.youtube.com/live/oUfIZcRyKBw",
-        "title": "LIVE: Chennaiyin FC vs Punjab FC | MG ISL 2026-27",
+        "title": "FULL REPLAY (English): Chennaiyin FC vs Punjab FC (1-1) | MG ISL 2026-27",
         "channelUrl": "https://www.youtube.com/@IndianSuperLeague",
         "language": "English",
-        "status": "scheduled",
-        "verifiedAt": "2026-11-17T14:23:46.014514+00:00",
-        "languageEvidence": "official-default-unlabelled"
+        "status": "ended",
+        "verifiedAt": "2026-11-21T17:54:59.166689+00:00"
       },
       "lineups": {
         "home": {
@@ -5732,12 +5731,11 @@
       "officialStage": "league",
       "broadcast": {
         "url": "https://www.youtube.com/live/KDvN0-x_IeM",
-        "title": "LIVE: NorthEast United FC vs FC Goa | MG ISL 2026-27",
+        "title": "FULL REPLAY (English): NorthEast United FC vs FC Goa (0-1) | MG ISL 2026-27",
         "channelUrl": "https://www.youtube.com/@IndianSuperLeague",
         "language": "English",
-        "status": "scheduled",
-        "verifiedAt": "2026-11-17T14:23:46.014514+00:00",
-        "languageEvidence": "official-default-unlabelled"
+        "status": "ended",
+        "verifiedAt": "2026-11-21T17:54:59.166689+00:00"
       },
       "lineups": {
         "sourceUrl": "https://www.indiansuperleague.com/matchcentre/194665",
