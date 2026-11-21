@@ -3,6 +3,30 @@
   "season": "2026-27",
   "checks": [
     {
+      "checkedAt": "2026-11-21T17:20:19.966597+00:00",
+      "kind": "match-retry",
+      "outcome": "updated",
+      "summary": "4 match centres checked; updates: fixtures 0, results 2, lineups 0, streams 0. Phase: later-phases. 0 pending; 0 errors.",
+      "links": [
+        {
+          "label": "Chennaiyin FC vs Punjab FC",
+          "url": "https://www.indiansuperleague.com/matchcentre/194664"
+        },
+        {
+          "label": "NorthEast United FC vs FC Goa",
+          "url": "https://www.indiansuperleague.com/matchcentre/194665"
+        },
+        {
+          "label": "East Bengal FC vs Sporting Club Delhi",
+          "url": "https://www.indiansuperleague.com/matchcentre/194662"
+        },
+        {
+          "label": "Bengaluru FC vs Mumbai City FC",
+          "url": "https://www.indiansuperleague.com/matchcentre/194663"
+        }
+      ]
+    },
+    {
       "checkedAt": "2026-11-21T21:50:36+05:30",
       "kind": "post-match-late",
       "outcome": "partial",
@@ -6346,22 +6370,6 @@
         {
           "label": "FC Goa vs Sporting Club Delhi",
           "url": "https://www.indiansuperleague.com/matchcentre/194651"
-        }
-      ]
-    },
-    {
-      "checkedAt": "2026-10-30T16:22:30+00:00",
-      "kind": "post-match-late",
-      "outcome": "no-change",
-      "summary": "NorthEast United FC 1–1 Bengaluru FC was verified as FT from the official ISL match centre and had already been published by the retried source-check importer during this run; no additional data change was required.",
-      "links": [
-        {
-          "label": "NorthEast United FC vs Bengaluru FC",
-          "url": "https://www.indiansuperleague.com/matchcentre/194652"
-        },
-        {
-          "label": "Successful source-check retry",
-          "url": "https://github.com/ibasilbinu/fotweb-by-basil/actions/runs/41069079319"
         }
       ]
     }
