@@ -86,11 +86,13 @@
   "sources": {
     "fixtures": {
       "outcome": "partial",
-      "error": "Direct official schedule page open timed out (HTTP 400); current official schedule search result and official Mohun Bagan fixture listing were available."
+      "error": "Direct official schedule page open timed out (HTTP 400); current official schedule search result and official Mohun Bagan fixture listing were available.",
+      "checkedAt": "2026-11-22T11:07:51.462Z"
     },
     "streams": {
       "outcome": "partial",
-      "error": "Official Live/Upcoming page returned only a stale 2024 footer; video metadata for WCpIrGN_dxs returned DisabledError."
+      "error": "Official Live/Upcoming page returned only a stale 2024 footer; video metadata for WCpIrGN_dxs returned DisabledError.",
+      "checkedAt": "2026-11-22T11:07:51.462Z"
     }
   },
   "pending": [],
@@ -140,6 +142,7 @@
       "results": 0,
       "lineups": 0,
       "streams": 0
-    }
+    },
+    "checkedAt": "2026-11-22T11:07:51.462Z"
   }
 }
