@@ -90,7 +90,7 @@
       "error": "Official fixture schedule still displayed Churchill Brothers 0–2 Mohun Bagan at 83′ while the official match centre confirmed 1–2 FT; retained the match-centre final and left schedule refresh for retry."
     },
     "streams": {
-      "checkedAt": "2026-11-22T18:21:28.767153+00:00",
+      "checkedAt": "2026-11-22T20:26:42.037254+00:00",
       "outcome": "partial"
     }
   },
@@ -124,15 +124,15 @@
     "194659": "2026-11-09T13:38:33.967916+00:00",
     "194660": "2026-11-10T10:06:30.880805+00:00",
     "194661": "2026-11-10T10:06:30.880805+00:00",
-    "194662": "2026-11-22T18:21:28.767153+00:00",
-    "194663": "2026-11-22T18:21:28.767153+00:00",
-    "194664": "2026-11-22T18:21:28.767153+00:00",
-    "194665": "2026-11-22T18:21:28.767153+00:00",
-    "194666": "2026-11-22T18:21:28.767153+00:00"
+    "194662": "2026-11-22T20:26:42.037254+00:00",
+    "194663": "2026-11-22T20:26:42.037254+00:00",
+    "194664": "2026-11-22T20:26:42.037254+00:00",
+    "194665": "2026-11-22T20:26:42.037254+00:00",
+    "194666": "2026-11-22T20:26:42.037254+00:00"
   },
   "lastCheck": {
-    "checkedAt": "2026-11-22T18:21:28.767153+00:00",
-    "kind": "lineup-early",
+    "checkedAt": "2026-11-22T20:26:42.037254+00:00",
+    "kind": "lineup-late",
     "failures": [
       "YouTube WCpIrGN_dxs: Public metadata: Video identity unavailable or private; alternate metadata missing channel identity",
       "YouTube KDvN0-x_IeM: Public metadata: Video identity unavailable or private; alternate metadata missing channel identity",
@@ -177,7 +177,7 @@
       "fixtures": 0,
       "results": 0,
       "lineups": 0,
-      "streams": 2
+      "streams": 0
     }
   }
 }
