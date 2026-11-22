@@ -5395,11 +5395,11 @@
       "officialStage": "league",
       "broadcast": {
         "url": "https://www.youtube.com/live/QT3j7GEOoFk",
-        "title": "FULL REPLAY (English) : Bengaluru FC vs Mumbai City FC (2-0) | MG ISL 2026-27",
+        "title": "FULL REPLAY (English): Bengaluru FC vs Mumbai City FC (2-0) | MG ISL 2026-27",
         "channelUrl": "https://www.youtube.com/@IndianSuperLeague",
         "language": "English",
         "status": "ended",
-        "verifiedAt": "2026-11-20T19:00:04.214041+00:00"
+        "verifiedAt": "2026-11-22T18:21:28.767153+00:00"
       },
       "lineups": {
         "sourceUrl": "https://www.indiansuperleague.com/matchcentre/194663",
@@ -5851,12 +5851,11 @@
       "officialStage": "league",
       "broadcast": {
         "url": "https://www.youtube.com/live/WCpIrGN_dxs",
-        "title": "LIVE: Churchill Brothers SC vs Mohun Bagan Super Giant | MG ISL 2026-27",
+        "title": "FULL REPLAY (English): Churchill Brothers SC vs Mohun Bagan Super Giant (1-2) | MG ISL 2026-27",
         "channelUrl": "https://www.youtube.com/@IndianSuperLeague",
         "language": "English",
-        "status": "scheduled",
-        "verifiedAt": "2026-11-17T14:23:46.014514+00:00",
-        "languageEvidence": "official-default-unlabelled"
+        "status": "ended",
+        "verifiedAt": "2026-11-22T18:21:28.767153+00:00"
       },
       "lineups": {
         "home": {

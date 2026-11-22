@@ -3,6 +3,38 @@
   "season": "2026-27",
   "checks": [
     {
+      "checkedAt": "2026-11-22T18:21:52.572576+00:00",
+      "kind": "lineup-early",
+      "outcome": "partial",
+      "summary": "5 match centres checked; updates: fixtures 0, results 0, lineups 0, streams 2. Phase: later-phases. 0 pending; 38 errors. YouTube WCpIrGN_dxs: Public metadata: Video identity unavailable or private; alternate metadata missing channel identity; YouTube KDvN0-x_IeM: Public metadata: Video identity unavailable or private; alternate metadata missing channel identity; YouTube oUfIZcRyKBw: Public metada",
+      "links": [
+        {
+          "label": "Churchill Brothers vs Mohun Bagan Super Giant",
+          "url": "https://www.indiansuperleague.com/matchcentre/194666"
+        },
+        {
+          "label": "East Bengal FC vs Sporting Club Delhi",
+          "url": "https://www.indiansuperleague.com/matchcentre/194662"
+        },
+        {
+          "label": "Bengaluru FC vs Mumbai City FC",
+          "url": "https://www.indiansuperleague.com/matchcentre/194663"
+        },
+        {
+          "label": "Chennaiyin FC vs Punjab FC",
+          "url": "https://www.indiansuperleague.com/matchcentre/194664"
+        },
+        {
+          "label": "NorthEast United FC vs FC Goa",
+          "url": "https://www.indiansuperleague.com/matchcentre/194665"
+        },
+        {
+          "label": "Official ISL YouTube Live listing",
+          "url": "https://www.youtube.com/@IndianSuperLeague/streams"
+        }
+      ]
+    },
+    {
       "checkedAt": "2026-11-22T17:45:01.700279+00:00",
       "kind": "match-retry",
       "outcome": "updated",
@@ -6450,30 +6482,6 @@
         {
           "label": "Latest FotWeb source check",
           "url": "https://github.com/ibasilbinu/fotweb-by-basil/actions/runs/41217427120"
-        }
-      ]
-    },
-    {
-      "checkedAt": "2026-10-31T15:59:19.578047+00:00",
-      "kind": "lineup-early",
-      "outcome": "partial",
-      "summary": "3 match centres checked; updates: fixtures 0, results 0, lineups 0, streams 1. Phase: phase-one. 0 pending; 1 errors. YouTube nZ8rESpcRTU: Public metadata: Video identity unavailable or private; alternate metadata missing channel identity",
-      "links": [
-        {
-          "label": "Chennaiyin FC vs Kerala Blasters FC",
-          "url": "https://www.indiansuperleague.com/matchcentre/194653"
-        },
-        {
-          "label": "Mohun Bagan Super Giant vs Punjab FC",
-          "url": "https://www.indiansuperleague.com/matchcentre/194654"
-        },
-        {
-          "label": "NorthEast United FC vs Bengaluru FC",
-          "url": "https://www.indiansuperleague.com/matchcentre/194652"
-        },
-        {
-          "label": "Official ISL YouTube Live listing",
-          "url": "https://www.youtube.com/@IndianSuperLeague/streams"
         }
       ]
     }
