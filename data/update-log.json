@@ -3,6 +3,38 @@
   "season": "2026-27",
   "checks": [
     {
+      "checkedAt": "2026-11-22T11:07:51.462Z",
+      "kind": "lineup-early",
+      "outcome": "partial",
+      "summary": "Official 2026-27 schedule review: no 17:00 IST fixture today. Today's match is Churchill Brothers SC vs Mohun Bagan Super Giant (Match 33; saved kickoff 19:30 IST, fixture 194666). No XI due or pending. Direct schedule open timed out; YouTube Live/Upcoming was footer-only and video metadata returned DisabledError; existing English link retained.",
+      "links": [
+        {
+          "label": "Official ISL fixture schedule",
+          "url": "https://www.indiansuperleague.com/schedule-fixtures"
+        },
+        {
+          "label": "Official Mohun Bagan fixture listing",
+          "url": "https://www.indiansuperleague.com/clubs/1874-atk-mohun-bagan-profile"
+        },
+        {
+          "label": "Churchill Brothers vs Mohun Bagan match centre",
+          "url": "https://www.indiansuperleague.com/matchcentre/194666"
+        },
+        {
+          "label": "Official ISL YouTube Live listing",
+          "url": "https://www.youtube.com/@IndianSuperLeague/streams"
+        },
+        {
+          "label": "Saved English stream for Match 33",
+          "url": "https://www.youtube.com/live/WCpIrGN_dxs"
+        },
+        {
+          "label": "YouTube video metadata page",
+          "url": "https://www.youtube.com/watch?v=WCpIrGN_dxs"
+        }
+      ]
+    },
+    {
       "checkedAt": "2026-11-22T09:58:15.759247+00:00",
       "kind": "morning",
       "outcome": "partial",
@@ -6434,30 +6466,6 @@
         {
           "label": "NorthEast United FC vs Bengaluru FC",
           "url": "https://www.indiansuperleague.com/matchcentre/194652"
-        }
-      ]
-    },
-    {
-      "checkedAt": "2026-10-31T08:35:02.501118+00:00",
-      "kind": "morning",
-      "outcome": "no-change",
-      "summary": "2 match centres checked; updates: fixtures 0, results 0, lineups 0, streams 0. Phase: phase-one. 0 pending; 0 errors.",
-      "links": [
-        {
-          "label": "Official ISL fixture discovery",
-          "url": "https://www.indiansuperleague.com/schedule-fixtures"
-        },
-        {
-          "label": "FC Goa vs Sporting Club Delhi",
-          "url": "https://www.indiansuperleague.com/matchcentre/194651"
-        },
-        {
-          "label": "NorthEast United FC vs Bengaluru FC",
-          "url": "https://www.indiansuperleague.com/matchcentre/194652"
-        },
-        {
-          "label": "Official ISL YouTube Live listing",
-          "url": "https://www.youtube.com/@IndianSuperLeague/streams"
         }
       ]
     }

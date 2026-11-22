@@ -85,12 +85,12 @@
   "phaseOneLastKickoff": "2027-01-17T19:30+05:30",
   "sources": {
     "fixtures": {
-      "checkedAt": "2026-11-22T09:57:55.835073+00:00",
-      "outcome": "ok"
+      "outcome": "partial",
+      "error": "Direct official schedule page open timed out (HTTP 400); current official schedule search result and official Mohun Bagan fixture listing were available."
     },
     "streams": {
-      "checkedAt": "2026-11-22T09:57:55.835073+00:00",
-      "outcome": "partial"
+      "outcome": "partial",
+      "error": "Official Live/Upcoming page returned only a stale 2024 footer; video metadata for WCpIrGN_dxs returned DisabledError."
     }
   },
   "pending": [],
@@ -129,46 +129,11 @@
     "194665": "2026-11-22T09:57:55.835073+00:00"
   },
   "lastCheck": {
-    "checkedAt": "2026-11-22T09:57:55.835073+00:00",
-    "kind": "morning",
+    "kind": "lineup-early",
     "failures": [
-      "YouTube KDvN0-x_IeM: Public metadata: Video identity unavailable or private; alternate metadata missing channel identity",
-      "YouTube oUfIZcRyKBw: Public metadata: Video identity unavailable or private; alternate metadata missing channel identity",
-      "YouTube QT3j7GEOoFk: Public metadata: Video identity unavailable or private; alternate metadata missing channel identity",
-      "YouTube xVLnRfZ2Mh0: Public metadata: Video identity unavailable or private; alternate metadata missing channel identity",
-      "YouTube TXFuTctMNss: Public metadata: Video identity unavailable or private; alternate metadata missing channel identity",
-      "YouTube iQEyDUAbJUA: Public metadata: Video identity unavailable or private; alternate metadata missing channel identity",
-      "YouTube Pk5JUphLm5o: Public metadata: Video identity unavailable or private; alternate metadata missing channel identity",
-      "YouTube b8JRpEc1BUc: Public metadata: Video identity unavailable or private; alternate metadata missing channel identity",
-      "YouTube tYRs4yoQGpo: Public metadata: Video identity unavailable or private; alternate metadata missing channel identity",
-      "YouTube k178PJ6DfII: Public metadata: Video identity unavailable or private; alternate metadata missing channel identity",
-      "YouTube gWexbVfNmFo: Public metadata: Video identity unavailable or private; alternate metadata missing channel identity",
-      "YouTube nZ8rESpcRTU: Public metadata: Video identity unavailable or private; alternate metadata missing channel identity",
-      "YouTube raS61rqsQQI: Public metadata: Video identity unavailable or private; alternate metadata missing channel identity",
-      "YouTube dNbGWuWcG5Y: Public metadata: Video identity unavailable or private; alternate metadata missing channel identity",
-      "YouTube Ay1gYmJoFMk: Public metadata: Video identity unavailable or private; alternate metadata missing channel identity",
-      "YouTube tN69WAzTwJI: Public metadata: Video identity unavailable or private; alternate metadata missing channel identity",
-      "YouTube FgVvdqYDmW4: Public metadata: Video identity unavailable or private; alternate metadata missing channel identity",
-      "YouTube tadc1bC4AGE: Public metadata: Video identity unavailable or private; alternate metadata missing channel identity",
-      "YouTube tTd6cg2yZ78: Public metadata: Video identity unavailable or private; alternate metadata missing channel identity",
-      "YouTube WSGHeZmbNds: Public metadata: Video identity unavailable or private; alternate metadata missing channel identity",
-      "YouTube 0QesNY7MKkc: Public metadata: Video identity unavailable or private; alternate metadata missing channel identity",
-      "YouTube WvHLJt16eyE: Public metadata: Video identity unavailable or private; alternate metadata missing channel identity",
-      "YouTube fp_7X3VWIuA: Public metadata: Video identity unavailable or private; alternate metadata missing channel identity",
-      "YouTube Ujcb0xvB90Y: Public metadata: Video identity unavailable or private; alternate metadata missing channel identity",
-      "YouTube b4Xo33p3SXo: Public metadata: Video identity unavailable or private; alternate metadata missing channel identity",
-      "YouTube qTHpJGNG2Rg: Public metadata: Video identity unavailable or private; alternate metadata missing channel identity",
-      "YouTube 0XReoY9GNr4: Public metadata: Video identity unavailable or private; alternate metadata missing channel identity",
-      "YouTube DdsyDa5Tils: Public metadata: Video identity unavailable or private; alternate metadata missing channel identity",
-      "YouTube -YxgaOJe2x0: Public metadata: Video identity unavailable or private; alternate metadata missing channel identity",
-      "YouTube tKhQ8hzCMxE: Public metadata: Video identity unavailable or private; alternate metadata missing channel identity",
-      "YouTube R6Rj00R4Mcs: Public metadata: Video identity unavailable or private; alternate metadata missing channel identity",
-      "YouTube 8VoKMQAmAbo: Public metadata: Video identity unavailable or private; alternate metadata missing channel identity",
-      "YouTube r7fCiGAMU3w: Public metadata: Video identity unavailable or private; alternate metadata missing channel identity",
-      "YouTube 5IOC7sCXezo: Public metadata: Video identity unavailable or private; alternate metadata missing channel identity",
-      "YouTube ug5A-PvAtuE: Public metadata: Video identity unavailable or private; alternate metadata missing channel identity",
-      "YouTube wsysXETXWxA: Public metadata: Video identity unavailable or private; alternate metadata missing channel identity",
-      "YouTube cEK6dPHN9LQ: Public metadata: Video identity unavailable or private; alternate metadata missing channel identity"
+      "Official ISL schedule page: direct open timed out (HTTP 400); current official schedule result shows no 17:00 IST fixture today.",
+      "YouTube Live/Upcoming listing: only stale 2024 footer returned; current entries unavailable.",
+      "YouTube video WCpIrGN_dxs metadata: DisabledError; retained the existing verified English broadcast record."
     ],
     "changes": {
       "fixtures": 0,
