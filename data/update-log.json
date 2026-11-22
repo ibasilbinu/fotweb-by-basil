@@ -3,6 +3,22 @@
   "season": "2026-27",
   "checks": [
     {
+      "checkedAt": "2026-11-22T13:47:42+00:00",
+      "kind": "post-match-early",
+      "outcome": "partial",
+      "summary": "Official schedule: no 17:00 IST fixture today. Match 33 is Churchill Brothers SC vs Mohun Bagan Super Giant at 19:30 IST; no FT result was due. Match-centre view showed squad only, not a confirmed XI; XI 194666 remains pending.",
+      "links": [
+        {
+          "label": "Official ISL fixture schedule",
+          "url": "https://www.indiansuperleague.com/schedule-fixtures"
+        },
+        {
+          "label": "Churchill Brothers vs Mohun Bagan match centre",
+          "url": "https://www.indiansuperleague.com/matchcentre/194666"
+        }
+      ]
+    },
+    {
       "checkedAt": "2026-11-22T13:38:53.194Z",
       "kind": "lineup-late",
       "outcome": "partial",
@@ -6442,34 +6458,6 @@
         {
           "label": "Latest FotWeb source-check workflow",
           "url": "https://github.com/ibasilbinu/fotweb-by-basil/actions/runs/41201233261"
-        }
-      ]
-    },
-    {
-      "checkedAt": "2026-10-31T12:28:24.222437+00:00",
-      "kind": "hourly",
-      "outcome": "partial",
-      "summary": "3 match centres checked; updates: fixtures 0, results 0, lineups 1, streams 0. Phase: phase-one. 0 pending; 1 errors. YouTube raS61rqsQQI: Public metadata: Video identity unavailable or private; alternate metadata missing channel identity",
-      "links": [
-        {
-          "label": "Official ISL fixture discovery",
-          "url": "https://www.indiansuperleague.com/schedule-fixtures"
-        },
-        {
-          "label": "Chennaiyin FC vs Kerala Blasters FC",
-          "url": "https://www.indiansuperleague.com/matchcentre/194653"
-        },
-        {
-          "label": "FC Goa vs Sporting Club Delhi",
-          "url": "https://www.indiansuperleague.com/matchcentre/194651"
-        },
-        {
-          "label": "NorthEast United FC vs Bengaluru FC",
-          "url": "https://www.indiansuperleague.com/matchcentre/194652"
-        },
-        {
-          "label": "Official ISL YouTube Live listing",
-          "url": "https://www.youtube.com/@IndianSuperLeague/streams"
         }
       ]
     }
