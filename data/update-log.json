@@ -3,6 +3,34 @@
   "season": "2026-27",
   "checks": [
     {
+      "checkedAt": "2026-11-22T22:48:52.868197+00:00",
+      "kind": "match-retry",
+      "outcome": "no-change",
+      "summary": "5 match centres checked; updates: fixtures 0, results 0, lineups 0, streams 0. Phase: later-phases. 0 pending; 0 errors.",
+      "links": [
+        {
+          "label": "East Bengal FC vs Sporting Club Delhi",
+          "url": "https://www.indiansuperleague.com/matchcentre/194662"
+        },
+        {
+          "label": "Bengaluru FC vs Mumbai City FC",
+          "url": "https://www.indiansuperleague.com/matchcentre/194663"
+        },
+        {
+          "label": "Chennaiyin FC vs Punjab FC",
+          "url": "https://www.indiansuperleague.com/matchcentre/194664"
+        },
+        {
+          "label": "NorthEast United FC vs FC Goa",
+          "url": "https://www.indiansuperleague.com/matchcentre/194665"
+        },
+        {
+          "label": "Churchill Brothers vs Mohun Bagan Super Giant",
+          "url": "https://www.indiansuperleague.com/matchcentre/194666"
+        }
+      ]
+    },
+    {
       "checkedAt": "2026-11-22T21:45:41.450465+00:00",
       "kind": "hourly",
       "outcome": "partial",
@@ -6484,26 +6512,6 @@
     {
       "checkedAt": "2026-10-31T19:56:56.606145+00:00",
       "kind": "post-match-late",
-      "outcome": "no-change",
-      "summary": "3 match centres checked; updates: fixtures 0, results 0, lineups 0, streams 0. Phase: phase-one. 0 pending; 0 errors.",
-      "links": [
-        {
-          "label": "Mohun Bagan Super Giant vs Punjab FC",
-          "url": "https://www.indiansuperleague.com/matchcentre/194654"
-        },
-        {
-          "label": "NorthEast United FC vs Bengaluru FC",
-          "url": "https://www.indiansuperleague.com/matchcentre/194652"
-        },
-        {
-          "label": "Chennaiyin FC vs Kerala Blasters FC",
-          "url": "https://www.indiansuperleague.com/matchcentre/194653"
-        }
-      ]
-    },
-    {
-      "checkedAt": "2026-10-31T19:32:53.589573+00:00",
-      "kind": "match-retry",
       "outcome": "no-change",
       "summary": "3 match centres checked; updates: fixtures 0, results 0, lineups 0, streams 0. Phase: phase-one. 0 pending; 0 errors.",
       "links": [
