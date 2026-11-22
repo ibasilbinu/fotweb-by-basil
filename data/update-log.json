@@ -3,6 +3,22 @@
   "season": "2026-27",
   "checks": [
     {
+      "checkedAt": "2026-11-22T21:50:17+05:30",
+      "kind": "post-match-late",
+      "outcome": "partial",
+      "summary": "1 match centre checked; updates: fixtures 0, results 1, lineups 0, streams 0. Phase: later-phases. 0 pending; 1 source warning. Churchill Brothers 1–2 Mohun Bagan Super Giant (FT) confirmed at the official match centre; the schedule widget still showed 0–2 at 83′ and remains under retry.",
+      "links": [
+        {
+          "label": "Churchill Brothers vs Mohun Bagan match centre",
+          "url": "https://www.indiansuperleague.com/matchcentre/194666"
+        },
+        {
+          "label": "Official ISL fixture schedule",
+          "url": "https://www.indiansuperleague.com/schedule-fixtures"
+        }
+      ]
+    },
+    {
       "checkedAt": "2026-11-22T15:17:17.508080+00:00",
       "kind": "hourly",
       "outcome": "partial",
@@ -6450,34 +6466,6 @@
         {
           "label": "NorthEast United FC vs Bengaluru FC",
           "url": "https://www.indiansuperleague.com/matchcentre/194652"
-        }
-      ]
-    },
-    {
-      "checkedAt": "2026-10-31T13:40:53.102113+00:00",
-      "kind": "lineup-late",
-      "outcome": "updated",
-      "summary": "4 match centres checked; updates: fixtures 0, results 1, lineups 1, streams 2. Phase: phase-one. 0 pending; 0 errors.",
-      "links": [
-        {
-          "label": "Mohun Bagan Super Giant vs Punjab FC",
-          "url": "https://www.indiansuperleague.com/matchcentre/194654"
-        },
-        {
-          "label": "Chennaiyin FC vs Kerala Blasters FC",
-          "url": "https://www.indiansuperleague.com/matchcentre/194653"
-        },
-        {
-          "label": "FC Goa vs Sporting Club Delhi",
-          "url": "https://www.indiansuperleague.com/matchcentre/194651"
-        },
-        {
-          "label": "NorthEast United FC vs Bengaluru FC",
-          "url": "https://www.indiansuperleague.com/matchcentre/194652"
-        },
-        {
-          "label": "Official ISL YouTube Live listing",
-          "url": "https://www.youtube.com/@IndianSuperLeague/streams"
         }
       ]
     }

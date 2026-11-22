@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "season": "2026-27",
-  "updatedAt": "2026-11-21T17:20:17.901882+00:00",
+  "updatedAt": "2026-11-22T21:50:17+05:30",
   "matches": [
     {
       "id": "194634",
@@ -22252,6 +22252,223 @@
           "addedMinute": 4
         }
       ]
+    },
+    {
+      "id": "194666",
+      "date": "2026-11-22",
+      "home": "Churchill Brothers",
+      "away": "Mohun Bagan Super Giant",
+      "homeGoals": 1,
+      "awayGoals": 2,
+      "status": "FT",
+      "phase": "league",
+      "officialStage": "league",
+      "verifiedAt": "2026-11-22T21:50:17+05:30",
+      "sources": [
+        {
+          "label": "Indian Super League official match centre",
+          "url": "https://www.indiansuperleague.com/matchcentre/194666"
+        }
+      ],
+      "matchUrl": "https://www.indiansuperleague.com/matchcentre/194666",
+      "venue": "Pandit Jawaharlal Nehru Stadium, Goa",
+      "report": "Churchill Brothers 1–2 Mohun Bagan Super Giant. Full-time; result confirmed by the official ISL match centre.",
+      "lineups": {
+        "home": {
+          "starters": [
+            {
+              "name": "Joseph Okoro",
+              "number": 3
+            },
+            {
+              "name": "Sodiq Anthony Rasheed",
+              "number": 4
+            },
+            {
+              "name": "Dramane Salou",
+              "number": 5
+            },
+            {
+              "name": "Kingslee Fernandes",
+              "number": 8
+            },
+            {
+              "name": "Bogdan Mandic",
+              "number": 11
+            },
+            {
+              "name": "Maibam Deny Singh",
+              "number": 20
+            },
+            {
+              "name": "Melroy Melwin Assisi",
+              "number": 21
+            },
+            {
+              "name": "Anuj Kumar",
+              "number": 25
+            },
+            {
+              "name": "Phijam Sanathoi Meetei",
+              "number": 26
+            },
+            {
+              "name": "Vincy Barretto",
+              "number": 47
+            },
+            {
+              "name": "Anil Rama Gaonkar",
+              "number": 57
+            }
+          ],
+          "formation": "4-2-3-1",
+          "substitutes": [
+            {
+              "name": "Sayad Bin Abdul Kadir",
+              "number": 1,
+              "position": "Goalkeeper"
+            },
+            {
+              "name": "Wahengbam Angousana Luwang",
+              "number": 6,
+              "position": "Midfielder"
+            },
+            {
+              "name": "Stendly Teotonio Fernandes",
+              "number": 7,
+              "position": "Midfielder"
+            },
+            {
+              "name": "Wayde Lekay",
+              "number": 9,
+              "position": "Forward"
+            },
+            {
+              "name": "Sebastian Gutierrez Atehortua",
+              "number": 10,
+              "position": "Midfielder"
+            },
+            {
+              "name": "Trijoy Savio Dias",
+              "number": 23,
+              "position": "Midfielder"
+            },
+            {
+              "name": "Gaurav Bora",
+              "number": 44,
+              "position": "Defender"
+            },
+            {
+              "name": "Freddy Lalrinkima",
+              "number": 90,
+              "position": "Midfielder"
+            },
+            {
+              "name": "Pasang Dorjee Tamang",
+              "number": 92,
+              "position": "Midfielder"
+            }
+          ]
+        },
+        "away": {
+          "starters": [
+            {
+              "name": "Vishal Kaith",
+              "number": 1
+            },
+            {
+              "name": "Rahul Shankar Bheke",
+              "number": 2
+            },
+            {
+              "name": "Mehtab Singh",
+              "number": 5
+            },
+            {
+              "name": "Liston Colaco",
+              "number": 7
+            },
+            {
+              "name": "Samir Zeljkovic",
+              "number": 8
+            },
+            {
+              "name": "Lallianzuala Chhangte",
+              "number": 9
+            },
+            {
+              "name": "Subhasish Prodyut Bose",
+              "number": 15
+            },
+            {
+              "name": "Tekcham Abhishek Singh",
+              "number": 27
+            },
+            {
+              "name": "Jamie MacLaren",
+              "number": 29
+            },
+            {
+              "name": "Lalengmawia Ralte",
+              "number": 45
+            },
+            {
+              "name": "Dejan Drazic",
+              "number": 71
+            }
+          ],
+          "formation": "4-3-3",
+          "substitutes": [
+            {
+              "name": "Anirudh Thapa",
+              "number": 6,
+              "position": "Midfielder"
+            },
+            {
+              "name": "Manvir Singh",
+              "number": 11,
+              "position": "Midfielder"
+            },
+            {
+              "name": "Kiyan Nassiri Giri",
+              "number": 17,
+              "position": "Forward"
+            },
+            {
+              "name": "Lee Harry Erwin",
+              "number": 19,
+              "position": "Forward"
+            },
+            {
+              "name": "Alberto Rodriguez Martin",
+              "number": 21,
+              "position": "Defender"
+            },
+            {
+              "name": "Deepak Tangri",
+              "number": 22,
+              "position": "Midfielder"
+            },
+            {
+              "name": "Syed Zahid Hussain Bukhari",
+              "number": 24,
+              "position": "Goalkeeper"
+            },
+            {
+              "name": "Asish Rai",
+              "number": 44,
+              "position": "Defender"
+            },
+            {
+              "name": "Suhail Ahmad Bhat",
+              "number": 72,
+              "position": "Forward"
+            }
+          ]
+        }
+      },
+      "stats": {},
+      "players": []
     }
   ]
 }
