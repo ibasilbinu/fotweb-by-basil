@@ -3,6 +3,30 @@
   "season": "2026-27",
   "checks": [
     {
+      "checkedAt": "2026-11-22T13:38:53.194Z",
+      "kind": "lineup-late",
+      "outcome": "partial",
+      "summary": "Official schedule still lists Match 33 on 22 Nov and named fixtures through 18 Apr 2027; seven playoff slots remain TBC. Full XI for 194666 not confirmed; pending retry. YouTube Live/Upcoming was footer-only and watch metadata returned DisabledError; saved stream retained.",
+      "links": [
+        {
+          "label": "Churchill Brothers vs Mohun Bagan match centre",
+          "url": "https://www.indiansuperleague.com/matchcentre/194666"
+        },
+        {
+          "label": "Official ISL fixture schedule",
+          "url": "https://www.indiansuperleague.com/schedule-fixtures"
+        },
+        {
+          "label": "Official ISL YouTube Live listing",
+          "url": "https://www.youtube.com/@IndianSuperLeague/streams"
+        },
+        {
+          "label": "Saved Match 33 video metadata",
+          "url": "https://www.youtube.com/watch?v=WCpIrGN_dxs"
+        }
+      ]
+    },
+    {
       "checkedAt": "2026-11-22T11:07:51.462Z",
       "kind": "lineup-early",
       "outcome": "partial",
@@ -6446,26 +6470,6 @@
         {
           "label": "Official ISL YouTube Live listing",
           "url": "https://www.youtube.com/@IndianSuperLeague/streams"
-        }
-      ]
-    },
-    {
-      "checkedAt": "2026-10-31T11:06:45.577448+00:00",
-      "kind": "lineup-early",
-      "outcome": "partial",
-      "summary": "3 match centres checked; updates: fixtures 0, results 0, lineups 1, streams 0. Phase: phase-one. 0 pending; 1 errors. YouTube: ERROR: [youtube:tab] @IndianSuperLeague/streams: Unable to download API page: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1010) (caused by CertificateVerifyError('[SSL: CERTIFICATE_VERIFY_FAILED] certific",
-      "links": [
-        {
-          "label": "Chennaiyin FC vs Kerala Blasters FC",
-          "url": "https://www.indiansuperleague.com/matchcentre/194653"
-        },
-        {
-          "label": "FC Goa vs Sporting Club Delhi",
-          "url": "https://www.indiansuperleague.com/matchcentre/194651"
-        },
-        {
-          "label": "NorthEast United FC vs Bengaluru FC",
-          "url": "https://www.indiansuperleague.com/matchcentre/194652"
         }
       ]
     }

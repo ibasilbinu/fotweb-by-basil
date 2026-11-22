@@ -85,17 +85,18 @@
   "phaseOneLastKickoff": "2027-01-17T19:30+05:30",
   "sources": {
     "fixtures": {
-      "outcome": "partial",
-      "error": "Direct official schedule page open timed out (HTTP 400); current official schedule search result and official Mohun Bagan fixture listing were available.",
-      "checkedAt": "2026-11-22T11:07:51.462Z"
+      "checkedAt": "2026-11-22T13:38:53.194Z",
+      "outcome": "ok"
     },
     "streams": {
+      "checkedAt": "2026-11-22T13:38:53.194Z",
       "outcome": "partial",
-      "error": "Official Live/Upcoming page returned only a stale 2024 footer; video metadata for WCpIrGN_dxs returned DisabledError.",
-      "checkedAt": "2026-11-22T11:07:51.462Z"
+      "error": "Official Live/Upcoming listing returned only the stale © 2024 Google LLC footer; video metadata for WCpIrGN_dxs returned DisabledError."
     }
   },
-  "pending": [],
+  "pending": [
+    "XI 194666"
+  ],
   "matchCheckedAt": {
     "194634": "2026-10-13T11:05:20.879015+00:00",
     "194635": "2026-10-13T13:42:02.790128+00:00",
@@ -128,21 +129,21 @@
     "194662": "2026-11-22T09:57:55.835073+00:00",
     "194663": "2026-11-22T09:57:55.835073+00:00",
     "194664": "2026-11-22T09:57:55.835073+00:00",
-    "194665": "2026-11-22T09:57:55.835073+00:00"
+    "194665": "2026-11-22T09:57:55.835073+00:00",
+    "194666": "2026-11-22T13:38:53.194Z"
   },
   "lastCheck": {
-    "kind": "lineup-early",
+    "checkedAt": "2026-11-22T13:38:53.194Z",
+    "kind": "lineup-late",
     "failures": [
-      "Official ISL schedule page: direct open timed out (HTTP 400); current official schedule result shows no 17:00 IST fixture today.",
-      "YouTube Live/Upcoming listing: only stale 2024 footer returned; current entries unavailable.",
-      "YouTube video WCpIrGN_dxs metadata: DisabledError; retained the existing verified English broadcast record."
+      "194666: official ISL match-centre direct fetch returned DisabledError; indexed content showed the Squad section but no confirmed Starting Lineup; XI 194666 remains pending.",
+      "YouTube: official Live/Upcoming listing returned only the stale © 2024 Google LLC footer; saved video WCpIrGN_dxs metadata returned DisabledError; existing broadcast retained."
     ],
     "changes": {
       "fixtures": 0,
       "results": 0,
       "lineups": 0,
       "streams": 0
-    },
-    "checkedAt": "2026-11-22T11:07:51.462Z"
+    }
   }
 }
