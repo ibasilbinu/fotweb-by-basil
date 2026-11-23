@@ -85,12 +85,13 @@
   "phaseOneLastKickoff": "2027-01-17T19:30+05:30",
   "sources": {
     "fixtures": {
-      "checkedAt": "2026-11-22T21:45:15.974538+00:00",
+      "checkedAt": "2026-11-23T08:13:47+05:30",
       "outcome": "ok"
     },
     "streams": {
-      "checkedAt": "2026-11-22T21:45:15.974538+00:00",
-      "outcome": "partial"
+      "checkedAt": "2026-11-23T08:13:47+05:30",
+      "outcome": "error",
+      "error": "Official Live/Upcoming page returned only the footer; watch-page metadata request returned DisabledError."
     }
   },
   "pending": [],
@@ -130,9 +131,11 @@
     "194666": "2026-11-22T22:48:49.751275+00:00"
   },
   "lastCheck": {
-    "checkedAt": "2026-11-22T22:48:49.751275+00:00",
-    "kind": "match-retry",
-    "failures": [],
+    "checkedAt": "2026-11-23T08:13:47+05:30",
+    "kind": "morning",
+    "failures": [
+      "YouTube: official Live/Upcoming page returned only the footer; watch-page metadata request returned DisabledError."
+    ],
     "changes": {
       "fixtures": 0,
       "results": 0,
