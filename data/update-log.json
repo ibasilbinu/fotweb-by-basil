@@ -3,6 +3,30 @@
   "season": "2026-27",
   "checks": [
     {
+      "checkedAt": "2026-11-23T22:30:09.923004+00:00",
+      "kind": "lineup-early",
+      "outcome": "no-change",
+      "summary": "3 match centres checked; updates: fixtures 0, results 0, lineups 0, streams 0. Phase: later-phases. 0 pending; 0 errors.",
+      "links": [
+        {
+          "label": "Chennaiyin FC vs Punjab FC",
+          "url": "https://www.indiansuperleague.com/matchcentre/194664"
+        },
+        {
+          "label": "NorthEast United FC vs FC Goa",
+          "url": "https://www.indiansuperleague.com/matchcentre/194665"
+        },
+        {
+          "label": "Churchill Brothers vs Mohun Bagan Super Giant",
+          "url": "https://www.indiansuperleague.com/matchcentre/194666"
+        },
+        {
+          "label": "Official ISL YouTube Live listing",
+          "url": "https://www.youtube.com/@IndianSuperLeague/streams"
+        }
+      ]
+    },
+    {
       "checkedAt": "2026-11-23T21:59:26.442783+00:00",
       "kind": "match-retry",
       "outcome": "no-change",
@@ -6486,22 +6510,6 @@
         {
           "label": "Official ISL YouTube Live listing",
           "url": "https://www.youtube.com/@IndianSuperLeague/streams"
-        }
-      ]
-    },
-    {
-      "checkedAt": "2026-11-01T13:44:28+00:00",
-      "kind": "post-match-early",
-      "outcome": "no-change",
-      "summary": "Mumbai City FC 2–3 Sporting Club Delhi was verified as FT from the official ISL match centre and had already been published by the lineup-late importer during this run; no additional data change was required.",
-      "links": [
-        {
-          "label": "Mumbai City FC vs Sporting Club Delhi",
-          "url": "https://www.indiansuperleague.com/matchcentre/194655"
-        },
-        {
-          "label": "Importer publication commit",
-          "url": "https://github.com/ibasilbinu/fotweb-by-basil/commit/da386fb6422f8d347b7867a8b607b0ad975d190a"
         }
       ]
     }
