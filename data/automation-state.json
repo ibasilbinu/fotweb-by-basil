@@ -85,7 +85,7 @@
   "phaseOneLastKickoff": "2027-01-17T19:30+05:30",
   "sources": {
     "fixtures": {
-      "checkedAt": "2026-11-23T12:38:33.071229+00:00",
+      "checkedAt": "2026-11-23T19:12:33+05:30",
       "outcome": "ok"
     },
     "streams": {
@@ -131,13 +131,10 @@
     "194666": "2026-11-23T12:38:33.071229+00:00"
   },
   "lastCheck": {
-    "checkedAt": "2026-11-23T13:38:31.894Z",
-    "kind": "lineup-late",
+    "checkedAt": "2026-11-23T19:12:33+05:30",
+    "kind": "post-match-early",
     "failures": [
-      "YouTube @IndianSuperLeague/streams: page returned only the stale © 2024 Google LLC footer; no current Live/Upcoming entries",
-      "YouTube channel-ID /streams: DisabledError",
-      "YouTube channel-ID /live: DisabledError",
-      "YouTube 76Xm55SAFj4: DisabledError"
+      "Local importer unavailable: git clone failed with Could not resolve host: github.com"
     ],
     "changes": {
       "fixtures": 0,
