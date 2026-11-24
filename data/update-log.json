@@ -3,6 +3,30 @@
   "season": "2026-27",
   "checks": [
     {
+      "checkedAt": "2026-11-24T01:09:11.874055+00:00",
+      "kind": "lineup-late",
+      "outcome": "partial",
+      "summary": "3 match centres checked; updates: fixtures 0, results 0, lineups 0, streams 0. Phase: later-phases. 0 pending; 39 errors. YouTube 76Xm55SAFj4: Scheduled stream start is not available yet; YouTube WCpIrGN_dxs: Scheduled stream start is not available yet; YouTube KDvN0-x_IeM: Scheduled stream start is not available yet; YouTube oUfIZcRyKBw: Scheduled stream start is not available yet; YouTube QT3j7G",
+      "links": [
+        {
+          "label": "Chennaiyin FC vs Punjab FC",
+          "url": "https://www.indiansuperleague.com/matchcentre/194664"
+        },
+        {
+          "label": "NorthEast United FC vs FC Goa",
+          "url": "https://www.indiansuperleague.com/matchcentre/194665"
+        },
+        {
+          "label": "Churchill Brothers vs Mohun Bagan Super Giant",
+          "url": "https://www.indiansuperleague.com/matchcentre/194666"
+        },
+        {
+          "label": "Official ISL YouTube Live listing",
+          "url": "https://www.youtube.com/@IndianSuperLeague/streams"
+        }
+      ]
+    },
+    {
       "checkedAt": "2026-11-24T00:51:00.153969+00:00",
       "kind": "hourly",
       "outcome": "no-change",
@@ -6486,22 +6510,6 @@
         {
           "label": "Mohun Bagan Super Giant vs Punjab FC",
           "url": "https://www.indiansuperleague.com/matchcentre/194654"
-        }
-      ]
-    },
-    {
-      "checkedAt": "2026-11-01T16:16:39+00:00",
-      "kind": "post-match-late",
-      "outcome": "partial",
-      "summary": "Official ISL match centre checked: Inter Kashi vs FC Goa was 0–0 at 17 minutes after a delayed start and was not completed. FT 194656 remains pending for scheduled retries; no final result was published.",
-      "links": [
-        {
-          "label": "Inter Kashi vs FC Goa",
-          "url": "https://www.indiansuperleague.com/matchcentre/194656"
-        },
-        {
-          "label": "Latest FotWeb source check",
-          "url": "https://github.com/ibasilbinu/fotweb-by-basil/actions/runs/41319590772"
         }
       ]
     }
