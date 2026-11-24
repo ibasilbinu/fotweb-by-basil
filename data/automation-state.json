@@ -85,11 +85,11 @@
   "phaseOneLastKickoff": "2027-01-17T19:30+05:30",
   "sources": {
     "fixtures": {
-      "checkedAt": "2026-11-24T10:54:54.137234+00:00",
+      "checkedAt": "2026-11-24T12:42:53.568160+00:00",
       "outcome": "ok"
     },
     "streams": {
-      "checkedAt": "2026-11-24T10:54:54.137234+00:00",
+      "checkedAt": "2026-11-24T12:42:53.568160+00:00",
       "outcome": "partial"
     }
   },
@@ -126,12 +126,12 @@
     "194662": "2026-11-23T10:56:43.357769+00:00",
     "194663": "2026-11-23T12:38:33.071229+00:00",
     "194664": "2026-11-24T10:54:54.137234+00:00",
-    "194665": "2026-11-24T10:54:54.137234+00:00",
-    "194666": "2026-11-24T10:54:54.137234+00:00"
+    "194665": "2026-11-24T12:42:53.568160+00:00",
+    "194666": "2026-11-24T12:42:53.568160+00:00"
   },
   "lastCheck": {
-    "checkedAt": "2026-11-24T10:54:54.137234+00:00",
-    "kind": "hourly",
+    "checkedAt": "2026-11-24T12:42:53.568160+00:00",
+    "kind": "morning",
     "failures": [
       "YouTube WCpIrGN_dxs: Public metadata: Video identity unavailable or private; alternate metadata missing channel identity",
       "YouTube KDvN0-x_IeM: Public metadata: Video identity unavailable or private; alternate metadata missing channel identity",
@@ -165,18 +165,13 @@
       "YouTube -YxgaOJe2x0: Public metadata: Video identity unavailable or private; alternate metadata missing channel identity",
       "YouTube tKhQ8hzCMxE: Public metadata: Video identity unavailable or private; alternate metadata missing channel identity",
       "YouTube R6Rj00R4Mcs: Public metadata: Video identity unavailable or private; alternate metadata missing channel identity",
-      "YouTube 8VoKMQAmAbo: Public metadata: Video identity unavailable or private; alternate metadata missing channel identity",
-      "YouTube r7fCiGAMU3w: Public metadata: Video identity unavailable or private; alternate metadata missing channel identity",
-      "YouTube 5IOC7sCXezo: Public metadata: Video identity unavailable or private; alternate metadata missing channel identity",
-      "YouTube ug5A-PvAtuE: Public metadata: Video identity unavailable or private; alternate metadata missing channel identity",
-      "YouTube wsysXETXWxA: Public metadata: Video identity unavailable or private; alternate metadata missing channel identity",
-      "YouTube cEK6dPHN9LQ: Public metadata: Video identity unavailable or private; alternate metadata missing channel identity"
+      "YouTube 8VoKMQAmAbo: Public metadata: Video identity unavailable or private; alternate metadata missing channel identity"
     ],
     "changes": {
       "fixtures": 0,
       "results": 0,
       "lineups": 0,
-      "streams": 0
+      "streams": 5
     }
   }
 }

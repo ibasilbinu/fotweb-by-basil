@@ -6085,7 +6085,16 @@
       "phase": "league",
       "label": "Match 35",
       "sourceUrl": "https://www.indiansuperleague.com/schedule-fixtures",
-      "officialStage": "league"
+      "officialStage": "league",
+      "broadcast": {
+        "url": "https://www.youtube.com/live/POSwbb7cqEE",
+        "title": "LIVE: Inter Kashi FC vs Churchill Brothers SC | MG ISL 2026-27",
+        "channelUrl": "https://www.youtube.com/@IndianSuperLeague",
+        "language": "English",
+        "status": "scheduled",
+        "verifiedAt": "2026-11-24T12:42:53.568160+00:00",
+        "languageEvidence": "official-default-unlabelled"
+      }
     },
     {
       "id": "194671",
@@ -6097,7 +6106,16 @@
       "phase": "league",
       "label": "Match 38",
       "sourceUrl": "https://www.indiansuperleague.com/schedule-fixtures",
-      "officialStage": "league"
+      "officialStage": "league",
+      "broadcast": {
+        "url": "https://www.youtube.com/live/xwF77FCduk4",
+        "title": "LIVE: Chennaiyin FC vs Mumbai City FC | MG ISL 2026-27",
+        "channelUrl": "https://www.youtube.com/@IndianSuperLeague",
+        "language": "English",
+        "status": "scheduled",
+        "verifiedAt": "2026-11-24T12:42:53.568160+00:00",
+        "languageEvidence": "official-default-unlabelled"
+      }
     },
     {
       "id": "194669",
@@ -6109,7 +6127,16 @@
       "phase": "league",
       "label": "Match 36",
       "sourceUrl": "https://www.indiansuperleague.com/schedule-fixtures",
-      "officialStage": "league"
+      "officialStage": "league",
+      "broadcast": {
+        "url": "https://www.youtube.com/live/mqe2MK5Flw0",
+        "title": "LIVE: FC Goa vs Kerala Blasters FC | MG ISL 2026-27",
+        "channelUrl": "https://www.youtube.com/@IndianSuperLeague",
+        "language": "English",
+        "status": "scheduled",
+        "verifiedAt": "2026-11-24T12:42:53.568160+00:00",
+        "languageEvidence": "official-default-unlabelled"
+      }
     },
     {
       "id": "194670",
@@ -6121,7 +6148,16 @@
       "phase": "league",
       "label": "Match 37",
       "sourceUrl": "https://www.indiansuperleague.com/schedule-fixtures",
-      "officialStage": "league"
+      "officialStage": "league",
+      "broadcast": {
+        "url": "https://www.youtube.com/live/Dz8xmnFSQJs",
+        "title": "LIVE: East Bengal FC vs Mohun Bagan Super Giant | MG ISL 2026-27",
+        "channelUrl": "https://www.youtube.com/@IndianSuperLeague",
+        "language": "English",
+        "status": "scheduled",
+        "verifiedAt": "2026-11-24T12:42:53.568160+00:00",
+        "languageEvidence": "official-default-unlabelled"
+      }
     },
     {
       "id": "194672",
@@ -6133,7 +6169,16 @@
       "phase": "league",
       "label": "Match 39",
       "sourceUrl": "https://www.indiansuperleague.com/schedule-fixtures",
-      "officialStage": "league"
+      "officialStage": "league",
+      "broadcast": {
+        "url": "https://www.youtube.com/live/5axKMopyqOw",
+        "title": "LIVE: NorthEast United FC vs Punjab FC | MG ISL 2026-27",
+        "channelUrl": "https://www.youtube.com/@IndianSuperLeague",
+        "language": "English",
+        "status": "scheduled",
+        "verifiedAt": "2026-11-24T12:42:53.568160+00:00",
+        "languageEvidence": "official-default-unlabelled"
+      }
     },
     {
       "id": "194673",
