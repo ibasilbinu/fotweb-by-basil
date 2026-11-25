@@ -3,6 +3,22 @@
   "season": "2026-27",
   "checks": [
     {
+      "checkedAt": "2026-11-25T22:40:56.586043+00:00",
+      "kind": "lineup-late",
+      "outcome": "partial",
+      "summary": "1 match centres checked; updates: fixtures 0, results 0, lineups 0, streams 0. Phase: later-phases. 0 pending; 34 errors. YouTube 76Xm55SAFj4: Public metadata: Video identity unavailable or private; alternate metadata missing channel identity; YouTube WCpIrGN_dxs: Public metadata: Video identity unavailable or private; alternate metadata missing channel identity; YouTube KDvN0-x_IeM: Public metada",
+      "links": [
+        {
+          "label": "NorthEast United FC vs Sporting Club Delhi",
+          "url": "https://www.indiansuperleague.com/matchcentre/194667"
+        },
+        {
+          "label": "Official ISL YouTube Live listing",
+          "url": "https://www.youtube.com/@IndianSuperLeague/streams"
+        }
+      ]
+    },
+    {
       "checkedAt": "2026-11-25T20:25:01.810358+00:00",
       "kind": "lineup-early",
       "outcome": "partial",
@@ -6322,22 +6338,6 @@
         {
           "label": "Official ISL YouTube Live listing",
           "url": "https://www.youtube.com/@IndianSuperLeague/streams"
-        }
-      ]
-    },
-    {
-      "checkedAt": "2026-11-02T13:43:32+00:00",
-      "kind": "post-match-early",
-      "outcome": "no-change",
-      "summary": "No 17:00 IST fixture was scheduled for 2 November 2026, so no final result was due. The official 2026–27 fixture page and FotWeb schedule snapshot agree.",
-      "links": [
-        {
-          "label": "Official ISL fixture schedule",
-          "url": "https://www.indiansuperleague.com/schedule-fixtures"
-        },
-        {
-          "label": "Latest successful source-check workflow",
-          "url": "https://github.com/ibasilbinu/fotweb-by-basil/actions/runs/41422681128"
         }
       ]
     }
