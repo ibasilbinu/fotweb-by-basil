@@ -3,6 +3,22 @@
   "season": "2026-27",
   "checks": [
     {
+      "checkedAt": "2026-11-25T20:25:01.810358+00:00",
+      "kind": "lineup-early",
+      "outcome": "partial",
+      "summary": "1 match centres checked; updates: fixtures 0, results 0, lineups 0, streams 0. Phase: later-phases. 0 pending; 34 errors. YouTube 76Xm55SAFj4: Public metadata: Video identity unavailable or private; alternate metadata missing channel identity; YouTube WCpIrGN_dxs: Public metadata: Video identity unavailable or private; alternate metadata missing channel identity; YouTube KDvN0-x_IeM: Public metada",
+      "links": [
+        {
+          "label": "NorthEast United FC vs Sporting Club Delhi",
+          "url": "https://www.indiansuperleague.com/matchcentre/194667"
+        },
+        {
+          "label": "Official ISL YouTube Live listing",
+          "url": "https://www.youtube.com/@IndianSuperLeague/streams"
+        }
+      ]
+    },
+    {
       "checkedAt": "2026-11-25T19:52:15.441972+00:00",
       "kind": "match-retry",
       "outcome": "no-change",
@@ -6322,38 +6338,6 @@
         {
           "label": "Latest successful source-check workflow",
           "url": "https://github.com/ibasilbinu/fotweb-by-basil/actions/runs/41422681128"
-        }
-      ]
-    },
-    {
-      "checkedAt": "2026-11-02T13:37:44.980726+00:00",
-      "kind": "lineup-late",
-      "outcome": "no-change",
-      "summary": "5 match centres checked; updates: fixtures 0, results 0, lineups 0, streams 0. Phase: phase-one. 0 pending; 0 errors.",
-      "links": [
-        {
-          "label": "NorthEast United FC vs Bengaluru FC",
-          "url": "https://www.indiansuperleague.com/matchcentre/194652"
-        },
-        {
-          "label": "Chennaiyin FC vs Kerala Blasters FC",
-          "url": "https://www.indiansuperleague.com/matchcentre/194653"
-        },
-        {
-          "label": "Mohun Bagan Super Giant vs Punjab FC",
-          "url": "https://www.indiansuperleague.com/matchcentre/194654"
-        },
-        {
-          "label": "Mumbai City FC vs Sporting Club Delhi",
-          "url": "https://www.indiansuperleague.com/matchcentre/194655"
-        },
-        {
-          "label": "Inter Kashi vs FC Goa",
-          "url": "https://www.indiansuperleague.com/matchcentre/194656"
-        },
-        {
-          "label": "Official ISL YouTube Live listing",
-          "url": "https://www.youtube.com/@IndianSuperLeague/streams"
         }
       ]
     }
