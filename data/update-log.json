@@ -3,6 +3,18 @@
   "season": "2026-27",
   "checks": [
     {
+      "checkedAt": "2026-11-25T19:52:15.441972+00:00",
+      "kind": "match-retry",
+      "outcome": "no-change",
+      "summary": "1 match centres checked; updates: fixtures 0, results 0, lineups 0, streams 0. Phase: later-phases. 0 pending; 0 errors.",
+      "links": [
+        {
+          "label": "NorthEast United FC vs Sporting Club Delhi",
+          "url": "https://www.indiansuperleague.com/matchcentre/194667"
+        }
+      ]
+    },
+    {
       "checkedAt": "2026-11-25T15:36:17.339856+00:00",
       "kind": "hourly",
       "outcome": "partial",
@@ -6342,34 +6354,6 @@
         {
           "label": "Official ISL YouTube Live listing",
           "url": "https://www.youtube.com/@IndianSuperLeague/streams"
-        }
-      ]
-    },
-    {
-      "checkedAt": "2026-11-02T11:01:23.254369+00:00",
-      "kind": "lineup-early",
-      "outcome": "partial",
-      "summary": "5 match centres checked; updates: fixtures 0, results 0, lineups 0, streams 0. Phase: phase-one. 0 pending; 1 errors. YouTube: ERROR: [youtube:tab] @IndianSuperLeague/streams: Unable to download API page: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1010) (caused by CertificateVerifyError('[SSL: CERTIFICATE_VERIFY_FAILED] certific",
-      "links": [
-        {
-          "label": "NorthEast United FC vs Bengaluru FC",
-          "url": "https://www.indiansuperleague.com/matchcentre/194652"
-        },
-        {
-          "label": "Chennaiyin FC vs Kerala Blasters FC",
-          "url": "https://www.indiansuperleague.com/matchcentre/194653"
-        },
-        {
-          "label": "Mohun Bagan Super Giant vs Punjab FC",
-          "url": "https://www.indiansuperleague.com/matchcentre/194654"
-        },
-        {
-          "label": "Mumbai City FC vs Sporting Club Delhi",
-          "url": "https://www.indiansuperleague.com/matchcentre/194655"
-        },
-        {
-          "label": "Inter Kashi vs FC Goa",
-          "url": "https://www.indiansuperleague.com/matchcentre/194656"
         }
       ]
     }
