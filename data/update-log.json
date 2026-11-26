@@ -3,6 +3,18 @@
   "season": "2026-27",
   "checks": [
     {
+      "checkedAt": "2026-11-26T00:16:50.281463+00:00",
+      "kind": "post-match-late",
+      "outcome": "no-change",
+      "summary": "1 match centres checked; updates: fixtures 0, results 0, lineups 0, streams 0. Phase: later-phases. 0 pending; 0 errors.",
+      "links": [
+        {
+          "label": "NorthEast United FC vs Sporting Club Delhi",
+          "url": "https://www.indiansuperleague.com/matchcentre/194667"
+        }
+      ]
+    },
+    {
       "checkedAt": "2026-11-25T22:44:54.432136+00:00",
       "kind": "post-match-early",
       "outcome": "no-change",
@@ -6302,22 +6314,6 @@
         {
           "label": "Inter Kashi vs FC Goa",
           "url": "https://www.indiansuperleague.com/matchcentre/194656"
-        }
-      ]
-    },
-    {
-      "checkedAt": "2026-11-02T16:13:21Z",
-      "kind": "post-match-late",
-      "outcome": "no-change",
-      "summary": "No 19:30 IST fixture was scheduled for 2 November 2026, so no final result was due. The official 2026–27 fixture page and FotWeb schedule snapshot agree.",
-      "links": [
-        {
-          "label": "Official ISL fixture schedule",
-          "url": "https://www.indiansuperleague.com/schedule-fixtures"
-        },
-        {
-          "label": "Latest successful source-check workflow",
-          "url": "https://github.com/ibasilbinu/fotweb-by-basil/actions/runs/41475608397"
         }
       ]
     }
