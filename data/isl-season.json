@@ -6168,7 +6168,16 @@
       "phase": "league",
       "label": "Match 39",
       "sourceUrl": "https://www.indiansuperleague.com/schedule-fixtures",
-      "officialStage": "league"
+      "officialStage": "league",
+      "broadcast": {
+        "url": "https://www.youtube.com/live/5axKMopyqOw",
+        "title": "LIVE: NorthEast United FC vs Punjab FC | MG ISL 2026-27",
+        "channelUrl": "https://www.youtube.com/@IndianSuperLeague",
+        "language": "English",
+        "status": "scheduled",
+        "verifiedAt": "2026-11-26T19:37:21.438605+00:00",
+        "languageEvidence": "official-default-unlabelled"
+      }
     },
     {
       "id": "194673",
