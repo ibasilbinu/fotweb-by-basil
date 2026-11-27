@@ -237,7 +237,7 @@ function teamDashboardSelectors(){
     '<select id="tdSeasonFilter" aria-label="Season" title="Only the published '+esc(seasonLabel)+' season is available">'+
     '<option value="'+esc(seasonData.season)+'" selected>'+esc(seasonLabel)+'</option></select></label>'+
     '<label for="tdClubFilter">Club'+
-    '<select id="tdClubFilter" aria-label="Choose a club" onchange="selectTeamDashboardClub(this)">'+
+    '<select id="tdClubFilter" aria-label="Choose a club" data-team-dashboard-club>'+
     '<option value="all" '+(state.team==='all'?'selected':'')+'>Select a club</option>'+
     seasonData.teams.map(t=>'<option value="'+esc(t.id)+'" '+
       (state.team===t.id?'selected':'')+'>'+esc(t.name)+'</option>').join('')+
@@ -261,7 +261,16 @@ function teamPage(){
     '<div class="td-dashboard-empty"><strong>Choose a club to get started.</strong>'+
     '<p>Use the Club dropdown above, then choose which dashboard section to display.</p></div>';
   if(!tdSections.some(([id])=>id===state.teamSection))state.teamSection='summary';
-  const t=club(state.team),r=tableRows().find(x=>x.id===t.id),fs=teamFixtures(t.id),league=tdLeagueResults(t.name);
+  const t=club(state.team);
+  if(!t){
+    state.team='all';
+    return header('Team dashboard.','Choose a club to explore its ISL 2026–27 performance.')+
+      teamDashboardSelectors()+
+      '<div class="td-dashboard-empty"><strong>Choose a club to get started.</strong>'+
+      '<p>The selected club could not be loaded. Please choose it again.</p></div>';
+  }
+  const r=tableRows().find(x=>String(x.id)===String(t.id))||{mp:0,w:0,d:0,l:0,pts:0,gf:0,ga:0};
+  const fs=teamFixtures(t.id),league=tdLeagueResults(t.name);
   const info=()=>card('Club information',`<div class="club-profile">${crest(t,'large')}<div><h2>${esc(t.name)}</h2><p class="chart-desc">${fs.length} published Phase 1 fixtures.</p>${sourceLink(t.profileUrl,'Official club profile')}</div></div>`,'2026–27');
   let content='';
   switch(state.teamSection){
@@ -448,6 +457,10 @@ function bindPage(){
   tdBindSeasonFormLegend();
   bindScatterTooltips();
   bindTrendTooltips();
+  const teamFilter=$('#tdClubFilter');
+  if(teamFilter)teamFilter.addEventListener('change',()=>{
+    selectTeamDashboardClub(teamFilter);
+  });
   const sectionFilter=$('#tdSectionFilter');
   if(sectionFilter)sectionFilter.onchange=e=>{
     rememberNavigation();state.teamSection=e.target.value;render();
