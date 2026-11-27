@@ -237,7 +237,7 @@ function teamDashboardSelectors(){
     '<select id="tdSeasonFilter" aria-label="Season" title="Only the published '+esc(seasonLabel)+' season is available">'+
     '<option value="'+esc(seasonData.season)+'" selected>'+esc(seasonLabel)+'</option></select></label>'+
     '<label for="tdClubFilter">Club'+
-    '<select id="tdClubFilter" aria-label="Choose a club" onchange="selectTeamDashboardClub(this.value)">'+
+    '<select id="tdClubFilter" aria-label="Choose a club" onchange="selectTeamDashboardClub(this)">'+
     '<option value="all" '+(state.team==='all'?'selected':'')+'>Select a club</option>'+
     seasonData.teams.map(t=>'<option value="'+esc(t.id)+'" '+
       (state.team===t.id?'selected':'')+'>'+esc(t.name)+'</option>').join('')+
@@ -496,8 +496,11 @@ $$('[data-report]').forEach(el=>el.onclick=()=>openFixtureDetail(el.dataset.repo
     panel.hidden=panel.dataset.lineupPanel!==side;
   });
 });if($('#statusFilter'))$('#statusFilter').onchange=e=>{state.status=e.target.value;render();};if($('#matchweekFilter'))$('#matchweekFilter').onchange=e=>{state.fixtureWeek=e.target.value;render();$('#matchweekFilter')?.focus({preventScroll:true});};if($('#monthFilter'))$('#monthFilter').onchange=e=>{state.month=e.target.value;render();};if($('#fixtureClubFilter'))$('#fixtureClubFilter').onchange=e=>{state.fixtureClub=e.target.value;render();};}
-function selectTeamDashboardClub(value){
-  const selected=String(value||'all');
+function selectTeamDashboardClub(select){
+  /* Ignore delayed events from a select element replaced by a newer render.
+     This prevents an earlier mobile selection from overriding the latest one. */
+  if(!select||select!==document.getElementById('tdClubFilter')||!select.isConnected)return;
+  const selected=String(select.value||'all');
   if(selected!=='all'&&!club(selected))return;
   if(state.page==='team'&&state.team===selected)return;
   navigate('team',{team:selected});
