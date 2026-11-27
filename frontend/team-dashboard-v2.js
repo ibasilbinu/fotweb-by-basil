@@ -69,12 +69,32 @@
   };
   if(!window.__fotwebTeamDashboardV2Bound){
     window.__fotwebTeamDashboardV2Bound=true;
+    let selectionRenderToken=0;
     document.addEventListener('change',event=>{
-      if(event.target?.id==='td2Club'){
-        const value=String(event.target.value||'all');
-        if(value!=='all'&&!club(value))return;
-        state.team=value;state.teamSection='summary';render();
+      const select=event.target;
+      if(select?.id!=='td2Club'||select!==document.getElementById('td2Club')||!select.isConnected)return;
+      const value=String(select.value||'all');
+      if(value!=='all'&&!club(value))return;
+      if(state.team===value&&state.teamSection==='summary')return;
+      state.team=value;
+      state.teamSection='summary';
+      const token=++selectionRenderToken;
+      const main=document.getElementById('main');
+      if(main){
+        main.setAttribute('aria-busy','true');
+        main.innerHTML='<section class="td2-welcome" role="status" aria-live="polite"><span>TEAM DASHBOARD</span><h2>Loading '+escText(club(value)?.name||'club')+'…</h2><p>Preparing the club’s season data.</p></section>';
       }
+      requestAnimationFrame(()=>{
+        if(token!==selectionRenderToken||state.page!=='team'||state.team!==value)return;
+        try{
+          render();
+          document.getElementById('main')?.removeAttribute('aria-busy');
+        }catch(error){
+          console.error('FotWeb Team Dashboard render failed:',error);
+          if(main)main.innerHTML='<section class="td2-welcome" role="alert"><span>TEAM DASHBOARD</span><h2>Dashboard could not load.</h2><p>Please try selecting the club again. If this continues, the page error has been logged.</p></section>';
+          main?.removeAttribute('aria-busy');
+        }
+      });
     });
     document.addEventListener('click',event=>{
       const section=event.target.closest('[data-td2-section]');
