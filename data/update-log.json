@@ -3,6 +3,22 @@
   "season": "2026-27",
   "checks": [
     {
+      "checkedAt": "2026-11-27T22:15:39.181421+00:00",
+      "kind": "lineup-late",
+      "outcome": "partial",
+      "summary": "1 match centres checked; updates: fixtures 0, results 0, lineups 0, streams 0. Phase: later-phases. 0 pending; 35 errors. YouTube POSwbb7cqEE: Public metadata: Video identity unavailable or private; alternate metadata missing channel identity; YouTube 76Xm55SAFj4: Public metadata: Video identity unavailable or private; alternate metadata missing channel identity; YouTube WCpIrGN_dxs: Public metada",
+      "links": [
+        {
+          "label": "Inter Kashi vs Churchill Brothers",
+          "url": "https://www.indiansuperleague.com/matchcentre/194668"
+        },
+        {
+          "label": "Official ISL YouTube Live listing",
+          "url": "https://www.youtube.com/@IndianSuperLeague/streams"
+        }
+      ]
+    },
+    {
       "checkedAt": "2026-11-27T21:57:59.472571+00:00",
       "kind": "hourly",
       "outcome": "partial",
@@ -6156,26 +6172,6 @@
     {
       "checkedAt": "2026-11-03T20:15:02.809206+00:00",
       "kind": "lineup-late",
-      "outcome": "no-change",
-      "summary": "2 match centres checked; updates: fixtures 0, results 0, lineups 0, streams 0. Phase: phase-one. 0 pending; 0 errors.",
-      "links": [
-        {
-          "label": "Mumbai City FC vs Sporting Club Delhi",
-          "url": "https://www.indiansuperleague.com/matchcentre/194655"
-        },
-        {
-          "label": "Inter Kashi vs FC Goa",
-          "url": "https://www.indiansuperleague.com/matchcentre/194656"
-        },
-        {
-          "label": "Official ISL YouTube Live listing",
-          "url": "https://www.youtube.com/@IndianSuperLeague/streams"
-        }
-      ]
-    },
-    {
-      "checkedAt": "2026-11-03T18:18:14.053059+00:00",
-      "kind": "lineup-early",
       "outcome": "no-change",
       "summary": "2 match centres checked; updates: fixtures 0, results 0, lineups 0, streams 0. Phase: phase-one. 0 pending; 0 errors.",
       "links": [
