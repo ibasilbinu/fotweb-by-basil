@@ -3,6 +3,26 @@
   "season": "2026-27",
   "checks": [
     {
+      "checkedAt": "2026-11-27T12:18:50.927483+00:00",
+      "kind": "hourly",
+      "outcome": "partial",
+      "summary": "1 match centres checked; updates: fixtures 0, results 0, lineups 0, streams 0. Phase: later-phases. 0 pending; 34 errors. YouTube 76Xm55SAFj4: Public metadata: Video identity unavailable or private; alternate metadata missing channel identity; YouTube WCpIrGN_dxs: Public metadata: Video identity unavailable or private; alternate metadata missing channel identity; YouTube KDvN0-x_IeM: Public metada",
+      "links": [
+        {
+          "label": "Official ISL fixture discovery",
+          "url": "https://www.indiansuperleague.com/schedule-fixtures"
+        },
+        {
+          "label": "NorthEast United FC vs Sporting Club Delhi",
+          "url": "https://www.indiansuperleague.com/matchcentre/194667"
+        },
+        {
+          "label": "Official ISL YouTube Live listing",
+          "url": "https://www.youtube.com/@IndianSuperLeague/streams"
+        }
+      ]
+    },
+    {
       "checkedAt": "2026-11-27T11:02:43.142262+00:00",
       "kind": "morning",
       "outcome": "partial",
@@ -6178,22 +6198,6 @@
         {
           "label": "Official ISL YouTube Live listing",
           "url": "https://www.youtube.com/@IndianSuperLeague/streams"
-        }
-      ]
-    },
-    {
-      "checkedAt": "2026-11-03T13:40:21Z",
-      "kind": "post-match-early",
-      "outcome": "no-change",
-      "summary": "No 17:00 IST fixture was scheduled for 3 November 2026, so no final result was due. The official 2026–27 fixture page and FotWeb schedule snapshot agree.",
-      "links": [
-        {
-          "label": "Official ISL fixture schedule",
-          "url": "https://www.indiansuperleague.com/schedule-fixtures"
-        },
-        {
-          "label": "Latest successful source-check workflow",
-          "url": "https://github.com/ibasilbinu/fotweb-by-basil/actions/runs/41613521145"
         }
       ]
     }
