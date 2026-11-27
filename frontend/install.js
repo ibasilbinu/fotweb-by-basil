@@ -26,7 +26,7 @@
       const currentVersion = elements[0]?.dataset.appVersion || '1.1.1';
       if (compareVersions(latestVersion, currentVersion) <= 0) return;
       const storageKey = 'fotweb-update-seen-' + latestVersion;
-      if (localStorage.getItem(storageKey) === '1') return;
+      try { if (localStorage.getItem(storageKey) === '1') return; } catch (_) {}
       elements.forEach(el => {
         const badge = document.createElement('span');
         badge.className = 'fotweb-update-badge';
