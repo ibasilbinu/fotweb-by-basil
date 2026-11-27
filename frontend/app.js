@@ -459,19 +459,7 @@ function bindPage(){
     rememberNavigation();state.reportSection=e.target.value;render();
     $('#fwReportSectionFilter')?.focus({preventScroll:true});
   };
-  const teamClubFilter=$('#tdClubFilter');
-  if(teamClubFilter){
-    const selectTeam=e=>{
-      const selected=String(e.target.value||'all');
-      if(selected!=='all'&&!club(selected))return;
-      if(state.page==='team'&&state.team===selected)return;
-      navigate('team',{team:selected});
-    };
-    /* Native select controls on mobile can dispatch input before change.
-       Support both while guarding against a duplicate navigation/render. */
-    teamClubFilter.oninput=selectTeam;
-    teamClubFilter.onchange=selectTeam;
-  }
+  /* Club selection is handled by document-level capture listeners. */
   $$('[data-analytics-club]').forEach(el=>el.onclick=()=>{
     navigate('analytics',{analyticsTeam:el.dataset.analyticsClub,
       analyticsCompareA:el.dataset.analyticsClub,analyticsCompareB:''});
@@ -508,6 +496,17 @@ $$('[data-report]').forEach(el=>el.onclick=()=>openFixtureDetail(el.dataset.repo
     panel.hidden=panel.dataset.lineupPanel!==side;
   });
 });if($('#statusFilter'))$('#statusFilter').onchange=e=>{state.status=e.target.value;render();};if($('#matchweekFilter'))$('#matchweekFilter').onchange=e=>{state.fixtureWeek=e.target.value;render();$('#matchweekFilter')?.focus({preventScroll:true});};if($('#monthFilter'))$('#monthFilter').onchange=e=>{state.month=e.target.value;render();};if($('#fixtureClubFilter'))$('#fixtureClubFilter').onchange=e=>{state.fixtureClub=e.target.value;render();};}
+function handleTeamClubSelection(e){
+  const target=e.target;
+  if(!target||target.id!=='tdClubFilter')return;
+  const selected=String(target.value||'all');
+  if(selected!=='all'&&!club(selected))return;
+  if(state.page==='team'&&state.team===selected)return;
+  e.stopImmediatePropagation();
+  navigate('team',{team:selected});
+}
+document.addEventListener('input',handleTeamClubSelection,true);
+document.addEventListener('change',handleTeamClubSelection,true);
 window.receiveSeasonData=args=>{if(!args?.season_data)return;seasonData=args.season_data;squadData=args.squad_data||{teams:[]};resultsData=args.post_match_data||{matches:[],updatedAt:null};updateLog=args.update_log||{schemaVersion:1,season:'2026-27',checks:[]};today=args.today||istDate(new Date().toISOString());pageRenderDataVersion++;pageRenderCache.clear();render();};
 $('#pageBack').onclick=returnToPreviousPage;$('#pageHome').onclick=()=>navigate('overview');$('#menu').onclick=()=>$('#sidebar').classList.toggle('open');$('#sidebarBackdrop').onclick=()=>$('#sidebar').classList.remove('open');$('#methodology').onclick=()=>$('#dataDialog').showModal();$('#closeDialog').onclick=()=>$('#dataDialog').close();document.addEventListener('keydown',e=>{if(e.key==='Escape')$('#sidebar').classList.remove('open');});window.addEventListener('hashchange',()=>{const requested=location.hash.slice(1)||'overview';if(state.page!==requested||state.fixture)rememberNavigation();state.fixture='';state.page=requested;if(requested==='fixtures')Object.assign(state,fixtureFilterDefaults);render();});
 
