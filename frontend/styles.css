@@ -115,6 +115,6 @@ html,body{height:100%;overflow:hidden}
 
 /* Automatically surfaced GitHub APK release notice. */
 .fotweb-update-badge{display:inline-flex;align-items:center;justify-content:center;margin-left:7px;padding:3px 6px;border-radius:4px;background:#d4f76b;color:#172013;font-size:8px;font-weight:850;letter-spacing:.7px;line-height:1.2;vertical-align:middle;white-space:nowrap;animation:fotweb-new-pulse 2s ease-in-out infinite}
-.sidebar-install-fotweb .fotweb-update-badge{margin-left:auto}
+.sidebar-install-fotweb .fotweb-update-badge{margin-left:8px}
 @keyframes fotweb-new-pulse{0%,100%{opacity:1}50%{opacity:.72}}
 @media(prefers-reduced-motion:reduce){.fotweb-update-badge{animation:none}}
