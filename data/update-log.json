@@ -3,6 +3,22 @@
   "season": "2026-27",
   "checks": [
     {
+      "checkedAt": "2026-11-27T19:50:48.063564+00:00",
+      "kind": "lineup-early",
+      "outcome": "partial",
+      "summary": "1 match centres checked; updates: fixtures 0, results 0, lineups 0, streams 1. Phase: later-phases. 0 pending; 35 errors. YouTube POSwbb7cqEE: Public metadata: Video identity unavailable or private; alternate metadata missing channel identity; YouTube 76Xm55SAFj4: Public metadata: Video identity unavailable or private; alternate metadata missing channel identity; YouTube WCpIrGN_dxs: Public metada",
+      "links": [
+        {
+          "label": "Inter Kashi vs Churchill Brothers",
+          "url": "https://www.indiansuperleague.com/matchcentre/194668"
+        },
+        {
+          "label": "Official ISL YouTube Live listing",
+          "url": "https://www.youtube.com/@IndianSuperLeague/streams"
+        }
+      ]
+    },
+    {
       "checkedAt": "2026-11-27T19:25:23.550160+00:00",
       "kind": "match-retry",
       "outcome": "updated",
@@ -6170,22 +6186,6 @@
         {
           "label": "Inter Kashi vs FC Goa",
           "url": "https://www.indiansuperleague.com/matchcentre/194656"
-        }
-      ]
-    },
-    {
-      "checkedAt": "2026-11-03T16:16:27Z",
-      "kind": "post-match-late",
-      "outcome": "no-change",
-      "summary": "No 19:30 IST fixture was scheduled for 3 November 2026, so no final result was due. The official 2026–27 fixture page and FotWeb schedule snapshot agree.",
-      "links": [
-        {
-          "label": "Official ISL fixture schedule",
-          "url": "https://www.indiansuperleague.com/schedule-fixtures"
-        },
-        {
-          "label": "Latest successful source-check workflow",
-          "url": "https://github.com/ibasilbinu/fotweb-by-basil/actions/runs/41660397836"
         }
       ]
     }
