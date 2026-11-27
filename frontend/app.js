@@ -11,7 +11,7 @@ const statLabels={possession:'Possession (%)',shots:'Shots',shotsOnTarget:'Shots
 const canonical=s=>({'Churchill Brothers SC':'Churchill Brothers','Inter Kashi FC':'Inter Kashi','Mohun Bagan SG':'Mohun Bagan Super Giant'}[s]||s);
 function safeUrl(value){try{const u=new URL(value);return u.protocol==='https:'&&!u.username&&!u.password?u.href:'';}catch{return '';}}
 function sourceLink(url,label){const u=safeUrl(url);return u?`<a class="text-button" href="${esc(u)}" target="_blank" rel="noopener noreferrer">${esc(label)} ↗</a>`:'';}
-const club=id=>seasonData.teams.find(t=>t.id===id);
+const club=id=>seasonData?.teams?.find(t=>String(t.id)===String(id));
 const formatDate=value=>new Intl.DateTimeFormat('en-IN',{timeZone:'Asia/Kolkata',day:'numeric',month:'short',year:'numeric'}).format(new Date(value.length===10?value+'T12:00:00+05:30':value));
 const formatTime=value=>new Intl.DateTimeFormat('en-IN',{timeZone:'Asia/Kolkata',hour:'numeric',minute:'2-digit',hour12:true}).format(new Date(value));
 const istDate=value=>new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Kolkata',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date(value));
@@ -460,7 +460,18 @@ function bindPage(){
     $('#fwReportSectionFilter')?.focus({preventScroll:true});
   };
   const teamClubFilter=$('#tdClubFilter');
-  if(teamClubFilter)teamClubFilter.onchange=e=>navigate('team',{team:e.target.value});
+  if(teamClubFilter){
+    const selectTeam=e=>{
+      const selected=String(e.target.value||'all');
+      if(selected!=='all'&&!club(selected))return;
+      if(state.page==='team'&&state.team===selected)return;
+      navigate('team',{team:selected});
+    };
+    /* Native select controls on mobile can dispatch input before change.
+       Support both while guarding against a duplicate navigation/render. */
+    teamClubFilter.oninput=selectTeam;
+    teamClubFilter.onchange=selectTeam;
+  }
   $$('[data-analytics-club]').forEach(el=>el.onclick=()=>{
     navigate('analytics',{analyticsTeam:el.dataset.analyticsClub,
       analyticsCompareA:el.dataset.analyticsClub,analyticsCompareB:''});
