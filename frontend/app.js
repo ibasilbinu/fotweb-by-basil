@@ -425,7 +425,8 @@ if(!window.__fotwebAnalyticsSelectorsBound){
     catch(error){
       console.error('FotWeb Club Analytics render failed:',error);
       const main=document.getElementById('main');
-      if(main)main.innerHTML='<section class="ca-panel"><h2>Club analytics could not load.</h2><p>Please reload FotWeb and try again. The error has been logged.</p></section>';
+      const detail=String(error?.message||error||'Unknown rendering error');
+      if(main)main.innerHTML='<section class="ca-panel"><h2>Club analytics could not load.</h2><p>'+esc(detail)+'</p><p>The exact error has been logged for diagnosis.</p></section>';
     }
   });
 }
