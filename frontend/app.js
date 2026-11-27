@@ -402,19 +402,40 @@ function bindPage(){
     rememberNavigation();state.reportSection=e.target.value;render();
     $('#fwReportSectionFilter')?.focus({preventScroll:true});
   };
-  /* Team Dashboard v2 owns its isolated delegated selector events. */
+  /* Club Analytics selectors use delegated events so club changes remain
+   reliable even when the page DOM is replaced during a render. */
+if(!window.__fotwebAnalyticsSelectorsBound){
+  window.__fotwebAnalyticsSelectorsBound=true;
+  document.addEventListener('change',event=>{
+    const select=event.target;
+    const fields={
+      caTrendMetric:'analyticsMetric',
+      caCompareA:'analyticsCompareA',
+      caCompareB:'analyticsCompareB'
+    };
+    const field=fields[select?.id];
+    if(!field||select!==document.getElementById(select.id)||!select.isConnected)return;
+    const allowed={
+      analyticsMetric:['shots','shotsAgainst','goals','goalsAgainst','points']
+    };
+    if(allowed[field]&&!allowed[field].includes(select.value))return;
+    if(state[field]===select.value)return;
+    state[field]=select.value;
+    try{render();}
+    catch(error){
+      console.error('FotWeb Club Analytics render failed:',error);
+      const main=document.getElementById('main');
+      if(main)main.innerHTML='<section class="ca-panel"><h2>Club analytics could not load.</h2><p>Please reload FotWeb and try again. The error has been logged.</p></section>';
+    }
+  });
+}
+/* Team Dashboard v2 owns its isolated delegated selector events. */
   $$('[data-analytics-club]').forEach(el=>el.onclick=()=>{
     navigate('analytics',{analyticsTeam:el.dataset.analyticsClub,
       analyticsCompareA:el.dataset.analyticsClub,analyticsCompareB:''});
   });
-  const analyticInputs=[
-    ['#caTrendMetric','analyticsMetric'],
-    ['#caCompareA','analyticsCompareA'],['#caCompareB','analyticsCompareB']
-  ];
-  analyticInputs.forEach(([selector,field])=>{
-    const input=$(selector);
-    if(input)input.onchange=e=>{state[field]=e.target.value;render();};
-  });$$('[data-page]').forEach(el=>el.onclick=e=>{e.preventDefault();navigate(el.dataset.page);});$$('[data-team]').forEach(el=>el.onclick=()=>navigate('team',{team:el.dataset.team}));
+  /* Analytics selectors are handled by one delegated listener below.
+     Do not attach handlers to DOM nodes that render() immediately replaces. */$$('[data-page]').forEach(el=>el.onclick=e=>{e.preventDefault();navigate(el.dataset.page);});$$('[data-team]').forEach(el=>el.onclick=()=>navigate('team',{team:el.dataset.team}));
   $$('[data-fixture-open]').forEach(el=>{
     el.onclick=e=>{
       if(e.target.closest('button,a,select,input,[data-team]'))return;
