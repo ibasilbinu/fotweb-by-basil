@@ -51,7 +51,13 @@ function caClubSummary(t){
   const avg=key=>sums[key]?{value:sums[key].sum/sums[key].n,n:sums[key].n}:null;
   return {team:t,games:history.length,history,gf,ga,pts,avg};
 }
-function caAllSummaries(){return seasonData.teams.map(caClubSummary);}
+let caSummaryCache={season:null,results:null,summaries:null};
+function caAllSummaries(){
+  if(caSummaryCache.season===seasonData&&caSummaryCache.results===resultsData&&caSummaryCache.summaries)return caSummaryCache.summaries;
+  const summaries=seasonData.teams.map(caClubSummary);
+  caSummaryCache={season:seasonData,results:resultsData,summaries};
+  return summaries;
+}
 function caNumber(v,d=1){return Number.isFinite(v)?v.toFixed(d):'—';}
 function caSelectedTeam(summaries,preferred,exclude){
   const other=summaries.filter(s=>s.team.id!==exclude);
