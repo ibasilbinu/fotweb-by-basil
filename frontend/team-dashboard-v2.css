@@ -1,0 +1,27 @@
+/* Team Dashboard v2 — self-contained layout */
+.td2-filters{display:grid;grid-template-columns:1fr 1fr 1.5fr;gap:14px;padding:18px;margin:22px 0;background:var(--panel, #151a20);border:1px solid var(--line,#29313a);border-radius:16px}
+.td2-filters label{display:grid;gap:8px;color:var(--muted,#9ba6b2);font-size:12px;font-weight:700}
+.td2-filters select{width:100%;min-width:0;padding:12px 13px;border:1px solid var(--line,#303943);border-radius:10px;background:var(--surface,#0e1318);color:var(--text,#f4f6f8);font:inherit;font-size:14px}
+.td2-filters select:disabled{opacity:.8}
+.td2-welcome,.td2-card{padding:24px;margin:20px 0;background:var(--panel,#151a20);border:1px solid var(--line,#29313a);border-radius:16px}
+.td2-welcome>span{font-size:10px;letter-spacing:.15em;color:var(--muted,#9ba6b2);font-weight:800}
+.td2-welcome h2{margin:12px 0 8px;font-size:clamp(22px,4vw,30px)}
+.td2-welcome p,.td2-club-info p,.td2-empty{color:var(--muted,#9ba6b2);line-height:1.65}
+.td2-section-nav{display:flex;gap:8px;overflow-x:auto;padding:4px 1px 12px;margin:0 0 14px;scrollbar-width:thin}
+.td2-section-nav button{flex:0 0 auto;padding:10px 14px;border:1px solid var(--line,#303943);border-radius:999px;background:transparent;color:var(--muted,#aab4bf);font:inherit;font-size:12px;font-weight:700;cursor:pointer}
+.td2-section-nav button.active{background:var(--accent,#d9e6f2);border-color:var(--accent,#d9e6f2);color:#111820}
+.td2-toolbar{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:10px 0 16px;color:var(--muted,#9ba6b2);font-size:12px}
+.td2-content{min-width:0}
+.td2-summary-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:18px 0}
+.td2-summary-grid article{padding:18px;background:var(--panel,#151a20);border:1px solid var(--line,#29313a);border-radius:14px;display:grid;gap:8px}
+.td2-summary-grid article span,.td2-stat-list span{color:var(--muted,#9ba6b2);font-size:12px}
+.td2-summary-grid article strong{font-size:clamp(24px,4vw,34px);font-variant-numeric:tabular-nums}
+.td2-summary-grid article small,.td2-stat-list small{color:var(--muted,#9ba6b2);font-size:11px}
+.td2-card h2{font-size:18px;margin:0 0 18px}
+.td2-club-info{display:flex;align-items:center;gap:18px}
+.td2-club-info h3{margin:0 0 6px;font-size:18px}
+.td2-club-info p{margin:0 0 8px}
+.td2-stat-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.td2-stat-list>div{display:grid;gap:7px;padding:14px;border:1px solid var(--line,#29313a);border-radius:12px}
+.td2-stat-list strong{font-size:20px}
+@media(max-width:700px){.td2-filters{grid-template-columns:1fr;gap:12px;padding:14px}.td2-summary-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.td2-welcome,.td2-card{padding:17px}.td2-toolbar{align-items:flex-start;flex-direction:column}.td2-stat-list{grid-template-columns:1fr}}
