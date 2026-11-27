@@ -91,7 +91,8 @@
           document.getElementById('main')?.removeAttribute('aria-busy');
         }catch(error){
           console.error('FotWeb Team Dashboard render failed:',error);
-          if(main)main.innerHTML='<section class="td2-welcome" role="alert"><span>TEAM DASHBOARD</span><h2>Dashboard could not load.</h2><p>Please try selecting the club again. If this continues, the page error has been logged.</p></section>';
+          const detail=String(error?.message||error||'Unknown rendering error');
+          if(main)main.innerHTML='<section class="td2-welcome" role="alert"><span>TEAM DASHBOARD</span><h2>Dashboard could not load.</h2><p>'+escText(detail)+'</p><p>The exact error has been logged for diagnosis.</p></section>';
           main?.removeAttribute('aria-busy');
         }
       });
