@@ -2,6 +2,44 @@
    Android users retain the signed FotWeb APK download unchanged. */
 (() => {
   const elements = Array.from(document.querySelectorAll('#installFotWeb, .sidebar-install-fotweb'));
+  // Check GitHub Releases for a newer APK and show a one-time NEW label per version.
+  const repo = 'ibasilbinu/fotweb-by-basil';
+  const releaseApi = 'https://api.github.com/repos/' + repo + '/releases/latest';
+  const compareVersions = (a, b) => {
+    const pa = String(a).replace(/^v/i, '').split('.').map(n => parseInt(n, 10) || 0);
+    const pb = String(b).replace(/^v/i, '').split('.').map(n => parseInt(n, 10) || 0);
+    for (let i = 0; i < Math.max(pa.length, pb.length); i++) {
+      if ((pa[i] || 0) !== (pb[i] || 0)) return (pa[i] || 0) > (pb[i] || 0) ? 1 : -1;
+    }
+    return 0;
+  };
+  const removeBadges = () => document.querySelectorAll('.fotweb-update-badge').forEach(node => node.remove());
+  fetch(releaseApi, { headers: { Accept: 'application/vnd.github+json' }, cache: 'no-store' })
+    .then(response => { if (!response.ok) throw new Error('Release check unavailable'); return response.json(); })
+    .then(release => {
+      const latestVersion = String(release.tag_name || '').replace(/^android-v/i, '').replace(/^v/i, '');
+      if (!latestVersion) return;
+      const apk = (release.assets || []).find(asset => asset.name === 'FotWeb.apk');
+      if (apk && apk.browser_download_url) {
+        elements.forEach(el => el.href = apk.browser_download_url);
+      }
+      const currentVersion = elements[0]?.dataset.appVersion || '1.1.1';
+      if (compareVersions(latestVersion, currentVersion) <= 0) return;
+      const storageKey = 'fotweb-update-seen-' + latestVersion;
+      if (localStorage.getItem(storageKey) === '1') return;
+      elements.forEach(el => {
+        const badge = document.createElement('span');
+        badge.className = 'fotweb-update-badge';
+        badge.textContent = 'NEW';
+        badge.setAttribute('aria-label', 'New Android app version available');
+        el.appendChild(badge);
+        el.addEventListener('click', () => {
+          try { localStorage.setItem(storageKey, '1'); } catch (_) {}
+          removeBadges();
+        }, { once: true });
+      });
+    })
+    .catch(() => { /* Keep the current download link if GitHub cannot be reached. */ });
   const ua = navigator.userAgent || '';
   const inAndroidApp = /\bwv\b/i.test(ua) || ua.includes('FotWebAndroid/');
   const isiOS = /iPad|iPhone|iPod/i.test(ua) ||
