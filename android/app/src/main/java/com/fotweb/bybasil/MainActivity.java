@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Message;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.FrameLayout;
@@ -17,10 +18,6 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
-/**
- * FotWeb's dedicated app window. The website runs inside this Activity's WebView;
- * it is not an ACTION_VIEW shortcut that launches Chrome.
- */
 public final class MainActivity extends Activity {
     private static final String HOME = "https://fotweb.streamlit.app/?embed=true";
     private static final String APP_HOST = "fotweb.streamlit.app";
@@ -41,8 +38,7 @@ public final class MainActivity extends Activity {
 
         progress = new ProgressBar(this, null, android.R.attr.progressBarStyleHorizontal);
         progress.setIndeterminate(false);
-        root.addView(progress,
-            new FrameLayout.LayoutParams(-1, dp(3), Gravity.TOP));
+        root.addView(progress, new FrameLayout.LayoutParams(-1, dp(3), Gravity.TOP));
         setContentView(root);
 
         WebView.setWebContentsDebuggingEnabled(false);
@@ -57,9 +53,8 @@ public final class MainActivity extends Activity {
         settings.setAllowContentAccess(false);
         settings.setMixedContentMode(WebSettings.MIXED_CONTENT_NEVER_ALLOW);
 
-        // A target="_blank" link to FotWeb must stay in the current WebView.
-        // Opening separate WebViews is what previously sent links to Chrome.
-        settings.setSupportMultipleWindows(false);
+        // Capture target="_blank" / window.open destinations instead of dropping them.
+        settings.setSupportMultipleWindows(true);
         settings.setJavaScriptCanOpenWindowsAutomatically(false);
 
         site.setWebViewClient(new WebViewClient() {
@@ -89,10 +84,58 @@ public final class MainActivity extends Activity {
                     progress.setProgress(value);
                 }
             }
+
+            @Override
+            public boolean onCreateWindow(WebView view, boolean isDialog,
+                                          boolean isUserGesture, Message resultMsg) {
+                // A non-visible WebView captures the popup URL. We never display
+                // a second in-app window: first-party URLs load in 'site' and
+                // external URLs are sent to Android's app/browser resolver.
+                final WebView popup = new WebView(MainActivity.this);
+                WebSettings popupSettings = popup.getSettings();
+                popupSettings.setJavaScriptEnabled(true);
+                popupSettings.setDomStorageEnabled(true);
+                popup.setWebViewClient(new WebViewClient() {
+                    private boolean handlePopupUrl(Uri uri) {
+                        if (uri == null) return true;
+                        if ("https".equalsIgnoreCase(uri.getScheme()) &&
+                            APP_HOST.equalsIgnoreCase(uri.getHost())) {
+                            site.loadUrl(uri.toString());
+                        } else {
+                            route(uri);
+                        }
+                        popup.post(() -> {
+                            popup.stopLoading();
+                            popup.destroy();
+                        });
+                        return true;
+                    }
+
+                    @Override
+                    public boolean shouldOverrideUrlLoading(WebView popupView,
+                                                            WebResourceRequest request) {
+                        if (!request.isForMainFrame()) return false;
+                        return handlePopupUrl(request.getUrl());
+                    }
+
+                    @Override
+                    public boolean shouldOverrideUrlLoading(WebView popupView, String url) {
+                        return handlePopupUrl(Uri.parse(url));
+                    }
+                });
+                popup.setDownloadListener((url, userAgent, disposition, mime, length) -> {
+                    if (url != null) openExternal(Uri.parse(url));
+                    popup.post(popup::destroy);
+                });
+
+                WebView.WebViewTransport transport =
+                    (WebView.WebViewTransport) resultMsg.obj;
+                transport.setWebView(popup);
+                resultMsg.sendToTarget();
+                return true;
+            }
         });
 
-        // Downloads and public external links still use the user's installed
-        // browser/download handler. Core FotWeb browsing stays inside this app.
         site.setDownloadListener((url, userAgent, disposition, mime, length) -> {
             if (url != null) openExternal(Uri.parse(url));
         });
@@ -111,8 +154,6 @@ public final class MainActivity extends Activity {
         if (scheme.equalsIgnoreCase("https") &&
             APP_HOST.equalsIgnoreCase(url.getHost())) return false;
 
-        // A first-party site is never launched in Chrome. Only genuine
-        // external destinations, e.g. YouTube or source articles, leave the app.
         openExternal(url);
         return true;
     }
