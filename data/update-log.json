@@ -3,6 +3,18 @@
   "season": "2026-27",
   "checks": [
     {
+      "checkedAt": "2026-11-28T00:00:29.272921+00:00",
+      "kind": "post-match-late",
+      "outcome": "no-change",
+      "summary": "1 match centres checked; updates: fixtures 0, results 0, lineups 0, streams 0. Phase: later-phases. 0 pending; 0 errors.",
+      "links": [
+        {
+          "label": "Inter Kashi vs Churchill Brothers",
+          "url": "https://www.indiansuperleague.com/matchcentre/194668"
+        }
+      ]
+    },
+    {
       "checkedAt": "2026-11-27T22:19:30.152340+00:00",
       "kind": "post-match-early",
       "outcome": "no-change",
@@ -6162,22 +6174,6 @@
         {
           "label": "Official ISL YouTube Live listing",
           "url": "https://www.youtube.com/@IndianSuperLeague/streams"
-        }
-      ]
-    },
-    {
-      "checkedAt": "2026-11-03T20:16:38.780511+00:00",
-      "kind": "post-match-early",
-      "outcome": "no-change",
-      "summary": "2 match centres checked; updates: fixtures 0, results 0, lineups 0, streams 0. Phase: phase-one. 0 pending; 0 errors.",
-      "links": [
-        {
-          "label": "Mumbai City FC vs Sporting Club Delhi",
-          "url": "https://www.indiansuperleague.com/matchcentre/194655"
-        },
-        {
-          "label": "Inter Kashi vs FC Goa",
-          "url": "https://www.indiansuperleague.com/matchcentre/194656"
         }
       ]
     }
