@@ -85,11 +85,11 @@
   "phaseOneLastKickoff": "2027-01-17T19:30+05:30",
   "sources": {
     "fixtures": {
-      "checkedAt": "2026-11-27T21:57:39.215022+00:00",
+      "checkedAt": "2026-11-28T03:54:16.141030+00:00",
       "outcome": "ok"
     },
     "streams": {
-      "checkedAt": "2026-11-27T22:15:17.977588+00:00",
+      "checkedAt": "2026-11-28T03:54:16.141030+00:00",
       "outcome": "partial"
     }
   },
@@ -129,12 +129,52 @@
     "194665": "2026-11-24T12:42:53.568160+00:00",
     "194666": "2026-11-25T11:29:30.696250+00:00",
     "194667": "2026-11-27T12:18:30.308552+00:00",
-    "194668": "2026-11-28T00:00:27.381258+00:00"
+    "194668": "2026-11-28T03:54:16.141030+00:00"
   },
   "lastCheck": {
-    "checkedAt": "2026-11-28T00:00:27.381258+00:00",
-    "kind": "post-match-late",
-    "failures": [],
+    "checkedAt": "2026-11-28T03:54:16.141030+00:00",
+    "kind": "hourly",
+    "failures": [
+      "YouTube 5axKMopyqOw: Scheduled stream start is not available yet",
+      "YouTube Dz8xmnFSQJs: Scheduled stream start is not available yet",
+      "YouTube mqe2MK5Flw0: Scheduled stream start is not available yet",
+      "YouTube xwF77FCduk4: Scheduled stream start is not available yet",
+      "YouTube POSwbb7cqEE: Public metadata: HTTP Error 429: Too Many Requests; alternate metadata missing channel identity",
+      "YouTube 76Xm55SAFj4: Public metadata: HTTP Error 429: Too Many Requests; alternate metadata missing channel identity",
+      "YouTube WCpIrGN_dxs: Public metadata: HTTP Error 429: Too Many Requests; alternate metadata missing channel identity",
+      "YouTube KDvN0-x_IeM: Public metadata: HTTP Error 429: Too Many Requests; alternate metadata missing channel identity",
+      "YouTube oUfIZcRyKBw: Public metadata: HTTP Error 429: Too Many Requests; alternate metadata missing channel identity",
+      "YouTube QT3j7GEOoFk: Public metadata: HTTP Error 429: Too Many Requests; alternate metadata missing channel identity",
+      "YouTube xVLnRfZ2Mh0: Public metadata: HTTP Error 429: Too Many Requests; alternate metadata missing channel identity",
+      "YouTube TXFuTctMNss: Public metadata: HTTP Error 429: Too Many Requests; alternate metadata missing channel identity",
+      "YouTube iQEyDUAbJUA: Public metadata: HTTP Error 429: Too Many Requests; alternate metadata missing channel identity",
+      "YouTube Pk5JUphLm5o: Public metadata: HTTP Error 429: Too Many Requests; alternate metadata missing channel identity",
+      "YouTube b8JRpEc1BUc: Public metadata: HTTP Error 429: Too Many Requests; alternate metadata missing channel identity",
+      "YouTube tYRs4yoQGpo: Public metadata: HTTP Error 429: Too Many Requests; alternate metadata missing channel identity",
+      "YouTube k178PJ6DfII: Public metadata: HTTP Error 429: Too Many Requests; alternate metadata missing channel identity",
+      "YouTube gWexbVfNmFo: Public metadata: HTTP Error 429: Too Many Requests; alternate metadata missing channel identity",
+      "YouTube nZ8rESpcRTU: Public metadata: HTTP Error 429: Too Many Requests; alternate metadata missing channel identity",
+      "YouTube raS61rqsQQI: Public metadata: HTTP Error 429: Too Many Requests; alternate metadata missing channel identity",
+      "YouTube dNbGWuWcG5Y: Public metadata: HTTP Error 429: Too Many Requests; alternate metadata missing channel identity",
+      "YouTube Ay1gYmJoFMk: Public metadata: HTTP Error 429: Too Many Requests; alternate metadata missing channel identity",
+      "YouTube tN69WAzTwJI: Public metadata: HTTP Error 429: Too Many Requests; alternate metadata missing channel identity",
+      "YouTube FgVvdqYDmW4: Public metadata: HTTP Error 429: Too Many Requests; alternate metadata missing channel identity",
+      "YouTube tadc1bC4AGE: Public metadata: HTTP Error 429: Too Many Requests; alternate metadata missing channel identity",
+      "YouTube tTd6cg2yZ78: Public metadata: HTTP Error 429: Too Many Requests; alternate metadata missing channel identity",
+      "YouTube WSGHeZmbNds: Public metadata: HTTP Error 429: Too Many Requests; alternate metadata missing channel identity",
+      "YouTube 0QesNY7MKkc: Public metadata: HTTP Error 429: Too Many Requests; alternate metadata missing channel identity",
+      "YouTube WvHLJt16eyE: Public metadata: HTTP Error 429: Too Many Requests; alternate metadata missing channel identity",
+      "YouTube fp_7X3VWIuA: Public metadata: HTTP Error 429: Too Many Requests; alternate metadata missing channel identity",
+      "YouTube Ujcb0xvB90Y: Public metadata: HTTP Error 429: Too Many Requests; alternate metadata missing channel identity",
+      "YouTube b4Xo33p3SXo: Public metadata: HTTP Error 429: Too Many Requests; alternate metadata missing channel identity",
+      "YouTube qTHpJGNG2Rg: Public metadata: HTTP Error 429: Too Many Requests; alternate metadata missing channel identity",
+      "YouTube 0XReoY9GNr4: Public metadata: HTTP Error 429: Too Many Requests; alternate metadata missing channel identity",
+      "YouTube DdsyDa5Tils: Public metadata: HTTP Error 429: Too Many Requests; alternate metadata missing channel identity",
+      "YouTube -YxgaOJe2x0: Public metadata: HTTP Error 429: Too Many Requests; alternate metadata missing channel identity",
+      "YouTube tKhQ8hzCMxE: Public metadata: HTTP Error 429: Too Many Requests; alternate metadata missing channel identity",
+      "YouTube R6Rj00R4Mcs: Public metadata: HTTP Error 429: Too Many Requests; alternate metadata missing channel identity",
+      "YouTube 8VoKMQAmAbo: Public metadata: HTTP Error 429: Too Many Requests; alternate metadata missing channel identity"
+    ],
     "changes": {
       "fixtures": 0,
       "results": 0,
